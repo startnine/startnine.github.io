@@ -1,143 +1,232 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="HTTrack is an easy-to-use website mirror utility. It allows you to download a World Wide website from the Internet to a local directory,building recursively all structures, getting html, images, and other files from the server to your computer. Links are rebuiltrelatively so that you can freely browse to the local site (works with any browser). You can mirror several sites together so that you can jump from one toanother. You can, also, update an existing mirror site, or resume an interrupted download. The robot is fully configurable, with an integrated help" />
-	<meta name="keywords" content="httrack, HTTRACK, HTTrack, winhttrack, WINHTTRACK, WinHTTrack, offline browser, web mirror utility, aspirateur web, surf offline, web capture, www mirror utility, browse offline, local  site builder, website mirroring, aspirateur www, internet grabber, capture de site web, internet tool, hors connexion, unix, dos, windows 95, windows 98, solaris, ibm580, AIX 4.0, HTS, HTGet, web aspirator, web aspirateur, libre, GPL, GNU, free software" />
-	<title>Start9</title>
-	<style type="text/css">
-	<!--
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Home - Start9</title>
+		<style type="text/css">
+			@font-face {
+				font-family:Selawik;
+				src:url("WebRes/Fonts/selawk.ttf");
+			}
 
-body {
-	margin: 0;  padding: 0;  margin-bottom: 15px;  margin-top: 8px;
-	background: #77b;
-}
-body, td {
-	font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-	}
+			* {
+				font-family:Selawik;
+			}
+			
+			.HeaderBackground {
+				position:fixed;
+				width:100%;
+				padding:0px;
+				margin:-90px 0px 0px 0px;
+				height:80px;
+				background:transparent;
+				border-image-slice:0 10 0 10 fill;
+				border-image-width:0px 10px 0px 10px;
+				border-image-outset:0px 0px 0px 0px;
+				border-image-repeat:stretch stretch;
+				border-image-source:url("WebRes/Images/HeaderBackground.png");
+			}
+			
+			.TitleSpan {
+				width:100%;
+				vertical-align:top;
+			}
+			
+			.Title {
+				font-size:24;
+				color:white;
+				padding:4px 0px 1px 0px;
+				text-align:center;
+			}
+			
+			.MenuBarSpan {
+				width:100%;
+				vertical-align:bottom;
+				display:inline-block;
+				align-self:flex-end;
+			}
+			
+			.MenuBar {
+				width:100%;
+				height:40px;
+				padding:0px;
+				margin:-8px 0px 0px 0px;
+				display:inherit;
+				align-self:inherit;
+				border-image-slice:20 10 0 10 fill;
+				border-image-width:20px 10px 0px 10px;
+				border-image-outset:0px 0px 0px 0px;
+				border-image-repeat:stretch stretch;
+				border-image-source:url("WebRes/Images/MenuBarBackground.png");
+			}
+			
+			.MenuBarContent {
+				width:100%;
+				height:18px;
+				margin: 0px;
+				display:inline;
+				align-self:inherit;
+				align:center;
+				background:transparent;
+			}
+			
+			.MenuBarButton {
+				width:20%;
+				height:100%;
+				padding:0px;
+				margin:0px -4px 0px 0px;
+				font-family:Selawik;
+				border-image:none;
+				background:transparent;
+				border:none;
+				color:white;
+			}
+			
+			.MenuBarButton:hover {
+				border-image-slice:0 7 7 7 fill;
+				border-image-width:0px 7px 7px 7px;
+				border-image-outset:0px 0px 0px 0px;
+				border-image-repeat:stretch stretch;
+				border-image-source:url("WebRes/Images/MenuBarButton_Hover.png");
+			}
+			
+			body {
+				margin:0px;
+				padding:0px;
+				width:100%;
+				min-height:100%;
+				background:white;
+				background:-webkit-linear-gradient(white , #C8D4E7);
+				background:-o-linear-gradient(white, #C8D4E7);
+				background:-moz-linear-gradient(white, #C8D4E7);
+				background:linear-gradient(white , #C8D4E7);
+				background-position: top center !important;
+				background-repeat: no-repeat !important;
+				background-attachment: fixed;
+			}
+			
+			.BodyBG {
+				margin:80px 0px 0px 0px;
+				padding:0px 0px 0px 0px;
+				width:100%;
+				min-height:100%;
+				background:transparent;
+			}
+			
+			.BodyContianer {
+				position:fixed;
+				width:100%;
+				height:100%;
+				padding:0px;
+				margin:0px 0px 0px 0px;
+				background:transparent;
+			}
+			
+			.BodyBackground {
+				width:100%;
+				height:100%;
+				background:white;
+				background:-webkit-linear-gradient(white , #C8D4E7);
+				background:-o-linear-gradient(white, #C8D4E7);
+				background:-moz-linear-gradient(white, #C8D4E7);
+				background:linear-gradient(white , #C8D4E7);
+			}
+			
+			.BodyContent {
+				vertical-align:top;
+				padding:0px;
+				margin:0px 0px 0px 0px;
+			}
+			
+			.TableHeader {
+				font-size:20px;
+			}
+			
+			 .TableColumn {
+				width:100;
+				padding:0px 10px 10px 10px;
+			 }
+			
+			button {
+				padding:10px;
+				margin:0px;
+				font-family:Selawik;
+				background:transparent;
+				border:none;
+				border-image-slice:0 7 7 7 fill;
+				border-image-width:0px 7px 7px 7px;
+				border-image-outset:0px 0px 0px 0px;
+				border-image-repeat:stretch stretch;
+				border-image-source:url("WebRes/Images/Button_Idle.png");
+			}
+			
+			button:hover {
+				border-image-slice:0 7 7 7 fill;
+				border-image-width:0px 7px 7px 7px;
+				border-image-outset:0px 0px 0px 0px;
+				border-image-repeat:stretch stretch;
+				border-image-source:url("WebRes/Images/Button_Hover.png");
+			}
+			
+			.DownloadHeader {
+				margin:5px 0px 0px 0px;
+			}
+			</style>
+	</head>
 
-#subTitle {
-	background: #000;  color: #fff;  padding: 4px;  font-weight: bold; 
-	}
 
-#siteNavigation a, #siteNavigation .current {
-	font-weight: bold;  color: #448;
-	}
-#siteNavigation a:link    { text-decoration: none; }
-#siteNavigation a:visited { text-decoration: none; }
+	<body>
+		<div class="HeaderBackground">
+			<!--img style="width:40px; height:52px; margin:18px -30px -70px 11px;" src="WebRes/Images/Logo.png"/-->
+			<span class="TitleSpan">
+				<p class="Title">Home</p>
+			</span>
+			<span class="MenuBarSpan">
+				<div class="MenuBar">
+					<div class="MenuBarContent">
+						<button class="MenuBarButton">Home</button>
+						<button class="MenuBarButton">Downloads</button>
+						<button class="MenuBarButton">News (Updates? Changelog?)</button>
+						<button class="MenuBarButton">Community (Forum?)</button>
+						<button class="MenuBarButton">FAQ</button>
+					</div>
+				</div>
+			</span>
+		</div>
+		<div class="BodyBG">
+			<div style="height:256px; padding:0px 0px 0px 0px; width:100%;">
+				<img style="width:835px; height:256px; margin:0px -835px 0px 0px;" src="WebRes/Images/Aurora2.png"/>
+				<div style="margin:-256px 0px 256px 0px;">
+					<img style="width:80px; height:104px; margin:60px -10px -60px 10px;" src="WebRes/Images/Logo.png"/>
+					<p style="font-size:48px; margin:-30px 0px 30px 120px;">Start9</p>
+				</div>
+			</div>
+			<div class="BodyContent">
+				<!-- Content here -->
+				<table style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="TableColumn">
+								<p class="DownloadHeader">Hello everyone,
 
-#siteNavigation .current { background-color: #ccd; }
+We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code.
 
-#siteNavigation a:hover   { text-decoration: none;  background-color: #fff;  color: #000; }
-#siteNavigation a:active  { text-decoration: none;  background-color: #ccc; }
+All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. 
+We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.
 
-
-a:link    { text-decoration: underline;  color: #00f; }
-a:visited { text-decoration: underline;  color: #000; }
-a:hover   { text-decoration: underline;  color: #c00; }
-a:active  { text-decoration: underline; }
-
-#pageContent {
-	clear: both;
-	border-bottom: 6px solid #000;
-	padding: 10px;  padding-top: 20px;
-	line-height: 1.65em;
-	background-image: url(backblue.gif);
-	background-repeat: no-repeat;
-	background-position: top right;
-	}
-
-#pageContent, #siteNavigation {
-	background-color: #ccd;
-	}
-
-
-.imgLeft  { float: left;   margin-right: 10px;  margin-bottom: 10px; }
-.imgRight { float: right;  margin-left: 10px;   margin-bottom: 10px; }
-
-hr { height: 1px;  color: #000;  background-color: #000;  margin-bottom: 15px; }
-
-h1 { margin: 0;  font-weight: bold;  font-size: 2em; }
-h2 { margin: 0;  font-weight: bold;  font-size: 1.6em; }
-h3 { margin: 0;  font-weight: bold;  font-size: 1.3em; }
-h4 { margin: 0;  font-weight: bold;  font-size: 1.18em; }
-
-.blak { background-color: #000; }
-.hide { display: none; }
-.tableWidth { min-width: 400px; }
-
-.tblRegular       { border-collapse: collapse; }
-.tblRegular td    { padding: 6px;  background-image: url(fade.gif);  border: 2px solid #99c; }
-.tblHeaderColor, .tblHeaderColor td { background: #99c; }
-.tblNoBorder td   { border: 0; }
-
-
-// -->
-</style>
-
-</head>
-
-<table width="76%" border="0" align="center" cellspacing="0" cellpadding="3" class="tableWidth">
-	<tr>
-	<td id="subTitle">HTTrack Website Copier - Open Source offline browser</td>
-	</tr>
-</table>
-<table width="76%" border="0" align="center" cellspacing="0" cellpadding="0" class="tableWidth">
-<tr class="blak">
-<td>
-	<table width="100%" border="0" align="center" cellspacing="1" cellpadding="0">
-	<tr>
-	<td colspan="6"> 
-		<table width="100%" border="0" align="center" cellspacing="0" cellpadding="10">
-		<tr> 
-		<td id="pageContent"> 
-<!-- ==================== End prologue ==================== -->
-
-	<meta name="generator" content="HTTrack Website Copier/3.x">
-	<TITLE>Local index - HTTrack</TITLE>
-</HEAD>
-<BODY>
-<H1 ALIGN=Center>Index of locally available sites:</H1>
-	<TABLE BORDER="0" WIDTH="100%" CELLSPACING="1" CELLPADDING="0">
-		<TR>
-			<TD BACKGROUND="fade.gif">
-				&middot;
-					<A HREF="start9.menu/index.html">
-						start9.menu/index.html
-					</A>		
-			</TD>
-		</TR>
-	</TABLE>
-	<BR>
-	<BR>
-	<BR>
-  	<H6 ALIGN="RIGHT">
-	<I>Mirror and index made by HTTrack Website Copier [XR&amp;CO'2008]</I>
-	</H6>
-	<!-- Mirror and index made by HTTrack Website Copier/3.49-2 [XR&CO'2014] -->
-	<!-- Thanks for using HTTrack Website Copier! -->
-	<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=start9.menu/index.html">
-
-
-<!-- ==================== Start epilogue ==================== -->
-		</td>
-		</tr>
-		</table>
-	</td>
-	</tr>
-	</table>
-</td>
-</tr>
-</table>
-
-<table width="76%" border="0" align="center" valign="bottom" cellspacing="0" cellpadding="0">
-	<tr>
-	<td id="footer"><small>&copy; 2008 Xavier Roche & other contributors - Web Design: Leto Kauler.</small></td>
-	</tr>
-</table>
-
-</body>
-
+<br><br><br>To anyone who is interested, please check out our github here:</p>
+								<a href="https://github.com/StartNine/Start9"><button>Start9 on GitHub</button></a>
+								<p class="DownloadHeader">We're also opening up the Start9 Discord Server to the public, so anyone and everyone can keep an eye on our progress, contribute ideas, etc. You can join here:</p>
+								<a href="https://discordapp.com/invite/6cpvxBS"><button>Start9 Discord Server</button></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="display:inline-block; vertical-align:bottom;">
+					<p style="font-size:10px;">Note: Start9 is not associated with Stardock or Microsoft. Neither are to be held legally responsible for anything that happens due to Start9. Also, if it breaks, you get to keep both pieces. We'll try to help you put them back together, but no promises.</p>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
-
-
