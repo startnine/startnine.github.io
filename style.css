@@ -3,11 +3,27 @@
 	src:url("WebRes/Fonts/selawk.ttf");
 }
 
+@media all and (max-width: 812px) and (min-height: 480px) {
+	#ActualContent{
+	min-width: 100%;
+	}
+
+	.HeaderBackground {
+	min-width: 100%;
+	}
+
+    }
+
 * {
 	font-family:Selawik;
 }
 
-#ActualContent {
+#ActualContent { 
+	width: 70%;
+	margin: 0 auto;
+	position: center;
+    min-height: 100% !important;
+    margin: 0 auto -60px;
 	background:white;
 	background:-webkit-linear-gradient(white , #C8D4E7);
 	background:-o-linear-gradient(white, #C8D4E7);
@@ -16,15 +32,7 @@
 	background-position: top center !important;
 	background-repeat: no-repeat !important;
 	background-attachment: fixed;
-	margin: 0;
-	width: 70%;
-	height: 100%;
-	margin: 0 auto;
-	position: center;
-}
-
-html {
-    height: 100%;
+	padding-bottom: 15%;
 }
 
 .HeaderBackground {
@@ -107,16 +115,7 @@ html {
 body {
 	margin:0px;
 	padding:0px;
-	width:100%;
-	min-height:100%;
 	background-color: white;
-	background:-webkit-linear-gradient(white , #C8D4E7);
-	background:-o-linear-gradient(white, #C8D4E7);
-	background:-moz-linear-gradient(white, #C8D4E7);
-	background:linear-gradient(white , #C8D4E7);
-	background-position: top center !important;
-	background-repeat: no-repeat !important;
-	background-attachment: fixed;
 }
 
 .BodyBG {
@@ -151,7 +150,7 @@ body {
 	font-size:20px;
 }
 
- .TableColumn {
+.TableColumn {
 	width:100;
 	padding:0px 10px 10px 10px;
  }
@@ -183,29 +182,19 @@ button:active {
 	border-image-source:url("WebRes/Images/Button_Pressed.png");
 }
 
-.fade
-{
-        opacity:0.5;
-}
-.fade:hover
-{
-        opacity:1;
-}
-
-
 .DownloadHeader {
 	margin:5px 0px 0px 0px;
 }
 
-.footer {
+footer {
 	color: black;
-    background: rgba(200, 212, 231, .90);
+    background: rgba(255, 255, 255, .90);
 	vertical-align:bottom; 
 	position: fixed;
 	bottom: 0;
-	width: auto;
+	width: 100%;
 	font-size: 10px;
-	align-self:flex-end;
+	text-align: center;
 }
 
 .indent {
