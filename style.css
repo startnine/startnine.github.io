@@ -78,25 +78,30 @@ html {
 }
 
 .MenuBarButton {
+	transition:all 0.3s ease;
 	width:auto;
 	height:100%;
 	padding: auto;
 	padding-left: 5%;
 	padding-right: 5%;
 	text-align: center;
-	font-family:Selawik;
-	border-image:none;
 	background:transparent;
-	border:none;
+	border-image-source:url("WebRes/Images/MenuBarButton.png");
 	color:white;
+	transition:all 0.3s ease;
 }
 
 .MenuBarButton:hover {
+	transition:all 0.3s ease;
 	border-image-slice:0 7 7 7 fill;
 	border-image-width:0px 7px 7px 7px;
 	border-image-outset:0px 0px 0px 0px;
 	border-image-repeat:stretch stretch;
 	border-image-source:url("WebRes/Images/MenuBarButton_Hover.png");
+}
+
+.MenuBarButton:active {
+	border-image-source:url("WebRes/Images/MenuBarButton_Pressed.png");
 }
 
 body {
@@ -161,6 +166,7 @@ button {
 	border-image-width:0px 7px 7px 7px;
 	border-image-outset:0px 0px 0px 0px;
 	border-image-repeat:stretch stretch;
+	transition:all 0.3s ease;
 	border-image-source:url("WebRes/Images/Button_Idle.png");
 }
 
@@ -169,8 +175,23 @@ button:hover {
 	border-image-width:0px 7px 7px 7px;
 	border-image-outset:0px 0px 0px 0px;
 	border-image-repeat:stretch stretch;
+	transition:all 0.3s ease;
 	border-image-source:url("WebRes/Images/Button_Hover.png");
 }
+
+button:active {
+	border-image-source:url("WebRes/Images/Button_Pressed.png");
+}
+
+.fade
+{
+        opacity:0.5;
+}
+.fade:hover
+{
+        opacity:1;
+}
+
 
 .DownloadHeader {
 	margin:5px 0px 0px 0px;
@@ -178,7 +199,7 @@ button:hover {
 
 .footer {
 	color: black;
-    background: rgba(255, 255, 255, .75);
+    background: rgba(200, 212, 231, .90);
 	vertical-align:bottom; 
 	position: fixed;
 	bottom: 0;
@@ -189,23 +210,4 @@ button:hover {
 
 .indent {
 	padding-left: 1.8em;
-}
-
-
-/* Hover.css - https://github.com/IanLunn/Hover/blob/master/*/
-.hvr-fade {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  overflow: hidden;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: color, background-color;
-  transition-property: color, background-color;
-}
-.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #518dcc;
-  color: #C8D4E7;
 }
