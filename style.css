@@ -59,6 +59,7 @@
 	color:white;
 	padding:4px 0px 1px 0px;
 	text-align:center;
+	user-select: none;
 }
 
 .MenuBarSpan {
@@ -71,6 +72,7 @@
 .MenuBar {
 	height: 5%;
 	padding:auto;
+	user-select: none;
 	margin:-8px 0px 0px 0px;
 	border-image-slice:20 10 0 10 fill;
 	border-image-width:20px 10px 0px 10px;
@@ -156,6 +158,11 @@ body {
  	vertical-align: top;
  }
 
+br {
+	user-select: none;
+	pointer-events: none;
+}
+
 button {
 	padding:1%;
 	margin:0px;
@@ -198,6 +205,10 @@ footer {
 	text-align: center;
 }
 
+.Header {
+	user-select: none;
+	pointer-events: none;
+}
 .indent {
 	padding-left: 1.8em;
 }
