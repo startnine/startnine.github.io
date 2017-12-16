@@ -18,19 +18,23 @@
 	font-family:Selawik;
 }
 
+body {
+	background:-webkit-linear-gradient(white , #C8D4E7);
+
+}
 #ActualContent { 
 	width: 70%;
 	margin: 0 auto;
 	position: center;
     min-height: 100% !important;
     margin: 0 auto -60px;
-	background:white;
+	/*background:white;
 	background:-webkit-linear-gradient(white , #C8D4E7);
 	background:-o-linear-gradient(white, #C8D4E7);
 	background:-moz-linear-gradient(white, #C8D4E7);
 	background:linear-gradient(white , #C8D4E7);
 	background-position: top center !important;
-	background-repeat: no-repeat !important;
+	background-repeat: no-repeat !important;*/
 	background-attachment: fixed;
 	padding-bottom: 15%;
 }
@@ -47,7 +51,7 @@
 	border-image-outset:0px 0px 0px 0px;
 	border-image-repeat:stretch stretch;
 	border-image-source:url("WebRes/Images/HeaderBackground.png");
-	width: 70%;
+	width: 100%;
 }
 
 .TitleSpan {
@@ -117,7 +121,6 @@
 body {
 	margin:0px;
 	padding:0px;
-	background-color: white;
 }
 
 .BodyBG {
@@ -196,7 +199,7 @@ button:active {
 
 footer {
 	color: black;
-    background: rgba(255, 255, 255, .90);
+    background: rgba(200, 212, 231, .90);
 	vertical-align:bottom; 
 	position: fixed;
 	bottom: 0;
