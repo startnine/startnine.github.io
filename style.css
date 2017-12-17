@@ -3,6 +3,9 @@
 	src:url("WebRes/Fonts/selawk.ttf");
 }
 
+* {
+	font-family:Selawik;
+}
 /*Remove padding for mobile*/
 @media all and (max-width: 812px) and (min-height: 480px) {
 	#ActualContent{
@@ -13,17 +16,8 @@
 	min-width: 100%;
 	}
 
-    }
-
-
-* {
-	font-family:Selawik;
 }
 
-body {
-	background:-webkit-linear-gradient(white , #C8D4E7);
-
-}
 #ActualContent { 
 	width: 70%;
 	margin: 0 auto;
@@ -32,6 +26,52 @@ body {
     margin: 0 auto -60px;
 	background-attachment: fixed;
 }
+
+/* --- */
+body {
+	margin:0px;
+	padding:0px;
+	background:white;
+	background:-webkit-linear-gradient(white , #C8D4E7);
+	background:-o-linear-gradient(white, #C8D4E7);
+	background:-moz-linear-gradient(white, #C8D4E7);
+	background:linear-gradient(white , #C8D4E7);
+	background-position: top center !important;
+	background-repeat: no-repeat !important;
+	background-attachment: fixed;
+}
+button {
+	padding:0.75%;
+	margin:0px;
+	font-family:Selawik;
+	background:transparent;
+	border:none;
+	border-image-slice:0 7 7 7 fill;
+	border-image-width:0px 7px 7px 7px;
+	border-image-outset:0px 0px 0px 0px;
+	border-image-repeat:stretch stretch;
+	transition:all 0.3s ease;
+	border-image-source:url("WebRes/Images/Button_Idle.png");
+}
+
+button:hover {
+	border-image-slice:0 7 7 7 fill;
+	border-image-width:0px 7px 7px 7px;
+	border-image-outset:0px 0px 0px 0px;
+	border-image-repeat:stretch stretch;
+	transition:all 0.3s ease;
+	border-image-source:url("WebRes/Images/Button_Hover.png");
+}
+
+button:active {
+	border-image-source:url("WebRes/Images/Button_Pressed.png");
+}
+
+br {
+	user-select: none;
+	pointer-events: none;
+}
+/* --- */
 
 .HeaderBackground {
 	position:fixed;
@@ -112,18 +152,7 @@ body {
 	border-image-source:url("WebRes/Images/MenuBarButton_Pressed.png");
 }
 
-body {
-	margin:0px;
-	padding:0px;
-	background:white;
-	background:-webkit-linear-gradient(white , #C8D4E7);
-	background:-o-linear-gradient(white, #C8D4E7);
-	background:-moz-linear-gradient(white, #C8D4E7);
-	background:linear-gradient(white , #C8D4E7);
-	background-position: top center !important;
-	background-repeat: no-repeat !important;
-	background-attachment: fixed;
-}
+/* --- */
 
 .BodyBG {
 	margin:80px 0px 0px 0px;
@@ -158,6 +187,7 @@ body {
 	margin:0px 0px 0px 0px;
 }
 
+/* --- */
 .TableHeader {
 	font-size:20px;
 }
@@ -168,40 +198,13 @@ body {
  	vertical-align: top;
  }
 
-br {
-	user-select: none;
-	pointer-events: none;
-}
-
-button {
-	padding:1%;
-	margin:0px;
-	font-family:Selawik;
-	background:transparent;
-	border:none;
-	border-image-slice:0 7 7 7 fill;
-	border-image-width:0px 7px 7px 7px;
-	border-image-outset:0px 0px 0px 0px;
-	border-image-repeat:stretch stretch;
-	transition:all 0.3s ease;
-	border-image-source:url("WebRes/Images/Button_Idle.png");
-}
-
-button:hover {
-	border-image-slice:0 7 7 7 fill;
-	border-image-width:0px 7px 7px 7px;
-	border-image-outset:0px 0px 0px 0px;
-	border-image-repeat:stretch stretch;
-	transition:all 0.3s ease;
-	border-image-source:url("WebRes/Images/Button_Hover.png");
-}
-
-button:active {
-	border-image-source:url("WebRes/Images/Button_Pressed.png");
-}
-
 .DownloadHeader {
 	margin:5px 0px 0px 0px;
+}
+
+.Header {
+	user-select: none;
+	pointer-events: none;
 }
 
 footer {
@@ -214,7 +217,3 @@ footer {
 	font-size: 10px;
 	text-align: center;
 }
-
-.Header {
-	user-select: none;
-	pointer-events: none;
