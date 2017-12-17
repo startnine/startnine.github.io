@@ -3,6 +3,7 @@
 	src:url("WebRes/Fonts/selawk.ttf");
 }
 
+/*Remove padding for mobile*/
 @media all and (max-width: 812px) and (min-height: 480px) {
 	#ActualContent{
 	min-width: 100%;
@@ -13,6 +14,7 @@
 	}
 
     }
+
 
 * {
 	font-family:Selawik;
@@ -28,15 +30,7 @@ body {
 	position: center;
     min-height: 100% !important;
     margin: 0 auto -60px;
-	/*background:white;
-	background:-webkit-linear-gradient(white , #C8D4E7);
-	background:-o-linear-gradient(white, #C8D4E7);
-	background:-moz-linear-gradient(white, #C8D4E7);
-	background:linear-gradient(white , #C8D4E7);
-	background-position: top center !important;
-	background-repeat: no-repeat !important;*/
 	background-attachment: fixed;
-	padding-bottom: 15%;
 }
 
 .HeaderBackground {
@@ -121,6 +115,14 @@ body {
 body {
 	margin:0px;
 	padding:0px;
+	background:white;
+	background:-webkit-linear-gradient(white , #C8D4E7);
+	background:-o-linear-gradient(white, #C8D4E7);
+	background:-moz-linear-gradient(white, #C8D4E7);
+	background:linear-gradient(white , #C8D4E7);
+	background-position: top center !important;
+	background-repeat: no-repeat !important;
+	background-attachment: fixed;
 }
 
 .BodyBG {
@@ -143,6 +145,11 @@ body {
 .BodyBackground {
 	width:100%;
 	height:100%;
+	background:white;
+	background:-webkit-linear-gradient(white , #C8D4E7);
+	background:-o-linear-gradient(white, #C8D4E7);
+	background:-moz-linear-gradient(white, #C8D4E7);
+	background:linear-gradient(white , #C8D4E7);
 }
 
 .BodyContent {
@@ -211,7 +218,3 @@ footer {
 .Header {
 	user-select: none;
 	pointer-events: none;
-}
-.indent {
-	padding-left: 1.8em;
-}
