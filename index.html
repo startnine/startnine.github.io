@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-		<meta name="description" content="Start9 Web Site">
+		<meta name="description" content="A full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content.">
 		<title>Home - Start9</title>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -15,69 +14,75 @@
 				font-family:Selawik;
 				src:url("WebRes/Fonts/selawk.ttf");
 			}
+
 			* {
 				font-family:Selawik;
 			}
 		</style>
 		<link rel="shortcut icon" href="https://avatars1.githubusercontent.com/u/34009271">
 	</head>
-	<body>
+	<header>
 		<div>
-
-				<div class="HeaderBackground">
-					<!--img style="width:40px; height:52px; margin:18px -30px -70px 11px;" src="WebRes/Images/Logo.png"/-->
-					<span class="TitleSpan">
-						<center>
-							<p class="Title">Home</p>
-						</center>
-					</span>
+			<div class="HeaderBackground">
+				<!--img style="width:40px; height:52px; margin:18px -30px -70px 11px;" src="WebRes/Images/Logo.png"/-->
+				<span class="TitleSpan">
+					<center>
+						<p class="Title">Home (WIP)</p>
+					</center>
+				</span>
 				<center>
 					<span class="MenuBarSpan">
-							<div class="MenuBar">
-								<div class="MenuBarContent"><center>
+						<div class="MenuBar">
+							<div class="MenuBarContent">
+								<center>
 									<button class="MenuBarButton" onclick="window.location.href='http://start9.menu'">Home</button>
 									<button class="MenuBarButton" onclick="window.location.href='http://github.com/StartNine/Start9/releases'">Downloads</button>
 									<button class="MenuBarButton">News</button>
 									<button class="MenuBarButton">Community</button>
 									<button class="MenuBarButton">FAQ</button>
-							</center></div>
-						</span>
+								</center>
+							</div>
+						</div>
+					</span>
+				</center>
+			</div>
+		</div>
+		<div class="BodyBG">
+			<div class="Header" style="height:200px; padding:0; width:100%;">
+				<center><img style="width:100%; height:256px; " align="middle" src="WebRes/Images/Aurora2.png"/></center>
+				<center>
+					<div style="margin:-256px 0px 256px 0px;">
+						<p style="font-size:48px; vertical-align:middle;"><img style="width:80px; height:104px; vertical-align:middle;" src="WebRes/Images/Logo.png"/> <b>Start9</b></p>
 					</div>
 				</center>
-				</div>
-				<div class="BodyBG">
-					<div class="Header" style="height:200px; padding:0; width:100%;">
-						<center><img style="width:100%; height:256px; vertical-align:text-top;" align="middle" src="WebRes/Images/Aurora2.png"/></center>
-					<center>
-						<div style="margin:-256px 0px 256px 0px;">
-							<p style="font-size:48px; vertical-align:middle;"><img style="width:80px; height:104px; vertical-align:middle;" src="WebRes/Images/Logo.png"/> <b>Start9</b></p>
-						</div>
-					</center>
-					</div><div id="ActualContent" style="min-height: 100%;">
-					<div class="BodyContent">
-						<!-- Content here -->
-						<table style="width:100%;">
-							<tbody>
-								<tr>
-									<td class="TableColumn">
-										<p class="DownloadHeader">Hello everyone,<br>
-												&emsp;&emsp;We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code. All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.
-									</td>
-									<td class="TableColumn" width="15%">
-										<p>To anyone who is interested, please check out our GitHub here:
-										<a href="https://github.com/StartNine/Start9"><br><button style="padding:5%;">Start9 on GitHub</button></a>
-										</p>
-										<br>
-										<p class="DownloadHeader">We're also opening up the Start9 Discord Server to the public, so anyone and everyone can keep an eye on our progress, contribute ideas, etc. You can join here:
-										<a href="https://discordapp.com/invite/6cpvxBS"><br><button style="padding:5%;">Start9 Discord Server</button></a>
-										</p>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<br><br><br><br><br>
-					</div>
-				</div>
+			</div>
+		</div>
+	</header>
+	<body>
+		<div id="ActualContent" style="min-height:100%;">
+			<div class="BodyContent">
+				<!-- Content here -->
+				<table style="width:100%;">
+					<tbody>
+						<tr>
+							<td class="TableColumn">
+								<p class="DownloadHeader">Hello everyone,<br>
+									&emsp;&emsp;We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code. All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.
+							</td>
+							<td class="TableColumn" width="15%">
+								<p>To anyone who is interested, please check out our GitHub here:
+									<br>
+									<a href="https://github.com/StartNine/Start9"><button style="padding:5%;">Start9 on GitHub</button></a>
+								</p>
+									<br>
+								<p class="DownloadHeader" style="padding-bottom:100%;">We're also opening up the Start9 Discord Server to the public, so anyone and everyone can keep an eye on our progress, contribute ideas, etc. You can join here:
+									<br>
+									<a href="https://discordapp.com/invite/6cpvxBS"><button style="padding:5%;">Start9 Discord Server</button></a>
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</body>
