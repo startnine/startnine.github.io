@@ -3,7 +3,7 @@
 	src: url("WebRes/Fonts/selawk.eot");
  }
  
-* {font-family: Selawik;}
+* {font-family: "Selawik", "Segoe UI";}
 
 /* --- */
 
@@ -45,7 +45,6 @@ br {
  
 .Title {
 	font-size: 24;
-	color: white;
 	padding: 4px 0px 1px 0px;
 	text-align: center;
 	user-select: none;

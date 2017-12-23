@@ -1,10 +1,16 @@
+
+/* Font face */
+
 @font-face {
 	font-family: Selawik;
 	src: url("WebRes/Fonts/selawk.ttf");
  }
  
-* {font-family: Selawik;}
- 
+* {font-family: "Selawik", "Segoe UI";}
+
+/* --- */
+
+
 /*Remove padding for mobile*/
 
 @media all and (max-width: 812px) and (min-height: 480px) {
@@ -13,26 +19,17 @@
 }
  
 /* --- */
+
+
+/* --- */
+
 #ActualContent {
 	width: 70%;
 	margin: 0 auto;
 	position: center;
 	background-attachment: fixed;
  }
- 
-body {
-	margin: 0px;
-	padding: 0px;
-	background-color: #C8D4E7; /*Fallback*/
-	background: -webkit-linear-gradient(white , #C8D4E7);
-	background: -o-linear-gradient(white, #C8D4E7);
-	background: -moz-linear-gradient(white, #C8D4E7);
-	background: linear-gradient(white , #C8D4E7);
-	background-position: top center !important;
-	background-repeat: no-repeat !important;
-	background-attachment: fixed;
- }
- 
+
 button {
 	outline: 0;
 	padding: 0.75%;
@@ -48,10 +45,6 @@ button {
  }
  
 	button:hover {
-		border-image-slice: 0 7 7 7 fill;
-		border-image-width: 0px 7px 7px 7px;
-		border-image-outset: 0px 0px 0px 0px;
-		border-image-repeat: stretch stretch;
 		transition: all 0.3s ease;
 		border-image-source: url("WebRes/Images/Button_Hover.png");
 	 }
@@ -64,6 +57,9 @@ br {
  }
  
 /* --- */
+
+
+/* Header */
 
 .HeaderBackground {
 	position: fixed;
@@ -142,6 +138,22 @@ br {
  
 /* --- */
 
+
+/* Body */
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #C8D4E7; /* fallback */
+	background: -webkit-linear-gradient(white , #C8D4E7);
+	background: -o-linear-gradient(white, #C8D4E7);
+	background: -moz-linear-gradient(white, #C8D4E7);
+	background: linear-gradient(white , #C8D4E7);
+	background-position: top center !important;
+	background-repeat: no-repeat !important;
+	background-attachment: fixed;
+ }
+ 
 .BodyBG {
 	margin: 80px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
@@ -175,6 +187,9 @@ br {
 	margin: 0px 0px 0px 0px;
  }
  
+/* --- */
+
+
 /* --- */
 
 .TableHeader {font-size: 20px;}
