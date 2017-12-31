@@ -109,7 +109,7 @@ button:active {
 .TitleSpan {vertical-align: top;}
  
 .Title {
-	font-size: 24px;
+	font-size: 19px;
 	color: white;
 	padding: 4px 0px 1px 0px;
 	text-align: center;
@@ -148,6 +148,7 @@ button:active {
 	height: 18px;
 	display: inline;
 	background: transparent;
+    text-decoration: none; 
  }
  
 .MenuBarButton {
