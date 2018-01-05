@@ -29,6 +29,7 @@
 	position: center;
     -ms-background-attachment: fixed;
     background-attachment: fixed;
+    min-height:100%;
 }
 
 button {
@@ -143,13 +144,6 @@ button:active {
     -o-border-image-source: url("WebRes/Images/MenuBarBackground.png");
     border-image-source: url("WebRes/Images/MenuBarBackground.png");
 }
-
-.MenuBarContent {
-	height: 18px;
-	display: inline;
-	background: transparent;
-    text-decoration: none; 
- }
  
 .MenuBarButton {
     -ms-transition: all 0.3s ease;
@@ -221,6 +215,9 @@ body {
 	padding: 0px 0px 0px 0px;
 	width: 100%;
 	background: transparent;
+	height: 200px; 
+	padding: 0; 
+	width: 100%;
  }
  
 .BodyContianer {
