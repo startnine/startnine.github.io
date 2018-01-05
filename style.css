@@ -23,15 +23,6 @@
 
 /* --- */
 
-#ActualContent {
-    width: 70%;
-	margin: 0 auto;
-	position: center;
-    -ms-background-attachment: fixed;
-    background-attachment: fixed;
-    min-height:100%;
-}
-
 button {
     -ms-outline: 0;
     outline: 0;
@@ -218,6 +209,7 @@ body {
 	height: 200px; 
 	padding: 0; 
 	width: 100%;
+	text-align: center;
  }
  
 .BodyContianer {
@@ -242,7 +234,12 @@ body {
 .BodyContent {
 	vertical-align: top;
 	padding: 0px;
-	margin: 0px 0px 0px 0px;
+	width: 70%;
+	margin: 0 auto;
+	position: center;
+    -ms-background-attachment: fixed;
+    background-attachment: fixed;
+    min-height: 100%;
  }
  
 /* --- */
