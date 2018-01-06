@@ -101,9 +101,15 @@ button:active {
 	color: white;
 	padding: 4px 0px 1px 0px;
 	text-align: center;
-	user-select: none;
+	pointer-events: none;
  }
- 
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    user-select: none;
+}
+
 .MenuBar {
 	vertical-align: bottom;
 	display: inline-block;
