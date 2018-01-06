@@ -3,7 +3,7 @@
 	<head>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<meta name="viewport" content="width=device-width"/>
-		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="description" content="A full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content.">
 		<title>Home - Start9</title>
 		<link rel="shortcut icon" href="https://avatars1.githubusercontent.com/u/34009271">
@@ -13,28 +13,35 @@
 			<span class="TitleSpan">
 				<p class="Title">Home</p>
 			</span>
-			<div style="text-align: center;">
+			<nav class="menu" style="text-align: center;">
 				<span class="MenuBarSpan">
 					<div class="MenuBar">
-						<a href="#" style="text-decoration: none;">
-							<button class="MenuBarButton">Home</button>
-						</a>
-						<a href="https://github.com/StartNine/Start9/releases" target="_blank""  style="text-decoration: none;">
-							<button class="MenuBarButton">Downloads</button>
-						</a>
-						<a href="#" style="text-decoration: none;">
-							<button class="MenuBarButton">News</button>
-						</a>
-						<a href="#" style="text-decoration: none;">
-							<button class="MenuBarButton">Community</button>
-						</a>
-						<a href="./faq.html" style="text-decoration: none;">
-							<button class="MenuBarButton">FAQ</button>
-						</a>
+							<!--<a href="javascript:void(0);" class="icon" onclick="menuBar()">&#9776;</a>-->
+
+							<a href="#" style="text-decoration: none;">
+								<button class="MenuBarButton">Home</button>
+							</a>
+
+							<a href="https://github.com/StartNine/Start9/releases" target="_blank"  style="text-decoration: none;">
+								<button class="MenuBarButton">Downloads</button>
+							</a>
+
+							<a href="#" style="text-decoration: none;">
+								<button class="MenuBarButton">News</button>
+							</a>
+
+							<a href="#" style="text-decoration: none;">
+								<button class="MenuBarButton">Community</button>
+							</a>
+
+							<a href="./faq.html" style="text-decoration: none;">
+								<button class="MenuBarButton">FAQ</button>
+							</a>
 					</div>
 				</span>
 			</div>
 		</div>
+
 		<div class="BodyBG">
 			<div>
 				<img style="width: 100%; vertical-align: middle; height: 256px;" src="WebRes/Images/Aurora2.png" alt="Aurora"/>
@@ -46,6 +53,7 @@
 			</div>
 		</div>
 	</header>
+
 	<body>
 		<div class="BodyContent">
 			<table style="width:100%;">
@@ -55,7 +63,7 @@
 							<p class="DownloadHeader">Hello everyone,<br>
 								&emsp;&emsp;We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code. All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.
 						</td>
-						<td class="TableColumn" width="15%">
+						<td class="TableColumnLinks">
 							<p>To anyone who is interested, please check out our GitHub here:
 								<br>
 								<a href="https://github.com/StartNine/Start9" target="_blank"><button style="padding: 5%;">Start9 on GitHub</button></a>
@@ -71,6 +79,7 @@
 			</table>
 		</div>
 	</body>
+
 	<footer>
 		<p>Note: Start9 is not associated with Stardock or Microsoft. Neither are to be held legally responsible for anything that happens due to Start9. Also, if it breaks, you get to keep both pieces. We'll try to help you put them back together, but no promises.</p>
 	</footer>

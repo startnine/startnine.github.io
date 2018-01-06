@@ -13,13 +13,9 @@
 
 /*Remove padding for mobile*/
 
-@media all and (max-width: 812px) and (min-height: 480px) {
-	#ActualContent{min-width: 100%;}
-	.HeaderBackground {min-width: 100%;}
-}
+@media all and (max-width: 812px) and (min-height: 480px) { .BodyContent {min-width: 100%;} }
  
 /* --- */
-
 
 /* --- */
 
@@ -180,6 +176,10 @@ button:active {
     border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
 }
 
+.topnav .icon {
+    display: none;
+}
+
 /* --- */
 
 
@@ -251,6 +251,12 @@ body {
  
 .TableColumn {
 	width: 80%;
+	padding: 0px 10px 10px 10px;
+	vertical-align: top;
+ }
+
+ .TableColumnLinks {
+	width: 15%;
 	padding: 0px 10px 10px 10px;
 	vertical-align: top;
  }
