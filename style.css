@@ -104,16 +104,12 @@ button:active {
 	user-select: none;
  }
  
-.MenuBarSpan {
+.MenuBar {
 	vertical-align: bottom;
 	display: inline-block;
 	align-self: flex-end;
 	width: 100%;
- }
- 
-.MenuBar {
     height: auto;
-	padding: auto;
 	margin: -8px 0px 0px 0px;
     -ms-border-image-slice: 20 10 0 10 fill;
     -o-border-image-slice: 20 10 0 10 fill;
@@ -139,7 +135,6 @@ button:active {
     transition: all 0.3s ease;
 	width: auto;
 	height: auto;
-	padding: auto;
 	padding-left: 5%;
 	padding-right: 5%;
 	text-align: center;
@@ -236,7 +231,6 @@ body {
 	padding: 0px;
 	width: 70%;
 	margin: 0 auto;
-	position: center;
     -ms-background-attachment: fixed;
     background-attachment: fixed;
     min-height: 100%;

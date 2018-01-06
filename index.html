@@ -10,36 +10,29 @@
 	</head>
 	<header>
 		<div class="HeaderBackground">
-			<span class="TitleSpan">
+			<div class="TitleSpan">
 				<p class="Title">Home</p>
-			</span>
-			<nav class="menu" style="text-align: center;">
-				<span class="MenuBarSpan">
-					<div class="MenuBar">
-							<!--<a href="javascript:void(0);" class="icon" onclick="menuBar()">&#9776;</a>-->
-
-							<a href="#" style="text-decoration: none;">
-								<button class="MenuBarButton">Home</button>
-							</a>
-
-							<a href="https://github.com/StartNine/Start9/releases" target="_blank"  style="text-decoration: none;">
-								<button class="MenuBarButton">Downloads</button>
-							</a>
-
-							<a href="#" style="text-decoration: none;">
-								<button class="MenuBarButton">News</button>
-							</a>
-
-							<a href="#" style="text-decoration: none;">
-								<button class="MenuBarButton">Community</button>
-							</a>
-
-							<a href="./faq.html" style="text-decoration: none;">
-								<button class="MenuBarButton">FAQ</button>
-							</a>
-					</div>
-				</span>
 			</div>
+			<nav class="menu" style="text-align: center;">
+				<div class="MenuBar">
+					<!--<a href="javascript:void(0);" class="icon" onclick="menuBar()">&#9776;</a>-->
+					<form style="display: inline" action="index.html" method="get">
+						<button class="MenuBarButton">Home</button>
+					</form>							
+					<form style="display: inline" action="https://github.com/StartNine/Start9/releases" target="_blank" method="get">
+						<button class="MenuBarButton">Downloads</button>
+					</form>							
+					<form style="display: inline" action="#" method="get">
+						<button class="MenuBarButton">News</button>
+					</form>							
+					<form style="display: inline" action="#" method="get">
+						<button class="MenuBarButton">Community</button>
+					</form>
+					<form style="display: inline" action="faq.html" method="get">
+						<button class="MenuBarButton">FAQ</button>
+					</form>
+				</div>
+			</nav>
 		</div>
 
 		<div class="BodyBG">
@@ -66,12 +59,16 @@
 						<td class="TableColumnLinks">
 							<p>To anyone who is interested, please check out our GitHub here:
 								<br>
-								<a href="https://github.com/StartNine/Start9" target="_blank"><button style="padding: 5%;">Start9 on GitHub</button></a>
+								<form action="https://github.com/StartNine/Start9" target="_blank" method="get">
+									<button style="padding: 5%;">Start9 on GitHub</button>
+								</form>
+								<br><br><br>
 							</p>
-								<br>
-							<p class="DownloadHeader" style="padding-bottom:100%;">We're also opening up the Start9 Discord Server to the public, so anyone and everyone can keep an eye on our progress, contribute ideas, etc. You can join here:
-								<br>
-								<a href="https://discordapp.com/invite/6cpvxBS" target="_blank"><button style="padding: 5%;">Start9 Discord Server</button></a>
+							<p class="DownloadHeader">We're also opening up the Start9 Discord Server to the public, so anyone and everyone can keep an eye on our progress, contribute ideas, etc. You can join here:
+								<br><br>
+								<form action="https://discordapp.com/invite/6cpvxBS" target="_blank" method="get">
+									<button style="padding: 5%;">Start9 Discord Server</button>
+								</form>
 							</p>
 						</td>
 					</tr>
