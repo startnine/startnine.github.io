@@ -36,39 +36,42 @@
 /* Modifiers */
 
 .disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    user-select: none;
+	opacity: 0.6;
+	cursor: not-allowed;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
 }
 
-.customMargin { margin: 5px 0px 0px 0px; }
+.customMargin { margin: 5px 0 0 0; }
 
 /* --- */
 
 /* Header */
 
 .headerBackground {
-    position: fixed;
+	position: fixed;
 	padding: 0px;
 	margin: -90px 0px 0px 0px;
 	height: auto;
 	background: transparent;
 	vertical-align: top;
-    -ms-border-image-slice: 0 10 0 10 fill;
-    -o-border-image-slice: 0 10 0 10 fill;
-    border-image-slice: 0 10 0 10 fill;
-    -ms-border-image-width: 0px 10px 0px 10px;
-    -o-border-image-width: 0px 10px 0px 10px;
-    border-image-width: 0px 10px 0px 10px;
-    -ms-border-image-outset: 0 0 0 0;
-    -o-border-image-outset: 0 0 0 0;
-    border-image-outset: 0 0 0 0;
-    -ms-border-image-repeat: stretch stretch;
-    -o-border-image-repeat: stretch stretch;
-    border-image-repeat: stretch stretch;
-    -ms-border-image-source: url("WebRes/Images/HeaderBackground.png");
-    -o-border-image-source: url("WebRes/Images/HeaderBackground.png");
-    border-image-source: url("WebRes/Images/HeaderBackground.png");
+	-ms-border-image-slice: 0 10 0 10 fill;
+	-o-border-image-slice: 0 10 0 10 fill;
+	border-image-slice: 0 10 0 10 fill;
+	-ms-border-image-width: 0px 10px 0px 10px;
+	-o-border-image-width: 0px 10px 0px 10px;
+	border-image-width: 0px 10px 0px 10px;
+	-ms-border-image-outset: 0 0 0 0;
+	-o-border-image-outset: 0 0 0 0;
+	border-image-outset: 0 0 0 0;
+	-ms-border-image-repeat: stretch stretch;
+	-o-border-image-repeat: stretch stretch;
+	border-image-repeat: stretch stretch;
+	-ms-border-image-source: url("WebRes/Images/HeaderBackground.png");
+	-o-border-image-source: url("WebRes/Images/HeaderBackground.png");
+	border-image-source: url("WebRes/Images/HeaderBackground.png");
 	width: 100%;
 }
  
@@ -83,72 +86,74 @@
 .menuBar {
 	vertical-align: bottom;
 	display: inline-block;
-	align-self: flex-end;
+	-ms-flex-item-align: end;
+		align-self: flex-end;
 	width: 100%;
-    height: auto;
+	height: auto;
 	margin: -8px 0 0 0;
-    -ms-border-image-slice: 20 10 0 10 fill;
-    -o-border-image-slice: 20 10 0 10 fill;
-    border-image-slice: 20 10 0 10 fill;
-    -ms-border-image-width: 20px 10px 0px 10px;
-    -o-border-image-width: 20px 10px 0px 10px;
-    border-image-width: 20px 10px 0px 10px;
-    -ms-border-image-outset: 0 0 0 0;
-    -o-border-image-outset: 0 0 0 0;
-    border-image-outset: 0 0 0 0;
-    -ms-border-image-repeat: stretch stretch;
-    -o-border-image-repeat: stretch stretch;
-    border-image-repeat: stretch stretch;
-    -ms-border-image-source: url("WebRes/Images/MenuBarBackground.png");
-    -o-border-image-source: url("WebRes/Images/MenuBarBackground.png");
-    border-image-source: url("WebRes/Images/MenuBarBackground.png");
+	-ms-border-image-slice: 20 10 0 10 fill;
+	-o-border-image-slice: 20 10 0 10 fill;
+	border-image-slice: 20 10 0 10 fill;
+	-ms-border-image-width: 20px 10px 0px 10px;
+	-o-border-image-width: 20px 10px 0px 10px;
+	border-image-width: 20px 10px 0px 10px;
+	-ms-border-image-outset: 0 0 0 0;
+	-o-border-image-outset: 0 0 0 0;
+	border-image-outset: 0 0 0 0;
+	-ms-border-image-repeat: stretch stretch;
+	-o-border-image-repeat: stretch stretch;
+	border-image-repeat: stretch stretch;
+	-ms-border-image-source: url("WebRes/Images/MenuBarBackground.png");
+	-o-border-image-source: url("WebRes/Images/MenuBarBackground.png");
+	border-image-source: url("WebRes/Images/MenuBarBackground.png");
 }
  
 .menuBarButton {
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 	width: auto;
 	height: auto;
 	padding-left: 5%;
 	padding-right: 5%;
 	text-align: center;
 	background: transparent;
-    -ms-border-image-source: url("WebRes/Images/MenuBarButton.png");
-    -o-border-image-source: url("WebRes/Images/MenuBarButton.png");
-    border-image-source: url("WebRes/Images/MenuBarButton.png");
+	-ms-border-image-source: url("WebRes/Images/MenuBarButton.png");
+	-o-border-image-source: url("WebRes/Images/MenuBarButton.png");
+	border-image-source: url("WebRes/Images/MenuBarButton.png");
 	color: white;
 	transition: all 0.3s ease;
 }
 
 .menuBarButton:hover {
-    transition: all 0.3s ease;
-    -ms-border-image-slice: 0 7 7 7 fill;
-    -o-border-image-slice: 0 7 7 7 fill;
-    border-image-slice: 0 7 7 7 fill;
-    -ms-border-image-width: 0 7px 7px 7px;
-    -o-border-image-width: 0 7px 7px 7px;
-    border-image-width: 0 7px 7px 7px;
-    -ms-border-image-outset: 0 0 0 0;
-    -o-border-image-outset: 0 0 0 0;
-    border-image-outset: 0 0 0 0;
-    -ms-border-image-repeat: stretch stretch;
-    -o-border-image-repeat: stretch stretch;
-    border-image-repeat: stretch stretch;
-    -ms-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
-    -o-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
-    border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	-ms-border-image-slice: 0 7 7 7 fill;
+	-o-border-image-slice: 0 7 7 7 fill;
+	border-image-slice: 0 7 7 7 fill;
+	-ms-border-image-width: 0 7px 7px 7px;
+	-o-border-image-width: 0 7px 7px 7px;
+	border-image-width: 0 7px 7px 7px;
+	-ms-border-image-outset: 0 0 0 0;
+	-o-border-image-outset: 0 0 0 0;
+	border-image-outset: 0 0 0 0;
+	-ms-border-image-repeat: stretch stretch;
+	-o-border-image-repeat: stretch stretch;
+	border-image-repeat: stretch stretch;
+	-ms-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
+	-o-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
+	border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
 }
 
 .menuBarButton:active {
-    -ms-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
-    -o-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
-    border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
+	-ms-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
+	-o-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
+	border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
 }
 
 .topNav .icon {
-    display: none;
+	display: none;
 }
 
 /* --- */
@@ -157,19 +162,20 @@
 /* Body */
 
 body {
-    margin: 0;
+	margin: 0;
 	padding: 0;
 	background-color: #C8D4E7; /* fallback */
 	background: -webkit-linear-gradient(white , #C8D4E7);
 	background: -o-linear-gradient(white, #C8D4E7);
-	background: -moz-linear-gradient(white, #C8D4E7);
+	background: -webkit-gradient(linear , left top, left bottom , from(white) , to(#C8D4E7));
+	background: -o-linear-gradient(white , #C8D4E7);
 	background: linear-gradient(white , #C8D4E7);
-    -ms-background-position: top center !important;
-    background-position: top center !important;
-    -ms-background-repeat: no-repeat !important;
-    background-repeat: no-repeat !important;
-    -ms-background-attachment: fixed;
-    background-attachment: fixed;
+	-ms-background-position: top center !important;
+	background-position: top center !important;
+	-ms-background-repeat: no-repeat !important;
+	background-repeat: no-repeat !important;
+	-ms-background-attachment: fixed;
+	background-attachment: fixed;
 }
 
 .bodyBG {
@@ -198,7 +204,8 @@ body {
 	background: white;
 	background: -webkit-linear-gradient(white , #C8D4E7);
 	background: -o-linear-gradient(white, #C8D4E7);
-	background: -moz-linear-gradient(white, #C8D4E7);
+	background: -webkit-gradient(linear , left top, left bottom , from(white) , to(#C8D4E7));
+	background: -o-linear-gradient(white , #C8D4E7);
 	background: linear-gradient(white , #C8D4E7);
  }
 
@@ -211,10 +218,10 @@ body {
 	padding: 0;
 	width: 70%;
 	margin: 0 auto;
-    -ms-background-attachment: fixed;
-    background-attachment: fixed;
-    min-height: 100%;
-    display: grid;
+	-ms-background-attachment: fixed;
+	background-attachment: fixed;
+	min-height: 100%;
+	display: grid;
  	grid-gap: 10px;
  	grid-template-columns: 80% 15%;
  	grid-template-rows: 100% 100%;
@@ -229,9 +236,14 @@ body {
  }
 
 .side {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	min-height: 100%;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
 	vertical-align: top;
 	grid-row: 1;
 	grid-column: 2;
@@ -250,47 +262,45 @@ body {
 /* Buttons */
 
 button {
-    -ms-outline: 0;
-    outline: 0;
+	-ms-outline: 0;
+	outline: 0;
 	padding: 0.75%;
 	margin: 0;
 	background: transparent;
 	border: none;
-    -ms-border-image-slice: 0 7 7 7 fill;
-    -o-border-image-slice: 0 7 7 7 fill;
-    border-image-slice: 0 7 7 7 fill;
-    -ms-border-image-width: 0 7px 7px 7px;
-    -o-border-image-width: 0 7px 7px 7px;
-    border-image-width: 0 7px 7px 7px;
-    -ms-border-image-outset: 0 0 0 0;
-    -o-border-image-outset: 0 0 0 0;
-    border-image-outset: 0 0 0 0;
-    -ms-border-image-repeat: stretch stretch;
-    -o-border-image-repeat: stretch stretch;
-    border-image-repeat: stretch stretch;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    -ms-border-image-source: url("WebRes/Images/Button_Idle.png");
-    -o-border-image-source: url("WebRes/Images/Button_Idle.png");
-    border-image-source: url("WebRes/Images/Button_Idle.png");
+	-ms-border-image-slice: 0 7 7 7 fill;
+	-o-border-image-slice: 0 7 7 7 fill;
+	border-image-slice: 0 7 7 7 fill;
+	-ms-border-image-width: 0 7px 7px 7px;
+	-o-border-image-width: 0 7px 7px 7px;
+	border-image-width: 0 7px 7px 7px;
+	-ms-border-image-outset: 0 0 0 0;
+	-o-border-image-outset: 0 0 0 0;
+	border-image-outset: 0 0 0 0;
+	-ms-border-image-repeat: stretch stretch;
+	-o-border-image-repeat: stretch stretch;
+	border-image-repeat: stretch stretch;
+	-o-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	-ms-border-image-source: url("WebRes/Images/Button_Idle.png");
+	-o-border-image-source: url("WebRes/Images/Button_Idle.png");
+	border-image-source: url("WebRes/Images/Button_Idle.png");
 }
 
 button:hover {
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    -ms-border-image-source: url("WebRes/Images/Button_Hover.png");
-    -o-border-image-source: url("WebRes/Images/Button_Hover.png");
-    border-image-source: url("WebRes/Images/Button_Hover.png");
+	-o-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	-ms-border-image-source: url("WebRes/Images/Button_Hover.png");
+	-o-border-image-source: url("WebRes/Images/Button_Hover.png");
+	border-image-source: url("WebRes/Images/Button_Hover.png");
 }
 
 button:active {
-    -ms-border-image-source: url("WebRes/Images/Button_Pressed.png");
-    -o-border-image-source: url("WebRes/Images/Button_Pressed.png");
-    border-image-source: url("WebRes/Images/Button_Pressed.png");
+	-ms-border-image-source: url("WebRes/Images/Button_Pressed.png");
+	-o-border-image-source: url("WebRes/Images/Button_Pressed.png");
+	border-image-source: url("WebRes/Images/Button_Pressed.png");
 }
 
  
@@ -300,9 +310,9 @@ button:active {
 /* --- */
  
 footer {
-    color: black;
-    background: #c8d4e7;
-    background: rgba(200, 212, 231, .90);
+	color: black;
+	background: #c8d4e7;
+	background: rgba(200, 212, 231, .90);
 	vertical-align: bottom;
 	position: fixed;
 	bottom: 0;
