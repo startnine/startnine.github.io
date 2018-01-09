@@ -252,7 +252,9 @@ body {
 	vertical-align: top;
 }
 
-.sideObject button {padding: 4%;}
+.sideObject button {
+	padding: .7em;
+}
 
 .sideObject p {margin: 5px 0 0 0;}
 
