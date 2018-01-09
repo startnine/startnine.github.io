@@ -13,13 +13,28 @@
 /* --- */
 
 
-/*Remove padding for mobile*/
+/* Mobile Ajustments */
 
-@media all and (max-width: 812px) and (min-height: 480px) { .BodyContent {min-width: 100%;} }
- 
+@media all and (max-width: 812px) and (min-height: 480px) {
+	.bodyContent {min-width: 100%;}
+}
+
+
 /* --- */
 
+
+/* Modifiers */
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    user-select: none;
+}
+
 /* --- */
+
+
+/* Buttons */
 
 button {
     -ms-outline: 0;
@@ -71,7 +86,7 @@ button:active {
 
 /* Header */
 
-.HeaderBackground {
+.headerBackground {
     position: fixed;
 	padding: 0px;
 	margin: -90px 0px 0px 0px;
@@ -95,24 +110,16 @@ button:active {
     border-image-source: url("WebRes/Images/HeaderBackground.png");
 	width: 100%;
 }
-
-.TitleSpan {vertical-align: top;}
  
-.Title {
+.title {
 	font-size: 19px;
 	color: white;
 	padding: 4px 0px 1px 0px;
 	text-align: center;
-	pointer-events: none;
+	vertical-align: top;
  }
 
-.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    user-select: none;
-}
-
-.MenuBar {
+.menuBar {
 	vertical-align: bottom;
 	display: inline-block;
 	align-self: flex-end;
@@ -136,7 +143,7 @@ button:active {
     border-image-source: url("WebRes/Images/MenuBarBackground.png");
 }
  
-.MenuBarButton {
+.menuBarButton {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -154,7 +161,7 @@ button:active {
 	transition: all 0.3s ease;
 }
 
-.MenuBarButton:hover {
+.menuBarButton:hover {
     transition: all 0.3s ease;
     -ms-border-image-slice: 0 7 7 7 fill;
     -o-border-image-slice: 0 7 7 7 fill;
@@ -173,13 +180,13 @@ button:active {
     border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
 }
 
-.MenuBarButton:active {
+.menuBarButton:active {
     -ms-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
     -o-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
     border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
 }
 
-.topnav .icon {
+.topNav .icon {
     display: none;
 }
 
@@ -204,7 +211,7 @@ body {
     background-attachment: fixed;
 }
 
-.BodyBG {
+.bodyBG {
 	margin: 80px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	width: 100%;
@@ -215,7 +222,7 @@ body {
 	text-align: center;
  }
  
-.BodyContianer {
+.bodyContianer {
 	position: fixed;
 	width: 100%;
 	height: auto;
@@ -224,7 +231,7 @@ body {
 	background: transparent;
  }
  
-.BodyBackground {
+.bodyBackground {
 	width: 100%;
 	height: auto;
 	background: white;
@@ -234,7 +241,7 @@ body {
 	background: linear-gradient(white , #C8D4E7);
  }
  
-.BodyContent {
+.bodyContent {
 	vertical-align: top;
 	padding: 0px;
 	width: 70%;
@@ -249,21 +256,21 @@ body {
 
 /* --- */
 
-.TableHeader {font-size: 20px;}
+.tableHeader {font-size: 20px;}
  
-.TableColumn {
+.tableColumn {
 	width: 80%;
 	padding: 0px 10px 10px 10px;
 	vertical-align: top;
  }
 
- .TableColumnLinks {
+ .tableColumnLinks {
 	width: 15%;
 	padding: 0px 10px 10px 10px;
 	vertical-align: top;
  }
  
-.DownloadHeader {margin: 5px 0px 0px 0px;}
+.downloadHeader {margin: 5px 0px 0px 0px;}
  
 
  
