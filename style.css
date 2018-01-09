@@ -16,7 +16,7 @@
 /* Mobile Ajustments */
 
 @media all and (max-width: 812px) and (min-height: 480px) {
-	.bodyContent {
+	.gridBody {
 	min-width: 100%;
  	grid-template-columns: auto auto !important;
  	grid-template-rows: 100% !important;
@@ -41,6 +41,209 @@
     user-select: none;
 }
 
+.customMargin { margin: 5px 0px 0px 0px; }
+
+/* --- */
+
+/* Header */
+
+.headerBackground {
+    position: fixed;
+	padding: 0px;
+	margin: -90px 0px 0px 0px;
+	height: auto;
+	background: transparent;
+	vertical-align: top;
+    -ms-border-image-slice: 0 10 0 10 fill;
+    -o-border-image-slice: 0 10 0 10 fill;
+    border-image-slice: 0 10 0 10 fill;
+    -ms-border-image-width: 0px 10px 0px 10px;
+    -o-border-image-width: 0px 10px 0px 10px;
+    border-image-width: 0px 10px 0px 10px;
+    -ms-border-image-outset: 0 0 0 0;
+    -o-border-image-outset: 0 0 0 0;
+    border-image-outset: 0 0 0 0;
+    -ms-border-image-repeat: stretch stretch;
+    -o-border-image-repeat: stretch stretch;
+    border-image-repeat: stretch stretch;
+    -ms-border-image-source: url("WebRes/Images/HeaderBackground.png");
+    -o-border-image-source: url("WebRes/Images/HeaderBackground.png");
+    border-image-source: url("WebRes/Images/HeaderBackground.png");
+	width: 100%;
+}
+ 
+.title {
+	font-size: 19px;
+	color: white;
+	padding: 4px 0 1px 0;
+	text-align: center;
+	vertical-align: top;
+ }
+
+.menuBar {
+	vertical-align: bottom;
+	display: inline-block;
+	align-self: flex-end;
+	width: 100%;
+    height: auto;
+	margin: -8px 0 0 0;
+    -ms-border-image-slice: 20 10 0 10 fill;
+    -o-border-image-slice: 20 10 0 10 fill;
+    border-image-slice: 20 10 0 10 fill;
+    -ms-border-image-width: 20px 10px 0px 10px;
+    -o-border-image-width: 20px 10px 0px 10px;
+    border-image-width: 20px 10px 0px 10px;
+    -ms-border-image-outset: 0 0 0 0;
+    -o-border-image-outset: 0 0 0 0;
+    border-image-outset: 0 0 0 0;
+    -ms-border-image-repeat: stretch stretch;
+    -o-border-image-repeat: stretch stretch;
+    border-image-repeat: stretch stretch;
+    -ms-border-image-source: url("WebRes/Images/MenuBarBackground.png");
+    -o-border-image-source: url("WebRes/Images/MenuBarBackground.png");
+    border-image-source: url("WebRes/Images/MenuBarBackground.png");
+}
+ 
+.menuBarButton {
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+	width: auto;
+	height: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align: center;
+	background: transparent;
+    -ms-border-image-source: url("WebRes/Images/MenuBarButton.png");
+    -o-border-image-source: url("WebRes/Images/MenuBarButton.png");
+    border-image-source: url("WebRes/Images/MenuBarButton.png");
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.menuBarButton:hover {
+    transition: all 0.3s ease;
+    -ms-border-image-slice: 0 7 7 7 fill;
+    -o-border-image-slice: 0 7 7 7 fill;
+    border-image-slice: 0 7 7 7 fill;
+    -ms-border-image-width: 0 7px 7px 7px;
+    -o-border-image-width: 0 7px 7px 7px;
+    border-image-width: 0 7px 7px 7px;
+    -ms-border-image-outset: 0 0 0 0;
+    -o-border-image-outset: 0 0 0 0;
+    border-image-outset: 0 0 0 0;
+    -ms-border-image-repeat: stretch stretch;
+    -o-border-image-repeat: stretch stretch;
+    border-image-repeat: stretch stretch;
+    -ms-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
+    -o-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
+    border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
+}
+
+.menuBarButton:active {
+    -ms-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
+    -o-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
+    border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
+}
+
+.topNav .icon {
+    display: none;
+}
+
+/* --- */
+
+
+/* Body */
+
+body {
+    margin: 0;
+	padding: 0;
+	background-color: #C8D4E7; /* fallback */
+	background: -webkit-linear-gradient(white , #C8D4E7);
+	background: -o-linear-gradient(white, #C8D4E7);
+	background: -moz-linear-gradient(white, #C8D4E7);
+	background: linear-gradient(white , #C8D4E7);
+    -ms-background-position: top center !important;
+    background-position: top center !important;
+    -ms-background-repeat: no-repeat !important;
+    background-repeat: no-repeat !important;
+    -ms-background-attachment: fixed;
+    background-attachment: fixed;
+}
+
+.bodyBG {
+	margin: 80px 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	background: transparent;
+	height: 200px; 
+	padding: 0; 
+	width: 100%;
+	text-align: center;
+ }
+ 
+.bodyContianer {
+	position: fixed;
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0 0 0 0;
+	background: transparent;
+ }
+ 
+.bodyBackground {
+	width: 100%;
+	height: auto;
+	background: white;
+	background: -webkit-linear-gradient(white , #C8D4E7);
+	background: -o-linear-gradient(white, #C8D4E7);
+	background: -moz-linear-gradient(white, #C8D4E7);
+	background: linear-gradient(white , #C8D4E7);
+ }
+
+/* --- */
+
+/* Grid */
+
+.gridBody {
+	vertical-align: top;
+	padding: 0;
+	width: 70%;
+	margin: 0 auto;
+    -ms-background-attachment: fixed;
+    background-attachment: fixed;
+    min-height: 100%;
+    display: grid;
+ 	grid-gap: 10px;
+ 	grid-template-columns: 80% 15%;
+ 	grid-template-rows: 100% 100%;
+
+ }
+
+.notice {
+	padding: 0 10px 10px 10px;
+	vertical-align: top;
+	grid-row: 1;
+	grid-column: 1;
+ }
+
+.side {
+	display: flex;
+	min-height: 100%;
+	flex-direction: column;
+	vertical-align: top;
+	grid-row: 1;
+	grid-column: 2;
+	padding: 5%;
+ }
+ 
+.sideObject {
+	padding-bottom: 20%;
+	padding-top: 0%;
+	vertical-align: top;
+}
+
 /* --- */
 
 
@@ -50,18 +253,18 @@ button {
     -ms-outline: 0;
     outline: 0;
 	padding: 0.75%;
-	margin: 0px;
+	margin: 0;
 	background: transparent;
 	border: none;
     -ms-border-image-slice: 0 7 7 7 fill;
     -o-border-image-slice: 0 7 7 7 fill;
     border-image-slice: 0 7 7 7 fill;
-    -ms-border-image-width: 0px 7px 7px 7px;
-    -o-border-image-width: 0px 7px 7px 7px;
-    border-image-width: 0px 7px 7px 7px;
-    -ms-border-image-outset: 0px 0 0px 0px;
-    -o-border-image-outset: 0px 0px 0px 0px;
-    border-image-outset: 0px 0px 0px 0px;
+    -ms-border-image-width: 0 7px 7px 7px;
+    -o-border-image-width: 0 7px 7px 7px;
+    border-image-width: 0 7px 7px 7px;
+    -ms-border-image-outset: 0 0 0 0;
+    -o-border-image-outset: 0 0 0 0;
+    border-image-outset: 0 0 0 0;
     -ms-border-image-repeat: stretch stretch;
     -o-border-image-repeat: stretch stretch;
     border-image-repeat: stretch stretch;
@@ -94,211 +297,7 @@ button:active {
 /* --- */
 
 
-/* Header */
-
-.headerBackground {
-    position: fixed;
-	padding: 0px;
-	margin: -90px 0px 0px 0px;
-	height: auto;
-	background: transparent;
-	vertical-align: top;
-    -ms-border-image-slice: 0 10 0 10 fill;
-    -o-border-image-slice: 0 10 0 10 fill;
-    border-image-slice: 0 10 0 10 fill;
-    -ms-border-image-width: 0px 10px 0px 10px;
-    -o-border-image-width: 0px 10px 0px 10px;
-    border-image-width: 0px 10px 0px 10px;
-    -ms-border-image-outset: 0px 0px 0px 0px;
-    -o-border-image-outset: 0px 0px 0px 0px;
-    border-image-outset: 0px 0px 0px 0px;
-    -ms-border-image-repeat: stretch stretch;
-    -o-border-image-repeat: stretch stretch;
-    border-image-repeat: stretch stretch;
-    -ms-border-image-source: url("WebRes/Images/HeaderBackground.png");
-    -o-border-image-source: url("WebRes/Images/HeaderBackground.png");
-    border-image-source: url("WebRes/Images/HeaderBackground.png");
-	width: 100%;
-}
- 
-.title {
-	font-size: 19px;
-	color: white;
-	padding: 4px 0px 1px 0px;
-	text-align: center;
-	vertical-align: top;
- }
-
-.menuBar {
-	vertical-align: bottom;
-	display: inline-block;
-	align-self: flex-end;
-	width: 100%;
-    height: auto;
-	margin: -8px 0px 0px 0px;
-    -ms-border-image-slice: 20 10 0 10 fill;
-    -o-border-image-slice: 20 10 0 10 fill;
-    border-image-slice: 20 10 0 10 fill;
-    -ms-border-image-width: 20px 10px 0px 10px;
-    -o-border-image-width: 20px 10px 0px 10px;
-    border-image-width: 20px 10px 0px 10px;
-    -ms-border-image-outset: 0px 0px 0px 0px;
-    -o-border-image-outset: 0px 0px 0px 0px;
-    border-image-outset: 0px 0px 0px 0px;
-    -ms-border-image-repeat: stretch stretch;
-    -o-border-image-repeat: stretch stretch;
-    border-image-repeat: stretch stretch;
-    -ms-border-image-source: url("WebRes/Images/MenuBarBackground.png");
-    -o-border-image-source: url("WebRes/Images/MenuBarBackground.png");
-    border-image-source: url("WebRes/Images/MenuBarBackground.png");
-}
- 
-.menuBarButton {
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-	width: auto;
-	height: auto;
-	padding-left: 5%;
-	padding-right: 5%;
-	text-align: center;
-	background: transparent;
-    -ms-border-image-source: url("WebRes/Images/MenuBarButton.png");
-    -o-border-image-source: url("WebRes/Images/MenuBarButton.png");
-    border-image-source: url("WebRes/Images/MenuBarButton.png");
-	color: white;
-	transition: all 0.3s ease;
-}
-
-.menuBarButton:hover {
-    transition: all 0.3s ease;
-    -ms-border-image-slice: 0 7 7 7 fill;
-    -o-border-image-slice: 0 7 7 7 fill;
-    border-image-slice: 0 7 7 7 fill;
-    -ms-border-image-width: 0px 7px 7px 7px;
-    -o-border-image-width: 0px 7px 7px 7px;
-    border-image-width: 0px 7px 7px 7px;
-    -ms-border-image-outset: 0px 0px 0px 0px;
-    -o-border-image-outset: 0px 0px 0px 0px;
-    border-image-outset: 0px 0px 0px 0px;
-    -ms-border-image-repeat: stretch stretch;
-    -o-border-image-repeat: stretch stretch;
-    border-image-repeat: stretch stretch;
-    -ms-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
-    -o-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
-    border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
-}
-
-.menuBarButton:active {
-    -ms-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
-    -o-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
-    border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
-}
-
-.topNav .icon {
-    display: none;
-}
-
 /* --- */
-
-
-/* Body */
-
-body {
-    margin: 0px;
-	padding: 0px;
-	background-color: #C8D4E7; /* fallback */
-	background: -webkit-linear-gradient(white , #C8D4E7);
-	background: -o-linear-gradient(white, #C8D4E7);
-	background: -moz-linear-gradient(white, #C8D4E7);
-	background: linear-gradient(white , #C8D4E7);
-    -ms-background-position: top center !important;
-    background-position: top center !important;
-    -ms-background-repeat: no-repeat !important;
-    background-repeat: no-repeat !important;
-    -ms-background-attachment: fixed;
-    background-attachment: fixed;
-}
-
-.bodyBG {
-	margin: 80px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-	width: 100%;
-	background: transparent;
-	height: 200px; 
-	padding: 0; 
-	width: 100%;
-	text-align: center;
- }
- 
-.bodyContianer {
-	position: fixed;
-	width: 100%;
-	height: auto;
-	padding: 0px;
-	margin: 0px 0px 0px 0px;
-	background: transparent;
- }
- 
-.bodyBackground {
-	width: 100%;
-	height: auto;
-	background: white;
-	background: -webkit-linear-gradient(white , #C8D4E7);
-	background: -o-linear-gradient(white, #C8D4E7);
-	background: -moz-linear-gradient(white, #C8D4E7);
-	background: linear-gradient(white , #C8D4E7);
- }
- 
-.bodyContent {
-	vertical-align: top;
-	padding: 0px;
-	width: 70%;
-	margin: 0 auto;
-    -ms-background-attachment: fixed;
-    background-attachment: fixed;
-    min-height: 100%;
-    display: grid;
- 	grid-gap: 10px;
- 	grid-template-columns: 80% 15%;
- 	grid-template-rows: 100% 100%;
-
- }
- 
-/* --- */
-
-
-/* --- */
-
-.tableHeader {font-size: 20px;}
- 
-.notice {
-	padding: 0px 10px 10px 10px;
-	vertical-align: top;
-	grid-row: 1;
-	grid-column: 1;
- }
-
-.side {
-	display: flex;
-	min-height: 100%;
-	flex-direction: column;
-	vertical-align: top;
-	grid-row: 1;
-	grid-column: 2;
-	padding: 5%;
- }
- 
-.sideObject {
-	padding-bottom: 20%;
-	padding-top: 0%;
-	vertical-align: top;
-}
-
-.customMargin {margin: 5px 0px 0px 0px;}
- 
-
  
 footer {
     color: black;
