@@ -25,6 +25,7 @@
  	.side {
  		grid-row: 2 !important;
 		grid-column: 1 !important;
+		padding: 5%;
  	}
 
 }
@@ -44,17 +45,17 @@
 			user-select: none;
 }
 
-.customMargin { margin: 5px 0 0 0; }
+.customMargin {margin: 5px 0 0 0;}
 
 /* --- */
 
-/* Header */
+
+/* Menu */
 
 .headerBackground {
 	position: fixed;
 	padding: 0;
 	margin: -90px 0 0 0;
-	height: auto;
 	background: transparent;
 	vertical-align: top;
 	-ms-border-image-slice: 0 10 0 10 fill;
@@ -83,13 +84,15 @@
 	vertical-align: top;
  }
 
+.menu {text-align: center}
+
+
 .menuBar {
 	vertical-align: bottom;
 	display: inline-block;
 	-ms-flex-item-align: end;
 		align-self: flex-end;
 	width: 100%;
-	height: auto;
 	margin: -8px 0 0 0;
 	-ms-border-image-slice: 20 10 0 10 fill;
 	 -o-border-image-slice: 20 10 0 10 fill;
@@ -107,13 +110,13 @@
 	 -o-border-image-source: url("WebRes/Images/MenuBarBackground.png");
 		border-image-source: url("WebRes/Images/MenuBarBackground.png");
 }
- 
-.menuBarButton {
-	-o-transition: all 0.3s ease;
+
+.menuBar form {display: inline;}
+
+.menuBar button {
 	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-	width: auto;
-	height: auto;
+		 -o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
 	padding-left: 5%;
 	padding-right: 5%;
 	text-align: center;
@@ -125,7 +128,7 @@
 	transition: all 0.3s ease;
 }
 
-.menuBarButton:hover {
+.menuBar button:hover {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
@@ -146,7 +149,7 @@
 		border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
 }
 
-.menuBarButton:active {
+.menuBar button:active {
 	-ms-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
 	 -o-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
 		border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
@@ -190,7 +193,6 @@ body {
 .bodyContianer {
 	position: fixed;
 	width: 100%;
-	height: auto;
 	padding: 0;
 	margin: 0 0 0 0;
 	background: transparent;
@@ -198,7 +200,6 @@ body {
  
 .bodyBackground {
 	width: 100%;
-	height: auto;
 	background: white;
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
@@ -207,7 +208,8 @@ body {
 
 /* --- */
 
-/* Grid */
+
+/* Content */
 
 .gridBody {
 	vertical-align: top;
@@ -234,16 +236,14 @@ body {
 .side {
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: flex;
-	min-height: 100%;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
+		   display: flex;
+	 -webkit-box-direction: normal;
+	  -webkit-box-orient: vertical;
 		-ms-flex-direction: column;
 			flex-direction: column;
 	vertical-align: top;
 	grid-row: 1;
 	grid-column: 2;
-	padding: 5%;
  }
  
 .sideObject {
@@ -251,6 +251,10 @@ body {
 	padding-top: 0%;
 	vertical-align: top;
 }
+
+.sideObject button {padding: 4%;}
+
+.sideObject p {margin: 5px 0 0 0;}
 
 /* --- */
 
@@ -276,8 +280,8 @@ button {
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-		 -o-transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
+		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
 	-ms-border-image-source: url("WebRes/Images/Button_Idle.png");
 	 -o-border-image-source: url("WebRes/Images/Button_Idle.png");
@@ -285,25 +289,25 @@ button {
 }
 
 button:hover {
-	-o-transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+		 -o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
 	-ms-border-image-source: url("WebRes/Images/Button_Hover.png");
-	-o-border-image-source: url("WebRes/Images/Button_Hover.png");
-	border-image-source: url("WebRes/Images/Button_Hover.png");
+	 -o-border-image-source: url("WebRes/Images/Button_Hover.png");
+		border-image-source: url("WebRes/Images/Button_Hover.png");
 }
 
 button:active {
 	-ms-border-image-source: url("WebRes/Images/Button_Pressed.png");
-	-o-border-image-source: url("WebRes/Images/Button_Pressed.png");
-	border-image-source: url("WebRes/Images/Button_Pressed.png");
+	 -o-border-image-source: url("WebRes/Images/Button_Pressed.png");
+		border-image-source: url("WebRes/Images/Button_Pressed.png");
 }
 
  
 /* --- */
 
 
-/* --- */
+/* Footer */
  
 footer {
 	color: black;
