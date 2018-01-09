@@ -16,7 +16,17 @@
 /* Mobile Ajustments */
 
 @media all and (max-width: 812px) and (min-height: 480px) {
-	.bodyContent {min-width: 100%;}
+	.bodyContent {
+	min-width: 100%;
+ 	grid-template-columns: auto auto !important;
+ 	grid-template-rows: 100% !important;
+ }
+
+ 	.side {
+ 		grid-row: 2 !important;
+		grid-column: 1 !important;
+ 	}
+
 }
 
 
@@ -249,6 +259,11 @@ body {
     -ms-background-attachment: fixed;
     background-attachment: fixed;
     min-height: 100%;
+    display: grid;
+ 	grid-gap: 10px;
+ 	grid-template-columns: 80% 15%;
+ 	grid-template-rows: 100% 100%;
+
  }
  
 /* --- */
@@ -258,19 +273,30 @@ body {
 
 .tableHeader {font-size: 20px;}
  
-.tableColumn {
-	width: 80%;
+.notice {
 	padding: 0px 10px 10px 10px;
 	vertical-align: top;
+	grid-row: 1;
+	grid-column: 1;
  }
 
- .tableColumnLinks {
-	width: 15%;
-	padding: 0px 10px 10px 10px;
+.side {
+	display: flex;
+	min-height: 100%;
+	flex-direction: column;
 	vertical-align: top;
+	grid-row: 1;
+	grid-column: 2;
+	padding: 5%;
  }
  
-.downloadHeader {margin: 5px 0px 0px 0px;}
+.sideObject {
+	padding-bottom: 20%;
+	padding-top: 0%;
+	vertical-align: top;
+}
+
+.customMargin {margin: 5px 0px 0px 0px;}
  
 
  
