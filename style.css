@@ -52,26 +52,26 @@
 
 .headerBackground {
 	position: fixed;
-	padding: 0px;
-	margin: -90px 0px 0px 0px;
+	padding: 0;
+	margin: -90px 0 0 0;
 	height: auto;
 	background: transparent;
 	vertical-align: top;
 	-ms-border-image-slice: 0 10 0 10 fill;
-	-o-border-image-slice: 0 10 0 10 fill;
-	border-image-slice: 0 10 0 10 fill;
-	-ms-border-image-width: 0px 10px 0px 10px;
-	-o-border-image-width: 0px 10px 0px 10px;
-	border-image-width: 0px 10px 0px 10px;
+	 -o-border-image-slice: 0 10 0 10 fill;
+		border-image-slice: 0 10 0 10 fill;
+	-ms-border-image-width: 0 10px 0 10px;
+	 -o-border-image-width: 0 10px 0 10px;
+		border-image-width: 0 10px 0 10px;
 	-ms-border-image-outset: 0 0 0 0;
-	-o-border-image-outset: 0 0 0 0;
-	border-image-outset: 0 0 0 0;
+	 -o-border-image-outset: 0 0 0 0;
+		border-image-outset: 0 0 0 0;
 	-ms-border-image-repeat: stretch stretch;
-	-o-border-image-repeat: stretch stretch;
-	border-image-repeat: stretch stretch;
+	 -o-border-image-repeat: stretch stretch;
+		border-image-repeat: stretch stretch;
 	-ms-border-image-source: url("WebRes/Images/HeaderBackground.png");
-	-o-border-image-source: url("WebRes/Images/HeaderBackground.png");
-	border-image-source: url("WebRes/Images/HeaderBackground.png");
+	 -o-border-image-source: url("WebRes/Images/HeaderBackground.png");
+		border-image-source: url("WebRes/Images/HeaderBackground.png");
 	width: 100%;
 }
  
@@ -92,20 +92,20 @@
 	height: auto;
 	margin: -8px 0 0 0;
 	-ms-border-image-slice: 20 10 0 10 fill;
-	-o-border-image-slice: 20 10 0 10 fill;
-	border-image-slice: 20 10 0 10 fill;
-	-ms-border-image-width: 20px 10px 0px 10px;
-	-o-border-image-width: 20px 10px 0px 10px;
-	border-image-width: 20px 10px 0px 10px;
+	 -o-border-image-slice: 20 10 0 10 fill;
+		border-image-slice: 20 10 0 10 fill;
+	-ms-border-image-width: 20px 10px 0 10px;
+	 -o-border-image-width: 20px 10px 0 10px;
+		border-image-width: 20px 10px 0 10px;
 	-ms-border-image-outset: 0 0 0 0;
-	-o-border-image-outset: 0 0 0 0;
-	border-image-outset: 0 0 0 0;
+	 -o-border-image-outset: 0 0 0 0;
+		border-image-outset: 0 0 0 0;
 	-ms-border-image-repeat: stretch stretch;
-	-o-border-image-repeat: stretch stretch;
-	border-image-repeat: stretch stretch;
+	 -o-border-image-repeat: stretch stretch;
+		border-image-repeat: stretch stretch;
 	-ms-border-image-source: url("WebRes/Images/MenuBarBackground.png");
-	-o-border-image-source: url("WebRes/Images/MenuBarBackground.png");
-	border-image-source: url("WebRes/Images/MenuBarBackground.png");
+	 -o-border-image-source: url("WebRes/Images/MenuBarBackground.png");
+		border-image-source: url("WebRes/Images/MenuBarBackground.png");
 }
  
 .menuBarButton {
@@ -119,37 +119,37 @@
 	text-align: center;
 	background: transparent;
 	-ms-border-image-source: url("WebRes/Images/MenuBarButton.png");
-	-o-border-image-source: url("WebRes/Images/MenuBarButton.png");
-	border-image-source: url("WebRes/Images/MenuBarButton.png");
+	 -o-border-image-source: url("WebRes/Images/MenuBarButton.png");
+		border-image-source: url("WebRes/Images/MenuBarButton.png");
 	color: white;
 	transition: all 0.3s ease;
 }
 
 .menuBarButton:hover {
 	-webkit-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+		 -o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
 	-ms-border-image-slice: 0 7 7 7 fill;
-	-o-border-image-slice: 0 7 7 7 fill;
-	border-image-slice: 0 7 7 7 fill;
+	 -o-border-image-slice: 0 7 7 7 fill;
+		border-image-slice: 0 7 7 7 fill;
 	-ms-border-image-width: 0 7px 7px 7px;
-	-o-border-image-width: 0 7px 7px 7px;
-	border-image-width: 0 7px 7px 7px;
+	 -o-border-image-width: 0 7px 7px 7px;
+		border-image-width: 0 7px 7px 7px;
 	-ms-border-image-outset: 0 0 0 0;
-	-o-border-image-outset: 0 0 0 0;
-	border-image-outset: 0 0 0 0;
+	 -o-border-image-outset: 0 0 0 0;
+		border-image-outset: 0 0 0 0;
 	-ms-border-image-repeat: stretch stretch;
-	-o-border-image-repeat: stretch stretch;
-	border-image-repeat: stretch stretch;
+	 -o-border-image-repeat: stretch stretch;
+		border-image-repeat: stretch stretch;
 	-ms-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
-	-o-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
-	border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
+	 -o-border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
+		border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
 }
 
 .menuBarButton:active {
 	-ms-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
-	-o-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
-	border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
+	 -o-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
+		border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
 }
 
 .topNav .icon {
@@ -165,17 +165,15 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #C8D4E7; /* fallback */
-	background: -webkit-linear-gradient(white , #C8D4E7);
-	background: -o-linear-gradient(white, #C8D4E7);
-	background: -webkit-gradient(linear , left top, left bottom , from(white) , to(#C8D4E7));
-	background: -o-linear-gradient(white , #C8D4E7);
-	background: linear-gradient(white , #C8D4E7);
+	background: -webkit-linear-gradient(white, #C8D4E7);
+		 background: -o-linear-gradient(white, #C8D4E7);
+			background: linear-gradient(white, #C8D4E7);
 	-ms-background-position: top center !important;
-	background-position: top center !important;
+		background-position: top center !important;
 	-ms-background-repeat: no-repeat !important;
-	background-repeat: no-repeat !important;
+		background-repeat: no-repeat !important;
 	-ms-background-attachment: fixed;
-	background-attachment: fixed;
+		background-attachment: fixed;
 }
 
 .bodyBG {
@@ -202,11 +200,9 @@ body {
 	width: 100%;
 	height: auto;
 	background: white;
-	background: -webkit-linear-gradient(white , #C8D4E7);
-	background: -o-linear-gradient(white, #C8D4E7);
-	background: -webkit-gradient(linear , left top, left bottom , from(white) , to(#C8D4E7));
-	background: -o-linear-gradient(white , #C8D4E7);
-	background: linear-gradient(white , #C8D4E7);
+	background: -webkit-linear-gradient(white, #C8D4E7);
+		 background: -o-linear-gradient(white, #C8D4E7);
+			background: linear-gradient(white, #C8D4E7);
  }
 
 /* --- */
@@ -219,7 +215,7 @@ body {
 	width: 70%;
 	margin: 0 auto;
 	-ms-background-attachment: fixed;
-	background-attachment: fixed;
+		background-attachment: fixed;
 	min-height: 100%;
 	display: grid;
  	grid-gap: 10px;
@@ -269,23 +265,23 @@ button {
 	background: transparent;
 	border: none;
 	-ms-border-image-slice: 0 7 7 7 fill;
-	-o-border-image-slice: 0 7 7 7 fill;
-	border-image-slice: 0 7 7 7 fill;
+	 -o-border-image-slice: 0 7 7 7 fill;
+		border-image-slice: 0 7 7 7 fill;
 	-ms-border-image-width: 0 7px 7px 7px;
-	-o-border-image-width: 0 7px 7px 7px;
-	border-image-width: 0 7px 7px 7px;
+	 -o-border-image-width: 0 7px 7px 7px;
+		border-image-width: 0 7px 7px 7px;
 	-ms-border-image-outset: 0 0 0 0;
-	-o-border-image-outset: 0 0 0 0;
-	border-image-outset: 0 0 0 0;
+	 -o-border-image-outset: 0 0 0 0;
+		border-image-outset: 0 0 0 0;
 	-ms-border-image-repeat: stretch stretch;
-	-o-border-image-repeat: stretch stretch;
-	border-image-repeat: stretch stretch;
-	-o-transition: all 0.3s ease;
+	 -o-border-image-repeat: stretch stretch;
+		border-image-repeat: stretch stretch;
+		 -o-transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+			transition: all 0.3s ease;
 	-ms-border-image-source: url("WebRes/Images/Button_Idle.png");
-	-o-border-image-source: url("WebRes/Images/Button_Idle.png");
-	border-image-source: url("WebRes/Images/Button_Idle.png");
+	 -o-border-image-source: url("WebRes/Images/Button_Idle.png");
+		border-image-source: url("WebRes/Images/Button_Idle.png");
 }
 
 button:hover {
