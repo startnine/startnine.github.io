@@ -1,9 +1,9 @@
 /* Font face */
 @font-face {
 	font-family: Selawik;
-	src: url("assets/font/selawk.woff") format("embedded-opentype"),
-		 url("assets/font/selawk.ttf") format("truetype"),
-		 url("assets/font/selawk.eot") format("woff");
+	src: url("font/selawk.woff") format("embedded-opentype"),
+		 url("font/selawk.ttf") format("truetype"),
+		 url("font/selawk.eot") format("woff");
 }
  
 * {font-family: "Selawik", "Segoe UI";}
@@ -52,10 +52,13 @@
 
 /* Menu */
 .headerBackground {
+															   background: #4d88d5;
+		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
+	 background: -moz-linear-gradient(left, #4d88d5 0%, #6fb0f3 51%, #4d88d5 100%);
+	background: -webkit-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 	position: fixed;
 	padding: 0;
 	margin: -90px 0 0 0;
-	background: transparent;
 	vertical-align: top;
 	-ms-border-image-slice: 0 10 0 10 fill;
 	 -o-border-image-slice: 0 10 0 10 fill;
@@ -69,20 +72,24 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-ms-border-image-source: url("assets/img/HeaderBackground.png");
-	 -o-border-image-source: url("assets/img/HeaderBackground.png");
-		border-image-source: url("assets/img/HeaderBackground.png");
+	-ms-border-image-source: url("img/HeaderBackground.png");
+	 -o-border-image-source: url("img/HeaderBackground.png");
+		border-image-source: url("img/HeaderBackground.png");
 	width: 100%;
 }
  
 .title {
 	font-size: 19px;
 	color: white;
-	padding: 0.21em 0 0.5em 0;
+	padding: 0.21em 0 0.21em 0;
 	text-align: center;
 }
 
 .menuBar {
+															   background: #3669af;
+	background: -webkit-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
+	 background: -moz-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
+		background: linear-gradient(to right, #3669af 1%,#5f9cda 50%,#3669af 100%);
 	text-align: center;
 	vertical-align: bottom;
 	display: inline-block;
@@ -102,9 +109,9 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-ms-border-image-source: url("assets/img/MenuBarBackground.png");
-	 -o-border-image-source: url("assets/img/MenuBarBackground.png");
-		border-image-source: url("assets/img/MenuBarBackground.png");
+	-ms-border-image-source: url("img/MenuBarBackground.png");
+	 -o-border-image-source: url("img/MenuBarBackground.png");
+		border-image-source: url("img/MenuBarBackground.png");
 }
 
 .menuBar button, a {
@@ -117,9 +124,14 @@
 	padding-right: 5%;
 	text-align: center;
 	background: transparent;
-	-ms-border-image-source: url("assets/img/MenuBarButton.png");
-	 -o-border-image-source: url("assets/img/MenuBarButton.png");
-		border-image-source: url("assets/img/MenuBarButton.png");
+	background:url("img/MenuBarButton.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+	-ms-border-image-source: url("img/MenuBarButton.png");
+	 -o-border-image-source: url("img/MenuBarButton.png");
+		border-image-source: url("img/MenuBarButton.png");
 	color: white;
 	transition: all 0.3s ease;
 }
@@ -140,15 +152,25 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-ms-border-image-source: url("assets/img/MenuBarButton_Hover.png");
-	 -o-border-image-source: url("assets/img/MenuBarButton_Hover.png");
-		border-image-source: url("assets/img/MenuBarButton_Hover.png");
+	background:url("img/MenuBarButton_Hover.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+	-ms-border-image-source: url("img/MenuBarButton_Hover.png");
+	 -o-border-image-source: url("img/MenuBarButton_Hover.png");
+		border-image-source: url("img/MenuBarButton_Hover.png");
 }
 
 .menuBar button:active, a:hover {
-	-ms-border-image-source: url("assets/img/MenuBarButton_Pressed.png");
-	 -o-border-image-source: url("assets/img/MenuBarButton_Pressed.png");
-		border-image-source: url("assets/img/MenuBarButton_Pressed.png");
+	background:url("img/MenuBarButton_Pressed.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+	-ms-border-image-source: url("img/MenuBarButton_Pressed.png");
+	 -o-border-image-source: url("img/MenuBarButton_Pressed.png");
+		border-image-source: url("img/MenuBarButton_Pressed.png");
 }
 /* --- */
 
@@ -193,6 +215,7 @@ body {
 .bodyBackground {
 	width: 100%;
 	background: white;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c8d4e7',GradientType=0 ); /* exploder */
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
 			background: linear-gradient(white, #C8D4E7);
@@ -282,24 +305,39 @@ button {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
-	-ms-border-image-source: url("assets/img/Button_Idle.png");
-	 -o-border-image-source: url("assets/img/Button_Idle.png");
-		border-image-source: url("assets/img/Button_Idle.png");
+	background:url("img/buttonIdle.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+	-ms-border-image-source: url("img/buttonIdle.png");
+	 -o-border-image-source: url("img/buttonIdle.png");
+		border-image-source: url("img/buttonIdle.png");
 }
 
 button:hover {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
-	-ms-border-image-source: url("assets/img/Button_Hover.png");
-	 -o-border-image-source: url("assets/img/Button_Hover.png");
-		border-image-source: url("assets/img/Button_Hover.png");
+	background:url("img/buttonHover.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+	-ms-border-image-source: url("img/buttonHover.png");
+	 -o-border-image-source: url("img/buttonHover.png");
+		border-image-source: url("img/buttonHover.png");
 }
 
 button:active {
-	-ms-border-image-source: url("assets/img/Button_Pressed.png");
-	 -o-border-image-source: url("assets/img/Button_Pressed.png");
-		border-image-source: url("assets/img/Button_Pressed.png");
+	background:url("img/buttonPressed.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+	-ms-border-image-source: url("img/buttonPressed.png");
+	 -o-border-image-source: url("img/buttonPressed.png");
+		border-image-source: url("img/buttonPressed.png");
 }
 /* --- */
 
