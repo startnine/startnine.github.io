@@ -221,6 +221,7 @@ body {
 .bodyBackground {
 	width: 100%;
 	background: white;
+	background-image: url('img/gradient.svg');
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c8d4e7',GradientType=0 ); /* exploder */
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
