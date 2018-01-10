@@ -1,5 +1,5 @@
 function openNewTab(n){var o=window.open(n,"_blank");o.focus()}
-function openNewLink(n){var o=window.open(n);o.focus()}
+function openNewLink(n){var o=window.open(n,"_self");o.focus()}
 
 window.onload = function() {document.getElementById("defaultTab").click()};
 function openTab(evt, tabName) {
