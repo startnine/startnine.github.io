@@ -6,28 +6,41 @@
 	src: url("WebRes/Fonts/selawk.woff") format("embedded-opentype"),
 		 url("WebRes/Fonts/selawk.ttf") format("truetype"),
 		 url("WebRes/Fonts/selawk.eot") format("woff");
- }
+}
  
 * {font-family: "Selawik", "Segoe UI";}
 
 /* --- */
 
 
+
+/* Fade */
+
+@keyframes fading {
+	0%{opacity:0}
+	50%{opacity:1}
+	100%{opacity:1}
+}
+
+/* --- */
+
+
+
 /* Mobile Ajustments */
 
-@media all and (max-width: 812px) and (min-height: 480px) {
+@media all and (max-width: 812px) {
 	.gridBody {
-	min-width: 100%;
- 	grid-template-columns: auto auto !important;
- 	grid-template-rows: 100% !important;
- }
+		min-width: 100%;
+		grid-template-columns: auto auto !important;
+		grid-template-rows: 100% !important;
+	}
 
- 	.side {
- 		grid-row: 2 !important;
+	.side {
+		grid-row: 2 !important;
 		grid-column: 1 !important;
-		padding: 5%;
- 	}
-
+		padding: 2em;
+		padding-bottom: 5em;
+	}
 }
 
 
@@ -51,6 +64,12 @@
 
 
 /* Menu */
+
+li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
 
 .headerBackground {
 	position: fixed;
@@ -82,12 +101,10 @@
 	padding: 4px 0 1px 0;
 	text-align: center;
 	vertical-align: top;
- }
-
-.menu {text-align: center}
-
+}
 
 .menuBar {
+	text-align: center;
 	vertical-align: bottom;
 	display: inline-block;
 	-ms-flex-item-align: end;
@@ -113,7 +130,9 @@
 
 .menuBar form {display: inline;}
 
-.menuBar button {
+.menuBar button, a {
+	min-height: 100%;
+	text-decoration:  none;
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
@@ -128,7 +147,7 @@
 	transition: all 0.3s ease;
 }
 
-.menuBar button:hover {
+.menuBar button:hover, a:hover {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
@@ -149,13 +168,13 @@
 		border-image-source: url("WebRes/Images/MenuBarButton_Hover.png");
 }
 
-.menuBar button:active {
+.menuBar button:active, a:hover {
 	-ms-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
 	 -o-border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
 		border-image-source: url("WebRes/Images/MenuBarButton_Pressed.png");
 }
 
-.topNav .icon {
+.menuBar .hamburger {
 	display: none;
 }
 
@@ -168,7 +187,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #C8D4E7; /* fallback */
-	background: C8D4E7; /* fallback */
+	background: #C8D4E7; /* fallback */
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
 			background: linear-gradient(white, #C8D4E7);
@@ -189,7 +208,7 @@ body {
 	padding: 0; 
 	width: 100%;
 	text-align: center;
- }
+}
  
 .bodyContianer {
 	position: fixed;
@@ -197,7 +216,7 @@ body {
 	padding: 0;
 	margin: 0 0 0 0;
 	background: transparent;
- }
+}
  
 .bodyBackground {
 	width: 100%;
@@ -205,7 +224,7 @@ body {
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
 			background: linear-gradient(white, #C8D4E7);
- }
+}
 
 /* --- */
 
@@ -225,14 +244,7 @@ body {
  	grid-template-columns: 80% 15%;
  	grid-template-rows: 100% 100%;
 
- }
-
-.notice {
-	padding: 0 10px 10px 10px;
-	vertical-align: top;
-	grid-row: 1;
-	grid-column: 1;
- }
+}
 
 .side {
 	display: -webkit-box;
@@ -245,7 +257,7 @@ body {
 	vertical-align: top;
 	grid-row: 1;
 	grid-column: 2;
- }
+}
  
 .sideObject {
 	padding-top: 1.25em;
@@ -258,6 +270,15 @@ body {
 }
 
 .sideObject p {margin: 5px 0 0 0;}
+
+.tabContent {
+	display: none; 
+	animation: fading .3s;
+	padding: 0 10px 10px 10px;
+	vertical-align: top;
+	grid-row: 1;
+	grid-column: 1;
+}
 
 /* --- */
 
