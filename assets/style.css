@@ -129,6 +129,8 @@
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/MenuBarButton.png");
 	 -o-border-image-source: url("img/MenuBarButton.png");
 		border-image-source: url("img/MenuBarButton.png");
@@ -157,6 +159,8 @@
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Hover.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Hover.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/MenuBarButton_Hover.png");
 	 -o-border-image-source: url("img/MenuBarButton_Hover.png");
 		border-image-source: url("img/MenuBarButton_Hover.png");
@@ -168,6 +172,8 @@
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Pressed.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Pressed.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/MenuBarButton_Pressed.png");
 	 -o-border-image-source: url("img/MenuBarButton_Pressed.png");
 		border-image-source: url("img/MenuBarButton_Pressed.png");
@@ -310,6 +316,8 @@ button {
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonIdle.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonIdle.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/buttonIdle.png");
 	 -o-border-image-source: url("img/buttonIdle.png");
 		border-image-source: url("img/buttonIdle.png");
@@ -319,11 +327,14 @@ button:hover {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
+	zoom:1;
 	background:url("img/buttonHover.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonHover.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonHover.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/buttonHover.png");
 	 -o-border-image-source: url("img/buttonHover.png");
 		border-image-source: url("img/buttonHover.png");
@@ -335,6 +346,8 @@ button:active {
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonPressed.png', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonPressed.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/buttonPressed.png");
 	 -o-border-image-source: url("img/buttonPressed.png");
 		border-image-source: url("img/buttonPressed.png");
