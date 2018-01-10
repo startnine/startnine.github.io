@@ -276,7 +276,6 @@ body {
 .sideObject p {margin: 5px 0 0 0;}
 
 .tabContent {
-	display: none; 
 	-webkit-animation: fading .3s; 
 	        animation: fading .3s;
 	padding: 0 10px 10px 10px;
@@ -286,6 +285,8 @@ body {
 	-ms-grid-column: 1;
 		grid-column: 1;
 }
+
+.tabContent .show { display: block !important; }
 
 /* --- */
 
