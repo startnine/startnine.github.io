@@ -9,6 +9,7 @@
 * {font-family: "Selawik", "Segoe UI";}
 /* --- */
 
+
 /* Fade */
 @keyframes fading {
 	0%{opacity:0}
@@ -53,13 +54,14 @@
 /* Menu */
 .headerBackground {
 															   background: #4d88d5;
-		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
-	 background: -moz-linear-gradient(left, #4d88d5 0%, #6fb0f3 51%, #4d88d5 100%);
 	background: -webkit-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
+	 background: -moz-linear-gradient(left, #4d88d5 0%, #6fb0f3 51%, #4d88d5 100%);
+		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 	position: fixed;
 	padding: 0;
 	margin: -90px 0 0 0;
 	vertical-align: top;
+	background: transparent;
 	-ms-border-image-slice: 0 10 0 10 fill;
 	 -o-border-image-slice: 0 10 0 10 fill;
 		border-image-slice: 0 10 0 10 fill;
@@ -109,9 +111,9 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-ms-border-image-source: url("img/MenuBarBackground.png");
-	 -o-border-image-source: url("img/MenuBarBackground.png");
-		border-image-source: url("img/MenuBarBackground.png");
+	-ms-border-image-source: url("img/menuBar.png");
+	 -o-border-image-source: url("img/menuBar.png");
+		border-image-source: url("img/menuBar.png");
 }
 
 .menuBar button, a {
