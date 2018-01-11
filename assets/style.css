@@ -74,9 +74,9 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-ms-border-image-source: url("img/HeaderBackground.png");
-	 -o-border-image-source: url("img/HeaderBackground.png");
-		border-image-source: url("img/HeaderBackground.png");
+	-ms-border-image-source: url("img/headerBackground.png");
+	 -o-border-image-source: url("img/headerBackground.png");
+		border-image-source: url("img/headerBackground.png");
 	width: 100%;
 }
  
@@ -133,9 +133,9 @@
 			background-size: cover;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton.png', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton.png', sizingMethod='scale')";
-	-ms-border-image-source: url("img/MenuBarButton.png");
-	 -o-border-image-source: url("img/MenuBarButton.png");
-		border-image-source: url("img/MenuBarButton.png");
+	-ms-border-image-source: url("img/menuBarButton.png");
+	 -o-border-image-source: url("img/menuBarButton.png");
+		border-image-source: url("img/menuBarButton.png");
 	color: white;
 	transition: all 0.3s ease;
 }
@@ -163,9 +163,9 @@
 			background-size: cover;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Hover.png', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Hover.png', sizingMethod='scale')";
-	-ms-border-image-source: url("img/MenuBarButton_Hover.png");
-	 -o-border-image-source: url("img/MenuBarButton_Hover.png");
-		border-image-source: url("img/MenuBarButton_Hover.png");
+	-ms-border-image-source: url("img/menuBarButton_Hover.png");
+	 -o-border-image-source: url("img/menuBarButton_Hover.png");
+		border-image-source: url("img/menuBarButton_Hover.png");
 }
 
 .menuBar button:active, a:hover {
@@ -176,9 +176,9 @@
 			background-size: cover;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Pressed.png', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Pressed.png', sizingMethod='scale')";
-	-ms-border-image-source: url("img/MenuBarButton_Pressed.png");
-	 -o-border-image-source: url("img/MenuBarButton_Pressed.png");
-		border-image-source: url("img/MenuBarButton_Pressed.png");
+	-ms-border-image-source: url("img/menuBarButton_Pressed.png");
+	 -o-border-image-source: url("img/menuBarButton_Pressed.png");
+		border-image-source: url("img/menuBarButton_Pressed.png");
 }
 /* --- */
 
