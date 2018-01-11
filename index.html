@@ -5,6 +5,7 @@
 		<title>Home - Start9</title>
 		<script src="assets/main.js"></script>
 		<link rel="stylesheet" href="assets/style.css" type="text/css"/>
+		<meta name="theme-color" content="#4d88d5">
 		<meta name="viewport" content="width=device-width"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="description" content="A full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content.">
@@ -19,9 +20,9 @@
 					<!--a href="javascript:void(0);" onclick="menuBarNav()">&#9776;</a-->
 					<button class="tabLink" onclick="openTab(event, 'home')" id="defaultTab">Home</button>
 					<button onclick="openNewTab('https://github.com/StartNine/Start9/releases');">Downloads</button>
-					<button class="disabled">News</button>
+					<button class="disabled" onclick="openTab(event, 'news')">News</button>
 					<button class="disabled">Community</button>
-					<button class="disabled" onclick="/*openTab(event, 'faq')*/">FAQ</button>
+					<button class="disabled" onclick="openTab(event, 'faq')">FAQ</button>
 				</nav>
 			</div>
 			<div class="bodyBG">
@@ -41,9 +42,13 @@
 				<p class="customMargin">Hello everyone,<br>
 					&emsp;&emsp;We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code. All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.</p>
 			</section>
-			
+
+			<section id="news" class="tabContent">
+				<!--probally iFrame here...-->
+			</section>
+
 			<section id="faq" class="tabContent">
-				<!--h1>FAQ</h1>
+				<!--h2>FAQ</h1>
 					<span style="font-size:110%;"><b>Question?</b></span> <br> <i style="padding-left: 2em;">Answer.</i> <br><br>
 					<span style="font-size:110%;"><b>Question?</b></span> <br> <i style="padding-left: 2em;">Answer.</i> <br><br>
 					<span style="font-size:110%;"><b>Question?</b></span> <br> <i style="padding-left: 2em;">Answer.</i> <br><br-->
