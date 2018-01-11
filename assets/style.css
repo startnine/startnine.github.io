@@ -120,7 +120,7 @@
 /* Mobile Ajustments */
 @media all and (max-width: 812px) {
 	.gridBody {
-		min-width: 100%;
+		min-width: 100% !important;
 		grid-template-columns: auto auto !important;
 		grid-template-rows: 100% !important;
 	}
@@ -205,6 +205,7 @@
 		align-self: flex-end;
 	width: 100%;
 	margin: -8px 0 0 0;
+	overflow:auto;
 	-ms-border-image-slice: 20 10 0 10 fill;
 	 -o-border-image-slice: 20 10 0 10 fill;
 		border-image-slice: 20 10 0 10 fill;
@@ -238,8 +239,6 @@
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton.png', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/menuBarButton.png");
 	 -o-border-image-source: url("img/menuBarButton.png");
 		border-image-source: url("img/menuBarButton.png");
@@ -269,8 +268,6 @@
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Hover.png', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Hover.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/menuBarButton_Hover.png");
 	 -o-border-image-source: url("img/menuBarButton_Hover.png");
 		border-image-source: url("img/menuBarButton_Hover.png");
@@ -283,8 +280,6 @@
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Pressed.png', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/MenuBarButton_Pressed.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/menuBarButton_Pressed.png");
 	 -o-border-image-source: url("img/menuBarButton_Pressed.png");
 		border-image-source: url("img/menuBarButton_Pressed.png");
@@ -355,6 +350,7 @@ body {
  		 -ms-grid-rows: 100% 100%;
 	padding: 0;
 	width: 70%;
+	align-content: center;
 	margin: 0 auto;
 	-ms-background-attachment: fixed;
 		background-attachment: fixed;
@@ -388,6 +384,7 @@ body {
 .sideObject p {margin: 5px 0 0 0;}
 
 .tabContent {
+	width: 100%;
 	-webkit-animation: fading .3s; 
 	        animation: fading .3s;
 	padding: 0 0.625em 0.625em 0.625em;
