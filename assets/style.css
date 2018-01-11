@@ -11,6 +11,12 @@
 
 
 /* Animation */
+@-webkit-keyframes fading {
+	0%{opacity:0}
+	50%{opacity:1}
+	100%{opacity:1}
+}
+
 @keyframes fading {
 	0%{opacity:0}
 	50%{opacity:1}
@@ -18,51 +24,95 @@
 }
 
 .right{
-	animation: animationRight linear 10s alternate;
-	animation-iteration-count: infinite;
-	transition-timing-function: ease;
- 	transform-origin: 50% 50%;
+	-webkit-animation: animationRight linear 10s alternate;
+	        animation: animationRight linear 10s alternate;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-transition-timing-function: ease;
+	     -o-transition-timing-function: ease;
+	        transition-timing-function: ease;
+ 	-webkit-transform-origin: 50% 50%;
+ 	    -ms-transform-origin: 50% 50%;
+ 	        transform-origin: 50% 50%;
 }
 
 .right .2{
-	animation: animationRight2 linear 30s alternate !important;
-	animation-iteration-count: infinite;
-	transition-timing-function: ease;
- 	transform-origin: 50% 50%;
+	-webkit-animation: animationRight2 linear 30s alternate !important;
+	        animation: animationRight2 linear 30s alternate !important;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-transition-timing-function: ease;
+	     -o-transition-timing-function: ease;
+	        transition-timing-function: ease;
+ 	-webkit-transform-origin: 50% 50%;
+ 	    -ms-transform-origin: 50% 50%;
+ 	        transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes animationRight{
+  0% {-webkit-transform:  translate(0px,0px)  scaleX(1.00);transform:  translate(0px,0px)  scaleX(1.00);}
+  100% {-webkit-transform:  translate(200px,0px)  scaleX(1.25) ;transform:  translate(200px,0px)  scaleX(1.25) ;}
 }
 
 @keyframes animationRight{
-  0% {transform:  translate(0px,0px)  scaleX(1.00);}
-  100% {transform:  translate(200px,0px)  scaleX(1.25) ;}
+  0% {-webkit-transform:  translate(0px,0px)  scaleX(1.00);transform:  translate(0px,0px)  scaleX(1.00);}
+  100% {-webkit-transform:  translate(200px,0px)  scaleX(1.25) ;transform:  translate(200px,0px)  scaleX(1.25) ;}
+}
+
+@-webkit-keyframes animationRight2{
+  0% {-webkit-transform:  translate(0px,0px)  scaleX(1) ;transform:  translate(0px,0px)  scaleX(1) ;}
+  100% {-webkit-transform:  translate(200px,0px)  scaleX(1.15) ;transform:  translate(200px,0px)  scaleX(1.15) ;}
 }
 
 @keyframes animationRight2{
-  0% {transform:  translate(0px,0px)  scaleX(1) ;}
-  100% {transform:  translate(200px,0px)  scaleX(1.15) ;}
+  0% {-webkit-transform:  translate(0px,0px)  scaleX(1) ;transform:  translate(0px,0px)  scaleX(1) ;}
+  100% {-webkit-transform:  translate(200px,0px)  scaleX(1.15) ;transform:  translate(200px,0px)  scaleX(1.15) ;}
 }
 
 .left{
-	animation: animationLeft linear 15s alternate;
-	animation-iteration-count: infinite;
-	transition-timing-function: ease;
-	transform-origin: 50% 50%;
+	-webkit-animation: animationLeft linear 15s alternate;
+	        animation: animationLeft linear 15s alternate;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-transition-timing-function: ease;
+	     -o-transition-timing-function: ease;
+	        transition-timing-function: ease;
+	-webkit-transform-origin: 50% 50%;
+	    -ms-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
 }
 
 .left .2 {
-	animation: animationLeft2 linear 35s alternate !important;
-	animation-iteration-count: infinite;
-	transition-timing-function: ease;
-	transform-origin: 50% 50%;
+	-webkit-animation: animationLeft2 linear 35s alternate !important;
+	        animation: animationLeft2 linear 35s alternate !important;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-transition-timing-function: ease;
+	     -o-transition-timing-function: ease;
+	        transition-timing-function: ease;
+	-webkit-transform-origin: 50% 50%;
+	    -ms-transform-origin: 50% 50%;
+	        transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes animationLeft{
+	0% {-webkit-transform:  translate(0px,0px)  scaleX(1);transform:  translate(0px,0px)  scaleX(1);}
+	100% {-webkit-transform:  translate(-200px,0px)  scaleX(1.25);transform:  translate(-200px,0px)  scaleX(1.25);}
 }
 
 @keyframes animationLeft{
-	0% {transform:  translate(0px,0px)  scaleX(1);}
-	100% {transform:  translate(-200px,0px)  scaleX(1.25);}
+	0% {-webkit-transform:  translate(0px,0px)  scaleX(1);transform:  translate(0px,0px)  scaleX(1);}
+	100% {-webkit-transform:  translate(-200px,0px)  scaleX(1.25);transform:  translate(-200px,0px)  scaleX(1.25);}
+}
+
+@-webkit-keyframes animationLeft2{
+	0% {-webkit-transform:  translate(0px,0px)  scaleX(1);transform:  translate(0px,0px)  scaleX(1);}
+	100% {-webkit-transform:  translate(-200px,0px)  scaleX(1.8);transform:  translate(-200px,0px)  scaleX(1.8);}
 }
 
 @keyframes animationLeft2{
-	0% {transform:  translate(0px,0px)  scaleX(1);}
-	100% {transform:  translate(-200px,0px)  scaleX(1.8);}
+	0% {-webkit-transform:  translate(0px,0px)  scaleX(1);transform:  translate(0px,0px)  scaleX(1);}
+	100% {-webkit-transform:  translate(-200px,0px)  scaleX(1.8);transform:  translate(-200px,0px)  scaleX(1.8);}
 }
 /* --- */
 
