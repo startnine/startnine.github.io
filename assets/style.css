@@ -16,63 +16,53 @@
 	50%{opacity:1}
 	100%{opacity:1}
 }
+
 .right{
-	animation: animationRight linear 15s alternate;
+	animation: animationRight linear 10s alternate;
 	animation-iteration-count: infinite;
+	transition-timing-function: ease;
  	transform-origin: 50% 50%;
 }
 
 .right .2{
 	animation: animationRight2 linear 30s alternate !important;
 	animation-iteration-count: infinite;
+	transition-timing-function: ease;
  	transform-origin: 50% 50%;
 }
 
 @keyframes animationRight{
-  0% {
-	transform:  translate(0px,0px)  scaleX(1.00) ;
-  }
-  100% {
-	transform:  translate(200px,0px)  scaleX(1.25) ;
-  }
+  0% {transform:  translate(0px,0px)  scaleX(1.00);}
+  100% {transform:  translate(200px,0px)  scaleX(1.25) ;}
 }
 
 @keyframes animationRight2{
-  0% {
-	transform:  translate(0px,0px)  scaleX(1) ;
-  }
-  100% {
-	transform:  translate(200px,0px)  scaleX(1) ;
-  }
+  0% {transform:  translate(0px,0px)  scaleX(1) ;}
+  100% {transform:  translate(200px,0px)  scaleX(1.15) ;}
 }
 
 .left{
 	animation: animationLeft linear 15s alternate;
 	animation-iteration-count: infinite;
+	transition-timing-function: ease;
 	transform-origin: 50% 50%;
 }
 
 .left .2 {
 	animation: animationLeft2 linear 35s alternate !important;
 	animation-iteration-count: infinite;
+	transition-timing-function: ease;
 	transform-origin: 50% 50%;
 }
 
 @keyframes animationLeft{
-	0% {
-	transform:  translate(0px,0px)  scaleX(1);
-  }
-	100% {
-	transform:  translate(-200px,0px)  scaleX(1);
-  }
+	0% {transform:  translate(0px,0px)  scaleX(1);}
+	100% {transform:  translate(-200px,0px)  scaleX(1.25);}
 }
+
 @keyframes animationLeft2{
-	0% {
-	transform:  translate(0px,0px)  scaleX(1.00);
-  }
-	100% {
-	transform:  translate(-200px,0px)  scaleX(1);
-  }
+	0% {transform:  translate(0px,0px)  scaleX(1);}
+	100% {transform:  translate(-200px,0px)  scaleX(1.8);}
 }
 /* --- */
 
