@@ -262,7 +262,7 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	background:url("img/MenuBarButton_Hover.png") no-repeat center center fixed;
+	background:url("img/menuBarButton_Hover.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
@@ -274,7 +274,7 @@
 
 .menuBar button:active, a:hover {
 	animation: fading 0.3s ease;
-	background:url("img/MenuBarButton_Pressed.png") no-repeat center center fixed;
+	background:url("img/menuBarButton_Pressed.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
