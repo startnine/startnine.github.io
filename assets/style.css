@@ -118,6 +118,7 @@
 .menuBar button, a {
 	min-height: 100%;
 	text-decoration:  none;
+	animation: fading 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
@@ -140,6 +141,7 @@
 }
 
 .menuBar button:hover, a:hover {
+	animation: fading 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
@@ -168,6 +170,7 @@
 }
 
 .menuBar button:active, a:hover {
+	animation: fading 0.3s ease;
 	background:url("img/MenuBarButton_Pressed.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
