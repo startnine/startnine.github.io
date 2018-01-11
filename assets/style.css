@@ -10,11 +10,69 @@
 /* --- */
 
 
-/* Fade */
+/* Animation */
 @keyframes fading {
 	0%{opacity:0}
 	50%{opacity:1}
 	100%{opacity:1}
+}
+.right{
+	animation: animationRight linear 15s alternate;
+	animation-iteration-count: infinite;
+ 	transform-origin: 50% 50%;
+}
+
+.right .2{
+	animation: animationRight2 linear 30s alternate !important;
+	animation-iteration-count: infinite;
+ 	transform-origin: 50% 50%;
+}
+
+@keyframes animationRight{
+  0% {
+	transform:  translate(0px,0px)  scaleX(1.00) ;
+  }
+  100% {
+	transform:  translate(200px,0px)  scaleX(1.25) ;
+  }
+}
+
+@keyframes animationRight2{
+  0% {
+	transform:  translate(0px,0px)  scaleX(1) ;
+  }
+  100% {
+	transform:  translate(200px,0px)  scaleX(1) ;
+  }
+}
+
+.left{
+	animation: animationLeft linear 15s alternate;
+	animation-iteration-count: infinite;
+	transform-origin: 50% 50%;
+}
+
+.left .2 {
+	animation: animationLeft2 linear 35s alternate !important;
+	animation-iteration-count: infinite;
+	transform-origin: 50% 50%;
+}
+
+@keyframes animationLeft{
+	0% {
+	transform:  translate(0px,0px)  scaleX(1);
+  }
+	100% {
+	transform:  translate(-200px,0px)  scaleX(1);
+  }
+}
+@keyframes animationLeft2{
+	0% {
+	transform:  translate(0px,0px)  scaleX(1.00);
+  }
+	100% {
+	transform:  translate(-200px,0px)  scaleX(1);
+  }
 }
 /* --- */
 
@@ -48,8 +106,15 @@
 }
 
 .customMargin {margin: 0.3em 0 0 0;}
+
 /* --- */
 
+/* Aurora */
+.aurora {
+	width: 100%;
+	vertical-align: middle; 
+	height: 256px;
+}
 
 /* Menu */
 .headerBackground {
@@ -82,16 +147,18 @@
 .title {
 	font-size: 19px;
 	color: white;
-	padding: 0.21em 0 0.21em 0;
+	padding: 0.15em 0 0.15em 0;
 	text-align: center;
 }
 
 .menuBar {
+	z-index: 100;
 															   background: #3669af;
 	background: -webkit-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
 	 background: -moz-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
 		background: linear-gradient(to right, #3669af 1%,#5f9cda 50%,#3669af 100%);
 	text-align: center;
+	position: fixed;
 	vertical-align: bottom;
 	display: inline-block;
 	-ms-flex-item-align: end;
@@ -204,6 +271,8 @@ body {
 }
 
 .bodyBG {
+	position:relative;
+	z-index:-100;
 	margin: 5em 0 0 0;
 	padding: 0 0 0 0;
 	width: 100%;
