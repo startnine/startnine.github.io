@@ -9,7 +9,8 @@
 * {font-family: "Selawik", "Segoe UI";}
 /* --- */
 
-
+/* Remove X Overflow */ 
+html, body {overflow-x: hidden;}
 /* Animation */
 @-webkit-keyframes fading {
 	0%{opacity:0}
@@ -172,7 +173,7 @@
 			user-select: none;
 }
 
-.customMargin {margin: 0.3em 0 0 0;}
+.customMargin {margin: -1em 0;}
 /* --- */
 
 /* Aurora */
@@ -382,7 +383,6 @@ body {
 	-ms-background-attachment: fixed;
 		background-attachment: fixed;
 	min-height: 100%;
-
 }
 
 .side {
@@ -404,6 +404,7 @@ body {
 .sideObject {
 	padding: 1.25em auto 1.25em auto;
 	vertical-align: top;
+	margin-bottom: 2em;
 }
 
 .sideObject button {padding: .7em;}
