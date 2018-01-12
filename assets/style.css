@@ -1,9 +1,9 @@
 /* Font face */
 @font-face {
 	font-family: Selawik;
-	src: url("https://startnine.github.io/assets/font/selawk.woff") format("embedded-opentype"),
-		 url("https://startnine.github.io/assets/font/selawk.ttf") format("truetype"),
-		 url("https://startnine.github.io/assets/font/selawk.eot") format("woff");
+	src: url("font/selawk.woff") format("embedded-opentype"),
+		 url("font/selawk.ttf") format("truetype"),
+		 url("font/selawk.eot") format("woff");
 }
  
 * {font-family: "Selawik", "Segoe UI";}
@@ -178,9 +178,9 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-ms-border-image-source: url("https://startnine.github.io/assets/img/headerBackground.png");
-	 -o-border-image-source: url("https://startnine.github.io/assets/img/headerBackground.png");
-		border-image-source: url("https://startnine.github.io/assets/img/headerBackground.png");
+	-ms-border-image-source: url("img/headerBackground.png");
+	 -o-border-image-source: url("img/headerBackground.png");
+		border-image-source: url("img/headerBackground.png");
 	width: 100%;
 }
  
@@ -218,9 +218,9 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-ms-border-image-source: url("https://startnine.github.io/assets/img/menuBar.png");
-	 -o-border-image-source: url("https://startnine.github.io/assets/img/menuBar.png");
-		border-image-source: url("https://startnine.github.io/assets/img/menuBar.png");
+	-ms-border-image-source: url("img/menuBar.png");
+	 -o-border-image-source: url("img/menuBar.png");
+		border-image-source: url("img/menuBar.png");
 }
 
 .menuBar button, a {
@@ -233,14 +233,14 @@
 	padding: 1.1em 5% 1.1em 5%;
 	text-align: center;
 	background: transparent;
-	background:url("https://startnine.github.io/assets/img/menuBarButton.png") no-repeat center center fixed;
+	background:url("img/menuBarButton.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	-ms-border-image-source: url("https://startnine.github.io/assets/img/menuBarButton.png");
-	 -o-border-image-source: url("https://startnine.github.io/assets/img/menuBarButton.png");
-		border-image-source: url("https://startnine.github.io/assets/img/menuBarButton.png");
+	-ms-border-image-source: url("img/menuBarButton.png");
+	 -o-border-image-source: url("img/menuBarButton.png");
+		border-image-source: url("img/menuBarButton.png");
 	color: white;
 	transition: all 0.3s ease;
 }
@@ -262,26 +262,26 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	background:url("https://startnine.github.io/assets/img/menuBarButton_Hover.png") no-repeat center center fixed;
+	background:url("img/menuBarButton_Hover.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	-ms-border-image-source: url("https://startnine.github.io/assets/img/menuBarButton_Hover.png");
-	 -o-border-image-source: url("https://startnine.github.io/assets/img/menuBarButton_Hover.png");
-		border-image-source: url("https://startnine.github.io/assets/img/menuBarButton_Hover.png");
+	-ms-border-image-source: url("img/menuBarButton_Hover.png");
+	 -o-border-image-source: url("img/menuBarButton_Hover.png");
+		border-image-source: url("img/menuBarButton_Hover.png");
 }
 
 .menuBar button:active, a:hover {
 	animation: fading 0.3s ease;
-	background:url("https://startnine.github.io/assets/img/menuBarButton_Pressed.png") no-repeat center center fixed;
+	background:url("img/menuBarButton_Pressed.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	-ms-border-image-source: url("https://startnine.github.io/assets/img/menuBarButton_Pressed.png");
-	 -o-border-image-source: url("https://startnine.github.io/assets/img/menuBarButton_Pressed.png");
-		border-image-source: url("https://startnine.github.io/assets/img/menuBarButton_Pressed.png");
+	-ms-border-image-source: url("img/menuBarButton_Pressed.png");
+	 -o-border-image-source: url("img/menuBarButton_Pressed.png");
+		border-image-source: url("img/menuBarButton_Pressed.png");
 }
 /* --- */
 
@@ -333,7 +333,7 @@ body {
 .bodyBackground {
 	width: 100%;
 	background: white;
-	background-image: url('https://startnine.github.io/assets/img/gradient.svg');
+	background-image: url('img/gradient.svg');
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
 			background: linear-gradient(white, #C8D4E7);
@@ -425,14 +425,14 @@ button {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
-	background:url("https://startnine.github.io/assets/img/buttonIdle.png") no-repeat center center fixed;
+	background:url("img/buttonIdle.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	-ms-border-image-source: url("https://startnine.github.io/assets/img/buttonIdle.png");
-	 -o-border-image-source: url("https://startnine.github.io/assets/img/buttonIdle.png");
-		border-image-source: url("https://startnine.github.io/assets/img/buttonIdle.png");
+	-ms-border-image-source: url("img/buttonIdle.png");
+	 -o-border-image-source: url("img/buttonIdle.png");
+		border-image-source: url("img/buttonIdle.png");
 }
 
 button:hover {
@@ -440,24 +440,24 @@ button:hover {
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
 	zoom:1;
-	background:url("https://startnine.github.io/assets/img/buttonHover.png") no-repeat center center fixed;
+	background:url("img/buttonHover.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	-ms-border-image-source: url("https://startnine.github.io/assets/img/buttonHover.png");
-	 -o-border-image-source: url("https://startnine.github.io/assets/img/buttonHover.png");
-		border-image-source: url("https://startnine.github.io/assets/img/buttonHover.png");
+	-ms-border-image-source: url("img/buttonHover.png");
+	 -o-border-image-source: url("img/buttonHover.png");
+		border-image-source: url("img/buttonHover.png");
 }
 
 button:active {
-	background:url("https://startnine.github.io/assets/img/buttonPressed.png") no-repeat center center fixed;
+	background:url("img/buttonPressed.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
-	-ms-border-image-source: url("https://startnine.github.io/assets/img/buttonPressed.png");
-	 -o-border-image-source: url("https://startnine.github.io/assets/img/buttonPressed.png");
-		border-image-source: url("https://startnine.github.io/assets/img/buttonPressed.png");
+	-ms-border-image-source: url("img/buttonPressed.png");
+	 -o-border-image-source: url("img/buttonPressed.png");
+		border-image-source: url("img/buttonPressed.png");
 }
 /* --- */
 
