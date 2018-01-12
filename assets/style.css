@@ -135,12 +135,13 @@
 @media screen and (max-width: 600px) {
 	.menuBar button:not(:first-child) {display: none;}
 	.title a.burger {
-		position: relative; width: 1em; height: 0.9em;
+		position: relative; 
+		width: 1em; 
+		height: 0.9em;
 		float: left;
 		display: block;
 		margin-top: -0.4em;
 		padding: 0.5em;
-
   }
 }
 
@@ -172,7 +173,6 @@
 }
 
 .customMargin {margin: 0.3em 0 0 0;}
-
 /* --- */
 
 /* Aurora */
