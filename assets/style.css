@@ -262,26 +262,26 @@
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	background:url("img/menuBarButton_Hover.png") no-repeat center center fixed;
+	background:url("img/menuBarButton_hover.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	-ms-border-image-source: url("img/menuBarButton_Hover.png");
-	 -o-border-image-source: url("img/menuBarButton_Hover.png");
-		border-image-source: url("img/menuBarButton_Hover.png");
+	-ms-border-image-source: url("img/menuBarButton_hover.png");
+	 -o-border-image-source: url("img/menuBarButton_hover.png");
+		border-image-source: url("img/menuBarButton_hover.png");
 }
 
 .menuBar button:active, a:hover {
 	animation: fading 0.3s ease;
-	background:url("img/menuBarButton_Pressed.png") no-repeat center center fixed;
+	background:url("img/menuBarButton_pressed.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	-ms-border-image-source: url("img/menuBarButton_Pressed.png");
-	 -o-border-image-source: url("img/menuBarButton_Pressed.png");
-		border-image-source: url("img/menuBarButton_Pressed.png");
+	-ms-border-image-source: url("img/menuBarButton_pressed.png");
+	 -o-border-image-source: url("img/menuBarButton_pressed.png");
+		border-image-source: url("img/menuBarButton_pressed.png");
 }
 /* --- */
 
