@@ -49,27 +49,27 @@
  	        transform-origin: 50% 50%;
 }
 
-@-webkit-keyframes animationRight{
+@-webkit-keyframes animationRight {
   0% {-webkit-transform: translate(0px,0px) scaleX(1.00);transform: translate(0px,0px) scaleX(1.00);}
   100% {-webkit-transform: translate(200px,0px) scaleX(1.25) ;transform: translate(200px,0px) scaleX(1.25);}
 }
 
-@keyframes animationRight{
+@keyframes animationRight {
   0% {-webkit-transform: translate(0px,0px) scaleX(1.00);transform: translate(0px,0px) scaleX(1.00);}
   100% {-webkit-transform: translate(200px,0px) scaleX(1.25) ;transform: translate(200px,0px) scaleX(1.25);}
 }
 
-@-webkit-keyframes animationRight2{
+@-webkit-keyframes animationRight2 {
   0% {-webkit-transform: translate(0px,0px) scaleX(1) ;transform: translate(0px,0px) scaleX(1);}
   100% {-webkit-transform: translate(200px,0px) scaleX(1.15) ;transform: translate(200px,0px) scaleX(1.15);}
 }
 
-@keyframes animationRight2{
+@keyframes animationRight2 {
   0% {-webkit-transform: translate(0px,0px) scaleX(1) ;transform: translate(0px,0px) scaleX(1);}
   100% {-webkit-transform: translate(200px,0px) scaleX(1.15) ;transform: translate(200px,0px) scaleX(1.15);}
 }
 
-.left{
+.left {
 	-webkit-animation: animationLeft linear 15s alternate;
 	        animation: animationLeft linear 15s alternate;
 	-webkit-animation-iteration-count: infinite;
@@ -95,22 +95,22 @@
 	        transform-origin: 50% 50%;
 }
 
-@-webkit-keyframes animationLeft{
+@-webkit-keyframes animationLeft {
 	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
 	100% {-webkit-transform: translate(-200px,0px) scaleX(1.25);transform: translate(-200px,0px) scaleX(1.25);}
 }
 
-@keyframes animationLeft{
+@keyframes animationLef {
 	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
 	100% {-webkit-transform: translate(-200px,0px) scaleX(1.25);transform: translate(-200px,0px) scaleX(1.25);}
 }
 
-@-webkit-keyframes animationLeft2{
+@-webkit-keyframes animationLeft2 {
 	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
 	100% {-webkit-transform: translate(-200px,0px) scaleX(1.8);transform: translate(-200px,0px) scaleX(1.8);}
 }
 
-@keyframes animationLeft2{
+@keyframes animationLeft2 {
 	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
 	100% {-webkit-transform: translate(-200px,0px) scaleX(1.8);transform: translate(-200px,0px) scaleX(1.8);}
 }
@@ -130,6 +130,33 @@
 		grid-column: 1 !important;
 		padding: 2em 2em 5em 2em;
 	}
+}
+
+@media screen and (max-width: 600px) {
+	.menuBar button:not(:first-child) {display: none;}
+	.title a.burger {
+		position: relative; width: 1em; height: 0.9em;
+		float: left;
+		display: block;
+		margin-top: -0.4em;
+		padding: 0.5em;
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+	.headerBackground .responsive {position: relative;}
+	.headerBackground .responsive a.burger {
+		position: absolute;
+		right: 0;
+		top: 0;
+  }
+
+  .headerBackground .responsive button {
+		float: none;
+		display: block;
+		min-width: 100%;
+  }
 }
 /* --- */
 
@@ -190,6 +217,7 @@
 	padding: 0.15em 0 0.15em 0;
 	text-align: center;
 }
+.headerBackground .burger {display: none;}
 
 .menuBar {
 	z-index: 100;
@@ -203,7 +231,7 @@
 	display: inline-block;
 	-ms-flex-item-align: end;
 		align-self: flex-end;
-	width: 100%;
+	min-width: 100%;
 	margin: -8px 0 0 0;
 	overflow: auto;
 	-ms-border-image-slice: 20 10 0 10 fill;
@@ -288,12 +316,8 @@
 
 /* Body */
 
-html {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 body {
+	min-width: 100%;
 	margin: 0;
 	font-size:16px;
 	padding: 0;

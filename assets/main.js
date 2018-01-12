@@ -12,3 +12,13 @@ window.onload = function() {document.getElementById("defaultTab").click()};
 	document.getElementById(tabName).style.display = "block"; 3
 	evt.currentTarget.className += " active";
 }*/
+
+/* W3 implmentation of repsonsive navbar */
+function menuBarNav() {
+    var x = document.getElementById("menuBar");
+    if (x.className === "menuBar") {
+        x.className += " responsive";
+    } else {
+        x.className = "menuBar";
+    }
+}

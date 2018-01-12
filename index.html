@@ -15,8 +15,8 @@
 	<body>
 		<header>
 			<div class="headerBackground">
-				<p class="title">Home</p>
-				<nav class="menuBar">
+				<p class="title">Home<a href="javascript:void(0);" class="burger" onclick="menuBarNav()">&#9776;</a></p>
+				<nav class="menuBar" id="menuBar">
 					<!--a href="javascript:void(0);" onclick="menuBarNav()">&#9776;</a-->
 					<button class="tabLink" onclick="openTab(event, 'home')" id="defaultTab">Home</button>
 					<button onclick="openNewTab('https://github.com/StartNine/Start9/releases');">Downloads</button>
