@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<noscript><style>.tabContent {display: block !important;} #faq {display: none !important;}</style></noscript>
+		<title>Home - Start9</title>
+		<script src="assets/main.js"></script>
+		<link rel="stylesheet" href="assets/style.css" type="text/css"/>
+		<meta name="theme-color" content="#4d88d5">
+		<meta name="viewport" content="width=device-width"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="A full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content.">
+		<link rel="shortcut icon" href="https://avatars1.githubusercontent.com/u/34009271">
+		<meta name="keywords" content="Start9,StartNine,shell,shell replacement, start nine, modular shell, extensible">
+	</head>
+	<body>
+		<header>
+			<div class="headerBackground">
+				<p class="title">Home</p>
+				<nav class="menuBar">
+					<!--a href="javascript:void(0);" onclick="menuBarNav()">&#9776;</a-->
+					<button class="tabLink" onclick="openTab(event, 'home')" id="defaultTab">Home</button>
+					<button onclick="openNewTab('https://github.com/StartNine/Start9/releases');">Downloads</button>
+					<button class="disabled" onclick="openTab(event, 'news')">News</button>
+					<button class="disabled">Community</button>
+					<button class="disabled" onclick="openTab(event, 'faq')">FAQ</button>
+				</nav>
+			</div>
+			<div class="bodyBG">
+				<div style="display:fixed;z-index:-1000;">
+					<img style="margin-top:      0;" class="aurora left" src="assets/img/aurora1a.png" alt="Aurora"/>
+					<img style="margin-top: -256px;" class="aurora right 2" src="assets/img/aurora2a.png" alt="Aurora"/>
+					<img style="margin-top: -512px;" class="aurora left2" src="assets/img/aurora3a.png" alt="Aurora"/>
+					<img style="margin-top: -768px;" class="aurora right" src="assets/img/aurora1a.png"  alt="Aurora"/>	
+					<img style="margin-top: -1024px;" class="aurora left2" src="assets/img/aurora2a.png" alt="Aurora"/>
+					<img style="margin-top: -1280px;" class="aurora right2" src="assets/img/aurora3a.png" alt="Aurora"/>
+					<img style="margin-top: -1536px;" class="aurora left" src="assets/img/aurora1a.png" alt="Aurora"/>
+					<img style="margin-top: -1792px;" class="aurora right" src="assets/img/aurora2a.png"  alt="Aurora"/>
+					<img style="margin-top: -2048px;" class="aurora right 2" src="assets/img/aurora3a.png" alt="Aurora"/>
+				</div>
+			</div>
+				<div style="margin: -200px 0 256px 0;display:fixed;z-index:1000;min-width: 100%;text-align: center;">
+					<p style="font-size: 48px; vertical-align: middle;">
+						<img style="width: 80px; height: 104px; vertical-align: middle;" src="assets/img/logo.png" alt="Start9 Logo"/> <b>Start9</b>
+					</p>
+				</div>
+			</div>
+		</header>
+
+		<div class="gridBody" style="margin-top: -200px">
+			<section id="home" class="tabContent">
+				<p class="customMargin">Hello everyone,<br>
+					&emsp;&emsp;We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code. All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.</p>
+			</section>
+
+			<section id="news" class="tabContent">
+				<!--probally iFrame here...-->
+			</section>
+
+			<section id="faq" class="tabContent">
+				<!--h2>FAQ</h1>
+					<span style="font-size:110%;"><b>Question?</b></span> <br> <i style="padding-left: 2em;">Answer.</i> <br><br>
+					<span style="font-size:110%;"><b>Question?</b></span> <br> <i style="padding-left: 2em;">Answer.</i> <br><br>
+					<span style="font-size:110%;"><b>Question?</b></span> <br> <i style="padding-left: 2em;">Answer.</i> <br><br-->
+			</section>
+
+			<div class="side">
+				<div class="sideObject">
+					<p class="customMargin">To anyone who is interested, please check out our GitHub here:</p>
+					<button onclick="openNewTab('https://github.com/StartNine/Start9');">Start9 on GitHub</button>
+				</div>
+				<div class="sideObject">
+					<p>We've also opened up the Start9 Discord Server, so everyone can keep an eye on our progress, contribute ideas, etc. You can join here:</p>
+					<button onclick="openNewLink('https://discordapp.com/invite/6cpvxBS');">Start9 Discord Server</button>
+				</div>
+				<noscript>
+					<div class="sideObject">
+						<p>It seems like your Javascript is disabled or is out of date. You don't need to turn it on for this webpage.</p>
+					</div>
+				</noscript>
+			</div>
+		</div>
+		
+		<!--footer>
+			<p>Note: Start9 is not associated with Stardock or Microsoft. Neither are to be held legally responsible for anything that happens due to Start9. Also, if it breaks, you get to keep both pieces. We'll try to help you put them back together, but no promises.</p>
+		</footer-->
+
+	</body>
+</html>
