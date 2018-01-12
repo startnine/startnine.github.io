@@ -333,10 +333,10 @@ body {
 .bodyBackground {
 	width: 100%;
 	background: white;
+	background-image: url('img/gradient.svg');
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
 			background: linear-gradient(white, #C8D4E7);
-	background-image: url('img/gradient.svg');
 }
 /* --- */
 
@@ -430,8 +430,6 @@ button {
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonIdle.png', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonIdle.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/buttonIdle.png");
 	 -o-border-image-source: url("img/buttonIdle.png");
 		border-image-source: url("img/buttonIdle.png");
@@ -447,8 +445,6 @@ button:hover {
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonHover.png', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonHover.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/buttonHover.png");
 	 -o-border-image-source: url("img/buttonHover.png");
 		border-image-source: url("img/buttonHover.png");
@@ -459,9 +455,6 @@ button:active {
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
-			background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonPressed.png', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/buttonPressed.png', sizingMethod='scale')";
 	-ms-border-image-source: url("img/buttonPressed.png");
 	 -o-border-image-source: url("img/buttonPressed.png");
 		border-image-source: url("img/buttonPressed.png");
