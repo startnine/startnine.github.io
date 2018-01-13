@@ -101,7 +101,7 @@ html, body {overflow-x: hidden;}
 	100% {-webkit-transform: translate(-200px,0px) scaleX(1.25);transform: translate(-200px,0px) scaleX(1.25);}
 }
 
-@keyframes animationLef {
+@keyframes animationLeft {
 	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
 	100% {-webkit-transform: translate(-200px,0px) scaleX(1.25);transform: translate(-200px,0px) scaleX(1.25);}
 }
@@ -116,13 +116,28 @@ html, body {overflow-x: hidden;}
 	100% {-webkit-transform: translate(-200px,0px) scaleX(1.8);transform: translate(-200px,0px) scaleX(1.8);}
 }
 
-@keyframes slideDown {
+@-webkit-keyframes slideDown {
 	0%   {
-		transform: translateY(0%);
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
 		height: 4em;
 	}
 	100% {
-		transform: translateY(0%);
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
+		height: 14.4em
+	}
+}
+
+@keyframes slideDown {
+	0%   {
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
+		height: 4em;
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
 		height: 14.4em
 	}
 }
@@ -147,27 +162,34 @@ html, body {overflow-x: hidden;}
 		height: 2px;
 		background-color: #8cb5f7;
 		margin: 5px 0;
+		-webkit-transition: 0.3s;
+		-o-transition: 0.3s;
 		transition: 0.3s;
 		border-radius: 1em;
-		box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
+		-webkit-box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
+		        box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
 	}
 	
 	.change .bar1 {
 		width: 1.5em;
 		background-color: #8cb5f7;
 		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-		transform: rotate(-45deg) translate(-6px, 4px);
-		box-shadow: 0 0 0 0 #375f98;
+		-ms-transform: rotate(-45deg) translate(-6px, 4px);
+		    transform: rotate(-45deg) translate(-6px, 4px);
+		-webkit-box-shadow: 0 0 0 0 #375f98;
+		        box-shadow: 0 0 0 0 #375f98;
 	}
 
 	.change .bar2 {opacity: 0; background-color: #8cb5f7; width: 1.5em;}
 
 	.change .bar3 {
 		-webkit-transform: rotate(45deg) translate(-8px, -8px);
-		transform: rotate(45deg) translate(-6px, -4px);
+		-ms-transform: rotate(45deg) translate(-6px, -4px);
+		    transform: rotate(45deg) translate(-6px, -4px);
 		background-color: #8cb5f7;
 		width: 1.5em;
-		box-shadow: 0 0 0 0 #375f98;
+		-webkit-box-shadow: 0 0 0 0 #375f98;
+		        box-shadow: 0 0 0 0 #375f98;
 	}
 /* --- */
 
@@ -175,12 +197,16 @@ html, body {overflow-x: hidden;}
 @media all and (max-width: 812px) {
 	.gridBody {
 		min-width: 100% !important;
-		grid-template-columns: auto auto !important;
-		grid-template-rows: 100% !important;
+		-ms-grid-columns: auto auto !important;
+		    grid-template-columns: auto auto !important;
+		-ms-grid-rows: 100% !important;
+		    grid-template-rows: 100% !important;
 	}
 
 	.side {
+		-ms-grid-row: 2 !important;
 		grid-row: 2 !important;
+		-ms-grid-column: 1 !important;
 		grid-column: 1 !important;
 		padding: 2em 2em 5em 2em;
 	}
@@ -190,7 +216,8 @@ html, body {overflow-x: hidden;}
 	.headerBackground .responsive {
 		position: relative; 
 		overflow: hidden;
-		animation: 0.3s slideDown ease;
+		-webkit-animation: 0.3s slideDown ease;
+		        animation: 0.3s slideDown ease;
 	}
 
 	.headerBackground .burgerButton {
@@ -261,10 +288,12 @@ html, body {overflow-x: hidden;}
 .mobileLogo {display: none;}
 
 .headerBackground {
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 															   background: #4d88d5;
 	background: -webkit-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
-	 background: -moz-linear-gradient(left, #4d88d5 0%, #6fb0f3 51%, #4d88d5 100%);
+		background: -webkit-gradient(linear, left top, right top, from(#4d88d5),color-stop(51%, #6fb0f3),to(#4d88d5));
+		background: -o-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 	position: fixed;
 	padding: 0;
@@ -306,7 +335,8 @@ html, body {overflow-x: hidden;}
 .menuBar {
 															   background: #3669af;
 	background: -webkit-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
-	 background: -moz-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
+		background: -webkit-gradient(linear, left top, right top, color-stop(1%, #3669af),color-stop(50%, #5f9cda),to(#3669af));
+		background: -o-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
 		background: linear-gradient(to right, #3669af 1%,#5f9cda 50%,#3669af 100%);
 	text-align: center;
 	position: fixed;
@@ -315,7 +345,8 @@ html, body {overflow-x: hidden;}
 	-ms-flex-item-align: end;
 		align-self: flex-end;
 	min-width: 100%;
-	margin: -3.5rem 0 0 0;
+	margin: -3.4rem 0 0 0;
+	min-height: 3rem;
 	overflow: auto;
 	z-index: 100;
 	-ms-border-image-slice: 20 10 0 10 fill;
@@ -338,7 +369,8 @@ html, body {overflow-x: hidden;}
 .menuBar button, a {
 	min-height: 100%;
 	text-decoration:  none;
-	animation: fading 0.3s ease;
+	-webkit-animation: fading 0.3s ease;
+	        animation: fading 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
@@ -346,10 +378,7 @@ html, body {overflow-x: hidden;}
 	text-align: center;
 	background: transparent;
 	background:url("img/menuBarButton.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-		 -o-background-size: cover;
-			background-size: cover;
+background-size: cover;
 	-ms-border-image-source: url("img/menuBarButton.png");
 	 -o-border-image-source: url("img/menuBarButton.png");
 		border-image-source: url("img/menuBarButton.png");
@@ -358,7 +387,8 @@ html, body {overflow-x: hidden;}
 }
 
 .menuBar button:hover, a:hover {
-	animation: fading 0.3s ease;
+	-webkit-animation: fading 0.3s ease;
+	        animation: fading 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
@@ -375,22 +405,17 @@ html, body {overflow-x: hidden;}
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
 	background:url("img/menuBarButton_hover.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-		 -o-background-size: cover;
-			background-size: cover;
+background-size: cover;
 	-ms-border-image-source: url("img/menuBarButton_hover.png");
 	 -o-border-image-source: url("img/menuBarButton_hover.png");
 		border-image-source: url("img/menuBarButton_hover.png");
 }
 
 .menuBar button:active, a:hover {
-	animation: fading 0.3s ease;
+	-webkit-animation: fading 0.3s ease;
+	        animation: fading 0.3s ease;
 	background:url("img/menuBarButton_pressed.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-		 -o-background-size: cover;
-			background-size: cover;
+background-size: cover;
 	-ms-border-image-source: url("img/menuBarButton_pressed.png");
 	 -o-border-image-source: url("img/menuBarButton_pressed.png");
 		border-image-source: url("img/menuBarButton_pressed.png");
@@ -409,6 +434,7 @@ body {
 	background: #C8D4E7; /* fallback */
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
+			background: -webkit-gradient(linear, left top, left bottom, from(white), to(#C8D4E7));
 			background: linear-gradient(white, #C8D4E7);
 	-ms-background-position: top center !important;
 		background-position: top center !important;
@@ -444,6 +470,7 @@ body {
 	background-image: url('img/gradient.svg');
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
+			background: -webkit-gradient(linear, left top, left bottom, from(white), to(#C8D4E7));
 			background: linear-gradient(white, #C8D4E7);
 }
 /* --- */
@@ -461,7 +488,8 @@ body {
  		 -ms-grid-rows: 100% 100%;
 	padding: 0;
 	width: 70%;
-	align-content: center;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 	margin: 0 auto;
 	-ms-background-attachment: fixed;
 		background-attachment: fixed;
@@ -535,10 +563,7 @@ button {
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
 	background:url("img/buttonIdle.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-		 -o-background-size: cover;
-			background-size: cover;
+background-size: cover;
 	-ms-border-image-source: url("img/buttonIdle.png");
 	 -o-border-image-source: url("img/buttonIdle.png");
 		border-image-source: url("img/buttonIdle.png");
@@ -550,10 +575,7 @@ button:hover {
 			transition: all 0.3s ease;
 	zoom:1;
 	background:url("img/buttonHover.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-		 -o-background-size: cover;
-			background-size: cover;
+background-size: cover;
 	-ms-border-image-source: url("img/buttonHover.png");
 	 -o-border-image-source: url("img/buttonHover.png");
 		border-image-source: url("img/buttonHover.png");
