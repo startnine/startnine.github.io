@@ -37,7 +37,7 @@ html, body {overflow-x: hidden;}
  			transform-origin: 50% 50%;
 }
 
-.right2{
+.right .2{
 	-webkit-animation: animationRight2 linear 30s alternate !important;
 			animation: animationRight2 linear 30s alternate !important;
 	-webkit-animation-iteration-count: infinite;
@@ -83,7 +83,7 @@ html, body {overflow-x: hidden;}
 			transform-origin: 50% 50%;
 }
 
-.left2 {
+.left .2 {
 	-webkit-animation: animationLeft2 linear 35s alternate !important;
 			animation: animationLeft2 linear 35s alternate !important;
 	-webkit-animation-iteration-count: infinite;
@@ -136,6 +136,7 @@ html, body {overflow-x: hidden;}
 		margin: 5px 0;
 		transition: 0.3s;
 		border-radius: 1em;
+		box-shadow: 0.1em 0.1em 0.1em 0.1em #375f98;
 	}
 	
 	.change .bar1 {
@@ -143,6 +144,7 @@ html, body {overflow-x: hidden;}
 		background-color: #8cb5f7;
 		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
 		transform: rotate(-45deg) translate(-6px, 4px);
+		box-shadow: 0 0 0 0 #375f98
 	}
 
 	.change .bar2 {opacity: 0; background-color: #8cb5f7; width: 1.5em;}
@@ -152,6 +154,7 @@ html, body {overflow-x: hidden;}
 		transform: rotate(45deg) translate(-6px, -4px);
 		background-color: #8cb5f7;
 		width: 1.5em;
+		box-shadow: 0 0 0 0 #375f98;
 	}
 /* --- */
 
