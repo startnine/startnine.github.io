@@ -297,8 +297,9 @@ html, body {overflow-x: hidden;}
 	height: 4em;
 	font-size: 19px;
 	color: white;
-	padding: 0.15em 0 0.15em 0;
+
 	text-align: center;
+	vertical-align: center;
 }
 .headerBackground .burgerButton {opacity: 0; pointer-events: none; cursor: default;}
 
