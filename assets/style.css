@@ -324,11 +324,12 @@ html, body {overflow-x: hidden;}
  
 .title {
 	height: 4em;
+	line-height: 1.5em;
 	font-size: 19px;
 	color: white;
-
-	text-align: center;
 	vertical-align: center;
+	text-align: center;
+	position: relative;
 }
 .headerBackground .burgerButton {opacity: 0; pointer-events: none; cursor: default;}
 
@@ -377,7 +378,7 @@ html, body {overflow-x: hidden;}
 	padding: 1.1em 5% 1.1em 5%;
 	text-align: center;
 	background: transparent;
-	background:url("img/menuBarButton.png") no-repeat center center fixed;
+	background: url("img/menuBarButton.png") no-repeat center center fixed;
 background-size: cover;
 	-ms-border-image-source: url("img/menuBarButton.png");
 	 -o-border-image-source: url("img/menuBarButton.png");
@@ -414,7 +415,7 @@ background-size: cover;
 .menuBar button:active, a:hover {
 	-webkit-animation: fading 0.3s ease;
 	        animation: fading 0.3s ease;
-	background:url("img/menuBarButton_pressed.png") no-repeat center center fixed;
+	background: url("img/menuBarButton_pressed.png") no-repeat center center fixed;
 background-size: cover;
 	-ms-border-image-source: url("img/menuBarButton_pressed.png");
 	 -o-border-image-source: url("img/menuBarButton_pressed.png");
@@ -428,7 +429,7 @@ background-size: cover;
 body {
 	min-width: 100%;
 	margin: 0;
-	font-size:16px;
+	font-size: 16px;
 	padding: 0;
 	background-color: #C8D4E7; /* fallback */
 	background: #C8D4E7; /* fallback */
@@ -445,8 +446,8 @@ body {
 }
 
 .bodyBG {
-	position:relative;
-	z-index:-100;
+	position: relative;
+	z-index: -100;
 	margin: 5em 0 0 0;
 	padding: 0 0 0 0;
 	width: 100%;
@@ -562,7 +563,7 @@ button {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
-	background:url("img/buttonIdle.png") no-repeat center center fixed;
+	background: url("img/buttonIdle.png") no-repeat center center fixed;
 background-size: cover;
 	-ms-border-image-source: url("img/buttonIdle.png");
 	 -o-border-image-source: url("img/buttonIdle.png");
@@ -573,8 +574,8 @@ button:hover {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
-	zoom:1;
-	background:url("img/buttonHover.png") no-repeat center center fixed;
+	zoom: 1;
+	background: url("img/buttonHover.png") no-repeat center center fixed;
 background-size: cover;
 	-ms-border-image-source: url("img/buttonHover.png");
 	 -o-border-image-source: url("img/buttonHover.png");
@@ -582,7 +583,7 @@ background-size: cover;
 }
 
 button:active {
-	background:url("img/buttonPressed.png") no-repeat center center fixed;
+	background: url("img/buttonPressed.png") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
