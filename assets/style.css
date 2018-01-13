@@ -118,33 +118,38 @@ html, body {overflow-x: hidden;}
 
 .burgerButton {
 	display: inline-block;
-	cursor: pointer;
-	margin-bottom: -3.75em;
+	margin-bottom: -3.25em;
 	margin-left: 1em;
 	margin-top: 0;
 	border-radius: 1em;
+	cursor: pointer !important;
 }
 
+	.burgerButton:hover .bar1 {background-color: white;}
+	.burgerButton:hover .bar2 {background-color: white;}
+	.burgerButton:hover .bar3 {background-color: white;}
+
 	.bar1, .bar2, .bar3 {
-		width: 1.7em;
+		width: 1.5em;
 		height: 2px;
 		background-color: #8cb5f7;
-		margin: 0.5em 0;
+		margin: 5px 0;
 		transition: 0.3s;
+		border-radius: 1em;
 	}
-
+	
 	.change .bar1 {
 		width: 1.5em;
 		background-color: #8cb5f7;
 		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-		transform: rotate(-45deg) translate(-9px, 6px);
+		transform: rotate(-45deg) translate(-6px, 4px);
 	}
 
 	.change .bar2 {opacity: 0; background-color: #8cb5f7; width: 1.5em;}
 
 	.change .bar3 {
 		-webkit-transform: rotate(45deg) translate(-8px, -8px);
-		transform: rotate(45deg) translate(-8px, -6px);
+		transform: rotate(45deg) translate(-6px, -4px);
 		background-color: #8cb5f7;
 		width: 1.5em;
 	}
@@ -168,13 +173,12 @@ html, body {overflow-x: hidden;}
 
 @media screen and (max-width: 600px) {
 	.menuBar button:not(:first-child) {display: none;}
-}
 
-@media screen and (max-width: 600px) {
 	.headerBackground .responsive {position: relative;}
+
 	.headerBackground .burgerButton {
 		pointer-events: visible !important;
-		cursor: auto !important;
+		cursor: pointer !important;
 		opacity: 1 !important;
 	}
 
@@ -182,6 +186,12 @@ html, body {overflow-x: hidden;}
 		float: none;
 		display: block;
 		min-width: 100%;
+	}
+	.title {visibility: hidden;}
+	.title:after {
+		content: "Start9";
+		visibility: visible;
+		margin-left: -3em;
 	}
 }
 /* --- */
@@ -230,6 +240,8 @@ html, body {overflow-x: hidden;}
 		vertical-align: middle;
 	}
 /* Menu */
+.mobileLogo {display: none;}
+
 .headerBackground {
 															   background: #4d88d5;
 	background: -webkit-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
