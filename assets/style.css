@@ -37,9 +37,9 @@ html, body {overflow-x: hidden;}
  			transform-origin: 50% 50%;
 }
 
-.right .2{
-	-webkit-animation: animationRight2 linear 30s alternate !important;
-			animation: animationRight2 linear 30s alternate !important;
+.right2{
+	-webkit-animation: animationRight2 linear 20s alternate !important;
+			animation: animationRight2 linear 20s alternate !important;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 	-webkit-transition-timing-function: ease;
@@ -71,8 +71,8 @@ html, body {overflow-x: hidden;}
 }
 
 .left {
-	-webkit-animation: animationLeft linear 15s alternate;
-			animation: animationLeft linear 15s alternate;
+	-webkit-animation: animationLeft linear 10s alternate;
+			animation: animationLeft linear 10s alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 	-webkit-transition-timing-function: ease;
@@ -83,9 +83,9 @@ html, body {overflow-x: hidden;}
 			transform-origin: 50% 50%;
 }
 
-.left .2 {
-	-webkit-animation: animationLeft2 linear 35s alternate !important;
-			animation: animationLeft2 linear 35s alternate !important;
+.left2 {
+	-webkit-animation: animationLeft2 linear 25s alternate !important;
+			animation: animationLeft2 linear 25s alternate !important;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 	-webkit-transition-timing-function: ease;
@@ -116,10 +116,23 @@ html, body {overflow-x: hidden;}
 	100% {-webkit-transform: translate(-200px,0px) scaleX(1.8);transform: translate(-200px,0px) scaleX(1.8);}
 }
 
+@keyframes slideDown {
+	0%   {
+		transform: translateY(0%);
+		height: 4em;
+	}
+	100% {
+		transform: translateY(0%);
+		height: 14.4em
+	}
+}
+/* --- */
+
+/* Hamburger */
 .burgerButton {
 	display: inline-block;
 	margin-bottom: -3.25em;
-	margin-left: 1em;
+	margin-left: 1.5rem;
 	margin-top: 0;
 	border-radius: 1em;
 	cursor: pointer !important;
@@ -136,7 +149,7 @@ html, body {overflow-x: hidden;}
 		margin: 5px 0;
 		transition: 0.3s;
 		border-radius: 1em;
-		box-shadow: 0.1em 0.1em 0.1em 0.1em #375f98;
+		box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
 	}
 	
 	.change .bar1 {
@@ -144,7 +157,7 @@ html, body {overflow-x: hidden;}
 		background-color: #8cb5f7;
 		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
 		transform: rotate(-45deg) translate(-6px, 4px);
-		box-shadow: 0 0 0 0 #375f98
+		box-shadow: 0 0 0 0 #375f98;
 	}
 
 	.change .bar2 {opacity: 0; background-color: #8cb5f7; width: 1.5em;}
@@ -157,7 +170,6 @@ html, body {overflow-x: hidden;}
 		box-shadow: 0 0 0 0 #375f98;
 	}
 /* --- */
-
 
 /* Mobile Ajustments */
 @media all and (max-width: 812px) {
@@ -175,9 +187,11 @@ html, body {overflow-x: hidden;}
 }
 
 @media screen and (max-width: 600px) {
-	.menuBar button:not(:first-child) {display: none;}
-
-	.headerBackground .responsive {position: relative;}
+	.headerBackground .responsive {
+		position: relative; 
+		overflow: hidden;
+		animation: 0.3s slideDown ease;
+	}
 
 	.headerBackground .burgerButton {
 		pointer-events: visible !important;
@@ -188,7 +202,8 @@ html, body {overflow-x: hidden;}
 	.headerBackground .responsive button {
 		float: none;
 		display: block;
-		min-width: 100%;
+		min-width: 100%;.
+		animation: 0s;
 	}
 	.title {visibility: hidden;}
 	.title:after {
@@ -196,6 +211,7 @@ html, body {overflow-x: hidden;}
 		visibility: visible;
 		margin-left: -3em;
 	}
+
 }
 /* --- */
 
@@ -227,8 +243,7 @@ html, body {overflow-x: hidden;}
 
 .logo { 
 	margin: -200px 0 256px 0;
-	display:fixed;
-	z-index:1000;
+	z-index: 1000;
 	min-width: 100%;
 	text-align: center;
 }
@@ -246,12 +261,14 @@ html, body {overflow-x: hidden;}
 .mobileLogo {display: none;}
 
 .headerBackground {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 															   background: #4d88d5;
 	background: -webkit-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 	 background: -moz-linear-gradient(left, #4d88d5 0%, #6fb0f3 51%, #4d88d5 100%);
 		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 	position: fixed;
 	padding: 0;
+	height: 8rem;
 	margin: -7em 0 0 0;
 	vertical-align: top;
 	-ms-border-image-slice: 0 10 0 10 fill;
@@ -277,6 +294,7 @@ html, body {overflow-x: hidden;}
 }
  
 .title {
+	height: 4em;
 	font-size: 19px;
 	color: white;
 	padding: 0.15em 0 0.15em 0;
@@ -285,7 +303,6 @@ html, body {overflow-x: hidden;}
 .headerBackground .burgerButton {opacity: 0; pointer-events: none; cursor: default;}
 
 .menuBar {
-	z-index: 100;
 															   background: #3669af;
 	background: -webkit-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
 	 background: -moz-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
@@ -297,8 +314,9 @@ html, body {overflow-x: hidden;}
 	-ms-flex-item-align: end;
 		align-self: flex-end;
 	min-width: 100%;
-	margin: -8px 0 0 0;
+	margin: -3.5rem 0 0 0;
 	overflow: auto;
+	z-index: 100;
 	-ms-border-image-slice: 20 10 0 10 fill;
 	 -o-border-image-slice: 20 10 0 10 fill;
 		border-image-slice: 20 10 0 10 fill;
@@ -466,7 +484,7 @@ body {
 }
  
 .sideObject {
-	padding: 1.25em auto 1.25em auto;
+	padding: 0.5em 0 0.5em 0;
 	vertical-align: top;
 	margin-bottom: 2em;
 }
