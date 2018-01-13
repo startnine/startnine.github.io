@@ -15,7 +15,8 @@
 	<body>
 		<header>
 			<div class="headerBackground">
-				<p class="title">Home<a href="javascript:void(0);" class="burger" onclick="menuBarNav()">&#9776;</a></p>
+				<div class="burgerButton" onclick="burgerButton(this);menuBarNav()" href="javascript:void(0);" class="burger"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
+				<p class="title">Home</p>
 				<nav class="menuBar" id="menuBar">
 					<button class="tabLink" onclick="openTab(event, 'home')" id="defaultTab">Home</button>
 					<button onclick="openNewTab('https://github.com/StartNine/Start9/releases');">Downloads</button>
@@ -24,15 +25,16 @@
 					<button class="disabled" onclick="openTab(event, 'faq')">FAQ</button>
 				</nav>
 			</div>
+
 			<div class="bodyBG">
 				<img style="margin-top:      0;" class="aurora left" src="assets/img/aurora1a.png" alt="Aurora"/>
 				<img style="margin-top: -256px;" class="aurora right2" src="assets/img/aurora2a.png" alt="Aurora"/>
 				<img style="margin-top: -512px;" class="aurora left2" src="assets/img/aurora3a.png" alt="Aurora"/>
 				<img style="margin-top: -768px;" class="aurora right" src="assets/img/aurora1a.png"  alt="Aurora"/>	
 			</div>
-				<div style="margin: -200px 0 256px 0;display:fixed;z-index:1000;min-width: 100%;text-align: center;">
-					<p style="font-size: 48px; vertical-align: middle;">
-						<img style="width: 80px; height: 104px; vertical-align: middle;" src="assets/img/logo.png" alt="Start9 Logo"/> <b>Start9</b>
+				<div class="logo">
+					<p class="text">
+						<img class="image" src="assets/img/logo.png" alt="Start9 Logo"/> <b>Start9</b>
 					</p>
 				</div>
 		</header>
@@ -69,7 +71,6 @@
 				</noscript>
 			</div>
 		</div>
-		
 		<!--footer>
 			<p>Note: Start9 is not associated with Stardock or Microsoft. Neither are to be held legally responsible for anything that happens due to Start9. Also, if it breaks, you get to keep both pieces. We'll try to help you put them back together, but no promises.</p>
 		</footer-->

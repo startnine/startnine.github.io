@@ -22,3 +22,7 @@ function menuBarNav() {
         x.className = "menuBar";
     }
 }
+
+function burgerButton(x) {
+    x.classList.toggle("change");
+}
