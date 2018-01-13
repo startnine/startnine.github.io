@@ -37,7 +37,7 @@ html, body {overflow-x: hidden;}
  			transform-origin: 50% 50%;
 }
 
-.right .2{
+.right2{
 	-webkit-animation: animationRight2 linear 30s alternate !important;
 			animation: animationRight2 linear 30s alternate !important;
 	-webkit-animation-iteration-count: infinite;
@@ -83,7 +83,7 @@ html, body {overflow-x: hidden;}
 			transform-origin: 50% 50%;
 }
 
-.left .2 {
+.left2 {
 	-webkit-animation: animationLeft2 linear 35s alternate !important;
 			animation: animationLeft2 linear 35s alternate !important;
 	-webkit-animation-iteration-count: infinite;
