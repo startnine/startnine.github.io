@@ -229,10 +229,11 @@ html, body {overflow-x: hidden;}
 	.headerBackground .responsive button {
 		float: none;
 		display: block;
-		min-width: 100%;.
-		animation: 0s;
+		min-width: 100%;
 	}
+
 	.title {visibility: hidden;}
+
 	.title:after {
 		content: "Start9";
 		visibility: visible;
@@ -240,6 +241,7 @@ html, body {overflow-x: hidden;}
 	}
 
 }
+
 /* --- */
 
 
@@ -564,7 +566,7 @@ button {
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
 	background: url("img/buttonIdle.png") no-repeat center center fixed;
-background-size: cover;
+	background-size: cover;
 	-ms-border-image-source: url("img/buttonIdle.png");
 	 -o-border-image-source: url("img/buttonIdle.png");
 		border-image-source: url("img/buttonIdle.png");
@@ -574,9 +576,8 @@ button:hover {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
-	zoom: 1;
 	background: url("img/buttonHover.png") no-repeat center center fixed;
-background-size: cover;
+	background-size: cover;
 	-ms-border-image-source: url("img/buttonHover.png");
 	 -o-border-image-source: url("img/buttonHover.png");
 		border-image-source: url("img/buttonHover.png");
