@@ -32,9 +32,9 @@ html, body {overflow-x: hidden;}
 	-webkit-transition-timing-function: ease;
 		 -o-transition-timing-function: ease;
 			transition-timing-function: ease;
- 	-webkit-transform-origin: 50% 50%;
- 		-ms-transform-origin: 50% 50%;
- 			transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
 }
 
 .right2{
@@ -45,9 +45,9 @@ html, body {overflow-x: hidden;}
 	-webkit-transition-timing-function: ease;
 		 -o-transition-timing-function: ease;
 			transition-timing-function: ease;
- 	-webkit-transform-origin: 50% 50%;
- 		-ms-transform-origin: 50% 50%;
- 			transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
 }
 
 @-webkit-keyframes animationRight {
@@ -119,12 +119,12 @@ html, body {overflow-x: hidden;}
 @-webkit-keyframes slideDown {
 	0%   {
 		-webkit-transform: translateY(0%);
-		        transform: translateY(0%);
+				transform: translateY(0%);
 		height: 4em;
 	}
 	100% {
 		-webkit-transform: translateY(0%);
-		        transform: translateY(0%);
+				transform: translateY(0%);
 		height: 14.4em
 	}
 }
@@ -132,12 +132,12 @@ html, body {overflow-x: hidden;}
 @keyframes slideDown {
 	0%   {
 		-webkit-transform: translateY(0%);
-		        transform: translateY(0%);
+				transform: translateY(0%);
 		height: 4em;
 	}
 	100% {
 		-webkit-transform: translateY(0%);
-		        transform: translateY(0%);
+				transform: translateY(0%);
 		height: 14.4em
 	}
 }
@@ -167,7 +167,7 @@ html, body {overflow-x: hidden;}
 		transition: 0.3s;
 		border-radius: 1em;
 		-webkit-box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
-		        box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
+				box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
 	}
 	
 	.change .bar1 {
@@ -175,9 +175,9 @@ html, body {overflow-x: hidden;}
 		background-color: #8cb5f7;
 		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
 		-ms-transform: rotate(-45deg) translate(-6px, 4px);
-		    transform: rotate(-45deg) translate(-6px, 4px);
+			transform: rotate(-45deg) translate(-6px, 4px);
 		-webkit-box-shadow: 0 0 0 0 #375f98;
-		        box-shadow: 0 0 0 0 #375f98;
+				box-shadow: 0 0 0 0 #375f98;
 	}
 
 	.change .bar2 {opacity: 0; background-color: #8cb5f7; width: 1.5em;}
@@ -185,11 +185,11 @@ html, body {overflow-x: hidden;}
 	.change .bar3 {
 		-webkit-transform: rotate(45deg) translate(-8px, -8px);
 		-ms-transform: rotate(45deg) translate(-6px, -4px);
-		    transform: rotate(45deg) translate(-6px, -4px);
+			transform: rotate(45deg) translate(-6px, -4px);
 		background-color: #8cb5f7;
 		width: 1.5em;
 		-webkit-box-shadow: 0 0 0 0 #375f98;
-		        box-shadow: 0 0 0 0 #375f98;
+				box-shadow: 0 0 0 0 #375f98;
 	}
 /* --- */
 
@@ -198,9 +198,9 @@ html, body {overflow-x: hidden;}
 	.gridBody {
 		min-width: 100% !important;
 		-ms-grid-columns: auto auto !important;
-		    grid-template-columns: auto auto !important;
+			grid-template-columns: auto auto !important;
 		-ms-grid-rows: 100% !important;
-		    grid-template-rows: 100% !important;
+			grid-template-rows: 100% !important;
 	}
 
 	.side {
@@ -217,7 +217,7 @@ html, body {overflow-x: hidden;}
 		position: relative; 
 		overflow: hidden;
 		-webkit-animation: 0.3s slideDown ease;
-		        animation: 0.3s slideDown ease;
+				animation: 0.3s slideDown ease;
 	}
 
 	.headerBackground .burgerButton {
@@ -259,6 +259,18 @@ html, body {overflow-x: hidden;}
 /* --- */
 
 /* Aurora Panel */
+.bodyBG {
+	position: relative;
+	z-index: -100;
+	margin: 5em 0 0 0;
+	padding: 0 0 0 0;
+	width: 100%;
+	background: transparent;
+	height: 12.5em; 
+	width: 100%;
+	text-align: center;
+}
+ 
 .aurora {
 	width: 100%;
 	vertical-align: middle; 
@@ -291,11 +303,10 @@ html, body {overflow-x: hidden;}
 
 .headerBackground {
 	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 															   background: #4d88d5;
 	background: -webkit-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
-		background: -webkit-gradient(linear, left top, right top, from(#4d88d5),color-stop(51%, #6fb0f3),to(#4d88d5));
-		background: -o-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
+		 background: -o-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 	position: fixed;
 	padding: 0;
@@ -373,7 +384,7 @@ html, body {overflow-x: hidden;}
 	min-height: 100%;
 	text-decoration:  none;
 	-webkit-animation: fading 0.3s ease;
-	        animation: fading 0.3s ease;
+			animation: fading 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
@@ -391,7 +402,7 @@ background-size: cover;
 
 .menuBar button:hover, a:hover {
 	-webkit-animation: fading 0.3s ease;
-	        animation: fading 0.3s ease;
+			animation: fading 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
@@ -416,7 +427,7 @@ background-size: cover;
 
 .menuBar button:active, a:hover {
 	-webkit-animation: fading 0.3s ease;
-	        animation: fading 0.3s ease;
+			animation: fading 0.3s ease;
 	background: url("img/menuBarButton_pressed.png") no-repeat center center fixed;
 background-size: cover;
 	-ms-border-image-source: url("img/menuBarButton_pressed.png");
@@ -447,18 +458,6 @@ body {
 		background-attachment: fixed;
 }
 
-.bodyBG {
-	position: relative;
-	z-index: -100;
-	margin: 5em 0 0 0;
-	padding: 0 0 0 0;
-	width: 100%;
-	background: transparent;
-	height: 12.5em; 
-	width: 100%;
-	text-align: center;
-}
- 
 .bodyContianer {
 	position: fixed;
 	width: 100%;
@@ -484,15 +483,15 @@ body {
 		display: grid;
 	display: -ms-grid;
 	vertical-align: top;
-	 	grid-gap: 0.625em;
- 	grid-template-columns: 80% 15%;
- 		 -ms-grid-columns: 80% 15%;
- 	grid-template-rows: 100% 100%;
- 		 -ms-grid-rows: 100% 100%;
+		grid-gap: 0.625em;
+	grid-template-columns: 80% 15%;
+		 -ms-grid-columns: 80% 15%;
+	grid-template-rows: 100% 100%;
+		 -ms-grid-rows: 100% 100%;
 	padding: 0;
 	width: 70%;
 	-ms-flex-line-pack: center;
-	    align-content: center;
+		align-content: center;
 	margin: 0 auto;
 	-ms-background-attachment: fixed;
 		background-attachment: fixed;
