@@ -237,9 +237,9 @@ html, body {overflow-x: hidden;}
 
 	.side {
 		-ms-grid-row: 2 !important;
-		grid-row: 2 !important;
+			grid-row: 2 !important;
 		-ms-grid-column: 1 !important;
-		grid-column: 1 !important;
+			grid-column: 1 !important;
 		padding: 2em 2em 5em 2em;
 	}
 }
