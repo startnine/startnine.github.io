@@ -11,6 +11,7 @@
 
 /* Remove X Overflow */ 
 html, body {overflow-x: hidden;}
+
 /* Animation */
 @-webkit-keyframes fading {
 	0%{opacity:0}
@@ -140,13 +141,14 @@ html, body {overflow-x: hidden;}
 				transform: translateY(0%);
 		height: 14.4em
 	}
+
 }
 /* --- */
 
 /* Hamburger */
 .burgerButton {
 	display: inline-block;
-	margin-bottom: -3.25em;
+	margin-bottom: -1.25em;
 	margin-left: 1.5rem;
 	margin-top: 0;
 	border-radius: 1em;
@@ -265,8 +267,6 @@ html, body {overflow-x: hidden;}
 .bodyBG {
 	position: relative;
 	z-index: -100;
-	margin: 5em 0 0 0;
-	padding: 0 0 0 0;
 	width: 100%;
 	background: transparent;
 	height: 12.5em; 
@@ -275,6 +275,7 @@ html, body {overflow-x: hidden;}
 }
  
 .aurora {
+	position: absolute;
 	width: 100%;
 	vertical-align: middle; 
 	height: 256px;
@@ -283,6 +284,7 @@ html, body {overflow-x: hidden;}
 	   -moz-user-select: none;
 		-ms-user-select: none;
 			user-select: none;
+	margin-left: -50vw;
 }
 
 .logo { 
@@ -304,6 +306,8 @@ html, body {overflow-x: hidden;}
 /* Menu */
 .mobileLogo {display: none;}
 
+.headerSpace {height: 6em;}
+
 .headerBackground {
 	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -313,8 +317,7 @@ html, body {overflow-x: hidden;}
 		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 	position: fixed;
 	padding: 0;
-	height: 8rem;
-	margin: -7em 0 0 0;
+	height: 6em;
 	vertical-align: top;
 	-ms-border-image-slice: 0 10 0 10 fill;
 	 -o-border-image-slice: 0 10 0 10 fill;
@@ -339,30 +342,27 @@ html, body {overflow-x: hidden;}
 }
  
 .title {
-	height: 4em;
-	line-height: 1.5em;
+	height: 1em;
 	font-size: 19px;
+	margin-top: -0.5em;
 	color: white;
 	vertical-align: center;
 	text-align: center;
-	position: relative;
 }
+
 .headerBackground .burgerButton {opacity: 0; pointer-events: none; cursor: default;}
 
 .menuBar {
 															   background: #3669af;
 	background: -webkit-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
-		background: -webkit-gradient(linear, left top, right top, color-stop(1%, #3669af),color-stop(50%, #5f9cda),to(#3669af));
-		background: -o-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
+		 background: -o-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
 		background: linear-gradient(to right, #3669af 1%,#5f9cda 50%,#3669af 100%);
 	text-align: center;
-	position: fixed;
 	vertical-align: bottom;
 	display: inline-block;
 	-ms-flex-item-align: end;
 		align-self: flex-end;
 	min-width: 100%;
-	margin: -3.4rem 0 0 0;
 	min-height: 3rem;
 	overflow: auto;
 	z-index: 100;
@@ -393,9 +393,8 @@ html, body {overflow-x: hidden;}
 			transition: all 0.3s ease;
 	padding: 1.1em 5% 1.1em 5%;
 	text-align: center;
-	background: transparent;
 	background: url("img/menuBarButton.png") no-repeat center center fixed;
-background-size: cover;
+	background-size: cover;
 	-ms-border-image-source: url("img/menuBarButton.png");
 	 -o-border-image-source: url("img/menuBarButton.png");
 		border-image-source: url("img/menuBarButton.png");
@@ -422,7 +421,7 @@ background-size: cover;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
 	background:url("img/menuBarButton_hover.png") no-repeat center center fixed;
-background-size: cover;
+	background-size: cover;
 	-ms-border-image-source: url("img/menuBarButton_hover.png");
 	 -o-border-image-source: url("img/menuBarButton_hover.png");
 		border-image-source: url("img/menuBarButton_hover.png");
@@ -432,7 +431,7 @@ background-size: cover;
 	-webkit-animation: fading 0.3s ease;
 			animation: fading 0.3s ease;
 	background: url("img/menuBarButton_pressed.png") no-repeat center center fixed;
-background-size: cover;
+	background-size: cover;
 	-ms-border-image-source: url("img/menuBarButton_pressed.png");
 	 -o-border-image-source: url("img/menuBarButton_pressed.png");
 		border-image-source: url("img/menuBarButton_pressed.png");
@@ -451,7 +450,6 @@ body {
 	background: #C8D4E7; /* fallback */
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
-			background: -webkit-gradient(linear, left top, left bottom, from(white), to(#C8D4E7));
 			background: linear-gradient(white, #C8D4E7);
 	-ms-background-position: top center !important;
 		background-position: top center !important;
@@ -475,7 +473,6 @@ body {
 	background-image: url('img/gradient.svg');
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
-			background: -webkit-gradient(linear, left top, left bottom, from(white), to(#C8D4E7));
 			background: linear-gradient(white, #C8D4E7);
 }
 /* --- */
@@ -494,7 +491,7 @@ body {
 	padding: 0;
 	-ms-flex-line-pack: center;
 		align-content: center;
-	margin: -10em 15vw auto 15vw;
+	margin: -15em 15vw auto 15vw;
 	-ms-background-attachment: fixed;
 		background-attachment: fixed;
 	min-height: 100%;
