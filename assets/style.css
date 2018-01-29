@@ -30,9 +30,6 @@ html, body {overflow-x: hidden;}
 			animation: animationRight linear 20s alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
-	-webkit-transform-origin: 50% 50%;
-		-ms-transform-origin: 50% 50%;
-			transform-origin: 50% 50%;
 }
 
 .right2{
@@ -40,9 +37,6 @@ html, body {overflow-x: hidden;}
 			animation: animationRight2 linear 10s alternate !important;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
-	-webkit-transform-origin: 50% 50%;
-		-ms-transform-origin: 50% 50%;
-			transform-origin: 50% 50%;
 }
 
 @-webkit-keyframes animationRight {
@@ -70,9 +64,6 @@ html, body {overflow-x: hidden;}
 			animation: animationLeft linear 10s alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
-	-webkit-transform-origin: 50% 50%;
-		-ms-transform-origin: 50% 50%;
-			transform-origin: 50% 50%;
 }
 
 .left2 {
@@ -80,9 +71,6 @@ html, body {overflow-x: hidden;}
 			animation: animationLeft2 linear 25s alternate !important;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
-	-webkit-transform-origin: 50% 50%;
-		-ms-transform-origin: 50% 50%;
-			transform-origin: 50% 50%;
 }
 
 @-webkit-keyframes animationLeft {
