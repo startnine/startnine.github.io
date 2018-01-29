@@ -287,7 +287,8 @@ html, body {overflow-x: hidden;}
 .headerBackground {
 	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-															   background: #4d88d5;
+															 background: #4d88d5;
+	background-image: url('img/headerBackground.svg');
 	background: -webkit-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 		 background: -o-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
@@ -330,6 +331,7 @@ html, body {overflow-x: hidden;}
 
 .menuBar {
 															   background: #3669af;
+	background-image: url('img/menuBar.svg');
 	background: -webkit-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
 		 background: -o-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
 		background: linear-gradient(to right, #3669af 1%,#5f9cda 50%,#3669af 100%);
@@ -342,6 +344,7 @@ html, body {overflow-x: hidden;}
 	min-height: 3rem;
 	overflow: auto;
 	z-index: 100;
+	border-radius: 1rem 1rem 0 0;
 	-ms-border-image-slice: 20 10 0 10 fill;
 	 -o-border-image-slice: 20 10 0 10 fill;
 		border-image-slice: 20 10 0 10 fill;
@@ -420,13 +423,11 @@ html, body {overflow-x: hidden;}
 /* Body */
 
 body {
-	min-width: 100%;
 	margin: 0;
-	font-size: 16px;
 	padding: 0;
 	background-color: #C8D4E7; /* fallback */
 	background: #C8D4E7; /* fallback */
-	background-image: url('img/gradient.svg');
+	background-image: url('img/background.svg');
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
 			background: linear-gradient(white, #C8D4E7);
@@ -436,6 +437,8 @@ body {
 		background-repeat: no-repeat !important;
 	-ms-background-attachment: fixed;
 		background-attachment: fixed;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 /* --- */
