@@ -202,6 +202,19 @@ html, body {overflow-x: hidden;}
 		margin-left: -3em;
 	}
 
+	.no-cssgrid .gridBody { 
+		display: grid; 
+	}
+
+	.no-cssgrid .tabContent { 
+		display: block;
+		width: 80%;
+	}
+
+	.no-cssgrid .side { 
+		display: block;
+		width: 15%
+	}
 }
 
 @media all and (max-width: 812px) {
@@ -467,6 +480,21 @@ body {
 /* --- */
 
 /* Content */
+.no-cssgrid .gridBody { 
+	display: table; 
+}
+
+.no-cssgrid .tabContent { 
+	display: table-cell;
+	width: 80%;
+}
+
+.no-cssgrid .side { 
+	display: table-cell;
+	width: 15%
+}
+
+
 .gridBody {
 		display: grid;
 	display: -ms-grid;
