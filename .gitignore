@@ -265,5 +265,4 @@ __pycache__/
 *.sublime-workspace
 
 # Assets
-assets/img/original/
 *.db
