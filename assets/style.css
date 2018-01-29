@@ -26,26 +26,20 @@ html, body {overflow-x: hidden;}
 }
 
 .right{
-	-webkit-animation: animationRight linear 10s alternate;
-			animation: animationRight linear 10s alternate;
+	-webkit-animation: animationRight linear 20s alternate;
+			animation: animationRight linear 20s alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
-	-webkit-animation-timing-function: ease;
-		 -o-animation-timing-function: ease;
-			animation-timing-function: ease;
 	-webkit-transform-origin: 50% 50%;
 		-ms-transform-origin: 50% 50%;
 			transform-origin: 50% 50%;
 }
 
 .right2{
-	-webkit-animation: animationRight2 linear 20s alternate !important;
-			animation: animationRight2 linear 20s alternate !important;
+	-webkit-animation: animationRight2 linear 10s alternate !important;
+			animation: animationRight2 linear 10s alternate !important;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
-	-webkit-animation-timing-function: ease;
-		 -o-animation-timing-function: ease;
-			animation-timing-function: ease;
 	-webkit-transform-origin: 50% 50%;
 		-ms-transform-origin: 50% 50%;
 			transform-origin: 50% 50%;
@@ -76,9 +70,6 @@ html, body {overflow-x: hidden;}
 			animation: animationLeft linear 10s alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
-	-webkit-animation-timing-function: ease;
-		 -o-animation-timing-function: ease;
-			animation-timing-function: ease;
 	-webkit-transform-origin: 50% 50%;
 		-ms-transform-origin: 50% 50%;
 			transform-origin: 50% 50%;
@@ -89,9 +80,6 @@ html, body {overflow-x: hidden;}
 			animation: animationLeft2 linear 25s alternate !important;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
-	-webkit-animation-timing-function: ease;
-		 -o-animation-timing-function: ease;
-			animation-timing-function: ease;
 	-webkit-transform-origin: 50% 50%;
 		-ms-transform-origin: 50% 50%;
 			transform-origin: 50% 50%;
