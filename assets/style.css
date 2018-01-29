@@ -374,8 +374,11 @@ html, body {overflow-x: hidden;}
 			transition: all 0.3s ease;
 	padding: 1.1em 5% 1.1em 5%;
 	text-align: center;
-	background: url("img/menuBarButton.png") no-repeat center center fixed;
-	background-size: cover;
+	background: url("img/menuBarButton.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+		    background-size: 100% 100%;
 	-ms-border-image-source: url("img/menuBarButton.png");
 	 -o-border-image-source: url("img/menuBarButton.png");
 		border-image-source: url("img/menuBarButton.png");
@@ -401,8 +404,11 @@ html, body {overflow-x: hidden;}
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	background:url("img/menuBarButton_hover.png") no-repeat center center fixed;
-	background-size: cover;
+	background: url("img/menuBarButton_hover.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+		    background-size: 100% 100%;
 	-ms-border-image-source: url("img/menuBarButton_hover.png");
 	 -o-border-image-source: url("img/menuBarButton_hover.png");
 		border-image-source: url("img/menuBarButton_hover.png");
@@ -411,8 +417,11 @@ html, body {overflow-x: hidden;}
 .menuBar button:active, a:hover {
 	-webkit-animation: fading 0.3s ease;
 			animation: fading 0.3s ease;
-	background: url("img/menuBarButton_pressed.png") no-repeat center center fixed;
-	background-size: cover;
+	background: url("img/menuBarButton_pressed.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+		    background-size: 100% 100%;
 	-ms-border-image-source: url("img/menuBarButton_pressed.png");
 	 -o-border-image-source: url("img/menuBarButton_pressed.png");
 		border-image-source: url("img/menuBarButton_pressed.png");
@@ -544,8 +553,11 @@ button {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
-	background: url("img/buttonIdle.png") no-repeat center center fixed;
-	background-size: cover;
+	background: url("img/buttonIdle.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+		    background-size: 100% 100%;
 	-ms-border-image-source: url("img/buttonIdle.png");
 	 -o-border-image-source: url("img/buttonIdle.png");
 		border-image-source: url("img/buttonIdle.png");
@@ -555,8 +567,11 @@ button:hover {
 	-webkit-transition: all 0.3s ease;
 		 -o-transition: all 0.3s ease;
 			transition: all 0.3s ease;
-	background: url("img/buttonHover.png") no-repeat center center fixed;
-	background-size: cover;
+	background: url("img/buttonHover.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+		    background-size: 100% 100%;
 	-ms-border-image-source: url("img/buttonHover.png");
 	 -o-border-image-source: url("img/buttonHover.png");
 		border-image-source: url("img/buttonHover.png");
@@ -565,10 +580,11 @@ button:hover {
 button:active {
 	-webkit-box-shadow: none;
 			box-shadow: none;
-	background: url("img/buttonPressed.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-		 -o-background-size: cover;
+	background: url("img/buttonPressed.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+		    background-size: 100% 100%;
 	-ms-border-image-source: url("img/buttonPressed.png");
 	 -o-border-image-source: url("img/buttonPressed.png");
 		border-image-source: url("img/buttonPressed.png");
