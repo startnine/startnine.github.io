@@ -1,0 +1,43 @@
+/* DAMMIT IE 6- WHY YOU GOTTA HATE STANDARDS */
+@import url("style.css");
+
+/* disable burger button */
+	.burgerButton:hover .bar1 {background-color: transparent;}
+	.burgerButton:hover .bar2 {background-color: transparent;}
+	.burgerButton:hover .bar3 {background-color: transparent;}
+	.burgerButton .bar1 {background-color: transparent;}
+	.burgerButton .bar2 {background-color: transparent;}
+	.burgerButton .bar3 {background-color: transparent;}
+/*  >:(  */
+
+/* Menu */
+.headerBackground {
+	background-image: url('img/headerBackground.png');
+}
+
+.menuBar {
+	background: url('img/menuBar.png');
+}
+/*  >:(  */
+
+
+/* Body */
+body {
+	background-image: url('img/background.png');
+	-ms-background-repeat: repeat-x !important;
+		background-repeat: repeat-x !important;
+}
+/*  >:(  */
+
+.gridBody {
+	margin-top: -15em;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.side {
+	vertical-align: top;
+	padding-left: 1em;
+}
+
+/*  >:(  */

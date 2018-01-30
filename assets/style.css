@@ -770,9 +770,9 @@ input[type=radio] {
 
 	input[type=radio]:checked + label {
 		background: url("img/radioChecked.png") no-repeat center;
-		-webkit-transition: all 0.75s ease;
-			 -o-transition: all 0.75s ease;
-				transition: all 0.75s ease;
+		-webkit-transition: all 0.125s ease;
+			 -o-transition: all 0.125s ease;
+				transition: all 0.125s ease;
 		-ms-border-image-source: url("img/radioChecked.png");
 		 -o-border-image-source: url("img/radioChecked.png");
 			border-image-source: url("img/radioChecked.png");
