@@ -396,15 +396,15 @@ html, body {overflow-x: hidden;}
 	 -o-border-image-source: url("img/menuBarButton.png");
 		border-image-source: url("img/menuBarButton.png");
 	color: white;
-	transition: all 0.3s ease;
+	transition: all 0.125s ease;
 }
 
 .menuBar button:hover, a:hover {
-	-webkit-animation: fading 0.3s ease;
-			animation: fading 0.3s ease;
-	-webkit-transition: all 0.3s ease;
-		 -o-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+	-webkit-animation: fading 0.125s ease;
+			animation: fading 0.125s ease;
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
 	-ms-border-image-slice: 0 7 7 7 fill;
 	 -o-border-image-slice: 0 7 7 7 fill;
 		border-image-slice: 0 7 7 7 fill;
@@ -428,8 +428,8 @@ html, body {overflow-x: hidden;}
 }
 
 .menuBar button:active, a:hover {
-	-webkit-animation: fading 0.3s ease;
-			animation: fading 0.3s ease;
+	-webkit-animation: fading 0.125s ease;
+			animation: fading 0.125s ease;
 	background: url("img/menuBarButton_pressed.png") no-repeat center;
 	-webkit-background-size: 100% 100%;
 	   -moz-background-size: 100% 100%;
@@ -578,9 +578,9 @@ button {
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-webkit-transition: all 0.3s ease;
-		 -o-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
 	background: url("img/buttonIdle.png") no-repeat center;
 	-webkit-background-size: 100% 100%;
 	   -moz-background-size: 100% 100%;
@@ -592,9 +592,9 @@ button {
 }
 
 button:hover {
-	-webkit-transition: all 0.3s ease;
-		 -o-transition: all 0.3s ease;
-			transition: all 0.3s ease;
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
 	background: url("img/buttonHover.png") no-repeat center;
 	-webkit-background-size: 100% 100%;
 	   -moz-background-size: 100% 100%;
