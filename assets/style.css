@@ -650,42 +650,6 @@ button {
 	}
 /* --- */
 
-/* Dammit Microsoft Edge */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	button {
-		border-image-source: url("img/menuBarButton.png");
-		background: url("img/buttonIdle.png") no-repeat center;
-		-webkit-background-size: 100% 100%;
-		   -moz-background-size: 100% 100%;
-			 -o-background-size: 100% 100%;
-				background-size: 100% 100%;
-	}
-
-	button:hover {
-		background: url("img/buttonHover.png") no-repeat center;
-		-webkit-background-size: 100% 100%;
-		   -moz-background-size: 100% 100%;
-			 -o-background-size: 100% 100%;
-				background-size: 100% 100%;
-	}
-
-	button:active {
-		background: url("img/buttonPressed.png") no-repeat center;
-		-webkit-background-size: 100% 100%;
-		   -moz-background-size: 100% 100%;
-			 -o-background-size: 100% 100%;
-				background-size: 100% 100%;
-	}
-
-	button:disabled {
-		background: url("img/buttonDisabled.png") no-repeat center;
-		-webkit-background-size: 100% 100%;
-		   -moz-background-size: 100% 100%;
-			 -o-background-size: 100% 100%;
-				background-size: 100% 100%;
-	}
-}
-/* >:( 8/
 
 /* Radio and Checkboxes */
 input[type=checkbox] {
