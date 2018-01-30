@@ -203,17 +203,17 @@ html, body {overflow-x: hidden;}
 	}
 
 	.no-cssgrid .gridBody { 
-		display: grid; 
+		display: initial; 
 	}
 
 	.no-cssgrid .tabContent { 
-		display: block;
-		width: 80%;
+		display: initial;
+		width: auto;
 	}
 
 	.no-cssgrid .side { 
 		display: block;
-		width: 15%
+		width: auto;
 	}
 }
 
@@ -466,7 +466,7 @@ body {
 /* --- */
 
 /* Cursors (why not lol) */
-.cursor  + .def			{cursor:url("cur/def.cur"), 			initial; }
+.cursor  + .def			{cursor:url("cur/def.cur"), 			   auto; }
 .cursor  + .ew-resize	{cursor:url("cur/ew-resize.cur"), 	  ew-resize; }
 .cursor  + .help		{cursor:url("cur/help.cur"), 			   help; }
 .cursor  + .nesw-resize {cursor:url("cur/nesw-resize.cur"), nesw-resize; }
