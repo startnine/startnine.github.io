@@ -1,9 +1,9 @@
 /* Font face */
 @font-face {
 	font-family: Selawik;
-	src: url("font/selawk.woff") format("embedded-opentype"),
+	src: url("font/selawk.woff") format("woff"),
 		 url("font/selawk.ttf") format("truetype"),
-		 url("font/selawk.eot") format("woff");
+		 url("font/selawk.eot") format("embedded-opentype");
 }
  
 * {font-family: "Selawik", "Segoe UI";}
@@ -580,6 +580,11 @@ button {
 	margin: 0;
 	background: transparent;
 	border: none;
+	background: url("img/buttonIdle.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
 	-ms-border-image-slice: 7 7 7 7 fill;
 	 -o-border-image-slice: 7 7 7 7 fill;
 		border-image-slice: 7 7 7 7 fill;
@@ -595,11 +600,6 @@ button {
 	-webkit-transition: all 0.75s ease;
 		 -o-transition: all 0.75s ease;
 			transition: all 0.75s ease;
-	background: url("img/buttonIdle.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
 	-ms-border-image-source: url("img/buttonIdle.png");
 	 -o-border-image-source: url("img/buttonIdle.png");
 		border-image-source: url("img/buttonIdle.png");
@@ -649,6 +649,43 @@ button {
 		opacity: 1;
 	}
 /* --- */
+
+/* Dammit Microsoft Edge */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	button {
+		border-image-source: url("img/menuBarButton.png");
+		background: url("img/buttonIdle.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+	}
+
+	button:hover {
+		background: url("img/buttonHover.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+	}
+
+	button:active {
+		background: url("img/buttonPressed.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+	}
+
+	button:disabled {
+		background: url("img/buttonDisabled.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+	}
+}
+/* >:( 8/
 
 /* Radio and Checkboxes */
 input[type=checkbox] {
