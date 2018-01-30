@@ -242,7 +242,7 @@ html, body {overflow-x: hidden;}
 /* Modifiers */
 .disabled {
 	opacity: 0.6;
-	cursor: not-allowed;
+	pointer-events: none;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 		-ms-user-select: none;
@@ -375,70 +375,84 @@ html, body {overflow-x: hidden;}
 		border-image-source: url("img/menuBar.png");
 }
 
-.menuBar button, a {
-	-webkit-box-shadow: none;
-			box-shadow: none;
-	min-height: 100%;
-	text-decoration:  none;
-	-webkit-animation: fading 0.3s ease;
-			animation: fading 0.3s ease;
-	-webkit-transition: all 0.3s ease;
-		 -o-transition: all 0.3s ease;
-			transition: all 0.3s ease;
-	padding: 1.1em 5% 1.1em 5%;
-	text-align: center;
-	background: url("img/menuBarButton.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-		    background-size: 100% 100%;
-	-ms-border-image-source: url("img/menuBarButton.png");
-	 -o-border-image-source: url("img/menuBarButton.png");
-		border-image-source: url("img/menuBarButton.png");
-	color: white;
-	transition: all 0.125s ease;
-}
+	.menuBar button, a {
+		-webkit-box-shadow: none;
+				box-shadow: none;
+		min-height: 100%;
+		text-decoration:  none;
+		-webkit-animation: fading 0.3s ease;
+				animation: fading 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+			 -o-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+		padding: 1.1em 5% 1.1em 5%;
+		text-align: center;
+		background: url("img/menuBarButton.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+		-ms-border-image-source: url("img/menuBarButton.png");
+		 -o-border-image-source: url("img/menuBarButton.png");
+			border-image-source: url("img/menuBarButton.png");
+		color: white;
+		transition: all 0.125s ease;
+	}
 
-.menuBar button:hover, a:hover {
-	-webkit-animation: fading 0.125s ease;
-			animation: fading 0.125s ease;
-	-webkit-transition: all 0.125s ease;
-		 -o-transition: all 0.125s ease;
-			transition: all 0.125s ease;
-	-ms-border-image-slice: 0 7 7 7 fill;
-	 -o-border-image-slice: 0 7 7 7 fill;
-		border-image-slice: 0 7 7 7 fill;
-	-ms-border-image-width: 0 7px 7px 7px;
-	 -o-border-image-width: 0 7px 7px 7px;
-		border-image-width: 0 7px 7px 7px;
-	-ms-border-image-outset: 0 0 0 0;
-	 -o-border-image-outset: 0 0 0 0;
-		border-image-outset: 0 0 0 0;
-	-ms-border-image-repeat: stretch stretch;
-	 -o-border-image-repeat: stretch stretch;
-		border-image-repeat: stretch stretch;
-	background: url("img/menuBarButton_hover.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-		    background-size: 100% 100%;
-	-ms-border-image-source: url("img/menuBarButton_hover.png");
-	 -o-border-image-source: url("img/menuBarButton_hover.png");
-		border-image-source: url("img/menuBarButton_hover.png");
-}
+	.menuBar button:hover, a:hover {
+		-webkit-animation: fading 0.125s ease;
+				animation: fading 0.125s ease;
+		-webkit-transition: all 0.125s ease;
+			 -o-transition: all 0.125s ease;
+				transition: all 0.125s ease;
+		-ms-border-image-slice: 0 7 7 7 fill;
+		 -o-border-image-slice: 0 7 7 7 fill;
+			border-image-slice: 0 7 7 7 fill;
+		-ms-border-image-width: 0 7px 7px 7px;
+		 -o-border-image-width: 0 7px 7px 7px;
+			border-image-width: 0 7px 7px 7px;
+		-ms-border-image-outset: 0 0 0 0;
+		 -o-border-image-outset: 0 0 0 0;
+			border-image-outset: 0 0 0 0;
+		-ms-border-image-repeat: stretch stretch;
+		 -o-border-image-repeat: stretch stretch;
+			border-image-repeat: stretch stretch;
+		background: url("img/menuBarButton_hover.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+		-ms-border-image-source: url("img/menuBarButton_hover.png");
+		 -o-border-image-source: url("img/menuBarButton_hover.png");
+			border-image-source: url("img/menuBarButton_hover.png");
+	}
 
-.menuBar button:active, a:hover {
-	-webkit-animation: fading 0.125s ease;
-			animation: fading 0.125s ease;
-	background: url("img/menuBarButton_pressed.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-		    background-size: 100% 100%;
-	-ms-border-image-source: url("img/menuBarButton_pressed.png");
-	 -o-border-image-source: url("img/menuBarButton_pressed.png");
-		border-image-source: url("img/menuBarButton_pressed.png");
-}
+	.menuBar button:active, a:hover {
+		-webkit-animation: fading 0.125s ease;
+				animation: fading 0.125s ease;
+		background: url("img/menuBarButton_pressed.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+		-ms-border-image-source: url("img/menuBarButton_pressed.png");
+		 -o-border-image-source: url("img/menuBarButton_pressed.png");
+			border-image-source: url("img/menuBarButton_pressed.png");
+	}
+
+	.menuBar button.disabled, a.disabled {
+		box-shadow: none;
+		opacity: 0.6;
+		background: url("img/menuBarButton.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+		-ms-border-image-source: url("img/menuBarButton.png");
+		 -o-border-image-source: url("img/menuBarButton.png");
+			border-image-source: url("img/menuBarButton.png");
+	}
+
 /* --- */
 
 
@@ -578,47 +592,209 @@ button {
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-webkit-transition: all 0.125s ease;
-		 -o-transition: all 0.125s ease;
-			transition: all 0.125s ease;
+	-webkit-transition: all 0.75s ease;
+		 -o-transition: all 0.75s ease;
+			transition: all 0.75s ease;
 	background: url("img/buttonIdle.png") no-repeat center;
 	-webkit-background-size: 100% 100%;
 	   -moz-background-size: 100% 100%;
 		 -o-background-size: 100% 100%;
-		    background-size: 100% 100%;
+			background-size: 100% 100%;
 	-ms-border-image-source: url("img/buttonIdle.png");
 	 -o-border-image-source: url("img/buttonIdle.png");
 		border-image-source: url("img/buttonIdle.png");
 }
 
-button:hover {
-	-webkit-transition: all 0.125s ease;
-		 -o-transition: all 0.125s ease;
-			transition: all 0.125s ease;
-	background: url("img/buttonHover.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-		    background-size: 100% 100%;
-	-ms-border-image-source: url("img/buttonHover.png");
-	 -o-border-image-source: url("img/buttonHover.png");
-		border-image-source: url("img/buttonHover.png");
-}
+	button:hover {
+		-webkit-transition: all 0.125s ease;
+			 -o-transition: all 0.125s ease;
+				transition: all 0.125s ease;
+		background: url("img/buttonHover.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+		-ms-border-image-source: url("img/buttonHover.png");
+		 -o-border-image-source: url("img/buttonHover.png");
+			border-image-source: url("img/buttonHover.png");
+	}
 
-button:active {
-	-webkit-box-shadow: none;
-			box-shadow: none;
-	background: url("img/buttonPressed.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-		    background-size: 100% 100%;
-	-ms-border-image-source: url("img/buttonPressed.png");
-	 -o-border-image-source: url("img/buttonPressed.png");
-		border-image-source: url("img/buttonPressed.png");
-}
+	button:active {
+		-webkit-box-shadow: none;
+				box-shadow: none;
+		background: url("img/buttonPressed.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+		-ms-border-image-source: url("img/buttonPressed.png");
+		 -o-border-image-source: url("img/buttonPressed.png");
+			border-image-source: url("img/buttonPressed.png");
+	}
+
+	button.disabled {
+		-webkit-box-shadow: 0.2em 0.2em 10px rgba(0,0,0,0.5);
+				box-shadow: 0.2em 0.2em 10px rgba(0,0,0,0.5);
+		-webkit-transition: all 0.125s ease;
+			 -o-transition: all 0.125s ease;
+				transition: all 0.125s ease;
+		background: url("img/buttonDisabled.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+		-ms-border-image-source: url("img/buttonDisabled.png");
+		 -o-border-image-source: url("img/buttonDisabled.png");
+			border-image-source: url("img/buttonDisabled.png");	
+		opacity: 1;
+	}
 /* --- */
 
+/* Radio and Checkboxes */
+input[type=checkbox] {
+	display:none;
+}
+
+	input[type=checkbox] + label {
+		background: url("img/checkbox.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+		height: 16px;
+		width: 16px;
+		display: inline-block;
+		padding: 0;
+		-webkit-transition: all 0.75s ease;
+			 -o-transition: all 0.75s ease;
+				transition: all 0.75s ease;
+		-ms-border-image-slice: 0 1 1 1 fill;
+		 -o-border-image-slice: 0 1 1 1 fill;
+			border-image-slice: 0 1 1 1 fill;
+		-ms-border-image-width: 0 1px 1px 1px;
+		 -o-border-image-width: 0 1px 1px 1px;
+			border-image-width: 0 1px 1px 1px;
+		-ms-border-image-outset: 0 0 0 0;
+		 -o-border-image-outset: 0 0 0 0;
+			border-image-outset: 0 0 0 0;
+		-ms-border-image-repeat: stretch stretch;
+		 -o-border-image-repeat: stretch stretch;
+			border-image-repeat: stretch stretch;
+		-ms-border-image-source: url("img/checkbox.png");
+		 -o-border-image-source: url("img/checkbox.png");
+			border-image-source: url("img/checkbox.png");
+	}
+
+	input[type=checkbox]:hover + label {
+		background: url("img/checkboxHover.png") no-repeat center;
+		-webkit-transition: all 0.125s ease;
+			 -o-transition: all 0.125s ease;
+				transition: all 0.125s ease;
+		-ms-border-image-source: url("img/checkboxHover.png");
+		 -o-border-image-source: url("img/checkboxHover.png");
+			border-image-source: url("img/checkboxHover.png");
+	}
+
+	input[type=checkbox]:checked + label {
+		background: url("img/checkboxChecked.png") no-repeat center;
+		-webkit-transition: all 0.75s ease;
+			 -o-transition: all 0.75s ease;
+				transition: all 0.75s ease;
+		-ms-border-image-source: url("img/checkboxChecked.png");
+		 -o-border-image-source: url("img/checkboxChecked.png");
+			border-image-source: url("img/checkboxChecked.png");
+	}
+
+	input[type=checkbox]:hover:checked + label {
+		background: url("img/checkboxCheckedHover.png") no-repeat center;
+		-webkit-transition: all 0.125s ease;
+			 -o-transition: all 0.125s ease;
+				transition: all 0.125s ease;
+		-ms-border-image-source: url("img/checkboxCheckedHover.png");
+		 -o-border-image-source: url("img/checkboxCheckedHover.png");
+			border-image-source: url("img/checkboxCheckedHover.png");
+	}
+/* 
+	Copy paste template for checkbox:
+		<form class="checkbox">
+			<input type="checkbox" name="gender" value="male" id="male"><label for="male"></label> Male<br>
+			<input type="checkbox" name="gender" value="female" id="female"><label for="female"></label> Female<br>
+			<input type="checkbox" name="gender" value="other" id="other"><label for="other"></label> Other	
+		</form>
+*/
+
+input[type=radio] {
+	display:none;
+}
+
+	input[type=radio] + label {
+		background: url("img/checkbox.png") no-repeat center;
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;
+		height: 16px;
+		width: 16px;
+		display: inline-block;
+		padding: 0;
+		-webkit-transition: all 0.75s ease;
+			 -o-transition: all 0.75s ease;
+				transition: all 0.75s ease;
+		-ms-border-image-slice: 0 1 1 1 fill;
+		 -o-border-image-slice: 0 1 1 1 fill;
+			border-image-slice: 0 1 1 1 fill;
+		-ms-border-image-width: 0 1px 1px 1px;
+		 -o-border-image-width: 0 1px 1px 1px;
+			border-image-width: 0 1px 1px 1px;
+		-ms-border-image-outset: 0 0 0 0;
+		 -o-border-image-outset: 0 0 0 0;
+			border-image-outset: 0 0 0 0;
+		-ms-border-image-repeat: stretch stretch;
+		 -o-border-image-repeat: stretch stretch;
+			border-image-repeat: stretch stretch;
+		-ms-border-image-source: url("img/checkbox.png");
+		 -o-border-image-source: url("img/checkbox.png");
+			border-image-source: url("img/checkbox.png");
+	}
+
+	input[type=radio]:hover + label {
+		background: url("img/checkboxHover.png") no-repeat center;
+		-webkit-transition: all 0.125s ease;
+			 -o-transition: all 0.125s ease;
+				transition: all 0.125s ease;
+		-ms-border-image-source: url("img/checkboxHover.png");
+		 -o-border-image-source: url("img/checkboxHover.png");
+			border-image-source: url("img/checkboxHover.png");
+	}
+
+	input[type=radio]:checked + label {
+		background: url("img/radioChecked.png") no-repeat center;
+		-webkit-transition: all 0.75s ease;
+			 -o-transition: all 0.75s ease;
+				transition: all 0.75s ease;
+		-ms-border-image-source: url("img/radioChecked.png");
+		 -o-border-image-source: url("img/radioChecked.png");
+			border-image-source: url("img/radioChecked.png");
+	}
+
+	input[type=radio]:hover:checked + label {
+		background: url("img/radioCheckedHover.png") no-repeat center;
+		-webkit-transition: all 0.125s ease;
+			 -o-transition: all 0.125s ease;
+				transition: all 0.125s ease;
+		-ms-border-image-source: url("img/radioCheckedHover.png");
+		 -o-border-image-source: url("img/radioCheckedHover.png");
+			border-image-source: url("img/radioCheckedHover.png");
+	}
+/* 
+	Copy paste template for radio:
+		<form class="radio">
+			<input type="radio" name="gender" value="male" id="male"><label for="male"></label> Male<br>
+			<input type="radio" name="gender" value="female" id="female"><label for="female"></label> Female<br>
+			<input type="radio" name="gender" value="other" id="other"><label for="other"></label> Other
+		</form>
+*/
+/* --- */
 
 /* Footer */
 footer {
