@@ -168,7 +168,7 @@ html, body {overflow-x: hidden;}
 /* --- */
 
 /* Mobile Ajustments */
-@media screen and (max-width: 1000px) { .gridBody {margin: -15em 5vw auto 5vw !important;} }
+@media screen and (max-width: 1000px) { .gridBody {margin: 0 5vw 0 5vw !important;} }
 
 @media screen and (max-width: 600px) {
 	.headerBackground .responsive {
@@ -215,7 +215,7 @@ html, body {overflow-x: hidden;}
 
 @media all and (max-width: 812px) {
 	.gridBody {
-		margin: -15em 0 auto 0 !important;
+		margin: 0 !important;
 		-ms-grid-columns: auto auto !important;
 			grid-template-columns: auto auto !important;
 		-ms-grid-rows: 100% !important;
@@ -270,13 +270,17 @@ html, body {overflow-x: hidden;}
 		-ms-user-select: none;
 			user-select: none;
 	margin-left: -50vw;
+	z-index: 0;
 }
 
 .logo { 
-	margin: -200px 0 256px 0;
+	margin: 0 0 256px 0;
 	z-index: 1000;
 	min-width: 100%;
 	text-align: center;
+	position: absolute;
+	top: 6em;
+	z-index: 100;
 }
 	.logo .image {
 		width: 80px;
@@ -302,6 +306,7 @@ html, body {overflow-x: hidden;}
 		 background: -o-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 	position: fixed;
+	z-index: 69420;
 	padding: 0;
 	height: 6em;
 	vertical-align: top;
@@ -517,7 +522,7 @@ body {
 	padding: 0;
 	-ms-flex-line-pack: center;
 		align-content: center;
-	margin: -15em 15vw auto 15vw;
+	margin: 0 15vw 0 15vw;
 	-ms-background-attachment: fixed;
 		background-attachment: fixed;
 	min-height: 100%;
