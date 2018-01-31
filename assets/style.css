@@ -120,9 +120,9 @@ html, body {overflow-x: hidden;}
 /* Hamburger */
 .burgerButton {
 	display: inline-block;
-	margin-bottom: -1.25em;
-	margin-left: 1.5rem;
-	margin-top: 0;
+	position: relative;
+	top: 0.6em;
+	left: 1.5rem;
 	border-radius: 1em;
 	cursor: pointer !important;
 }
@@ -168,7 +168,7 @@ html, body {overflow-x: hidden;}
 /* --- */
 
 /* Mobile Ajustments */
-@media screen and (max-width: 1000px) { .gridBody {margin: 0 5vw 0 5vw !important;} }
+@media screen and (max-width: 1000px) { .gridBody {margin: 0!important;} }
 
 @media screen and (max-width: 600px) {
 	.headerBackground .responsive {
@@ -195,7 +195,8 @@ html, body {overflow-x: hidden;}
 	.title:after {
 		content: "Start9";
 		visibility: visible;
-		margin-left: -3em;
+		right: 1.5em;
+		position: relative;
 	}
 
 	.no-cssgrid .gridBody { 
@@ -215,7 +216,6 @@ html, body {overflow-x: hidden;}
 
 @media all and (max-width: 812px) {
 	.gridBody {
-		margin: 0 !important;
 		-ms-grid-columns: auto auto !important;
 			grid-template-columns: auto auto !important;
 		-ms-grid-rows: 100% !important;
@@ -227,7 +227,6 @@ html, body {overflow-x: hidden;}
 			grid-row: 2 !important;
 		-ms-grid-column: 1 !important;
 			grid-column: 1 !important;
-		padding: 2em 2em 5em 2em;
 	}
 }
 
@@ -251,11 +250,9 @@ html, body {overflow-x: hidden;}
 /* Aurora Panel */
 .bodyBG {
 	position: relative;
-	z-index: -100;
+	z-index: 0;
 	width: 100%;
-	background: transparent;
-	height: 12.5em; 
-	width: 100%;
+	height: 10em;
 	text-align: center;
 }
  
@@ -263,18 +260,17 @@ html, body {overflow-x: hidden;}
 	position: absolute;
 	width: 100%;
 	vertical-align: middle; 
-	height: 256px;
+	height: 15em;
 	overflow-x: hidden;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 		-ms-user-select: none;
 			user-select: none;
-	margin-left: -50vw;
+	right: 1rem;
 	z-index: 0;
 }
 
 .logo { 
-	margin: 0 0 256px 0;
 	z-index: 1000;
 	min-width: 100%;
 	text-align: center;
@@ -298,13 +294,14 @@ html, body {overflow-x: hidden;}
 .headerSpace {height: 6em;}
 
 .headerBackground {
-	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 															 background: #4d88d5;
+	background-image: url('img/headerBackground.png');
 	background-image: url('img/headerBackground.svg');
 	background: -webkit-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 		 background: -o-linear-gradient(left, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
 		background: linear-gradient(to right, #4d88d5 0%,#6fb0f3 51%,#4d88d5 100%);
+	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	position: fixed;
 	z-index: 69420;
 	padding: 0;
@@ -333,18 +330,20 @@ html, body {overflow-x: hidden;}
 }
  
 .title {
+	position: relative;
+	bottom: 2em;
 	height: 1em;
 	font-size: 19px;
-	margin-top: -0.5em;
 	color: white;
 	vertical-align: center;
 	text-align: center;
 }
 
-.headerBackground .burgerButton {opacity: 0; pointer-events: none; cursor: default;}
+.headerBackground .burgerButton {opacity: 0; pointer-events: none;}
 
 .menuBar {
-															   background: #3669af;
+	background: #3669af;
+	background: url('img/menuBar.png');
 	background-image: url('img/menuBar.svg');
 	background: -webkit-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
 		 background: -o-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
@@ -352,6 +351,8 @@ html, body {overflow-x: hidden;}
 	text-align: center;
 	vertical-align: bottom;
 	display: inline-block;
+	position: relative;
+	bottom: 2.4em;
 	-ms-flex-item-align: end;
 		align-self: flex-end;
 	min-width: 100%;
@@ -386,7 +387,7 @@ html, body {overflow-x: hidden;}
 		-webkit-transition: all 0.3s ease;
 			 -o-transition: all 0.3s ease;
 				transition: all 0.3s ease;
-		padding: 1.1em 5% 1.1em 5%;
+		padding: 1.1em 5%;
 		text-align: center;
 		background: url("img/menuBarButton.png") no-repeat center;
 		-webkit-background-size: 100% 100%;
@@ -460,6 +461,9 @@ html, body {overflow-x: hidden;}
 /* Body */
 
 body {
+	background-image: url('img/background.png');
+	-ms-background-repeat: repeat-x;
+		background-repeat: repeat-x;
 	margin: 0;
 	padding: 0;
 	background-color: #C8D4E7; /* fallback */
@@ -511,6 +515,7 @@ body {
 
 
 .gridBody {
+	margin: 0 10%;
 		display: grid;
 	display: -ms-grid;
 	vertical-align: top;
@@ -522,7 +527,6 @@ body {
 	padding: 0;
 	-ms-flex-line-pack: center;
 		align-content: center;
-	margin: 0 15vw 0 15vw;
 	-ms-background-attachment: fixed;
 		background-attachment: fixed;
 	min-height: 100%;
@@ -545,7 +549,7 @@ body {
 }
  
 .sideObject {
-	padding: 0.5em 0 0.5em 0;
+	padding: 0.5em 0;
 	vertical-align: top;
 	margin-bottom: 2em;
 }
@@ -559,7 +563,6 @@ body {
 	-webkit-animation: fading .3s; 
 			animation: fading .3s;
 	padding: 0 0.625em;
-	margin-top: -1.5em;
 	vertical-align: top;
 	-ms-grid-row: 1;
 		grid-row: 1;
