@@ -1,12 +1,8 @@
 /* Font face */
-@font-face {
-	font-family: Selawik;
-	src: url("font/selawk.woff") format("woff"),
-		 url("font/selawk.ttf") format("truetype"),
-		 url("font/selawk.eot") format("embedded-opentype");
-}
- 
+@import url("font/font.css");
 * {font-family: "Selawik", "Segoe UI";}
+
+b { font-weight: 600; }
 /* --- */
 
 /* Remove X Overflow */ 
@@ -172,7 +168,7 @@ html, body {overflow-x: hidden;}
 /* --- */
 
 /* Mobile Ajustments */
-@media screen and (max-width: 1000px) { .gridBody {margin: -10em 5vw auto 5vw !important;} }
+@media screen and (max-width: 1000px) { .gridBody {margin: -15em 5vw auto 5vw !important;} }
 
 @media screen and (max-width: 600px) {
 	.headerBackground .responsive {
@@ -219,7 +215,7 @@ html, body {overflow-x: hidden;}
 
 @media all and (max-width: 812px) {
 	.gridBody {
-		margin: -10em 0 auto 0 !important;
+		margin: -15em 0 auto 0 !important;
 		-ms-grid-columns: auto auto !important;
 			grid-template-columns: auto auto !important;
 		-ms-grid-rows: 100% !important;
