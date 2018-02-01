@@ -43,6 +43,7 @@
 	src: url("font/selawkb.woff2") format("woff2"),
 		 url("font/selawkb.eot") format("embedded-opentype");
 }
+
 * {font-family: "Selawik", "Segoe UI";}
 /* --- */
 
@@ -305,9 +306,9 @@ html, body {overflow-x: hidden;}
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-ms-border-image-source: url("img/headerBackground.png");
-	 -o-border-image-source: url("img/headerBackground.png");
-		border-image-source: url("img/headerBackground.png");
+	-ms-border-image-source: url("img/headerBackground.jpg");
+	 -o-border-image-source: url("img/headerBackground.jpg");
+		border-image-source: url("img/headerBackground.jpg");
 	width: 100%;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
@@ -355,9 +356,9 @@ html, body {overflow-x: hidden;}
 	-ms-border-image-repeat: stretch stretch;
 	 -o-border-image-repeat: stretch stretch;
 		border-image-repeat: stretch stretch;
-	-ms-border-image-source: url("img/menuBar.png");
-	 -o-border-image-source: url("img/menuBar.png");
-		border-image-source: url("img/menuBar.png");
+	-ms-border-image-source: url("img/menuBar.jpg");
+	 -o-border-image-source: url("img/menuBar.jpg");
+		border-image-source: url("img/menuBar.jpg");
 }
 
 	.menuBar button, a {

@@ -10,16 +10,16 @@
 	.burgerButton .bar3 {background-color: transparent;}
 /*  >:(  */
 
-body { 	background-image: url('img/background.png'); }
+body { 	background-image: url('img/background.jpg'); }
 
 .headerBackground {	
-	background-image: url('img/headerBackground_exploder.png');
+	background-image: url('img/headerBackground_exploder.jpg');
 	background-size: 100% 100%;
 	background-position: center center;
 }
 
 .menuBar {	
-	background-image: url('img/menuBar.png');
+	background-image: url('img/menuBar.jpg');
 	background-size: 100% 100%;
 	background-position: center center;
 }
