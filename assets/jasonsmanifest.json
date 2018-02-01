@@ -1,0 +1,15 @@
+{
+	"short_name": "Start9",
+	"name": "Start9",
+	"theme_color": "#4d88d5",
+	"background_color": "#6fb0f3",
+	"display": "standalone",
+	"icons": [
+		{
+		"src": "assets/img/icon.png",
+		"type": "image/png",
+		"sizes": "228x228"
+		}
+	],
+	"start_url": "index.html?launcher=true"
+}

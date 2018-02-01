@@ -1,11 +1,11 @@
 /* Font face */
 @import url("font/font.css");
 * {font-family: "Selawik", "Segoe UI";}
-
 /* --- */
 
 /* Remove X Overflow */ 
 html, body {overflow-x: hidden;}
+/* --- */
 
 /* Animation */
 @-webkit-keyframes fading {
