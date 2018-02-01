@@ -1,58 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html itemscope lang="en">
 	<head>
-		<title>404 - Start9</title>
-		<script src="https://startnine.github.io/assets/main.js"></script>
-		<link rel="stylesheet" href="https://startnine.github.io/assets/style.css" type="text/css"/>
-		<meta name="viewport" content="width=device-width"/>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="description" content="A full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content.">
+		<style>@media screen and (max-width: 600px) { .menuBar button:not(:nth-child(1)) {display: none;}}</style>
+		<noscript><style>.tabContent {display: block !important;} #faq {display: none !important;}</style></noscript>
 		<link rel="shortcut icon" href="https://avatars1.githubusercontent.com/u/34009271">
-		<meta name="keywords" content="Start9,StartNine,shell,shell replacement, start nine, modular shell, extensible">
+		<meta itemprop="image" content="https://avatars1.githubusercontent.com/u/34009271">
+		<meta property="og:image" content="https://avatars1.githubusercontent.com/u/34009271"/>
+		<title>Start9</title>
+		<meta name="description" content="An extensible, customizable, modular shell supplement for Windows.">
+		<meta itemprop="description" content="An extensible, customizable, modular shell supplement for Windows.">
+		<meta property="og:description" content="An extensible, customizable, modular shell supplement for Windows."/>
+		<script async src="assets/main-min.js"></script>
+		<link rel="stylesheet" href="assets/style.css" type="text/css"/>
+		<meta name="theme-color" content="#4d88d5">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="keywords" content="Start9, StartNine, shell, shell replacement, start nine, startnine">
+		<meta itemprop="name" content="Start9">
+		<meta property="og:title" content="Start9"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:url" content="https://startnine.github.io"/>
+		<!--[if lt IE 9]> <link rel="stylesheet" href="assets/legacy.css" type="text/css"/> <![endif]-->
 	</head>
+		<!-- 
+			Would you like to contribute
+			to the Start9 project? Please
+			checkout our GitHub, linked at
+			line 76 and contribute some code!
+			All contributions will help in
+			some way shape or form.
+		-->
 	<body>
 		<header>
 			<div class="headerBackground">
-				<div class="burgerButton" onclick="burgerButton(this);menuBarNav()""><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
-				<p class="title">Error 404</p>
+				<div class="burgerButton" onclick="burgerButton(this);menuBarNav()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
+				<p class="title">Home</p>
 				<nav class="menuBar" id="menuBar">
-					<button onclick="openNewLink('http://www.start9.menu');">Home</button>
+					<button class="tabLink" onclick="openTab(event, 'home')" id="defaultTab">Home</button>
 					<button onclick="openNewTab('https://github.com/StartNine/Start9/releases');">Downloads</button>
-					<button class="disabled">News</button>
+					<button class="disabled" onclick="openTab(event, 'news')">News</button>
 					<button class="disabled">Community</button>
-					<button class="disabled">FAQ</button>
+					<button class="disabled" onclick="openTab(event, 'faq')">FAQ</button>
 				</nav>
 			</div>
-			<div class="bodyBG">
-			</div>
+			<div class="headerSpace"></div>
 		</header>
 
-		<div class="gridBody" style="margin-top: -10em">
-			<section id="home" class="tabContent show">
-					<h2>Error 404</h2>
-					<p>It seems like you've visited a non-existent or deleted part of our website. Please use the navigation bar above to go somewhere else.</p>
+		<div class="gridBody">
+			<section id="home" class="tabContent">
+					<div><h2>Error 404</h2><p>It seems like you've visited a non-existent or deleted part of our website. Please use the navigation bar above to go somewhere else.</p></div>
 			</section>
-
 			<div class="side">
-				<div class="sideObject">
-					<p class="customMargin">Check out our GitHub!</p>
+				<h2>Interested?</h2>
+				<div class="sideObject" style="margin-top: -1.5em;">
+					<p class="customMargin">Please check out our GitHub here:</p>
 					<button onclick="openNewTab('https://github.com/StartNine/Start9');">Start9 on GitHub</button>
 				</div>
 				<div class="sideObject">
-					<p>Please join our Discord, linked below:</p>
-					<button onclick="openNewLink('https://discordapp.com/invite/6cpvxBS');">Start9 Discord Server</button>
+					<p>Join our discord server, linked below:</p>
+					<button onclick="openNewTab('https://discordapp.com/invite/6cpvxBS');">Start9 Discord Server</button>
 				</div>
 				<noscript>
 					<div class="sideObject">
-						<p>It seems like your Javascript is disabled or is out of date. You don't need to turn it on for this webpage.</p>
+						<p>Please enable JavaScript for the best experience.</p>
 					</div>
 				</noscript>
 			</div>
 		</div>
-		
 		<!--footer>
 			<p>Note: Start9 is not associated with Stardock or Microsoft. Neither are to be held legally responsible for anything that happens due to Start9. Also, if it breaks, you get to keep both pieces. We'll try to help you put them back together, but no promises.</p>
 		</footer-->
-
 	</body>
 </html>
