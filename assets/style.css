@@ -1,5 +1,48 @@
 /* Font face */
-@import url("font/font.css");
+/* Light */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 200;
+	src: url("font/selawkl.woff2") format("woff2"),
+		 url("font/selawkl.eot") format("embedded-opentype");
+}
+
+/* Semilight */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 300;
+	src: url("font/selawksl.woff2") format("woff2"),
+		 url("font/selawksl.eot") format("embedded-opentype");
+}
+
+/* Normal */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 400;
+	src: url("font/selawk.woff2") format("woff2"),
+		 url("font/selawk.eot") format("embedded-opentype");
+}
+
+/* Semibold */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 600;
+	src: url("font/selawksb.woff2") format("woff2"),
+		 url("font/selawksb.eot") format("embedded-opentype");
+}
+
+/* Bold */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 700;
+	src: url("font/selawkb.woff2") format("woff2"),
+		 url("font/selawkb.eot") format("embedded-opentype");
+}
 * {font-family: "Selawik", "Segoe UI";}
 /* --- */
 
