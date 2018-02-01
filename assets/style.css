@@ -233,6 +233,16 @@ html, body {overflow-x: hidden;}
 
 
 /* Modifiers */
+.q { 
+	font-size: 110%;
+	line-height: 1.5em;
+	font-weight: 600;
+}
+.a { 
+	padding-left: 2em; 
+	line-height: 1.5em;
+}
+
 .disabled {
 	opacity: 0.6;
 	pointer-events: none;
@@ -504,6 +514,9 @@ body {
 
 
 .gridBody {
+	position: relative;
+	z-index: 100;
+	bottom: 1em;
 	margin: 0 10%;
 		display: grid;
 	display: -ms-grid;
@@ -536,7 +549,12 @@ body {
 		grid-column: 2;
 	padding-left: 1em;
 }
- 
+
+.side .sideObject {  
+	position: relative;
+	bottom: 1.5em;
+}
+
 .sideObject {
 	padding: 0.5em 0;
 	vertical-align: top;
@@ -546,6 +564,7 @@ body {
 	.sideObject button {padding: .7em;}
 
 	.sideObject p {margin: 5px 0 0 0;}
+
 
 .tabContent {
 	width: 100%;
