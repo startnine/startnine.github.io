@@ -9,3 +9,17 @@
 	.burgerButton .bar2 {background-color: transparent;}
 	.burgerButton .bar3 {background-color: transparent;}
 /*  >:(  */
+
+body { 	background-image: url('img/background.png'); }
+
+.headerBackground {	
+	background-image: url('img/headerBackground_exploder.png');
+	background-size: 100% 100%;
+	background-position: center center;
+}
+
+.menuBar {	
+	background-image: url('img/menuBar.png');
+	background-size: 100% 100%;
+	background-position: center center;
+}
