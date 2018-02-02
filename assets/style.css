@@ -48,7 +48,7 @@
 /* --- */
 
 /* Remove X Overflow */ 
-html, body {overflow-x: hidden;}
+html, body {overflow-x: hidden; min-height: 100%;}
 /* --- */
 
 /* Animation */
@@ -66,7 +66,7 @@ html, body {overflow-x: hidden;}
 
 .right{
 	-webkit-animation: animationRight linear 25 alternate;
-			animation: animationRight linear 25 alternate
+			animation: animationRight linear 25 alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 }
@@ -282,8 +282,7 @@ html, body {overflow-x: hidden;}
 .headerSpace {height: 6em;}
 
 .headerBackground {
-	background: #6fb0f3;
-	background-image: url('img/headerBackground.svg');
+	background: #6fb0f3 url('img/headerBackground.svg');
 	background: -webkit-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
 		 background: -o-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
 		  background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
@@ -314,8 +313,7 @@ html, body {overflow-x: hidden;}
 .headerBackground .burgerButton {opacity: 0; pointer-events: none;}
 
 .menuBar {
-	background: #3669af;
-	background-image: url('img/menuBar.svg');
+	background: #3669af url('img/menuBar.svg');
 	background: -webkit-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
 		 background: -o-linear-gradient(left, #3669af 1%,#5f9cda 50%,#3669af 100%);
 		background: linear-gradient(to right, #3669af 1%,#5f9cda 50%,#3669af 100%);
@@ -430,19 +428,12 @@ html, body {overflow-x: hidden;}
 /* Body */
 
 body {
-	background-color: #C8D4E7;
-	background-image: url('img/background.svg');
+	background: #C8D4E7 url('img/background.svg') repeat-x top center fixed;
 	margin: 0;
 	padding: 0;
 	background: -webkit-linear-gradient(white, #C8D4E7);
 		 background: -o-linear-gradient(white, #C8D4E7);
 			background: linear-gradient(white, #C8D4E7);
-	-ms-background-position: top center;
-		background-position: top center;
-	-ms-background-repeat: repeat-x;
-		background-repeat: repeat-x;
-	-ms-background-attachment: fixed;
-		background-attachment: fixed;
 }
 
 /* --- */
@@ -478,8 +469,6 @@ body {
 	padding: 0;
 	-ms-flex-line-pack: center;
 		align-content: center;
-	-ms-background-attachment: fixed;
-		background-attachment: fixed;
 	min-height: 100%;
 }
 
