@@ -79,23 +79,23 @@ html, body {overflow-x: hidden; min-height: 100%;}
 }
 
 @-webkit-keyframes animationRight {
-  0% {-webkit-transform: translate(0px,0px) scaleX(1.00);transform: translate(0px,0px) scaleX(1.00);}
-  100% {-webkit-transform: translate(200px,0px) scaleX(1.25) ;transform: translate(200px,0px) scaleX(1.25);}
+  0% {-webkit-transform: translate(0rem,0rem) scaleX(1.00);transform: translate(0rem,0rem) scaleX(1.00);}
+  100% {-webkit-transform: translate(12.5rem,0rem) scaleX(1.25) ;transform: translate(12.5rem,0rem) scaleX(1.25);}
 }
 
 @keyframes animationRight {
-  0% {-webkit-transform: translate(0px,0px) scaleX(1.00);transform: translate(0px,0px) scaleX(1.00);}
-  100% {-webkit-transform: translate(200px,0px) scaleX(1.25) ;transform: translate(200px,0px) scaleX(1.25);}
+  0% {-webkit-transform: translate(0rem,0rem) scaleX(1.00);transform: translate(0rem,0rem) scaleX(1.00);}
+  100% {-webkit-transform: translate(12.5rem,0rem) scaleX(1.25) ;transform: translate(12.5rem,0rem) scaleX(1.25);}
 }
 
 @-webkit-keyframes animationRight2 {
-  0% {-webkit-transform: translate(0px,0px) scaleX(1) ;transform: translate(0px,0px) scaleX(1);}
-  100% {-webkit-transform: translate(200px,0px) scaleX(1.15) ;transform: translate(200px,0px) scaleX(1.15);}
+  0% {-webkit-transform: translate(0rem,0rem) scaleX(1) ;transform: translate(0rem,0rem) scaleX(1);}
+  100% {-webkit-transform: translate(12.5rem,0rem) scaleX(1.15) ;transform: translate(12.5rem,0rem) scaleX(1.15);}
 }
 
 @keyframes animationRight2 {
-  0% {-webkit-transform: translate(0px,0px) scaleX(1) ;transform: translate(0px,0px) scaleX(1);}
-  100% {-webkit-transform: translate(200px,0px) scaleX(1.15) ;transform: translate(200px,0px) scaleX(1.15);}
+  0% {-webkit-transform: translate(0rem,0rem) scaleX(1) ;transform: translate(0rem,0rem) scaleX(1);}
+  100% {-webkit-transform: translate(12.5rem,0rem) scaleX(1.15) ;transform: translate(12.5rem,0rem) scaleX(1.15);}
 }
 
 .left {
@@ -113,35 +113,35 @@ html, body {overflow-x: hidden; min-height: 100%;}
 }
 
 @-webkit-keyframes animationLeft {
-	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
-	100% {-webkit-transform: translate(-200px,0px) scaleX(1.25);transform: translate(-200px,0px) scaleX(1.25);}
+	0% {-webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1);}
+	100% {-webkit-transform: translate(-12.5rem,0rem) scaleX(1.25);transform: translate(-12.5rem,0rem) scaleX(1.25);}
 }
 
 @keyframes animationLeft {
-	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
-	100% {-webkit-transform: translate(-200px,0px) scaleX(1.25);transform: translate(-200px,0px) scaleX(1.25);}
+	0% {-webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1);}
+	100% {-webkit-transform: translate(-12.5rem,0rem) scaleX(1.25);transform: translate(-12.5rem,0rem) scaleX(1.25);}
 }
 
 @-webkit-keyframes animationLeft2 {
-	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
-	100% {-webkit-transform: translate(-200px,0px) scaleX(1.8);transform: translate(-200px,0px) scaleX(1.8);}
+	0% {-webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1);}
+	100% {-webkit-transform: translate(-12.5rem,0rem) scaleX(1.8);transform: translate(-12.5rem,0rem) scaleX(1.8);}
 }
 
 @keyframes animationLeft2 {
-	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
-	100% {-webkit-transform: translate(-200px,0px) scaleX(1.8);transform: translate(-200px,0px) scaleX(1.8);}
+	0% {-webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1);}
+	100% {-webkit-transform: translate(-12.5rem,0rem) scaleX(1.8);transform: translate(-12.5rem,0rem) scaleX(1.8);}
 }
 
 @-webkit-keyframes slideDown {
 	0%   {
 		-webkit-transform: translateY(0%);
 				transform: translateY(0%);
-		height: 4em;
+		height: 4rem;
 	}
 	100% {
 		-webkit-transform: translateY(0%);
 				transform: translateY(0%);
-		height: 14.4em
+		height: 16.3rem;
 	}
 }
 
@@ -149,12 +149,12 @@ html, body {overflow-x: hidden; min-height: 100%;}
 	0% {
 		-webkit-transform: translateY(0%);
 				transform: translateY(0%);
-		height: 4em;
+		height: 4rem;
 	}
 	100% {
 		-webkit-transform: translateY(0%);
 				transform: translateY(0%);
-		height: 14.4em
+		height: 16.3rem;
 	}
 
 }
@@ -176,9 +176,9 @@ html, body {overflow-x: hidden; min-height: 100%;}
 
 	.bar1, .bar2, .bar3 {
 		width: 1.5em;
-		height: 2px;
+		height: 0.125rem;
 		background-color: #8cb5f7;
-		margin: 5px 0;
+		margin: 0.313rem 0;
 		-webkit-transition: 0.3s;
 			 -o-transition: 0.3s;
 				transition: 0.3s;
@@ -190,19 +190,19 @@ html, body {overflow-x: hidden; min-height: 100%;}
 	.change .bar1 {
 		width: 1.5em;
 		background-color: #8cb5f7;
-		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-		-ms-transform: rotate(-45deg) translate(-6px, 4px);
-			transform: rotate(-45deg) translate(-6px, 4px);
+		-webkit-transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
+		-ms-transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
+			transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
 		-webkit-box-shadow: 0 0 0 0 #375f98;
 				box-shadow: 0 0 0 0 #375f98;
 	}
 
-	.change .bar2 {opacity: 0; background-color: #8cb5f7; width: 1.5em;}
+	.change .bar2 { opacity: 0; background-color: #8cb5f7; width: 1.5em; }
 
 	.change .bar3 {
-		-webkit-transform: rotate(45deg) translate(-8px, -8px);
-			-ms-transform: rotate(45deg) translate(-6px, -4px);
-				transform: rotate(45deg) translate(-6px, -4px);
+		-webkit-transform: rotate(45deg) translate(-0.375rem, -0.25rem);
+			-ms-transform: rotate(45deg) translate(-0.375rem, -0.25rem);
+				transform: rotate(45deg) translate(-0.375rem, -0.25rem);
 		background-color: #8cb5f7;
 		width: 1.5em;
 		-webkit-box-shadow: 0 0 0 0 #375f98;
@@ -212,15 +212,8 @@ html, body {overflow-x: hidden; min-height: 100%;}
 
 
 /* Modifiers */
-.q { 
-	font-size: 110%;
-	line-height: 1.5em;
-	font-weight: 600;
-}
-.a { 
-	padding-left: 2em; 
-	line-height: 1.5em;
-}
+.q { font-size: 110%; line-height: 1.5em; font-weight: 600; }
+.a { padding-left: 2em; line-height: 1.5em; }
 
 .disabled {
 	opacity: 0.6;
@@ -231,7 +224,7 @@ html, body {overflow-x: hidden; min-height: 100%;}
 			user-select: none;
 }
 
-.customMargin {margin: -1em 0;}
+.customMargin { margin: -1em 0; }
 /* --- */
 
 /* Aurora Panel */
@@ -266,28 +259,24 @@ html, body {overflow-x: hidden; min-height: 100%;}
 	z-index: 100;
 	font-weight: 600; 
 }
-	.logo .image {
-		width: 80px;
-		height: 104px;
-		vertical-align: middle;	
-	}
+	.logo .image { width: 5rem; height: 6.5rem; vertical-align: middle; }
 
-	.logo .text {
-		font-size: 48px;
-		vertical-align: middle;
-	}
+	.logo .text { font-size: 3em; vertical-align: middle; }
+/* --- */
+
+
 /* Menu */
-.mobileLogo {display: none;}
+.mobileLogo { display: none; }
 
-.headerSpace {height: 6em;}
+.headerSpace { height: 6em; }
 
 .headerBackground {
 	background: #6fb0f3 url('img/headerBackground.svg');
 	background: -webkit-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
 		 background: -o-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
 		  background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	-webkit-box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.19), 0 0.375rem 0.375rem rgba(0,0,0,0.23);
+		box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.19), 0 0.375rem 0.375rem rgba(0,0,0,0.23);
 	position: fixed;
 	z-index: 42069;
 	padding: 0;
@@ -302,9 +291,9 @@ html, body {overflow-x: hidden; min-height: 100%;}
  
 .title {
 	position: relative;
-	bottom: 2em;
-	height: 1em;
-	font-size: 19px;
+	bottom: 2.5rem;
+	height: 1rem;
+	font-size: 1.2rem;
 	color: white;
 	vertical-align: center;
 	text-align: center;
@@ -319,7 +308,7 @@ html, body {overflow-x: hidden; min-height: 100%;}
 		background: linear-gradient(to right, #3669af 1%,#5f9cda 50%,#3669af 100%);
 	text-align: center;
 	position: relative;
-	bottom: 2.4em;
+	bottom: 2.4rem;
 	-ms-flex-item-align: end;
 		align-self: flex-end;
 	min-width: 100%;
@@ -330,9 +319,9 @@ html, body {overflow-x: hidden; min-height: 100%;}
 	-ms-border-image-slice: 20 10 0 10 fill;
 	 -o-border-image-slice: 20 10 0 10 fill;
 		border-image-slice: 20 10 0 10 fill;
-	-ms-border-image-width: 20px 10px 0 10px;
-	 -o-border-image-width: 20px 10px 0 10px;
-		border-image-width: 20px 10px 0 10px;
+	-ms-border-image-width: 1.25rem 0.625rem 0 0.625rem;
+	 -o-border-image-width: 1.25rem 0.625rem 0 0.625rem;
+		border-image-width: 1.25rem 0.625rem 0 0.625rem;
 	-ms-border-image-outset: 0 0 0 0;
 	 -o-border-image-outset: 0 0 0 0;
 		border-image-outset: 0 0 0 0;
@@ -354,7 +343,7 @@ html, body {overflow-x: hidden; min-height: 100%;}
 		-webkit-transition: all 0.3s ease;
 			 -o-transition: all 0.3s ease;
 				transition: all 0.3s ease;
-		padding: 1.1em 5%;
+		padding: 1.1rem 5%;
 		text-align: center;
 		background: url("img/menuBarButton.png") no-repeat center;
 		-webkit-background-size: 100% 100%;
@@ -377,9 +366,9 @@ html, body {overflow-x: hidden; min-height: 100%;}
 		-ms-border-image-slice: 0 7 7 7 fill;
 		 -o-border-image-slice: 0 7 7 7 fill;
 			border-image-slice: 0 7 7 7 fill;
-		-ms-border-image-width: 0 7px 7px 7px;
-		 -o-border-image-width: 0 7px 7px 7px;
-			border-image-width: 0 7px 7px 7px;
+		-ms-border-image-width: 0 0.438rem 0.438rem 0.438rem;
+		 -o-border-image-width: 0 0.438rem 0.438rem 0.438rem;
+			border-image-width: 0 0.438rem 0.438rem 0.438rem;
 		-ms-border-image-outset: 0 0 0 0;
 		 -o-border-image-outset: 0 0 0 0;
 			border-image-outset: 0 0 0 0;
@@ -421,12 +410,10 @@ html, body {overflow-x: hidden; min-height: 100%;}
 		 -o-border-image-source: url("img/menuBarButton.png");
 			border-image-source: url("img/menuBarButton.png");
 	}
-
 /* --- */
 
 
 /* Body */
-
 body {
 	background: #C8D4E7 url('img/background.svg') repeat-x top center fixed;
 	margin: 0;
@@ -435,8 +422,8 @@ body {
 		 background: -o-linear-gradient(white, #C8D4E7);
 			background: linear-gradient(white, #C8D4E7);
 }
-
 /* --- */
+
 
 /* Cursors (why not lol) */
 .cursor  + .def			{cursor:url("cur/def.cur"), 			   auto; }
@@ -456,12 +443,12 @@ body {
 .gridBody {
 	position: relative;
 	z-index: 100;
-	bottom: 13em;
+	bottom: 13rem;
 	margin: 0 10%;
 		display: grid;
 	display: -ms-grid;
 	vertical-align: top;
-		grid-gap: 0.625em;
+		grid-gap: 0.625rem;
 	grid-template-columns: 80% 15%;
 		 -ms-grid-columns: 80% 15%;
 	grid-template-rows: 100% 100%;
@@ -485,30 +472,23 @@ body {
 		grid-row: 1;
 	-ms-grid-column: 2;
 		grid-column: 2;
-	padding-left: 1em;
+	padding-left: 1rem;
 }
 
-.side .sideObject {  
-	position: relative;
-	bottom: 1.5em;
-}
+.side .sideObject { position: relative; bottom: 1.5rem; }
 
-.sideObject {
-	padding: 0.5em 0;
-	vertical-align: top;
-	margin-bottom: 2em;
-}
+.sideObject { padding: 0.5rem 0; vertical-align: top; margin-bottom: 2rem; }
 
-	.sideObject button {padding: 0.7em; margin-top: 0.5em;}
+	.sideObject button { padding: 0.7rem; margin-top: 0.5rem; }
 
-	.sideObject p {margin: 5px 0 0 0;}
+	.sideObject p { margin: 0.313rem 0 0 0; }
 
 
 .tabContent {
 	width: 100%;
 	-webkit-animation: fading .3s; 
 			animation: fading .3s;
-	padding: 0 0.625em;
+	padding: 0 0.625rem;
 	vertical-align: top;
 	-ms-grid-row: 1;
 		grid-row: 1;
@@ -518,26 +498,18 @@ body {
 
 .tabContent .show {display: block;}
 
-.no-cssgrid .gridBody { 
-	display: table; 
-}
+.no-cssgrid .gridBody { display: table; }
 
-.no-cssgrid .tabContent { 
-	display: table-cell;
-	width: 80%;
-}
+.no-cssgrid .tabContent { display: table-cell; width: 80%; }
 
-.no-cssgrid .side { 
-	display: table-cell;
-	width: 15%
-}
+.no-cssgrid .side { display: table-cell; width: 15%; }
 /* --- */
 
 
 /* Buttons */
 button {
-	-webkit-box-shadow: 0.2em 0.2em 10px rgba(0,0,0,0.5);
-			box-shadow: 0.2em 0.2em 10px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0.2rem 0.2rem 0.625rem rgba(0,0,0,0.5);
+			box-shadow: 0.2rem 0.2rem 0.625rem rgba(0,0,0,0.5);
 	-ms-outline: 0;
 	outline: 0;
 	padding: 0.75%;
@@ -552,9 +524,9 @@ button {
 	-ms-border-image-slice: 7 7 7 7 fill;
 	 -o-border-image-slice: 7 7 7 7 fill;
 		border-image-slice: 7 7 7 7 fill;
-	-ms-border-image-width: 7px 7px 7px 7px;
-	 -o-border-image-width: 7px 7px 7px 7px;
-		border-image-width: 7px 7px 7px 7px;
+	-ms-border-image-width: 0.438rem 0.438rem 0.438rem 0.438rem;
+	 -o-border-image-width: 0.438rem 0.438rem 0.438rem 0.438rem;
+		border-image-width: 0.438rem 0.438rem 0.438rem 0.438rem;
 	-ms-border-image-outset: 0 0 0 0;
 	 -o-border-image-outset: 0 0 0 0;
 		border-image-outset: 0 0 0 0;
@@ -597,8 +569,8 @@ button {
 	}
 
 	button.disabled {
-		-webkit-box-shadow: 0.2em 0.2em 10px rgba(0,0,0,0.5);
-				box-shadow: 0.2em 0.2em 10px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 0.2rem 0.2rem 0.625em rgba(0,0,0,0.5);
+				box-shadow: 0.2rem 0.2rem 0.625em rgba(0,0,0,0.5);
 		-webkit-transition: all 0.125s ease;
 			 -o-transition: all 0.125s ease;
 				transition: all 0.125s ease;
@@ -626,8 +598,8 @@ input[type=checkbox] {
 		   -moz-background-size: 100% 100%;
 			 -o-background-size: 100% 100%;
 				background-size: 100% 100%;
-		height: 16px;
-		width: 16px;
+		height: 1rem;
+		width: 1rem;
 		display: inline-block;
 		padding: 0;
 		-webkit-transition: all 0.75s ease;
@@ -636,9 +608,9 @@ input[type=checkbox] {
 		-ms-border-image-slice: 1 1 1 1 fill;
 		 -o-border-image-slice: 1 1 1 1 fill;
 			border-image-slice: 1 1 1 1 fill;
-		-ms-border-image-width: 1px 1px 1px 1px;
-		 -o-border-image-width: 1px 1px 1px 1px;
-			border-image-width: 1px 1px 1px 1px;
+		-ms-border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
+		 -o-border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
+			border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
 		-ms-border-image-outset: 0 0 0 0;
 		 -o-border-image-outset: 0 0 0 0;
 			border-image-outset: 0 0 0 0;
@@ -679,18 +651,8 @@ input[type=checkbox] {
 		 -o-border-image-source: url("img/checkboxCheckedHover.png");
 			border-image-source: url("img/checkboxCheckedHover.png");
 	}
-/* 
-	Copy paste template for checkbox:
-		<form class="checkbox">
-			<input type="checkbox" name="gender" value="male" id="male"><label for="male"></label> Male<br>
-			<input type="checkbox" name="gender" value="female" id="female"><label for="female"></label> Female<br>
-			<input type="checkbox" name="gender" value="other" id="other"><label for="other"></label> Other	
-		</form>
-*/
 
-input[type=radio] {
-	display:none;
-}
+input[type=radio] { display:none; }
 
 	input[type=radio] + label {
 		background: url("img/checkbox.png") no-repeat center;
@@ -698,8 +660,8 @@ input[type=radio] {
 		   -moz-background-size: 100% 100%;
 			 -o-background-size: 100% 100%;
 				background-size: 100% 100%;
-		height: 16px;
-		width: 16px;
+		height: 1rem;
+		width: 1rem;
 		display: inline-block;
 		padding: 0;
 		-webkit-transition: all 0.75s ease;
@@ -708,9 +670,9 @@ input[type=radio] {
 		-ms-border-image-slice: 0 1 1 1 fill;
 		 -o-border-image-slice: 0 1 1 1 fill;
 			border-image-slice: 0 1 1 1 fill;
-		-ms-border-image-width: 0 1px 1px 1px;
-		 -o-border-image-width: 0 1px 1px 1px;
-			border-image-width: 0 1px 1px 1px;
+		-ms-border-image-width: 0 0.063rem 0.063rem 0.063rem;
+		 -o-border-image-width: 0 0.063rem 0.063rem 0.063rem;
+			border-image-width: 0 0.063rem 0.063rem 0.063rem;
 		-ms-border-image-outset: 0 0 0 0;
 		 -o-border-image-outset: 0 0 0 0;
 			border-image-outset: 0 0 0 0;
@@ -751,20 +713,13 @@ input[type=radio] {
 		 -o-border-image-source: url("img/radioCheckedHover.png");
 			border-image-source: url("img/radioCheckedHover.png");
 	}
-/* 
-	Copy paste template for radio:
-		<form class="radio">
-			<input type="radio" name="gender" value="male" id="male"><label for="male"></label> Male<br>
-			<input type="radio" name="gender" value="female" id="female"><label for="female"></label> Female<br>
-			<input type="radio" name="gender" value="other" id="other"><label for="other"></label> Other
-		</form>
-*/
 /* --- */
 
-/* Mobile Ajustments */
-@media screen and (max-width: 62.5em) { .gridBody {margin: 0;} }
 
-@media all and (max-width: 50.75em) {
+/* Mobile Ajustments */
+@media screen and (max-width: 62.5rem) { .gridBody { margin: 0; } }
+
+@media all and (max-width: 50.75rem) {
 	.gridBody {
 		-ms-grid-columns: auto auto;
 			grid-template-columns: auto auto;
@@ -780,7 +735,7 @@ input[type=radio] {
 	}
 }
 
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 37.5rem) {
 	.headerBackground .responsive {
 		position: relative; 
 		overflow: hidden;
@@ -788,42 +743,27 @@ input[type=radio] {
 				animation: 0.3s slideDown ease;
 	}
 
-	.headerBackground .burgerButton {
-		pointer-events: visible;
-		cursor: pointer;
-		opacity: 1;
-	}
+	.headerBackground .burgerButton { pointer-events: visible; cursor: pointer; opacity: 1; }
 
-	.headerBackground .responsive button {
-		float: none;
-		display: block;
-		min-width: 100%;
-	}
+	.headerBackground .responsive button { float: none; display: block; min-width: 100%; }
 
-	.title {visibility: hidden;}
+	.title { visibility: hidden; }
 
 	.title:after {
 		content: "Start9";
 		visibility: visible;
-		right: 1.5em;
+		right: 1.5rem;
 		position: relative;
 	}
 
-	.no-cssgrid .gridBody { 
-		display: initial; 
-	}
+	.no-cssgrid .gridBody { display: initial; }
 
-	.no-cssgrid .tabContent { 
-		display: initial;
-		width: auto;
-	}
+	.no-cssgrid .tabContent { display: initial; width: auto; }
 
-	.no-cssgrid .side { 
-		display: block;
-		width: auto;
-	}
+	.no-cssgrid .side { display: block; width: auto; }
 }
 /* --- */
+
 
 /* Footer */
 footer {
@@ -834,7 +774,7 @@ footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	font-size: 10px;
+	font-size: 0.7rem;
 	text-align: center;
 }
 /* --- */
