@@ -48,7 +48,7 @@
 /* --- */
 
 /* Remove X Overflow */ 
-html, body {overflow-x: hidden; min-height: 100%;}
+html, body { overflow-x: hidden; min-height: 100%; }
 /* --- */
 
 /* Animation */
@@ -293,7 +293,7 @@ html, body {overflow-x: hidden; min-height: 100%;}
 	position: relative;
 	bottom: 2.5rem;
 	height: 1rem;
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	color: white;
 	vertical-align: center;
 	text-align: center;
@@ -308,7 +308,7 @@ html, body {overflow-x: hidden; min-height: 100%;}
 		background: linear-gradient(to right, #3669af 1%,#5f9cda 50%,#3669af 100%);
 	text-align: center;
 	position: relative;
-	bottom: 2.4rem;
+	bottom: 2.3rem;
 	-ms-flex-item-align: end;
 		align-self: flex-end;
 	min-width: 100%;
