@@ -3,9 +3,9 @@
 	<head>
 		<style>@media screen and (max-width: 600px) { .menuBar button:not(:nth-child(1)) {display: none;}}</style>
 		<noscript><style>.tabContent {display: block !important;} #faq {display: none !important;}</style></noscript>
-		<link rel="shortcut icon" href="https://avatars1.githubusercontent.com/u/34009271">
-		<meta itemprop="image" content="https://avatars1.githubusercontent.com/u/34009271">
-		<meta property="og:image" content="https://avatars1.githubusercontent.com/u/34009271"/>
+		<link rel="shortcut icon" href="assets/img/icon.png">
+		<meta itemprop="image" content="assets/img/icon.png">
+		<meta property="og:image" content="assets/img/icon.png"/>
 		<title>Start9</title>
 		<meta name="description" content="An extensible, customizable, modular shell supplement for Windows.">
 		<meta itemprop="description" content="An extensible, customizable, modular shell supplement for Windows.">
@@ -20,6 +20,7 @@
 		<meta property="og:title" content="Start9"/>
 		<meta property="og:type" content="article"/>
 		<meta property="og:url" content="https://startnine.github.io"/>
+		<link rel="manifest" href="assets/jasonsmanifest.json">
 		<!--[if lt IE 9]> <link rel="stylesheet" href="assets/legacy.css" type="text/css"/> <![endif]-->
 	</head>
 		<!-- 
@@ -36,7 +37,7 @@
 				<div class="burgerButton" onclick="burgerButton(this);menuBarNav()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
 				<p class="title">Home</p>
 				<nav class="menuBar" id="menuBar">
-					<button class="tabLink" onclick="openNewLink('http://start9.menu/');">Home</button>
+					<button class="tabLink" onclick="openTab(event, 'home')" id="defaultTab">Home</button>
 					<button onclick="openNewTab('https://github.com/StartNine/Start9/releases');">Downloads</button>
 					<button class="disabled" onclick="openTab(event, 'news')">News</button>
 					<button class="disabled">Community</button>
@@ -44,12 +45,25 @@
 				</nav>
 			</div>
 			<div class="headerSpace"></div>
+			<div class="headerSpace" style="height: 12.5em;"></div>
 		</header>
 
 		<div class="gridBody">
 			<section id="home" class="tabContent">
 					<div><h2>Error 404</h2><p>It seems like you've visited a non-existent or deleted part of our website. Please use the navigation bar above to go somewhere else.</p></div>
 			</section>
+
+			<!--section id="news" class="tabContent">
+				probally iFrame here...
+			</section>
+
+			<section id="faq" class="tabContent">
+				<h2>FAQ</h2>
+					<div class="q">Question?</div><div class="a">Answer.</div> <br>
+					<div class="q">Question?</div><div class="a">Answer.</div> <br>
+					<div class="q">Question?</div><div class="a">Answer.</div> <br>
+			</section-->
+
 			<div class="side">
 				<h2>Interested?</h2>
 				<div class="sideObject">
@@ -57,7 +71,7 @@
 					<button onclick="openNewTab('https://github.com/StartNine/Start9');">Start9 on GitHub</button>
 				</div>
 				<div class="sideObject">
-					<p>Join our discord server, linked below:</p>
+					<p>Discuss on our Discord Server:</p>
 					<button onclick="openNewTab('https://discordapp.com/invite/6cpvxBS');">Start9 Discord Server</button>
 				</div>
 				<noscript>
