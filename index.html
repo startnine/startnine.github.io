@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html itemscope lang="en">
 	<head>
-		<style>@media screen and (max-width: 600px) { .menuBar button:not(:nth-child(1)) {display: none;}}</style>
+		<style>@media screen and (max-width: 600px) { .menuBar a:not(:nth-child(1)) {display: none;}}</style>
 		<noscript><style>.tabContent {display: block !important;} #faq {display: none !important;}</style></noscript>
 		<link rel="shortcut icon" href="assets/img/icon.png">
 		<meta itemprop="image" content="assets/img/icon.png">
@@ -37,11 +37,11 @@
 				<div class="burgerButton" onclick="burgerButton(this);menuBarNav()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
 				<p class="title">Home</p>
 				<nav class="menuBar" id="menuBar">
-					<button class="tabLink" onclick="openTab(event, 'home')" id="defaultTab">Home</button>
-					<button onclick="openNewTab('https://github.com/StartNine/Start9/releases');">Downloads</button>
-					<button class="disabled" onclick="openTab(event, 'news')">News</button>
-					<button class="disabled">Community</button>
-					<button class="disabled" onclick="openTab(event, 'faq')">FAQ</button>
+					<a href="http://start9.menu/">Home</a>
+					<a href="https://github.com/StartNine/Start9/releases">Downloads</a>
+					<a class="disabled" onclick="openTab(event, 'news')">News</a>
+					<a class="disabled">Community</a>
+					<a class="disabled" onclick="openTab(event, 'faq')">FAQ</a>
 				</nav>
 			</div>
 			<div class="headerSpace"></div>
@@ -81,11 +81,11 @@
 				<h2>Interested?</h2>
 				<div class="sideObject">
 					<p class="customMargin">Please check out our GitHub here:</p>
-					<button onclick="openNewTab('https://github.com/StartNine/Start9');">Start9 on GitHub</button>
+					<a href="https://github.com/StartNine/Start9">Start9 on GitHub</a>
 				</div>
 				<div class="sideObject">
 					<p>We've also opened up the Start9 Discord Server, so everyone can keep an eye on our progress, contribute ideas, etc. You can join here:</p>
-					<button onclick="openNewTab('https://discordapp.com/invite/6cpvxBS');">Start9 Discord Server</button>
+					<a href="https://discordapp.com/invite/6cpvxBS">Start9 Discord Server</a>
 				</div>
 				<noscript>
 					<div class="sideObject">

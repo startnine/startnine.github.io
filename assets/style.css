@@ -333,18 +333,23 @@ html, body { overflow-x: hidden; min-height: 100%; }
 		border-image-source: url("img/menuBar.jpg");
 }
 
-	.menuBar button, a {
+	.menuBar a {
+		display: inline-block;
+		height: 1.75em;
+		padding: 0.9rem 5%;
+		font-size: 0.85em;
+		line-height: 1.75em;
+		text-align: center;
+		color: white;
+		text-decoration: none;
+		transition: all 0.125s ease;
 		-webkit-box-shadow: none;
 				box-shadow: none;
-		min-height: 100%;
-		text-decoration:  none;
 		-webkit-animation: fading 0.3s ease;
 				animation: fading 0.3s ease;
 		-webkit-transition: all 0.3s ease;
 			 -o-transition: all 0.3s ease;
 				transition: all 0.3s ease;
-		padding: 1.1rem 5%;
-		text-align: center;
 		background: url("img/menuBarButton.png") no-repeat center;
 		-webkit-background-size: 100% 100%;
 		   -moz-background-size: 100% 100%;
@@ -353,11 +358,9 @@ html, body { overflow-x: hidden; min-height: 100%; }
 		-ms-border-image-source: url("img/menuBarButton.png");
 		 -o-border-image-source: url("img/menuBarButton.png");
 			border-image-source: url("img/menuBarButton.png");
-		color: white;
-		transition: all 0.125s ease;
 	}
 
-	.menuBar button:hover, a:hover {
+	.menuBar a:hover {
 		-webkit-animation: fading 0.125s ease;
 				animation: fading 0.125s ease;
 		-webkit-transition: all 0.125s ease;
@@ -385,7 +388,7 @@ html, body { overflow-x: hidden; min-height: 100%; }
 			border-image-source: url("img/menuBarButton_hover.png");
 	}
 
-	.menuBar button:active, a:hover {
+	.menuBar a:active {
 		-webkit-animation: fading 0.125s ease;
 				animation: fading 0.125s ease;
 		background: url("img/menuBarButton_pressed.png") no-repeat center;
@@ -398,7 +401,8 @@ html, body { overflow-x: hidden; min-height: 100%; }
 			border-image-source: url("img/menuBarButton_pressed.png");
 	}
 
-	.menuBar button.disabled, a.disabled {
+	.menuBar a.disabled {
+		text-align: center;
 		box-shadow: none;
 		opacity: 0.6;
 		background: url("img/menuBarButton.png") no-repeat center;
@@ -479,7 +483,7 @@ body {
 
 .sideObject { padding: 0.5rem 0; vertical-align: top; margin-bottom: 2rem; }
 
-	.sideObject button { padding: 0.7rem; margin-top: 0.5rem; }
+	.sideObject a { margin-top: 0.5rem; }
 
 	.sideObject p { margin: 0.313rem 0 0 0; }
 
@@ -507,15 +511,20 @@ body {
 
 
 /* Buttons */
-button {
+a {
 	-webkit-box-shadow: 0.2rem 0.2rem 0.625rem rgba(0,0,0,0.5);
 			box-shadow: 0.2rem 0.2rem 0.625rem rgba(0,0,0,0.5);
 	-ms-outline: 0;
-	outline: 0;
-	padding: 0.75%;
-	margin: 0;
-	background: transparent;
-	border: none;
+		outline: 0;
+	display: inline-block;
+	height: 1.75em;
+	padding: 0.5rem;
+	font-size: 0.8em;
+	line-height: 1.75em;
+	vertical-align: center;
+	text-align: center;
+	color: black;
+	text-decoration: none;
 	background: url("img/buttonIdle.png") no-repeat center;
 	-webkit-background-size: 100% 100%;
 	   -moz-background-size: 100% 100%;
@@ -541,7 +550,7 @@ button {
 		border-image-source: url("img/buttonIdle.png");
 }
 
-	button:hover {
+	a:hover {
 		-webkit-transition: all 0.125s ease;
 			 -o-transition: all 0.125s ease;
 				transition: all 0.125s ease;
@@ -555,7 +564,10 @@ button {
 			border-image-source: url("img/buttonHover.png");
 	}
 
-	button:active {
+	a:active {
+		-webkit-transition: all 0.125s ease;
+			 -o-transition: all 0.125s ease;
+				transition: all 0.125s ease;
 		-webkit-box-shadow: none;
 				box-shadow: none;
 		background: url("img/buttonPressed.png") no-repeat center;
@@ -568,12 +580,9 @@ button {
 			border-image-source: url("img/buttonPressed.png");
 	}
 
-	button.disabled {
+	a.disabled {
 		-webkit-box-shadow: 0.2rem 0.2rem 0.625em rgba(0,0,0,0.5);
 				box-shadow: 0.2rem 0.2rem 0.625em rgba(0,0,0,0.5);
-		-webkit-transition: all 0.125s ease;
-			 -o-transition: all 0.125s ease;
-				transition: all 0.125s ease;
 		background: url("img/buttonDisabled.png") no-repeat center;
 		-webkit-background-size: 100% 100%;
 		   -moz-background-size: 100% 100%;
@@ -584,6 +593,7 @@ button {
 			border-image-source: url("img/buttonDisabled.png");	
 		opacity: 1;
 	}
+
 /* --- */
 
 
@@ -745,7 +755,7 @@ input[type=radio] { display:none; }
 
 	.headerBackground .burgerButton { pointer-events: visible; cursor: pointer; opacity: 1; }
 
-	.headerBackground .responsive button { float: none; display: block; min-width: 100%; }
+	.headerBackground .responsive a { display: inline-block; width: 100%; }
 
 	.title { visibility: hidden; }
 
