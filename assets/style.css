@@ -36,123 +36,6 @@
 html, body { overflow-x: hidden; min-height: 100%; }
 /* --- */
 
-/* Animation */
-@-webkit-keyframes fading {
-	0%   { opacity: 0 }
-	50%  { opacity: 1 }
-	100% { opacity: 1 }
-}
-
-@keyframes fading {
-	0%   { opacity: 0 }
-	50%  { opacity: 1 }
-	100% { opacity: 1 }
-}
-
-.right {
-	position: relative;
-	right: 5rem;
-	-webkit-animation: animationRight linear 15s alternate;
-			animation: animationRight linear 15s alternate;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-}
-
-.right2 {
-	position: relative;
-	right: 10rem;
-	-webkit-animation: animationRight2 linear 20s alternate;
-			animation: animationRight2 linear 20s alternate;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes animationRight {
-  0% {-webkit-transform: translate(0rem, 0rem) scaleX(1.00); transform: translate(0rem,0rem) scaleX(1.00);}
-  100% {-webkit-transform: translate(4.57rem, 0rem) scaleX(1.89); transform: translate(9.57rem,0rem) scaleX(1.89);}
-}
-
-@keyframes animationRight {
-  0% {-webkit-transform: translate(0rem, 0rem) scaleX(1.00);transform: translate(0rem,0rem) scaleX(1.00);}
-  100% {-webkit-transform: translate(4.57rem, 0rem) scaleX(1.89); transform: translate(9.57rem,0rem) scaleX(1.89);}
-}
-
-@-webkit-keyframes animationRight2 {
-  0% {-webkit-transform: translate(0rem, 0rem) scaleX(1); transform: translate(0rem,0rem) scaleX(1);}
-  100% {-webkit-transform: translate(5.42rem, 0rem) scaleX(2.5); transform: translate(5.42rem,0rem) scaleX(2.5);}
-}
-
-@keyframes animationRight2 {
-  0% {-webkit-transform: translate(0rem, 0rem) scaleX(1); transform: translate(0rem,0rem) scaleX(1);}
-  100% {-webkit-transform: translate(5.42rem, 0rem) scaleX(2.5); transform: translate(5.42rem,0rem) scaleX(2.5);}
-}
-
-.left {
-	position: relative;	
-	left: 10rem;
-	-webkit-animation: animationLeft linear 20s alternate;
-			animation: animationLeft linear 20s alternate;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-}
-
-.left2 {
-	position: relative;	
-	left: 20rem;
-	-webkit-animation: animationLeft2 linear 15s alternate;
-			animation: animationLeft2 linear 15s alternate;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes animationLeft {
-	0% { -webkit-transform: translate(0rem,0rem) scaleX(1); transform: translate(0rem,0rem) scaleX(1); }
-	100% { -webkit-transform: translate(-12.5rem,0rem) scaleX(2.5); transform: translate(-12.5rem,0rem) scaleX(2.5); }
-}
-
-@keyframes animationLeft {
-	0% { -webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1); }
-	100% { -webkit-transform: translate(-12.5rem,0rem) scaleX(2.5);transform: translate(-12.5rem,0rem) scaleX(2.5); }
-}
-
-@-webkit-keyframes animationLeft2 {
-	0% { -webkit-transform: translate(0rem,0rem) scaleX(1);  transform: translate(0rem,0rem) scaleX(1); }
-	100% { -webkit-transform: translate(-7rem,0rem) scaleX(1.12);transform: translate(-7rem,0rem) scaleX(1.7); }
-}
-
-@keyframes animationLeft2 {
-	0% { -webkit-transform: translate(0rem,0rem) scaleX(1); transform: translate(0rem,0rem) scaleX(1); }
-	100% { -webkit-transform: translate(-7rem,0rem) scaleX(1.12); transform: translate(-7rem,0rem) scaleX(1.7); }
-}
-
-@-webkit-keyframes slideDown {
-	0%   {
-		-webkit-transform: translateY(0%);
-				transform: translateY(0%);
-		height: 4rem;
-	}
-	100% {
-		-webkit-transform: translateY(0%);
-				transform: translateY(0%);
-		height: 17.55rem;
-	}
-}
-
-@keyframes slideDown {
-	0% {
-		-webkit-transform: translateY(0%);
-				transform: translateY(0%);
-		height: 4rem;
-	}
-	100% {
-		-webkit-transform: translateY(0%);
-				transform: translateY(0%);
-		height: 17.55rem;
-	}
-
-}
-/* --- */
-
 /* Hamburger */
 .burgerButton {
 	display: inline-block;
@@ -231,13 +114,12 @@ html, body { overflow-x: hidden; min-height: 100%; }
 }
  
 .aurora {
-	width: 69vw;
-	position: absolute;
-	vertical-align: middle; 
+	left: 5vw;
+	width: 100vw;
 	height: 15em;
 	overflow-x: hidden;
-	right: 1rem;
-	z-index: 0;
+	position: absolute;
+	vertical-align: middle; 
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 		-ms-user-select: none;
@@ -501,6 +383,116 @@ body {
 .no-cssgrid .tabContent { display: table-cell; width: 80%; }
 
 .no-cssgrid .side { display: table-cell; width: 15%; }
+/* --- */
+
+/* Animation */
+@-webkit-keyframes fading {
+	0%   { opacity: 0 }
+	50%  { opacity: 1 }
+	100% { opacity: 1 }
+}
+
+@keyframes fading {
+	0%   { opacity: 0 }
+	50%  { opacity: 1 }
+	100% { opacity: 1 }
+}
+
+.left{
+	-webkit-animation: animationLeft linear 15s alternate;
+			animation: animationLeft linear 15s alternate;
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+}
+
+.left2 {
+	-webkit-animation: animationLeft2 linear 35s alternate;
+			animation: animationLeft2 linear 35s alternate;
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animationLeft{
+	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
+	100% {-webkit-transform: translate(-200px,0px) scaleX(1.25);transform: translate(-200px,0px) scaleX(1.25);}
+}
+
+@keyframes animationLeft{
+	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
+	100% {-webkit-transform: translate(-200px,0px) scaleX(1.25);transform: translate(-200px,0px) scaleX(1.25);}
+}
+
+@-webkit-keyframes animationLeft2{
+	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
+	100% {-webkit-transform: translate(-200px,0px) scaleX(1.8);transform: translate(-200px,0px) scaleX(1.8);}
+}
+
+@keyframes animationLeft2{
+	0% {-webkit-transform: translate(0px,0px) scaleX(1);transform: translate(0px,0px) scaleX(1);}
+	100% {-webkit-transform: translate(-200px,0px) scaleX(1.8);transform: translate(-200px,0px) scaleX(1.8);}
+}
+
+.right {
+	-webkit-animation: animationRight linear 10s alternate;
+			animation: animationRight linear 10s alternate;
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+}
+
+.right2 {
+	left: 10vw
+	-webkit-animation: animationRight2 linear 30s alternate !important;
+			animation: animationRight2 linear 30s alternate !important;
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animationRight{
+	0% {-webkit-transform: translate(0px,0px) scaleX(1.00);transform: translate(0px,0px) scaleX(1.00);}
+	100% {-webkit-transform: translate(200px,0px) scaleX(1.25) ;transform: translate(200px,0px) scaleX(1.25);}
+}
+
+@keyframes animationRight{
+	0% {-webkit-transform: translate(0px,0px) scaleX(1.00);transform: translate(0px,0px) scaleX(1.00);}
+	100% {-webkit-transform: translate(200px,0px) scaleX(1.25) ;transform: translate(200px,0px) scaleX(1.25);}
+}
+
+@-webkit-keyframes animationRight2{
+	0% {-webkit-transform: translate(0px,0px) scaleX(1) ;transform: translate(0px,0px) scaleX(1);}
+	100% {-webkit-transform: translate(200px,0px) scaleX(1.15) ;transform: translate(200px,0px) scaleX(1.15);}
+}
+
+@keyframes animationRight2{
+	0% {-webkit-transform: translate(0px,0px) scaleX(1) ;transform: translate(0px,0px) scaleX(1);}
+	100% {-webkit-transform: translate(200px,0px) scaleX(1.15) ;transform: translate(200px,0px) scaleX(1.15);}
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 4rem;
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 17.55rem;
+	}
+}
+
+@keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 4rem;
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 17.55rem;
+	}
+
+}
 /* --- */
 
 
