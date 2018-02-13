@@ -516,6 +516,7 @@ a {
 			box-shadow: 0.2rem 0.2rem 0.625rem rgba(0,0,0,0.5);
 	-ms-outline: 0;
 		outline: 0;
+	white-space: nowrap; 
 	display: inline-block;
 	height: 1.75em;
 	padding: 0.5rem;
@@ -594,6 +595,26 @@ a {
 		opacity: 1;
 	}
 
+	a.link {
+		-webkit-box-shadow: none;
+				box-shadow: none;
+		-ms-outline: initial;
+			outline: initial;
+		white-space: initial; 
+		display: initial;
+		height: initial;
+		padding: initial;
+		font-size: initial;
+		line-height: initial;
+		vertical-align: center;
+		text-align: center;
+		color: initial;
+		text-decoration: underline;
+		background: initial;
+		-ms-border-image-source: none;
+		 -o-border-image-source: none;
+			border-image-source: none;
+	}
 /* --- */
 
 
