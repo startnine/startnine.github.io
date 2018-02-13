@@ -468,7 +468,7 @@ body {
 
 .sideObject { padding: 0.5rem 0; vertical-align: top; margin-bottom: 2rem; }
 
-	.sideObject a { margin-top: 0.5rem; }
+	.sideObject a.button { margin-top: 0.5rem; }
 
 	.sideObject p { margin: 0.313rem 0 0 0; }
 
@@ -745,7 +745,7 @@ input[type=radio] { display:none; }
 
 	.headerBackground .burgerButton { pointer-events: visible; cursor: pointer; opacity: 1; }
 
-	.headerBackground .responsive a { display: inline-block; width: 100%; padding: 1rem 0; }
+	.headerBackground .responsive a.button { display: inline-block; width: 100%; padding: 1rem 0; }
 
 	.title { visibility: hidden; }
 
