@@ -1,45 +1,30 @@
-/* Font face */
+/* Import Fonts  */
 /* Light */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 200;
+@font-face { font-family: Selawik; font-style: normal; font-weight: 200;
 	src: url("font/selawkl.woff2") format("woff2"),
 		 url("font/selawkl.eot") format("embedded-opentype");
 }
 
 /* Semilight */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 300;
+@font-face { font-family: Selawik; font-style: normal; font-weight: 300;
 	src: url("font/selawksl.woff2") format("woff2"),
 		 url("font/selawksl.eot") format("embedded-opentype");
 }
 
 /* Normal */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 400;
+@font-face { font-family: Selawik; font-style: normal; font-weight: 400;
 	src: url("font/selawk.woff2") format("woff2"),
 		 url("font/selawk.eot") format("embedded-opentype");
 }
 
 /* Semibold */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 600;
+@font-face { font-family: Selawik; font-style: normal; font-weight: 600;
 	src: url("font/selawksb.woff2") format("woff2"),
 		 url("font/selawksb.eot") format("embedded-opentype");
 }
 
 /* Bold */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 700;
+@font-face { font-family: Selawik; font-style: normal; font-weight: 700;
 	src: url("font/selawkb.woff2") format("woff2"),
 		 url("font/selawkb.eot") format("embedded-opentype");
 }
@@ -170,9 +155,9 @@ html, body { overflow-x: hidden; min-height: 100%; }
 	cursor: pointer;
 }
 
-	.burgerButton:hover .bar1 {background-color: white;}
-	.burgerButton:hover .bar2 {background-color: white;}
-	.burgerButton:hover .bar3 {background-color: white;}
+	.burgerButton:hover .bar1 { background-color: white; }
+	.burgerButton:hover .bar2 { background-color: white; }
+	.burgerButton:hover .bar3 { background-color: white; }
 
 	.bar1, .bar2, .bar3 {
 		width: 1.5em;
