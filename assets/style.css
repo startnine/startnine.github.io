@@ -333,7 +333,7 @@ html, body { overflow-x: hidden; min-height: 100%; }
 		border-image-source: url("img/menuBar.jpg");
 }
 
-	.menuBar a {
+	.menuBar a.button {
 		display: inline-block;
 		height: 1.75em;
 		padding: 0.9rem 5%;
@@ -360,7 +360,7 @@ html, body { overflow-x: hidden; min-height: 100%; }
 			border-image-source: url("img/menuBarButton.png");
 	}
 
-	.menuBar a:hover {
+	.menuBar a.button:hover {
 		-webkit-animation: fading 0.125s ease;
 				animation: fading 0.125s ease;
 		-webkit-transition: all 0.125s ease;
@@ -388,7 +388,7 @@ html, body { overflow-x: hidden; min-height: 100%; }
 			border-image-source: url("img/menuBarButton_hover.png");
 	}
 
-	.menuBar a:active {
+	.menuBar a.button:active {
 		-webkit-animation: fading 0.125s ease;
 				animation: fading 0.125s ease;
 		background: url("img/menuBarButton_pressed.png") no-repeat center;
@@ -401,7 +401,7 @@ html, body { overflow-x: hidden; min-height: 100%; }
 			border-image-source: url("img/menuBarButton_pressed.png");
 	}
 
-	.menuBar a.disabled {
+	.menuBar a.button.disabled {
 		text-align: center;
 		box-shadow: none;
 		opacity: 0.6;
@@ -511,7 +511,7 @@ body {
 
 
 /* Buttons */
-a {
+a.button {
 	-webkit-box-shadow: 0.2rem 0.2rem 0.625rem rgba(0,0,0,0.5);
 			box-shadow: 0.2rem 0.2rem 0.625rem rgba(0,0,0,0.5);
 	-ms-outline: 0;
@@ -551,7 +551,7 @@ a {
 		border-image-source: url("img/buttonIdle.png");
 }
 
-	a:hover {
+	a.button:hover {
 		-webkit-transition: all 0.125s ease;
 			 -o-transition: all 0.125s ease;
 				transition: all 0.125s ease;
@@ -565,7 +565,7 @@ a {
 			border-image-source: url("img/buttonHover.png");
 	}
 
-	a:active {
+	a.button:active {
 		-webkit-transition: all 0.125s ease;
 			 -o-transition: all 0.125s ease;
 				transition: all 0.125s ease;
@@ -581,7 +581,7 @@ a {
 			border-image-source: url("img/buttonPressed.png");
 	}
 
-	a.disabled {
+	a.button.disabled {
 		-webkit-box-shadow: 0.2rem 0.2rem 0.625em rgba(0,0,0,0.5);
 				box-shadow: 0.2rem 0.2rem 0.625em rgba(0,0,0,0.5);
 		background: url("img/buttonDisabled.png") no-repeat center;
@@ -595,26 +595,6 @@ a {
 		opacity: 1;
 	}
 
-	a.link {
-		-webkit-box-shadow: none;
-				box-shadow: none;
-		-ms-outline: initial;
-			outline: initial;
-		white-space: initial; 
-		display: initial;
-		height: initial;
-		padding: initial;
-		font-size: initial;
-		line-height: initial;
-		vertical-align: center;
-		text-align: center;
-		color: initial;
-		text-decoration: underline;
-		background: initial;
-		-ms-border-image-source: none;
-		 -o-border-image-source: none;
-			border-image-source: none;
-	}
 /* --- */
 
 
