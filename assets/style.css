@@ -49,72 +49,80 @@ html, body { overflow-x: hidden; min-height: 100%; }
 	100% { opacity: 1 }
 }
 
-.right{
-	-webkit-animation: animationRight linear 25 alternate;
-			animation: animationRight linear 25 alternate;
+.right {
+	position: relative;
+	right: 5rem;
+	-webkit-animation: animationRight linear 15s alternate;
+			animation: animationRight linear 15s alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 }
 
-.right2{
-	-webkit-animation: animationRight2 linear 10s alternate;
-			animation: animationRight2 linear 10s alternate;
+.right2 {
+	position: relative;
+	right: 10rem;
+	-webkit-animation: animationRight2 linear 20s alternate;
+			animation: animationRight2 linear 20s alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes animationRight {
-  0% {-webkit-transform: translate(0rem,0rem) scaleX(1.00);transform: translate(0rem,0rem) scaleX(1.00);}
-  100% {-webkit-transform: translate(12.5rem,0rem) scaleX(1.25) ;transform: translate(12.5rem,0rem) scaleX(1.25);}
+  0% {-webkit-transform: translate(0rem, 0rem) scaleX(1.00); transform: translate(0rem,0rem) scaleX(1.00);}
+  100% {-webkit-transform: translate(4.57rem, 0rem) scaleX(1.89); transform: translate(9.57rem,0rem) scaleX(1.89);}
 }
 
 @keyframes animationRight {
-  0% {-webkit-transform: translate(0rem,0rem) scaleX(1.00);transform: translate(0rem,0rem) scaleX(1.00);}
-  100% {-webkit-transform: translate(12.5rem,0rem) scaleX(1.25) ;transform: translate(12.5rem,0rem) scaleX(1.25);}
+  0% {-webkit-transform: translate(0rem, 0rem) scaleX(1.00);transform: translate(0rem,0rem) scaleX(1.00);}
+  100% {-webkit-transform: translate(4.57rem, 0rem) scaleX(1.89); transform: translate(9.57rem,0rem) scaleX(1.89);}
 }
 
 @-webkit-keyframes animationRight2 {
-  0% {-webkit-transform: translate(0rem,0rem) scaleX(1) ;transform: translate(0rem,0rem) scaleX(1);}
-  100% {-webkit-transform: translate(12.5rem,0rem) scaleX(1.15) ;transform: translate(12.5rem,0rem) scaleX(1.15);}
+  0% {-webkit-transform: translate(0rem, 0rem) scaleX(1); transform: translate(0rem,0rem) scaleX(1);}
+  100% {-webkit-transform: translate(5.42rem, 0rem) scaleX(2.5); transform: translate(5.42rem,0rem) scaleX(2.5);}
 }
 
 @keyframes animationRight2 {
-  0% {-webkit-transform: translate(0rem,0rem) scaleX(1) ;transform: translate(0rem,0rem) scaleX(1);}
-  100% {-webkit-transform: translate(12.5rem,0rem) scaleX(1.15) ;transform: translate(12.5rem,0rem) scaleX(1.15);}
+  0% {-webkit-transform: translate(0rem, 0rem) scaleX(1); transform: translate(0rem,0rem) scaleX(1);}
+  100% {-webkit-transform: translate(5.42rem, 0rem) scaleX(2.5); transform: translate(5.42rem,0rem) scaleX(2.5);}
 }
 
 .left {
-	-webkit-animation: animationLeft linear 10s alternate;
-			animation: animationLeft linear 10s alternate;
+	position: relative;	
+	left: 10rem;
+	-webkit-animation: animationLeft linear 20s alternate;
+			animation: animationLeft linear 20s alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 }
 
 .left2 {
-	-webkit-animation: animationLeft2 linear 25s alternate;
-			animation: animationLeft2 linear 25s alternate;
+	position: relative;	
+	left: 20rem;
+	-webkit-animation: animationLeft2 linear 15s alternate;
+			animation: animationLeft2 linear 15s alternate;
 	-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes animationLeft {
-	0% {-webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1);}
-	100% {-webkit-transform: translate(-12.5rem,0rem) scaleX(1.25);transform: translate(-12.5rem,0rem) scaleX(1.25);}
+	0% { -webkit-transform: translate(0rem,0rem) scaleX(1); transform: translate(0rem,0rem) scaleX(1); }
+	100% { -webkit-transform: translate(-12.5rem,0rem) scaleX(2.5); transform: translate(-12.5rem,0rem) scaleX(2.5); }
 }
 
 @keyframes animationLeft {
-	0% {-webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1);}
-	100% {-webkit-transform: translate(-12.5rem,0rem) scaleX(1.25);transform: translate(-12.5rem,0rem) scaleX(1.25);}
+	0% { -webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1); }
+	100% { -webkit-transform: translate(-12.5rem,0rem) scaleX(2.5);transform: translate(-12.5rem,0rem) scaleX(2.5); }
 }
 
 @-webkit-keyframes animationLeft2 {
-	0% {-webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1);}
-	100% {-webkit-transform: translate(-12.5rem,0rem) scaleX(1.8);transform: translate(-12.5rem,0rem) scaleX(1.8);}
+	0% { -webkit-transform: translate(0rem,0rem) scaleX(1);  transform: translate(0rem,0rem) scaleX(1); }
+	100% { -webkit-transform: translate(-7rem,0rem) scaleX(1.12);transform: translate(-7rem,0rem) scaleX(1.7); }
 }
 
 @keyframes animationLeft2 {
-	0% {-webkit-transform: translate(0rem,0rem) scaleX(1);transform: translate(0rem,0rem) scaleX(1);}
-	100% {-webkit-transform: translate(-12.5rem,0rem) scaleX(1.8);transform: translate(-12.5rem,0rem) scaleX(1.8);}
+	0% { -webkit-transform: translate(0rem,0rem) scaleX(1); transform: translate(0rem,0rem) scaleX(1); }
+	100% { -webkit-transform: translate(-7rem,0rem) scaleX(1.12); transform: translate(-7rem,0rem) scaleX(1.7); }
 }
 
 @-webkit-keyframes slideDown {
@@ -198,6 +206,7 @@ html, body { overflow-x: hidden; min-height: 100%; }
 
 /* Modifiers */
 .q { font-size: 110%; line-height: 1.5em; font-weight: 600; }
+
 .a { padding-left: 2em; line-height: 1.5em; }
 
 .disabled {
@@ -222,17 +231,17 @@ html, body { overflow-x: hidden; min-height: 100%; }
 }
  
 .aurora {
+	width: 69vw;
 	position: absolute;
-	width: 100%;
 	vertical-align: middle; 
 	height: 15em;
 	overflow-x: hidden;
+	right: 1rem;
+	z-index: 0;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 		-ms-user-select: none;
 			user-select: none;
-	right: 1rem;
-	z-index: 0;
 }
 
 .logo { 
