@@ -1,0 +1,13 @@
+/* Cursors (why not lol) */
+.cursor  + .def			{cursor:url("cur/def.cur"), 			   auto; }
+.cursor  + .ew-resize	{cursor:url("cur/ew-resize.cur"), 	  ew-resize; }
+.cursor  + .help		{cursor:url("cur/help.cur"), 			   help; }
+.cursor  + .nesw-resize {cursor:url("cur/nesw-resize.cur"), nesw-resize; }
+.cursor  + .disabled	{cursor:url("cur/not-allowed.cur"), not-allowed; }
+.cursor  + .n-resize	{cursor:url("cur/n-resize.cur"), 	   n-resize; }
+.cursor  + .ns-resize	{cursor:url("cur/ns-resize.cur"), 	  ns-resize; }
+.cursor  + .nwse-resize {cursor:url("cur/nwse-resize.cur"), nwse-resize; }
+.cursor  + .pointer		{cursor:url("cur/pointer.cur"), 		pointer; }
+.cursor  + .text		{cursor:url("cur/text.cur"), 			   text; }
+.cursor  + .move		{cursor:url("cur/move.cur"), 			   move; }
+/* --- */

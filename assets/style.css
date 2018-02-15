@@ -305,20 +305,6 @@ body {
 /* --- */
 
 
-/* Cursors (why not lol) */
-.cursor  + .def			{cursor:url("cur/def.cur"), 			   auto; }
-.cursor  + .ew-resize	{cursor:url("cur/ew-resize.cur"), 	  ew-resize; }
-.cursor  + .help		{cursor:url("cur/help.cur"), 			   help; }
-.cursor  + .nesw-resize {cursor:url("cur/nesw-resize.cur"), nesw-resize; }
-.cursor  + .disabled	{cursor:url("cur/not-allowed.cur"), not-allowed; }
-.cursor  + .n-resize	{cursor:url("cur/n-resize.cur"), 	   n-resize; }
-.cursor  + .ns-resize	{cursor:url("cur/ns-resize.cur"), 	  ns-resize; }
-.cursor  + .nwse-resize {cursor:url("cur/nwse-resize.cur"), nwse-resize; }
-.cursor  + .pointer		{cursor:url("cur/pointer.cur"), 		pointer; }
-.cursor  + .text		{cursor:url("cur/text.cur"), 			   text; }
-.cursor  + .move		{cursor:url("cur/move.cur"), 			   move; }
-/* --- */
-
 /* Content */
 .gridBody {
 	position: relative;
@@ -398,7 +384,7 @@ body {
 	100% { opacity: 1 }
 }
 
-.left{
+.left {
 	-webkit-animation: animationLeft linear 15s alternate;
 			animation: animationLeft linear 15s alternate;
 	-webkit-animation-iteration-count: infinite;
@@ -556,9 +542,6 @@ a.button {
 	}
 
 	a.button:active {
-		-webkit-transition: all 0.125s ease;
-			 -o-transition: all 0.125s ease;
-				transition: all 0.125s ease;
 		-webkit-box-shadow: none;
 				box-shadow: none;
 		background: url("img/buttonPressed.png") no-repeat center;
@@ -623,6 +606,13 @@ input[type=checkbox] {
 			border-image-source: url("img/checkbox.png");
 	}
 
+	input[type=checkbox]:checked + label {
+		background: url("img/checkboxChecked.png") no-repeat center;
+		-ms-border-image-source: url("img/checkboxChecked.png");
+		 -o-border-image-source: url("img/checkboxChecked.png");
+			border-image-source: url("img/checkboxChecked.png");
+	}
+
 	input[type=checkbox]:hover + label {
 		background: url("img/checkboxHover.png") no-repeat center;
 		-webkit-transition: all 0.125s ease;
@@ -633,21 +623,9 @@ input[type=checkbox] {
 			border-image-source: url("img/checkboxHover.png");
 	}
 
-	input[type=checkbox]:checked + label {
-		background: url("img/checkboxChecked.png") no-repeat center;
-		-webkit-transition: all 0.75s ease;
-			 -o-transition: all 0.75s ease;
-				transition: all 0.75s ease;
-		-ms-border-image-source: url("img/checkboxChecked.png");
-		 -o-border-image-source: url("img/checkboxChecked.png");
-			border-image-source: url("img/checkboxChecked.png");
-	}
 
 	input[type=checkbox]:hover:checked + label {
 		background: url("img/checkboxCheckedHover.png") no-repeat center;
-		-webkit-transition: all 0.125s ease;
-			 -o-transition: all 0.125s ease;
-				transition: all 0.125s ease;
 		-ms-border-image-source: url("img/checkboxCheckedHover.png");
 		 -o-border-image-source: url("img/checkboxCheckedHover.png");
 			border-image-source: url("img/checkboxCheckedHover.png");
@@ -697,9 +675,6 @@ input[type=radio] { display:none; }
 
 	input[type=radio]:checked + label {
 		background: url("img/radioChecked.png") no-repeat center;
-		-webkit-transition: all 0.125s ease;
-			 -o-transition: all 0.125s ease;
-				transition: all 0.125s ease;
 		-ms-border-image-source: url("img/radioChecked.png");
 		 -o-border-image-source: url("img/radioChecked.png");
 			border-image-source: url("img/radioChecked.png");
@@ -707,9 +682,6 @@ input[type=radio] { display:none; }
 
 	input[type=radio]:hover:checked + label {
 		background: url("img/radioCheckedHover.png") no-repeat center;
-		-webkit-transition: all 0.125s ease;
-			 -o-transition: all 0.125s ease;
-				transition: all 0.125s ease;
 		-ms-border-image-source: url("img/radioCheckedHover.png");
 		 -o-border-image-source: url("img/radioCheckedHover.png");
 			border-image-source: url("img/radioCheckedHover.png");
