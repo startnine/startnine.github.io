@@ -310,6 +310,7 @@ body {
 	position: relative;
 	bottom: 25vh;
 	left: 10vh;
+	z-index: 8463456435634545360234756890476089345;
 }
 	.windowparents .window {
 		border-radius: 1em;
@@ -318,7 +319,7 @@ body {
 		height: 6em;
 		display: inline-block;
 		background: white;
-		z-index: 696970;
+		z-index: 802347568904767945768923456789426789234645789089345;
 		-webkit-box-shadow: 0.1rem 0.2rem 1rem rgba(0,0,0,0.5);
 				box-shadow: 0.1rem 0.2rem 1rem rgba(0,0,0,0.5);
 	}
