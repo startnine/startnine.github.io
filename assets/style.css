@@ -304,6 +304,53 @@ body {
 }
 /* --- */
 
+/* Error Box */
+.windowparents { 
+	text-align: center; 
+	position: relative;
+	bottom: 25vh;
+	left: 10vh;
+}
+	.windowparents .window {
+		border-radius: 1em;
+		position: fixed;
+		width: 10em;
+		height: 6em;
+		display: inline-block;
+		background: white;
+		z-index: 696970;
+		-webkit-box-shadow: 0.1rem 0.2rem 1rem rgba(0,0,0,0.5);
+				box-shadow: 0.1rem 0.2rem 1rem rgba(0,0,0,0.5);
+	}
+
+		.windowparents .window .windowtitle { 
+			position: relative;
+			bottom: 1em;
+			height: 1.5em;
+			color: white;
+			border-radius: 1em 1em 0 0;
+			background: #6fb0f3 url('img/headerBackground.svg');
+			background: -webkit-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
+				 background: -o-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
+				  background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
+		}
+
+			.windowparents .window .windowtitle p { 
+				position: relative;
+				left: 1em;
+			}
+
+			.windowparents .window .windowtitle .close { 
+				position: relative;
+				float: right; 
+				right: 1em;
+			}
+
+		.windowparents .window .windowcontent {
+			position: relative;
+			bottom: 1.8em;
+		}
+/* --- */
 
 /* Content */
 .gridBody {
