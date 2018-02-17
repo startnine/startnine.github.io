@@ -785,7 +785,6 @@ input[type=radio]:hover:checked + label {
 			grid-column: 1;
 	}
 
-	.headerBackground a.button { min-width: 90vw; }
 }
 
 @media screen and (max-width: 37.5rem) {
@@ -814,6 +813,10 @@ input[type=radio]:hover:checked + label {
 	.no-cssgrid .tabContent { display: initial; width: auto; }
 
 	.no-cssgrid .side { display: block; width: auto; }
+
+	.headerBackground a.button { 
+		min-width: ; 
+	}
 }
 
 /* --- */
