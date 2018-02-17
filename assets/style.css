@@ -665,6 +665,10 @@ a.button:hover {
 	-webkit-transition: all 0.125s ease;
 		 -o-transition: all 0.125s ease;
 			transition: all 0.125s ease;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
 	background: url("img/buttonHover.png") no-repeat center;
 	border-image-source: url("img/buttonHover.png");
 }
@@ -672,11 +676,19 @@ a.button:hover {
 a.button:active {
 	-webkit-box-shadow: none;
 			box-shadow: none;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
 	background: url("img/buttonPressed.png") no-repeat center;
 	border-image-source: url("img/buttonPressed.png");
 }
 
 a.button.disabled {
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
 	-webkit-box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
 			box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
 	background: url("img/buttonDisabled.png") no-repeat center;

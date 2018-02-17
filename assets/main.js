@@ -16,10 +16,13 @@ function menuBarNav() {
 function burgerButton(x) {
     x.classList.toggle("change");
 }
+
+// error box
 $(function() {
     $("#draggable").draggable();
 });
-if (window.location.href = "start9.menu") {
+
+if (window.self !== window.top) {
     document.getElementById('window').style.display = "none";
 }
 
