@@ -710,13 +710,14 @@ a.button.disabled {
 input[type=checkbox] { display: none; }
 
 input[type=checkbox] + label {
-	-moz-background-size: 100% 100%;
-	-o-background-size: 100% 100%;
-	-o-transition: all 0.75s ease;
 	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
 	-webkit-transition: all 0.75s ease;
+		 -o-transition: all 0.75s ease;
+			transition: all 0.75s ease;
 	background: url("img/checkbox.png") no-repeat center;
-	background-size: 100% 100%;
 	border-image-outset: 0 0 0 0;
 	border-image-repeat: stretch stretch;
 	border-image-slice: 1 1 1 1 fill;
@@ -725,14 +726,10 @@ input[type=checkbox] + label {
 	display: inline-block;
 	height: 1rem;
 	padding: 0;
-	transition: all 0.75s ease;
 	width: 1rem;
 }
 
 input[type=checkbox]:checked + label {
-	-webkit-transition: all 0.125s ease;
-		 -o-transition: all 0.125s ease;
-			transition: all 0.125s ease;
 	background: url("img/checkboxChecked.png") no-repeat center;
 	border-image-source: url("img/checkboxChecked.png");
 }
@@ -740,6 +737,9 @@ input[type=checkbox]:checked + label {
 input[type=checkbox]:hover + label {
 	background: url("img/checkboxHover.png") no-repeat center;
 	border-image-source: url("img/checkboxHover.png");
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
 }
 
 
@@ -772,18 +772,19 @@ input[type=radio] + label {
 	width: 1rem;
 }
 
-input[type=radio]:hover + label {
-	-webkit-transition: all 0.125s ease;
-		 -o-transition: all 0.125s ease;
-			transition: all 0.125s ease;
-	background: url("img/checkboxHover.png") no-repeat center;
-	border-image-source: url("img/checkboxHover.png");
-}
-
 input[type=radio]:checked + label {
 	background: url("img/radioChecked.png") no-repeat center;
 	border-image-source: url("img/radioChecked.png");
 }
+
+input[type=radio]:hover + label {
+	background: url("img/checkboxHover.png") no-repeat center;
+	border-image-source: url("img/checkboxHover.png");
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
+}
+
 
 input[type=radio]:hover:checked + label {
 	background: url("img/radioCheckedHover.png") no-repeat center;
@@ -810,7 +811,7 @@ input[type=radio]:hover:checked + label {
 		-ms-grid-column: 1;
 			grid-column: 1;
 	}
-	
+
 	.gridBody { padding-right: 0.5em; }
 
 }
