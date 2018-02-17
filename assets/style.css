@@ -121,7 +121,11 @@ html, body {
 
 
 /* Modifiers */
-
+.invisible {
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+}
 .q {
 	font-size: 110%;
 	font-weight: 600;
@@ -454,7 +458,7 @@ body {
 
 .tabContent .show { display: block; }
 
-#news, #faq {display: none;}
+#News, #FAQ {display: none;}
 
 .no-cssgrid .gridBody { display: table; }
 
@@ -806,6 +810,8 @@ input[type=radio]:hover:checked + label {
 		-ms-grid-column: 1;
 			grid-column: 1;
 	}
+	
+	.gridBody { padding-right: 0.5em; }
 
 }
 
@@ -816,10 +822,12 @@ input[type=radio]:hover:checked + label {
 		-webkit-animation: 0.3s slideDown ease;
 				animation: 0.3s slideDown ease;
 	}
-
+	
 	.headerBackground .burgerButton { pointer-events: visible; cursor: pointer; opacity: 1; }
 
 	.headerBackground .responsive a.button { display: inline-block; width: 100%; padding: 1rem 0; }
+
+	.headerBackground a.button { width: 100%; padding: 1rem 0; }
 
 	.title { visibility: hidden; }
 

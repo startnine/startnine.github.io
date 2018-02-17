@@ -13,7 +13,7 @@
 		<meta property="og:description" content="An extensible, customizable, modular shell supplement for Windows."/>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-		<script async src="assets/main.js"></script>
+		<script async src="assets/main-min.js"></script>
 		<link rel="stylesheet" href="assets/style.css" type="text/css"/>
 		<meta name="theme-color" content="#4d88d5">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,11 +43,11 @@
 				</div>
 				<p class="title">Home</p>
 				<nav class="menuBar" id="menuBar">
-					<a class="button" id="defaultTab" onclick="openTab(event, 'home')">Home</a>
+					<a class="button" onclick="openTab(event, 'Home')">Home</a>
 					<a class="button" target="_blank" href="https://github.com/StartNine/Start9/releases">Downloads</a>
-					<a class="button" onclick="openTab(event, 'news')">News</a>
+					<a class="button" onclick="openTab(event, 'News')">News</a>
 					<a class="button disabled">Community</a>
-					<a class="button disabled" onclick="openTab(event, 'faq')">FAQ</a>
+					<a class="button disabled" onclick="openTab(event, 'FAQ')">FAQ</a>
 				</nav>
 			</div>
 			<div class="headerSpace"></div>
@@ -65,16 +65,16 @@
 		</header>
 
 		<div class="gridBody">
-			<section id="home" class="tabContent">
+			<section id="Home" class="tabContent">
 				<p>Start9 is a WIP extensible, customizable shell supplement for Windows, one which aims to be not only modular, but extends to many needs.</p><h2 id="planned-modules">Planned Modules</h2><p><em>Start9 is planned with with 14 modules pre-installed, each module functioning like a familiar user interface.</em>:</p><h3 id="start-menus-screens">Start Menus / Screens</h3><ul><li>Windows 8.1 (build 9600) </li><li>Windows 10 (build 9795) </li><li>Windows 10 (build 9879) </li><li>Windows 10 (build 9926) </li><li>Windows 10 (build 10240) </li><li>Windows 10 (build 14393) </li><li>Windows 10 (build 15063) </li></ul><h3 id="taskbars">Taskbars</h3><ul><li>Windows XP (3790) </li><li>windows Vista (6000) </li><li>Windows 7 (7601) </li><li>macOS Dock</li></ul><h3 id="misc-">Misc.</h3><ul><li>Windows Longhorn (build 4074) Sidebar </li><li>Windows 10 (build 9888) Notification Center </li><li>Windows 10 (build 10240) Notification Center </li></ul><h2 id="compatability">Compatability</h2><p><em>As Start9 is still in the early stages of development, compatibility isn't a big concern right now</em><h2 id="dependencies-and-frameworks">Dependencies and Frameworks</h2><p>[These should be resolved by NuGet, but we want this to look longer or whatever]</p><ul><li>Runtime<ul><li>.NET Framework 4.0</li><li>WPF</li></ul></li><li>Packages<ul><li>ControlzEx</li><li>Fluent.Ribbon</li></ul></li></ul>
 			</section>
 
-			<section id="news" class="tabContent">
+			<section id="News" class="tabContent">
 				<div><h2>New stuff on the horizon</h2><p class="customMargin"><i>by</i> <b>rob55rod/Splitwirez and Reflectronic</b>, February 16th, 2018<br><br>Hello everyone,<br>&emsp;&emsp;Development is going well so far. Firstly, we've decided to migrate Start9's extensibility manager to use the Managed Add-In Framework (<span class="code">System.AddIn</span>). MAF is going to assist us with module discovery and communication, stability of the Start9 host program, and backwards-compatibility in the event of major changes to the API down the line. While not using MAF yet, preliminary work has started on a few modules:<br><br><a href="https://i.imgur.com/650TMQe.png" target="_blank">Build 7601 start menu</a><br><a href="https://i.imgur.com/l3PDHb1.gif" target="_blank">Build 8601 start menu</a></p><br><p>Rather than reinventing the wheel, these modules take advantage of WPF's <span class="code">ResourceDictionary</span> capabilities for skinning purposes, yielding incredible flexibility for skin artists while also ensuring module developers have a much smaller amount of work to do to facilitate skinning.</p><p>Related to our efforts to enhancing the codebase quality, the Start9 project, as a whole, on GitHub has been trisected - <span class="code">Start9.Host</span>, <span class="code">Start9.Api</span>, and <span class="code">Start9.SkinDesigner</span>, corresponding to the projects' respective namespaces. This will make everything easier for everyone to manage everything, and to facilitate getting the <span class="code">Start9.Api</span> onto NuGet. We've also decided to give each (planned) module its own repository - we'll inform you when new developments start related to new modules.</p><p>On another note, I've started working on a Sticky Note application, entitled Sticky9, as a proof-of-concept of the Start9 API's uses outside of just modules:</p><a href="https://i.imgur.com/2Kjq4Wb.gif" target="_blank">Checkboxes in Sticky9</a><br><a href="https://i.imgur.com/J1mO8lP.gif" target="_blank">Coloures in Sticky9</a><p>Finally, we'd like to apologize for slow development recently. We're hoping to speed things up, moving forward...speaking of which, we're still looking for developers, so if you have experience with C# and are comfortable with .NET 4.0 and WPF, feel free to join our Discord server, we'll discuss matters further there :OD<br>If you don't feel like making a commitment, feel free to fork us! We'll probably accept your pull request. </p><p>Expect more news soon - we're hoping to update this log more often in the future.</p><br><br></div>
 				<div><h2>A fresh start</h2><p class="customMargin"><i>by</i> <b>rob55rod/Splitwirez</b>, December 8th, 2017<br><br>Hello everyone,<br>&emsp;&emsp;We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code. All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.</p><br><br></div>
 			</section>
 
-			<section id="faq" class="tabContent">
+			<section id="FAQ" class="tabContent">
 				<h2>FAQ</h2>
 				<div class="q">Question?</div><div class="a">Answer.</div> <br>
 				<div class="q">Question?</div><div class="a">Answer.</div> <br>
