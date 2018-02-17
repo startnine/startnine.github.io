@@ -301,11 +301,19 @@ html, body {
 
 .menuBar a.button:active {
 	background: url("img/menuBarButton_pressed.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
 	border-image-source: url("img/menuBarButton_pressed.png");
 }
 
 .menuBar a.button.disabled {
 	background: url("img/menuBarButton.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
 	border-image-source: url("img/menuBarButton.png");
 	box-shadow: none;
 	opacity: 0.6;
@@ -445,6 +453,7 @@ body {
 .tabContent .show { display: block; }
 
 #news, #faq {display: none;}
+
 .no-cssgrid .gridBody { display: table; }
 
 .no-cssgrid .tabContent {

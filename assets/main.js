@@ -1,20 +1,9 @@
-function openNewTab(n){var o=window.open(n,"_blank");o.focus()}
-function openNewLink(n){var o=window.open(n,"_self");o.focus()}
+// select default tab
+window.onload = function() {
+    document.getElementById("defaultTab").click()
+};
 
-window.onload = function() {document.getElementById("defaultTab").click()};
-
-// w3s Taberino
-function openTab(evt, tabName) {
-	var i;
-	var x = document.getElementsByClassName("tabContent");
-	for (i = 0; i < x.length; i++) {
-	    x[i].style.display = "none"; 
-	}
-	document.getElementById(tabName).style.display = "block";
-	evt.currentTarget.className += " active";
-}
-
-// W3S repsonsive navbar
+// burger button
 function menuBarNav() {
     var x = document.getElementById("menuBar");
     if (x.className === "menuBar") {
@@ -27,14 +16,24 @@ function menuBarNav() {
 function burgerButton(x) {
     x.classList.toggle("change");
 }
-
 $(function() {
-	$("#draggable").draggable();
-}); 
-
+    $("#draggable").draggable();
+});
 if (window.location.href = "start9.menu") {
-	document.getElementById('window').style.display = "none";
+    document.getElementById('window').style.display = "none";
 }
+
+// w3s Taberino
+function openTab(evt, tabName) {
+	var i;
+	var x = document.getElementsByClassName("tabContent");
+	for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none"; 
+	}
+	document.getElementById(tabName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+
 
 /*! modernizr 3.5.0 (Custom Build) | MIT *
  * https://modernizr.com/download/?-cssgrid_cssgridlegacy-setclasses !*/
