@@ -1,51 +1,51 @@
 /* Import Fonts  */
 /* Light */
 @font-face {
-    font-family: Selawik;
-    font-style: normal;
-    font-weight: 200;
-    src: url("font/selawkl.woff2") format("woff2"),
-         url("font/selawkl.eot") format("embedded-opentype");
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 200;
+	src: url("font/selawkl.woff2") format("woff2"),
+		 url("font/selawkl.eot") format("embedded-opentype");
 }
 
 /* Semilight */
 
 @font-face {
-    font-family: Selawik;
-    font-style: normal;
-    font-weight: 300;
-    src: url("font/selawksl.woff2") format("woff2"),
-         url("font/selawksl.eot") format("embedded-opentype");
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 300;
+	src: url("font/selawksl.woff2") format("woff2"),
+		 url("font/selawksl.eot") format("embedded-opentype");
 }
 
 /* Normal */
 
 @font-face {
-    font-family: Selawik;
-    font-style: normal;
-    font-weight: 400;
-    src: url("font/selawk.woff2") format("woff2"),
-         url("font/selawk.eot") format("embedded-opentype");
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 400;
+	src: url("font/selawk.woff2") format("woff2"),
+		 url("font/selawk.eot") format("embedded-opentype");
 }
 
 /* Semibold */
 
 @font-face {
-    font-family: Selawik;
-    font-style: normal;
-    font-weight: 600;
-    src: url("font/selawksb.woff2") format("woff2"),
-         url("font/selawksb.eot") format("embedded-opentype");
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 600;
+	src: url("font/selawksb.woff2") format("woff2"),
+		 url("font/selawksb.eot") format("embedded-opentype");
 }
 
 /* Bold */
 
 @font-face {
-    font-family: Selawik;
-    font-style: normal;
-    font-weight: 700;
-    src: url("font/selawkb.woff2") format("woff2"),
-         url("font/selawkb.eot") format("embedded-opentype");
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 700;
+	src: url("font/selawkb.woff2") format("woff2"),
+		 url("font/selawkb.eot") format("embedded-opentype");
 }
 
 * { font-family: "Selawik", "Segoe UI"; }
@@ -55,8 +55,8 @@
 /* Remove X Overflow */
 
 html, body {
-    min-height: 100%;
-    overflow-x: hidden;
+	min-height: 100%;
+	overflow-x: hidden;
 }
 
 /* --- */
@@ -64,12 +64,12 @@ html, body {
 /* Hamburger */
 
 .burgerButton {
-    border-radius: 1em;
-    cursor: pointer;
-    display: inline-block;
-    left: 1.5rem;
-    position: relative;
-    top: 0.6em;
+	border-radius: 1em;
+	cursor: pointer;
+	display: inline-block;
+	left: 1.5rem;
+	position: relative;
+	top: 0.6em;
 }
 
 .burgerButton:hover .bar1 { background-color: white; }
@@ -79,42 +79,42 @@ html, body {
 .burgerButton:hover .bar3 { background-color: white; }
 
 .bar1, .bar2, .bar3 {
-    -o-transition: 0.3s;
-    -webkit-box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
-    -webkit-transition: 0.3s;
-    background-color: #8cb5f7;
-    border-radius: 1em;
-    box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
-    height: 0.125rem;
-    margin: 0.313rem 0;
-    transition: 0.3s;
-    width: 1.5em;
+	-o-transition: 0.3s;
+	-webkit-box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
+	-webkit-transition: 0.3s;
+	background-color: #8cb5f7;
+	border-radius: 1em;
+	box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
+	height: 0.125rem;
+	margin: 0.313rem 0;
+	transition: 0.3s;
+	width: 1.5em;
 }
 
 .change .bar1 {
-    -ms-transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
-    -webkit-box-shadow: 0 0 0 0 #375f98;
-    -webkit-transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
-    background-color: #8cb5f7;
-    box-shadow: 0 0 0 0 #375f98;
-    transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
-    width: 1.5em;
+	-ms-transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
+	-webkit-box-shadow: 0 0 0 0 #375f98;
+	-webkit-transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
+	background-color: #8cb5f7;
+	box-shadow: 0 0 0 0 #375f98;
+	transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
+	width: 1.5em;
 }
 
 .change .bar2 {
-    background-color: #8cb5f7;
-    opacity: 0;
-    width: 1.5em;
+	background-color: #8cb5f7;
+	opacity: 0;
+	width: 1.5em;
 }
 
 .change .bar3 {
-    -ms-transform: rotate(45deg) translate(-0.375rem, -0.25rem);
-    -webkit-box-shadow: 0 0 0 0 #375f98;
-    -webkit-transform: rotate(45deg) translate(-0.375rem, -0.25rem);
-    background-color: #8cb5f7;
-    box-shadow: 0 0 0 0 #375f98;
-    transform: rotate(45deg) translate(-0.375rem, -0.25rem);
-    width: 1.5em;
+	-ms-transform: rotate(45deg) translate(-0.375rem, -0.25rem);
+	-webkit-box-shadow: 0 0 0 0 #375f98;
+	-webkit-transform: rotate(45deg) translate(-0.375rem, -0.25rem);
+	background-color: #8cb5f7;
+	box-shadow: 0 0 0 0 #375f98;
+	transform: rotate(45deg) translate(-0.375rem, -0.25rem);
+	width: 1.5em;
 }
 
 /* --- */
@@ -123,71 +123,77 @@ html, body {
 /* Modifiers */
 
 .q {
-    font-size: 110%;
-    font-weight: 600;
-    line-height: 1.5em;
+	font-size: 110%;
+	font-weight: 600;
+	line-height: 1.5em;
 }
 
 .a {
-    line-height: 1.5em;
-    padding-left: 2em;
+	line-height: 1.5em;
+	padding-left: 2em;
 }
 
 .disabled {
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    opacity: 0.6;
-    pointer-events: none;
-    user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	opacity: 0.6;
+	pointer-events: none;
 }
 
 .customMargin { margin: -1em 0; }
+
+.code { font-family: monospace; font-size: 1.25em;}
+
+.resize { height: 25em; }
+
 
 /* --- */
 
 /* Aurora Panel */
 
 .bodyBG {
-    height: 10em;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    z-index: 0;
+	height: 10em;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	z-index: 0;
 }
 
 .aurora {
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    height: 15em;
-    left: 5vw;
-    overflow-x: hidden;
-    position: absolute;
-    user-select: none;
-    vertical-align: middle;
-    width: 100vw;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	height: 15em;
+	left: 5vw;
+	overflow-x: hidden;
+	position: absolute;
+	user-select: none;
+	vertical-align: middle;
+	width: 100vw;
 }
 
 .logo {
-    bottom: 10em;
-    font-weight: 600;
-    min-width: 100%;
-    position: relative;
-    text-align: center;
-    z-index: 1000;
-    z-index: 100;
+	bottom: 10em;
+	font-weight: 600;
+	min-width: 100%;
+	position: relative;
+	text-align: center;
+	z-index: 1000;
+	z-index: 100;
 }
 
 .logo .image {
-    height: 6.5rem;
-    vertical-align: middle;
-    width: 5rem;
+	height: 6.5rem;
+	vertical-align: middle;
+	width: 5rem;
 }
 
 .logo .text {
-    font-size: 3em;
-    vertical-align: middle;
+	font-size: 3em;
+	vertical-align: middle;
 }
 
 /* --- */
@@ -200,126 +206,111 @@ html, body {
 .headerSpace { height: 6em; }
 
 .headerBackground {
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.375rem 0.375rem rgba(0, 0, 0, 0.23);
-    -webkit-user-select: none;
-    background: #6fb0f3 url('img/headerBackground.svg');
-    background: -webkit-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-    background: -o-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-    background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.375rem 0.375rem rgba(0, 0, 0, 0.23);
-    height: 6em;
-    padding: 0;
-    position: fixed;
-    user-select: none;
-    vertical-align: top;
-    width: 100%;
-    z-index: 42069;
+	-webkit-box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.375rem 0.375rem rgba(0, 0, 0, 0.23);
+			box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.375rem 0.375rem rgba(0, 0, 0, 0.23);
+	background: #6fb0f3 url('img/headerBackground.svg');
+	background: -webkit-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
+		 background: -o-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
+		  background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	height: 6em;
+	padding: 0;
+	position: fixed;
+	vertical-align: top;
+	width: 100%;
+	z-index: 42069;
 }
 
 .title {
-    bottom: 2.5rem;
-    color: white;
-    font-size: 1.2em;
-    height: 1rem;
-    position: relative;
-    text-align: center;
-    vertical-align: center;
+	bottom: 2.5rem;
+	color: white;
+	font-size: 1.2em;
+	height: 1rem;
+	position: relative;
+	text-align: center;
+	vertical-align: center;
 }
 
 .headerBackground .burgerButton {
-    opacity: 0;
-    pointer-events: none;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .menuBar {
-    align-self: flex-end;
-    background: #3669af url('img/menuBar.svg');
-    background: -webkit-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
-    background: -o-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
-    background: linear-gradient(to right, #3669af 1%, #5f9cda 50%, #3669af 100%);
-    border-image-outset: 0 0 0 0;
-    border-image-repeat: stretch stretch;
-    border-image-slice: 20 10 0 10 fill;
-    border-image-source: url("img/menuBar.jpg");
-    border-image-width: 1.25rem 0.625rem 0 0.625rem;
-    border-radius: 1rem 1rem 0 0;
-    bottom: 2.3rem;
-    min-height: 3rem;
-    min-width: 100%;
-    overflow: auto;
-    position: relative;
-    text-align: center;
-    z-index: 69420;
+	align-self: flex-end;
+	background: #3669af url('img/menuBar.svg');
+	background: -webkit-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
+		 background: -o-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
+		background: linear-gradient(to right, #3669af 1%, #5f9cda 50%, #3669af 100%);
+	border-image-outset: 0 0 0 0;
+	border-image-repeat: stretch stretch;
+	border-image-slice: 20 10 0 10 fill;
+	border-image-source: url("img/menuBar.jpg");
+	border-image-width: 1.25rem 0.625rem 0 0.625rem;
+	border-radius: 1rem 1rem 0 0;
+	bottom: 2.3rem;
+	min-height: 3rem;
+	min-width: 100%;
+	overflow: auto;
+	position: relative;
+	text-align: center;
+	z-index: 69420;
 }
 
 .menuBar a.button {
-    -moz-background-size: 100% 100%;
-    -ms-border-image-source: url("img/menuBarButton.png");
-    -o-background-size: 100% 100%;
-    -o-border-image-source: url("img/menuBarButton.png");
-    -o-transition: all 0.3s ease;
-    -webkit-animation: fading 0.3s ease;
-    -webkit-background-size: 100% 100%;
-    -webkit-box-shadow: none;
-    -webkit-transition: all 0.3s ease;
-    animation: fading 0.3s ease;
-    background: url("img/menuBarButton.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-source: url("img/menuBarButton.png");
-    box-shadow: none;
-    color: white;
-    display: inline-block;
-    font-size: 0.85em;
-    height: 1.75em;
-    line-height: 1.75em;
-    padding: 0.9rem 5%;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.125s ease;
-    transition: all 0.3s ease;
+	-ms-border-image-source: url("img/menuBarButton.png");
+	 -o-border-image-source: url("img/menuBarButton.png");
+		border-image-source: url("img/menuBarButton.png");
+	background: url("img/menuBarButton.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
+	-webkit-transition: all 0.75s ease;
+		 -o-transition: all 0.75s ease;
+			transition: all 0.75s ease;
+	box-shadow: none;
+	color: white;
+	display: inline-block;
+	font-size: 0.85em;
+	height: 1.75em;
+	line-height: 1.75em;
+	padding: 0.9rem 5%;
+	text-align: center;
+	text-decoration: none;
 }
 
 .menuBar a.button:hover {
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -o-transition: all 0.125s ease;
-    -webkit-animation: fading 0.125s ease;
-    -webkit-background-size: 100% 100%;
-    -webkit-transition: all 0.125s ease;
-    animation: fading 0.125s ease;
-    background: url("img/menuBarButton_hover.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-outset: 0 0 0 0;
-    border-image-repeat: stretch stretch;
-    border-image-slice: 0 7 7 7 fill;
-    border-image-source: url("img/menuBarButton_hover.png");
-    border-image-width: 0 0.438rem 0.438rem 0.438rem;
-    transition: all 0.125s ease;
+	background: url("img/menuBarButton_hover.png") no-repeat center;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
+	border-image-outset: 0 0 0 0;
+	border-image-repeat: stretch stretch;
+	border-image-slice: 0 7 7 7 fill;
+	border-image-source: url("img/menuBarButton_hover.png");
+	border-image-width: 0 0.438rem 0.438rem 0.438rem;
+	transition: all 0.125s ease;
 }
 
 .menuBar a.button:active {
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-animation: fading 0.125s ease;
-    -webkit-background-size: 100% 100%;
-    animation: fading 0.125s ease;
-    background: url("img/menuBarButton_pressed.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-source: url("img/menuBarButton_pressed.png");
+	background: url("img/menuBarButton_pressed.png") no-repeat center;
+	border-image-source: url("img/menuBarButton_pressed.png");
 }
 
 .menuBar a.button.disabled {
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    background: url("img/menuBarButton.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-source: url("img/menuBarButton.png");
-    box-shadow: none;
-    opacity: 0.6;
-    text-align: center;
+	background: url("img/menuBarButton.png") no-repeat center;
+	border-image-source: url("img/menuBarButton.png");
+	box-shadow: none;
+	opacity: 0.6;
+	text-align: center;
 }
 
 /* --- */
@@ -328,12 +319,12 @@ html, body {
 /* Body */
 
 body {
-    background: #C8D4E7 url('img/background.svg') repeat-x top center fixed;
-    background: -webkit-linear-gradient(white, #C8D4E7);
-    background: -o-linear-gradient(white, #C8D4E7);
-    background: linear-gradient(white, #C8D4E7);
-    margin: 0;
-    padding: 0;
+	background: #C8D4E7 url('img/background.svg') repeat-x top center fixed;
+	background: -webkit-linear-gradient(white, #C8D4E7);
+	background: -o-linear-gradient(white, #C8D4E7);
+	background: linear-gradient(white, #C8D4E7);
+	margin: 0;
+	padding: 0;
 }
 
 /* --- */
@@ -341,101 +332,100 @@ body {
 /* Error Box */
 
 .windowparents {
-    bottom: 25vh;
-    left: 10vh;
-    position: relative;
-    text-align: center;
-    z-index: 8463456435634545360234756890476089345;
+	bottom: 25vh;
+	left: 10vh;
+	position: relative;
+	text-align: center;
 }
 
 .windowparents .window {
-    -webkit-box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
-    background: white;
-    border-radius: 1em;
-    box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    height: 6em;
-    position: fixed;
-    width: 10em;
-    z-index: 802347568904767945768923456789426789234645789089345;
+	-webkit-box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
+			box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
+	background: white;
+	border-radius: 1em;
+	display: inline-block;
+	height: 6em;
+	position: fixed;
+	width: 10em;
 }
 
 .windowparents .window .windowtitle {
-    background: #6fb0f3 url('img/headerBackground.svg');
-    background: -webkit-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-    background: -o-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-    background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-    border-radius: 1em 1em 0 0;
-    bottom: 1em;
-    color: white;
-    height: 1.5em;
-    position: relative;
+	background: #6fb0f3 url('img/headerBackground.svg');
+	background: -webkit-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
+		 background: -o-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
+		  background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
+	border-radius: 1em 1em 0 0;
+	bottom: 1em;
+	color: white;
+	height: 1.5em;
+	position: relative;
 }
 
 .windowparents .window .windowtitle p {
-    left: 1em;
-    position: relative;
+	left: 1em;
+	position: relative;
 }
 
 .windowparents .window .windowtitle .close {
-    float: right;
-    position: relative;
-    right: 1em;
+	float: right;
+	position: relative;
+	right: 1em;
 }
 
 .windowparents .window .windowcontent {
-    bottom: 1.8em;
-    position: relative;
+	bottom: 1.8em;
+	position: relative;
 }
 
 /* --- */
 
 /* Content */
-
 .gridBody {
-    -ms-flex-line-pack: center;
-    -ms-grid-columns: 80% 15%;
-    -ms-grid-rows: 100% 100%;
-    align-content: center;
-    bottom: 13rem;
-    display: grid;
-    display: -ms-grid;
-    grid-gap: 0.625rem;
-    grid-template-columns: 80% 15%;
-    grid-template-rows: 100% 100%;
-    margin: 0 10%;
-    min-height: 100%;
-    padding: 0;
-    position: relative;
-    vertical-align: top;
-    z-index: 100;
+		 -ms-grid-columns: 80% 15%;
+	grid-template-columns: 80% 15%;
+		 -ms-grid-rows: 100% 100%;
+	grid-template-rows: 100% 100%;
+	-ms-flex-line-pack: center;
+		 align-content: center;
+	display: -ms-grid;
+		display: grid;
+	bottom: 13rem;
+	grid-gap: 0.625rem;
+	margin: 0 10%;
+	min-height: 100%;
+	padding: 0;
+	position: relative;
+	vertical-align: top;
+	z-index: 100;
 }
+	
+	.gridBody img { object-fit: scale-down; max-width: 90vw; max-height: 100vw;}
 
 .side {
-    -ms-flex-direction: column;
-    -ms-grid-column: 2;
-    -ms-grid-row: 1;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    grid-column: 2;
-    grid-row: 1;
-    padding-left: 1rem;
-    vertical-align: top;
+	-webkit-box-orient: vertical;
+		  flex-direction: column;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	-ms-grid-column: 2;
+		grid-column: 2;
+	-ms-grid-row: 1;
+		grid-row: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+		   display: flex;
+	padding-left: 1rem;
+	vertical-align: top;
 }
 
 .side .sideObject {
-    bottom: 1.5rem;
-    position: relative;
+	bottom: 1.5rem;
+	position: relative;
 }
 
 .sideObject {
-    margin-bottom: 2rem;
-    padding: 0.5rem 0;
-    vertical-align: top;
+	margin-bottom: 2rem;
+	padding: 0.5rem 0;
+	vertical-align: top;
 }
 
 .sideObject a.button { margin-top: 0.5rem; }
@@ -444,15 +434,13 @@ body {
 
 
 .tabContent {
-    -ms-grid-column: 1;
-    -ms-grid-row: 1;
-    -webkit-animation: fading .3s;
-    animation: fading .3s;
-    grid-column: 1;
-    grid-row: 1;
-    padding: 0 0.625rem;
-    vertical-align: top;
-    width: 100%;
+	-ms-grid-column: 1;
+		grid-column: 1;
+	-ms-grid-row: 1;
+		grid-row: 1;
+	padding: 0 0.625rem;
+	vertical-align: top;
+	width: 100%;
 }
 
 .tabContent .show { display: block; }
@@ -460,186 +448,171 @@ body {
 .no-cssgrid .gridBody { display: table; }
 
 .no-cssgrid .tabContent {
-    display: table-cell;
-    width: 80%;
+	display: table-cell;
+	width: 80%;
 }
 
 .no-cssgrid .side {
-    display: table-cell;
-    width: 15%;
+	display: table-cell;
+	width: 15%;
 }
 
 /* --- */
 
 /* Animation */
 
-@-webkit-keyframes fading {
-    0% { opacity: 0 }
-
-    50% { opacity: 1 }
-
-    100% { opacity: 1 }
-}
-
-@keyframes fading {
-    0% { opacity: 0 }
-
-    50% { opacity: 1 }
-
-    100% { opacity: 1 }
-}
-
 .left {
-    -webkit-animation: animationLeft linear 15s alternate;
-    -webkit-animation-iteration-count: infinite;
-    animation: animationLeft linear 15s alternate;
-    animation-iteration-count: infinite;
+	-webkit-animation: animationLeft linear 15s alternate;
+			animation: animationLeft linear 15s alternate;
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
 }
 
 .left2 {
-    -webkit-animation: animationLeft2 linear 35s alternate;
-    -webkit-animation-iteration-count: infinite;
-    animation: animationLeft2 linear 35s alternate;
-    animation-iteration-count: infinite;
+	-webkit-animation: animationLeft2 linear 35s alternate;
+			animation: animationLeft2 linear 35s alternate;
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes animationLeft {
-    0% {
-        -webkit-transform: translate(0px, 0px) scaleX(1);
-        transform: translate(0px, 0px) scaleX(1);
-    }
+	0% {
+		-webkit-transform: translate(0px, 0px) scaleX(1);
+				transform: translate(0px, 0px) scaleX(1);
+	}
 
-    100% {
-        -webkit-transform: translate(-200px, 0px) scaleX(1.25);
-        transform: translate(-200px, 0px) scaleX(1.25);
-    }
+	100% {
+		-webkit-transform: translate(-200px, 0px) scaleX(1.25);
+				transform: translate(-200px, 0px) scaleX(1.25);
+	}
 }
 
 @keyframes animationLeft {
-    0% {
-        -webkit-transform: translate(0px, 0px) scaleX(1);
-        transform: translate(0px, 0px) scaleX(1);
-    }
+	0% {
+		-webkit-transform: translate(0px, 0px) scaleX(1);
+				transform: translate(0px, 0px) scaleX(1);
+	}
 
-    100% {
-        -webkit-transform: translate(-200px, 0px) scaleX(1.25);
-        transform: translate(-200px, 0px) scaleX(1.25);
-    }
+	100% {
+		-webkit-transform: translate(-200px, 0px) scaleX(1.25);
+				transform: translate(-200px, 0px) scaleX(1.25);
+	}
 }
 
 @-webkit-keyframes animationLeft2 {
-    0% {
-        -webkit-transform: translate(0px, 0px) scaleX(1);
-        transform: translate(0px, 0px) scaleX(1);
-    }
+	0% {
+		-webkit-transform: translate(0px, 0px) scaleX(1);
+				transform: translate(0px, 0px) scaleX(1);
+	}
 
-    100% {
-        -webkit-transform: translate(-200px, 0px) scaleX(1.8);
-        transform: translate(-200px, 0px) scaleX(1.8);
-    }
+	100% {
+		-webkit-transform: translate(-200px, 0px) scaleX(1.8);
+				transform: translate(-200px, 0px) scaleX(1.8);
+	}
 }
 
 @keyframes animationLeft2 {
-    0% {
-        -webkit-transform: translate(0px, 0px) scaleX(1);
-        transform: translate(0px, 0px) scaleX(1);
-    }
+	0% {
+		-webkit-transform: translate(0px, 0px) scaleX(1);
+				transform: translate(0px, 0px) scaleX(1);
+	}
 
-    100% {
-        -webkit-transform: translate(-200px, 0px) scaleX(1.8);
-        transform: translate(-200px, 0px) scaleX(1.8);
-    }
+	100% {
+		-webkit-transform: translate(-200px, 0px) scaleX(1.8);
+				transform: translate(-200px, 0px) scaleX(1.8);
+	}
 }
 
 .right {
-    -webkit-animation: animationRight linear 10s alternate;
-    -webkit-animation-iteration-count: infinite;
-    animation: animationRight linear 10s alternate;
-    animation-iteration-count: infinite;
+	-webkit-animation: animationRight linear 10s alternate;
+			animation: animationRight linear 10s alternate;
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
 }
 
 .right2 {
-    -webkit-animation: animationRight2 linear 30s alternate !important;
-    -webkit-animation-iteration-count: infinite;
-    animation: animationRight2 linear 30s alternate !important;
-    animation-iteration-count: infinite;
-    left: 10vw;
+	-webkit-animation: animationRight2 linear 30s alternate;
+			animation: animationRight2 linear 30s alternate;
+	-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+	left: 10vw;
 }
 
 @-webkit-keyframes animationRight {
-    0% {
-        -webkit-transform: translate(0px, 0px) scaleX(1.00);
-        transform: translate(0px, 0px) scaleX(1.00);
-    }
+	0% {
+		-webkit-transform: translate(0px, 0px) scaleX(1.00);
+				transform: translate(0px, 0px) scaleX(1.00);
+	}
 
-    100% {
-        -webkit-transform: translate(200px, 0px) scaleX(1.25);
-        transform: translate(200px, 0px) scaleX(1.25);
-    }
+	100% {
+		-webkit-transform: translate(200px, 0px) scaleX(1.25);
+				transform: translate(200px, 0px) scaleX(1.25);
+	}
 }
 
 @keyframes animationRight {
-    0% {
-        -webkit-transform: translate(0px, 0px) scaleX(1.00);
-        transform: translate(0px, 0px) scaleX(1.00);
-    }
+	0% {
+		-webkit-transform: translate(0px, 0px) scaleX(1.00);
+				transform: translate(0px, 0px) scaleX(1.00);
+	}
 
-    100% {
-        -webkit-transform: translate(200px, 0px) scaleX(1.25);
-        transform: translate(200px, 0px) scaleX(1.25);
-    }
+	100% {
+		-webkit-transform: translate(200px, 0px) scaleX(1.25);
+				transform: translate(200px, 0px) scaleX(1.25);
+	}
 }
 
 @-webkit-keyframes animationRight2 {
-    0% {
-        -webkit-transform: translate(0px, 0px) scaleX(1);
-        transform: translate(0px, 0px) scaleX(1);
-    }
+	0% {
+		-webkit-transform: translate(0px, 0px) scaleX(1);
+				transform: translate(0px, 0px) scaleX(1);
+	}
 
-    100% {
-        -webkit-transform: translate(200px, 0px) scaleX(1.15);
-        transform: translate(200px, 0px) scaleX(1.15);
-    }
+	100% {
+		-webkit-transform: translate(200px, 0px) scaleX(1.15);
+				transform: translate(200px, 0px) scaleX(1.15);
+	}
 }
 
 @keyframes animationRight2 {
-    0% {
-        -webkit-transform: translate(0px, 0px) scaleX(1);
-        transform: translate(0px, 0px) scaleX(1);
-    }
+	0% {
+		-webkit-transform: translate(0px, 0px) scaleX(1);
+				transform: translate(0px, 0px) scaleX(1);
+	}
 
-    100% {
-        -webkit-transform: translate(200px, 0px) scaleX(1.15);
-        transform: translate(200px, 0px) scaleX(1.15);
-    }
+	100% {
+		-webkit-transform: translate(200px, 0px) scaleX(1.15);
+				transform: translate(200px, 0px) scaleX(1.15);
+	}
 }
 
 @-webkit-keyframes slideDown {
-    0% {
-        -webkit-transform: translateY(0%);
-        height: 4rem;
-        transform: translateY(0%);
-    }
+	0% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 4rem;
 
-    100% {
-        -webkit-transform: translateY(0%);
-        height: 17.55rem;
-        transform: translateY(0%);
-    }
+	}
+
+	100% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 17.55rem;
+	}
 }
 
 @keyframes slideDown {
-    0% {
-        -webkit-transform: translateY(0%);
-        height: 4rem;
-        transform: translateY(0%);
-    }
+	0% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 4rem;
+	}
 
-    100% {
-        -webkit-transform: translateY(0%);
-        height: 17.55rem;
-        transform: translateY(0%);
-    }
+	100% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 17.55rem;
+	}
 }
 
 /* --- */
@@ -648,71 +621,59 @@ body {
 /* Buttons */
 
 a.button {
-    -moz-background-size: 100% 100%;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-background-size: 100% 100%;
-    -o-transition: all 0.75s ease;
-    -webkit-background-size: 100% 100%;
-    -webkit-box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
-    -webkit-transition: all 0.75s ease;
-    -webkit-user-select: none;
-    background: url("img/buttonIdle.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-outset: 0 0 0 0;
-    border-image-repeat: stretch stretch;
-    border-image-slice: 7 7 7 7 fill;
-    border-image-source: url("img/buttonIdle.png");
-    border-image-width: 0.438rem 0.438rem 0.438rem 0.438rem;
-    box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
-    color: black;
-    display: inline-block;
-    font-size: 0.85rem;
-    height: 1.75em;
-    line-height: 1.75em;
-    outline: 0;
-    padding: 0.5rem 0.65rem;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.75s ease;
-    user-select: none;
-    vertical-align: center;
-    white-space: nowrap;
+	background: url("img/buttonIdle.png") no-repeat center;
+	border-image-outset: 0 0 0 0;
+	border-image-repeat: stretch stretch;
+	border-image-slice: 7 7 7 7 fill;
+	border-image-source: url("img/buttonIdle.png");
+	border-image-width: 0.438rem 0.438rem 0.438rem 0.438rem;
+	-webkit-box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
+			box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
+	-webkit-transition: all 0.75s ease;
+		 -o-transition: all 0.75s ease;
+			transition: all 0.75s ease;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	color: black;
+	display: inline-block;
+	font-size: 0.85rem;
+	height: 1.75em;
+	line-height: 1.75em;
+	outline: 0;
+	padding: 0.5rem 0.65rem;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: center;
+	white-space: nowrap;
 }
 
 a.button:hover {
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -o-transition: all 0.125s ease;
-    -webkit-background-size: 100% 100%;
-    -webkit-transition: all 0.125s ease;
-    background: url("img/buttonHover.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-source: url("img/buttonHover.png");
-    transition: all 0.125s ease;
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
+	background: url("img/buttonHover.png") no-repeat center;
+	border-image-source: url("img/buttonHover.png");
 }
 
 a.button:active {
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    -webkit-box-shadow: none;
-    background: url("img/buttonPressed.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-source: url("img/buttonPressed.png");
-    box-shadow: none;
+	-webkit-box-shadow: none;
+			box-shadow: none;
+	background: url("img/buttonPressed.png") no-repeat center;
+	border-image-source: url("img/buttonPressed.png");
 }
 
 a.button.disabled {
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    -webkit-box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
-    background: url("img/buttonDisabled.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-source: url("img/buttonDisabled.png");
-    box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
-    opacity: 1;
+	-webkit-box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
+			box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
+	background: url("img/buttonDisabled.png") no-repeat center;
+	border-image-source: url("img/buttonDisabled.png");
+	opacity: 1;
 }
 
 /* --- */
@@ -723,176 +684,153 @@ a.button.disabled {
 input[type=checkbox] { display: none; }
 
 input[type=checkbox] + label {
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -o-transition: all 0.75s ease;
-    -webkit-background-size: 100% 100%;
-    -webkit-transition: all 0.75s ease;
-    background: url("img/checkbox.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-outset: 0 0 0 0;
-    border-image-repeat: stretch stretch;
-    border-image-slice: 1 1 1 1 fill;
-    border-image-source: url("img/checkbox.png");
-    border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
-    display: inline-block;
-    height: 1rem;
-    padding: 0;
-    transition: all 0.75s ease;
-    width: 1rem;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	-o-transition: all 0.75s ease;
+	-webkit-background-size: 100% 100%;
+	-webkit-transition: all 0.75s ease;
+	background: url("img/checkbox.png") no-repeat center;
+	background-size: 100% 100%;
+	border-image-outset: 0 0 0 0;
+	border-image-repeat: stretch stretch;
+	border-image-slice: 1 1 1 1 fill;
+	border-image-source: url("img/checkbox.png");
+	border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
+	display: inline-block;
+	height: 1rem;
+	padding: 0;
+	transition: all 0.75s ease;
+	width: 1rem;
 }
 
 input[type=checkbox]:checked + label {
-    background: url("img/checkboxChecked.png") no-repeat center;
-    border-image-source: url("img/checkboxChecked.png");
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
+	background: url("img/checkboxChecked.png") no-repeat center;
+	border-image-source: url("img/checkboxChecked.png");
 }
 
 input[type=checkbox]:hover + label {
-    -o-transition: all 0.125s ease;
-    -webkit-transition: all 0.125s ease;
-    background: url("img/checkboxHover.png") no-repeat center;
-    border-image-source: url("img/checkboxHover.png");
-    transition: all 0.125s ease;
+	background: url("img/checkboxHover.png") no-repeat center;
+	border-image-source: url("img/checkboxHover.png");
 }
 
 
 input[type=checkbox]:hover:checked + label {
-    -ms-border-image-source: url("img/checkboxCheckedHover.png");
-    -o-border-image-source: url("img/checkboxCheckedHover.png");
-    background: url("img/checkboxCheckedHover.png") no-repeat center;
-    border-image-source: url("img/checkboxCheckedHover.png");
+	-ms-border-image-source: url("img/checkboxCheckedHover.png");
+	 -o-border-image-source: url("img/checkboxCheckedHover.png");
+		border-image-source: url("img/checkboxCheckedHover.png");
+	background: url("img/checkboxCheckedHover.png") no-repeat center;
 }
 
 input[type=radio] { display: none; }
 
 input[type=radio] + label {
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -o-transition: all 0.75s ease;
-    -webkit-background-size: 100% 100%;
-    -webkit-transition: all 0.75s ease;
-    background: url("img/checkbox.png") no-repeat center;
-    background-size: 100% 100%;
-    border-image-outset: 0 0 0 0;
-    border-image-repeat: stretch stretch;
-    border-image-slice: 0 1 1 1 fill;
-    border-image-source: url("img/checkbox.png");
-    border-image-width: 0 0.063rem 0.063rem 0.063rem;
-    display: inline-block;
-    height: 1rem;
-    padding: 0;
-    transition: all 0.75s ease;
-    width: 1rem;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%;
+	-webkit-transition: all 0.75s ease;
+		 -o-transition: all 0.75s ease;
+			transition: all 0.75s ease;
+	background: url("img/checkbox.png") no-repeat center;
+	border-image-outset: 0 0 0 0;
+	border-image-repeat: stretch stretch;
+	border-image-slice: 0 1 1 1 fill;
+	border-image-source: url("img/checkbox.png");
+	border-image-width: 0 0.063rem 0.063rem 0.063rem;
+	display: inline-block;
+	height: 1rem;
+	padding: 0;
+	width: 1rem;
 }
 
 input[type=radio]:hover + label {
-    -o-transition: all 0.125s ease;
-    -webkit-transition: all 0.125s ease;
-    background: url("img/checkboxHover.png") no-repeat center;
-    border-image-source: url("img/checkboxHover.png");
-    transition: all 0.125s ease;
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
+	background: url("img/checkboxHover.png") no-repeat center;
+	border-image-source: url("img/checkboxHover.png");
 }
 
 input[type=radio]:checked + label {
-    background: url("img/radioChecked.png") no-repeat center;
-    border-image-source: url("img/radioChecked.png");
+	background: url("img/radioChecked.png") no-repeat center;
+	border-image-source: url("img/radioChecked.png");
 }
 
 input[type=radio]:hover:checked + label {
-    background: url("img/radioCheckedHover.png") no-repeat center;
-    border-image-source: url("img/radioCheckedHover.png");
+	background: url("img/radioCheckedHover.png") no-repeat center;
+	border-image-source: url("img/radioCheckedHover.png");
 }
 
 /* --- */
 
 
 /* Mobile Ajustments */
-
-@media screen and (max-width: 62.5rem) {
-    .gridBody { margin: 0; }
-}
+@media screen and (max-width: 62.5rem) { .gridBody { margin: 0; } }
 
 @media all and (max-width: 50.75rem) {
-    .gridBody {
-        -ms-grid-columns: auto auto;
-        -ms-grid-rows: 100%;
-        grid-template-columns: auto auto;
-        grid-template-rows: 100%;
-    }
+	.gridBody {
+		-ms-grid-columns: auto auto;
+			grid-template-columns: auto auto;
+		-ms-grid-rows: 100%;
+			grid-template-rows: 100%;
+	}
 
-    .side {
-        -ms-grid-column: 1;
-        -ms-grid-row: 2;
-        grid-column: 1;
-        grid-row: 2;
-    }
+	.side {
+		-ms-grid-row: 2;
+			grid-row: 2;
+		-ms-grid-column: 1;
+			grid-column: 1;
+	}
+
+	.headerBackground a.button { min-width: 90vw; }
 }
 
 @media screen and (max-width: 37.5rem) {
-    .headerBackground .responsive {
-        -webkit-animation: 0.3s slideDown ease;
-        animation: 0.3s slideDown ease;
-        overflow: hidden;
-        position: relative;
-    }
+	.headerBackground .responsive {
+		position: relative; 
+		overflow: hidden;
+		-webkit-animation: 0.3s slideDown ease;
+				animation: 0.3s slideDown ease;
+	}
 
-    .headerBackground .burgerButton {
-        cursor: pointer;
-        opacity: 1;
-        pointer-events: visible;
-    }
+	.headerBackground .burgerButton { pointer-events: visible; cursor: pointer; opacity: 1; }
 
-    .headerBackground .responsive a.button {
-        display: inline-block;
-        padding: 1rem 0;
-        width: 100%;
-    }
+	.headerBackground .responsive a.button { display: inline-block; width: 100%; padding: 1rem 0; }
 
-    .title { visibility: hidden; }
+	.title { visibility: hidden; }
 
-    .title:after {
-        content: "Start9";
-        position: relative;
-        right: 1.5rem;
-        visibility: visible;
-    }
+	.title:after {
+		content: "Start9";
+		visibility: visible;
+		right: 1.5rem;
+		position: relative;
+	}
 
-    .no-cssgrid .gridBody { display: initial; }
+	.no-cssgrid .gridBody { display: initial; }
 
-    .no-cssgrid .tabContent {
-        display: initial;
-        width: auto;
-    }
+	.no-cssgrid .tabContent { display: initial; width: auto; }
 
-    .no-cssgrid .side {
-        display: block;
-        width: auto;
-    }
+	.no-cssgrid .side { display: block; width: auto; }
 }
 
 /* --- */
 
 
 /* Footer */
-
 footer {
-    background: #c8d4e7;
-    background: rgba(200, 212, 231, 0.9);
-    bottom: 0;
-    color: black;
-    font-size: 0.7rem;
-    position: fixed;
-    text-align: center;
-    vertical-align: bottom;
-    width: 100%;
-    z-index: 1844674407370955161518446744073709551615184467440737095516151844674407370955161518446744073709551615184467440737095516151844674407370955161518446744073709551615;
+	background: #c8d4e7;
+	background: rgba(200, 212, 231, 0.9);
+	bottom: 0;
+	color: black;
+	font-size: 0.7rem;
+	position: fixed;
+	text-align: center;
+	vertical-align: bottom;
+	width: 100%;
+	z-index: 10000000000;
 }
 
 /* --- */
-
-code { font-family: monospace; }
-
-.resize {
-    height: 400px;
-    width: auto;
-}

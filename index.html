@@ -1,155 +1,115 @@
 ﻿<!DOCTYPE html>
 <html itemscope lang="en">
-<head>
-    <style>
-        @media screen and (max-width: 600px) {
-            .menuBar a.button:not(:nth-child(1)) { display: none; }
-        }
-    </style>
-    <noscript>
-        <style>
-            .tabContent { display: block !important; }
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>@media screen and (max-width: 600px) {.menuBar a.button:not(:nth-child(1)) { display: none; }}</style>
+		<noscript><style> .tabContent { display: block !important; } #faq { display: none !important; }</style></noscript>
+		<link rel="shortcut icon" href="assets/img/icon.png">
+		<meta itemprop="image" content="assets/img/icon.png">
+		<meta property="og:image" content="assets/img/icon.png"/>
+		<title>Start9</title>
+		<meta name="description" content="An extensible, customizable, modular shell supplement for Windows.">
+		<meta itemprop="description" content="An extensible, customizable, modular shell supplement for Windows.">
+		<meta property="og:description" content="An extensible, customizable, modular shell supplement for Windows."/>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+		<script async src="assets/main-min.js"></script>
+		<link rel="stylesheet" href="assets/style.css" type="text/css"/>
+		<meta name="theme-color" content="#4d88d5">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Start9, StartNine, shell, shell replacement, start nine, startnine">
+		<meta itemprop="name" content="Start9">
+		<meta property="og:title" content="Start9"/>
+		<meta property="og:type" content="article"/>
+		<meta property="og:url" content="https://startnine.github.io"/>
+		<meta property="og:image" content="https://startnine.github.io/assets/img/icon.png"/>
+		<link rel="manifest" href="assets/jasonsmanifest.json">
+		<!--[if lt IE 9]> <link rel="stylesheet" href="assets/legacy.css" type="text/css"/> <![endif]-->
+	</head>
+		<!-- 
+		Would you like to contribute
+		to the Start9 project? Please
+		checkout our GitHub, and contribute 
+		some code! All contributions will 
+		help in some way shape or form.
+		-->
+	<body>
+		<header>
+			<div class="headerBackground">
+				<div class="burgerButton" onclick="burgerButton(this);menuBarNav();">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+				<p class="title">Home</p>
+				<nav class="menuBar" id="menuBar">
+					<a class="button" href="./index.html">Home</a>
+					<a class="button" target="_blank" href="https://github.com/StartNine/Start9/releases">Downloads</a>
+					<a class="button disabled" onclick="openTab(event, 'news')">News</a>
+					<a class="button disabled">Community</a>
+					<a class="button disabled" onclick="openTab(event, 'faq')">FAQ</a>
+				</nav>
+			</div>
+			<div class="headerSpace"></div>
 
-            #faq { display: none !important; }
-        </style>
-    </noscript>
-    <link rel="shortcut icon" href="assets/img/icon.png">
-    <meta itemprop="image" content="assets/img/icon.png">
-    <meta property="og:image" content="assets/img/icon.png"/>
-    <title>Start9</title>
-    <meta name="description" content="An extensible, customizable, modular shell supplement for Windows.">
-    <meta itemprop="description" content="An extensible, customizable, modular shell supplement for Windows.">
-    <meta property="og:description" content="An extensible, customizable, modular shell supplement for Windows."/>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
-    <script async src="assets/main-min.js">
-    </script>
-    <link rel="stylesheet" href="assets/style.css" type="text/css"/>
-    <meta name="theme-color" content="#4d88d5">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="keywords" content="Start9, StartNine, shell, shell replacement, start nine, startnine">
-    <meta itemprop="name" content="Start9">
-    <meta property="og:title" content="Start9"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="https://startnine.github.io"/>
-    <meta property="og:image" content="https://startnine.github.io/assets/img/icon.png"/>
-    <link rel="manifest" href="assets/jasonsmanifest.json">
-    <!--[if lt IE 9]> <link rel="stylesheet" href="assets/legacy.css" type="text/css"/> <![endif]-->
-</head>
-<!-- 
-Would you like to contribute
-to the Start9 project? Please
-checkout our GitHub, linked at
-line 76 and contribute some code!
-All contributions will help in
-some way shape or form.
--->
-<body>
-<header>
-    <div class="headerBackground">
-        <div class="burgerButton" onclick="burgerButton(this);menuBarNav();">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <p class="title">Home</p>
-        <nav class="menuBar" id="menuBar">
-            <a class="button" href="./index.html">Home</a>
-            <a class="button" target="_blank" href="https://github.com/StartNine/Start9/releases">Downloads</a>
-            <a class="button disabled" onclick="openTab(event, 'news')">News</a>
-            <a class="button disabled">Community</a>
-            <a class="button disabled" onclick="openTab(event, 'faq')">FAQ</a>
-        </nav>
-    </div>
-    <div class="headerSpace"></div>
+			<div class="bodyBG">
+				<img class="aurora left" src="assets/img/aurora1b.png" alt="Animated Aurora"/>
+				<img class="aurora right" src="assets/img/aurora2b.png" alt="Animated Aurora"/>
+				<img class="aurora left2" src="assets/img/aurora3b.png" alt="Animated Aurora"/>
+			</div>
+			<div class="logo">
+				<p class="text">
+					<img class="image" src="assets/img/logo.png" alt="Start9 Logo"/>Start9
+				</p>
+			</div>
+		</header>
+		<div class="gridBody">
+			<section id="home" class="tabContent">  
+				<div><h2>New stuff on the horizon</h2><p class="customMargin"><i>by</i> <b>rob55rod/Splitwirez and Reflectronic</b>, February 16th, 2018<br><br>Hello everyone,<br>&emsp;&emsp;Development is going well so far. Firstly, we've decided to migrate Start9's extensibility manager to use the Managed Add-In Framework (<span class="code">System.AddIn</span>). MAF is going to assist us with module discovery and communication, stability of the Start9 host program, and backwards-compatibility in the event of major changes to the API down the line. While not using MAF yet, preliminary work has started on a few modules:<br><a href="https://i.imgur.com/650TMQe.png"><img class="resize" src="https://i.imgur.com/650TMQe.png" alt="Build 7601 start menu"/></a><br><a href="https://i.imgur.com/l3PDHb1.gif"><img class="resize" src="https://i.imgur.com/l3PDHb1.gif" alt="Build 8601 start menu"/></a></p><p>Rather than reinventing the wheel, these modules take advantage of WPF's <span class="code">ResourceDictionary</span> capabilities for skinning purposes, yielding incredible flexibility for skin artists while also ensuring module developers have a much smaller amount of work to do to facilitate skinning.</p><p>Related to our efforts to enhancing the codebase quality, the Start9 project, as a whole, on GitHub has been trisected - <span class="code">Start9.Host</span>, <span class="code">Start9.Api</span>, and <span class="code">Start9.SkinDesigner</span>, corresponding to the projects' respective namespaces. This will make everything easier for everyone to manage everything, and to facilitate getting the <span class="code">Start9.Api</span> onto NuGet. We've also decided to give each (planned) module its own repository - we'll inform you when new developments start related to new modules.</p><p>On another note, I've started working on a Sticky Note application, entitled Sticky9, as a proof-of-concept of the Start9 API's uses outside of just modules:</p><a href="https://i.imgur.com/2Kjq4Wb.gif"><img class="resize" src="https://i.imgur.com/2Kjq4Wb.gif" alt="Checkboxes in Sticky9"/></a><br><a href="https://i.imgur.com/J1mO8lP.gif"><img class="resize" src="https://i.imgur.com/J1mO8lP.gif" alt="Coloures in Sticky9"/></a><p>Finally, we'd like to apologize for slow development recently. We're hoping to speed things up, moving forward...speaking of which, we're still looking for developers, so if you have experience with C# and are comfortable with .NET 4.0 and WPF, feel free to join our Discord server, we'll discuss matters further there :OD<br>If you don't feel like making a commitment, feel free to fork us! We'll probably accept your pull request. </p><p>Expect more news soon - we're hoping to update this log more often in the future.</p><br><br></div>
+				<div><h2>A fresh start</h2><p class="customMargin"><i>by</i> <b>rob55rod/Splitwirez</b>, December 8th, 2017<br><br>Hello everyone,<br>&emsp;&emsp;We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code. All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.</p><br><br></div>
+			</section>
 
-    <div class="bodyBG">
-        <img class="aurora left" src="assets/img/aurora1b.png" alt="Animated Aurora"/>
-        <img class="aurora right" src="assets/img/aurora2b.png" alt="Animated Aurora"/>
-        <img class="aurora left2" src="assets/img/aurora3b.png" alt="Animated Aurora"/>
-    </div>
-    <div class="logo">
-        <p class="text">
-            <img class="image" src="assets/img/logo.png" alt="Start9 Logo"/>Start9
-        </p>
-    </div>
-</header>
-<div class="gridBody">
-    <section id="home" class="tabContent">  
-        <div>
-            <h2>New stuff on the horizon</h2>
-            <p class="customMargin"><i>by</i> <b>rob55rod/Splitwirez and Reflectronic</b>, February 16th, 2018<br><br>
-            <p>Hello everyone,</p>
-            <p>Development is going well so far. Firstly, we&rsquo;ve decided to migrate Start9's extensibility manager to use the Managed Add-In Framework (<code>System.AddIn</code>). MAF is going to assist us with module discovery and communication, stability of the Start9 host program, and backwards-compatibility in the event of major changes to the API down the line.</p>
-            <p>While not using MAF yet, preliminary work has started on a few modules:</p><br>
-            <a href="https://i.imgur.com/650TMQe.png">
-                <img class="resize" src="https://i.imgur.com/650TMQe.png" alt="Build 7601 start menu"/>
-            </a><br>
-            <a href="https://i.imgur.com/l3PDHb1.gif">
-                <img class="resize" src="https://i.imgur.com/l3PDHb1.gif" alt="Build 8601 start menu"/>
-            </a>
-            <p>Rather than reinventing the wheel, these modules take advantage of WPF's <code>ResourceDictionary</code> capabilities for skinning purposes, yielding incredible flexibility for skin artists while also ensuring module developers have a much smaller amount of work to do to facilitate skinning.</p>
-            <p>Related to our efforts to enhancing the codebase quality, the Start9 project, as a whole, on GitHub has been trisected - <code>Start9.Host</code>, <code>Start9.Api</code>, and <code>Start9.SkinDesigner</code>, corresponding to the projects' respective namespaces. This will make everything easier for everyone to manage everything, and to facilitate getting the <code>Start9.Api</code> onto NuGet. We've also decided to give each (planned) module its own repository - we'll inform you when new developments start related to new modules.</p>
-            <p>On another note, I&rsquo;ve started working on a Sticky Note application, entitled Sticky9, as a proof-of-concept of the Start9 API&rsquo;s uses outside of just modules:</p>
-            <a href="https://i.imgur.com/2Kjq4Wb.gif">
-                <img class="resize" src="https://i.imgur.com/2Kjq4Wb.gif" alt="Checkboxes in Sticky9"/>
-            </a><br>
-            <a href="https://i.imgur.com/J1mO8lP.gif">
-                <img class="resize" src="https://i.imgur.com/J1mO8lP.gif" alt="Coloures in Sticky9"/>
-            </a>
-            <p>Finally, we'd like to apologize for slow development recently. We're hoping to speed things up, moving forward...speaking of which, we&rsquo;re still looking for developers, so if you have experience with C# and are comfortable with .NET 4.0 and WPF, feel free to join our Discord server, we&rsquo;ll discuss matters further there :OD<br>If you don't feel like making a commitment, feel free to fork us! We'll probably accept your pull request. </p>
-            <p>Expect more news soon - we're hoping to update this log more often in the future.</p><br><br>
-        </div>
-        <div>
-            <h2>A fresh start</h2>
-            <p class="customMargin">
-                <i>by</i> <b>rob55rod/Splitwirez</b>, December 8th, 2017<br><br>
-                <p>Hello everyone,</p>We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code. All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.
-            </p><br><br>
-        </div>
-    </section>
+			<!--
+			<section id="news" class="tabContent">
+				probally iFrame here...
+			</section>
 
-    <!--
-    <section id="news" class="tabContent">
-        probally iFrame here...
-    </section>
+			<section id="faq" class="tabContent">
+				<h2>FAQ</h2>
+				<div class="q">Question?</div><div class="a">Answer.</div> <br>
+				<div class="q">Question?</div><div class="a">Answer.</div> <br>
+				<div class="q">Question?</div><div class="a">Answer.</div> <br>
+			</section>
+			-->
 
-    <section id="faq" class="tabContent">
-        <h2>FAQ</h2>
-        <div class="q">Question?</div><div class="a">Answer.</div> <br>
-        <div class="q">Question?</div><div class="a">Answer.</div> <br>
-        <div class="q">Question?</div><div class="a">Answer.</div> <br>
-    </section>
-    -->
+			<div class="windowparents" id="window">
+				<div id="draggable" class="window">
+					<p class="windowtitle">Error<span class="close" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);return false;">X</span></p>
+					<p class="windowcontent">Blame Splitwirez for this, but please use start9.menu</p>
+				</div>
+			</div>
 
-    <div class="windowparents" id="window">
-        <div id="draggable" class="window">
-            <p class="windowtitle">Error<span class="close" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);return false;">X</span></p>
-            <p class="windowcontent">Blame Splitwirez for this, but please use start9.menu</p>
-        </div>
-    </div>
-
-    <div class="side">
-        <h2>Interested?</h2>
-        <div class="sideObject">
-            <p class="customMargin">Please check out our GitHub here:</p>
-            <a class="button" target="_blank" href="https://github.com/StartNine/Start9">Start9 on GitHub</a>
-        </div>
-        <div class="sideObject">
-            <p>We've also opened up the Start9 Discord Server, so everyone can keep an eye on our progress, contribute ideas, etc. You can join here:</p>
-            <a class="button" target="_blank" href="https://discordapp.com/invite/6cpvxBS">Start9 Discord Server</a>
-        </div>
-        <noscript>
-            <div class="sideObject">
-                <p>Please enable JavaScript for the best experience.</p>
-            </div>
-        </noscript>
-    </div>
-</div>
-<footer>
-    <p>Note: Start9 is not associated with Stardock or Microsoft. Neither are to be held legally responsible for anything that happens due to Start9. Also, if it breaks, you get to keep both pieces. We'll try to help you put them back together, but no promises.</p>
-</footer>
-
-</body>
+			<div class="side">
+				<h2>Interested?</h2>
+				<div class="sideObject">
+					<p class="customMargin">Please check out our GitHub here:</p>
+					<a class="button" target="_blank" href="https://github.com/StartNine/Start9">Start9 on GitHub</a>
+				</div>
+				<div class="sideObject">
+					<p>We've also opened up the Start9 Discord Server, so everyone can keep an eye on our progress, contribute ideas, etc. You can join here:</p>
+					<a class="button" target="_blank" href="https://discordapp.com/invite/6cpvxBS">Start9 Discord Server</a>
+				</div>
+				<noscript>
+					<div class="sideObject">
+						<p>Please enable JavaScript for the best experience.</p>
+					</div>
+				</noscript>
+			</div>
+		</div>
+	<!--
+	<footer>
+		<p>Note: Start9 is not associated with Stardock or Microsoft. Neither are to be held legally responsible for anything that happens due to Start9. Also, if it breaks, you get to keep both pieces. We'll try to help you put them back together, but no promises.</p>
+	</footer>
+	-->
+	</body>
 </html>
