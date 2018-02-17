@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<style>@media screen and (max-width: 600px) {.menuBar a.button:not(:nth-child(1)) { display: none; }}</style>
-		<noscript><style> .tabContent { display: block !important; } #faq { display: none !important; }</style></noscript>
+		<noscript><style> .tabContent { display: block !important; }</style></noscript>
 		<link rel="shortcut icon" href="assets/img/icon.png">
 		<meta itemprop="image" content="assets/img/icon.png">
 		<meta property="og:image" content="assets/img/icon.png"/>
@@ -43,9 +43,9 @@
 				</div>
 				<p class="title">Home</p>
 				<nav class="menuBar" id="menuBar">
-					<a class="button" href="./index.html">Home</a>
+					<a class="button" id="defaultTab" onclick="openTab(event, 'home')">Home</a>
 					<a class="button" target="_blank" href="https://github.com/StartNine/Start9/releases">Downloads</a>
-					<a class="button disabled" onclick="openTab(event, 'news')">News</a>
+					<a class="button" onclick="openTab(event, 'news')">News</a>
 					<a class="button disabled">Community</a>
 					<a class="button disabled" onclick="openTab(event, 'faq')">FAQ</a>
 				</nav>
@@ -65,15 +65,15 @@
 		</header>
 		<div class="gridBody">
 			<section id="home" class="tabContent">  
+				<p>A new home page is in progress. For news, click the new News button.</p>
+			</section>
+
+			<section id="news" class="tabContent">
 				<div><h2>New stuff on the horizon</h2><p class="customMargin"><i>by</i> <b>rob55rod/Splitwirez and Reflectronic</b>, February 16th, 2018<br><br>Hello everyone,<br>&emsp;&emsp;Development is going well so far. Firstly, we've decided to migrate Start9's extensibility manager to use the Managed Add-In Framework (<span class="code">System.AddIn</span>). MAF is going to assist us with module discovery and communication, stability of the Start9 host program, and backwards-compatibility in the event of major changes to the API down the line. While not using MAF yet, preliminary work has started on a few modules:<br><br><a href="https://i.imgur.com/650TMQe.png">Build 7601 start menu</a><br><a href="https://i.imgur.com/l3PDHb1.gif">Build 8601 start menu</a></p><br><p>Rather than reinventing the wheel, these modules take advantage of WPF's <span class="code">ResourceDictionary</span> capabilities for skinning purposes, yielding incredible flexibility for skin artists while also ensuring module developers have a much smaller amount of work to do to facilitate skinning.</p><p>Related to our efforts to enhancing the codebase quality, the Start9 project, as a whole, on GitHub has been trisected - <span class="code">Start9.Host</span>, <span class="code">Start9.Api</span>, and <span class="code">Start9.SkinDesigner</span>, corresponding to the projects' respective namespaces. This will make everything easier for everyone to manage everything, and to facilitate getting the <span class="code">Start9.Api</span> onto NuGet. We've also decided to give each (planned) module its own repository - we'll inform you when new developments start related to new modules.</p><p>On another note, I've started working on a Sticky Note application, entitled Sticky9, as a proof-of-concept of the Start9 API's uses outside of just modules:</p><a href="https://i.imgur.com/2Kjq4Wb.gif">Checkboxes in Sticky9</a><br><a href="https://i.imgur.com/J1mO8lP.gif">Coloures in Sticky9</a><p>Finally, we'd like to apologize for slow development recently. We're hoping to speed things up, moving forward...speaking of which, we're still looking for developers, so if you have experience with C# and are comfortable with .NET 4.0 and WPF, feel free to join our Discord server, we'll discuss matters further there :OD<br>If you don't feel like making a commitment, feel free to fork us! We'll probably accept your pull request. </p><p>Expect more news soon - we're hoping to update this log more often in the future.</p><br><br></div>
 				<div><h2>A fresh start</h2><p class="customMargin"><i>by</i> <b>rob55rod/Splitwirez</b>, December 8th, 2017<br><br>Hello everyone,<br>&emsp;&emsp;We've decided to change the direction in which Start9 is going to be further developed. It's become a full-on shell replacement, one which aims to be not only modular, but extensible to your heart's content. The project's goals have strayed and expanded so far from where we started that we've realized it would be easier to rewrite everything with modularity and recyclability in mind, rather than to rework our existing code. All of this is good news, but currently, we have not gotten all that far. Adding to that, we're going to need all the help we can get. We need mainly programmers, experienced in C#, as we're using .NET 4.0 and WPF.</p><br><br></div>
 			</section>
 
 			<!--
-			<section id="news" class="tabContent">
-				probally iFrame here...
-			</section>
-
 			<section id="faq" class="tabContent">
 				<h2>FAQ</h2>
 				<div class="q">Question?</div><div class="a">Answer.</div> <br>
@@ -84,7 +84,7 @@
 
 			<div class="windowparents" id="window">
 				<div id="draggable" class="window">
-					<p class="windowtitle">Error<span class="close" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);return false;">X</span></p>
+					<p class="windowtitle">CNAME Error<span class="close" onclick="this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);return false;">X</span></p>
 					<p class="windowcontent">Blame Splitwirez for this, but please use start9.menu</p>
 				</div>
 			</div>

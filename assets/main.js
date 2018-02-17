@@ -4,19 +4,17 @@ function openNewLink(n){var o=window.open(n,"_self");o.focus()}
 window.onload = function() {document.getElementById("defaultTab").click()};
 
 // w3s Taberino
-/*
 function openTab(evt, tabName) {
 	var i;
 	var x = document.getElementsByClassName("tabContent");
 	for (i = 0; i < x.length; i++) {
 	    x[i].style.display = "none"; 
 	}
-	document.getElementById(tabName).style.display = "block"; 3
+	document.getElementById(tabName).style.display = "block";
 	evt.currentTarget.className += " active";
 }
-*/
 
-/* W3S repsonsive navbar */
+// W3S repsonsive navbar
 function menuBarNav() {
     var x = document.getElementById("menuBar");
     if (x.className === "menuBar") {

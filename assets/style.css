@@ -200,7 +200,6 @@ html, body {
 
 
 /* Menu */
-
 .mobileLogo { display: none; }
 
 .headerSpace { height: 6em; }
@@ -269,9 +268,9 @@ html, body {
 	   -moz-background-size: 100% 100%;
 		 -o-background-size: 100% 100%;
 			background-size: 100% 100%;
-	-webkit-transition: all 0.75s ease;
-		 -o-transition: all 0.75s ease;
-			transition: all 0.75s ease;
+	-webkit-transition: all 0.25s ease;
+		 -o-transition: all 0.25s ease;
+			transition: all 0.25s ease;
 	box-shadow: none;
 	color: white;
 	display: inline-block;
@@ -330,23 +329,22 @@ body {
 /* --- */
 
 /* Error Box */
-
 .windowparents {
-	bottom: 25vh;
-	left: 10vh;
 	position: relative;
 	text-align: center;
+	justify-content: center;
 }
 
 .windowparents .window {
+	width: 10em;
+	height: 6em;
 	-webkit-box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
 			box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
 	background: white;
 	border-radius: 1em;
 	display: inline-block;
-	height: 6em;
 	position: fixed;
-	width: 10em;
+
 }
 
 .windowparents .window .windowtitle {
@@ -445,6 +443,7 @@ body {
 
 .tabContent .show { display: block; }
 
+#news, #faq {display: none;}
 .no-cssgrid .gridBody { display: table; }
 
 .no-cssgrid .tabContent {
@@ -460,7 +459,6 @@ body {
 /* --- */
 
 /* Animation */
-
 .left {
 	-webkit-animation: animationLeft linear 15s alternate;
 			animation: animationLeft linear 15s alternate;
