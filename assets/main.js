@@ -32,7 +32,7 @@ $(function() {
 	$("#draggable").draggable();
 }); 
 
-if (window.frameElement) {
+if (window.location.href = "start9.menu") {
 	document.getElementById('window').style.display = "none";
 }
 
