@@ -396,7 +396,7 @@ body {
 		 align-content: center;
 	display: -ms-grid;
 		display: grid;
-	bottom: 13rem;
+	bottom: 12rem;
 	grid-gap: 0.625rem;
 	margin: 0 10%;
 	min-height: 100%;
@@ -422,6 +422,8 @@ body {
 		   display: flex;
 	padding-left: 1rem;
 	vertical-align: top;
+	bottom: 1em;
+	position: relative;
 }
 
 .side .sideObject {
