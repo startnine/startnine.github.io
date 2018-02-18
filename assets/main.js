@@ -22,22 +22,6 @@ if (window.self !== window.top) {
 	document.getElementById('window').style.display = "none";
 };
 
-/* w3s Taberino
-function openTab(evt, tabName) {
-	var i;
-	var x = document.getElementsByClassName("tabContent");
-	for (i = 0; i < x.length; i++) {
-		x[i].style.display = "none"; 
-	}
-	document.getElementById(tabName).style.display = "block";
-	document.querySelector('.burgerButton').click();
-	evt.currentTarget.className += " active";
-	x=document.getElementsByClassName("title");	// Find the elements
-	for(var i = 0; i < x.length; i++){
-	x[i].innerText=tabName;	// Change the content
-	}
-}
-*/
 
 (function ($) {
 
@@ -75,6 +59,13 @@ function openTab(evt, tabName) {
                 }
             },
             onReady: {
+                duration: 0,
+                render: function ($container, $newContent) {
+                    $container.html($newContent);
+                    $container.removeClass('is-exiting');
+                }
+            },
+            onAfter: {
                 duration: 0,
                 render: function ($container, $newContent) {
                     $container.html($newContent);
