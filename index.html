@@ -13,6 +13,7 @@
 		<meta property="og:description" content="An extensible, customizable, modular shell supplement for Windows."/>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+		<script async src="assets/dependencies.js"></script>
 		<script async src="assets/main.js"></script>
 		<link rel="stylesheet" href="assets/style.css" type="text/css"/>
 		<meta name="theme-color" content="#4d88d5">
@@ -65,7 +66,7 @@
 		</header>
 
 		<div class="gridBody">
-			<section id="Home" class="tabContent sceneElement" data-viewport="-1">
+			<section id="Home" class="tabContent sceneElement sceneElement_fadeinright" data-viewport="-1">
 				<p>Start9 is a WIP extensible, customizable shell supplement for Windows, one which aims to be not only modular, but extends to many needs.</p><h2 id="planned-modules">Planned Modules</h2><p><em>Start9 is planned with with 14 modules pre-installed, each module functioning like a familiar user interface.</em>:</p><h3 id="start-menus-screens">Start Menus / Screens</h3><ul><li>Windows 8.1 (build 9600) </li><li>Windows 10 (build 9795) </li><li>Windows 10 (build 9879) </li><li>Windows 10 (build 9926) </li><li>Windows 10 (build 10240) </li><li>Windows 10 (build 14393) </li><li>Windows 10 (build 15063) </li></ul><h3 id="taskbars">Taskbars</h3><ul><li>Windows XP (3790) </li><li>windows Vista (6000) </li><li>Windows 7 (7601) </li><li>macOS Dock</li></ul><h3 id="misc-">Misc.</h3><ul><li>Windows Longhorn (build 4074) Sidebar </li><li>Windows 10 (build 9888) Notification Center </li><li>Windows 10 (build 10240) Notification Center </li></ul><p>In addition, Please follow the <a href="https://github.com/StartNine/Start9.Host/blob/master/CONTRIBUTING.md">contributing guidelines</a> for all Start9 projects.</p><h2 id="dependencies-and-frameworks">Dependencies and Frameworks</h2><ul><li>.NET Framework 4.0<ul><li>Official builds of Start9 are built with .NET Framework 4.0. However, you may want to retarget it to be able to access newer features and load in modules compiled for later versions of .NET.</li></ul></li><li>WPF related assemblies (PresentationFramework, etc.)<ul><li>These assemblies make Start9 incompatible with .NET Core and other non-Microsoft .NET implementations. </li></ul></li><li>Start9.Api<ul><li>This is the home to various abstractions related to Windows objects like programs and open windows. It's also home to the Plex themed UI controls, and a few additional ones. The repository for the API and more information can be found <a href="https://github.com/StartNine/Start9.Api">here</a>.</li></ul></li><li>System.AddIn<ul><li>This represents the Microsoft Addin Framework assembly. We use this in Start9 for the Host-side adapter part of the addin pipeline.</li></ul></li></ul><p>Other, smaller dependencies can be seen in the <a href="https://github.com/StartNine/Start9.Host/blob/master/Start9/Start9.csproj#L36">csproj file for the project</a>. </p>	
 			</section>
 
@@ -77,7 +78,7 @@
 				<div class="q">Question?</div><div class="a">Answer.</div> <br>
 			</section>
 			-->
-			<div class="side">
+			<div class="side fade">
 				<h2>Interested?</h2>
 				<div class="sideObject">
 					<p class="customMargin">Please check out our GitHub here:</p>
