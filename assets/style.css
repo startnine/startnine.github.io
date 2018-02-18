@@ -9,7 +9,6 @@
 }
 
 /* Semilight */
-
 @font-face {
 	font-family: Selawik;
 	font-style: normal;
@@ -19,7 +18,6 @@
 }
 
 /* Normal */
-
 @font-face {
 	font-family: Selawik;
 	font-style: normal;
@@ -29,7 +27,6 @@
 }
 
 /* Semibold */
-
 @font-face {
 	font-family: Selawik;
 	font-style: normal;
@@ -39,7 +36,6 @@
 }
 
 /* Bold */
-
 @font-face {
 	font-family: Selawik;
 	font-style: normal;
@@ -53,7 +49,6 @@
 /* --- */
 
 /* Remove X Overflow */
-
 html, body {
 	min-height: 100%;
 	overflow-x: hidden;
@@ -61,8 +56,8 @@ html, body {
 
 /* --- */
 
-/* Hamburger */
 
+/* Hamburger */
 .burgerButton {
 	border-radius: 1em;
 	cursor: pointer;
@@ -156,7 +151,6 @@ html, body {
 /* --- */
 
 /* Aurora Panel */
-
 .bodyBG {
 	height: 10em;
 	position: relative;
@@ -267,11 +261,6 @@ html, body {
 	-ms-border-image-source: url("img/menuBarButton.png");
 	 -o-border-image-source: url("img/menuBarButton.png");
 		border-image-source: url("img/menuBarButton.png");
-	background: url("img/menuBarButton.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
 	-webkit-transition: all 0.25s ease;
 		 -o-transition: all 0.25s ease;
 			transition: all 0.25s ease;
@@ -287,11 +276,6 @@ html, body {
 }
 
 .menuBar a.button:hover {
-	background: url("img/menuBarButton_hover.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
 	-webkit-transition: all 0.125s ease;
 		 -o-transition: all 0.125s ease;
 			transition: all 0.125s ease;
@@ -304,20 +288,10 @@ html, body {
 }
 
 .menuBar a.button:active {
-	background: url("img/menuBarButton_pressed.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
 	border-image-source: url("img/menuBarButton_pressed.png");
 }
 
 .menuBar a.button.disabled {
-	background: url("img/menuBarButton.png") no-repeat center;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
 	border-image-source: url("img/menuBarButton.png");
 	box-shadow: none;
 	opacity: 0.6;
@@ -328,7 +302,6 @@ html, body {
 
 
 /* Body */
-
 body {
 	background: #C8D4E7 url('img/background.svg') repeat-x top center fixed;
 	background: -webkit-linear-gradient(white, #C8D4E7);
@@ -459,18 +432,6 @@ body {
 .tabContent .show { display: block; }
 
 #News, #FAQ {display: none;}
-
-.no-cssgrid .gridBody { display: table; }
-
-.no-cssgrid .tabContent {
-	display: table-cell;
-	width: 80%;
-}
-
-.no-cssgrid .side {
-	display: table-cell;
-	width: 15%;
-}
 
 /* --- */
 
@@ -633,9 +594,7 @@ body {
 
 
 /* Buttons */
-
 a.button {
-	background: url("img/buttonIdle.png") no-repeat center;
 	border-image-outset: 0 0 0 0;
 	border-image-repeat: stretch stretch;
 	border-image-slice: 7 7 7 7 fill;
@@ -643,10 +602,6 @@ a.button {
 	border-image-width: 0.438rem 0.438rem 0.438rem 0.438rem;
 	-webkit-box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
 			box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
 	-webkit-transition: all 0.75s ease;
 		 -o-transition: all 0.75s ease;
 			transition: all 0.75s ease;
@@ -671,33 +626,18 @@ a.button:hover {
 	-webkit-transition: all 0.125s ease;
 		 -o-transition: all 0.125s ease;
 			transition: all 0.125s ease;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
-	background: url("img/buttonHover.png") no-repeat center;
 	border-image-source: url("img/buttonHover.png");
 }
 
 a.button:active {
 	-webkit-box-shadow: none;
 			box-shadow: none;
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
-	background: url("img/buttonPressed.png") no-repeat center;
 	border-image-source: url("img/buttonPressed.png");
 }
 
 a.button.disabled {
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
 	-webkit-box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
 			box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
-	background: url("img/buttonDisabled.png") no-repeat center;
 	border-image-source: url("img/buttonDisabled.png");
 	opacity: 1;
 }
@@ -706,18 +646,12 @@ a.button.disabled {
 
 
 /* Radio and Checkboxes */
-
 input[type=checkbox] { display: none; }
 
 input[type=checkbox] + label {
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
 	-webkit-transition: all 0.75s ease;
 		 -o-transition: all 0.75s ease;
 			transition: all 0.75s ease;
-	background: url("img/checkbox.png") no-repeat center;
 	border-image-outset: 0 0 0 0;
 	border-image-repeat: stretch stretch;
 	border-image-slice: 1 1 1 1 fill;
@@ -729,13 +663,9 @@ input[type=checkbox] + label {
 	width: 1rem;
 }
 
-input[type=checkbox]:checked + label {
-	background: url("img/checkboxChecked.png") no-repeat center;
-	border-image-source: url("img/checkboxChecked.png");
-}
+input[type=checkbox]:checked + label { border-image-source: url("img/checkboxChecked.png"); }
 
 input[type=checkbox]:hover + label {
-	background: url("img/checkboxHover.png") no-repeat center;
 	border-image-source: url("img/checkboxHover.png");
 	-webkit-transition: all 0.125s ease;
 		 -o-transition: all 0.125s ease;
@@ -743,24 +673,14 @@ input[type=checkbox]:hover + label {
 }
 
 
-input[type=checkbox]:hover:checked + label {
-	-ms-border-image-source: url("img/checkboxCheckedHover.png");
-	 -o-border-image-source: url("img/checkboxCheckedHover.png");
-		border-image-source: url("img/checkboxCheckedHover.png");
-	background: url("img/checkboxCheckedHover.png") no-repeat center;
-}
+input[type=checkbox]:hover:checked + label { border-image-source: url("img/checkboxCheckedHover.png"); }
 
 input[type=radio] { display: none; }
 
 input[type=radio] + label {
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%;
 	-webkit-transition: all 0.75s ease;
 		 -o-transition: all 0.75s ease;
 			transition: all 0.75s ease;
-	background: url("img/checkbox.png") no-repeat center;
 	border-image-outset: 0 0 0 0;
 	border-image-repeat: stretch stretch;
 	border-image-slice: 0 1 1 1 fill;
@@ -772,13 +692,9 @@ input[type=radio] + label {
 	width: 1rem;
 }
 
-input[type=radio]:checked + label {
-	background: url("img/radioChecked.png") no-repeat center;
-	border-image-source: url("img/radioChecked.png");
-}
+input[type=radio]:checked + label { border-image-source: url("img/radioChecked.png"); }
 
 input[type=radio]:hover + label {
-	background: url("img/checkboxHover.png") no-repeat center;
 	border-image-source: url("img/checkboxHover.png");
 	-webkit-transition: all 0.125s ease;
 		 -o-transition: all 0.125s ease;
@@ -786,10 +702,7 @@ input[type=radio]:hover + label {
 }
 
 
-input[type=radio]:hover:checked + label {
-	background: url("img/radioCheckedHover.png") no-repeat center;
-	border-image-source: url("img/radioCheckedHover.png");
-}
+input[type=radio]:hover:checked + label { border-image-source: url("img/radioCheckedHover.png"); }
 
 /* --- */
 
@@ -845,9 +758,7 @@ input[type=radio]:hover:checked + label {
 
 	.no-cssgrid .side { display: block; width: auto; }
 
-	.headerBackground a.button { 
-		min-width: ; 
-	}
+	.headerBackground a.button { min-width: 100%; }
 }
 
 /* --- */
@@ -865,6 +776,48 @@ footer {
 	vertical-align: bottom;
 	width: 100%;
 	z-index: 10000000000;
+}
+
+/* --- */
+
+/* Fallbacks */
+.no-cssgrid .gridBody { display: table; }
+
+.no-cssgrid .tabContent {
+	display: table-cell;
+	width: 80%;
+}
+
+.no-cssgrid .side {
+	display: table-cell;
+	width: 15%;
+}
+
+.no-borderimage .menuBar a.button { background: url("./img/menuBarButton.png") no-repeat center; }
+.no-borderimage .menuBar a.button:hover { background: url("./img/menuBarButton_hover.png") no-repeat center; }
+.no-borderimage .menuBar a.button:active { background: url("./img/menuBarButton_pressed.png") no-repeat center; }
+.no-borderimage .menuBar a.button.disabled { background: url("./img/menuBarButton.png") no-repeat center; }
+.no-borderimage a.button { background: url("./img/buttonIdle.png") no-repeat center; }
+.no-borderimage a.button:hover { background: url("./img/buttonHover.png") no-repeat center; }
+.no-borderimage a.button:active { background: url("./img/buttonPressed.png") no-repeat center; }
+.no-borderimage a.button.disabled { background: url("./img/buttonDisabled.png") no-repeat center; }
+.no-borderimage input[type=checkbox] + label { background: url("./img/checkbox.png") no-repeat center; }
+.no-borderimage input[type=radio] + label {	background: url("./img/checkbox.png") no-repeat center; }
+.no-borderimage input[type=radio]:hover + label { background: url("./img/checkboxHover.png") no-repeat center; }
+.no-borderimage input[type=radio]:checked + label { background: url("./img/radioChecked.png") no-repeat center; }
+.no-borderimage input[type=radio]:hover:checked + label { background: url("./img/radioCheckedHover.png") no-repeat center; }
+.no-borderimage input[type=checkbox]:checked + label { background: url("./img/checkboxChecked.png") no-repeat center; }
+.no-borderimage input[type=checkbox]:hover + label { background: url("./img/checkboxHover.png") no-repeat center; }
+.no-borderimage input[type=checkbox]:hover:checked + label { background: url("./img/checkboxCheckedHover.png") no-repeat center; }
+
+.no-borderimage .menuBar a.button, .no-borderimage .menuBar a.button:hover, 
+.no-borderimage .menuBar a.button:active, .no-borderimage .menuBar a.button.disabled, 
+.no-borderimage a.button, .no-borderimage a.button:hover, .no-borderimage .a.button:active, 
+.no-borderimage input[type=checkbox] + label, .no-borderimage input[type=radio] + label {
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+		 -o-background-size: 100% 100%;
+			background-size: 100% 100%; 
 }
 
 /* --- */
