@@ -1,3 +1,15 @@
+/*
+	Dumping this here until i get to organizing it lol
+*/
+
+/* --- */
+
+
+
+
+
+
+
 /* Import Fonts  */
 /* Light */
 @font-face {
@@ -49,10 +61,10 @@
 /* --- */
 
 /* Remove X Overflow */
-html, body {
+html {
 	min-height: 100%;
 	overflow-x: hidden;
-	font-size: 16px;
+	overflow-y: visible;
 }
 
 /* --- */
@@ -383,8 +395,20 @@ body {
 	vertical-align: top;
 	z-index: 100;
 }
-	
+
+
 	.gridBody img { object-fit: scale-down; max-width: 90vw; max-height: 100vw;}
+
+.oneBox {
+	bottom: 12rem;
+	grid-gap: 0.625rem;
+	margin: 0 10%;
+	min-height: 100%;
+	padding: 0;
+	position: relative;
+	vertical-align: top;
+	z-index: 100;
+}
 
 .side {
 	-webkit-box-orient: vertical;
