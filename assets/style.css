@@ -57,12 +57,6 @@
 }
 /* --- */
 
-
-
-
-
-
-
 /* Import Fonts  */
 /* Light */
 @font-face {
@@ -914,7 +908,7 @@ input[type=radio]:hover:checked + label { border-image-source: url("img/radioChe
 
 
 /* Mobile Ajustments */
-@media screen and (max-width: 62.5rem) { .gridBody, .oneBox { margin: 1rem; } }
+@media screen and (max-width: 62.5rem) { .gridBody, .oneBox { padding:  0 1rem; margin: 0;} }
 
 @media all and (max-width: 50.75rem) {
 	.gridBody, .oneBox {

@@ -22,11 +22,9 @@ if (window.self !== window.top) {
 	document.getElementById('window').style.display = "none";
 };
 
-
+//smoothstate test
 (function ($) {
-
     'use strict';
-
     $(document).ready(function () {
 
         // Init here.
