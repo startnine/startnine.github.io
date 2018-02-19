@@ -22,7 +22,7 @@ if (window.self !== window.top) {
 	document.getElementById('window').style.display = "none";
 };
 
-// animationals
+/* animationals WAIT FOR CNAME 
 $("#gitbutton").click(function() {
   $('.github').toggleClass('github-active');
 });
@@ -35,6 +35,7 @@ $("#discordbutton").click(function() {
 function delay (URL) {
     setTimeout( function() { window.location = URL }, 300 );
 }
+*/
 
 //smoothstate test
 (function ($) {
