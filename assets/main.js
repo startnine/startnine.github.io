@@ -22,6 +22,20 @@ if (window.self !== window.top) {
 	document.getElementById('window').style.display = "none";
 };
 
+// animationals
+$("#gitbutton").click(function() {
+  $('.github').toggleClass('github-active');
+});
+
+$("#discordbutton").click(function() {
+  $('.discord').toggleClass('discord-active');
+});
+
+// delay links
+function delay (URL) {
+    setTimeout( function() { window.location = URL }, 300 );
+}
+
 //smoothstate test
 (function ($) {
     'use strict';
