@@ -1,147 +1,6 @@
-/*
-	Dumping this here until i get to organizing it lol
-*/
 
-.scene .sceneElement {
-	-webkit-animation-duration: .3s;
-			animation-duration: .3s;
-	-webkit-animation-fill-mode: both;
-			animation-fill-mode: both;
-	transition-timing-function: ease-in;
-}
-
-.scene.is-exiting .sceneElement {
-	-webkit-animation-direction: alternate-reverse;
-			animation-direction: alternate-reverse;
-	transition-timing-function: ease-out;
-}
-
-.scene .sceneElement_fadeinright { 
-	-webkit-animation-name: moveInFromRight; 
-			animation-name: moveInFromRight; 
-}
-
-.scene .sceneElement_fadeinleft { 
-	-webkit-animation-name: moveInFromLeft;
-			animation-name: moveInFromLeft; 
-}
-
-#main[data-transition=fade] .sceneElement {
-	-webkit-animation-name: fadeIn;
-			animation-name: fadeIn;
-}
-
-#main[data-transition=fade].is-exiting .sceneElement {
-	-webkit-animation-name: fadeOut;
-			animation-name: fadeOut;
-}
-
-#main[data-transition=moveleft] .sceneElement {
-	-webkit-animation-name: moveInFromLeft;
-			animation-name: moveInFromLeft;
-}
-
-#main[data-transition=moveleft].is-exiting .sceneElement {
-	-webkit-animation-name: moveOutToRight;
-			animation-name: moveOutToRight;
-}
-
-#main[data-transition=moveright] .sceneElement {
-	-webkit-animation-name: moveInFromRight;
-			animation-name: moveInFromRight;
-}
-
-#main[data-transition=moveright].is-exiting .sceneElement {
-	-webkit-animation-name: moveOutToLeft;
-			animation-name: moveOutToLeft;
-}
 /* --- */
-
-/* github animationals */
-.github, .discord {
-	align-self: flex-end;
-	bottom: 7rem;
-	min-height: 3rem;
-	min-width: 100%;
-	overflow: auto;
-	position: relative;
-	text-align: center;
-	display: none;
-}
-
-.barFiller.github.github-active {
-	height: 2rem;
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
-	background-color: #24292e;
-	z-index: 99999;
-	animation: github-animational 0.3s ease;
-}
-
-.white.github.github-active {
-	height: 100vh;
-	background-color: white;
-	bottom: 7rem;
-	z-index: 99990;
-}
-
-.barFiller.discord.discord-active {
-	background-color: #2f3136;
-	z-index: 99999;
-	height: 110vh;
-	animation: discord-animational 0.3s ease;
-}
-/* --- */
-
-
-/* Import Fonts  */
-/* Light */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 200;
-	src: url("font/selawkl.woff2") format("woff2"),
-		 url("font/selawkl.eot") format("embedded-opentype");
-}
-
-/* Semilight */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 300;
-	src: url("font/selawksl.woff2") format("woff2"),
-		 url("font/selawksl.eot") format("embedded-opentype");
-}
-
-/* Normal */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 400;
-	src: url("font/selawk.woff2") format("woff2"),
-		 url("font/selawk.eot") format("embedded-opentype");
-}
-
-/* Semibold */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 600;
-	src: url("font/selawksb.woff2") format("woff2"),
-		 url("font/selawksb.eot") format("embedded-opentype");
-}
-
-/* Bold */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 700;
-	src: url("font/selawkb.woff2") format("woff2"),
-		 url("font/selawkb.eot") format("embedded-opentype");
-}
-
 * { font-family: "Selawik", "Segoe UI"; }
-
 /* --- */
 
 /* Remove X Overflow */
@@ -404,63 +263,14 @@ html,body {
 body {
 	background: #C8D4E7 url('img/background.svg') repeat-x top center fixed;
 	background: -webkit-linear-gradient(white, #C8D4E7);
-	background: -o-linear-gradient(white, #C8D4E7);
-	background: linear-gradient(white, #C8D4E7);
+		 background: -o-linear-gradient(white, #C8D4E7);
+			background: linear-gradient(white, #C8D4E7);
 	margin: 0;
 	padding: 0;
 }
 
 /* --- */
 
-/* Error Box */
-.windowparents {
-	position: relative;
-	text-align: center;
-	justify-content: center;
-	z-index: 7000000;
-}
-
-.windowparents .window {
-	width: 10em;
-	height: 6em;
-	-webkit-box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
-			box-shadow: 0.1rem 0.2rem 1rem rgba(0, 0, 0, 0.5);
-	background: white;
-	border-radius: 1em;
-	display: inline-block;
-	position: fixed;
-
-}
-
-.windowparents .window .windowtitle {
-	background: #6fb0f3 url('img/headerBackground.svg');
-	background: -webkit-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-		 background: -o-linear-gradient(right, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-		  background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-	border-radius: 1em 1em 0 0;
-	bottom: 1em;
-	color: white;
-	height: 1.5em;
-	position: relative;
-}
-
-.windowparents .window .windowtitle p {
-	left: 1em;
-	position: relative;
-}
-
-.windowparents .window .windowtitle .close {
-	float: right;
-	position: relative;
-	right: 1em;
-}
-
-.windowparents .window .windowcontent {
-	bottom: 1.8em;
-	position: relative;
-}
-
-/* --- */
 
 /* Content */
 .oneBox, .gridBody {
@@ -485,8 +295,6 @@ body {
 		display: grid;
 }
 
-
-	.gridBody img { object-fit: scale-down; max-width: 90vw; max-height: 100vw;}
 
 .side {
 	-webkit-box-orient: vertical;
@@ -841,6 +649,98 @@ body {
 	0% 	 { height: 0; }
 	100% { height: 100vh; }
 }
+
+.github, .discord {
+	align-self: flex-end;
+	bottom: 7rem;
+	min-height: 3rem;
+	min-width: 100%;
+	overflow: auto;
+	position: relative;
+	text-align: center;
+	display: none;
+}
+
+.barFiller.github.github-active {
+	height: 2rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	background-color: #24292e;
+	z-index: 99999;
+	animation: github-animational 0.3s ease;
+}
+
+.white.github.github-active {
+	height: 100vh;
+	background-color: white;
+	bottom: 7rem;
+	z-index: 99990;
+}
+
+.barFiller.discord.discord-active {
+	background-color: #2f3136;
+	z-index: 99999;
+	height: 110vh;
+	animation: discord-animational 0.3s ease;
+}
+/* --- */
+/*
+	Dumping this here until i get to organizing it lol
+*/
+
+.scene .sceneElement {
+	-webkit-animation-duration: .3s;
+			animation-duration: .3s;
+	-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+	transition-timing-function: ease-in;
+}
+
+.scene.is-exiting .sceneElement {
+	-webkit-animation-direction: alternate-reverse;
+			animation-direction: alternate-reverse;
+	transition-timing-function: ease-out;
+}
+
+.scene .sceneElement_fadeinright { 
+	-webkit-animation-name: moveInFromRight; 
+			animation-name: moveInFromRight; 
+}
+
+.scene .sceneElement_fadeinleft { 
+	-webkit-animation-name: moveInFromLeft;
+			animation-name: moveInFromLeft; 
+}
+
+#main[data-transition=fade] .sceneElement {
+	-webkit-animation-name: fadeIn;
+			animation-name: fadeIn;
+}
+
+#main[data-transition=fade].is-exiting .sceneElement {
+	-webkit-animation-name: fadeOut;
+			animation-name: fadeOut;
+}
+
+#main[data-transition=moveleft] .sceneElement {
+	-webkit-animation-name: moveInFromLeft;
+			animation-name: moveInFromLeft;
+}
+
+#main[data-transition=moveleft].is-exiting .sceneElement {
+	-webkit-animation-name: moveOutToRight;
+			animation-name: moveOutToRight;
+}
+
+#main[data-transition=moveright] .sceneElement {
+	-webkit-animation-name: moveInFromRight;
+			animation-name: moveInFromRight;
+}
+
+#main[data-transition=moveright].is-exiting .sceneElement {
+	-webkit-animation-name: moveOutToLeft;
+			animation-name: moveOutToLeft;
+}
 /* --- */
 
 
@@ -1041,6 +941,52 @@ footer {
 	display: table-cell;
 	width: 15%;
 }
+
+/* Light */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 200;
+	src: url("font/selawkl.woff2") format("woff2"),
+		 url("font/selawkl.eot") format("embedded-opentype");
+}
+
+/* Semilight */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 300;
+	src: url("font/selawksl.woff2") format("woff2"),
+		 url("font/selawksl.eot") format("embedded-opentype");
+}
+
+/* Normal */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 400;
+	src: url("font/selawk.woff2") format("woff2"),
+		 url("font/selawk.eot") format("embedded-opentype");
+}
+
+/* Semibold */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 600;
+	src: url("font/selawksb.woff2") format("woff2"),
+		 url("font/selawksb.eot") format("embedded-opentype");
+}
+
+/* Bold */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 700;
+	src: url("font/selawkb.woff2") format("woff2"),
+		 url("font/selawkb.eot") format("embedded-opentype");
+}
+
 
 .no-borderimage .menuBar a.button { background: url("./img/menuBarButton.png") no-repeat center; }
 .no-borderimage .menuBar a.button:hover { background: url("./img/menuBarButton_hover.png") no-repeat center; }
