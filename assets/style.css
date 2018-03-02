@@ -909,6 +909,14 @@ input[type=radio]:hover:checked + label { border-image-source: url("img/radioChe
 
 }
 
+@media all and (min-width: 37.5rem) {
+	.menuFocus.active {
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
 @media screen and (max-width: 37.5rem) {
 	.headerBackground .responsive {
 		position: relative; 
