@@ -172,7 +172,7 @@ html,body {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background: black;
+	background: #3F607F;
 	z-index: 42000;
 	opacity: 0.7;
 	animation-duration: 0.3s;
