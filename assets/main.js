@@ -20,6 +20,13 @@ function menuFocus() {
 	document.querySelector('.burgerButton').click();
 }
 
+//edgey
+var userAgent = navigator.userAgent;
+if( userAgent.indexOf('Edge') >= 0){
+	console.log("dammit edge lol");
+	$('#main').append('<link rel="stylesheet" href="assets/edgey.css" type="text/css"/>');
+} 
+
 // animationals WAIT FOR CNAME 
 $("#gitbutton").click(function() {
   $('.github').toggleClass('github-active');

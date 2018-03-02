@@ -827,68 +827,6 @@ a.button.disabled {
 /* --- */
 
 
-/* Radio and Checkboxes */
-input[type=checkbox] { display: none; }
-
-input[type=checkbox] + label {
-	-webkit-transition: all 0.75s ease;
-		 -o-transition: all 0.75s ease;
-			transition: all 0.75s ease;
-	border-image-outset: 0 0 0 0;
-	border-image-repeat: stretch stretch;
-	border-image-slice: 1 1 1 1 fill;
-	border-image-source: url("img/checkbox.png");
-	border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
-	display: inline-block;
-	height: 1rem;
-	padding: 0;
-	width: 1rem;
-}
-
-input[type=checkbox]:checked + label { border-image-source: url("img/checkboxChecked.png"); }
-
-input[type=checkbox]:hover + label {
-	border-image-source: url("img/checkboxHover.png");
-	-webkit-transition: all 0.125s ease;
-		 -o-transition: all 0.125s ease;
-			transition: all 0.125s ease;
-}
-
-
-input[type=checkbox]:hover:checked + label { border-image-source: url("img/checkboxCheckedHover.png"); }
-
-input[type=radio] { display: none; }
-
-input[type=radio] + label {
-	-webkit-transition: all 0.75s ease;
-		 -o-transition: all 0.75s ease;
-			transition: all 0.75s ease;
-	border-image-outset: 0 0 0 0;
-	border-image-repeat: stretch stretch;
-	border-image-slice: 0 1 1 1 fill;
-	border-image-source: url("img/checkbox.png");
-	border-image-width: 0 0.063rem 0.063rem 0.063rem;
-	display: inline-block;
-	height: 1rem;
-	padding: 0;
-	width: 1rem;
-}
-
-input[type=radio]:checked + label { border-image-source: url("img/radioChecked.png"); }
-
-input[type=radio]:hover + label {
-	border-image-source: url("img/checkboxHover.png");
-	-webkit-transition: all 0.125s ease;
-		 -o-transition: all 0.125s ease;
-			transition: all 0.125s ease;
-}
-
-
-input[type=radio]:hover:checked + label { border-image-source: url("img/radioCheckedHover.png"); }
-
-/* --- */
-
-
 /* Mobile Ajustments */
 @media screen and (max-width: 62.5rem) { .gridBody, .oneBox { padding: 1rem; margin: 0;} }
 
@@ -909,13 +847,7 @@ input[type=radio]:hover:checked + label { border-image-source: url("img/radioChe
 
 }
 
-@media all and (min-width: 37.5rem) {
-	.menuFocus.active {
-		display: none;
-		opacity: 0;
-		visibility: hidden;
-	}
-}
+@media all and (min-width: 37.5rem) {.menuFocus.active { display: none; opacity: 0; visibility: hidden; } }
 
 @media screen and (max-width: 37.5rem) {
 	.headerBackground .responsive {
