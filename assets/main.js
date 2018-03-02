@@ -6,10 +6,18 @@ function menuBarNav() {
 	} else {
 		x.className = "menuBar";
 	}
+	
+	var element = document.getElementsByClassName("mobileSpace");
+    element.classList.toggle("invisble");
 }
 
 function burgerButton(x) {
 	x.classList.toggle("change");
+    $(".menuFocus").toggleClass("active");
+}
+
+function menuFocus() {
+	document.querySelector('.burgerButton').click();
 }
 
 // animationals WAIT FOR CNAME 
