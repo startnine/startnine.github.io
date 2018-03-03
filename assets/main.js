@@ -30,5 +30,5 @@ $("#discordbutton").click(function() { $('.discord').toggleClass('discord-active
 
 // delay links
 function delay (URL) {
-    setTimeout( function() { window.location = URL }, 100 );
+    setTimeout( function() { window.location = URL }, 300 );
 }

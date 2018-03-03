@@ -591,8 +591,8 @@ body {
 	}
 	100% {
 		opacity: 0;
-		-webkit-transform: translateX(-50%);
-				transform: translateX(-50%);
+		-webkit-transform: translateX(-6.25em);
+				transform: translateX(-6.25em);
 	}
 }
 
@@ -604,8 +604,8 @@ body {
 	}
 	100% {
 		opacity: 0;
-		-webkit-transform: translateX(-50%);
-				transform: translateX(-50%);
+		-webkit-transform: translateX(-6.25em);
+				transform: translateX(-6.25em);
 	}
 }
 
@@ -643,8 +643,8 @@ body {
 	}
 	100% {
 		opacity: 0;
-		-webkit-transform: translateX(50%);
-				transform: translateX(50%);
+		-webkit-transform: translateX(6.25em);
+				transform: translateX(6.25em);
 	}
 }
 
@@ -656,8 +656,8 @@ body {
 	}
 	100% {
 		opacity: 0;
-		-webkit-transform: translateX(50%);
-				transform: translateX(50%);
+		-webkit-transform: translateX(6.25em);
+				transform: translateX(6.25em);
 	}
 }
 
@@ -727,42 +727,11 @@ body {
 	transition-timing-function: ease-in;
 }
 
-.scene.is-exiting .sceneElement {
-	-webkit-animation-direction: alternate-reverse;
-			animation-direction: alternate-reverse;
-	transition-timing-function: ease-out;
-}
-
-.fadeinright, #main[data-transition=moveright] .sceneElement { 
-	-webkit-animation-name: moveInFromRight; 
-			animation-name: moveInFromRight; 
-}
-
-.fadeinleft, #main[data-transition=moveleft] .sceneElement { 
-	-webkit-animation-name: moveInFromLeft;
-			animation-name: moveInFromLeft; 
-}
-
-#main[data-transition=fade] .sceneElement {
-	-webkit-animation-name: fadeIn;
-			animation-name: fadeIn;
-}
-
-#main[data-transition=fade].is-exiting .sceneElement {
-	-webkit-animation-name: fadeOut;
-			animation-name: fadeOut;
-}
-
-
-#main[data-transition=moveleft].is-exiting .sceneElement, .fadeoutright  {
-	-webkit-animation-name: moveOutToRight;
-			animation-name: moveOutToRight;
-}
-
-#main[data-transition=moveright].is-exiting .sceneElement, .fadeoutleft {
-	-webkit-animation-name: moveOutToLeft;
-			animation-name: moveOutToLeft;
-}
+.scene.is-exiting .sceneElement { -webkit-animation-direction: alternate-reverse; animation-direction: alternate-reverse; transition-timing-function: ease-out; }
+.fadeinright { -webkit-animation-name: moveInFromRight; animation-name: moveInFromRight; }
+.fadeinleft { -webkit-animation-name: moveInFromLeft; animation-name: moveInFromLeft; }
+.fadeoutright  { -webkit-animation-name: moveOutToRight; animation-name: moveOutToRight;}
+.fadeoutleft { -webkit-animation-name: moveOutToLeft; animation-name: moveOutToLeft; }
 /* --- */
 
 
