@@ -11,14 +11,11 @@ function menuBarNav() {
     element.classList.toggle("invisble");
 }
 
-function burgerButton(x) {
-	x.classList.toggle("change");
-    $(".menuFocus").toggleClass("active");
-}
+function burgerButton(x) { $(".menuFocus").toggleClass("active"); }
+function menuFocus() { document.querySelector('.burgerButton').click(); }
+function fadeoutright() { $( "#main" ).addClass( "fadeoutright" ); }
+function fadeoutleft() { $( "#main" ).addClass( "fadeoutleft" ); }
 
-function menuFocus() {
-	document.querySelector('.burgerButton').click();
-}
 
 //edgey
 var userAgent = navigator.userAgent;
@@ -28,15 +25,10 @@ if( userAgent.indexOf('Edge') >= 0){
 } 
 
 // animationals WAIT FOR CNAME 
-$("#gitbutton").click(function() {
-  $('.github').toggleClass('github-active');
-});
-
-$("#discordbutton").click(function() {
-  $('.discord').toggleClass('discord-active');
-});
+$("#gitbutton").click(function() { $('.github').toggleClass('github-active'); });
+$("#discordbutton").click(function() { $('.discord').toggleClass('discord-active'); });
 
 // delay links
 function delay (URL) {
-    setTimeout( function() { window.location = URL }, 300 );
+    setTimeout( function() { window.location = URL }, 100 );
 }

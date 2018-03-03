@@ -20,7 +20,7 @@ input[type=checkbox]:hover:checked + label { background: url("./img/checkboxChec
 .menuBar a.button:active,  .menuBar a.button.disabled, 
 a.button,  a.button:hover,  .a.button:active, 
 input[type=checkbox] + label,  input[type=radio] + label {
-	border-image-source: none;
+	border-image-source: none !important;
 	-webkit-background-size: 100% 100% !important;
 	   -moz-background-size: 100% 100% !important;
 		 -o-background-size: 100% 100% !important;

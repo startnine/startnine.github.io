@@ -336,7 +336,7 @@ body {
 }
 
 .side .sideObject {
-	bottom: 1.5rem;
+	bottom: 2rem;
 	position: relative;
 }
 
@@ -346,7 +346,7 @@ body {
 	vertical-align: top;
 }
 
-.sideObject a.button { margin-top: 0.5rem; }
+.sideObject a.button { margin-top: 0.25rem; }
 
 .sideObject p { margin: 0.313rem 0 0 0; }
 
@@ -719,7 +719,7 @@ body {
 	Dumping this here until i get to organizing it lol
 */
 
-.scene .sceneElement {
+.scene .sceneElement, .fadeoutright, .fadeoutleft, .fadeinleft, .fadeinright {
 	-webkit-animation-duration: .3s;
 			animation-duration: .3s;
 	-webkit-animation-fill-mode: both;
@@ -733,12 +733,12 @@ body {
 	transition-timing-function: ease-out;
 }
 
-.scene .sceneElement_fadeinright { 
+.fadeinright, #main[data-transition=moveright] .sceneElement { 
 	-webkit-animation-name: moveInFromRight; 
 			animation-name: moveInFromRight; 
 }
 
-.scene .sceneElement_fadeinleft { 
+.fadeinleft, #main[data-transition=moveleft] .sceneElement { 
 	-webkit-animation-name: moveInFromLeft;
 			animation-name: moveInFromLeft; 
 }
@@ -753,22 +753,13 @@ body {
 			animation-name: fadeOut;
 }
 
-#main[data-transition=moveleft] .sceneElement {
-	-webkit-animation-name: moveInFromLeft;
-			animation-name: moveInFromLeft;
-}
 
-#main[data-transition=moveleft].is-exiting .sceneElement {
+#main[data-transition=moveleft].is-exiting .sceneElement, .fadeoutright  {
 	-webkit-animation-name: moveOutToRight;
 			animation-name: moveOutToRight;
 }
 
-#main[data-transition=moveright] .sceneElement {
-	-webkit-animation-name: moveInFromRight;
-			animation-name: moveInFromRight;
-}
-
-#main[data-transition=moveright].is-exiting .sceneElement {
+#main[data-transition=moveright].is-exiting .sceneElement, .fadeoutleft {
 	-webkit-animation-name: moveOutToLeft;
 			animation-name: moveOutToLeft;
 }
