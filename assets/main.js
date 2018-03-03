@@ -13,9 +13,10 @@ function menuBarNav() {
 
 function burgerButton(x) { $(".menuFocus").toggleClass("active"); }
 function menuFocus() { document.querySelector('.burgerButton').click(); }
-function fadeoutright() { $( "#main" ).addClass( "fadeoutright" ); }
-function fadeoutleft() { $( "#main" ).addClass( "fadeoutleft" ); }
+function fadeoutright() { $( "#main" ).addClass( "fadeoutright" ); scrollup()}
+function fadeoutleft() { $( "#main" ).addClass( "fadeoutleft" ); scrollup()}
 
+function scrollup() { $("html, body").animate({ scrollTop: 0 }, 150); return false;}
 
 //edgey
 var userAgent = navigator.userAgent;
@@ -30,5 +31,5 @@ $("#discordbutton").click(function() { $('.discord').toggleClass('discord-active
 
 // delay links
 function delay (URL) {
-    setTimeout( function() { window.location = URL }, 300 );
+    setTimeout( function() { window.location = URL }, 100) ;
 }
