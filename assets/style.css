@@ -174,10 +174,6 @@ html,body {
 	background: #3F607F;
 	z-index: 42000;
 	opacity: 0.7;
-	animation-duration: 0.3s;
-	transition-timing-function: ease-in;
-	animation-fill-mode: both;
-	animation-name: menuFocus;
 }
 
 .headerBackground {
@@ -223,7 +219,7 @@ html,body {
 	border-image-outset: 0 0 0 0;
 	border-image-repeat: stretch stretch;
 	border-image-slice: 20 10 0 10 fill;
-	border-image-source: url("img/menuBar.jpg");
+	border-image-source: url("img/menuBar.png");
 	border-image-width: 1.25rem 0.625rem 0 0.625rem;
 	border-radius: 1rem 1rem 0 0;
 	bottom: 2.3rem;
@@ -519,14 +515,83 @@ body {
 	}
 }
 
-@-webkit-keyframes menuFocus {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
+.slideDown {
+	-webkit-animation: 0.3s slideDown ease;
+			animation: 0.3s slideDown ease;
 }
 
-@keyframes menuFocus {
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 17.55rem;
+
+	}
+
+	100% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 4rem;
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 17.55rem;
+	}
+
+	100% {
+		-webkit-transform: translateY(0%);
+				transform: translateY(0%);
+		height: 4rem;
+	}
+}
+
+.slideUp {
+	-webkit-animation: 0.3s slideUp ease;
+			animation: 0.3s slideUp ease;
+}
+
+@-webkit-keyframes menuFocusIn {
 	0% { opacity: 0; }
 	100% { opacity: 0.7; }
+}
+
+@keyframes menuFocusIn {
+	0% { opacity: 0; }
+	100% { opacity: 0.7; }
+}
+
+.menuFocusIn {
+		-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	transition-timing-function: ease-in;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+	-webkit-animation-name: menuFocusIn;
+	        animation-name: menuFocusIn;
+}
+
+@-webkit-keyframes menuFocusOut {
+	0% { opacity: 0.7; }
+	100% { opacity: 0; }
+}
+
+@keyframes menuFocusOut {
+	0% { opacity: 0.7; }
+	100% { opacity: 0; }
+}
+
+.menuFocusOut {
+		-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	transition-timing-function: ease-in;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+	-webkit-animation-name: menuFocusOut;
+	        animation-name: menuFocusOut;
 }
 
 @-webkit-keyframes fadeIn {
@@ -812,8 +877,6 @@ a.button.disabled {
 	.headerBackground .responsive {
 		position: relative; 
 		overflow: hidden;
-		-webkit-animation: 0.3s slideDown ease;
-				animation: 0.3s slideDown ease;
 	}
 	
 	.headerBackground .burgerButton { pointer-events: visible; cursor: pointer; opacity: 1; }

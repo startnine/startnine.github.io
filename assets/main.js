@@ -1,22 +1,24 @@
-// burger button
-function menuBarNav() {
-	var x = document.getElementById("menuBar");
-	if (x.className === "menuBar") {
-		x.className += " responsive";
-	} else {
-		x.className = "menuBar";
-	}
-	
-	var element = document.getElementsByClassName("mobileSpace");
-    element.classList.toggle("invisble");
-}
-
-function burgerButton(x) { $(".menuFocus").toggleClass("active"); }
+function burgerButton(x) { $(".menuFocus").toggleClass("active"); x.classList.toggle("change");}
 function menuFocus() { document.querySelector('.burgerButton').click(); }
-function fadeoutright() { $( "#main" ).addClass( "fadeoutright" ); scrollup()}
-function fadeoutleft() { $( "#main" ).addClass( "fadeoutleft" ); scrollup()}
+function fadeoutright() { $( "#main" ).addClass( "fadeoutright" ); scrollup(); }
+function fadeoutleft() { $( "#main" ).addClass( "fadeoutleft" ); scrollup(); }
+function scrollup() { $("html, body").animate({ scrollTop: 0 }, 150); return false; }
 
-function scrollup() { $("html, body").animate({ scrollTop: 0 }, 150); return false;}
+$(document).ready(function() {
+    var clicked = false;
+    $('.burgerButton').click(function() {
+        if(clicked) {
+            clicked = false;
+            $('.menuBar').removeClass('slideDown').addClass('slideUp').removeClass('responsive');
+            $('.menuFocus').removeClass('menuFocusIn').addClass('menuFocusOut');
+        }
+        else {
+            clicked = true;
+            $('.menuBar').removeClass('slideUp').addClass('slideDown').addClass('responsive');
+            $('.menuFocus').removeClass('menuFocusOut').addClass('menuFocusIn');
+        }
+     });
+});
 
 //edgey
 var userAgent = navigator.userAgent;
