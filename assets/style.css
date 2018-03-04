@@ -850,6 +850,11 @@ a.button.disabled {
 
 /* --- */
 
+/* Printer Ajustments */
+@media print { .headerBackground, .menuBar, .headerSpace, .bodyBG, .side { display: none; } }
+/* --- */
+
+
 /* Mobile Ajustments */
 @media screen and (max-width: 62.5rem) { .gridBody, .oneBox { padding: 1rem; margin: 0;} }
 
