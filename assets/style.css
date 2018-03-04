@@ -490,7 +490,7 @@ body {
 	0% {
 		-webkit-transform: translateY(0%);
 				transform: translateY(0%);
-		height: 4rem;
+		height: initial;
 
 	}
 
@@ -505,7 +505,7 @@ body {
 	0% {
 		-webkit-transform: translateY(0%);
 				transform: translateY(0%);
-		height: 4rem;
+		height: 3.5rem;
 	}
 
 	100% {
@@ -531,7 +531,7 @@ body {
 	100% {
 		-webkit-transform: translateY(0%);
 				transform: translateY(0%);
-		height: 4rem;
+		height: 3.5rem;
 	}
 }
 
@@ -545,7 +545,7 @@ body {
 	100% {
 		-webkit-transform: translateY(0%);
 				transform: translateY(0%);
-		height: 4rem;
+		height: 3.5rem;
 	}
 }
 
@@ -851,7 +851,11 @@ a.button.disabled {
 /* --- */
 
 /* Printer Ajustments */
-@media print { .headerBackground, .menuBar, .headerSpace, .bodyBG, .side { display: none; } }
+@media print {
+	.headerBackground, .menuBar, .headerSpace, .bodyBG, .side { display: none; } 
+	.logo, .logo p img {display: block;}
+	a { color: black; }
+}
 /* --- */
 
 
