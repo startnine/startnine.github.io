@@ -357,6 +357,11 @@ body {
 
 /* --- */
 
+/* Slideshow */
+.navbuttons { user-select: none; }
+.slide img { height: 15em; }
+/* --- */
+
 /* Animation */
 @-webkit-keyframes animationLeft {
 	0% {
