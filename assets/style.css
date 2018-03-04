@@ -359,7 +359,7 @@ body {
 
 /* Slideshow */
 .navbuttons { user-select: none; }
-.slide img { height: 15em; }
+.slide img { height: 10em; }
 /* --- */
 
 /* Animation */
