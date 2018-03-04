@@ -128,6 +128,7 @@ html,body {
 	user-select: none;
 	vertical-align: middle;
 	width: 100vw;
+	z-index: 0;
 }
 
 .logo {
@@ -355,6 +356,38 @@ body {
 	width: 100%;
 }
 
+/* --- */
+
+/* Marketplace */
+.marketplace .backgroundicon {
+	opacity: 0.25;
+	max-height: 20rem;
+}
+.marketplace .title {
+	padding: 0;
+	margin: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	font-size: 5rem;
+	line-height: 20rem; 
+	height: 20rem;
+	right: 20rem;
+	vertical-align: center;
+	float: left; 
+	color: black;
+	z-index: 1;
+	position: relative;
+	width: 100%;
+
+}
+
+.marketplace.griditem {
+	height: 10rem;
+	width: 5rem;
+	background: blue;
+	display: inline-block;
+}
 /* --- */
 
 /* Slideshow */
