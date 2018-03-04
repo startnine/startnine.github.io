@@ -1,4 +1,4 @@
-function burgerButton(x) { $(".menuFocus").toggleClass("active"); x.classList.toggle("change");}
+function burgerButton(x) { x.classList.toggle("change");}
 function menuFocus() { document.querySelector('.burgerButton').click(); }
 function fadeoutright() { $( "#main" ).addClass( "fadeoutright" ); scrollup(); }
 function fadeoutleft() { $( "#main" ).addClass( "fadeoutleft" ); scrollup(); }
@@ -11,11 +11,12 @@ $(document).ready(function() {
             clicked = false;
             $('.menuBar').removeClass('slideDown').addClass('slideUp').removeClass('responsive');
             $('.menuFocus').removeClass('menuFocusIn').addClass('menuFocusOut');
+            setTimeout( function() { $('.menuFocus').toggleClass("active") }, 300); 
         }
         else {
             clicked = true;
             $('.menuBar').removeClass('slideUp').addClass('slideDown').addClass('responsive');
-            $('.menuFocus').removeClass('menuFocusOut').addClass('menuFocusIn');
+            $('.menuFocus').removeClass('menuFocusOut').addClass('menuFocusIn').toggleClass("active");
         }
      });
 });
@@ -32,6 +33,4 @@ $("#gitbutton").click(function() { $('.github').toggleClass('github-active'); })
 $("#discordbutton").click(function() { $('.discord').toggleClass('discord-active'); });
 
 // delay links
-function delay (URL) {
-    setTimeout( function() { window.location = URL }, 100) ;
-}
+function delay (URL) { setTimeout( function() { window.location = URL }, 50) ; }
