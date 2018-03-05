@@ -41,11 +41,12 @@
 				<div class="burgerButton" onclick="burgerButton(this);menuBarNav()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
 				<p class="title">Marketplace (WIP)</p>
 				<nav class="menuBar" id="menuBar">
-					<a class="button" href="http://start9.menu/">Home</a>
-					<a class="button" href="https://github.com/StartNine/Start9/releases">Downloads</a>
-					<a class="button disabled" onclick="openTab(event, 'news')">News</a>
+					<a class="button" href="javascript:delay('index.html')" onclick="fadeoutleft()" data-target="-1">Home</a>
+					<noscript><a class="button" href="index.html">Home</a></noscript>
+					<a class="button" href="https://github.com/StartNine/Start9/releases" target='_blank' rel="noopenerrel noreferrer">Downloads</a>
+					<a class="button" data-target="0">News</a>
 					<a class="button disabled">Community</a>
-					<a class="button disabled" onclick="openTab(event, 'faq')">FAQ</a>
+					<a class="button disabled" data-target="1">FAQ</a>
 				</nav>
 			</div>
 			<div class="menuFocus" onclick="menuFocus()"></div>
