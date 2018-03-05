@@ -71,6 +71,7 @@ html,body {
 /* --- */
 
 /* Modifiers */
+.byline { font-style: italic; }
 .active, .github-active, .discord-active { display: block; }
 
 .invisible {
@@ -391,7 +392,7 @@ body {
 	border-image-outset: 0 0 0 0;
 	border-image-repeat: stretch stretch;
 	border-image-slice: 9 9 9 9 fill;
-	border-image-source: url("img/LargeTileBackgroundn.png");
+	border-image-source: url("img/tileBackground.png");
 	border-image-width: 0.5625rem 0.5625rem 0.5625rem 0.5625rem;
 	height: 15rem;
 	width: 15rem;
@@ -409,32 +410,43 @@ body {
 	overflow: hidden;
 	z-index: 1;
 	word-wrap: break-word;
-	max-height: 9.5rem;
+	max-height: 8.5rem;
 }
 
 .marketplace.flexItem p { 
 	margin-left: 2em; 
+	margin-top: 0;
+	margin-bottom: 0;
 	position: relative; 
-	bottom: 5.4em;
+	bottom: 7em;
 	max-width: 11rem;
 }
 
 .marketplace.flexItem a { 
 	position: relative;
-	bottom: 6rem;
+	bottom: 8rem;
 }
 
+/*
+.marketplace.flexItem:active {
+	height: 14rem;
+	width: 14rem;
+	top: 0.5em;
+	opacity: 0.9;
+	user-select: none;
+}
+*/
 
 .marketplace.flexItem .moduleIcon {
-	max-width: 4em;
-	max-height: 4em;
-	display: block;
+	max-width: 5em;
+	height: 4em;
 	position: relative;
 	right: 1em;
 	opacity: 0.5;
-	z-index: 0;
 	float: right;
 }
+
+.marketplace .byline { right: 0.5em; }
 /* --- */
 
 /* Slideshow */
@@ -654,9 +666,9 @@ body {
 			animation-duration: 0.3s;
 	transition-timing-function: ease-in;
 	-webkit-animation-fill-mode: both;
-	        animation-fill-mode: both;
+			animation-fill-mode: both;
 	-webkit-animation-name: menuFocusIn;
-	        animation-name: menuFocusIn;
+			animation-name: menuFocusIn;
 }
 
 @-webkit-keyframes menuFocusOut {
@@ -674,9 +686,9 @@ body {
 			animation-duration: 0.3s;
 	transition-timing-function: ease-in;
 	-webkit-animation-fill-mode: both;
-	        animation-fill-mode: both;
+			animation-fill-mode: both;
 	-webkit-animation-name: menuFocusOut;
-	        animation-name: menuFocusOut;
+			animation-name: menuFocusOut;
 }
 
 @-webkit-keyframes fadeIn {
@@ -993,6 +1005,7 @@ a.button.disabled {
 	.headerBackground a.button { min-width: 100%; }
 	
 	.marketplaceTitle { font-size: 3rem; line-height: 5rem; }
+
 }
 
 /* --- */
