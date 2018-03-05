@@ -975,13 +975,13 @@ a.button.disabled {
 
 	.headerBackground a.button { width: 100%; padding: 1rem 0; }
 
-	.title { visibility: hidden; }
+	.title { line-height: 0; text-indent: -9999rem;}
 
 	.title:after {
 		content: "Start9";
-		visibility: visible;
-		right: 1.5rem;
-		position: relative;
+		display: block;
+		line-height: initial;
+		text-indent: 0;
 	}
 
 	.no-cssgrid .gridBody { display: initial; }
