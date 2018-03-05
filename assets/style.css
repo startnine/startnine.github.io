@@ -991,6 +991,8 @@ a.button.disabled {
 	.no-cssgrid .side { display: block; width: auto; }
 
 	.headerBackground a.button { min-width: 100%; }
+	
+	.marketplaceTitle { font-size: 3rem; line-height: 5rem; }
 }
 
 /* --- */
