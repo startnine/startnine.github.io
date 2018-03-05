@@ -401,19 +401,39 @@ body {
 	margin-bottom: 2.5em;
 }
 
-.marketplace.flexItem h2, .marketplace.flexItem p { 
+.marketplace.flexItem h2, .marketplace.flexItem p, .marketplace.flexItem a { 
 	color: white; 
-	position: relative; 
 	margin-left: 1em; 
-	width: 15rem;
+	line-height: 1.1em;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	z-index: 1;
+	word-wrap: break-word;
+	max-height: 9.5rem;
 }
 
 .marketplace.flexItem p { 
 	margin-left: 2em; 
 	position: relative; 
-	bottom: 1em;
-	max-width: 10rem;
-	resize: vertical;
+	bottom: 5.4em;
+	max-width: 11rem;
+}
+
+.marketplace.flexItem a { 
+	position: relative;
+	bottom: 6rem;
+}
+
+
+.marketplace.flexItem .moduleIcon {
+	max-width: 4em;
+	max-height: 4em;
+	display: block;
+	position: relative;
+	right: 1em;
+	opacity: 0.5;
+	z-index: 0;
+	float: right;
 }
 /* --- */
 
