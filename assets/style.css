@@ -21,13 +21,10 @@ html,body {
 	left: 1.5rem;
 	position: relative;
 	top: 0.6em;
+	z-index: 9999;
 }
 
-.burgerButton:hover .bar1 { background-color: white; }
-
-.burgerButton:hover .bar2 { background-color: white; }
-
-.burgerButton:hover .bar3 { background-color: white; }
+.burgerButton:hover .bar1, .burgerButton:hover .bar2, .burgerButton:hover .bar3 { background-color: white; }
 
 .bar1, .bar2, .bar3 {
 	-webkit-box-shadow: 0.05rem 0.05rem 0.05rem 0.05rem #375f98;
@@ -987,7 +984,7 @@ a.button.disabled {
 
 	.headerBackground a.button { width: 100%; padding: 1rem 0; }
 
-	.title { line-height: 0; text-indent: -9999rem;}
+	.title { line-height: 0; text-indent: 9999rem;}
 
 	.title:after {
 		content: "Start9";
@@ -1086,6 +1083,7 @@ footer {
 }
 
 
+.no-borderimage .marketplace.flexItem { background: url("./img/tileBackground.png") no-repeat center; }
 .no-borderimage .menuBar a.button { background: url("./img/menuBarButton.png") no-repeat center; }
 .no-borderimage .menuBar a.button:hover { background: url("./img/menuBarButton_hover.png") no-repeat center; }
 .no-borderimage .menuBar a.button:active { background: url("./img/menuBarButton_pressed.png") no-repeat center; }
@@ -1103,6 +1101,7 @@ footer {
 .no-borderimage input[type=checkbox]:hover + label { background: url("./img/checkboxHover.png") no-repeat center; }
 .no-borderimage input[type=checkbox]:hover:checked + label { background: url("./img/checkboxCheckedHover.png") no-repeat center; }
 
+.no-borderimage .marketplace.flexItem,
 .no-borderimage .menuBar a.button, .no-borderimage .menuBar a.button:hover, 
 .no-borderimage .menuBar a.button:active, .no-borderimage .menuBar a.button.disabled, 
 .no-borderimage a.button, .no-borderimage a.button:hover, .no-borderimage .a.button:active, 
