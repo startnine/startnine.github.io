@@ -154,6 +154,13 @@ html,body {
 
 
 /* Menu */
+.accessibilityMenu {
+	float: right;
+	padding-right: 1rem;
+	pointer-events: auto;
+	display: block;
+	position: relative;
+}
 .mobileLogo { display: none; }
 
 .headerSpace { height: 6em; }
@@ -212,9 +219,9 @@ html,body {
 .menuBar {
 	align-self: flex-end;
 	background: #3669af url('img/menuBar.svg');
-	background: -webkit-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
-		 background: -o-linear-gradient(left, #3669af 1%, #5f9cda 50%, #3669af 100%);
-		background: linear-gradient(to right, #3669af 1%, #5f9cda 50%, #3669af 100%);
+	background: -webkit-linear-gradient(right, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
+		 background: -o-linear-gradient(right, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
+		  background: linear-gradient(to left, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
 	border-image-outset: 0 0 0 0;
 	border-image-repeat: stretch stretch;
 	border-image-slice: 20 10 0 10 fill;
@@ -271,6 +278,8 @@ html,body {
 	text-align: center;
 }
 
+.accessibilityMenu a { background: rgba(0, 0, 0, 0.2); }
+.accessibilityMenu .textAdjust { padding-left: 0.3em; padding-right: 0.3em; }
 /* --- */
 
 
@@ -984,9 +993,9 @@ a.button.disabled {
 
 	.headerBackground a.button { width: 100%; padding: 1rem 0; }
 
-	.title { line-height: 0; text-indent: 9999rem;}
+	.title .actualTitle { line-height: 0; text-indent: 9999rem; bottom: 99rem;}
 
-	.title:after {
+	.title .actualTitle:after {
 		content: "Start9";
 		display: block;
 		line-height: initial;

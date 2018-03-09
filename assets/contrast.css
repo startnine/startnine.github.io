@@ -1,0 +1,7 @@
+a.button { background: #68A0E3; }
+.menuBar a.button.disabled { background: none; }
+.headerBackground { background: #2C5690; }
+.menuBar { background: #1E4980; }
+body { background: white; }
+.bodyBG { visibility: hidden; }
+a.button, .headerBackground, .menuBar { border-image-source: none; }
