@@ -25,6 +25,7 @@
 		<meta property="og:url" content="https://startnine.github.io"/>
 		<meta property="og:image" content="https://startnine.github.io/assets/img/icon.png"/>
 		<link rel="manifest" href="assets/jasonsmanifest.json">
+		<noscript><style>.accessibilityMenu {display: none;}</style></noscript>
 		<!--[if lt IE 9]> <link rel="stylesheet" href="assets/legacy.css" type="text/css"/> <![endif]-->
 	</head>
 	<body>
@@ -32,8 +33,7 @@
 		<header>
 			<div class="headerBackground">
 				<div class="burgerButton" onclick="burgerButton(this);menuBarNav()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
-				<p class="title">News
-					<noscript><style>.accessibilityMenu {display: none;}</style></noscript>
+				<p class="title"><span class="titleText">News</span> 
 					<span class="accessibilityMenu">
 						<a class="textAdjust" onclick="textNormal()">a</a> 
 						<a class="textAdjust" onclick="textLarge()">A</a> 
@@ -41,10 +41,9 @@
 					</span>
 				</p>
 				<nav class="menuBar" id="menuBar">
-					<a class="button" href="javascript:delay('index.html')" onclick="fadeoutleft()" data-target="-1">Home</a>
-					<noscript><a class="button" href="index.html">Home</a></noscript>
-					<a class="button" href="https://github.com/StartNine/Start9/releases" target='_blank' rel="noopenerrel noreferrer">Downloads</a>
-					<a class="button" data-target="0">News</a>
+					<a class="button" href="index.html" data-target="-1">Home</a>
+					<a class="button" href="https://github.com/StartNine/Start9/releases" target="_blank" rel="noopener noreferrer">Downloads</a>
+					<a class="button">News</a>
 					<a class="button disabled">Community</a>
 					<a class="button disabled" data-target="1">FAQ</a>
 				</nav>
