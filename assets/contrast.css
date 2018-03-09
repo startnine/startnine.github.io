@@ -1,7 +1,13 @@
-a.button { background: #68A0E3; }
+a.button { background: #4db6ac;  color: rgba(0, 0, 0, 0.87); }
+a.button:hover { -webkit-filter: brightness(120%); filter: brightness(120%); }
+a.button:active { -webkit-filter: brightness(80%); filter: brightness(80%); }
+.menuBar a.button { background: #484848; }
 .menuBar a.button.disabled { background: none; }
-.headerBackground { background: #2C5690; }
-.menuBar { background: #1E4980; }
-body { background: white; }
+.headerBackground { background: #000000; }
+.menuBar { background: #212121; border-radius: 0; }
+body { background: #fafafa; }
 .bodyBG { visibility: hidden; }
 a.button, .headerBackground, .menuBar { border-image-source: none; }
+.burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white; }
+.menuFocus.active { background: black; }
+a.button:hover, a.button:active, .menuBar a.button:hover, .menuBar a.button:active { border-image-source: none; } 

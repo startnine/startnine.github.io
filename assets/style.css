@@ -211,6 +211,8 @@ html,body {
 	vertical-align: center;
 }
 
+.titleText { position: relative; left: 2.8rem; }
+
 .headerBackground .burgerButton {
 	opacity: 0;
 	pointer-events: none;
@@ -985,22 +987,20 @@ a.button.disabled {
 @media screen and (min-width: 37.5rem) { .menuFocus { display: none !important; opacity: 0 !important; visibility: hidden !important; } }
 
 @media screen and (max-width: 37.5rem) {
+
+	.menuBar { display: none; }
+	
+	.menuBar.responsive { display: block; }
+	
+	.headerBackground, .headerSpace { height: 3rem; }
+
 	.headerBackground .responsive { position: relative; overflow: hidden; }
 	
-	.headerBackground .burgerButton { pointer-events: visible; cursor: pointer; opacity: 1; }
+	.headerBackground .burgerButton{ pointer-events: visible; cursor: pointer; opacity: 1; }
 
 	.headerBackground .responsive a.button { display: inline-block; width: 100%; padding: 1rem 0; }
 
 	.headerBackground a.button { width: 100%; padding: 1rem 0; }
-
-	.title .actualTitle { line-height: 0; text-indent: 9999rem; bottom: 99rem;}
-
-	.title .actualTitle:after {
-		content: "Start9";
-		display: block;
-		line-height: initial;
-		text-indent: 0;
-	}
 
 	.no-cssgrid .gridBody { display: initial; }
 

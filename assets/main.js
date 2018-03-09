@@ -11,9 +11,10 @@ $(document).ready(function() {
     $('.burgerButton').click(function() {
         if(clickedBurger) {
             clickedBurger = false;
-            $('.menuBar').removeClass('slideDown').addClass('slideUp').removeClass('responsive');
+            $('.menuBar').removeClass('slideDown').addClass('slideUp');
             $('.menuFocus').removeClass('menuFocusIn').addClass('menuFocusOut');
             setTimeout( function() { $('.menuFocus').toggleClass("active") }, 300); 
+            setTimeout( function() { $('.menuBar').removeClass('responsive') }, 300); 
         }
         else {
             clickedBurger = true;
