@@ -7,6 +7,6 @@ Please note that to actually visit the site, **use http://start9.menu.** Don't t
 There's really no need, add an issue if you want to suggest anything
 
 ## Contributors
-rob55rod: mockups, original webpage, blog content
-logonoff: maintaining the site
-reflectron: blog content and occasional fixes
+rob55rod: mockups, original webpage, blog content  
+logonoff: maintaining the site  
+reflectron: blog content and occasional fixes  
