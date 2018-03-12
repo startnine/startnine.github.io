@@ -6,7 +6,16 @@ function scrollup() { $("html, body").animate({ scrollTop: 0 }, 150); return fal
 function textNormal() { $('html').css("font-size", "1em"); }
 function textLarge() { $('html').css("font-size", "2em"); }
 
+//edgey
+var userAgent = navigator.userAgent;
+if( userAgent.indexOf('Edge') >= 0){
+  console.log("dammit edge lol");
+  $('head').append('<link rel="stylesheet" href="assets/edgey.css" type="text/css"/>');
+} 
+
+
 $(document).ready(function() {
+    // burger button toggle
     var clickedBurger = false;
     $('.burgerButton').click(function() {
         if(clickedBurger) {
@@ -23,16 +32,16 @@ $(document).ready(function() {
         }
      });
 
+    // contrast toggle
     var clickedContrast = false;
     $('.contrast').click(function() {
         if(clickedContrast) {
             clickedContrast = false;
-            $('#contrastParent').empty(); 
             $('#contrast').remove(); 
         }
         else {
             clickedContrast = true;
-            $('head').append('<div id="contrastParent"><link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/></div>');
+            $('head').append('<link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/>');
         }
      });
 });
@@ -57,13 +66,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 */
-
-//edgey
-var userAgent = navigator.userAgent;
-if( userAgent.indexOf('Edge') >= 0){
-	console.log("dammit edge lol");
-	$('head').append('<link rel="stylesheet" href="assets/edgey.css" type="text/css"/>');
-} 
 
 // animationals WAIT FOR CNAME 
 $("#gitbutton").click(function() { $('.github').toggleClass('github-active'); });

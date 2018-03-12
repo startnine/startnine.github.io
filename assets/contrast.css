@@ -1,13 +1,22 @@
-a.button { background: #4db6ac;  color: rgba(0, 0, 0, 0.87); }
-a.button:hover { -webkit-filter: brightness(120%); filter: brightness(120%); }
-a.button:active { -webkit-filter: brightness(80%); filter: brightness(80%); }
-.menuBar a.button { background: #484848; }
-.menuBar a.button.disabled { background: none; }
-.headerBackground { background: #000000; }
-.menuBar { background: #212121; border-radius: 0; }
-body { background: #fafafa; }
-.bodyBG { visibility: hidden; }
-a.button, .headerBackground, .menuBar { border-image-source: none; }
-.burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white; }
-.menuFocus.active { background: black; }
-a.button:hover, a.button:active, .menuBar a.button:hover, .menuBar a.button:active { border-image-source: none; } 
+.menuBar, .menuBar a.button,  .menuBar a.button:hover, 
+.menuBar a.button:active,  .menuBar a.button.disabled, 
+a.button,  a.button:hover,  .a.button:active, 
+input[type=checkbox] + label,  input[type=radio] + label {
+	background: none !important;	
+}
+
+a.button { background: #4db6ac !important; }
+a.button:hover { background: #4db6ac !important; -webkit-filter: brightness(120%); filter: brightness(120%) !important; }
+a.button:active { background: #4db6ac !important; -webkit-filter: brightness(80%); filter: brightness(80%) !important; }
+.menuBar a.button { background: #484848 !important; }
+.menuBar a.button:hover { background: #484848 !important; }
+.menuBar a.button:active { background: #484848 !important; }
+.menuBar a.button.disabled { background: none !important; }
+.headerBackground { background: #000000 !important; }
+.menuBar { background: #212121 !important; border-radius: 0 !important; }
+body { background: #fafafa !important; }
+.bodyBG { visibility: hidden !important; }
+a.button, .headerBackground, .menuBar { border-image-source: none !important; }
+.burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white !important; }
+.menuFocus.active { background: black !important; }
+a.button:hover, a.button:active, .menuBar a.button:hover, .menuBar a.button:active { border-image-source: none !important; } 
