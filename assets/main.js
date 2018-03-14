@@ -17,6 +17,7 @@ $(document).ready(function() {
 	// burger button class toggle
 	var clickedBurger = false;
 	$('.burgerButton').click(function() {
+        
 		if(clickedBurger) {
 			clickedBurger = false;
 			$('.menuBar').removeClass('slideDown').addClass('slideUp');
