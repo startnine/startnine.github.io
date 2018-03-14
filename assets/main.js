@@ -23,10 +23,10 @@ $(document).ready(function() {
             $('.menuBar').removeClass('slideDown').addClass('slideUp');
             $('.menuFocus').removeClass('menuFocusIn').addClass('menuFocusOut');
             setTimeout( function() { 
-              $('.menuFocus').toggleClass("active") 
-              $('.menuBar').removeClass('responsive')
-              $('.menuBar').removeClass('slideUp')
-              $('.menuFocus').removeClass('menuFocusOut')
+              $('.menuFocus').toggleClass("active");
+              $('.menuBar').removeClass('responsive');
+              $('.menuBar').removeClass('slideUp');
+              $('.menuFocus').removeClass('menuFocusOut');
             }, 300); 
         }
         else {
@@ -76,4 +76,4 @@ $("#gitbutton").click(function() { $('.github').toggleClass('github-active'); })
 $("#discordbutton").click(function() { $('.discord').toggleClass('discord-active'); });
 
 // delay links
-function delay (URL) { setTimeout( function() { window.location = URL }, 50) ; }
+function delay (URL) { setTimeout( function() { window.location = URL; }, 50) ; }
