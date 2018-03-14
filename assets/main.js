@@ -22,8 +22,12 @@ $(document).ready(function() {
             clickedBurger = false;
             $('.menuBar').removeClass('slideDown').addClass('slideUp');
             $('.menuFocus').removeClass('menuFocusIn').addClass('menuFocusOut');
-            setTimeout( function() { $('.menuFocus').toggleClass("active") }, 300); 
-            setTimeout( function() { $('.menuBar').removeClass('responsive') }, 300); 
+            setTimeout( function() { 
+              $('.menuFocus').toggleClass("active") 
+              $('.menuBar').removeClass('responsive')
+              $('.menuBar').removeClass('slideUp')
+              $('.menuFocus').removeClass('menuFocusOut')
+            }, 300); 
         }
         else {
             clickedBurger = true;
