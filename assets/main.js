@@ -1,23 +1,23 @@
 function burgerButton(x) { x.classList.toggle("change"); }
 function menuFocus() { document.querySelector(".burgerButton").click(); }
-function fadeoutright() { $( "#main" ).addClass("fadeoutright"); scrollup(); }
-function fadeoutleft() { $( "#main" ).addClass("fadeoutleft"); scrollup(); }
-function scrollup() { $("html, body").animate({ scrollTop: 0 }, 150); return false; }
+function fadeoutright() { $('#main').addClass("fadeoutright"); scrollup(); }
+function fadeoutleft() { $('#main').addClass('fadeoutleft'); scrollup(); }
+function scrollup() { $('html, body').animate({ scrollTop: 0 }, 150); return false; }
 function textNormal() { $('html').css("font-size", "1em"); }
 function textLarge() { $('html').css("font-size", "2em"); }
 
 // detect microsoft edge and apply a hotfix CSS file 
-var userAgent = navigator.userAgent;
-if( userAgent.indexOf('Edge') >= 0) {
-	console.log("dammit edge lol"); // no hard feelings
-	$('head').append('<link rel="stylesheet" href="assets/edgey.css" type="text/css"/>');
-} 
+
 
 $(document).ready(function() {
+    var userAgent = navigator.userAgent;
+    if( userAgent.indexOf('Edge') >= 0) {
+        console.log("Microsoft, please fix border-image"); // no hard feelings
+        $('head').append('<link rel="stylesheet" href="assets/edgey.css" type="text/css"/>');
+    } 
 	// burger button class toggle
 	var clickedBurger = false;
 	$('.burgerButton').click(function() {
-        
 		if(clickedBurger) {
 			clickedBurger = false;
 			$('.menuBar').removeClass('slideDown').addClass('slideUp');
@@ -72,5 +72,5 @@ function showSlides(n) {
 $("#gitbutton").click(function() { $('.github').toggleClass('github-active'); });
 $("#discordbutton").click(function() { $('.discord').toggleClass('discord-active'); });
 
-// delay links
+// delay links when animationals come
 function delay (URL) { setTimeout( function() { window.location = URL; }, 50) ; }

@@ -224,11 +224,11 @@ html,body {
 	background: -webkit-linear-gradient(right, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
 		 background: -o-linear-gradient(right, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
 		  background: linear-gradient(to left, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
-	border-image-outset: 0 0 0 0;
-	border-image-repeat: stretch stretch;
-	border-image-slice: 20 10 0 10 fill;
 	border-image-source: url("img/menuBar.png");
-	border-image-width: 1.25rem 0.625rem 0 0.625rem;
+	border-image-slice: 13 15 4 14 fill; 
+	border-image-width: 13px 15px 6px 15px; 
+	border-image-outset: 0px 0px 0px 0px; 
+	border-image-repeat: stretch stretch;
 	border-radius: 1rem 1rem 0 0;
 	bottom: 2.3rem;
 	min-height: 3rem;
@@ -240,9 +240,7 @@ html,body {
 }
 
 .menuBar a.button {
-	-ms-border-image-source: url("img/menuBarButton.png");
-	 -o-border-image-source: url("img/menuBarButton.png");
-		border-image-source: url("img/menuBarButton.png");
+	border-image-source: url("img/menuBarButton.png");
 	-webkit-transition: all 0.25s ease;
 		 -o-transition: all 0.25s ease;
 			transition: all 0.25s ease;
@@ -261,11 +259,11 @@ html,body {
 	-webkit-transition: all 0.125s ease;
 		 -o-transition: all 0.125s ease;
 			transition: all 0.125s ease;
-	border-image-outset: 0 0 0 0;
-	border-image-repeat: stretch stretch;
 	border-image-slice: 0 7 7 7 fill;
+	border-image-width: 7px 7px 7px 7px;
+	border-image-outset: 0px 0px 0px 0px;
+	border-image-repeat: stretch stretch;
 	border-image-source: url("img/menuBarButton_hover.png");
-	border-image-width: 0 0.438rem 0.438rem 0.438rem;
 	transition: all 0.125s ease;
 }
 
@@ -301,7 +299,6 @@ body {
 /* Content */
 .oneBox, .gridBody {
 	bottom: 12rem;
-	grid-gap: 0.625rem;
 	margin: 0 10%;
 	min-height: 100%;
 	padding: 0;
@@ -397,11 +394,11 @@ body {
 }
 
 .marketplace.flexItem {
-	border-image-outset: 0 0 0 0;
-	border-image-repeat: stretch stretch;
-	border-image-slice: 9 9 9 9 fill;
 	border-image-source: url("img/tileBackground.png");
-	border-image-width: 0.5625rem 0.5625rem 0.5625rem 0.5625rem;
+	border-image-slice: 11 11 11 11 fill;
+	border-image-width: 10px 10px 10px 10px;
+	border-image-outset: 0px 0px 0px 0px;
+	border-image-repeat: stretch stretch;
 	height: 15rem;
 	width: 15rem;
 	display: inline-block;
@@ -906,11 +903,11 @@ body {
 
 /* Buttons */
 a.button {
-	border-image-outset: 0 0 0 0;
-	border-image-repeat: stretch stretch;
-	border-image-slice: 7 7 7 7 fill;
 	border-image-source: url("img/buttonIdle.png");
-	border-image-width: 0.438rem 0.438rem 0.438rem 0.438rem;
+	border-image-slice: 2 3 3 3 fill;
+	border-image-width: 2px 2px 2px 2px;
+	border-image-outset: 0px 0px 0px 0px;
+	border-image-repeat: stretch stretch;
 	-webkit-box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
 			box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
 	-webkit-transition: all 0.75s ease;
@@ -987,31 +984,18 @@ a.button.disabled {
 @media screen and (min-width: 37.5rem) { .menuFocus { display: none !important; opacity: 0 !important; visibility: hidden !important; } }
 
 @media screen and (max-width: 37.5rem) {
-
 	.menuBar { display: none; }
-	
 	.menuBar.responsive { display: block; }
-	
 	.headerBackground, .headerSpace { height: 3rem; }
-
 	.headerBackground .responsive { position: relative; overflow: hidden; }
-	
 	.headerBackground .burgerButton{ pointer-events: visible; cursor: pointer; opacity: 1; }
-
 	.headerBackground .responsive a.button { display: inline-block; width: 100%; padding: 1rem 0; }
-
 	.headerBackground a.button { width: 100%; padding: 1rem 0; }
-
 	.no-cssgrid .gridBody { display: initial; }
-
 	.no-cssgrid .content { display: initial; width: auto; }
-
 	.no-cssgrid .side { display: block; width: auto; }
-
 	.headerBackground a.button { min-width: 100%; }
-	
 	.marketplaceTitle { font-size: 3rem; line-height: 5rem; }
-
 }
 
 /* --- */

@@ -1,4 +1,4 @@
-/* DAMMIT IE 6- WHY YOU GOTTA HATE STANDARDS */
+/* ie6 support mainly */
 @import url("style.css");
 
 /* disable burger button */
@@ -12,14 +12,31 @@
 
 body { 	background-image: url('img/background.jpg'); }
 
-.headerBackground {	
-	background-image: url('img/headerBackground_exploder.jpg');
-	background-size: 100% 100%;
-	background-position: center center;
-}
+.menuBar { background: url("./img/menuBar.png") no-repeat center !important;}
+.menuBar a.button { background: url("./img/menuBarButton.png") no-repeat center !important;}
+.menuBar a.button:hover { background: url("./img/menuBarButton_hover.png") no-repeat center !important;}
+.menuBar a.button:active { background: url("./img/menuBarButton_pressed.png") no-repeat center !important;}
+.menuBar a.button.disabled { background: url("./img/menuBarButton.png") no-repeat center !important;}
+a.button { background: url("./img/buttonIdle.png") no-repeat center !important;}
+a.button:hover { background: url("./img/buttonHover.png") no-repeat center !important;}
+a.button:active { background: url("./img/buttonPressed.png") no-repeat center !important;}
+a.button.disabled { background: url("./img/buttonDisabled.png") no-repeat center !important;}
+input[type=checkbox] + label { background: url("./img/checkbox.png") no-repeat center !important;}
+input[type=radio] + label { background: url("./img/checkbox.png") no-repeat center !important;}
+input[type=radio]:hover + label { background: url("./img/checkboxHover.png") no-repeat center !important;}
+input[type=radio]:checked + label { background: url("./img/radioChecked.png") no-repeat center !important;}
+input[type=radio]:hover:checked + label { background: url("./img/radioCheckedHover.png") no-repeat center !important;}
+input[type=checkbox]:checked + label { background: url("./img/checkboxChecked.png") no-repeat center !important;}
+input[type=checkbox]:hover + label { background: url("./img/checkboxHover.png") no-repeat center !important;}
+input[type=checkbox]:hover:checked + label { background: url("./img/checkboxCheckedHover.png") no-repeat center !important;}
 
-.menuBar {	
-	background-image: url('img/menuBar.png');
-	background-size: 100% 100%;
-	background-position: center center;
+.menuBar, .menuBar a.button,  .menuBar a.button:hover, 
+.menuBar a.button:active,  .menuBar a.button.disabled, 
+a.button,  a.button:hover,  .a.button:active, 
+input[type=checkbox] + label,  input[type=radio] + label {
+	border-image-source: none !important;
+	-webkit-background-size: 100% 100% !important;
+	   -moz-background-size: 100% 100% !important;
+		 -o-background-size: 100% 100% !important;
+			background-size: 100% 100% !important;
 }
