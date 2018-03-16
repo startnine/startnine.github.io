@@ -226,7 +226,7 @@ html,body {
 		  background: linear-gradient(to left, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
 	border-image-source: url("img/menuBar.png");
 	border-image-slice: 13 15 4 14 fill; 
-	border-image-width: 13px 15px 6px 15px; 
+	border-image-width: 13px 15px 3px 15px; 
 	border-image-outset: 0px 0px 0px 0px; 
 	border-image-repeat: stretch stretch;
 	border-radius: 1rem 1rem 0 0;
