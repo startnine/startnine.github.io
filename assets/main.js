@@ -6,15 +6,14 @@ function scrollup() { $('html, body').animate({ scrollTop: 0 }, 150); return fal
 function textNormal() { $('html').css("font-size", "1em"); }
 function textLarge() { $('html').css("font-size", "2em"); }
 
-// detect microsoft edge and apply a hotfix CSS file 
-
-
 $(document).ready(function() {
+    // detect microsoft edge and apply a hotfix CSS file 
     var userAgent = navigator.userAgent;
     if( userAgent.indexOf('Edge') >= 0) {
         console.log("Microsoft, please fix border-image"); // no hard feelings
         $('head').append('<link rel="stylesheet" href="assets/edgey.css" type="text/css"/>');
-    } 
+    }
+
 	// burger button class toggle
 	var clickedBurger = false;
 	$('.burgerButton').click(function() {
@@ -33,6 +32,7 @@ $(document).ready(function() {
 			$('.menuFocus').removeClass('menuFocusOut').addClass('menuFocusIn').toggleClass("active");
 		}
 	 });
+
 	// contrast toggle - because Start9 uses plex for some reason..
 	var clickedContrast = false;
 	$('.contrast').click(function() {
@@ -45,6 +45,16 @@ $(document).ready(function() {
 			$('head').append('<link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/>');
 		}
 	 });
+
+	// data query thingamadoohickers
+	if (window.location.href.includes("contrast=true")) { 
+		var clickedContrast = true; 
+		$('head').append('<link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/>'); 
+	}
+	else { $('#contrast').remove(); }
+
+	if (window.location.href.includes("textLarge=true")) { textLarge(); }
+	else { textNormal(); }
 })
 
 /* W3S slideshow (i know, very insecure probally)
