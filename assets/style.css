@@ -1017,6 +1017,66 @@ footer {
 
 /* --- */
 
+/* Light */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 200;
+	src: local('Selawik Light'),
+		 url("font/selawkl.woff2") format("woff2"),
+		 url("font/selawkl.woff") format("woff"),
+		 url("font/selawkl.eot") format("embedded-opentype");
+}
+
+/* Semilight */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 300;
+	src: local('Selawik Semilight'),
+		 url("font/selawksl.woff2") format("woff2"),
+		 url("font/selawksl.woff") format("woff"),
+		 url("font/selawksl.ttf") format("truetype"),
+		 url("font/selawksl.eot") format("embedded-opentype");
+}
+
+/* Normal */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 400;
+	src: local('Selawik'),
+		 url("font/selawk.woff2") format("woff2"),
+		 url("font/selawk.woff") format("woff"),
+		 url("font/selawk.ttf") format("truetype"),
+		 url("font/selawk.eot") format("embedded-opentype");
+}
+
+/* Semibold */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 600;
+	src: local('Selawik Semibold'),
+		 url("font/selawksb.woff2") format("woff2"),
+		 url("font/selawksb.woff") format("woff"),
+		 url("font/selawksb.ttf") format("truetype"),
+		 url("font/selawksb.eot") format("embedded-opentype");
+}
+
+/* Bold */
+@font-face {
+	font-family: Selawik;
+	font-style: normal;
+	font-weight: 700;
+	src: local('Selawik Bold'),
+		 url("font/selawkb.woff2") format("woff2"),
+		 url("font/selawkb.woff") format("woff"),
+		 url("font/selawkb.ttf") format("truetype"),
+		 url("font/selawkb.eot") format("embedded-opentype");
+}
+
+
 /* Fallbacks */
 .no-cssgrid .gridBody { display: table; }
 
@@ -1029,52 +1089,6 @@ footer {
 	display: table-cell;
 	width: 15%;
 }
-
-/* Light */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 200;
-	src: url("font/selawkl.woff2") format("woff2"),
-		 url("font/selawkl.eot") format("embedded-opentype");
-}
-
-/* Semilight */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 300;
-	src: url("font/selawksl.woff2") format("woff2"),
-		 url("font/selawksl.eot") format("embedded-opentype");
-}
-
-/* Normal */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 400;
-	src: url("font/selawk.woff2") format("woff2"),
-		 url("font/selawk.eot") format("embedded-opentype");
-}
-
-/* Semibold */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 600;
-	src: url("font/selawksb.woff2") format("woff2"),
-		 url("font/selawksb.eot") format("embedded-opentype");
-}
-
-/* Bold */
-@font-face {
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 700;
-	src: url("font/selawkb.woff2") format("woff2"),
-		 url("font/selawkb.eot") format("embedded-opentype");
-}
-
 
 .no-borderimage .marketplace.flexItem { background: url("./img/tileBackground.png") no-repeat center; }
 .no-borderimage .menuBar a.button { background: url("./img/menuBarButton.png") no-repeat center; }
