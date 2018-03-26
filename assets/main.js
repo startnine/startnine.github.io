@@ -107,9 +107,9 @@ $(document).ready(function() {
 	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
 	$("a.delayLink[href]").click(function(){
 		var self = $(this);
-		self.fadeOut(300, function() {
+		setTimeout(function() {
 			window.location.href = self.attr('href'); // go to href after the slide animation completes
-		});
+		}, 300);
 		return false; // And also make sure you return false from your click handler.
 	});
 
