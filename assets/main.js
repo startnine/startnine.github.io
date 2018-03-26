@@ -23,15 +23,15 @@ function textLarge() { $('html').css("font-size", "2em"); }
 
 
 $(document).ready(function() {
-    Waves.attach('.button');
-    Waves.init();
+	Waves.attach('.button');
+	Waves.init();
 
-    // detect microsoft edge and apply a hotfix CSS file 
-    var userAgent = navigator.userAgent;
-    if( userAgent.indexOf('Edge') >= 0) {
-        console.log("Microsoft, please fix border-image"); // no hard feelings
-        $('head').append('<link rel="stylesheet" href="assets/edgey.css" type="text/css"/>');
-    }
+	// detect microsoft edge and apply a hotfix CSS file 
+	var userAgent = navigator.userAgent;
+	if( userAgent.indexOf('Edge') >= 0) {
+		console.log("Microsoft, please fix border-image"); // no hard feelings
+		$('head').append('<link rel="stylesheet" href="assets/edgey.css" type="text/css"/>');
+	}
 
 	// burger button class toggle
 	var clickedBurger = false;
@@ -74,6 +74,15 @@ $(document).ready(function() {
 
 	if (window.location.href.includes("textLarge=true")) { textLarge(); }
 	else { textNormal(); }
+
+	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click
+	$("a.delayLink[href]").click(function(){
+		var self = $(this);
+		self.fadeOut(300, function() {
+			window.location.href = self.attr('href'); // go to href after the slide animation completes
+		});
+		return false; // And also make sure you return false from your click handler.
+	});
 })
 
 /* W3S slideshow (i know, very insecure probally)

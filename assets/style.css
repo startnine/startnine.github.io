@@ -202,9 +202,9 @@ html,body {
 }
 
 .title {
-	bottom: 2.5rem;
+	bottom: 2.65rem;
 	color: white;
-	font-size: 1.2em;
+	font-size: 1.3em;
 	height: 1rem;
 	position: relative;
 	text-align: center;
@@ -230,8 +230,7 @@ html,body {
 	border-image-outset: 0px 0px 0px 0px; 
 	border-image-repeat: stretch stretch;
 	border-radius: 1rem 1rem 0 0;
-	bottom: 2.3rem;
-	min-height: 3rem;
+	bottom: 2.5rem;
 	min-width: 100%;
 	overflow: auto;
 	position: relative;
@@ -248,9 +247,9 @@ html,body {
 	color: white;
 	display: inline-block;
 	font-size: 0.85em;
-	height: 1.75em;
-	line-height: 1.75em;
-	padding: 0.9rem 5%;
+	height: 1.75rem;
+	line-height: 1.75rem;
+	padding: 0.65rem 5%;
 	text-align: center;
 	text-decoration: none;
 }
@@ -278,7 +277,7 @@ html,body {
 	text-align: center;
 }
 
-.accessibilityMenu a { background: rgba(0, 0, 0, 0.2); }
+.accessibilityMenu a { font-size: 1rem; background: rgba(0, 0, 0, 0.2); }
 .accessibilityMenu .textAdjust { padding-left: 0.3em; padding-right: 0.3em; }
 /* --- */
 
