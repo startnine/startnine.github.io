@@ -18,8 +18,16 @@ function menuFocus() { document.querySelector(".burgerButton").click(); }
 function fadeoutright() { $('#main').addClass("fadeoutright"); scrollup(); }
 function fadeoutleft() { $('#main').addClass('fadeoutleft'); scrollup(); }
 function scrollup() { $('html, body').animate({ scrollTop: 0 }, 150); return false; }
-function textNormal() { $('html').css("font-size", "1em"); }
-function textLarge() { $('html').css("font-size", "2em"); }
+function textNormal() { 
+	$('html').css("font-size", "1em"); 
+	$("a[href='index.html?textLarge=true']").attr('href', 'index.html')
+	$("a[href='news.html?textLarge=true']").attr('href', 'news.html')
+}
+function textLarge() { 
+	$('html').css("font-size", "2em"); 
+	$("a[href='index.html']").attr('href', 'index.html?textLarge=true')
+	$("a[href='news.html']").attr('href', 'news.html?textLarge=true')
+}
 
 
 $(document).ready(function() {
@@ -58,10 +66,15 @@ $(document).ready(function() {
 		if(clickedContrast) {
 			clickedContrast = false;
 			$('#contrast').remove(); 
+			$("a[href='index.html?contrast=true']").attr('href', 'index.html')
+			$("a[href='news.html?contrast=true']").attr('href', 'news.html')
 		}
 		else {
 			clickedContrast = true;
 			$('head').append('<link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/>');
+			$("a[href='index.html']").attr('href', 'index.html?contrast=true')
+			$("a[href='news.html']").attr('href', 'news.html?contrast=true')
+
 		}
 	 });
 
@@ -69,6 +82,8 @@ $(document).ready(function() {
 	if (window.location.href.includes("contrast=true")) { 
 		var clickedContrast = true; 
 		$('head').append('<link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/>'); 
+		$("a[href='index.html']").attr('href', 'index.html?contrast=true')
+		$("a[href='news.html']").attr('href', 'news.html?contrast=true')
 	}
 	else { $('#contrast').remove(); }
 
