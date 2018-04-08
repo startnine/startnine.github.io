@@ -40,7 +40,7 @@ a.button:hover { background: #26a69a !important; -webkit-filter: brightness(120%
 .menuBar a.button.disabled { background: none !important; }
 .headerBackground { background: #4d88d5 !important; }
 .menuBar { background: #2e5280 !important; border-radius: 0 !important; }
-body { background: #fafafa !important; }
+body { background: #fafafa !important; color: #000 !important; }
 .bodyBG { visibility: hidden !important; }
 a.button, .headerBackground, .menuBar { border-image-source: none !important; }
 .burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white !important; }
