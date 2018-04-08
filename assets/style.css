@@ -1,6 +1,8 @@
 
 /* --- */
 * { font-family: "Selawik", "Segoe UI", sans-serif; }
+a { color: #00729e; text-decoration: none; }
+a:hover { text-decoration: underline; }
 /* --- */
 
 /* Remove X Overflow */
@@ -162,6 +164,7 @@ html,body {
 	display: block;
 	position: relative;
 }
+
 .mobileLogo { display: none; }
 
 .headerSpace { height: 6em; }
@@ -278,7 +281,7 @@ html,body {
 	text-align: center;
 }
 
-.accessibilityMenu a { font-size: 1rem; background: rgba(0, 0, 0, 0.2); }
+.accessibilityMenu a { font-size: 1rem; background: rgba(0, 0, 0, 0.2); color: white; text-decoration: none; }
 .accessibilityMenu .textAdjust { padding-left: 0.3em; padding-right: 0.3em; }
 /* --- */
 
