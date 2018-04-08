@@ -36,7 +36,7 @@ body {
 	color: white; 
 }
 
-* { font-family: "Selawik", "Segoe UI"; }
+* { font-family: "Selawik", "Segoe UI", sans-serif; }
  
 a.button { background: #424242 !important; color: #fff !important; border-radius: 0.1rem;}
 a.button:hover { background: #424242 !important; -webkit-filter: brightness(120%); filter: brightness(120%) !important; }
