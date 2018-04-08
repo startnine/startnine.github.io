@@ -30,21 +30,22 @@ input[type=checkbox] + label,  input[type=radio] + label {
 }
 
 body { 
-	background: -webkit-linear-gradient(top, #303030 1%,#000000 100%);
-	  background: -moz-linear-gradient(top, #303030 1%, #000000 100%);
-	  background: linear-gradient(to bottom, #303030 1%,#000000 100%);
+	background: -webkit-linear-gradient(top, #303030 1%, #212121 50%, #000000 100%);
+	  background: -moz-linear-gradient(top, #303030 1%, #212121 50%, #000000 100%);
+	  background: linear-gradient(to bottom, #303030 1%, #212121 50%, #000000 100%);
 	color: white; 
 }
 
 * { font-family: "Selawik", "Segoe UI", sans-serif; }
- 
+
 a.button { background: #424242 !important; color: #fff !important; border-radius: 0.1rem;}
 a.button:hover { background: #424242 !important; -webkit-filter: brightness(120%); filter: brightness(120%) !important; }
 .menuBar a.button { background: #424242 !important; color: #fff !important; border-radius: 0 !important;}
 .menuBar a.button:hover { background: #424242 !important; }
 .menuBar a.button:active { background: #424242 !important; }
 .menuBar a.button.disabled { background: none !important; }
-.headerBackground { background: #000000 !important; }
+.headerBackground { background: #000000 !important; overflow: hidden !important; }
+.bodyBG img { -webkit-filter: grayscale(100%) !important; filter: grayscale(100%) !important; }
 .menuBar { background: #212121 !important; border-radius: 0 !important; }
 a.button, .headerBackground, .menuBar { border-image-source: none !important; }
 .burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white !important; }
