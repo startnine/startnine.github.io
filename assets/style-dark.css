@@ -29,6 +29,12 @@ input[type=checkbox] + label,  input[type=radio] + label {
 	border-image-repeat: initial !important;
 }
 
+body { 
+	background: -webkit-linear-gradient(top, #303030 1%,#000000 100%);
+	  background: -moz-linear-gradient(top, #303030 1%, #000000 100%);
+	  background: linear-gradient(to bottom, #303030 1%,#000000 100%);
+	color: white; 
+}
 
 * { font-family: "Selawik", "Segoe UI"; }
  
@@ -40,8 +46,6 @@ a.button:hover { background: #424242 !important; -webkit-filter: brightness(120%
 .menuBar a.button.disabled { background: none !important; }
 .headerBackground { background: #000000 !important; }
 .menuBar { background: #212121 !important; border-radius: 0 !important; }
-body { background: #303030 !important; color: white; }
-.bodyBG { visibility: hidden !important; }
 a.button, .headerBackground, .menuBar { border-image-source: none !important; }
 .burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white !important; }
 .menuFocus.active { background: black !important; }
