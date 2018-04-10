@@ -106,6 +106,13 @@ $(document).ready(function() {
 	if (window.location.href.includes("textLarge=true")) { textLarge(); }
 	else { textNormal(); }
 
+	if (window.location.href.includes("dark=hellyeah")) { 
+		$('head').append('<link rel="stylesheet" id="dark" href="assets/dark.css" type="text/css"/>'); 
+		$("a[href='index.html']").attr('href', 'index.html?dark=hellyeah')
+		$("a[href='news.html']").attr('href', 'news.html?dark=hellyeah')
+	}
+	else { $('#dark').remove(); }
+
 	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
 	$("a.delayLink[href]").click(function(){
 		var self = $(this);
