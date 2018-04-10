@@ -28,8 +28,10 @@
 function burgerButton(x) { x.classList.toggle("change"); }
 function menuFocus() { document.querySelector(".burgerButton").click(); }
 function fadeoutright() { $('#main').addClass("fadeoutright"); scrollup(); }
-function fadeoutleft() { $('#main').addClass('fadeoutleft'); scrollup(); }
+function fadeoutleft() { $('#main').addClass("fadeoutleft"); scrollup(); }
 function scrollup() { $('html, body').animate({ scrollTop: 0 }, 150); return false; }
+function someone() { $("body").addClass("someone"); } // help i've fallen and i cant get up
+
 function textNormal() { 
 	$('html').css("font-size", "1em"); 
 	$("a[href='index.html?textLarge=true']").attr('href', 'index.html')
