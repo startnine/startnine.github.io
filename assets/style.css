@@ -147,10 +147,9 @@ html,body {
 }
 
 .logo .image {
-	height: 4.5rem;
+	height: 6.5rem;
 	vertical-align: middle;
-	width: 2.75rem;
-	padding-right: 0.5rem;
+	width: 5rem;
 }
 
 .logo .text {
