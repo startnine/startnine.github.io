@@ -169,6 +169,22 @@ html,body {
 	position: relative;
 }
 
+.captionButton, .captionButton:hover {
+	border-image-source: url("img/caption.png");
+	border-image-slice: 2 2 2 2 fill;
+	border-image-width: 2px 2px 2px 2px;
+	border-image-repeat: stretch stretch;
+	background: none;
+	color: #3966AD;
+	font-weight: bold;
+	display: inline-block;
+	width: 1.25rem;
+	text-align: center;
+	font-size: 1rem;
+	text-decoration: none;
+	align-items: center;
+}
+
 .mobileLogo { display: none; }
 
 .headerSpace { height: 6em; }
@@ -235,7 +251,6 @@ html,body {
 	border-image-source: url("img/menuBar.png");
 	border-image-slice: 13 15 4 14 fill; 
 	border-image-width: 13px 15px 3px 15px; 
-	border-image-outset: 0px 0px 0px 0px; 
 	border-image-repeat: stretch stretch;
 	border-radius: 1rem 1rem 0 0;
 	bottom: 2.5rem;
@@ -268,7 +283,6 @@ html,body {
 			transition: all 0.125s ease;
 	border-image-slice: 0 7 7 7 fill;
 	border-image-width: 7px 7px 7px 7px;
-	border-image-outset: 0px 0px 0px 0px;
 	border-image-repeat: stretch stretch;
 	border-image-source: url("img/menuBarButton_hover.png");
 	transition: all 0.125s ease;
@@ -284,9 +298,6 @@ html,body {
 	opacity: 0.6;
 	text-align: center;
 }
-
-.accessibilityMenu a { font-size: 1rem; background: rgba(0, 0, 0, 0.2); color: white; text-decoration: none; }
-.accessibilityMenu .textAdjust { padding-left: 0.3em; padding-right: 0.3em; }
 /* --- */
 
 
@@ -404,7 +415,6 @@ body {
 	border-image-source: url("img/tileBackground.png");
 	border-image-slice: 11 11 11 11 fill;
 	border-image-width: 10px 10px 10px 10px;
-	border-image-outset: 0px 0px 0px 0px;
 	border-image-repeat: stretch stretch;
 	height: 15rem;
 	width: 15rem;
@@ -913,7 +923,6 @@ a.button {
 	border-image-source: url("img/buttonIdle.png");
 	border-image-slice: 2 3 3 3 fill;
 	border-image-width: 2px 2px 2px 2px;
-	border-image-outset: 0px 0px 0px 0px;
 	border-image-repeat: stretch stretch;
 	-webkit-box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
 			box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);

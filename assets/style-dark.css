@@ -17,7 +17,7 @@
 
 .menuBar, .menuBar a.button,  .menuBar a.button:hover, 
 .menuBar a.button:active,  .menuBar a.button.disabled, 
-a.button,  a.button:hover,  .a.button:active, 
+a.button,  a.button:hover,  .a.button:active, .captionButton,
 input[type=checkbox] + label,  input[type=radio] + label {
 	background: initial !important;	
 	border: initial;
@@ -38,6 +38,7 @@ body {
 
 p, li { opacity: 0.8; }
 .title, .logo .text { opacity: 1; }
+.captionButton, .captionButton:hover { color: white !important; background: rgba(0, 0, 0, 0.2) !important; }
 a.button { background: #424242 !important; color: #fff !important; border-radius: 0.1rem;}
 a.button:hover { background: #424242 !important; -webkit-filter: brightness(120%); filter: brightness(120%) !important; }
 .menuBar a.button { background: #424242 !important; color: #fff !important; border-radius: 0 !important; }
@@ -48,6 +49,5 @@ a.button:hover { background: #424242 !important; -webkit-filter: brightness(120%
 .menuBar { background: #212121 !important; border-radius: 0 !important; }
 .burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white !important; }
 .menuFocus.active { background: black !important; }
-a.button, .headerBackground, .menuBar, a.button:hover, a.button:active, .menuBar a.button:hover, .menuBar a.button:active { border-image-source: none !important; } 
 
 @media screen and (max-width: 37.5rem) { .headerBackground, .menuBar { overflow: initial !important; } }
