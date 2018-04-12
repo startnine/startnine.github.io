@@ -1,3 +1,4 @@
+.marketplace.flexItem { background: url("img/module.svg") no-repeat center; }
 .menuBar { background: url("./img/menuBar.png") no-repeat center !important;}
 .menuBar a.button { background: url("./img/menuBarButton.png") no-repeat center !important;}
 .menuBar a.button:hover { background: url("./img/menuBarButton_hover.png") no-repeat center !important;}
@@ -16,7 +17,7 @@ input[type=checkbox]:checked + label { background: url("./img/checkboxChecked.pn
 input[type=checkbox]:hover + label { background: url("./img/checkboxHover.png") no-repeat center !important;}
 input[type=checkbox]:hover:checked + label { background: url("./img/checkboxCheckedHover.png") no-repeat center !important;}
 
-.menuBar, .menuBar a.button,  .menuBar a.button:hover, 
+.menuBar, .menuBar a.button,  .menuBar a.button:hover, .marketplace.flexItem,
 .menuBar a.button:active,  .menuBar a.button.disabled, 
 a.button,  a.button:hover,  .a.button:active, 
 input[type=checkbox] + label,  input[type=radio] + label {

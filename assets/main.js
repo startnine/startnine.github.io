@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 	// detect microsoft edge and apply a hotfix CSS file 
 	var userAgent = navigator.userAgent;
-	if( userAgent.indexOf('Edge') >= 0) {
+	if( userAgent.indexOf('Edge') >= 0 ) {
 		console.log("Microsoft, please fix border-image"); // no hard feelings
 		$('head').append('<link rel="stylesheet" href="assets/edgey.css" type="text/css"/>');
 	}
