@@ -1,15 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="40px" version="1.1" viewBox="0 0 144.00073 256.00027" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-<metadata>
-<rdf:RDF>
-<cc:Work rdf:about="">
-<dc:format>image/svg+xml</dc:format>
-<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-<dc:title/>
-</cc:Work>
-</rdf:RDF>
-</metadata>
-<g transform="translate(-1.893e-5 -41)">
-<path d="m0.38571 108.65c5.1623-85.95 115.74-91.108 140.85-8.0214-89.04-55.682-108.07 79.378 2.5964 51.83-1.6614 38.184-24.213 125.19-130.47 144.38 37.696-24.678 64.231-51.38 65.558-103.04 0 0-83.702 0.80034-78.54-85.15z" fill="#fff"/>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 200 300">
+  <g transform="translate(25 -25)">
+    <filter id="b" width="200%" height="200%" x="-50%" y="-50%">
+      <feComponentTransfer in="SourceAlpha">
+        <feFuncA tableValues="2 0" type="table"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="16"/>
+      <feOffset dx="-15" result="offsetblur"/>
+      <feFlood flood-color="#B3C0D1" result="color"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode/>
+      </feMerge>
+    </filter>
+    <filter id="a" width="200%" height="200%" x="-50%" y="-50%">
+      <feComponentTransfer in="SourceGraphic">
+        <feFuncA tableValues="0 0.5" type="table"/>
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="6"/>
+      <feOffset dx="5" dy="5" result="offsetblur"/>
+      <feFlood flood-color="#000" result="color"/>
+      <feComposite in2="offsetblur" operator="in"/>
+    </filter>
+    <path fill="#fff" stroke="#b5c3d8" stroke-linejoin="round" stroke-width=".75em" d="M.38571 108.65214c5.16228-85.95038 115.74251-91.10762 140.85307-8.02139-89.03993-55.68188-108.06556 79.37758 2.59638 51.83045-1.66143 38.1839-24.21286 125.18536-130.4676 144.38482 37.69596-24.67758 64.23096-51.38016 65.55835-103.04384 0 0-83.70248.80034-78.5402-85.15004z" filter="url(#a)" style="box-shadow:inset 0 0 1em #c4d0e0"/>
+    <path fill="#fff" d="M.38571 108.65214c5.16228-85.95038 115.74251-91.10762 140.85307-8.02139-89.03993-55.68188-108.06556 79.37758 2.59638 51.83045-1.66143 38.1839-24.21286 125.18536-130.4676 144.38482 37.69596-24.67758 64.23096-51.38016 65.55835-103.04384 0 0-83.70248.80034-78.5402-85.15004z" filter="url(#b)"/>
+    <path fill="Transparent" stroke="#b5c3d8" stroke-linejoin="round" stroke-width=".375em" d="M.38571 108.65214c5.16228-85.95038 115.74251-91.10762 140.85307-8.02139-89.03993-55.68188-108.06556 79.37758 2.59638 51.83045-1.66143 38.1839-24.21286 125.18536-130.4676 144.38482 37.69596-24.67758 64.23096-51.38016 65.55835-103.04384 0 0-83.70248.80034-78.5402-85.15004z" style="box-shadow:inset 0 0 1em #c4d0e0"/>
+  </g>
 </svg>
