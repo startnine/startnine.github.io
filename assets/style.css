@@ -167,7 +167,6 @@ html,body {
 	pointer-events: auto;
 	display: block;
 	position: relative;
-	opacity: 0.75;
 }
 
 .captionButton, .captionButton:hover, svg.captionButton {
@@ -182,6 +181,12 @@ html,body {
 	text-decoration: none;
 	align-items: center;
 }
+
+.captionButton { opacity: 0.75; }
+
+.captionButton:hover { opacity: 1; }
+
+.captionButton:active { opacity: 0.3; }
 
 .captionButton svg { filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5)); }
 
