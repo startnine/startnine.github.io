@@ -123,11 +123,10 @@ $(document).ready(function() {
 	});
 
 	// init tilt.js
-	$('.tilt').tilt({
-		glare: true,
-		easing: "cubic-bezier(.03,.98,.52,.99)",
-		maxGlare: .5,
-		maxTilt: 40
+	$('.tilts').tilt({
+		scale: 1.15,
+		maxTilt: 50,
+		glare: true
 	})
 })
 

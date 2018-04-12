@@ -412,41 +412,36 @@ body {
 }
 
 .marketplace.flexItem {
-	border-image-source: url("img/tileBackground.png");
-	border-image-slice: 11 11 11 11 fill;
-	border-image-width: 10px 10px 10px 10px;
+	border-image-source: url("img/module.svg");
+	border-image-slice: 32 16 8 8 fill;
+	border-image-width: 32px 16px 8px 8px;
 	border-image-repeat: stretch stretch;
-	height: 15rem;
-	width: 15rem;
+	height: 12.5rem;
+	width: 20rem;
 	display: inline-block;
 	position: relative;
 	margin-left: 2em;
 	margin-bottom: 2.5em;
 }
 
-.marketplace.flexItem h2, .marketplace.flexItem p, .marketplace.flexItem a { 
-	color: white; 
+.marketplace.flexItem h2, .marketplace.flexItem p { 
+	color: black; 
 	margin-left: 1em; 
 	line-height: 1.1em;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	z-index: 1;
 	word-wrap: break-word;
-	max-height: 8.5rem;
+	max-height: 5rem;
 }
+
+.marketplace.flexItem h2 { position: relative; left: 0.5em; top: 0.25em; height: 1.1em; width: 8.5em; }
 
 .marketplace.flexItem p { 
-	margin-left: 2em; 
-	margin-top: 0;
-	margin-bottom: 0;
+	left: 0.5em;
+	bottom: 1em;
 	position: relative; 
-	bottom: 7em;
-	max-width: 11rem;
-}
-
-.marketplace.flexItem a { 
-	position: relative;
-	bottom: 8rem;
+	max-width: 17rem;
 }
 
 /*
@@ -461,14 +456,15 @@ body {
 
 .marketplace.flexItem .moduleIcon {
 	max-width: 5em;
-	height: 4em;
+	height: 5em;
+	float: left;
+	left: 1em;
 	position: relative;
-	right: 1em;
-	opacity: 0.5;
-	float: right;
+	will-change: transform;
+	transform: perspective(100px) rotateX(5deg) rotateY(20deg);
 }
 
-.marketplace .byline { right: 0.5em; }
+.marketplace .byline { position: relative; top: 0; }
 /* --- */
 
 /* Slideshow */
