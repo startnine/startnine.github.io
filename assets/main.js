@@ -124,9 +124,7 @@ $(document).ready(function() {
 
 	// init tilt.js
 	$('.tilts').tilt({
-		scale: 1.15,
-		maxTilt: 50,
-		glare: true
+		maxTilt: 20,
 	})
 })
 
