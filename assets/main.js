@@ -34,15 +34,20 @@ function someone() { $("body").addClass("someone"); } // help i've fallen and i 
 
 function textNormal() { 
 	$('html').css("font-size", "1em"); 
-	$("a[href='index.html?textLarge=true']").attr('href', 'index.html')
-	$("a[href='news.html?textLarge=true']").attr('href', 'news.html')
+	$("a[href='index.html?textLarge=true']").attr('href', 'index.html');
+	$("a[href='news.html?textLarge=true']").attr('href', 'news.html');
 }
 function textLarge() { 
 	$('html').css("font-size", "2em"); 
-	$("a[href='index.html']").attr('href', 'index.html?textLarge=true')
-	$("a[href='news.html']").attr('href', 'news.html?textLarge=true')
+	$("a[href='index.html']").attr('href', 'index.html?textLarge=true');
+	$("a[href='news.html']").attr('href', 'news.html?textLarge=true');
 }
 
+function darkSideOfTheMoon() {
+	$('head').append('<link rel="stylesheet" id="dark" href="assets/dark.css" type="text/css"/>'); 
+	$("a[href='index.html']").attr('href', 'index.html?dark=hellyeah');
+	$("a[href='news.html']").attr('href', 'news.html?dark=hellyeah');
+}
 
 $(document).ready(function() {
 	// init waves.js
@@ -50,7 +55,7 @@ $(document).ready(function() {
 	Waves.attach('.ripple');
 	Waves.init();
 
-	// detect microsoft edge and apply a hotfix CSS file 
+	// detect microsoft edge and apply a hotfix CSS file (edgey mode)
 	var userAgent = navigator.userAgent;
 	if( userAgent.indexOf('Edge') >= 0 ) {
 		console.log("Microsoft, please fix border-image"); // no hard feelings
@@ -82,14 +87,14 @@ $(document).ready(function() {
 		if(clickedContrast) {
 			clickedContrast = false;
 			$('#contrast').remove(); 
-			$("a[href='index.html?contrast=true']").attr('href', 'index.html')
-			$("a[href='news.html?contrast=true']").attr('href', 'news.html')
+			$("a[href='index.html?contrast=true']").attr('href', 'index.html');
+			$("a[href='news.html?contrast=true']").attr('href', 'news.html');
 		}
 		else {
 			clickedContrast = true;
 			$('head').append('<link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/>');
-			$("a[href='index.html']").attr('href', 'index.html?contrast=true')
-			$("a[href='news.html']").attr('href', 'news.html?contrast=true')
+			$("a[href='index.html']").attr('href', 'index.html?contrast=true');
+			$("a[href='news.html']").attr('href', 'news.html?contrast=true');
 
 		}
 	 });
@@ -98,19 +103,15 @@ $(document).ready(function() {
 	if (window.location.href.includes("contrast=true")) { 
 		var clickedContrast = true; 
 		$('head').append('<link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/>'); 
-		$("a[href='index.html']").attr('href', 'index.html?contrast=true')
-		$("a[href='news.html']").attr('href', 'news.html?contrast=true')
+		$("a[href='index.html']").attr('href', 'index.html?contrast=true');
+		$("a[href='news.html']").attr('href', 'news.html?contrast=true');
 	}
 	else { $('#contrast').remove(); }
 
 	if (window.location.href.includes("textLarge=true")) { textLarge(); }
 	else { textNormal(); }
 
-	if (window.location.href.includes("dark=hellyeah")) { 
-		$('head').append('<link rel="stylesheet" id="dark" href="assets/dark.css" type="text/css"/>'); 
-		$("a[href='index.html']").attr('href', 'index.html?dark=hellyeah')
-		$("a[href='news.html']").attr('href', 'news.html?dark=hellyeah')
-	}
+	if (window.location.href.includes("dark=hellyeah")) { darkSideOfTheMoon() }
 	else { $('#dark').remove(); }
 
 	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
@@ -126,7 +127,7 @@ $(document).ready(function() {
 	$('.tilts').tilt({
 		maxTilt: 20,
 	})
-})
+});
 
 /* W3S slideshow (i know, very insecure probally)
 var slideIndex = 1; showSlides(slideIndex);

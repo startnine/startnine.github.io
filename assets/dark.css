@@ -45,6 +45,7 @@ a.button:hover { background: #424242 !important; -webkit-filter: brightness(120%
 .menuBar a.button:hover, .menuBar a.button:active { background: #424242 !important; }
 .menuBar a.button.disabled { background: none !important; }
 .headerBackground { background: #000000 !important; overflow: hidden !important; }
+.logo .image { -webkit-filter: grayscale(100%) !important; filter: grayscale(100%) !important; }
 .bodyBG img { -webkit-filter: grayscale(100%) !important; filter: grayscale(100%) !important; }
 .menuBar { background: #212121 !important; border-radius: 0 !important; }
 .burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white !important; }
