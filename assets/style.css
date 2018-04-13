@@ -437,8 +437,13 @@ body {
 	margin-bottom: 2.5em;
 	transform-style: preserve-3d;
 	will-change: transform; 
-	transform: perspective(300px);
+	transform: perspective(250px);
+	-webkit-transition: all 0.125s ease;
+		 -o-transition: all 0.125s ease;
+			transition: all 0.125s ease;
 }
+
+.marketplace.flexItem:active { transform: scale3d(0.9, 0.9, 0.9) !important; }
 
 .marketplace.flexItem h2, .marketplace.flexItem p { 
 	color: black; 
