@@ -436,14 +436,16 @@ body {
 	margin-left: 2em;
 	margin-bottom: 2.5em;
 	transform-style: preserve-3d;
-	will-change: transform; 
-	transform: perspective(250px);
+	will-change: transform;
+	transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+}
+
+.marketplace.flexItem:active { 
+	transform: scale3d(0.9, 0.9, 0.9) !important; 
 	-webkit-transition: all 0.125s ease;
 		 -o-transition: all 0.125s ease;
 			transition: all 0.125s ease;
 }
-
-.marketplace.flexItem:active { transform: scale3d(0.9, 0.9, 0.9) !important; }
 
 .marketplace.flexItem h2, .marketplace.flexItem p { 
 	color: black; 
@@ -454,10 +456,17 @@ body {
 	z-index: 1;
 	word-wrap: break-word;
 	max-height: 5rem;
-	transform: translateZ(10px);
+	transform: translateZ(20px);
 }
 
-.marketplace.flexItem h2 { position: relative; left: 0.5em; top: 0.25em; height: 1.1em; width: 8.5em; }
+.marketplace.flexItem h2 { 
+	position: relative;
+	left: 0.5em; 
+	top: 0.25em;
+	height: 1.1em;
+	width: 8.5em;
+	transform: translateZ(10px);
+}
 
 .marketplace.flexItem p { 
 	left: 0.5em;
