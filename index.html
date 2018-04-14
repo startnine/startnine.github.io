@@ -17,7 +17,6 @@
 		<meta property="og:title" content="Start9">
 		<meta name="theme-color" content="#4d88d5">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="An extensible, customizable, modular shell supplement for Windows." />
 		<meta name="keywords" content="Start9, StartNine, shell, shell replacement, start nine, startnine" />
 		<link rel="shortcut icon" href="assets/img/icon.png">
 		<meta itemprop="image" content="assets/img/icon.png">
@@ -30,7 +29,7 @@
 		<script type="text/javascript" src="assets/main.js" defer></script>
 		<!--[if lt IE 9]> <link rel="stylesheet" href="assets/legacy.css" type="text/css"/> <![endif]-->
 	</head>
-	<body>
+	<body> <div id="barba-wrapper"> <div class="barba-container">
 		<header>
 			<div class="headerBackground">
 				<div class="burgerButton" onclick="burgerButton(this);menuBarNav()"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
@@ -62,10 +61,11 @@
 		</header>
 
 		<div class="gridBody scene" id="main">
-			<section id="Home" class="sceneElement content fadeinright">
-				<p>Start9 is a WIP extensible, customizable shell supplement for Windows, one which aims to be not only modular, but extends to many needs.</p><h2 id="planned-modules">Planned Modules</h2><p><em>Start9 is planned with with 7 modules bundled, with more in the Module Marketplace. The default modules list includes</em>:</p><ul><li>Classic Start Menu</li><li>Windows XP Start Menu </li><li>Windows 7 Start Menu</li><li>Windows 10 AU Start Menu</li><li>Classic Taskbar</li><li>Superbar</li><li>macOS Dock</li><li>Longhorn (4074) Sidebar</li><li>Windows 10 Notifcation Center</li></ul><hr><h1 id="start9-host">Start9.Host</h1><p>A beautiful and simple front-end for managing Start9 modules.</p><h2 id="contributing-and-conduct">Contributing and Conduct</h2><p>This project has adopted the code of conduct defined by the Contributor Covenant to clarify expected behavior in our community.For more information, see the <a rel="noopener noreferrer" target="_blank" href="https://www.contributor-covenant.org/">Contributor Covenant code of conduct</a>.</p><p>In addition, Please follow the <a rel="noopener noreferrer" target="_blank" href="https://github.com/StartNine/Start9.Host/blob/master/CONTRIBUTING.md">contributing guidelines</a> for all Start9 projects.</p><h2 id="dependencies-and-frameworks">Dependencies and Frameworks</h2><ul><li><a rel="noopener noreferrer" target="_blank" href="https://www.microsoft.com/en-ca/download/details.aspx?id=17718">.NET Framework 4.0</a><ul><li>Official builds of Start9 are built with .NET Framework 4.0. However, you may want to retarget it to be able to access newer features and load in modules compiled for later versions of .NET.</li></ul></li><li>WPF related assemblies (PresentationFramework, etc.)<ul><li>These assemblies make Start9 incompatible with .NET Core and other non-Microsoft .NET implementations. </li></ul></li><li><a rel="noopener noreferrer" target="_blank" href="https://github.com/StartNine/Start9.Api">Start9.Api</a><ul><li>This is the home to various abstractions related to Windows objects like programs and open windows. It's also home to the Plex themed UI controls, and a few additional ones.</li></ul></li><li>System.AddIn<ul><li>This represents the Microsoft Addin Framework assembly. We use this in Start9 for the Host-side adapter part of the addin pipeline.</li></ul></li></ul><p>Other, smaller dependencies can be seen in the <a rel="noopener noreferrer" target="_blank" href="https://github.com/StartNine/Start9.Host/blob/master/Start9/Start9.csproj#L36">csproj file for the project</a>. </p>
-			</section>
-
+			<main>
+				<section id="Home" class="sceneElement content fadeinright">
+					<p>Start9 is a WIP extensible, customizable shell supplement for Windows, one which aims to be not only modular, but extends to many needs.</p><h2 id="planned-modules">Planned Modules</h2><p><em>Start9 is planned with with 7 modules bundled, with more in the Module Marketplace. The default modules list includes</em>:</p><ul><li>Classic Start Menu</li><li>Windows XP Start Menu </li><li>Windows 7 Start Menu</li><li>Windows 10 AU Start Menu</li><li>Classic Taskbar</li><li>Superbar</li><li>macOS Dock</li><li>Longhorn (4074) Sidebar</li><li>Windows 10 Notifcation Center</li></ul><hr><h1 id="start9-host">Start9.Host</h1><p>A beautiful and simple front-end for managing Start9 modules.</p><h2 id="contributing-and-conduct">Contributing and Conduct</h2><p>This project has adopted the code of conduct defined by the Contributor Covenant to clarify expected behavior in our community.For more information, see the <a rel="noopener noreferrer" target="_blank" href="https://www.contributor-covenant.org/">Contributor Covenant code of conduct</a>.</p><p>In addition, Please follow the <a rel="noopener noreferrer" target="_blank" href="https://github.com/StartNine/Start9.Host/blob/master/CONTRIBUTING.md">contributing guidelines</a> for all Start9 projects.</p><h2 id="dependencies-and-frameworks">Dependencies and Frameworks</h2><ul><li><a rel="noopener noreferrer" target="_blank" href="https://www.microsoft.com/en-ca/download/details.aspx?id=17718">.NET Framework 4.0</a><ul><li>Official builds of Start9 are built with .NET Framework 4.0. However, you may want to retarget it to be able to access newer features and load in modules compiled for later versions of .NET.</li></ul></li><li>WPF related assemblies (PresentationFramework, etc.)<ul><li>These assemblies make Start9 incompatible with .NET Core and other non-Microsoft .NET implementations. </li></ul></li><li><a rel="noopener noreferrer" target="_blank" href="https://github.com/StartNine/Start9.Api">Start9.Api</a><ul><li>This is the home to various abstractions related to Windows objects like programs and open windows. It's also home to the Plex themed UI controls, and a few additional ones.</li></ul></li><li>System.AddIn<ul><li>This represents the Microsoft Addin Framework assembly. We use this in Start9 for the Host-side adapter part of the addin pipeline.</li></ul></li></ul><p>Other, smaller dependencies can be seen in the <a rel="noopener noreferrer" target="_blank" href="https://github.com/StartNine/Start9.Host/blob/master/Start9/Start9.csproj#L36">csproj file for the project</a>. </p>
+				</section>
+			</main>
 			<!--
 			<section id="FAQ" class="tabContent">
 				<h2>FAQ</h2>
@@ -97,5 +97,5 @@
 		<p>Note: Start9 is not associated with Stardock or Microsoft. Neither are to be held legally responsible for anything that happens due to Start9. Also, if it breaks, you get to keep both pieces. We'll try to help you put them back together, but no promises.</p>
 	</footer>
 	-->
-	</body>
+	</div> </div> </body>
 </html>
