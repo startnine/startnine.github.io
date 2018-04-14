@@ -70,6 +70,12 @@ $(document).ready(function() {
 		$("head").append("<link rel=\"stylesheet\" href=\"assets/edgey.css\" type=\"text/css\"/>");
 	}
 
+	if (Modernizr.borderimage) { } 
+	else {
+		console.log("use a better browser lol"); // no hard feelings
+		$("head").append("<link rel=\"stylesheet\" href=\"assets/edgey.css\" type=\"text/css\"/>");
+	} {
+
 	// burger button class toggle
 	var clickedBurger = false;
 	$('.burgerButton').click(function() {

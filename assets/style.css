@@ -1126,35 +1126,4 @@ footer {
 	width: 15%;
 }
 
-.no-borderimage .marketplace.flexItem { background: url("img/module.svg") no-repeat center; }
-.no-borderimage .captionButton { background: url("./img/caption.png") no-repeat center; }
-.no-borderimage .marketplace.flexItem { background: url("./img/tileBackground.png") no-repeat center; }
-.no-borderimage .menuBar a.button { background: url("./img/menuBarButton.png") no-repeat center; }
-.no-borderimage .menuBar a.button:hover { background: url("./img/menuBarButton_hover.png") no-repeat center; }
-.no-borderimage .menuBar a.button:active { background: url("./img/menuBarButton_pressed.png") no-repeat center; }
-.no-borderimage .menuBar a.button.disabled { background: url("./img/menuBarButton.png") no-repeat center; }
-.no-borderimage a.button { background: url("./img/buttonIdle.png") no-repeat center; }
-.no-borderimage a.button:hover { background: url("./img/buttonHover.png") no-repeat center; }
-.no-borderimage a.button:active { background: url("./img/buttonPressed.png") no-repeat center; }
-.no-borderimage a.button.disabled { background: url("./img/buttonDisabled.png") no-repeat center; }
-.no-borderimage input[type=checkbox] + label { background: url("./img/checkbox.png") no-repeat center; }
-.no-borderimage input[type=radio] + label { background: url("./img/checkbox.png") no-repeat center; }
-.no-borderimage input[type=radio]:hover + label { background: url("./img/checkboxHover.png") no-repeat center; }
-.no-borderimage input[type=radio]:checked + label { background: url("./img/radioChecked.png") no-repeat center; }
-.no-borderimage input[type=radio]:hover:checked + label { background: url("./img/radioCheckedHover.png") no-repeat center; }
-.no-borderimage input[type=checkbox]:checked + label { background: url("./img/checkboxChecked.png") no-repeat center; }
-.no-borderimage input[type=checkbox]:hover + label { background: url("./img/checkboxHover.png") no-repeat center; }
-.no-borderimage input[type=checkbox]:hover:checked + label { background: url("./img/checkboxCheckedHover.png") no-repeat center; }
-
-.no-borderimage .marketplace.flexItem, .captionButton, .marketplace.flexItem,
-.no-borderimage .menuBar a.button, .no-borderimage .menuBar a.button:hover, 
-.no-borderimage .menuBar a.button:active, .no-borderimage .menuBar a.button.disabled, 
-.no-borderimage a.button, .no-borderimage a.button:hover, .no-borderimage .a.button:active, 
-.no-borderimage input[type=checkbox] + label, .no-borderimage input[type=radio] + label {
-	-webkit-background-size: 100% 100%;
-	   -moz-background-size: 100% 100%;
-		 -o-background-size: 100% 100%;
-			background-size: 100% 100%; 
-}
-
 /* --- */
