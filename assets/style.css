@@ -437,7 +437,7 @@ body {
 	margin-bottom: 2.5em;
 	transform-style: preserve-3d;
 	will-change: transform;
-	transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+	transform: perspective(300px);
 }
 
 .marketplace.flexItem:active { 
