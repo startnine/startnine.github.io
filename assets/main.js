@@ -50,6 +50,7 @@ function darkSideOfTheMoon() {
 }
 
 $(document).ready(function() {
+	$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal()\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge()\">A</a> <a class=\"captionButton contrast\"><i class=\"fas fa-adjust\"></i></a></span>")// add accessbility
 	// init waves.js
 	Waves.attach('.button');
 	Waves.attach('.ripple');
