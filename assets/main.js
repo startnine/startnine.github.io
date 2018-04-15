@@ -52,7 +52,7 @@ function darkSideOfTheMoon() {
 $(document).ready(function() {
 	// add accessbility
 	$(".titleText").css("left", "2.8rem");
-	$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal()\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge()\">A</a> <a class=\"captionButton contrast\"><i class=\"fas fa-adjust\"></i></a></span>");
+	$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal\(\)\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge\(\)\">A</a> <a class=\"captionButton contrast\"><i class=\"fas fa-adjust\"></i></a></span>");
 
 
 	Barba.Pjax.start(); Barba.Prefetch.init(); // init barbra
@@ -70,11 +70,11 @@ $(document).ready(function() {
 		$("head").append("<link rel=\"stylesheet\" href=\"assets/edgey.css\" type=\"text/css\"/>");
 	}
 
-	if (Modernizr.borderimage) { } 
+	if (Modernizr.borderimage) {console.log("s u c c e s s: your browser can do border-image");} 
 	else {
 		console.log("use a better browser lol"); // no hard feelings
 		$("head").append("<link rel=\"stylesheet\" href=\"assets/edgey.css\" type=\"text/css\"/>");
-	} {
+	}
 
 	// burger button class toggle
 	var clickedBurger = false;
