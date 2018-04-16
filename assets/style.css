@@ -351,10 +351,10 @@ body {
 	position: relative;
 }
 
-.side .sideObject { 
-	bottom: 2rem;
-	position: relative;
-}
+	.side .sideObject { 
+		bottom: 2rem;
+		position: relative;
+	}
 
 .sideObject { 
 	margin-bottom: 2rem;
@@ -362,9 +362,9 @@ body {
 	vertical-align: top;
 }
 
-.sideObject a.button { margin-top: 0.25rem; }
-
-.sideObject p { margin: 0.313rem 0 0 0; }
+	.sideObject a.button { margin-top: 0.25rem; }
+	
+	.sideObject p { margin: 0.313rem 0 0 0; }
 
 .content { 
 	-ms-grid-column: 1;
