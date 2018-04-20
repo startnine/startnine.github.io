@@ -48,11 +48,10 @@ function darkSideOfTheMoon() {
 	$("a[href='index.html']").attr('href', 'index.html?dark=hellyeah');
 	$("a[href='news.html']").attr('href', 'news.html?dark=hellyeah');
 }
-
 $(document).ready(function() {
 	// add accessbility
 	$(".titleText").css("left", "2.8rem");
-	$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal\(\)\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge\(\)\">A</a> <a class=\"captionButton contrast\"><i class=\"fas fa-adjust\"></i></a></span>");
+	$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"captionButton contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>");
 
 
 	Barba.Pjax.start(); Barba.Prefetch.init(); // init barbra
