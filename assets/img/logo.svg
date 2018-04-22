@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 200 300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 200 300" width="75" height="75">
   <g transform="translate(25 -25)">
     <filter id="b" width="200%" height="200%" x="-50%" y="-50%">
       <feComponentTransfer in="SourceAlpha">

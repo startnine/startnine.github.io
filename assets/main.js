@@ -38,29 +38,28 @@ function fadeoutright() {$('#main').addClass("fadeoutright"); scrollup();}
 function fadeoutleft() {$('#main').addClass("fadeoutleft"); scrollup();}
 function scrollup() {$('html, body').animate({scrollTop: 0}, 150); return false;}
 function someone() {$("body").addClass("someone");} // help i've fallen and i cant get up
+function textNormal() {
+	$('html').css("font-size", "1em"); 
+	$("a[href='index.html?textLarge=true']").attr('href', 'index.html');
+	$("a[href='news.html?textLarge=true']").attr('href', 'news.html');
+}
+
+function textLarge() {
+	$('html').css("font-size", "2em"); 
+	$("a[href='index.html']").attr('href', 'index.html?textLarge=true');
+	$("a[href='news.html']").attr('href', 'news.html?textLarge=true');
+}
+
+function darkSideOfTheMoon() {
+	$('head').append('<link rel="stylesheet" id="dark" href="assets/dark.css" type="text/css"/>'); 
+	$("a[href='index.html']").attr('href', 'index.html?dark=hellyeah');
+	$("a[href='news.html']").attr('href', 'news.html?dark=hellyeah');
+}
 
 $(document).ready(function() {
 	// add accessbility
 	$(".titleText").css("left", "2.8rem");
 	$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"captionButton contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>");
-
-	function textNormal() {
-		$('html').css("font-size", "1em"); 
-		$("a[href='index.html?textLarge=true']").attr('href', 'index.html');
-		$("a[href='news.html?textLarge=true']").attr('href', 'news.html');
-	}
-	
-	function textLarge() {
-		$('html').css("font-size", "2em"); 
-		$("a[href='index.html']").attr('href', 'index.html?textLarge=true');
-		$("a[href='news.html']").attr('href', 'news.html?textLarge=true');
-	}
-	
-	function darkSideOfTheMoon() {
-		$('head').append('<link rel="stylesheet" id="dark" href="assets/dark.css" type="text/css"/>'); 
-		$("a[href='index.html']").attr('href', 'index.html?dark=hellyeah');
-		$("a[href='news.html']").attr('href', 'news.html?dark=hellyeah');
-	}
 
 	Barba.Pjax.start(); Barba.Prefetch.init(); // init barbra
 
@@ -82,9 +81,13 @@ $(document).ready(function() {
 		$("head").append("<link rel=\"stylesheet\" href=\"assets/edgey.css\" type=\"text/css\"/>");
 	}
 
-	if (Modernizr.borderimage) {console.log("s u c c e s s: your browser can do border-image");} 
+	// Modernizr
+	if (Modernizr.cssgrid) { console.log("s u c c e s s: your browser can do CSS grids"); } 
+	else { console.log("f a i l: your browser sucks and cannot CSS grids correctly.. like is it that hard to install Chrome or something"); }
+
+	if (Modernizr.borderimage) { console.log("s u c c e s s: your browser can do border-image"); } 
 	else {
-		console.log("use a better browser lol"); // no hard feelings
+		console.log("f a i l: your browser sucks and cannot border-image correctly"); // no hard feelings
 		$("head").append("<link rel=\"stylesheet\" href=\"assets/edgey.css\" type=\"text/css\"/>");
 	}
 
@@ -123,18 +126,18 @@ $(document).ready(function() {
 
 	// data query thingamadoohickers
 	if (window.location.href.includes("contrast=true")) {
-		var clickedContrast = true; 
+	 	clickedContrast = true; 
 		$('head').append('<link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/>'); 
 		$("a[href='index.html']").attr('href', 'index.html?contrast=true');
 		$("a[href='news.html']").attr('href', 'news.html?contrast=true');
 	}
-	else {$('#contrast').remove();}
+	else { $('#contrast').remove(); }
 
-	if (window.location.href.includes("textLarge=true")) {textLarge();}
-	else {textNormal();}
+	if (window.location.href.includes("textLarge=true")) { textLarge(); }
+	else { textNormal(); }
 
-	if (window.location.href.includes("dark=hellyeah")) {darkSideOfTheMoon()}
-	else {$('#dark').remove();}
+	if (window.location.href.includes("dark=hellyeah")) { darkSideOfTheMoon() }
+	else { $('#dark').remove(); }
 
 	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
 	$("a.delayLink[href]").click(function(){

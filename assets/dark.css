@@ -19,7 +19,7 @@ input[type=checkbox] + label,  input[type=radio] + label {
 
 body { background: #303030 linear-gradient(to bottom, #303030 1%, #212121 50%, #000000 100%); color: white; }
 .bar1, .bar2, .bar3, .change .bar1, .change .bar2, .change .bar3 { -webkit-box-shadow: initial; box-shadow: initial; }
-.waves-ripple { background: #fff; background: rgba(255,255,255,.2); }
+.waves-ripple { background: #fff !important; background: rgba(255,255,255,.2) !important; }
 .menuBar::-webkit-scrollbar { width: 0; }
 .headerBackground { background: #000000; overflow: hidden; }
 .menuBar { -ms-overflow-style: none; overflow: -moz-scrollbars-none; overflow: hidden; background: #212121; border-radius: 0; }

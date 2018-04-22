@@ -126,6 +126,14 @@ html,body {
 	z-index: 0;
 }
 
+	.aurora.left { background: url("img/aurora1b.png") no-repeat; }
+
+	.aurora.left2 { background: url("img/aurora2b.png") no-repeat; }
+
+	.aurora.right { background: url("img/aurora3b.png") no-repeat; }
+
+	.aurora.left, .aurora.left2, .aurora.right { background-size: 100% 100%; }
+
 .logo { 
 	bottom: 10em;
 	font-weight: 600;
@@ -133,14 +141,9 @@ html,body {
 	position: relative;
 	text-align: center;
 	z-index: 1000;
-	z-index: 100;
 }
 
-.logo .image { 
-	height: 4.5rem;
-	vertical-align: middle;
-	width: 4rem;
-}
+.logo .image { vertical-align: middle; }
 
 .logo .text { 
 	font-size: 3em;
