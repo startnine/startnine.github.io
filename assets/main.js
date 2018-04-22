@@ -34,8 +34,8 @@
 
 function burgerButton(x) {x.classList.toggle("change");}
 function menuFocus() {document.querySelector(".burgerButton").click();}
-function fadeoutright() {$('#main').addClass("fadeoutright"); scrollup();}
-function fadeoutleft() {$('#main').addClass("fadeoutleft"); scrollup();}
+function fadeoutright() {$('main').addClass("fadeoutright"); $('aside').addClass("fadeOut"); scrollup();}
+function fadeoutleft() {$('main').addClass("fadeoutleft"); $('aside').addClass("fadeOut"); scrollup();}
 function scrollup() {$('html, body').animate({scrollTop: 0}, 150); return false;}
 function someone() {$("body").addClass("someone");} // help i've fallen and i cant get up
 function textNormal() {

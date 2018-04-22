@@ -132,11 +132,15 @@ html,body {
 
 	.aurora.right { background: url("img/aurora3b.png") no-repeat; }
 
-	.aurora.left, .aurora.left2, .aurora.right { background-size: 100% 100%; }
+	.aurora.left, .aurora.left2, .aurora.right { 
+		-webkit-background-size: 100% 100%;
+		   -moz-background-size: 100% 100%;
+			 -o-background-size: 100% 100%;
+				background-size: 100% 100%;	
+	}
 
 .logo { 
 	bottom: 10em;
-	font-weight: 600;
 	min-width: 100%;
 	position: relative;
 	text-align: center;
@@ -147,6 +151,9 @@ html,body {
 
 .logo .text { 
 	font-size: 3em;
+	font-weight: 600;
+	line-height: 2em;
+	margin-bottom: 0.95em;
 	text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 	vertical-align: middle;
 }
@@ -743,10 +750,17 @@ body {
 	100% { opacity: 0; }
 }
 
-.fade { 
+.fadeIn { 
 	animation-duration: 0.3s;
 	animation-fill-mode: both;
 	animation-name: fadeIn;
+	transition-timing-function: ease-in;
+}
+
+.fadeOut { 
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+	animation-name: fadeOut;
 	transition-timing-function: ease-in;
 }
 
@@ -908,7 +922,7 @@ body {
 	z-index: 99999;
 }
 
-.scene .sceneElement, .fadeoutright, .fadeoutleft, .fadeinleft, .fadeinright { 
+.fadeoutright, .fadeoutleft, .fadeinleft, .fadeinright { 
 	-webkit-animation-duration: .3s;
 			animation-duration: .3s;
 	-webkit-animation-fill-mode: both;
@@ -916,7 +930,6 @@ body {
 	transition-timing-function: ease-in;
 }
 
-.scene.is-exiting .sceneElement { -webkit-animation-direction: alternate-reverse; animation-direction: alternate-reverse; transition-timing-function: ease-out; }
 .fadeinright { -webkit-animation-name: moveInFromRight; animation-name: moveInFromRight; }
 .fadeinleft { -webkit-animation-name: moveInFromLeft; animation-name: moveInFromLeft; }
 .fadeoutright  { -webkit-animation-name: moveOutToRight; animation-name: moveOutToRight; }
