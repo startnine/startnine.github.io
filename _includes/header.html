@@ -3,7 +3,7 @@
 			<div class="burgerButton" onclick="burgerButton(this);"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
 			<p class="title"><span class="titleText">{{page.title}}</span></p>
 			<nav class="menuBar" id="menuBar">
-				{% for page in site.pages %}{% if page.title %}<a class="button" href="{{ page.url | prepend: site.url }}">{{ page.title }}</a>{% endif %}{% endfor %}
+				{% for page in site.pages %}{% if page.title %}<a class="button" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> {% endif %}{% endfor %}
 				<a class="button" href="https://github.com/StartNine/Start9/releases" target="_blank" rel="noopener noreferrer">Downloads</a>
 				<a class="disabled button">Community</a>
 				<a class="disabled button">FAQ</a>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="logo">
 			<h1 class="text">
-				<img class="image" src="{{ "assets/img/logo.svg" | prepend: site.baseurl }}" alt="" role="presentation" aria-hidden="true"/>Start9
+				<img class="image" src="{{ "/assets/img/logo.svg" | prepend: site.baseurl }}" alt="" role="presentation" aria-hidden="true"/>Start9
 			</h1>
 		</div>
 	</header>
