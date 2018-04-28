@@ -1,8 +1,8 @@
 # Site settings
 title: Start9
 description: An extensible, customizable, modular shell supplement for Windows.
-baseurl: "https://startnine.github.io" # the subpath of your site, e.g. /blog/
-url: "https://startnine.github.io" # the base hostname & protocol for your site
+baseurl: "https://startnine.github.io/" # the subpath of your site, e.g. /blog/
+url: "https://startnine.github.io/" # the base hostname & protocol for your site
 github_username:  startnine
 
 # Build settings
