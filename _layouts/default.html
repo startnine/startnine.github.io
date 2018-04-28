@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+<!doctype html>
+<html itemscope lang="en" prefix="og: http://ogp.me/ns#">
+	{% include head.html %}
+	<body>
+		<div id="barba-wrapper"> <div class="barba-container">
+		{% include header.html %}
+			{{ content }}
+		</div></div>
+	</body>
 </html>

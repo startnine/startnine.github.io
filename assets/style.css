@@ -494,6 +494,25 @@ body {
 .slide img { height: 10em; }
 /* --- */
 
+/* Post Nav */
+.PageNavigation {
+	font-size: 0.8em;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+.PageNavigation a {
+	display: block;
+	float: left;
+	margin: 1em 0;
+	width: 50%;
+}
+
+.PageNavigation .next { float: right; text-align: right; }
+
+/* --- */
+
 /* Animation */
 @-webkit-keyframes animationLeft { 
 	0% { 
@@ -998,8 +1017,8 @@ a.button.disabled {
 
 /* Mobile Ajustments */
 @media screen and (max-width: 62.5rem) { 
-	.gridBody { margin: 0; padding: 0.5em; right: 0.5em; } 
-	.oneBox { margin: 0; padding: 1rem;  right: 0.5em;}
+	.gridBody { margin: 0; padding: 0.5em; } 
+	.oneBox   { margin: 0; padding: 1rem;  }
 }
 
 @media all and (max-width: 50.75rem) { 
