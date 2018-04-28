@@ -1,11 +1,34 @@
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Start9</title>
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="{{ "assets/img/icon.png" | prepend: site.baseurl }}">
+	<meta property="og:site_name" content="Start9">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="{{ "assets/img/icon.png" | prepend: site.baseurl }}">
+	<meta name="theme-color" content="#4d88d5">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Start9, StartNine, shell, shell replacement, start nine, startnine" />
+	<link rel="shortcut icon" href="{{ "assets/img/icon.png" | prepend: site.baseurl }}">
+	<meta itemprop="image" content="{{ "assets/img/icon.png" | prepend: site.baseurl }}">
+	<meta property="og:image" content="{{ "assets/img/icon.png" | prepend: site.baseurl }}"/>
+	<link rel="manifest" href="{{ "assets/jasonmanifest.json" | prepend: site.baseurl }}">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js" crossorigin="anonymous" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js" integrity="sha256-H0TPKZAP4+uKmBpntUUMrKgH4VXBQNDZumun6fvan4w=" crossorigin="anonymous" defer></script>
+	<script type="text/javascript" src="{{ "assets/main.js" | prepend: site.baseurl }}" defer></script>
+		<!--[if lt IE 9]> <link rel="stylesheet" href="assets/legacy.css" type="text/css"/> <![endif]-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
-
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+	<meta property="og:description" content="{{ site.description }}">
+	<meta name="description" content="{{ site.description }}">
+	<meta name="twitter:description" content="{{ site.description }}">
+	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <link rel="stylesheet" href="{{ "assets/style.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
