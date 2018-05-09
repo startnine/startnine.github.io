@@ -1,8 +1,10 @@
 ---
 layout: default
 title: News
+menu: main
+target: 2
 ---
-<main class="oneBox fadeinleft">
+<main class="oneBox fadeinlefta" data-viewport="{{ page.target }}">
 	{% for post in site.posts limit:1 %}
 	  <a href="{{ post.url }}"><h2 style="margin: 0;">{{ post.title }}</h2></a>
 	  <em>by</em> <strong>{{ post.author }}</strong>, {{ post.date | date: "%d %B %Y" }}
