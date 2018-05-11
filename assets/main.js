@@ -34,8 +34,8 @@
 
 function burgerButton(x) { x.classList.toggle("change"); }
 function menuFocus() { document.querySelector(".burgerButton").click(); }
-function fadeoutright() { $('main').addClass("fadeoutright"); $('aside').addClass("fadeOut"); scrollup(); }
-function fadeoutleft() { $('main').addClass("fadeoutleft"); $('aside').addClass("fadeOut"); scrollup(); }
+//function fadeoutright() { $('main').addClass("fadeoutright"); $('aside').addClass("fadeOut"); scrollup(); }
+//function fadeoutleft() { $('main').addClass("fadeoutleft"); $('aside').addClass("fadeOut"); scrollup(); }
 function scrollup() { $('html, body').animate({scrollTop: 0}, 150); return false; }
 function someone() { $("body").addClass("someone"); } // help i've fallen and i cant get up
 function textNormal() {
@@ -57,18 +57,22 @@ function darkSideOfTheMoon() {
 }
 
 $(document).ready(function() {
-	// add accessbility
-	$(".titleText").css("left", "2.8rem");
-	$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"captionButton contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>");
 
-	// Barba.Pjax.start(); 
-	Barba.Prefetch.init(); // init barbra
+	Barba.Pjax.start();     // init barbra
+	Barba.Prefetch.init();  // init barbra
 
 	$('.tilts').tilt({ maxTilt: 20, }); // init tilt.js 
 
-	// init waves.js
-	Waves.attach('.button');
-	Waves.init();
+	Waves.attach('.button'); 	// init waves.js
+	Waves.init();				// init waves.js
+
+	// add accessbility 
+	function enableAccessbility {
+		$(".titleText").css("left", "2.8rem");
+		$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"captionButton contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>");
+	}
+	enableAccessbility();
+
 
 	// keyboard shortcuts
 	Mousetrap.bind('m y s t e r i o u s space a s space t h e space d a r k space s i d e space o f space t h e space m o o n', function() { darkSideOfTheMoon(); });
@@ -131,7 +135,7 @@ $(document).ready(function() {
 
 	// data query thingamadoohickers
 	if (window.location.href.includes("contrast=true")) {
-	 	clickedContrast = true; 
+		clickedContrast = true; 
 		$('head').append('<link rel="stylesheet" id="contrast" href="assets/contrast.css" type="text/css"/>'); 
 		$("a[href='index.html']").attr('href', 'index.html?contrast=true');
 		$("a[href='news.html']").attr('href', 'news.html?contrast=true');
@@ -143,15 +147,6 @@ $(document).ready(function() {
 
 	if (window.location.href.includes("dark=hellyeah")) { darkSideOfTheMoon() }
 	else { $('#dark').remove(); }
-
-	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
-	$("a.delayLink[href]").click(function(){
-		var self = $(this);
-		setTimeout(function() {
-			window.location.href = self.attr('href'); // go to href after the slide animation completes
-		}, 300);
-		return false; // And also make sure you return false from your click handler.
-	});
 });
 
 // animationals WAIT FOR CNAME 
@@ -160,3 +155,64 @@ $("#discordbutton").click(function() {$('.discord').toggleClass('discord-active'
 
 // delay links when animationals come
 function delay (URL) {setTimeout( function() {window.location = URL;}, 50) ;}
+var FadeTransition = Barba.BaseTransition.extend({
+  start: function() {
+	/**
+	 * This function is automatically called as soon the Transition starts
+	 * this.newContainerLoading is a Promise for the loading of the new container
+	 * (Barba.js also comes with an handy Promise polyfill!)
+	 */
+
+	// As soon the loading is finished and the old page is faded out, let's fade the new page
+	Promise
+	  .all([this.newContainerLoading, this.fadeOut()])
+	  .then(this.fadeIn.bind(this));
+  },
+
+  fadeOut: function() {
+	/**
+	 * this.oldContainer is the HTMLElement of the old Container
+	 */
+	return $(this.oldContainer).animate({ opacity: 0 }).promise();
+	},
+
+	fadeIn: function() {
+	/**
+	 * this.newContainer is the HTMLElement of the new Container
+	 * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+	 * Please note, newContainer is available just after newContainerLoading is resolved!
+	 */
+
+	var _this = this;
+	var $el = $(this.newContainer);
+
+	$(this.oldContainer).hide();
+
+	$el.css({
+	  visibility : 'visible',
+	  opacity : 0
+	});
+
+	$el.animate({ opacity: 1 }, 400, function() {
+	  /**
+	   * Do not forget to call .done() as soon your transition is finished!
+	   * .done() will automatically remove from the DOM the old Container
+	   */
+
+	  _this.done();
+	});
+  }
+});
+
+/**
+ * Next step, you have to tell Barba to use the new Transition
+ */
+
+Barba.Pjax.getTransition = function() {
+  /**
+   * Here you can use your own logic!
+   * For example you can use different Transition based on the current page or link...
+   */
+
+  return FadeTransition;
+};
