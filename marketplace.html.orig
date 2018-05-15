@@ -1,6 +1,7 @@
 ---
 layout: defaultnoheader
 title: Marketplace
+hidden: true
 visible: 0
 ---
 <header>
