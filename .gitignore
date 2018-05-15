@@ -266,6 +266,6 @@ assets/img/original/
 _site/
 .sass-cache/
 blog/
-.jekyll-metadata
+*.jekyll-metadata
 *.sublime-project
 *.sublime-workspace
