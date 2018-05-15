@@ -57,18 +57,16 @@ function darkSideOfTheMoon() {
 }
 
 $(document).ready(function() {
-	// add accessbility
+	// add accessbility 
 	$(".titleText").css("left", "2.8rem");
 	$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"captionButton contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>");
 
-	// Barba.Pjax.start(); 
 	Barba.Prefetch.init(); // init barbra
 
 	$('.tilts').tilt({ maxTilt: 20, }); // init tilt.js 
 
-	// init waves.js
-	Waves.attach('.button');
-	Waves.init();
+	Waves.attach('.button');	// init waves.js
+	Waves.init();				// init waves.js
 
 	// keyboard shortcuts
 	Mousetrap.bind('m y s t e r i o u s space a s space t h e space d a r k space s i d e space o f space t h e space m o o n', function() { darkSideOfTheMoon(); });
