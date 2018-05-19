@@ -14,7 +14,8 @@ target: 2
 	<h2>All Posts</h2>
 	<ul>
 		{% for post in site.posts %}	
-		<li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>, <em>{{ post.category }}</em></li>
+			<li>
+				<span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>, <em>{{ post.category }}</em></li>
 		{% endfor %}
 	</ul>
 </main>

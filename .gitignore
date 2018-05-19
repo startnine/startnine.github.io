@@ -1,4 +1,5 @@
 ﻿# Specific to this repo
+assets/img/original/
 *.db
 _site/
 .sass-cache/
