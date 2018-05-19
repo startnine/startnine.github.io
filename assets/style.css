@@ -10,9 +10,7 @@ html,body {
 	overflow-x: hidden;
 	overflow-y: visible;
 }
-
 /* --- */
-
 
 /* Hamburger */
 .burgerButton { 
@@ -33,28 +31,20 @@ html,body {
 	filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.75));
 	height: 0.125rem;
 	margin: 0.313rem 0;
-	-webkit-transition: 0.3s;
-		 -o-transition: 0.3s;
-			transition: 0.3s;
+	transition: 0.3s;
 	width: 1.5em;
 }
 
 	.change .bar1 { 
 		filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));
-		-webkit-transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
-			-ms-transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
-				transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
+		transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
 	}
 	
-	.change .bar2 { 
-		opacity: 0;
-	}
+	.change .bar2 {  opacity: 0; }
 	
 	.change .bar3 { 
 		filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));
-		-webkit-transform: rotate(45deg) translate(-0.375rem, -0.25rem);
-			-ms-transform: rotate(45deg) translate(-0.375rem, -0.25rem);
-				transform: rotate(45deg) translate(-0.375rem, -0.25rem);
+		transform: rotate(45deg) translate(-0.375rem, -0.25rem);
 	}
 
 /* --- */
@@ -84,10 +74,7 @@ html,body {
 .disabled { 
 	opacity: 0.6;
 	pointer-events: none;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-		-ms-user-select: none;
-			user-select: none;
+	user-select: none;
 }
 
 .customMargin { margin: -1em 0; }
@@ -117,26 +104,19 @@ html,body {
 	left: 5vw;
 	overflow-x: hidden;
 	position: absolute;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-		-ms-user-select: none;
-			user-select: none;
+	user-select: none;
 	vertical-align: middle;
 	width: 100vw;
 	z-index: 0;
 }
 
-	.aurora.left { background: url("img/aurora1b.png") no-repeat; }
+	.bodyBG .left { background: url("img/aurora1b.png") no-repeat; }
+	.bodyB .left2 { background: url("img/aurora2b.png") no-repeat; }
+	.bodyBG .right { background: url("img/aurora3b.png") no-repeat; }
 
-	.aurora.left2 { background: url("img/aurora2b.png") no-repeat; }
-
-	.aurora.right { background: url("img/aurora3b.png") no-repeat; }
-
-	.aurora.left, .aurora.left2, .aurora.right { 
-		-webkit-background-size: 100% 100%;
-		   -moz-background-size: 100% 100%;
-			 -o-background-size: 100% 100%;
-				background-size: 100% 100%;	
+	.bodyBG .left, .bodyBG .left2, .bodyBG .right { 
+		animation-iteration-count: infinite;
+		background-size: 100% 100%;	
 	}
 
 .logo { 
@@ -182,11 +162,7 @@ html,body {
 	width: 1.25rem;
 }
 
-.captionButton, .captionbutton:hover, .captionButton:active { 
-	-webkit-transition: all 0.125s ease;
-		 -o-transition: all 0.125s ease;
-			transition: all 0.125s ease;
-}
+.captionButton, .captionbutton:hover, .captionButton:active { transition: all 0.125s ease; }
 
 	.captionButton { opacity: 0.75; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
 	
@@ -220,15 +196,11 @@ html,body {
 .headerBackground { 
 	background: #6fb0f3 url('img/headerBackground.svg');
 	background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70b0f3 45%, #70b0f3 60%, #5E99E3 75%, #4D88D5 92%);
-	-webkit-box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.375rem 0.375rem rgba(0, 0, 0, 0.23);
-			box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.375rem 0.375rem rgba(0, 0, 0, 0.23);
+	box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.375rem 0.375rem rgba(0, 0, 0, 0.23);
 	height: 6em;
 	padding: 0;
 	position: fixed;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-		-ms-user-select: none;
-			user-select: none;
+	user-select: none;
 	vertical-align: top;
 	width: 100%;
 	z-index: 42069;
@@ -256,8 +228,6 @@ html,body {
 .menuBar { 
 	align-self: flex-end;
 	background: #3669af url('img/menuBar.svg');
-	background: -webkit-linear-gradient(right, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
-		 background: -o-linear-gradient(right, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
 		  background: linear-gradient(to left, #3669af 8%, #548ed0 25%, #5f9cda 45%, #5f9cda 60%, #548ed0 75%, #3669af 92%);
 	border-image-repeat: stretch stretch;
 	border-image-slice: 13 15 4 14 fill; 
@@ -284,9 +254,7 @@ html,body {
 	text-align: center;
 	text-decoration: none;
 	text-shadow: -2px 1px 6px rgba(0,0,0,0.75);
-	-webkit-transition: all 0.25s ease;
-		 -o-transition: all 0.25s ease;
-			transition: all 0.25s ease;
+	transition: all 0.25s ease;
 }
 
 	.menuBar a.button:hover { 
@@ -294,9 +262,7 @@ html,body {
 		border-image-slice: 0 7 7 7 fill;
 		border-image-source: url("img/menuBarButton_hover.png");
 		border-image-width: 7px 7px 7px 7px;
-		-webkit-transition: all 0.125s ease;
-			 -o-transition: all 0.125s ease;
-				transition: all 0.125s ease;
+		transition: all 0.125s ease;
 	}
 	
 	.menuBar a.button:active { border-image-source: url("img/menuBarButton_pressed.png"); }
@@ -332,30 +298,19 @@ body {
 	z-index: 100;
 }
 
-.gridBody { 
-	-ms-flex-line-pack: center;
-		 align-content: center;
-	display: -ms-grid;
-		display: grid;
-		 -ms-grid-columns: 80% 15%;
+.gridBody {
+	align-content: center;
+	display: grid;
 	grid-template-columns: 80% 15%;
-		 -ms-grid-rows: 100% 100%;
 	grid-template-rows: 100% 100%;
 }
 
 
-.side { 
-	-webkit-box-orient: vertical;
-		  flex-direction: column;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	-ms-grid-column: 2;
-		grid-column: 2;
-	-ms-grid-row: 1;
-		grid-row: 1;
-	display: -webkit-box;
-	display: -ms-flexbox;
-		   display: flex;
+.side {
+	flex-direction: column;
+	grid-column: 2;
+	grid-row: 1;
+	display: flex;
 	padding-left: 1rem;
 	vertical-align: top;
 	bottom: 1em;
@@ -377,11 +332,9 @@ body {
 	
 	.sideObject p { margin: 0.313rem 0 0 0; }
 
-.content { 
-	-ms-grid-column: 1;
-		grid-column: 1;
-	-ms-grid-row: 1;
-		grid-row: 1;
+.content {
+	grid-column: 1;
+	grid-row: 1;
 	padding: 0 0.625rem;
 	vertical-align: top;
 	width: 100%;
@@ -437,10 +390,8 @@ body {
 	}
 	
 		.marketplace.flexItem:active { 
-			transform: scale3d(0.9, 0.9, 0.9) !important; 
-			-webkit-transition: all 0.125s ease;
-				 -o-transition: all 0.125s ease;
-					transition: all 0.125s ease;
+			transform: scale3d(0.9, 0.9, 0.9) !important;
+			transition: all 0.125s ease;
 		}
 		
 		 .marketplace.flexItem p { 
@@ -465,16 +416,6 @@ body {
 			transform: translateZ(10px);
 			width: 8.5em;
 		}
-
-/*
-.marketplace.flexItem:active { 
-	height: 14rem;
-	width: 14rem;
-	top: 0.5em;
-	opacity: 0.9;
-	user-select: none;
- }
-*/
 
 .marketplace.flexItem .moduleIcon { 
 	float: left;
@@ -514,183 +455,75 @@ body {
 /* --- */
 
 /* Animation */
-@-webkit-keyframes animationLeft { 
-	0% { 
-		-webkit-transform: translate(0, 0) scaleX(1);
-				transform: translate(0, 0) scaleX(1);
-	}
-
-	100% { 
-		-webkit-transform: translate(-12.5rem, 0) scaleX(1.25);
-				transform: translate(-12.5rem, 0) scaleX(1.25);
-	}
-}
 
 @keyframes animationLeft { 
-	0% { 
-		-webkit-transform: translate(0, 0) scaleX(1);
-				transform: translate(0, 0) scaleX(1);
-	}
-
-	100% { 
-		-webkit-transform: translate(-12.5rem, 0) scaleX(1.25);
-				transform: translate(-12.5rem, 0) scaleX(1.25);
-	}
+	0%   { transform: translate(0, 0) scaleX(1); }
+	100% { transform: translate(-12.5rem, 0) scaleX(1.25); }
 }
 
-.left { 
-	-webkit-animation: animationLeft linear 15s alternate;
-			animation: animationLeft linear 15s alternate;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes animationLeft2 { 
-	0% { 
-		-webkit-transform: translate(0, 0) scaleX(1);
-				transform: translate(0, 0) scaleX(1);
-	}
-
-	100% { 
-		-webkit-transform: translate(-12.5rem, 0) scaleX(1.8);
-				transform: translate(-12.5rem, 0) scaleX(1.8);
-	}
-}
+.left { animation: animationLeft linear 15s alternate; }
 
 @keyframes animationLeft2 { 
-	0% { 
-		-webkit-transform: translate(0, 0) scaleX(1);
-				transform: translate(0, 0) scaleX(1);
-	}
-
-	100% { 
-		-webkit-transform: translate(-12.5rem, 0) scaleX(1.8);
-				transform: translate(-12.5rem, 0) scaleX(1.8);
-	}
+	0%   { transform: translate(0, 0) scaleX(1); }
+	100% { transform: translate(-12.5rem, 0) scaleX(1.8); }
 }
 
-.left2 { 
-	-webkit-animation: animationLeft2 linear 35s alternate;
-			animation: animationLeft2 linear 35s alternate;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes animationRight { 
-	0% { 
-		-webkit-transform: translate(0, 0) scaleX(1.00);
-				transform: translate(0, 0) scaleX(1.00);
-	}
-
-	100% { 
-		-webkit-transform: translate(12.5rem, 0) scaleX(1.25);
-				transform: translate(12.5rem, 0) scaleX(1.25);
-	}
-}
+.left2 { animation: animationLeft2 linear 35s alternate; }
 
 
 @keyframes animationRight { 
-	0% { 
-		-webkit-transform: translate(0, 0) scaleX(1.00);
-				transform: translate(0, 0) scaleX(1.00);
-	}
-
-	100% { 
-		-webkit-transform: translate(12.5rem, 0) scaleX(1.25);
-				transform: translate(12.5rem, 0) scaleX(1.25);
-	}
+	0%   { transform: translate(0, 0) scaleX(1.00); }
+	100% { transform: translate(12.5rem, 0) scaleX(1.25); }
 }
 
-.right { 
-	-webkit-animation: animationRight linear 10s alternate;
-			animation: animationRight linear 10s alternate;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-}
-
-
-@-webkit-keyframes animationRight2 { 
-	0% { 
-		-webkit-transform: translate(0, 0) scaleX(1);
-				transform: translate(0, 0) scaleX(1);
-	}
-
-	100% { 
-		-webkit-transform: translate(12.5rem, 0) scaleX(1.15);
-				transform: translate(12.5rem, 0) scaleX(1.15);
-	}
-}
+.right { animation: animationRight linear 10s alternate; }
 
 @keyframes animationRight2 { 
-	0% { 
-		-webkit-transform: translate(0, 0) scaleX(1);
-				transform: translate(0, 0) scaleX(1);
-	}
-
-	100% { 
-		-webkit-transform: translate(12.5rem, 0) scaleX(1.15);
-				transform: translate(12.5rem, 0) scaleX(1.15);
-	}
+	0%   { transform: translate(0, 0) scaleX(1); }
+	100% { transform: translate(12.5rem, 0) scaleX(1.15); }
 }
 
-.right2 { 
-	-webkit-animation: animationRight2 linear 30s alternate;
-			animation: animationRight2 linear 30s alternate;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-	left: 10vw;
-}
+.right2 { animation: animationRight2 linear 30s alternate; left: 10vw; }
 
 @keyframes slideDown { 
 	0% { 
 		height: 3rem;
-		-webkit-transform: translateY(0%);
-				transform: translateY(0%);
+		transform: translateY(0%);
 	}
 
 	100% { 
 		height: 17.55rem;
-		-webkit-transform: translateY(0%);
-				transform: translateY(0%);
+		transform: translateY(0%);
 	}
 }
 
-.slideDown { 
-	-webkit-animation: 0.3s slideDown ease;
-			animation: 0.3s slideDown ease;
+.slideDown {
+	animation: 0.3s slideDown ease;
 }
 
 @keyframes slideUp { 
 	0% { 
 		height: 17.55rem;
-		-webkit-transform: translateY(0%);
-				transform: translateY(0%);
+		transform: translateY(0%);
 	}
 
 	100% { 
 		height: 3.5rem;
-		-webkit-transform: translateY(0%);
-				transform: translateY(0%);
+		transform: translateY(0%);
 	}
 }
 
-.slideUp { 
-	-webkit-animation: 0.3s slideUp ease;
-			animation: 0.3s slideUp ease;
-}
+.slideUp { animation: 0.3s slideUp ease; }
 
 @keyframes menuFocusIn { 
-	0% { opacity: 0; }
+	0%   { opacity: 0; }
 	100% { opacity: 0.7; }
 }
 
-.menuFocusIn { 
-	-webkit-animation-duration: 0.3s;
-			animation-duration: 0.3s;
-	-webkit-animation-fill-mode: both;
-			animation-fill-mode: both;
-	-webkit-animation-name: menuFocusIn;
-			animation-name: menuFocusIn;
+.menuFocusIn {
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+	animation-name: menuFocusIn;
 	transition-timing-function: ease-in;
 }
 
@@ -699,23 +532,20 @@ body {
 	100% { opacity: 0; }
 }
 
-.menuFocusOut { 
-	-webkit-animation-duration: 0.3s;
-			animation-duration: 0.3s;
-	-webkit-animation-fill-mode: both;
-			animation-fill-mode: both;
-	-webkit-animation-name: menuFocusOut;
-			animation-name: menuFocusOut;
+.menuFocusOut {
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+	animation-name: menuFocusOut;
 	transition-timing-function: ease-in;
 }
 
 @keyframes fadeIn { 
-	0% { opacity: 0; }
+	0%   { opacity: 0; }
 	100% { opacity: 1; }
 }
 
 @keyframes fadeOut { 
-	0% { opacity: 1; }
+	0%   { opacity: 1; }
 	100% { opacity: 0; }
 }
 
@@ -733,15 +563,26 @@ body {
 	transition-timing-function: ease-in;
 }
 
+.fadeoutright, .fadeoutleft, .fadeinleft, .fadeinright {
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+	transition-timing-function: ease-in;
+}
+
+.fadeinright { animation-name: fadeIn; }
+.fadeinleft { animation-name: fadeIn; }
+.fadeoutright  { animation-name: fadeOut; }
+.fadeoutleft { animation-name: fadeOut; }
+
+/*
+Instructions for future me:
+	Uncomment this CSS
+	Make target buttons open in same tab
+	add delaylink class to buttons
 
 @keyframes github-animational { 
 	0% 	 { height: 100vh; opacity: 0; }
-	100% { height: 2rem; opacity: 1; }
-}
-
-@keyframes discord-animational { 
-	0% 	 { height: 0; }
-	100% { height: 100vh; }
+	100% { height: 56px; opacity: 1; }
 }
 
 .github, .discord { 
@@ -755,41 +596,34 @@ body {
 	text-align: center;
 }
 
-.barFiller.github.github-active { 
+.github.active, .discord.active, .white.github.active { 
+	display: block; 
+	position: fixed; 
+}
+
+.github.active { 
 	animation: github-animational 0.3s ease;
 	background-color: #24292e;
-	height: 2rem;
-	padding-bottom: 0.75rem;
-	padding-top: 0.75rem;
+	height: 56px;
+	top: 0;
 	z-index: 99999;
 }
 
-.white.github.github-active { 
+.white.github.active { 
+	animation: fadeIn 0.3s ease;
 	background-color: white;
-	bottom: 7rem;
 	height: 100vh;
 	z-index: 99990;
 }
 
-.barFiller.discord.discord-active { 
-	animation: discord-animational 0.3s ease;
+.discord.active { 
+	animation: fadeIn 0.3s ease;
 	background-color: #2f3136;
 	height: 110vh;
+	top: 0;
 	z-index: 99999;
 }
-
-.fadeoutright, .fadeoutleft, .fadeinleft, .fadeinright { 
-	-webkit-animation-duration: 0.3s;
-			animation-duration: 0.3s;
-	-webkit-animation-fill-mode: both;
-			animation-fill-mode: both;
-	transition-timing-function: ease-in;
-}
-
-.fadeinright { animation-name: fadeIn; }
-.fadeinleft { animation-name: fadeIn; }
-.fadeoutright  { animation-name: fadeOut; }
-.fadeoutleft { animation-name: fadeOut; }
+*/
 /* --- */
 
 
@@ -799,8 +633,7 @@ a.button {
 	border-image-slice: 2 3 3 3 fill;
 	border-image-source: url("img/buttonIdle.png");
 	border-image-width: 2px 2px 2px 2px;
-	-webkit-box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
-			box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
+	box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
 	color: black;
 	display: inline-block;
 	font-size: 0.85rem;
@@ -810,34 +643,25 @@ a.button {
 	padding: 0.5rem 0.65rem;
 	text-align: center;
 	text-decoration: none;
-	-webkit-transition: all 0.75s ease;
-		 -o-transition: all 0.75s ease;
-			transition: all 0.75s ease;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-		-ms-user-select: none;
-			user-select: none;
+	transition: all 0.75s ease;
+user-select: none;
 	vertical-align: middle;
 	white-space: nowrap;
 }
 
 a.button:hover { 
 	border-image-source: url("img/buttonHover.png");
-	-webkit-transition: all 0.125s ease;
-		 -o-transition: all 0.125s ease;
-			transition: all 0.125s ease;
+	transition: all 0.125s ease;
 }
 
 a.button:active { 
 	border-image-source: url("img/buttonPressed.png");
-	-webkit-box-shadow: none;
-			box-shadow: none;
+	box-shadow: none;
 }
 
 a.button.disabled { 
 	border-image-source: url("img/buttonDisabled.png");
-	-webkit-box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
-			box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
+	box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
 	opacity: 1;
 }
 
@@ -859,18 +683,14 @@ a.button.disabled {
 }
 
 @media all and (max-width: 50.75rem) { 
-	.gridBody, .oneBox { 
-			 -ms-grid-columns: auto auto;
+	.gridBody, .oneBox {
 		grid-template-columns: auto auto;
-			 -ms-grid-rows: 100%;
 		grid-template-rows: 100%;
 	}
 
-	.side { 
-		-ms-grid-column: 1;
-			grid-column: 1;
-		-ms-grid-row: 2;
-			grid-row: 2;
+	.side {
+		grid-column: 1;
+		grid-row: 2;
 	}
 
 }
@@ -916,10 +736,11 @@ footer {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 200;
-	src: local('Selawik Light'),
-		 url("font/selawkl.woff2") format("woff2"),
+	src: url("font/selawkl.eot?dumbie") format("embedded-opentype"),
+		 local('Selawik Light'),
+		 url("font/selawkl.ttf") format("truetype"),
 		 url("font/selawkl.woff") format("woff"),
-		 url("font/selawkl.eot") format("embedded-opentype");
+		 url("font/selawkl.woff2") format("woff2");
 }
 
 /* Semilight */
@@ -927,11 +748,11 @@ footer {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 300;
-	src: local('Selawik Semilight'),
-		 url("font/selawksl.woff2") format("woff2"),
-		 url("font/selawksl.woff") format("woff"),
+	src: url("font/selawksl.eot?dumbie") format("embedded-opentype"),
+		 local('Selawik Semilight'),
 		 url("font/selawksl.ttf") format("truetype"),
-		 url("font/selawksl.eot") format("embedded-opentype");
+		 url("font/selawksl.woff") format("woff"),
+		 url("font/selawksl.woff2") format("woff2");
 }
 
 /* Normal */
@@ -939,11 +760,11 @@ footer {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 400;
-	src: local('Selawik'),
-		 url("font/selawk.woff2") format("woff2"),
-		 url("font/selawk.woff") format("woff"),
+	src: url("font/selawk.eot?dumbie") format("embedded-opentype"),
+		 local('Selawik'),
 		 url("font/selawk.ttf") format("truetype"),
-		 url("font/selawk.eot") format("embedded-opentype");
+		 url("font/selawk.woff") format("woff"),
+		 url("font/selawk.woff2") format("woff2");
 }
 
 /* Semibold */
@@ -951,11 +772,11 @@ footer {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 600;
-	src: local('Selawik Semibold'),
-		 url("font/selawksb.woff2") format("woff2"),
-		 url("font/selawksb.woff") format("woff"),
+	src: url("font/selawksb.eot?dumbie") format("embedded-opentype"),
+		 local('Selawik Semibold'),
 		 url("font/selawksb.ttf") format("truetype"),
-		 url("font/selawksb.eot") format("embedded-opentype");
+		 url("font/selawksb.woff") format("woff"),
+		 url("font/selawksb.woff2") format("woff2");
 }
 
 /* Bold */
@@ -963,11 +784,11 @@ footer {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 700;
-	src: local('Selawik Bold'),
-		 url("font/selawkb.woff2") format("woff2"),
-		 url("font/selawkb.woff") format("woff"),
+	src: url("font/selawkb.eot?dumbie") format("embedded-opentype"),
+		 local('Selawik Bold'),
 		 url("font/selawkb.ttf") format("truetype"),
-		 url("font/selawkb.eot") format("embedded-opentype");
+		 url("font/selawkb.woff") format("woff"),
+		 url("font/selawkb.woff2") format("woff2");
 }
 
 
