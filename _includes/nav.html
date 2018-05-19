@@ -10,7 +10,7 @@
 		</span>
 	</p>
 	<nav class="menuBar" id="menuBar">
-		{% for page in site.pages %}{% if page.menu == 'main' %}<a class="button" data-target="{{ page.target }}" onclick="scrollUp()" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> {% endif %}{% endfor %}
+		{% for page in site.pages %}{% if page.menu == 'main' %}<a class="delaylink button" data-target="{{ page.target }}" onclick="fadeoutright();" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> {% endif %}{% endfor %}
 		<a class="button" href="https://github.com/StartNine/Start9/releases" target="_blank" rel="noopener noreferrer">Downloads</a>
 		<a class="disabled button">Community</a>
 		<a class="disabled button">FAQ</a>

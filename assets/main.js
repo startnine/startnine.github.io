@@ -64,7 +64,7 @@ $(document).ready(function() {
 	$(".titleText").css("left", "2.8rem");
 	$(".title").append("<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"captionButton contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>");
 
-	// Barba.Pjax.start();    // init barbra
+//  Barba.Pjax.start();    // init barbra
 	Barba.Prefetch.init(); // init barbra
 
 	$('.tilts').tilt({ maxTilt: 20, }); // init tilt.js 
@@ -161,4 +161,4 @@ $("#gitbutton").click(function() {$('.github').toggleClass('github-active');});
 $("#discordbutton").click(function() {$('.discord').toggleClass('discord-active');});
 
 // delay links when animationals come
-function delay (URL) {setTimeout( function() {window.location = URL;}, 50) ;}
+function delay (URL) {setTimeout( function() {window.location = URL;}, 30) ;}

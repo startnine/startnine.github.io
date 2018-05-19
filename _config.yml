@@ -2,7 +2,7 @@
 title: Start9
 description: An extensible, customizable, modular shell supplement for Windows.
 url: "https://startnine.github.io/" # the base hostname & protocol for your site
-github_username:  startnine
+github_username: startnine
 
 # Build settings
 markdown: kramdown
