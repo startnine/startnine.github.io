@@ -1,3 +1,7 @@
+---
+style: compressed
+---
+
 /* --- */
 a { color: #00729e; text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -307,14 +311,14 @@ body {
 
 
 .side {
+	bottom: 1em;
+	display: flex;
 	flex-direction: column;
 	grid-column: 2;
 	grid-row: 1;
-	display: flex;
 	padding-left: 1rem;
-	vertical-align: top;
-	bottom: 1em;
 	position: relative;
+	vertical-align: top;
 }
 
 	.side .sideObject { 
@@ -344,10 +348,10 @@ body {
 
 /* Marketplace */
 .marketplace .backgroundicon { 
+	bottom: 10em;
 	max-height: 10rem;
 	opacity: 0.25;
 	position: relative;
-	bottom: 10em;
 }
 
 .marketplaceTitle { 
@@ -373,7 +377,7 @@ body {
 	right: 2em;
 }
 
-	.marketplace.flexItem { 
+	.marketplaceFlex .flexItem { 
 		border-image-repeat: stretch stretch;
 		border-image-slice: 32 16 8 8 fill;
 		border-image-source: url("img/module.svg");
@@ -383,18 +387,18 @@ body {
 		margin-bottom: 2.5em;
 		margin-left: 2em;
 		position: relative;
-		transform-style: preserve-3d;
 		transform: perspective(300px);
+		transform-style: preserve-3d;
 		width: 20rem;
 		will-change: transform;
 	}
 	
-		.marketplace.flexItem:active { 
+		.marketplaceFlex .flexItem:active { 
 			transform: scale3d(0.9, 0.9, 0.9) !important;
 			transition: all 0.125s ease;
 		}
 		
-		 .marketplace.flexItem p { 
+		 .marketplaceFlex .flexItem p { 
 			bottom: 1em;
 			left: 1.75em;
 			line-height: 1.1em;
@@ -406,7 +410,7 @@ body {
 			word-wrap: break-word;
 		}
 		
-		.marketplace.flexItem h2 { 
+		.marketplaceFlex .flexItem .header { 
 			color: black; 
 			height: 1.1em;
 			left: 0.5em; 
@@ -417,7 +421,7 @@ body {
 			width: 8.5em;
 		}
 
-.marketplace.flexItem .moduleIcon { 
+.marketplaceFlex .flexItem .moduleIcon { 
 	float: left;
 	height: 4.5em;
 	left: 1em;
@@ -436,21 +440,21 @@ body {
 /* --- */
 
 /* Post Nav */
-.PageNavigation {
-	font-size: 0.8em;
+.postNav {
 	display: block;
-	width: 100%;
+	font-size: 0.8em;
 	overflow: hidden;
+	width: 100%;
 }
 
-.PageNavigation a {
+.postNav a {
 	display: block;
 	float: left;
 	margin: 1em 0;
 	width: 50%;
 }
 
-.PageNavigation .next { float: right; text-align: right; }
+.postNav .next { float: right; text-align: right; }
 
 /* --- */
 
@@ -563,23 +567,46 @@ body {
 	transition-timing-function: ease-in;
 }
 
+@keyframes slideInLeft { 
+	0% { transform: translateX(-7em); }
+	100% { transform: translateX(0); }
+}
+
+
+@keyframes slideOutLeft { 
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-7em);
+	}
+}
+
+@keyframes slideInRight { 
+	0% { transform: translateX(7em); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes slideOutRight { 
+	0% { transform: translateX(0);}
+	100% { transform: translateX(7em); }
+}
+
 .fadeoutright, .fadeoutleft, .fadeinleft, .fadeinright {
 	animation-duration: 0.3s;
 	animation-fill-mode: both;
 	transition-timing-function: ease-in;
 }
 
-.fadeinright { animation-name: fadeIn; }
-.fadeinleft { animation-name: fadeIn; }
-.fadeoutright  { animation-name: fadeOut; }
-.fadeoutleft { animation-name: fadeOut; }
+.fadeinright { animation-name: fadeIn, slideInRight; }
+.fadeinleft { animation-name: fadeIn, slideInLeft; }
+.fadeoutright  { animation-name: fadeOut, slideOutRight; }
+.fadeoutleft { animation-name: fadeOut, slideOutLeft; }
 
 /*
-Instructions for future me:
-	Uncomment this CSS
-	Make target buttons open in same tab
-	add delaylink class to buttons
+	Instructions for future me:
+		Uncomment this CSS
+		Make target buttons open in same tab (remove rel="noopener noreferrer" target="_blank")
+*/
 
+/*
 @keyframes github-animational { 
 	0% 	 { height: 100vh; opacity: 0; }
 	100% { height: 56px; opacity: 1; }
@@ -624,6 +651,7 @@ Instructions for future me:
 	z-index: 99999;
 }
 */
+
 /* --- */
 
 
@@ -639,12 +667,11 @@ a.button {
 	font-size: 0.85rem;
 	height: 1.75em;
 	line-height: 1.75em;
-	outline: 0;
 	padding: 0.5rem 0.65rem;
 	text-align: center;
 	text-decoration: none;
 	transition: all 0.75s ease;
-user-select: none;
+	user-select: none;
 	vertical-align: middle;
 	white-space: nowrap;
 }
@@ -666,6 +693,75 @@ a.button.disabled {
 }
 
 /* --- */
+
+/* Radio and Checkboxes */
+input[type=checkbox] { display: none; }
+
+input[type=checkbox] + label {
+	background: url("img/checkbox.png") no-repeat center;
+	background-size: 100% 100%;
+	border-image-outset: 0 0 0 0;
+	border-image-repeat: stretch stretch;
+	border-image-slice: 1 1 1 1 fill;
+	border-image-source: url("img/checkbox.png");
+	border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
+	display: inline-block;
+	height: 1rem;
+	padding: 0;
+	transition: all 0.75s ease;
+	width: 1rem;
+}
+
+input[type=checkbox]:checked + label {
+	background: url("img/checkboxChecked.png") no-repeat center;
+	border-image-source: url("img/checkboxChecked.png");
+	transition: all 0.125s ease;
+}
+
+input[type=checkbox]:hover + label {
+	background: url("img/checkboxHover.png") no-repeat center;
+	border-image-source: url("img/checkboxHover.png");
+}
+
+
+input[type=checkbox]:hover:checked + label {
+	background: url("img/checkboxCheckedHover.png") no-repeat center;
+	border-image-source: url("img/checkboxCheckedHover.png");
+}
+
+input[type=radio] { display: none; }
+
+input[type=radio] + label {
+	background: url("img/checkbox.png") no-repeat center;
+	background-size: 100% 100%;
+	border-image-outset: 0 0 0 0;
+	border-image-repeat: stretch stretch;
+	border-image-slice: 0 1 1 1 fill;
+	border-image-source: url("img/checkbox.png");
+	border-image-width: 0 0.063rem 0.063rem 0.063rem;
+	display: inline-block;
+	height: 1rem;
+	padding: 0;
+	transition: all 0.75s ease;
+	width: 1rem;
+}
+
+input[type=radio]:hover + label {
+	background: url("img/checkboxHover.png") no-repeat center;
+	border-image-source: url("img/checkboxHover.png");
+	transition: all 0.125s ease;
+}
+
+input[type=radio]:checked + label {
+	background: url("img/radioChecked.png") no-repeat center;
+	border-image-source: url("img/radioChecked.png");
+}
+
+input[type=radio]:hover:checked + label {
+	background: url("img/radioCheckedHover.png") no-repeat center;
+	border-image-source: url("img/radioCheckedHover.png");
+}
+/*--- */
 
 /* Printer Ajustments */
 @media print { 
@@ -704,7 +800,7 @@ a.button.disabled {
 	.headerBackground a.button { min-width: 100%; }
 	.headerBackground a.button { padding: 1rem 0;  width: 100%; }
 	.headerBackground, .headerSpace { height: 3rem; }
-	.marketplaceTitle { bottom: 6em; height: 3.75em; font-size: 3rem; line-height: 3.25rem; }
+	.marketplaceTitle { bottom: 6em; font-size: 3rem; height: 3.75em; line-height: 3.25rem; }
 	.menuBar { display: none; }
 	.menuBar.responsive { display: block; }
 	.no-cssgrid .content { display: initial; width: auto; }
@@ -717,16 +813,13 @@ a.button.disabled {
 
 /* Footer */
 footer { 
-	background: #c8d4e7;
-	background: rgba(200, 212, 231, 0.9);
-	bottom: 0;
-	color: black;
-	font-size: 0.7rem;
-	position: fixed;
+	background: #000;
+	background: rgba(0,0,0,0.75);
+	color: white;
+	margin: 0;
+	min-height: 2em;
 	text-align: center;
-	vertical-align: bottom;
 	width: 100%;
-	z-index: 10000000000;
 }
 
 /* --- */
