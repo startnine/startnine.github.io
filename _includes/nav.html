@@ -5,12 +5,23 @@
 			{% if page.layout == 'post' %}
 				Post
 			{% else %}
-				{{page.title}}
+				{{ page.title }}
 			{% endif %}
 		</span>
 	</p>
 	<nav class="menuBar" id="menuBar">
-		{% for page in site.pages %}{% if page.menu == 'main' %}<a class="delaylink button" data-target="{{ page.target }}" onclick="fadeoutright();" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a> {% endif %}{% endfor %}
+		{% for page in site.pages %}
+			{% if page.menu == 'main' %}
+				<a class="delaylink button" data-target="{{ page.target }}" onclick="    
+					{% if page.target < page.target %}fadeoutright();
+					{% elsif page.target > page.target %}fadeoutleft();
+					{% else %}fadeOut(); {% endif %}
+   				" 
+   				href="{{ page.url | prepend: site.baseurl }}">
+					{{ page.title }}
+				</a> 
+			{% endif %}
+		{% endfor %}
 		<a class="button" href="https://github.com/StartNine/Start9/releases" target="_blank" rel="noopener noreferrer">Downloads</a>
 		<a class="disabled button">Community</a>
 		<a class="disabled button">FAQ</a>
@@ -18,7 +29,6 @@
 </div>
 <div class="headerSpace"></div>
 <div class="menuFocus" onclick="menuFocus()"></div>
-<!--
-	<div class="barFiller github"></div><div class="white github"></div>
-	<div class="barFiller discord"></div>
--->
+
+	<div class="github"></div><div class="white github"></div>
+	<div class="discord"></div>
