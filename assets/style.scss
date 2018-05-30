@@ -92,6 +92,12 @@ html,body {
 	border-radius: 4px;
 	min-width: 100%;
 }
+
+.pixelated {
+	image-rendering: -moz-crisp-edges;
+	image-rendering: optimizeSpeed;
+}
+
 /* --- */
 
 /* Aurora Panel */
@@ -532,7 +538,7 @@ body {
 }
 
 @keyframes menuFocusOut { 
-	0% { opacity: 0.7; }
+	0%   { opacity: 0.7; }
 	100% { opacity: 0; }
 }
 
@@ -568,24 +574,24 @@ body {
 }
 
 @keyframes slideInLeft { 
-	0% { transform: translateX(-7em); }
+	0%   { transform: translateX(-7em); }
 	100% { transform: translateX(0); }
 }
 
 
 @keyframes slideOutLeft { 
-	0% { transform: translateX(0); }
+	0%   { transform: translateX(0); }
 	100% { transform: translateX(-7em);
 	}
 }
 
 @keyframes slideInRight { 
-	0% { transform: translateX(7em); }
+	0%   { transform: translateX(7em); }
 	100% { transform: translateX(0); }
 }
 
 @keyframes slideOutRight { 
-	0% { transform: translateX(0);}
+	0%   { transform: translateX(0);}
 	100% { transform: translateX(7em); }
 }
 
@@ -695,6 +701,11 @@ a.button.disabled {
 /* --- */
 
 /* Radio and Checkboxes */
+input {
+	image-rendering: -moz-crisp-edges;
+	image-rendering: optimizeSpeed;
+}
+
 input[type=checkbox] { display: none; }
 
 input[type=checkbox] + label {
@@ -732,12 +743,12 @@ input[type=checkbox]:hover:checked + label {
 input[type=radio] { display: none; }
 
 input[type=radio] + label {
-	background: url("img/checkbox.png") no-repeat center;
+	background: url("img/radio.png") no-repeat center;
 	background-size: 100% 100%;
 	border-image-outset: 0 0 0 0;
 	border-image-repeat: stretch stretch;
 	border-image-slice: 0 1 1 1 fill;
-	border-image-source: url("img/checkbox.png");
+	border-image-source: url("img/radio.png");
 	border-image-width: 0 0.063rem 0.063rem 0.063rem;
 	display: inline-block;
 	height: 1rem;
@@ -747,8 +758,8 @@ input[type=radio] + label {
 }
 
 input[type=radio]:hover + label {
-	background: url("img/checkboxHover.png") no-repeat center;
-	border-image-source: url("img/checkboxHover.png");
+	background: url("img/radioHover.png") no-repeat center;
+	border-image-source: url("img/radioHover.png");
 	transition: all 0.125s ease;
 }
 
