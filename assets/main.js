@@ -60,6 +60,7 @@ $(document).ready(function() {
 
 	// apply existing appearance settings if they exist	
 	if (document.cookie.includes('text=large')) { textLarge(); }
+	if (document.cookie.includes('text=normal')) { textNormal(); }
 	if (document.cookie.includes('contrast=true')) { $('.contrast').click(); }
 
 //  Barba.Pjax.start();    // init barbra
