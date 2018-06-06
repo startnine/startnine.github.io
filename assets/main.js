@@ -62,6 +62,7 @@ $(document).ready(function() {
 	if (document.cookie.includes('text=large')) { textLarge(); }
 	if (document.cookie.includes('text=normal')) { textNormal(); }
 	if (document.cookie.includes('contrast=true')) { $('.contrast').click(); }
+	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); }
 
 //  Barba.Pjax.start();    // init barbra
 	Barba.Prefetch.init(); // init barbra
