@@ -60,7 +60,7 @@ $(document).ready(function() {
 	// apply existing appearance settings if they exist	
 	if (document.cookie.includes('text=large')) { textLarge(); };
 	if (document.cookie.includes('text=normal')) { textNormal(); };
-	if (document.cookie.includes('contrast=true')) { $('.contrast').click(); };
+	if (document.cookie.includes('contrast=true')) { $('head').append('<link rel="stylesheet" id="contrast" href="' + hostname + '/assets/contrast.css" type="text/css"/>'); };
 	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); };
 
 //  Barba.Pjax.start();    // init barbra
