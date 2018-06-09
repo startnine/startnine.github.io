@@ -128,6 +128,7 @@ html,body {
 		animation-iteration-count: infinite;
 		background-size: 100% 100%;	
 	}
+	.someone .bodyBG .left, .someone .bodyBG .left2, .someone .bodyBG .right { filter: grayscale(100%); }
 
 .logo { 
 	bottom: 10em;

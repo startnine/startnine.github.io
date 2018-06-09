@@ -29,21 +29,21 @@
 var hostname = window.location.origin;
 
 // Common Functions (well not really common but)
-function burgerButton(x) { x.classList.toggle('change'); }
-function menuFocus() { document.querySelector('.burgerButton').click(); }
-function fadeoutright() { $('main').removeClass('fadeinleft fadeinright').addClass('fadeoutright'); }
-function fadeoutleft() { $('main').removeClass('fadeinleft fadeinright').addClass('fadeoutleft'); }
-function fadeOut() { $('main').removeClass('fadeinleft fadeinright').addClass('fadeOut'); }
-function scrollup() { $('html, body').animate({scrollTop: 0}, 150); return false; }
-function someone() { $('body').addClass('someone'); } // help i've fallen and i cant get up
+function burgerButton(x) { x.classList.toggle('change'); };
+function menuFocus() { document.querySelector('.burgerButton').click(); };
+function fadeoutright() { $('main').removeClass('fadeinleft fadeinright').addClass('fadeoutright'); };
+function fadeoutleft() { $('main').removeClass('fadeinleft fadeinright').addClass('fadeoutleft'); };
+function fadeOut() { $('main').removeClass('fadeinleft fadeinright').addClass('fadeOut'); };
+function scrollup() { $('html, body').animate({scrollTop: 0}, 150); return false; };
+function someone() { $('body').addClass('someone'); }; // help i've fallen and i cant get up
 function textNormal() { 
 	$('html').css("font-size", "1em"); 
 	document.cookie = "text=normal; path=/; expires=0;";
-}
+};
 function textLarge() { 
 	$('html').css("font-size", "2em"); 
 	document.cookie = "text=large; path=/; expires=0;";
-}
+};
 
 function darkSideOfTheMoon() { $('head').append('<link rel="stylesheet" id="dark" href="' + hostname + '/assets/dark.css" type="text/css"/>'); }
 
@@ -58,11 +58,10 @@ $(document).ready(function() {
 	else { console.log('f a i l: your browser cannot eat cookies'); };
 
 	// apply existing appearance settings if they exist	
-	if (document.cookie.includes('text=large')) { textLarge(); }
-	if (document.cookie.includes('text=normal')) { textNormal(); }
-	if (document.cookie.includes('contrast=true')) { $('.contrast').click(); }
-	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); }
-    $(function() {
+	if (document.cookie.includes('text=large')) { textLarge(); };
+	if (document.cookie.includes('text=normal')) { textNormal(); };
+	if (document.cookie.includes('contrast=true')) { $('.contrast').click(); };
+	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); };
 
 //  Barba.Pjax.start();    // init barbra
 	Barba.Prefetch.init(); // init barbra
@@ -84,18 +83,18 @@ $(document).ready(function() {
 		console.log('Microsoft, please fix border-image'); // no hard feelings
 		console.log('enabling edgey mode...'); 
 		$('head').append('<link rel="stylesheet" href="' + hostname + '/assets/edgey.css" type="text/css"/>');
-	}
+	};
 
 	// Modernizr
 	if (Modernizr.cssgrid) { console.log('s u c c e s s: your browser can do CSS grids'); } 
-	else { console.log('f a i l: your browser sucks and cannot CSS grids correctly.. like is it that hard to install Chrome or something'); }
+	else { console.log('f a i l: your browser sucks and cannot CSS grids correctly.. like is it that hard to install Chrome or something'); };
 
 	if (Modernizr.borderimage) { console.log('s u c c e s s: your browser can do border-image'); } 
 	else {
 		console.log('f a i l: your browser sucks and cannot border-image correctly'); // no hard feelings
 		console.log('enabling edgey mode...'); 
 		$('head').append('<link rel="stylesheet" href="' + hostname + '/assets/edgey.css" type="text/css"/>');
-	}
+	};
 
 	// burger button class toggle
 	var clickedBurger = false;
@@ -141,6 +140,8 @@ $(document).ready(function() {
 	});
 });
 
+/*
 // animationals WAIT FOR CNAME 
 $('#gitbutton').click(function() { $('.github').toggleClass('active'); });
 $('#discordbutton').click(function() { $('.discord').toggleClass('active'); });
+*/
