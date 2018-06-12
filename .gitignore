@@ -7,6 +7,9 @@ blog/
 *.jekyll-metadata
 *.sublime-project
 *.sublime-workspace
+Gemfile
+Gemfile.lock
+jekyll.bat
 
 
 
