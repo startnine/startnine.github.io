@@ -24,7 +24,7 @@ html,body {
 	left: 1.5rem;
 	position: relative;
 	top: 0.6em;
-	z-index: 9999;
+	z-index: 50;
 }
 
 	.burgerButton:hover .bar1, .burgerButton:hover .bar2, .burgerButton:hover .bar3 { background-color: white; }
@@ -106,7 +106,6 @@ html,body {
 	position: relative;
 	text-align: center;
 	width: 100%;
-	z-index: 0;
 }
 
 .aurora { 
@@ -117,7 +116,6 @@ html,body {
 	user-select: none;
 	vertical-align: middle;
 	width: 100vw;
-	z-index: 0;
 }
 
 	.bodyBG .left { background: url("img/aurora1b.png") no-repeat; }
@@ -135,7 +133,7 @@ html,body {
 	min-width: 100%;
 	position: relative;
 	text-align: center;
-	z-index: 1000;
+	z-index: 1;
 }
 
 .logo .image { 
@@ -206,7 +204,7 @@ html,body {
 		position: fixed;
 		visibility: visible;
 		width: 100vw;
-		z-index: 42000;
+		z-index: 30;
 	}
 
 .headerBackground { 
@@ -219,7 +217,7 @@ html,body {
 	user-select: none;
 	vertical-align: top;
 	width: 100%;
-	z-index: 42069;
+	z-index: 41;
 }
 
 .title { 
@@ -255,7 +253,7 @@ html,body {
 	overflow: auto;
 	position: relative;
 	text-align: center;
-	z-index: 69420;
+	z-index: 42;
 }
 
 .menuBar a.button { 
@@ -311,7 +309,6 @@ body {
 	padding: 0;
 	position: relative;
 	vertical-align: top;
-	z-index: 100;
 }
 
 .gridBody {
@@ -451,7 +448,13 @@ body {
 .slide img { height: 10em; }
 /* --- */
 
-/* Post Nav */
+/* Blog Post */
+.gallery img { max-height: 9em; }
+
+.gallery figure { display: none; }
+
+figure { display: block; }
+
 .postNav {
 	display: block;
 	font-size: 0.8em;
@@ -467,7 +470,6 @@ body {
 }
 
 .postNav .next { float: right; text-align: right; }
-
 /* --- */
 
 /* Animation */
