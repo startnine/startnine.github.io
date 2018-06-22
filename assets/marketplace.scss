@@ -1,0 +1,90 @@
+---
+style: compressed
+---
+/* Marketplace */
+.marketplace .backgroundicon { 
+	bottom: 10em;
+	max-height: 10rem;
+	opacity: 0.25;
+	position: relative;
+}
+
+.marketplaceTitle { 
+	bottom: 5em;
+	color: black;
+	font-size: 4rem;
+	line-height: 10rem; 
+	margin: 0;
+	padding-left: 1.5em;
+	position: relative;
+	text-shadow: 1px 0 10px rgba(0,0,0,0.5);
+	width: 100%;
+	z-index: 100;
+}
+
+.marketplaceFlex { 
+	align-self: center;
+	bottom: 20rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+	right: 2em;
+}
+
+	.marketplaceFlex .flexItem { 
+		border-image-repeat: stretch stretch;
+		border-image-slice: 32 16 8 8 fill;
+		border-image-source: url("img/module.svg");
+		border-image-width: 32px 16px 8px 8px;
+		display: inline-block;
+		height: 12.5rem;
+		margin-bottom: 2.5em;
+		margin-left: 2em;
+		position: relative;
+		transform: perspective(300px);
+		transform-style: preserve-3d;
+		width: 20rem;
+		will-change: transform;
+	}
+	
+		.marketplaceFlex .flexItem:active { 
+			transform: scale3d(0.9, 0.9, 0.9) !important;
+			transition: all 0.125s ease;
+		}
+		
+		 .marketplaceFlex .flexItem p { 
+			bottom: 1em;
+			left: 1.75em;
+			line-height: 1.1em;
+			max-height: 4.5em;
+			max-width: 15.9rem;
+			overflow: hidden;
+			position: relative;
+			transform: translateZ(20px);
+			word-wrap: break-word;
+		}
+		
+		.marketplaceFlex .flexItem .header { 
+			color: black; 
+			height: 1.1em;
+			left: 0.5em; 
+			overflow: hidden;
+			position: relative;
+			top: 0.25em;
+			transform: translateZ(10px);
+			width: 8.5em;
+		}
+
+.marketplaceFlex .flexItem .moduleIcon { 
+	float: left;
+	height: 4.5em;
+	left: 1em;
+	max-width: 4.5em;
+	position: relative;
+	transform: perspective(100px) rotateY(8deg) translateZ(10px);
+	will-change: transform;
+}
+
+.marketplace .byline { position: relative; top: 0; }
+/* --- */
