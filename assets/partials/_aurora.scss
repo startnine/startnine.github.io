@@ -1,0 +1,53 @@
+/* Aurora Panel */
+.bodyBG { 
+	height: 10em;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.aurora { 
+	height: 15em;
+	left: 5vw;
+	overflow-x: hidden;
+	position: absolute;
+	user-select: none;
+	vertical-align: middle;
+	width: 100vw;
+}
+
+	.bodyBG .left { background: url("img/aurora1b.png") no-repeat; }
+	.bodyBG .left2 { background: url("img/aurora2b.png") no-repeat; }
+	.bodyBG .right { background: url("img/aurora3b.png") no-repeat; }
+
+	.bodyBG .left, .bodyBG .left2, .bodyBG .right { 
+		animation-iteration-count: infinite;
+		background-size: 100% 100%;	
+	}
+	.someone .bodyBG .left, .someone .bodyBG .left2, .someone .bodyBG .right { filter: brightness(150%); }
+
+.logo { 
+	bottom: 10em;
+	min-width: 100%;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}
+
+.logo .image { 
+	height: 1.5em;
+	margin-right: 0.1em;
+	vertical-align: middle; 
+	width: 1em;
+}
+
+.logo .text { 
+	font-size: 3em;
+	font-weight: 600;
+	line-height: 2em;
+	margin-bottom: 0.95em;
+	text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+	vertical-align: middle;
+}
+
+/* --- */

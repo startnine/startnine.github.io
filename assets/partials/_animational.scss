@@ -1,0 +1,50 @@
+/*
+	Instructions for future me:
+		Uncomment this CSS
+		Make target buttons open in same tab (remove rel="noopener noreferrer" target="_blank")
+*/
+
+@keyframes github-animational { 
+	0% 	 { height: 100vh; opacity: 0; }
+	100% { height: 56px; opacity: 1; }
+}
+
+.github, .discord { 
+	align-self: flex-end;
+	bottom: 7rem;
+	display: none;
+	min-height: 3rem;
+	min-width: 100%;
+	overflow: auto;
+	position: relative;
+	text-align: center;
+}
+
+.github.active, .discord.active, .white.github.active { 
+	display: block; 
+	position: fixed; 
+}
+
+.github.active { 
+	animation: github-animational 0.3s ease;
+	background-color: #24292e;
+	height: 56px;
+	top: 0;
+	z-index: 99999;
+}
+
+.white.github.active { 
+	animation: fadeIn 0.3s ease;
+	background-color: white;
+	height: 100vh;
+	z-index: 99990;
+}
+
+.discord.active { 
+	animation: fadeIn 0.3s ease;
+	background-color: #2f3136;
+	height: 110vh;
+	top: 0;
+	z-index: 99999;
+}
+/* --- */

@@ -1,0 +1,53 @@
+/* Content */
+.oneBox, .gridBody { 
+	bottom: 12rem;
+	margin: 0 10%;
+	min-height: 100%;
+	padding: 0;
+	position: relative;
+	vertical-align: top;
+}
+
+.gridBody {
+	align-content: center;
+	display: grid;
+	grid-template-columns: 80% 15%;
+	grid-template-rows: 100% 100%;
+}
+
+
+.side {
+	bottom: 1em;
+	display: flex;
+	flex-direction: column;
+	grid-column: 2;
+	grid-row: 1;
+	padding-left: 1rem;
+	position: relative;
+	vertical-align: top;
+}
+
+	.side .sideObject { 
+		bottom: 2rem;
+		position: relative;
+	}
+
+.sideObject { 
+	margin-bottom: 2rem;
+	padding: 0.5rem 0;
+	vertical-align: top;
+}
+
+	.sideObject a.button { margin-top: 0.25rem; }
+	
+	.sideObject p { margin: 0.313rem 0 0 0; }
+
+.content {
+	grid-column: 1;
+	grid-row: 1;
+	padding: 0 0.625rem;
+	vertical-align: top;
+	width: 100%;
+}
+
+/* --- */

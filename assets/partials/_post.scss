@@ -1,0 +1,23 @@
+/* Blog Post */
+.gallery img { max-height: 9em; }
+
+.gallery figure { display: none; }
+
+figure { display: block; }
+
+.postNav {
+	display: block;
+	font-size: 0.8em;
+	overflow: hidden;
+	width: 100%;
+}
+
+.postNav a {
+	display: block;
+	float: left;
+	margin: 1em 0;
+	width: 50%;
+}
+
+.postNav .next { float: right; text-align: right; }
+/* --- */

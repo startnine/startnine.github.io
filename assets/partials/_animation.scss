@@ -1,0 +1,140 @@
+/* Animation */
+@keyframes animationLeft { 
+	0%   { transform: translate(0, 0) scaleX(1); }
+	100% { transform: translate(-12.5rem, 0) scaleX(1.25); }
+}
+
+.left { animation: animationLeft linear 15s alternate; }
+
+@keyframes animationLeft2 { 
+	0%   { transform: translate(0, 0) scaleX(1); }
+	100% { transform: translate(-12.5rem, 0) scaleX(1.8); }
+}
+
+.left2 { animation: animationLeft2 linear 35s alternate; }
+
+
+@keyframes animationRight { 
+	0%   { transform: translate(0, 0) scaleX(1.00); }
+	100% { transform: translate(12.5rem, 0) scaleX(1.25); }
+}
+
+.right { animation: animationRight linear 10s alternate; }
+
+@keyframes animationRight2 { 
+	0%   { transform: translate(0, 0) scaleX(1); }
+	100% { transform: translate(12.5rem, 0) scaleX(1.15); }
+}
+
+.right2 { animation: animationRight2 linear 30s alternate; left: 10vw; }
+
+@keyframes slideDown { 
+	0% { 
+		height: 3rem;
+		transform: translateY(0%);
+	}
+
+	100% { 
+		height: 17.55rem;
+		transform: translateY(0%);
+	}
+}
+
+.slideDown {
+	animation: 0.3s slideDown ease;
+}
+
+@keyframes slideUp { 
+	0% { 
+		height: 17.55rem;
+		transform: translateY(0%);
+	}
+
+	100% { 
+		height: 3.5rem;
+		transform: translateY(0%);
+	}
+}
+
+.slideUp { animation: 0.3s slideUp ease; }
+
+@keyframes menuFocusIn { 
+	0%   { opacity: 0; }
+	100% { opacity: 0.7; }
+}
+
+.menuFocusIn {
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+	animation-name: menuFocusIn;
+	transition-timing-function: ease-in;
+}
+
+@keyframes menuFocusOut { 
+	0%   { opacity: 0.7; }
+	100% { opacity: 0; }
+}
+
+.menuFocusOut {
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+	animation-name: menuFocusOut;
+	transition-timing-function: ease-in;
+}
+
+@keyframes fadeIn { 
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeOut { 
+	0%   { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+.fadeIn { 
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+	animation-name: fadeIn;
+	transition-timing-function: ease-in;
+}
+
+.fadeOut { 
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+	animation-name: fadeOut;
+	transition-timing-function: ease-in;
+}
+
+@keyframes slideInLeft { 
+	0%   { transform: translateX(-7em); }
+	100% { transform: translateX(0); }
+}
+
+
+@keyframes slideOutLeft { 
+	0%   { transform: translateX(0); }
+	100% { transform: translateX(-7em);
+	}
+}
+
+@keyframes slideInRight { 
+	0%   { transform: translateX(7em); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes slideOutRight { 
+	0%   { transform: translateX(0);}
+	100% { transform: translateX(7em); }
+}
+
+.fadeoutright, .fadeoutleft, .fadeinleft, .fadeinright {
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+	transition-timing-function: ease-in;
+}
+
+.fadeinright { animation-name: fadeIn, slideInRight; }
+.fadeinleft { animation-name: fadeIn, slideInLeft; }
+.fadeoutright  { animation-name: fadeOut, slideOutRight; }
+.fadeoutleft { animation-name: fadeOut, slideOutLeft; }
