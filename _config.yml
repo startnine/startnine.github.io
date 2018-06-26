@@ -7,3 +7,5 @@ github_username: startnine
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
+sass:
+  sass_dir: assets

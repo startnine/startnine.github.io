@@ -1,4 +1,4 @@
-/* Aurora Panel */
+// Aurora Panel //
 .bodyBG { 
 	height: 10em;
 	position: relative;
@@ -50,4 +50,35 @@
 	vertical-align: middle;
 }
 
-/* --- */
+//////////////
+
+// Required Animation //
+@keyframes animationLeft { 
+	0%   { transform: translate(0, 0) scaleX(1); }
+	100% { transform: translate(-12.5rem, 0) scaleX(1.25); }
+}
+
+.left { animation: animationLeft linear 15s alternate; }
+
+@keyframes animationLeft2 { 
+	0%   { transform: translate(0, 0) scaleX(1); }
+	100% { transform: translate(-12.5rem, 0) scaleX(1.8); }
+}
+
+.left2 { animation: animationLeft2 linear 35s alternate; }
+
+
+@keyframes animationRight { 
+	0%   { transform: translate(0, 0) scaleX(1.00); }
+	100% { transform: translate(12.5rem, 0) scaleX(1.25); }
+}
+
+.right { animation: animationRight linear 10s alternate; }
+
+@keyframes animationRight2 { 
+	0%   { transform: translate(0, 0) scaleX(1); }
+	100% { transform: translate(12.5rem, 0) scaleX(1.15); }
+}
+
+.right2 { animation: animationRight2 linear 30s alternate; left: 10vw; }
+//////////////
