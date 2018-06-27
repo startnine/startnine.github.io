@@ -12,7 +12,7 @@ html,body {
 }
 //////////////
 
-// Body */
+// Body //
 body { 
 	background: #C8D4E7 url('img/background.svg') repeat-x top center fixed;
 	background: linear-gradient(white, #C8D4E7);
@@ -21,7 +21,7 @@ body {
 }
 //////////////
 
-// General Styles */
+// General Styles //
 .byline { font-style: italic; }
 
 .active, .github-active, .discord-active { display: block; }
@@ -67,7 +67,7 @@ body {
 }
 //////////////
 
-// Buttons */
+// Buttons //
 a.button { 
 	border-image-repeat: stretch stretch;
 	border-image-slice: 2 3 3 3 fill;
@@ -106,7 +106,7 @@ a.button.disabled {
 
 //////////////
 
-// Radio and Checkboxes */
+// Radio and Checkboxes //
 input {
 	image-rendering: -moz-crisp-edges;
 	image-rendering: optimizeSpeed;
@@ -181,7 +181,7 @@ input[type=radio]:hover:checked + label {
 /*--- */
 
 
-// Light */
+// Light //
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -193,7 +193,7 @@ input[type=radio]:hover:checked + label {
 		 url("font/selawkl.woff2") format("woff2");
 }
 
-// Semilight */
+// Semilight //
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -205,7 +205,7 @@ input[type=radio]:hover:checked + label {
 		 url("font/selawksl.woff2") format("woff2");
 }
 
-// Normal */
+// Normal //
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -217,7 +217,7 @@ input[type=radio]:hover:checked + label {
 		 url("font/selawk.woff2") format("woff2");
 }
 
-// Semibold */
+// Semibold //
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -229,7 +229,7 @@ input[type=radio]:hover:checked + label {
 		 url("font/selawksb.woff2") format("woff2");
 }
 
-// Bold */
+// Bold //
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -242,7 +242,7 @@ input[type=radio]:hover:checked + label {
 }
 
 
-// Fallbacks */
+// Fallbacks //
 .no-cssgrid .gridBody { display: table; }
 
 .no-cssgrid .content { 

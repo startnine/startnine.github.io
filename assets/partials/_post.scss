@@ -1,4 +1,4 @@
-// Blog Post */
+// Blog Post //
 .gallery img { max-height: 9em; }
 
 .gallery figure { display: none; }
@@ -12,12 +12,12 @@ figure { display: block; }
 	width: 100%;
 }
 
-.postNav a {
-	display: block;
-	float: left;
-	margin: 1em 0;
-	width: 50%;
-}
-
-.postNav .next { float: right; text-align: right; }
+	.postNav a {
+		display: block;
+		float: left;
+		margin: 1em 0;
+		width: 50%;
+	}
+	
+	.postNav .next { float: right; text-align: right; }
 //////////////
