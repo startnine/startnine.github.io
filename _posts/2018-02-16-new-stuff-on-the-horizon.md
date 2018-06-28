@@ -8,12 +8,12 @@ Hello everyone,
 &emsp;&emsp;Development is going well so far. Firstly, we've decided to migrate Start9's extensibility manager to use the Managed Add-In Framework (<code>System.AddIn</code>). MAF is going to assist us with module discovery and communication, stability of the Start9 host program, and backwards-compatibility in the event of major changes to the API down the line. While not using MAF yet, preliminary work has started on a few modules:  
 
 <div class="gallery">
-<a href="https://i.imgur.com/650TMQe.png" data-size="411x536" data-med="https://i.imgur.com/650TMQe.png" data-med-size="411x546">
+<a href="https://i.imgur.com/650TMQe.png" data-size="411x536">
   <img src="https://i.imgur.com/650TMQe.png" alt="Windows 7-style Start Menu" />
   <figure>Windows 7-style Start Menu</figure>
 </a>
-<a href="https://i.imgur.com/l3PDHb1.gif" data-size="1366x768" data-med="https://i.imgur.com/l3PDHb1.gif" data-med-size="1366x768">
-  <img src="https://i.imgur.com/l3PDHb1.gif" alt="Jumpstart Menu" />
+<a href="https://i.imgur.com/l3PDHb1.gif" data-size="1366x768">
+  <img src="https://i.imgur.com/XGw9SsV.jpg" alt="Jumpstart Menu" />
   <figure>Jumpstart Menu</figure>
 </a>
 </div>  
@@ -25,12 +25,12 @@ Related to our efforts to enhancing the codebase quality, the Start9 project, as
 On another note, We've started working on a Sticky Note application, entitled Sticky9, as a proof-of-concept of the Start9 API's uses outside of just modules:  
 
 <div class="gallery">
-<a href="https://i.imgur.com/2Kjq4Wb.gif" data-size="608x416" data-med="https://i.imgur.com/2Kjq4Wb.gif" data-med-size="608x416">
-  <img src="https://i.imgur.com/2Kjq4Wb.gif" alt="Checkboxes in Sticky9" />
+<a href="https://i.imgur.com/2Kjq4Wb.gif" data-size="608x416">
+  <img src="https://i.imgur.com/B7MzYnP.jpg" alt="Checkboxes in Sticky9" />
   <figure>Checkboxes in Sticky9</figure>
 </a>
-<a href="https://i.imgur.com/J1mO8lP.gif" data-size="578x458" data-med="https://i.imgur.com/J1mO8lP.gif" data-med-size="578x458">
-  <img src="https://i.imgur.com/J1mO8lP.gif" alt="Coloures in Sticky9" />
+<a href="https://i.imgur.com/J1mO8lP.gif" data-size="578x458">
+  <img src="https://i.imgur.com/jKZWf9D.jpg" alt="Coloures in Sticky9" />
   <figure>Colures in Sticky9</figure>
 </a>
 </div>  
