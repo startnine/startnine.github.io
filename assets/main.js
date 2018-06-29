@@ -45,7 +45,10 @@ function textLarge() {
 	document.cookie = "text=large; path=/; expires=0;";
 };
 
-function darkSideOfTheMoon() { $('head').append('<link rel="stylesheet" id="dark" href="' + hostname + '/assets/dark.css" type="text/css"/>'); }
+function darkSideOfTheMoon() { 
+	$('head').append('<link rel="stylesheet" id="dark" href="' + hostname + '/assets/dark.css" type="text/css"/>'); 
+	document.cookie = "dark=best; path=/; expires=0;";
+}
 
 // Most of the important stuff
 $(document).ready(function() {
@@ -62,6 +65,7 @@ $(document).ready(function() {
 	if (document.cookie.includes('text=normal')) { textNormal(); };
 	if (document.cookie.includes('contrast=true')) { $('head').append('<link rel="stylesheet" id="contrast" href="' + hostname + '/assets/contrast.css" type="text/css"/>'); };
 	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); };
+	if (document.cookie.includes('dark=best')) { darkSideOfTheMoon(); };
 
 //  Barba.Pjax.start();    // init barbra
 	Barba.Prefetch.init(); // init barbra
