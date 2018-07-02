@@ -1,5 +1,5 @@
 // Content //
-.oneBox, .gridBody { 
+.oneBox {
 	bottom: 12rem;
 	margin: 0 10%;
 	min-height: 100%;
@@ -9,12 +9,17 @@
 }
 
 .gridBody {
+	bottom: 12rem;
+	margin: 0 10%;
+	min-height: 100%;
+	padding: 0;
+	position: relative;
+	vertical-align: top;
 	align-content: center;
 	display: grid;
 	grid-template-columns: 80% 15%;
 	grid-template-rows: 100% 100%;
 }
-
 
 .side {
 	bottom: 1em;
@@ -25,22 +30,19 @@
 	padding-left: 1rem;
 	position: relative;
 	vertical-align: top;
-}
-
-	.side .sideObject { 
+	.sideObject {
 		bottom: 2rem;
 		position: relative;
 	}
+}
 
-.sideObject { 
+.sideObject {
 	margin-bottom: 2rem;
 	padding: 0.5rem 0;
 	vertical-align: top;
+	a.button { margin-top: 0.25rem; }
+	p { margin: 0.313rem 0 0 0; }
 }
-
-	.sideObject a.button { margin-top: 0.25rem; }
-	
-	.sideObject p { margin: 0.313rem 0 0 0; }
 
 .content {
 	grid-column: 1;

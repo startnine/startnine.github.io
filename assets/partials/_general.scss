@@ -1,19 +1,23 @@
 //////////////
-a { color: #00729e; text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+	color: #00729e;
+	text-decoration: none;
+	&:hover { text-decoration: underline; }
+}
 //////////////
 
-// Remove X Overflow & Define Font*/
-html,body { 
+// Body and HTML styling
+html {
 	font-family: "Selawik", "Segoe UI", sans-serif;
 	min-height: 100%;
 	overflow-x: hidden;
 	overflow-y: visible;
 }
-//////////////
 
-// Body //
-body { 
+body {
+	min-height: 100%;
+	overflow-x: hidden;
+	overflow-y: visible;
 	background: #C8D4E7 url('img/background.svg') repeat-x top center fixed;
 	background: linear-gradient(white, #C8D4E7);
 	margin: 0;
@@ -26,24 +30,24 @@ body {
 
 .active, .github-active, .discord-active { display: block; }
 
-.invisible { 
+.invisible {
 	display: none;
 	opacity: 0;
 	visibility: hidden;
 }
 
-.q { 
+.q {
 	font-size: 110%;
 	font-weight: 600;
 	line-height: 1.5em;
 }
 
-.a { 
+.a {
 	line-height: 1.5em;
 	padding-left: 2em;
 }
 
-.disabled { 
+.disabled {
 	opacity: 0.6;
 	pointer-events: none;
 	user-select: none;
@@ -51,12 +55,15 @@ body {
 
 .customMargin { margin: -1em 0; }
 
-.code, code { font-family: monospace; font-size: 1.25em; }
+.code, code {
+	font-family: monospace;
+	font-size: 1.25em;
+}
 
 .resize { height: 25em; }
 
-.someone { 
-	background: linear-gradient(270deg,rgba(255,0,0,.2),rgba(255,255,0,.2),rgba(0,255,0,.2),rgba(0,0,255,.2));
+.someone {
+	background: linear-gradient(270deg, rgba(255, 0, 0, 0.2), rgba(255, 255, 0, 0.2), rgba(0, 255, 0, 0.2), rgba(0, 0, 255, 0.2));
 	border-radius: 4px;
 	min-width: 100%;
 }
@@ -65,10 +72,12 @@ body {
 	image-rendering: -moz-crisp-edges;
 	image-rendering: optimizeSpeed;
 }
+
 //////////////
 
 // Buttons //
-a.button { 
+
+a.button {
 	border-image-repeat: stretch stretch;
 	border-image-slice: 2 3 3 3 fill;
 	border-image-source: url("img/buttonIdle.png");
@@ -86,25 +95,93 @@ a.button {
 	user-select: none;
 	vertical-align: middle;
 	white-space: nowrap;
-}
-
-a.button:hover { 
-	border-image-source: url("img/buttonHover.png");
-	transition: all 0.125s ease;
-}
-
-a.button:active { 
-	border-image-source: url("img/buttonPressed.png");
-	box-shadow: none;
-}
-
-a.button.disabled { 
-	border-image-source: url("img/buttonDisabled.png");
-	box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
-	opacity: 1;
+	&:hover {
+		border-image-source: url("img/buttonHover.png");
+		transition: all 0.125s ease;
+	}
+	&:active {
+		border-image-source: url("img/buttonPressed.png");
+		box-shadow: none;
+	}
+	&.disabled {
+		border-image-source: url("img/buttonDisabled.png");
+		box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
+		opacity: 1;
+	}
 }
 
 //////////////
+
+// Radio and Checkboxes //
+
+input {
+	image-rendering: -moz-crisp-edges;
+	image-rendering: optimizeSpeed;
+	&[type=checkbox] {
+		display: none;
+		+ label {
+			background: url("img/checkbox.png") no-repeat center;
+			background-size: 100% 100%;
+			border-image-outset: 0 0 0 0;
+			border-image-repeat: stretch stretch;
+			border-image-slice: 1 1 1 1 fill;
+			border-image-source: url("img/checkbox.png");
+			border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
+			display: inline-block;
+			height: 1rem;
+			padding: 0;
+			transition: all 0.75s ease;
+			width: 1rem;
+		}
+		&:checked + label {
+			background: url("img/checkboxChecked.png") no-repeat center;
+			border-image-source: url("img/checkboxChecked.png");
+			transition: all 0.125s ease;
+		}
+		&:hover {
+			+ label {
+				background: url("img/checkboxHover.png") no-repeat center;
+				border-image-source: url("img/checkboxHover.png");
+			}
+			&:checked + label {
+				background: url("img/checkboxCheckedHover.png") no-repeat center;
+				border-image-source: url("img/checkboxCheckedHover.png");
+			}
+		}
+	}
+	&[type=radio] {
+		display: none;
+		+ label {
+			background: url("img/radio.png") no-repeat center;
+			background-size: 100% 100%;
+			border-image-outset: 0 0 0 0;
+			border-image-repeat: stretch stretch;
+			border-image-slice: 0 1 1 1 fill;
+			border-image-source: url("img/radio.png");
+			border-image-width: 0 0.063rem 0.063rem 0.063rem;
+			display: inline-block;
+			height: 1rem;
+			padding: 0;
+			transition: all 0.75s ease;
+			width: 1rem;
+		}
+		&:hover + label {
+			background: url("img/radioHover.png") no-repeat center;
+			border-image-source: url("img/radioHover.png");
+			transition: all 0.125s ease;
+		}
+		&:checked + label {
+			background: url("img/radioChecked.png") no-repeat center;
+			border-image-source: url("img/radioChecked.png");
+		}
+		&:hover:checked + label {
+			background: url("img/radioCheckedHover.png") no-repeat center;
+			border-image-source: url("img/radioCheckedHover.png");
+		}
+	}
+}
+
+/*--- */
 
 // Radio and Checkboxes //
 input {
@@ -180,6 +257,7 @@ input[type=radio]:hover:checked + label {
 }
 /*--- */
 
+// Fontfaces
 
 // Light //
 @font-face { 
@@ -241,18 +319,19 @@ input[type=radio]:hover:checked + label {
 		 url("font/selawkb.woff2") format("woff2");
 }
 
-
 // Fallbacks //
-.no-cssgrid .gridBody { display: table; }
-
-.no-cssgrid .content { 
-	display: table-cell;
-	width: 80%;
-}
-
-.no-cssgrid .side { 
-	display: table-cell;
-	width: 15%;
+.no-cssgrid {
+	.gridBody {
+		display: table;
+	}
+	.content {
+		display: table-cell;
+		width: 80%;
+	}
+	.side {
+		display: table-cell;
+		width: 15%;
+	}
 }
 
 //////////////

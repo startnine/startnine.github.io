@@ -1,23 +1,25 @@
 // Blog Post //
-.gallery img { max-height: 9em; }
-
-.gallery figure { display: none; }
+.gallery {
+  img { max-height: 9em; }
+  figure { display: none; }
+}
 
 figure { display: block; }
 
 .postNav {
-	display: block;
-	font-size: 0.8em;
-	overflow: hidden;
-	width: 100%;
+  display: block;
+  font-size: 0.8em;
+  overflow: hidden;
+  width: 100%;
+  a {
+    display: block;
+    float: left;
+    margin: 1em 0;
+    width: 50%;
+  }
+  .next {
+    float: right;
+    text-align: right;
+  }
 }
-
-	.postNav a {
-		display: block;
-		float: left;
-		margin: 1em 0;
-		width: 50%;
-	}
-	
-	.postNav .next { float: right; text-align: right; }
 //////////////

@@ -1,30 +1,27 @@
 // Hero //
-.bigherosix { 
+.bigherosix {
 	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(77, 136, 213, 0.75)), url("img/hero.gif") no-repeat center center fixed;
 	background-size: cover;
 	height: 100vh;
 	position: absolute;
 	top: 0;
 	width: 100vw;
-}
-
-	.bigherosix .herotitle, .bigherosix .herodesc {
+	.herotitle, .herodesc {
 		color: white;
 		font-size: 4rem;
 		margin: 0;
 		padding-left: 5vw;
 		position: absolute;
-		text-shadow: 1px 0 10px rgba(0,0,0,0.5);
+		text-shadow: 1px 0 10px rgba(0, 0, 0, 0.5);
 	}
-	
-	.bigherosix .herotitle { 
+	.herotitle {
 		font-size: 4rem;
 		top: 45vh;
 	}
-	
-	.bigherosix .herodesc { 
+	.herodesc {
 		font-size: 2rem;
 		font-weight: 300;
 		top: calc(45vh + 4.5rem);
 	}
+}
 //////////////
