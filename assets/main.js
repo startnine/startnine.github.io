@@ -60,13 +60,6 @@ $(document).ready(function() {
 	}
 	else { console.log('f a i l: your browser cannot eat cookies'); };
 
-	// apply existing appearance settings if they exist	
-	if (document.cookie.includes('text=large')) { textLarge(); };
-	if (document.cookie.includes('text=normal')) { textNormal(); };
-	if (document.cookie.includes('contrast=true')) { $('head').append('<link rel="stylesheet" id="contrast" href="' + hostname + '/assets/contrast.css" type="text/css"/>'); };
-	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); };
-	if (document.cookie.includes('dark=best')) { darkSideOfTheMoon(); };
-
 //  Barba.Pjax.start();    // init barbra
 	Barba.Prefetch.init(); // init barbra
 
@@ -133,6 +126,19 @@ $(document).ready(function() {
 			document.cookie = "contrast=true; path=/; expires=0;";
 		}
 	});
+
+	// apply existing appearance settings if they exist	
+	if (document.cookie.includes('text=large')) { textLarge(); };
+	if (document.cookie.includes('text=normal')) { textNormal(); };
+
+	if (document.cookie.includes('contrast=true')) { 
+		var clickedContrast = true;
+		$('head').append('<link rel="stylesheet" id="contrast" href="' + hostname + '/assets/contrast.css" type="text/css"/>');
+	};
+
+	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); };
+
+	if (document.cookie.includes('dark=best')) { darkSideOfTheMoon(); };
 
 	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
 	$('a.delayLink[href]').click(function(){
