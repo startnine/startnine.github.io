@@ -28,6 +28,7 @@ body { background: #fafafa; color: #000; }
 		.menuBar a.button:hover, .menuBar a.button:active { background: #4378bc; } 
 a.button { background: #26a69a; border-radius: 0.1rem;  color: #fff; } 
 	a.button:hover { background: #26a69a; -webkit-filter: brightness(120%); filter: brightness(120%); } 
+	a.button.disabled { background: gray; } 
 .bodyBG { visibility: hidden; } 
 .captionButton, .captionButton:hover { background: #fff; background: rgba(0, 0, 0, 0.2); color: white; } 
 .burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white; } 
