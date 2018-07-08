@@ -9,11 +9,11 @@ Hello everyone,
 
 <div class="gallery">
 <a href="https://i.imgur.com/650TMQe.png" data-size="411x536">
-  <img src="https://i.imgur.com/650TMQe.png" alt="Windows 7-style Start Menu" />
+  <img src="https://i.imgur.com/gOt2hgf.jpg" alt="Windows 7-style Start Menu" />
   <figure>Windows 7-style Start Menu</figure>
 </a>
 <a href="https://i.imgur.com/l3PDHb1.gif" data-size="1366x768">
-  <img src="https://i.imgur.com/XGw9SsV.jpg" alt="Jumpstart Menu" />
+  <img src="https://i.imgur.com/QnK8Ebx.jpg" alt="Jumpstart Menu" />
   <figure>Jumpstart Menu</figure>
 </a>
 </div>  
@@ -26,12 +26,12 @@ On another note, We've started working on a Sticky Note application, entitled St
 
 <div class="gallery">
 <a href="https://i.imgur.com/2Kjq4Wb.gif" data-size="608x416">
-  <img src="https://i.imgur.com/B7MzYnP.jpg" alt="Checkboxes in Sticky9" />
+  <img src="https://i.imgur.com/PcZQ0Nd.jpg" alt="Checkboxes in Sticky9" />
   <figure>Checkboxes in Sticky9</figure>
 </a>
 <a href="https://i.imgur.com/J1mO8lP.gif" data-size="578x458">
-  <img src="https://i.imgur.com/jKZWf9D.jpg" alt="Coloures in Sticky9" />
-  <figure>Colures in Sticky9</figure>
+  <img src="https://i.imgur.com/pKRyT7e.jpg" alt="Coloures in Sticky9" />
+  <figure>Coloures in Sticky9</figure>
 </a>
 </div>  
 
