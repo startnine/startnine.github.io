@@ -148,6 +148,53 @@ $(document).ready(function() {
 		}, 400);
 		return false; // And also make sure you return false from your click handler.
 	});
+
+	// scroll speeds - https://codepen.io/JTParrett/pen/BkDie
+	$.fn.moveIt = function(){
+		var $window = $(window);
+		var instances = [];
+		
+		$(this).each(function(){ instances.push(new moveItItem($(this))); });
+		
+		window.addEventListener('scroll', function(){
+			var scrollTop = $window.scrollTop();
+			instances.forEach(function(inst){
+				inst.update(scrollTop);
+			});
+		}, {passive: true});
+	}
+	
+	var moveItItem = function(el){
+		this.el = $(el);
+		this.speed = parseInt(this.el.attr('data-scroll-speed'));
+	};
+	
+	moveItItem.prototype.update = function(scrollTop){ this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)'); };
+	
+	$(function(){ $('[data-scroll-speed]').moveIt(); });
+
+	// smooth scroll - https://css-tricks.com/smooth-scrolling-accessibility/
+	$(function() {
+		$('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 500);
+					target.focus(); // Setting focus
+					if (target.is(":focus")){ // Checking if the target was focused
+						return false;
+					} else {
+						target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+						target.focus(); // Setting focus
+					};
+					return false;
+				}
+			}
+		});
+	});
 });
 
 /*
