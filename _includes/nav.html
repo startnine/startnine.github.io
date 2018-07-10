@@ -16,8 +16,8 @@
 					{% if page.target < page.target %}fadeoutright();
 					{% elsif page.target > page.target %}fadeoutleft();
 					{% else %}fadeOut(); {% endif %}
-   				" 
-   				href="{{ page.url | prepend: site.baseurl }}">
+				" 
+				href="{{ page.url | prepend: site.baseurl }}">
 					{{ page.title }}
 				</a> 
 			{% endif %}
