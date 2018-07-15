@@ -162,9 +162,7 @@ svg.captionButton {
 	position: relative;
 	top: 0.6em;
 	z-index: 50;
-	&:hover {
-		.bar1, .bar2, .bar3 { background-color: white; }
-	}
+	&:hover { .bar1, .bar2, .bar3 { background-color: white; } }
 }
 
 .bar1, .bar2, .bar3 {

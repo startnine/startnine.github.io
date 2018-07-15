@@ -1,8 +1,8 @@
-//
-//	Instructions for future me:
-//		Uncomment this CSS
-//		Make target buttons open in same tab (remove rel="noopener noreferrer" target="_blank")
-//
+/* 
+**	To enable cross-website transistions:
+**		Uncomment the import reference in style.scss
+**		Make target buttons open in same tab (remove rel="noopener noreferrer" target="_blank")
+*/
 
 @keyframes github-animational { 
 	0% 	 { height: 100vh; opacity: 0; }
@@ -47,4 +47,3 @@
 	top: 0;
 	z-index: 99999;
 }
-//////////////

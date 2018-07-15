@@ -1,4 +1,6 @@
-// Animation //
+/*
+** Animation
+*/
 @keyframes slideDown { 
 	0% { 
 		height: 3rem;
@@ -11,13 +13,11 @@
 	}
 }
 
-.slideDown {
-	animation: 0.3s slideDown ease;
-}
+.slideDown { animation: 0.3s slideDown ease }
 
 @keyframes slideUp { 
 	0% { 
-		height: 17.55rem;
+		height: 17.55rem	;
 		transform: translateY(0%);
 	}
 
@@ -58,17 +58,18 @@
 	100% { opacity: 1; }
 }
 
-@keyframes fadeOut { 
-	0%   { opacity: 1; }
-	100% { opacity: 0; }
-}
-
 .fadeIn { 
 	animation-duration: 0.3s;
 	animation-fill-mode: both;
 	animation-name: fadeIn;
 	transition-timing-function: ease-in;
 }
+
+@keyframes fadeOut { 
+	0%   { opacity: 1; }
+	100% { opacity: 0; }
+}
+
 
 .fadeOut { 
 	animation-duration: 0.3s;
@@ -109,4 +110,3 @@
 .fadeinleft { animation-name: fadeIn, slideInLeft; }
 .fadeoutright  { animation-name: fadeOut, slideOutRight; }
 .fadeoutleft { animation-name: fadeOut, slideOutLeft; }
-//////////////
