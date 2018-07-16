@@ -1,10 +1,10 @@
-//////////////
+
 a {
 	color: #00729e;
 	text-decoration: none;
 	&:hover { text-decoration: underline; }
 }
-//////////////
+
 
 // Body and HTML styling
 html {
@@ -23,7 +23,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
-//////////////
+
 
 // General Styles //
 .byline { font-style: italic; }
@@ -73,7 +73,7 @@ body {
 	image-rendering: optimizeSpeed;
 }
 
-//////////////
+
 
 // Wordmark //
 .wordmark::after {
@@ -116,7 +116,7 @@ a.button {
 	}
 }
 
-//////////////
+
 
 // Radio and Checkboxes //
 
@@ -187,7 +187,7 @@ input {
 	}
 }
 
-//////////////
+
 
 // Fontfaces
 
@@ -266,4 +266,3 @@ input {
 	}
 }
 
-//////////////
