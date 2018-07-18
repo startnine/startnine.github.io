@@ -6,7 +6,9 @@ a {
 }
 
 
-// Body and HTML styling
+/*
+** HTML and body styling
+*/
 html {
 	font-family: "Selawik", "Segoe UI", sans-serif;
 	min-height: 100%;
@@ -25,7 +27,9 @@ body {
 }
 
 
-// General Styles //
+/*
+** General
+*/
 .byline { font-style: italic; }
 
 .active, .github-active, .discord-active { display: block; }
@@ -74,15 +78,16 @@ body {
 }
 
 
-
-// Wordmark //
+/* Wordmark */
 .wordmark::after {
 	content: "Start9";
 	font-family: "Libre Franklin", "Franklin Gothic", "Arial Black", sans-serif;
 	font-weight: 900;
 }
-// Buttons //
 
+/*
+** Buttons
+*/
 a.button {
 	border-image-repeat: stretch stretch;
 	border-image-slice: 2 3 3 3 fill;
@@ -120,8 +125,9 @@ a.button {
 
 
 
-// Radio and Checkboxes //
-
+/*
+** Checkboxes and Radio
+*/
 input {
 	image-rendering: -moz-crisp-edges;
 	image-rendering: optimizeSpeed;
@@ -189,9 +195,10 @@ input {
 
 
 
-// Fontfaces
-
-// Light
+/*
+** Fontfaces
+*/
+/* Light */
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -203,7 +210,7 @@ input {
 		 url("font/selawkl.woff2") format("woff2");
 }
 
-// Semilight
+/* Semilight */
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -215,7 +222,7 @@ input {
 		 url("font/selawksl.woff2") format("woff2");
 }
 
-// Normal
+/* Normal */
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -227,7 +234,7 @@ input {
 		 url("font/selawk.woff2") format("woff2");
 }
 
-// Semibold
+/* Semibold */
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -239,7 +246,7 @@ input {
 		 url("font/selawksb.woff2") format("woff2");
 }
 
-// Bold
+/* Bold */
 @font-face { 
 	font-family: Selawik;
 	font-style: normal;
@@ -251,7 +258,9 @@ input {
 		 url("font/selawkb.woff2") format("woff2");
 }
 
-// Fallbacks //
+/*
+** Falbacks
+*/
 .no-cssgrid {
 	.gridBody {
 		display: table;

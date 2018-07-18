@@ -27,8 +27,20 @@ body { background: #fafafa; color: #000; }
 .menuBar::-webkit-scrollbar { width: 0 } 
 .headerBackground { background: #4d88d5; overflow: hidden; } 
 
+a.button {
+	background: #26a69a;
+	border-radius: 0.1rem;
+	color: #fff;
+	&:hover {
+		background: #26a69a;
+		-webkit-filter: brightness(120%);
+		filter: brightness(120%);
+	}
+	&.disabled { background: gray; }
+}
+
 .menuBar {
-	background: #2e5280 !important;
+	background: #2e5280;
 	border-radius: 0;
 	-ms-overflow-style: none;
 	overflow: -moz-scrollbars-none;
@@ -40,18 +52,6 @@ body { background: #fafafa; color: #000; }
 		&.disabled { background: none; }
 		&:hover, &:active { background: #4378bc; }
 	}
-}
-
-a.button {
-	background: #26a69a !important;
-	border-radius: 0.1rem;
-	color: #fff;
-	&:hover {
-		background: #26a69a !important;
-		-webkit-filter: brightness(120%);
-		filter: brightness(120%);
-	}
-	&.disabled { background: gray; }
 }
 
 .bodyBG { visibility: hidden; } 

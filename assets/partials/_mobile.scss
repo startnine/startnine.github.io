@@ -1,13 +1,14 @@
-// Printer Ajustments //
+/*
+** Mobile + Printer stuff
+*/
+/* Printer adjustments */
 @media print { 
 	.headerBackground, .menuBar, .headerSpace, .bodyBG, .side { display: none; } 
 	.logo, .logo p img { display: block; }
 	a { color: black; }
 }
 
-
-
-// Mobile Ajustments //
+/* Mobile Adjustments */
 @media screen and (max-width: 62.5rem) { 
 	.gridBody { margin: 0; padding: 0.5em; } 
 	.oneBox   { margin: 0; padding: 1rem;  }
