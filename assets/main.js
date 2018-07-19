@@ -202,9 +202,8 @@ $(document).ready(function() {
 			}
 		});
 	});
-});
 
-/* Cross-page animation, requires start9.menu to not be an iframe
-$('#gitbutton').click(function() { $('.github').toggleClass('active'); });
-$('#discordbutton').click(function() { $('.discord').toggleClass('active'); });
-*/
+	// Cross site transitions
+	$('#gitbutton').click(function() { $('.github').toggleClass('active'); });
+	$('#discordbutton').click(function() { $('.discord').toggleClass('active'); });
+});
