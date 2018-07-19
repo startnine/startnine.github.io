@@ -33,10 +33,10 @@ style: compressed
 }
 
 	.marketplaceFlex .flexItem { 
-		border-image-repeat: stretch stretch;
-		border-image-slice: 32 16 8 8 fill;
-		border-image-source: url("../img/module.svg");
+		border-image: url("../img/module.svg") 32 16 8 8 fill stretch;
 		border-image-width: 32px 16px 8px 8px;
+		border-style: solid;
+		border-width: 0;
 		display: inline-block;
 		height: 12.5rem;
 		margin-bottom: 2.5em;

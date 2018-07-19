@@ -43,16 +43,16 @@ function scrollup() { $('html, body').animate({scrollTop: 0}, 150); return false
 function someone() { $('body').addClass('someone'); }; // help i've fallen and i cant get up
 function textNormal() { 
 	$('html').css("font-size", "1em"); 
-	document.cookie = "text=normal; path=/; expires=0;";
+	document.cookie = "text=normal; path=/;";
 };
 function textLarge() { 
 	$('html').css("font-size", "2em"); 
-	document.cookie = "text=large; path=/; expires=0;";
+	document.cookie = "text=large; path=/;";
 };
 
 function darkSideOfTheMoon() { 
 	$('head').append('<link rel="stylesheet" id="dark" href="' + hostname + '/assets/dark.css" type="text/css"/>'); 
-	document.cookie = "dark=best; path=/; expires=0;";
+	document.cookie = "dark=best; path=/;";
 }
 
 /*
