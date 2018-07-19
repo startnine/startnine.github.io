@@ -88,6 +88,8 @@ a.button {
 	border-image-slice: 2 3 3 3 fill;
 	border-image-source: url("img/buttonIdle.png");
 	border-image-width: 2px 2px 2px 2px;
+	border-style: solid;
+	border-width: 0;
 	box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
 	color: black;
 	display: inline-block;
@@ -126,13 +128,12 @@ input {
 	&[type=checkbox] {
 		display: none;
 		+ label {
-			background: url("img/checkbox.png") no-repeat center;
 			background-size: 100% 100%;
-			border-image-outset: 0 0 0 0;
-			border-image-repeat: stretch stretch;
-			border-image-slice: 1 1 1 1 fill;
-			border-image-source: url("img/checkbox.png");
+			background: url("img/checkbox.png") no-repeat center;
+			border-image: url("img/checkbox.png") 1 1 1 1 fill stretch;
 			border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
+			border-style: solid;
+			border-width: 0;
 			display: inline-block;
 			height: 1rem;
 			padding: 0;
@@ -158,13 +159,12 @@ input {
 	&[type=radio] {
 		display: none;
 		+ label {
-			background: url("img/radio.png") no-repeat center;
 			background-size: 100% 100%;
-			border-image-outset: 0 0 0 0;
-			border-image-repeat: stretch stretch;
-			border-image-slice: 0 1 1 1 fill;
-			border-image-source: url("img/radio.png");
-			border-image-width: 0 0.063rem 0.063rem 0.063rem;
+			background: url("img/radio.png") no-repeat center;
+			border-image: url("img/radio.png") 1 1 1 1 fill stretch;
+			border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
+			border-style: solid;
+			border-width: 0;
 			display: inline-block;
 			height: 1rem;
 			padding: 0;

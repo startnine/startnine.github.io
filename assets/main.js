@@ -84,12 +84,11 @@ $(document).ready(function() {
 	Mousetrap.bind('@ s o m e o n e', function() { someone(); });
 	Mousetrap.bind('n o space u', function() { $('#buttonlist-buttonhtml, #404-buttonhtml').toggle(); });
 
-	// detect microsoft edge and apply a hotfix CSS file (edgey mode)
+	// detect microsoft edge and change font-size for code
 	var userAgent = navigator.userAgent;
 	if( userAgent.indexOf('Edge') >= 0 ) {
-		console.log('Microsoft, please fix border-image'); // no hard feelings
 		console.log('enabling edgey mode...'); 
-		$('head').append('<link rel="stylesheet" href="' + hostname + '/assets/edgey.css" type="text/css"/>');
+		$('head').append('<style>code, .code { font-size: 1em; }</style>');
 	};
 
 	// Modernizr
@@ -207,8 +206,7 @@ $(document).ready(function() {
 	});
 });
 
-/*
-// animationals WAIT FOR CNAME 
+/* Cross-page animation, requires start9.menu to not be an iframe
 $('#gitbutton').click(function() { $('.github').toggleClass('active'); });
 $('#discordbutton').click(function() { $('.discord').toggleClass('active'); });
 */
