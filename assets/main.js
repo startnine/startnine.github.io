@@ -51,7 +51,7 @@ function textLarge() {
 };
 
 function darkSideOfTheMoon() { 
-	$('head').append('<link rel="stylesheet" id="dark" href="' + hostname + '/assets/dark.css" type="text/css"/>'); 
+	$("html").addClass("dark");
 	document.cookie = "dark=best; path=/;";
 }
 
@@ -124,12 +124,12 @@ $(document).ready(function() {
 	$('.contrast').click(function() {
 		if(clickedContrast) {
 			clickedContrast = false;
-			$('#contrast').remove(); 
+			$("html").removeClass("contrast");
 			document.cookie = "contrast=false; path=/; expires=0;";
 		}
 		else {
 			clickedContrast = true;
-			$('head').append('<link rel="stylesheet" id="contrast" href="' + hostname + '/assets/contrast.css" type="text/css"/>');
+			$("html").addClass("contrast");
 			document.cookie = "contrast=true; path=/; expires=0;";
 		}
 	});
@@ -140,7 +140,7 @@ $(document).ready(function() {
 
 	if (document.cookie.includes('contrast=true')) { 
 		var clickedContrast = true;
-		$('head').append('<link rel="stylesheet" id="contrast" href="' + hostname + '/assets/contrast.css" type="text/css"/>');
+		$("html").addClass("contrast");
 	};
 
 	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); };
@@ -154,53 +154,6 @@ $(document).ready(function() {
 			window.location.href = self.attr('href'); // go to href after the slide animation completes
 		}, 400);
 		return false; // And also make sure you return false from your click handler.
-	});
-
-	// scroll speeds - https://codepen.io/JTParrett/pen/BkDie
-	$.fn.moveIt = function(){
-		var $window = $(window);
-		var instances = [];
-		
-		$(this).each(function(){ instances.push(new moveItItem($(this))); });
-		
-		window.addEventListener('scroll', function(){
-			var scrollTop = $window.scrollTop();
-			instances.forEach(function(inst){
-				inst.update(scrollTop);
-			});
-		}, {passive: true});
-	}
-	
-	var moveItItem = function(el){
-		this.el = $(el);
-		this.speed = parseInt(this.el.attr('data-scroll-speed'));
-	};
-	
-	moveItItem.prototype.update = function(scrollTop){ this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)'); };
-	
-	$(function(){ $('[data-scroll-speed]').moveIt(); });
-
-	// smooth scroll - https://css-tricks.com/smooth-scrolling-accessibility/
-	$(function() {
-		$('a[href*="#"]:not([href="#"])').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-				if (target.length) {
-					$('html, body').animate({
-						scrollTop: target.offset().top
-					}, 500);
-					target.focus(); // Setting focus
-					if (target.is(":focus")){ // Checking if the target was focused
-						return false;
-					} else {
-						target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-						target.focus(); // Setting focus
-					};
-					return false;
-				}
-			}
-		});
 	});
 
 	// Cross site transitions
