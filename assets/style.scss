@@ -2,8 +2,8 @@
 style: compressed
 ---
 
-/*
-** Start9 Website | start9.menu
+/*!
+** Start9 Website CSS | start9.menu
 ** https://github.com/StartNine/startnine.github.io
 */
 
@@ -17,8 +17,9 @@ style: compressed
 @import "partials/hero";
 @import "partials/menu";
 @import "partials/post";
-@import "partials/waves";
 
 @import "partials/dark";
 @import "partials/contrast";
 @import "partials/mobile";
+
+@import "partials/waves";
