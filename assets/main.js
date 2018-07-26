@@ -146,7 +146,7 @@ $(document).ready(function() {
 	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); };
 
 	if (document.cookie.includes('dark=best')) { darkSideOfTheMoon(); };
-
+/*
 	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
 	$('a.delayLink[href]').click(function(){
 		var self = $(this);
@@ -155,7 +155,7 @@ $(document).ready(function() {
 		}, 400);
 		return false; // And also make sure you return false from your click handler.
 	});
-
+*/
 	// Cross site transitions
 	$('#gitbutton').click(function() { $('.github').toggleClass('active'); });
 	$('#discordbutton').click(function() { $('.discord').toggleClass('active'); });

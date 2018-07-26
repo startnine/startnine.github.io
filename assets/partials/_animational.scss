@@ -4,7 +4,7 @@
 
 @keyframes github-animational { 
 	0% 	 { height: 100vh; opacity: 0; }
-	100% { height: 56px; opacity: 1; }
+	100% { height: 60px; opacity: 1; }
 }
 
 .github, .discord { 
@@ -26,7 +26,7 @@
 .github.active { 
 	animation: github-animational 0.3s ease;
 	background-color: #24292e;
-	height: 56px;
+	height: 60px;
 	top: 0;
 	z-index: 99999;
 }
