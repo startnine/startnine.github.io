@@ -1,16 +1,16 @@
 ﻿# Specific to this repo
-assets/img/original/
-*.db
 _site/
 .sass-cache/
-blog/
+*.db
+*.ignore.*
 *.jekyll-metadata
 *.sublime-project
 *.sublime-workspace
+assets/img/original/
+blog/
 Gemfile
 Gemfile.lock
 jekyll.bat
-
 
 
 ## Ignore Visual Studio temporary files, build results, and
