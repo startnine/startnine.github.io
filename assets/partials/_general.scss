@@ -1,6 +1,6 @@
-
+/* Style Links */
 a {
-	color: #00729e;
+	color: #00729E;
 	text-decoration: none;
 	&:hover { text-decoration: underline; }
 }
@@ -17,12 +17,12 @@ html {
 }
 
 body {
+//	background: #C8D4E7 url("img/background.svg") repeat-x top center fixed;
+	background: linear-gradient(white, #C8D4E7);
+	margin: 0;
 	min-height: 100%;
 	overflow-x: hidden;
 	overflow-y: visible;
-	background: #C8D4E7 url('img/background.svg') repeat-x top center fixed;
-	background: linear-gradient(white, #C8D4E7);
-	margin: 0;
 	padding: 0;
 }
 
@@ -30,7 +30,7 @@ body {
 /*
 ** General
 */
-.waves-ripple { background: rgba(255,255,255,0) !important; } 
+.waves-ripple { background: rgba(255, 255, 255, 0) !important; }
 
 .byline { font-style: italic; }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .disabled {
-	opacity: 0.6;
+	opacity: .6;
 	pointer-events: none;
 	user-select: none;
 }
@@ -69,24 +69,24 @@ body {
 .resize { height: 25em; }
 
 .someone {
-	background: linear-gradient(270deg, rgba(255, 0, 0, 0.2), rgba(255, 255, 0, 0.2), rgba(0, 255, 0, 0.2), rgba(0, 0, 255, 0.2));
+	background: linear-gradient(270deg, rgba(255, 0, 0, .2), rgba(255, 255, 0, .2), rgba(0, 255, 0, .2), rgba(0, 0, 255, .2));
 	border-radius: 4px;
 	min-width: 100%;
 }
 
 .pixelated {
-	image-rendering: -moz-crisp-edges;
 	image-rendering: optimizeSpeed;
 }
 
 
 /* Wordmark */
-.wordmark::after {
-	content: "Start9";
-	font-family: "Libre Franklin", "Franklin Gothic", "Arial Black", sans-serif;
-	font-weight: 900;
+.wordmark {
+	&::after {
+		content: "Start9";
+		font-family: "Libre Franklin", "Franklin Gothic", "Arial Black", sans-serif;
+		font-weight: 900;
+	}
 }
-
 /*
 ** Buttons
 */
@@ -97,30 +97,33 @@ a.button {
 	border-image-width: 2px 2px 2px 2px;
 	border-style: solid;
 	border-width: 0;
-	box-shadow: 0.2rem 0.2rem 0.625rem rgba(0, 0, 0, 0.5);
+	box-shadow: .2rem .2rem .625rem rgba(0, 0, 0, .5);
 	color: black;
 	display: inline-block;
-	font-size: 0.85rem;
+	font-size: .85rem;
 	height: 1.75em;
 	line-height: 1.75em;
-	padding: 0.5rem 0.65rem;
+	padding: .5rem .65rem;
 	text-align: center;
 	text-decoration: none;
-	transition: all 0.75s ease;
+	transition: all .75s ease;
 	user-select: none;
 	vertical-align: middle;
 	white-space: nowrap;
+
 	&:hover {
 		border-image-source: url("img/buttonHover.png");
-		transition: all 0.125s ease;
+		transition: all .125s ease;
 	}
+
 	&:active {
 		border-image-source: url("img/buttonPressed.png");
 		box-shadow: none;
 	}
+
 	&.disabled {
 		border-image-source: url("img/buttonDisabled.png");
-		box-shadow: 0.2rem 0.2rem 0.625em rgba(0, 0, 0, 0.5);
+		box-shadow: .2rem .2rem .625em rgba(0, 0, 0, .5);
 		opacity: 1;
 	}
 }
@@ -131,63 +134,72 @@ a.button {
 ** Checkboxes and Radio
 */
 input {
-	image-rendering: -moz-crisp-edges;
 	image-rendering: optimizeSpeed;
+
 	&[type=checkbox] {
 		display: none;
+
 		+ label {
 			background-size: 100% 100%;
 			background: url("img/checkbox.png") no-repeat center;
 			border-image: url("img/checkbox.png") 1 1 1 1 fill stretch;
-			border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
+			border-image-width: .063rem;
 			border-style: solid;
 			border-width: 0;
 			display: inline-block;
 			height: 1rem;
 			padding: 0;
-			transition: all 0.75s ease;
+			transition: all .75s ease;
 			width: 1rem;
 		}
+
 		&:checked + label {
 			background: url("img/checkboxChecked.png") no-repeat center;
 			border-image-source: url("img/checkboxChecked.png");
-			transition: all 0.125s ease;
+			transition: all .125s ease;
 		}
+
 		&:hover {
 			+ label {
 				background: url("img/checkboxHover.png") no-repeat center;
 				border-image-source: url("img/checkboxHover.png");
 			}
+
 			&:checked + label {
 				background: url("img/checkboxCheckedHover.png") no-repeat center;
 				border-image-source: url("img/checkboxCheckedHover.png");
 			}
 		}
 	}
-	&[type=radio] {
+
+	&[type="radio"] {
 		display: none;
+
 		+ label {
 			background-size: 100% 100%;
 			background: url("img/radio.png") no-repeat center;
 			border-image: url("img/radio.png") 1 1 1 1 fill stretch;
-			border-image-width: 0.063rem 0.063rem 0.063rem 0.063rem;
+			border-image-width: .063rem .063rem .063rem .063rem;
 			border-style: solid;
 			border-width: 0;
 			display: inline-block;
 			height: 1rem;
 			padding: 0;
-			transition: all 0.75s ease;
+			transition: all .75s ease;
 			width: 1rem;
 		}
+
 		&:hover + label {
 			background: url("img/radioHover.png") no-repeat center;
 			border-image-source: url("img/radioHover.png");
-			transition: all 0.125s ease;
+			transition: all .125s ease;
 		}
+
 		&:checked + label {
 			background: url("img/radioChecked.png") no-repeat center;
 			border-image-source: url("img/radioChecked.png");
 		}
+
 		&:hover:checked + label {
 			background: url("img/radioCheckedHover.png") no-repeat center;
 			border-image-source: url("img/radioCheckedHover.png");
@@ -201,60 +213,60 @@ input {
 ** Fontfaces
 */
 /* Light */
-@font-face { 
+@font-face {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 200;
 	src: url("font/selawkl.eot?dumbie") format("embedded-opentype"),
-		 local('Selawik Light'),
+		 local("Selawik Light"),
 		 url("font/selawkl.ttf") format("truetype"),
 		 url("font/selawkl.woff") format("woff"),
 		 url("font/selawkl.woff2") format("woff2");
 }
 
 /* Semilight */
-@font-face { 
+@font-face {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 300;
 	src: url("font/selawksl.eot?dumbie") format("embedded-opentype"),
-		 local('Selawik Semilight'),
+		 local("Selawik Semilight"),
 		 url("font/selawksl.ttf") format("truetype"),
 		 url("font/selawksl.woff") format("woff"),
 		 url("font/selawksl.woff2") format("woff2");
 }
 
 /* Normal */
-@font-face { 
+@font-face {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 400;
 	src: url("font/selawk.eot?dumbie") format("embedded-opentype"),
-		 local('Selawik'),
+		 local("Selawik"),
 		 url("font/selawk.ttf") format("truetype"),
 		 url("font/selawk.woff") format("woff"),
 		 url("font/selawk.woff2") format("woff2");
 }
 
 /* Semibold */
-@font-face { 
+@font-face {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 600;
 	src: url("font/selawksb.eot?dumbie") format("embedded-opentype"),
-		 local('Selawik Semibold'),
+		 local("Selawik Semibold"),
 		 url("font/selawksb.ttf") format("truetype"),
 		 url("font/selawksb.woff") format("woff"),
 		 url("font/selawksb.woff2") format("woff2");
 }
 
 /* Bold */
-@font-face { 
+@font-face {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 700;
 	src: url("font/selawkb.eot?dumbie") format("embedded-opentype"),
-		 local('Selawik Bold'),
+		 local("Selawik Bold"),
 		 url("font/selawkb.ttf") format("truetype"),
 		 url("font/selawkb.woff") format("woff"),
 		 url("font/selawkb.woff2") format("woff2");
@@ -267,10 +279,12 @@ input {
 	.gridBody {
 		display: table;
 	}
+
 	.content {
 		display: table-cell;
 		width: 80%;
 	}
+
 	.side {
 		display: table-cell;
 		width: 15%;
