@@ -1,9 +1,0 @@
-severity: error
-
-linters:
-	Indentation:
-		enabled: true
-		character: tab
-	StringQuotes:
-		enabled: true
-		style: double_quotes

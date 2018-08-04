@@ -1,0 +1,18 @@
+rules:
+  indentation:
+    - 0
+    - size: tab
+  quotes:
+    - 1
+    - style: double
+  no-css-comments: 
+    - 0
+  hex-notation: 
+    - 1
+    - style: uppercase
+  no-color-literals:
+    - 0
+  single-line-per-selector:
+    - 0
+  no-color-keywords:
+    - 0
