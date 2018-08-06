@@ -1,28 +1,38 @@
 ---
 style: compressed
 ---
-// Marketplace //
-.marketplace .backgroundicon { 
-	bottom: 10em;
-	max-height: 10rem;
-	opacity: 0.25;
-	position: relative;
+/*
+** Marketplace
+*/
+
+.marketplace {
+	.backgroundicon {
+		bottom: 10em;
+		max-height: 10rem;
+		opacity: .25;
+		position: relative;
+	}
+
+	.byline {
+		position: relative;
+		top: 0;
+	}
 }
 
-.marketplace-title { 
+.marketplace-title {
 	bottom: 5em;
 	color: black;
 	font-size: 4rem;
-	line-height: 10rem; 
+	line-height: 10rem;
 	margin: 0;
 	padding-left: 1.5em;
 	position: relative;
-	text-shadow: 1px 0 10px rgba(0,0,0,0.5);
+	text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
 	width: 100%;
 	z-index: 100;
 }
 
-.marketplace-flex { 
+.marketplace-flex {
 	align-self: center;
 	bottom: 20rem;
 	display: flex;
@@ -30,15 +40,14 @@ style: compressed
 	justify-content: center;
 	position: relative;
 	right: 2em;
-}
 
-	.marketplace-flex .flex-item { 
+	.flex-item {
 		border-image: url("../img/module.svg") 32 16 8 8 fill stretch;
 		border-image-width: 32px 16px 8px 8px;
 		border-style: solid;
 		border-width: 0;
 		display: inline-block;
-		filter: drop-shadow(0px 0px 30px rgba(0,0,0,0.52));
+		filter: drop-shadow(0 0 30px rgba(0, 0, 0, .52));
 		height: 12.5rem;
 		margin-bottom: 2.5em;
 		margin-left: 2em;
@@ -47,14 +56,14 @@ style: compressed
 		transform-style: preserve-3d;
 		width: 20rem;
 		will-change: transform;
-			&:active { 
-				filter: initial;
-				transform: scale3d(0.9, 0.9, 0.9) !important;
-				transition: all 0.3s ease;
-			}
-	}
-			
-		 .marketplace-flex .flex-item p { 
+
+		&:active {
+			filter: initial;
+			transform: scale3d(.9, .9, .9) !important;
+			transition: all .3s ease;
+		}
+
+		p {
 			bottom: 1em;
 			left: 1.75em;
 			line-height: 1.1em;
@@ -65,26 +74,26 @@ style: compressed
 			transform: translateZ(20px);
 			word-wrap: break-word;
 		}
-		
-		.marketplace-flex .flex-item .header { 
-			color: black; 
+
+		.header {
+			color: black;
 			height: 1.1em;
-			left: 0.5em; 
+			left: .5em;
 			overflow: hidden;
 			position: relative;
-			top: 0.25em;
+			top: .25em;
 			transform: translateZ(10px);
 			width: 8.5em;
 		}
 
-.marketplace-flex .flex-item .module-icon { 
-	float: left;
-	height: 4.5em;
-	left: 1em;
-	max-width: 4.5em;
-	position: relative;
-	transform: perspective(100px) rotateY(8deg) translateZ(10px);
-	will-change: transform;
+		.module-icon {
+			float: left;
+			height: 4.5em;
+			left: 1em;
+			max-width: 4.5em;
+			position: relative;
+			transform: perspective(100px) rotateY(8deg) translateZ(10px);
+			will-change: transform;
+		}
+	}
 }
-
-.marketplace .byline { position: relative; top: 0; }

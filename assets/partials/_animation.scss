@@ -13,7 +13,7 @@
 	}
 }
 
-.slide-down { animation: 0.3s slide-down ease }
+.slide-down { animation: .3s slide-down ease; }
 
 @keyframes slide-up {
 	0% {
@@ -86,8 +86,7 @@
 
 @keyframes slideOutLeft {
 	0%   { transform: translateX(0); }
-	100% { transform: translateX(-7em);
-	}
+	100% { transform: translateX(-7em); }
 }
 
 @keyframes slideInRight {

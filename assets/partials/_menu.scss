@@ -147,7 +147,7 @@ svg.caption-button {
 			transition: all .125s ease;
 		}
 
-		&:active { border-image-source: url("img/menu-bar-button_pressed.png") }
+		&:active { border-image-source: url("img/menu-bar-button_pressed.png"); }
 
 		&.disabled {
 			border-image-source: url("img/menu-bar-button.png");
