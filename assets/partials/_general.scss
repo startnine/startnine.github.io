@@ -1,11 +1,3 @@
-/* Style Links */
-a {
-	color: #00729E;
-	text-decoration: none;
-	&:hover { text-decoration: underline; }
-}
-
-
 /*
 ** HTML and body styling
 */
@@ -30,7 +22,9 @@ body {
 /*
 ** General
 */
+// sass-lint:disable no-important
 .waves-ripple { background: rgba(255, 255, 255, 0) !important; }
+// sass-lint:enable no-important
 
 .byline { font-style: italic; }
 
@@ -87,47 +81,56 @@ body {
 		font-weight: 900;
 	}
 }
+
 /*
 ** Buttons
 */
-a.button {
-	border-image-repeat: stretch stretch;
-	border-image-slice: 2 3 3 3 fill;
-	border-image-source: url("img/buttonIdle.png");
-	border-image-width: 2px 2px 2px 2px;
-	border-style: solid;
-	border-width: 0;
-	box-shadow: .2rem .2rem .625rem rgba(0, 0, 0, .5);
-	color: black;
-	display: inline-block;
-	font-size: .85rem;
-	height: 1.75em;
-	line-height: 1.75em;
-	padding: .5rem .65rem;
-	text-align: center;
+a {
+	color: #00729E;
 	text-decoration: none;
-	transition: all .75s ease;
-	user-select: none;
-	vertical-align: middle;
-	white-space: nowrap;
 
 	&:hover {
-		border-image-source: url("img/buttonHover.png");
-		transition: all .125s ease;
+		text-decoration: underline;
 	}
 
-	&:active {
-		border-image-source: url("img/buttonPressed.png");
-		box-shadow: none;
-	}
+	&.button {
+		border-image-repeat: stretch stretch;
+		border-image-slice: 2 3 3 3 fill;
+		border-image-source: url("img/buttonIdle.png");
+		border-image-width: 2px 2px 2px 2px;
+		border-style: solid;
+		border-width: 0;
+		box-shadow: .2rem .2rem .625rem rgba(0, 0, 0, .5);
+		color: black;
+		display: inline-block;
+		font-size: .85rem;
+		height: 1.75em;
+		line-height: 1.75em;
+		padding: .5rem .65rem;
+		text-align: center;
+		text-decoration: none;
+		transition: border-image-source .75s ease, box-shadow .75s ease;
+		user-select: none;
+		vertical-align: middle;
+		white-space: nowrap;
 
-	&.disabled {
-		border-image-source: url("img/buttonDisabled.png");
-		box-shadow: .2rem .2rem .625em rgba(0, 0, 0, .5);
-		opacity: 1;
+		&:hover {
+			border-image-source: url("img/buttonHover.png");
+			transition: border-image-source .125s ease, box-shadow .125s ease;
+		}
+
+		&:active {
+			border-image-source: url("img/buttonPressed.png");
+			box-shadow: none;
+		}
+
+		&.disabled {
+			border-image-source: url("img/buttonDisabled.png");
+			box-shadow: .2rem .2rem .625em rgba(0, 0, 0, .5);
+			opacity: 1;
+		}
 	}
 }
-
 
 
 /*
@@ -136,7 +139,7 @@ a.button {
 input {
 	image-rendering: optimizeSpeed;
 
-	&[type=checkbox] {
+	&[type="checkbox"] {
 		display: none;
 
 		+ label {
@@ -149,14 +152,14 @@ input {
 			display: inline-block;
 			height: 1rem;
 			padding: 0;
-			transition: all .75s ease;
+			transition: border-image-source .75s ease;
 			width: 1rem;
 		}
 
 		&:checked + label {
 			background: url("img/checkboxChecked.png") no-repeat center;
 			border-image-source: url("img/checkboxChecked.png");
-			transition: all .125s ease;
+			transition: border-image-source .125s ease;
 		}
 
 		&:hover {
@@ -185,14 +188,19 @@ input {
 			display: inline-block;
 			height: 1rem;
 			padding: 0;
-			transition: all .75s ease;
+			transition: border-image-source .75s ease;
 			width: 1rem;
 		}
 
 		&:hover + label {
 			background: url("img/radioHover.png") no-repeat center;
 			border-image-source: url("img/radioHover.png");
-			transition: all .125s ease;
+			transition: border-image-source .125s ease;
+
+				&:checked+label {
+					background: url("img/radioCheckedHover.png") no-repeat center;
+					border-image-source: url("img/radioCheckedHover.png");
+				}
 		}
 
 		&:checked + label {
@@ -200,10 +208,6 @@ input {
 			border-image-source: url("img/radioChecked.png");
 		}
 
-		&:hover:checked + label {
-			background: url("img/radioCheckedHover.png") no-repeat center;
-			border-image-source: url("img/radioCheckedHover.png");
-		}
 	}
 }
 

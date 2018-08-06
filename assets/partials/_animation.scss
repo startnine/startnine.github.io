@@ -27,58 +27,58 @@
 	}
 }
 
-.slide-up { animation: 0.3s slide-up ease; }
+.slide-up { animation: .3s slide-up ease; }
 
 @keyframes menu-focus-in {
 	0%   { opacity: 0; }
-	100% { opacity: 0.7; }
+	100% { opacity: .7; }
 }
 
 .menu-focus-in {
-	animation-duration: 0.3s;
+	animation-duration: .3s;
 	animation-fill-mode: both;
 	animation-name: menu-focus-in;
 	transition-timing-function: ease-in;
 }
 
-@keyframes menu-focus-out { 
-	0%   { opacity: 0.7; }
+@keyframes menu-focus-out {
+	0%   { opacity: .7; }
 	100% { opacity: 0; }
 }
 
 .menu-focus-out {
-	animation-duration: 0.3s;
+	animation-duration: .3s;
 	animation-fill-mode: both;
 	animation-name: menu-focus-out;
 	transition-timing-function: ease-in;
 }
 
-@keyframes fade-in { 
+@keyframes fade-in {
 	0%   { opacity: 0; }
 	100% { opacity: 1; }
 }
 
-.fade-in { 
-	animation-duration: 0.3s;
+.fade-in {
+	animation-duration: .3s;
 	animation-fill-mode: both;
 	animation-name: fade-in;
 	transition-timing-function: ease-in;
 }
 
-@keyframes fade-out { 
+@keyframes fade-out {
 	0%   { opacity: 1; }
 	100% { opacity: 0; }
 }
 
 
-.fade-out { 
-	animation-duration: 0.3s;
+.fade-out {
+	animation-duration: .3s;
 	animation-fill-mode: both;
 	animation-name: fade-out;
 	transition-timing-function: ease-in;
 }
 
-@keyframes slideInLeft { 
+@keyframes slideInLeft {
 	0%   { transform: translateX(-7em); }
 	100% { transform: translateX(0); }
 }
@@ -100,7 +100,7 @@
 }
 
 .fade-out-right, .fade-out-left, .fade-in-left, .fade-in-right {
-	animation-duration: 0.3s;
+	animation-duration: .3s;
 	animation-fill-mode: both;
 	transition-timing-function: ease-in;
 }

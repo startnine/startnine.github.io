@@ -1,18 +1,20 @@
 /*
 ** Dark Theme
 */
+// sass-lint:disable no-important
+
 .dark {
 	.menu-bar, .menu-bar a.button,  .menu-bar a.button:hover,
 	.menu-bar a.button:active,  .menu-bar a.button.disabled,
 	a.button,  a.button:hover,  a.button:active, .caption-button,
-	input[type=checkbox] + label,  input[type=radio] + label {
+	input[type="checkbox"] + label,  input[type="radio"] + label {
 		background: initial;
 		border: initial;
 		border-image: none;
 	 }
 
 	body {
-		background: #303030 linear-gradient(#303030 1%, #212121 50%, #000000 100%);
+		background: #303030 linear-gradient(#303030 1%, #212121 50%, black 100%);
 		color: white;
 	}
 
@@ -26,7 +28,7 @@
 	.title, .logo .text { opacity: 1; }
 
 	.header-background {
-		background: #000000;
+		background: black;
 		overflow: hidden;
 	}
 
@@ -65,9 +67,7 @@
 		}
 	}
 
-	.waves-ripple {
-		background: rgba(255, 255, 255, .2) !important;
-	}
+	.waves-ripple { background: rgba(255, 255, 255, .2) !important; }
 
 	@media screen and (max-width: 37.5rem) { .header-background, .menu-bar { overflow: initial; } }
 }

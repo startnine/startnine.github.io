@@ -11,16 +11,16 @@
 }
 
 .grid-body {
+	align-content: center;
 	bottom: 12rem;
+	display: grid;
+	grid-template-columns: 80% 15%;
+	grid-template-rows: 100% 100%;
 	margin: 0 10%;
 	min-height: 100%;
 	padding: 0;
 	position: relative;
 	vertical-align: top;
-	align-content: center;
-	display: grid;
-	grid-template-columns: 80% 15%;
-	grid-template-rows: 100% 100%;
 }
 
 .side {
@@ -32,6 +32,7 @@
 	padding-left: 1rem;
 	position: relative;
 	vertical-align: top;
+
 	.sidebar-object {
 		bottom: 2rem;
 		position: relative;
@@ -43,7 +44,7 @@
 	padding: .5rem 0;
 	vertical-align: top;
 	a.button { margin-top: .25rem; }
-	p { margin: .313rem 0 0 0; }
+	p { margin: .313rem 0 0; }
 }
 
 .content {

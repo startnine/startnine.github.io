@@ -1,6 +1,8 @@
 /*
 ** Contrast
 */
+// sass-lint:disable no-important
+
 .contrast {
 
 	.menu-bar, .menu-bar a.button,  .menu-bar a.button:hover,
@@ -11,15 +13,26 @@
 		border: initial;
 		border-image: none;
 	}
-	
-	body { background: #FAFAFA; color: black; }
+
+	body {
+		background: #FAFAFA;
+		color: black;
+	}
+
+	.waves-ripple {
+		background: rgba(255, 255, 255, .2) !important;
+	}
+
+	.header-background {
+		background: #4D88D5;
+		overflow: hidden;
+	}
+
 	.bar1, .bar2, .bar3, .change .bar1, .change .bar2, .change .bar3 { box-shadow: initial; }
-	.waves-ripple { background: white !important; background: rgba(255,255,255,.2) !important; }
-	.header-background { background: #4D88D5; overflow: hidden; }
 
 	a.button {
 		background: #26A69A;
-		border-radius: 0.1rem;
+		border-radius: .1rem;
 		color: white;
 
 		&:hover {
@@ -43,10 +56,19 @@
 			&:hover, &:active { background: #4378BC; }
 		}
 	}
-	
+
 	.aurora-panel { visibility: hidden; }
-	.caption-button, .caption-button:hover { background: white; background: rgba(0, 0, 0, 0.2); color: white; }
+
+	.caption-button, .caption-button:hover {
+		background: white;
+		background: rgba(0, 0, 0, .2);
+		color: white;
+	}
+
 	.burger-button .bar1, .burger-button .bar2, .burger-button .bar3 { background-color: white; }
+
 	.menu-focus.active { background: black; }
-	@media screen and (max-width: 37.5rem) { .header-background, .menu-bar { overflow: initial; } }
-}
+
+	@media screen and (max-width: 37.5rem) {
+		.header-background, .menu-bar { overflow: initial; } }
+	}

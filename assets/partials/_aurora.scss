@@ -83,4 +83,7 @@
 	100% { transform: translate(12.5rem, 0) scaleX(1.15); }
 }
 
-.right2 { animation: animationRight2 linear 30s alternate; left: 10vw; }
+.right2 {
+	animation: animationRight2 linear 30s alternate;
+	left: 10vw;
+}
