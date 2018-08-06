@@ -2,35 +2,39 @@
 ** Contrast
 */
 .contrast {
-	.menuBar, .menuBar a.button,  .menuBar a.button:hover, 
-	.menuBar a.button:active,  .menuBar a.button.disabled, 
+
+	.menuBar, .menuBar a.button,  .menuBar a.button:hover,
+	.menuBar a.button:active,  .menuBar a.button.disabled,
 	a.button,  a.button:hover,  a.button:active, .captionButton,
 	input[type="checkbox"] + label,  input[type="radio"] + label {
-		background: initial;	
+		background: initial;
 		border: initial;
 		border-image: none;
-	 } 
+	}
 	
-	body { background: #fafafa; color: #000; } 
-	.bar1, .bar2, .bar3, .change .bar1, .change .bar2, .change .bar3 { box-shadow: initial; } 
-	.waves-ripple { background: #fff !important; background: rgba(255,255,255,.2) !important; } 
-	.headerBackground { background: #4d88d5; overflow: hidden; } 
-	
+	body { background: #FAFAFA; color: #000; }
+	.bar1, .bar2, .bar3, .change .bar1, .change .bar2, .change .bar3 { box-shadow: initial; }
+	.waves-ripple { background: #fff !important; background: rgba(255,255,255,.2) !important; }
+	.headerBackground { background: #4d88d5; overflow: hidden; }
+
 	a.button {
 		background: #26a69a;
 		border-radius: 0.1rem;
 		color: #fff;
+
 		&:hover {
 			background: #26a69a;
 			filter: brightness(120%);
 		}
+
 		&.disabled { background: gray; }
 	}
-	
+
 	.menuBar {
 		background: #2e5280;
 		border-radius: 0;
 		overflow: hidden;
+
 		a.button {
 			background: #4378bc;
 			border-radius: 0;
@@ -40,9 +44,9 @@
 		}
 	}
 	
-	.bodyBG { visibility: hidden; } 
-	.captionButton, .captionButton:hover { background: #fff; background: rgba(0, 0, 0, 0.2); color: white; } 
-	.burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white; } 
-	.menuFocus.active { background: black; } 
-	@media screen and (max-width: 37.5rem) { .headerBackground, .menuBar { overflow: initial; } } 
+	.aurora-panel { visibility: hidden; }
+	.captionButton, .captionButton:hover { background: #fff; background: rgba(0, 0, 0, 0.2); color: white; }
+	.burgerButton .bar1, .burgerButton .bar2, .burgerButton .bar3 { background-color: white; }
+	.menuFocus.active { background: black; }
+	@media screen and (max-width: 37.5rem) { .headerBackground, .menuBar { overflow: initial; } }
 }

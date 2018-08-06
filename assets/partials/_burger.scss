@@ -7,7 +7,7 @@
 	display: inline-block;
 	left: 1.5rem;
 	position: relative;
-	top: 0.6em;
+	top: .6em;
 	z-index: 9999;
 	&:hover {
 		.bar1, .bar2, .bar3 { background-color: white; }
@@ -17,21 +17,21 @@
 .bar1, .bar2, .bar3 {
 	background-color: #8cb5f7;
 	border-radius: 1em;
-	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.75));
-	height: 0.125rem;
-	margin: 0.313rem 0;
-	transition: 0.3s;
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .75));
+	height: .125rem;
+	margin: .313rem 0;
+	transition: .3s;
 	width: 1.5em;
 }
 
 .change {
 	.bar1 {
-		filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-		transform: rotate(-45deg) translate(-0.375rem, 0.25rem);
+		filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+		transform: rotate(-45deg) translate(-.375rem, .25rem);
 	}
 	.bar2 { opacity: 0; }
 	.bar3 {
-		filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-		transform: rotate(45deg) translate(-0.375rem, -0.25rem);
+		filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+		transform: rotate(45deg) translate(-.375rem, -.25rem);
 	}
 }

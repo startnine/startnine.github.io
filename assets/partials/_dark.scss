@@ -2,23 +2,23 @@
 ** Dark Theme
 */
 .dark {
-	.menuBar, .menuBar a.button,  .menuBar a.button:hover, 
-	.menuBar a.button:active,  .menuBar a.button.disabled, 
+	.menuBar, .menuBar a.button,  .menuBar a.button:hover,
+	.menuBar a.button:active,  .menuBar a.button.disabled,
 	a.button,  a.button:hover,  a.button:active, .captionButton,
-	input[type=checkbox] + label,  input[type=radio] + label { 
-		background: initial;	
+	input[type=checkbox] + label,  input[type=radio] + label {
+		background: initial;
 		border: initial;
 		border-image: none;
 	 }
-	
+
 	body {
 		background: #303030 linear-gradient(#303030 1%, #212121 50%, #000000 100%);
 		color: white;
 	}
 
-	p, li { opacity: 0.8; }
+	p, li { opacity: .8; }
 	.bar1, .bar2, .bar3 { box-shadow: initial; }
-	.bodyBG img { filter: grayscale(100%); }
+	.aurora-panel img { filter: grayscale(100%); }
 	.burgerButton { .bar1, .bar2, .bar3 { background-color: white; } }
 	.change { .bar1, .bar2, .bar3 { box-shadow: initial; } }
 	.logo .image { filter: grayscale(100%); }
@@ -34,6 +34,7 @@
 		overflow: hidden;
 		background: #212121;
 		border-radius: 0;
+
 		a.button {
 			background: #424242;
 			border-radius: 0;
@@ -42,32 +43,34 @@
 			&:hover, &:active { background: #424242; }
 		}
 	}
-	
+
 	a.button {
 		background: #424242;
-		border-radius: 0.1rem;
+		border-radius: .1rem;
 		color: #fff;
+
 		&:hover {
 			background: #424242;
 			filter: brightness(120%);
 		}
 	}
-	
+
 	.captionButton {
 		background: #000;
-		background: rgba(0, 0, 0, 0.2);
+		background: rgba(0, 0, 0, .2);
 		color: white;
+
 		&:hover {
 			background: #000;
-			background: rgba(0, 0, 0, 0.2);
+			background: rgba(0, 0, 0, .2);
 			color: white;
 		}
 	}
 
 	.waves-ripple {
 		background: #fff !important;
-		background: rgba(255, 255, 255, 0.2) !important;
+		background: rgba(255, 255, 255, .2) !important;
 	}
-	
+
 	@media screen and (max-width: 37.5rem) { .headerBackground, .menuBar { overflow: initial; } }
 }

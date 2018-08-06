@@ -2,7 +2,7 @@
 ** Hero
 */
 .bigherosix {
-	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(77, 136, 213, 0.75)), url("img/hero.gif") no-repeat center center fixed;
+	background: linear-gradient(rgba(0, 0, 0, .45), rgba(77, 136, 213, .75)), url("img/hero.gif") no-repeat center center fixed;
 	background-size: cover;
 	height: 95vh;
 	margin-bottom: 11rem;
@@ -11,69 +11,83 @@
 	top: 0;
 	width: 100vw;
 	z-index: 70;
+
 	.thisisnotagoodclassnamebutiamusingitanyway {
 		margin: 30vh 5vw 0 5vw;
 		position: absolute;
 		width: 100vw;
 	}
+
 	.herotitle, .herodesc {
 		color: white;
-		font-size: 4rem;	
+		font-size: 4rem;
 		margin: 0;
 		padding: 0;
-		text-shadow: 1px 0 10px rgba(0, 0, 0, 0.5);
+		text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
 		width: 100vw;
 	}
+
 	.herotitle { font-size: 4rem; }
+
 	.herodesc {
 		font-size: 2rem;
 		font-weight: 300;
 	}
-//	.arrow {
-//		border-color: white;
-//		border-style: solid;
-//		border-width: 0px 4px 4px 0px;
-//		bottom: 10vh;
-//		box-sizing: border-box;
-//		filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
-//		height: 2em;
-//		left: calc(50vw - 1em);
-//		opacity: 0.75;
-//		position: absolute;
-//		transform: rotate(45deg);
-//		transition: all 0.125s ease;
-//		width: 2em;
-//			&:hover { opacity: 1; }
-//			&:active { opacity: 0.3; }
-//	}
+
+//  .arrow {
+//      border-color: white;
+//      border-style: solid;
+//      border-width: 0px 4px 4px 0px;
+//      bottom: 10vh;
+//      box-sizing: border-box;
+//      filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+//      height: 2em;
+//      left: calc(50vw - 1em);
+//      opacity: 0.75;
+//      position: absolute;
+//      transform: rotate(45deg);
+//      transition: all 0.125s ease;
+//      width: 2em;
+//
+//          &:hover { opacity: 1; }
+//
+//          &:active { opacity: 0.3; }
+//  }
+
 	.heronav {
-		background: rgba(0,0,0,0.5);
+		background: rgba(0, 0, 0, .5);
 		height: 3rem;
 		user-select: none;
 		width: 100vw;
+
 		.heroitem {
-			bottom: 0.25em;
+			bottom: .25em;
 			color: white;
 			display: inline-block;
-			filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+			filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .5));
 			line-height: 3rem;
 			margin-left: 2em;
 			position: relative;
 			text-decoration: none;
-			transition: all 0.3s ease;
-			&:hover { opacity: 0.75; }
-			&:active { opacity: 0.3; }
+			transition: all .3s ease;
+
+				&:hover { opacity: .75; }
+
+				&:active { opacity: .3; }
+
 		}
+
 		.accessibilityMenu {
-			bottom: 0.2em;
+			bottom: .2em;
 			line-height: 3rem;
 			margin-right: 1em;
 		}
+
 		.wordmark {
 			bottom: 0;
 			font-size: 1.5em;
 			line-height: 3rem;
-			margin-left: 0.5em;
+			margin-left: .5em;
 		}
 	}
 }

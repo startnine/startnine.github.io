@@ -1,7 +1,7 @@
 /*
 ** Aurora Panel 
 */
-.aurora { 
+.aurora {
 	height: 15em;
 	left: 5vw;
 	overflow-x: hidden;
@@ -11,7 +11,7 @@
 	width: 100vw;
 }
 
-.bodyBG {
+.aurora-panel {
 	height: 10em;
 	position: relative;
 	text-align: center;
@@ -22,12 +22,12 @@
 		.right { background: url("img/aurora3b.png") no-repeat; }
 }
 
-.bodyBG .left, .bodyBG .left2, .bodyBG .right { 
+.aurora-panel .left, .aurora-panel .left2, .aurora-panel .right {
 	animation-iteration-count: infinite;
-	background-size: 100% 100%;	
+	background-size: 100% 100%;
 }
 
-.someone .bodyBG .left, .someone .bodyBG .left2, .someone .bodyBG .right { filter: brightness(150%); }
+.someone .aurora-panel .left, .someone .aurora-panel .left2, .someone .aurora-panel .right { filter: brightness(150%); }
 
 /* Logo + Wordmark */
 .logo {
@@ -39,7 +39,7 @@
 
 	.image {
 		height: 1.5em;
-		margin-right: 0.1em;
+		margin-right: .1em;
 		vertical-align: middle;
 		width: 1em;
 	}
@@ -48,22 +48,22 @@
 		font-size: 3em;
 		font-weight: 600;
 		line-height: 2em;
-		margin-bottom: 0.95em;
-		text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+		margin-bottom: .95em;
+		text-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
 		vertical-align: middle;
 	}
 }
 
 
 /* Required Animation */
-@keyframes animationLeft { 
+@keyframes animationLeft {
 	0%   { transform: translate(0, 0) scaleX(1); }
 	100% { transform: translate(-12.5rem, 0) scaleX(1.25); }
 }
 
 .left { animation: animationLeft linear 15s alternate; }
 
-@keyframes animationLeft2 { 
+@keyframes animationLeft2 {
 	0%   { transform: translate(0, 0) scaleX(1); }
 	100% { transform: translate(-12.5rem, 0) scaleX(1.8); }
 }
@@ -71,14 +71,14 @@
 .left2 { animation: animationLeft2 linear 35s alternate; }
 
 
-@keyframes animationRight { 
-	0%   { transform: translate(0, 0) scaleX(1.00); }
+@keyframes animationRight {
+	0%   { transform: translate(0, 0) scaleX(1); }
 	100% { transform: translate(12.5rem, 0) scaleX(1.25); }
 }
 
 .right { animation: animationRight linear 10s alternate; }
 
-@keyframes animationRight2 { 
+@keyframes animationRight2 {
 	0%   { transform: translate(0, 0) scaleX(1); }
 	100% { transform: translate(12.5rem, 0) scaleX(1.15); }
 }
