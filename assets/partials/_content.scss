@@ -1,7 +1,7 @@
 /*
 ** Content
 */
-.oneBox {
+.one-box {
 	bottom: 12rem;
 	margin: 0 10%;
 	min-height: 100%;
@@ -10,7 +10,7 @@
 	vertical-align: top;
 }
 
-.gridBody {
+.grid-body {
 	bottom: 12rem;
 	margin: 0 10%;
 	min-height: 100%;
@@ -32,13 +32,13 @@
 	padding-left: 1rem;
 	position: relative;
 	vertical-align: top;
-	.sideObject {
+	.sidebar-object {
 		bottom: 2rem;
 		position: relative;
 	}
 }
 
-.sideObject {
+.sidebar-object {
 	margin-bottom: 2rem;
 	padding: .5rem 0;
 	vertical-align: top;

@@ -35,11 +35,11 @@ var hostname = window.location.origin;
 ** Common Functions (well not really common but)
 */
 function burgerButton(x) { x.classList.toggle('change'); };
-function menuFocus() { document.querySelector('.burgerButton').click(); };
-function fadeoutright() { $('main').removeClass('fadeinleft fadeinright').addClass('fadeoutright'); };
-function fadeoutleft() { $('main').removeClass('fadeinleft fadeinright').addClass('fadeoutleft'); };
-function fadeOut() { $('main').removeClass('fadeinleft fadeinright').addClass('fadeOut'); };
-function scrollup() { $('html, body').animate({scrollTop: 0}, 150); return false; };
+function menuFocus() { document.querySelector('.burger-button').click(); };
+function fadeOutRight() { $('main').removeClass('fade-in-left fade-in-right').addClass('fade-out-right'); };
+function fadeOutLeft() { $('main').removeClass('fade-in-left fade-in-right').addClass('fade-out-left'); };
+function fadeOut() { $('main').removeClass('fade-in-left fade-in-ight').addClass('fade-out'); };
+function scrollUp() { $('html, body').animate({scrollTop: 0}, 150); return false; };
 function someone() { $('body').addClass('someone'); }; // help i've fallen and i cant get up
 function textNormal() { 
 	$('html').css("font-size", "1em"); 
@@ -61,8 +61,8 @@ function darkSideOfTheMoon() {
 $(document).ready(function() {
 	/* Add accessbility controls */
 	if (navigator.cookieEnabled) {
-		$('.titleText').css('left', '2.8rem');
-		$('.title').append('<span class=\"accessibilityMenu\"><a class=\"captionButton textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"captionButton textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"captionButton contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>');
+		$('.title-text').css('left', '2.8rem');
+		$('.title').append('<span class=\"accessibility-menu\"><a class=\"caption-button textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"caption-button textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"caption-button contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>');
 		console.log('s u c c e s s: your browser can eat cookies');
 	}
 	else { console.log('f a i l: your browser cannot eat cookies'); };
@@ -102,20 +102,20 @@ $(document).ready(function() {
 
 	/* Hamburger toggle */
 	var clickedBurger = false;
-	$('.burgerButton').click(function() {
+	$('.burger-button').click(function() {
 		if(clickedBurger) {
 			clickedBurger = false;
-			$('.menuBar').removeClass('slideDown').addClass('slideUp');
-			$('.menuFocus').removeClass('menuFocusIn').addClass('menuFocusOut');
+			$('.menu-bar').removeClass('slide-down').addClass('slide-up');
+			$('.menu-focus').removeClass('menu-focus-in').addClass('menu-focus-out');
 			setTimeout( function() {
-				$('.menuFocus').toggleClass('active menuFocusOut');
-				$('.menuBar').removeClass('responsive slideUp');
+				$('.menu-focus').toggleClass('active menu-focus-out');
+				$('.menu-bar').removeClass('responsive slide-up');
 			}, 300); 
 		}
 		else {
 			clickedBurger = true;
-			$('.menuBar').removeClass('slideUp').addClass('slideDown').addClass('responsive');
-			$('.menuFocus').removeClass('menuFocusOut').addClass('menuFocusIn').toggleClass("active");
+			$('.menu-bar').removeClass('slide-up').addClass('slide-down').addClass('responsive');
+			$('.menu-focus').removeClass('menu-focus-out').addClass('menu-focus-in').toggleClass("active");
 		}
 	});
 
@@ -148,7 +148,7 @@ $(document).ready(function() {
 	if (document.cookie.includes('dark=best')) { darkSideOfTheMoon(); };
 
 	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
-	$('a.delayLink[href]').click(function(){
+	$('a.delaylink[href]').click(function(){
 		var self = $(this);
 		setTimeout(function() {
 			window.location.href = self.attr('href'); // go to href after the slide animation completes

@@ -9,7 +9,7 @@ style: compressed
 	position: relative;
 }
 
-.marketplaceTitle { 
+.marketplace-title { 
 	bottom: 5em;
 	color: black;
 	font-size: 4rem;
@@ -22,7 +22,7 @@ style: compressed
 	z-index: 100;
 }
 
-.marketplaceFlex { 
+.marketplace-flex { 
 	align-self: center;
 	bottom: 20rem;
 	display: flex;
@@ -32,7 +32,7 @@ style: compressed
 	right: 2em;
 }
 
-	.marketplaceFlex .flexItem { 
+	.marketplace-flex .flex-item { 
 		border-image: url("../img/module.svg") 32 16 8 8 fill stretch;
 		border-image-width: 32px 16px 8px 8px;
 		border-style: solid;
@@ -54,7 +54,7 @@ style: compressed
 			}
 	}
 			
-		 .marketplaceFlex .flexItem p { 
+		 .marketplace-flex .flex-item p { 
 			bottom: 1em;
 			left: 1.75em;
 			line-height: 1.1em;
@@ -66,7 +66,7 @@ style: compressed
 			word-wrap: break-word;
 		}
 		
-		.marketplaceFlex .flexItem .header { 
+		.marketplace-flex .flex-item .header { 
 			color: black; 
 			height: 1.1em;
 			left: 0.5em; 
@@ -77,7 +77,7 @@ style: compressed
 			width: 8.5em;
 		}
 
-.marketplaceFlex .flexItem .moduleIcon { 
+.marketplace-flex .flex-item .module-icon { 
 	float: left;
 	height: 4.5em;
 	left: 1em;

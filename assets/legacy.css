@@ -2,22 +2,22 @@
 @import url("style.css");
 
 /* disable burger button */
-	.burgerButton:hover .bar1 {background-color: transparent;}
-	.burgerButton:hover .bar2 {background-color: transparent;}
-	.burgerButton:hover .bar3 {background-color: transparent;}
-	.burgerButton .bar1 {background-color: transparent;}
-	.burgerButton .bar2 {background-color: transparent;}
-	.burgerButton .bar3 {background-color: transparent;}
+	.burger-button:hover .bar1 {background-color: transparent;}
+	.burger-button:hover .bar2 {background-color: transparent;}
+	.burger-button:hover .bar3 {background-color: transparent;}
+	.burger-button .bar1 {background-color: transparent;}
+	.burger-button .bar2 {background-color: transparent;}
+	.burger-button .bar3 {background-color: transparent;}
 /*  >:(  */
 
-body { 	background-image: url('img/background.jpg'); }
+body {  background-image: url('img/background.jpg'); }
 
-.captionButton { background: url("./img/caption.png") no-repeat center !important;}
-.menuBar { background: url("./img/menuBar.png") no-repeat center !important;}
-.menuBar a.button { background: url("./img/menuBarButton.png") no-repeat center !important;}
-.menuBar a.button:hover { background: url("./img/menuBarButton_hover.png") no-repeat center !important;}
-.menuBar a.button:active { background: url("./img/menuBarButton_pressed.png") no-repeat center !important;}
-.menuBar a.button.disabled { background: url("./img/menuBarButton.png") no-repeat center !important;}
+.caption-button { background: url("./img/caption.png") no-repeat center !important;}
+.menu-bar { background: url("./img/menu-bar.png") no-repeat center !important;}
+.menu-bar a.button { background: url("./img/menu-bar-button.png") no-repeat center !important;}
+.menu-bar a.button:hover { background: url("./img/menu-bar-button_hover.png") no-repeat center !important;}
+.menu-bar a.button:active { background: url("./img/menu-bar-button_pressed.png") no-repeat center !important;}
+.menu-bar a.button.disabled { background: url("./img/menu-bar-button.png") no-repeat center !important;}
 a.button { background: url("./img/buttonIdle.png") no-repeat center !important;}
 a.button:hover { background: url("./img/buttonHover.png") no-repeat center !important;}
 a.button:active { background: url("./img/buttonPressed.png") no-repeat center !important;}
@@ -31,9 +31,9 @@ input[type=checkbox]:checked + label { background: url("./img/checkboxChecked.pn
 input[type=checkbox]:hover + label { background: url("./img/checkboxHover.png") no-repeat center !important;}
 input[type=checkbox]:hover:checked + label { background: url("./img/checkboxCheckedHover.png") no-repeat center !important;}
 
-.menuBar, .menuBar a.button,  .menuBar a.button:hover, 
-.menuBar a.button:active,  .menuBar a.button.disabled, 
-a.button,  a.button:hover,  .a.button:active, .captionButton,
+.menu-bar, .menu-bar a.button,  .menu-bar a.button:hover, 
+.menu-bar a.button:active,  .menu-bar a.button.disabled, 
+a.button,  a.button:hover,  .a.button:active, .caption-button,
 input[type=checkbox] + label,  input[type=radio] + label {
 	border-image-source: none !important;
 	-webkit-background-size: 100% 100% !important;

@@ -32,21 +32,21 @@
 
 .github.active {
 	animation: github-animational .3s ease;
-	background-color: #24292e;
+	background-color: #24292E;
 	height: 60px;
 	top: 0;
 	z-index: 99999;
 }
 
 .white.github.active {
-	animation: fadeIn .3s ease;
+	animation: fade-in .3s ease;
 	background-color: white;
 	height: 100vh;
 	z-index: 99990;
 }
 
 .discord.active {
-	animation: fadeIn .3s ease;
+	animation: fade-in .3s ease;
 	background-color: #2F3136;
 	height: 110vh;
 	top: 0;

@@ -2,9 +2,9 @@
 ** Dark Theme
 */
 .dark {
-	.menuBar, .menuBar a.button,  .menuBar a.button:hover,
-	.menuBar a.button:active,  .menuBar a.button.disabled,
-	a.button,  a.button:hover,  a.button:active, .captionButton,
+	.menu-bar, .menu-bar a.button,  .menu-bar a.button:hover,
+	.menu-bar a.button:active,  .menu-bar a.button.disabled,
+	a.button,  a.button:hover,  a.button:active, .caption-button,
 	input[type=checkbox] + label,  input[type=radio] + label {
 		background: initial;
 		border: initial;
@@ -19,18 +19,18 @@
 	p, li { opacity: .8; }
 	.bar1, .bar2, .bar3 { box-shadow: initial; }
 	.aurora-panel img { filter: grayscale(100%); }
-	.burgerButton { .bar1, .bar2, .bar3 { background-color: white; } }
+	.burger-button { .bar1, .bar2, .bar3 { background-color: white; } }
 	.change { .bar1, .bar2, .bar3 { box-shadow: initial; } }
 	.logo .image { filter: grayscale(100%); }
-	.menuFocus.active { background: black; }
+	.menu-focus.active { background: black; }
 	.title, .logo .text { opacity: 1; }
 
-	.headerBackground {
+	.header-background {
 		background: #000000;
 		overflow: hidden;
 	}
 
-	.menuBar {
+	.menu-bar {
 		overflow: hidden;
 		background: #212121;
 		border-radius: 0;
@@ -38,7 +38,7 @@
 		a.button {
 			background: #424242;
 			border-radius: 0;
-			color: #fff;
+			color: white;
 			&.disabled { background: none; }
 			&:hover, &:active { background: #424242; }
 		}
@@ -47,7 +47,7 @@
 	a.button {
 		background: #424242;
 		border-radius: .1rem;
-		color: #fff;
+		color: white;
 
 		&:hover {
 			background: #424242;
@@ -55,22 +55,19 @@
 		}
 	}
 
-	.captionButton {
-		background: #000;
+	.caption-button {
 		background: rgba(0, 0, 0, .2);
 		color: white;
 
 		&:hover {
-			background: #000;
 			background: rgba(0, 0, 0, .2);
 			color: white;
 		}
 	}
 
 	.waves-ripple {
-		background: #fff !important;
 		background: rgba(255, 255, 255, .2) !important;
 	}
 
-	@media screen and (max-width: 37.5rem) { .headerBackground, .menuBar { overflow: initial; } }
+	@media screen and (max-width: 37.5rem) { .header-background, .menu-bar { overflow: initial; } }
 }

@@ -1,7 +1,7 @@
 /*
 ** Animation
 */
-@keyframes slideDown {
+@keyframes slide-down {
 	0% {
 		height: 3rem;
 		transform: translateY(0%);
@@ -13,9 +13,9 @@
 	}
 }
 
-.slideDown { animation: 0.3s slideDown ease }
+.slide-down { animation: 0.3s slide-down ease }
 
-@keyframes slideUp {
+@keyframes slide-up {
 	0% {
 		height: 17.55rem;
 		transform: translateY(0%);
@@ -27,54 +27,54 @@
 	}
 }
 
-.slideUp { animation: 0.3s slideUp ease; }
+.slide-up { animation: 0.3s slide-up ease; }
 
-@keyframes menuFocusIn {
+@keyframes menu-focus-in {
 	0%   { opacity: 0; }
 	100% { opacity: 0.7; }
 }
 
-.menuFocusIn {
+.menu-focus-in {
 	animation-duration: 0.3s;
 	animation-fill-mode: both;
-	animation-name: menuFocusIn;
+	animation-name: menu-focus-in;
 	transition-timing-function: ease-in;
 }
 
-@keyframes menuFocusOut { 
+@keyframes menu-focus-out { 
 	0%   { opacity: 0.7; }
 	100% { opacity: 0; }
 }
 
-.menuFocusOut {
+.menu-focus-out {
 	animation-duration: 0.3s;
 	animation-fill-mode: both;
-	animation-name: menuFocusOut;
+	animation-name: menu-focus-out;
 	transition-timing-function: ease-in;
 }
 
-@keyframes fadeIn { 
+@keyframes fade-in { 
 	0%   { opacity: 0; }
 	100% { opacity: 1; }
 }
 
-.fadeIn { 
+.fade-in { 
 	animation-duration: 0.3s;
 	animation-fill-mode: both;
-	animation-name: fadeIn;
+	animation-name: fade-in;
 	transition-timing-function: ease-in;
 }
 
-@keyframes fadeOut { 
+@keyframes fade-out { 
 	0%   { opacity: 1; }
 	100% { opacity: 0; }
 }
 
 
-.fadeOut { 
+.fade-out { 
 	animation-duration: 0.3s;
 	animation-fill-mode: both;
-	animation-name: fadeOut;
+	animation-name: fade-out;
 	transition-timing-function: ease-in;
 }
 
@@ -100,13 +100,13 @@
 	100% { transform: translateX(7em); }
 }
 
-.fadeoutright, .fadeoutleft, .fadeinleft, .fadeinright {
+.fade-out-right, .fade-out-left, .fade-in-left, .fade-in-right {
 	animation-duration: 0.3s;
 	animation-fill-mode: both;
 	transition-timing-function: ease-in;
 }
 
-.fadeinright { animation-name: fadeIn, slideInRight; }
-.fadeinleft { animation-name: fadeIn, slideInLeft; }
-.fadeoutright  { animation-name: fadeOut, slideOutRight; }
-.fadeoutleft { animation-name: fadeOut, slideOutLeft; }
+.fade-in-right { animation-name: fade-in, slideInRight; }
+.fade-in-left { animation-name: fade-in, slideInLeft; }
+.fade-out-right  { animation-name: fade-out, slideOutRight; }
+.fade-out-left { animation-name: fade-out, slideOutLeft; }
