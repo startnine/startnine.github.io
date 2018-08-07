@@ -197,10 +197,10 @@ input {
 			border-image-source: url("img/radioHover.png");
 			transition: border-image-source .125s ease;
 
-				&:checked+label {
-					background: url("img/radioCheckedHover.png") no-repeat center;
-					border-image-source: url("img/radioCheckedHover.png");
-				}
+			&:checked+label {
+				background: url("img/radioCheckedHover.png") no-repeat center;
+				border-image-source: url("img/radioCheckedHover.png");
+			}
 		}
 
 		&:checked + label {

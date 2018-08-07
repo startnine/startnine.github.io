@@ -10,9 +10,7 @@
 	top: .6em;
 	z-index: 9999;
 
-	&:hover {
-		.bar1, .bar2, .bar3 { background-color: white; }
-	}
+	&:hover { .bar1, .bar2, .bar3 { background-color: white; } }
 }
 
 .bar1, .bar2, .bar3 {
