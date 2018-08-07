@@ -1,13 +1,13 @@
 /*
 ** Dark Theme
 */
-// sass-lint:disable no-important
+// sass-lint:disable no-important force-element-nesting force-pseudo-nesting
 
 .dark {
-	.menu-bar, .menu-bar a.button,  .menu-bar a.button:hover,
-	.menu-bar a.button:active,  .menu-bar a.button.disabled,
-	a.button,  a.button:hover,  a.button:active, .caption-button,
-	input[type="checkbox"] + label,  input[type="radio"] + label {
+	.menu-bar, .menu-bar .button,  .menu-bar .button:hover,
+	.menu-bar .button:active,  .menu-bar .button.disabled,
+	.button,  .button:hover,  .button:active, .caption-button,
+	[type="checkbox"] + label,  [type="radio"] + label {
 		background: initial;
 		border: initial;
 		border-image: none;
@@ -37,7 +37,7 @@
 		border-radius: 0;
 		overflow: hidden;
 
-		a.button {
+		.button {
 			background: #424242;
 			border-radius: 0;
 			color: white;
@@ -46,7 +46,7 @@
 		}
 	}
 
-	a.button {
+	.button {
 		background: #424242;
 		border-radius: .1rem;
 		color: white;

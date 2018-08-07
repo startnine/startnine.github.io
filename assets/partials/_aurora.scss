@@ -20,14 +20,12 @@
 		.left  { background: url("img/aurora1b.png") no-repeat; }
 		.left2 { background: url("img/aurora2b.png") no-repeat; }
 		.right { background: url("img/aurora3b.png") no-repeat; }
-}
 
-.aurora-panel .left, .aurora-panel .left2, .aurora-panel .right {
-	animation-iteration-count: infinite;
-	background-size: 100% 100%;
+		.left, .left2, .right {
+			animation-iteration-count: infinite;
+			background-size: 100% 100%;
+		}
 }
-
-.someone .aurora-panel .left, .someone .aurora-panel .left2, .someone .aurora-panel .right { filter: brightness(150%); }
 
 /* Logo + Wordmark */
 .logo {

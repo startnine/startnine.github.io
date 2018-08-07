@@ -23,32 +23,36 @@
 	overflow: auto;
 	position: relative;
 	text-align: center;
+
+	&.active {
+		display: block;
+		position: fixed;
+	}
 }
 
-.github.active, .discord.active, .white.github.active {
-	display: block;
-	position: fixed;
+.github {
+	&.active {
+		animation: github-animational .3s ease;
+		background-color: #24292E;
+		height: 60px;
+		top: 0;
+		z-index: 99999;
+
+		&.white {
+			animation: fade-in .3s ease;
+			background-color: white;
+			height: 100vh;
+			z-index: 99990;
+		}
+	}
 }
 
-.github.active {
-	animation: github-animational .3s ease;
-	background-color: #24292E;
-	height: 60px;
-	top: 0;
-	z-index: 99999;
-}
-
-.white.github.active {
-	animation: fade-in .3s ease;
-	background-color: white;
-	height: 100vh;
-	z-index: 99990;
-}
-
-.discord.active {
-	animation: fade-in .3s ease;
-	background-color: #2F3136;
-	height: 110vh;
-	top: 0;
-	z-index: 99999;
+.discord {
+	&.active {
+		animation: fade-in .3s ease;
+		background-color: #2F3136;
+		height: 110vh;
+		top: 0;
+		z-index: 99999;
+	}
 }

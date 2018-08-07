@@ -60,7 +60,7 @@ style: compressed
 		&:active {
 			filter: initial;
 			transform: scale3d(.9, .9, .9) !important;
-			transition: all .3s ease;
+			transition: transform .3s ease;
 		}
 
 		p {

@@ -21,6 +21,7 @@
 	text-align: center;
 	text-decoration: none;
 	text-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+	transition: opacity .125s ease;
 	width: 1.25rem;
 
 	&:hover {
@@ -32,20 +33,6 @@
 
 	svg { filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .5)); }
 }
-
-svg.caption-button {
-	align-items: center;
-	background: none;
-	color: white;
-	display: inline-block;
-	font-size: 1rem;
-	font-weight: bold;
-	text-align: center;
-	text-decoration: none;
-	width: 1.25rem;
-}
-
-.caption-button, .caption-button:hover, .caption-button:active { transition: opacity .125s ease; }
 
 /* Required for _mobile */
 .mobile-logo { display: none; }
@@ -71,7 +58,7 @@ svg.caption-button {
 
 /* Menu Bar */
 .header-background {
-	background: #6FB0F3 url("img/header-background.svg");
+//  background: #6FB0F3 url("img/header-background.svg");
 	background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70B0F3 45%, #70B0F3 60%, #5E99E3 75%, #4D88D5 92%);
 	box-shadow: 0 .625rem 1.25rem rgba(0, 0, 0, .19), 0 .375rem .375rem rgba(0, 0, 0, .23);
 	height: 6em;
@@ -81,6 +68,11 @@ svg.caption-button {
 	vertical-align: top;
 	width: 100%;
 	z-index: 41;
+
+		.burger-button {
+			opacity: 0;
+			pointer-events: none;
+		}
 }
 
 .title {
@@ -97,15 +89,10 @@ svg.caption-button {
 	text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
 }
 
-.header-background .burger-button {
-	opacity: 0;
-	pointer-events: none;
-}
-
 .menu-bar {
 	align-self: flex-end;
-	background: #3669AF URL("img/menu-bar.svg");
-	background: linear-gradient(to left, #3669AF 8%, #548ED0 25%, #5F9CDA 45%, #5F9CDA 60%, #548ED0 75%, #3669AF 92%);
+//  background: #3669AF url("img/menu-bar.svg"),
+//  background: linear-gradient(to left, #3669AF 8%, #548ED0 25%, #5F9CDA 45%, #5F9CDA 60%, #548ED0 75%, #3669AF 92%);
 	border-image: url("img/menu-bar.png") 13 15 4 14 fill stretch;
 	border-image-width: 13px 15px 3px 15px;
 	border-radius: 1rem 1rem 0 0;
@@ -118,7 +105,7 @@ svg.caption-button {
 	text-align: center;
 	z-index: 42;
 
-	a.button {
+	.button {
 		border-image: url("img/menu-bar-button.png") 0 7 7 7 fill stretch;
 		border-image-width: 7px 7px 7px 7px;
 		border-style: solid;
