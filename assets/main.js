@@ -94,11 +94,7 @@ $(document).ready(function() {
 	else { console.log('f a i l: your browser sucks and cannot CSS grids correctly.. like is it that hard to install Chrome or something'); };
 
 	if (Modernizr.borderimage) { console.log('s u c c e s s: your browser can do border-image'); } 
-	else {
-		console.log('f a i l: your browser sucks and cannot border-image correctly'); // no hard feelings
-		console.log('enabling edgey mode...'); 
-		$('head').append('<link rel="stylesheet" href="' + hostname + '/assets/legacy.css" type="text/css"/>');
-	};
+	else { console.log('f a i l: your browser sucks and cannot border-image correctly'); };
 
 	/* Hamburger toggle */
 	var clickedBurger = false;
