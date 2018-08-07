@@ -3,9 +3,10 @@
 */
 /* Printer adjustments */
 @media print {
-	.header-background, .menu-bar, .header-space, .aurora-panel, .side { display: none; }
-	.logo, .logo p img { display: block; }
+	.header-background, .menu-bar, .header-space, .aurora-panel, .side, footer { display: none; }
+	.logo { display: block; }
 	a { color: black; }
+	body { background: none;}
 }
 
 /* Mobile Adjustments */
@@ -56,14 +57,14 @@
 			overflow: hidden;
 			position: relative;
 
-			a.button {
+			.button {
 				display: inline-block;
 				padding: 1rem 0;
 				width: 100%;
 			}
 		}
 
-		a.button {
+		.button {
 			min-width: 100%;
 			padding: 1rem 0;
 			width: 100%;
