@@ -1,0 +1,20 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="canonical" href="{{ page.redir_to }}"/>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="0;url={{ page.redir_to }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>window.location.replace('{{ page.redir_to }}')</script>
+	<title>Redirect to {{ page.redir_name }}</title>
+</head>
+<body>
+	<h1>Redirecting to {{ page.redir_name }}</h1>
+	<a href="{{ page.redir_to }}">Click here if you are not redirected.<a>
+	<script>location='{{ page.redir_to }}'</script>
+</body>
+</html>
