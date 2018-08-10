@@ -16,6 +16,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: visible;
 	padding: 0;
+	tab-size: 4;
 }
 
 
@@ -53,11 +54,14 @@ body {
 	user-select: none;
 }
 
-.custom-margin { margin: -1em 0; }
-
 .code, code {
-	font-family: monospace;
-	font-size: 1.25em;
+	background: white;
+	border-radius: .2em;
+	color: #171700;
+	font-family: "Consolas", "Courier New", "Courier", "Liberation Mono", "Menlo", monospace;
+	margin: -.2em 0;
+	padding: .2em;
+	white-space: pre;
 }
 
 .resize { height: 25em; }
@@ -68,10 +72,15 @@ body {
 	min-width: 100%;
 }
 
-.pixelated {
-	image-rendering: optimizeSpeed;
-}
+.pixelated { image-rendering: optimizeSpeed; }
 
+.spoiler {
+	background-color: black;
+	color: black;
+	padding: 0 .5em;
+
+	&:hover { color: white; }
+}
 
 /* Wordmark */
 .wordmark {
@@ -221,7 +230,7 @@ input {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 200;
-	src: url("font/selawkl.eot?dumbie") format("embedded-opentype"),
+	src: url("font/selawkl.eot?#dumbie") format("embedded-opentype"),
 		 local("Selawik Light"),
 		 url("font/selawkl.ttf") format("truetype"),
 		 url("font/selawkl.woff") format("woff"),
@@ -233,7 +242,7 @@ input {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 300;
-	src: url("font/selawksl.eot?dumbie") format("embedded-opentype"),
+	src: url("font/selawksl.eot?#dumbie") format("embedded-opentype"),
 		 local("Selawik Semilight"),
 		 url("font/selawksl.ttf") format("truetype"),
 		 url("font/selawksl.woff") format("woff"),
@@ -245,7 +254,7 @@ input {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 400;
-	src: url("font/selawk.eot?dumbie") format("embedded-opentype"),
+	src: url("font/selawk.eot?#dumbie") format("embedded-opentype"),
 		 local("Selawik"),
 		 url("font/selawk.ttf") format("truetype"),
 		 url("font/selawk.woff") format("woff"),
@@ -257,7 +266,7 @@ input {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 600;
-	src: url("font/selawksb.eot?dumbie") format("embedded-opentype"),
+	src: url("font/selawksb.eot?#dumbie") format("embedded-opentype"),
 		 local("Selawik Semibold"),
 		 url("font/selawksb.ttf") format("truetype"),
 		 url("font/selawksb.woff") format("woff"),
@@ -269,7 +278,7 @@ input {
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 700;
-	src: url("font/selawkb.eot?dumbie") format("embedded-opentype"),
+	src: url("font/selawkb.eot?#dumbie") format("embedded-opentype"),
 		 local("Selawik Bold"),
 		 url("font/selawkb.ttf") format("truetype"),
 		 url("font/selawkb.woff") format("woff"),
