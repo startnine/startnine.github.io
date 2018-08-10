@@ -1,0 +1,59 @@
+- title: Double Decker Bar
+  image: DoubleDeckerBar
+  author: >
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
+    and 
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  desc: The Double-Decker-Bar is a docked, stationary module with capabilities in both App launching, Window management, and Feed content. It is modelled after a Windows Longhorn concept, with some adaptations made to accomodate newer concepts, like Live Tiles.
+  link: > 
+    https://github.com/StartNine/doubledeckerbar
+
+- title: Superbar
+  image: placeholder
+  author: >
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
+    and 
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  desc: It's a Dock! It's a Taskbar! NO, IT'S...
+  link: > 
+    https://github.com/StartNine/Superbar
+
+- title: RibbonFileManager
+  image: placeholder
+  author: >
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
+    and 
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  desc: Experimental ribbon-based file manager module
+  link: > 
+    https://github.com/StartNine/RibbonFileManager
+
+- title: Origin Menu
+  image: placeholder
+  author: >
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
+    and 
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  desc: The menu that started it all
+  link: > 
+    https://github.com/StartNine/originmenu
+
+- title: Experience Menu
+  image: placeholder
+  author: >
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
+    and 
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  desc: eXPerience the nostalgia!
+  link: > 
+    https://github.com/StartNine/experiencemenu
+
+- title: Startbeat Menu
+  image: placeholder
+  author: >
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
+    and 
+   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  desc: Keeps your computer beating
+  link: > 
+    https://github.com/StartNine/startbeatmenu
