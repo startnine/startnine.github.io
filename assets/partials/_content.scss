@@ -1,6 +1,10 @@
 /*
 ** Content
 */
+.barba-container {
+	min-height: calc(100vh - 2rem);
+}
+
 .one-box {
 	bottom: 12rem;
 	margin: 0 10%;
