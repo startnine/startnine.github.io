@@ -86,7 +86,7 @@ $(document).ready(function() {
 	var userAgent = navigator.userAgent;
 	if( userAgent.indexOf('Edge') >= 0 ) {
 		console.log('adding small CSS change (using Edge)...'); 
-		$('head').append('<style>code, .code { font-size: 1em; }</style>');
+//      $('head').append('<style>code, .code { font-size: 1em; }</style>');
 	};
 
 	/* Modernizr */
