@@ -1,6 +1,11 @@
 /*
 ** Animation
 */
+@keyframes marketplace-marquee {
+	0%   { text-indent: 9em; }
+	100% { text-indent: -9em; }
+}
+
 @keyframes slide-down {
 	0% {
 		height: 3rem;

@@ -62,7 +62,7 @@ $(document).ready(function() {
 	/* Add accessbility controls */
 	if (navigator.cookieEnabled) {
 		$('.title-text').css('left', '2.8rem');
-		$('.title').append('<span class=\"accessibility-menu\"><a class=\"caption-button textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"caption-button textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"caption-button contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>');
+		$('.title').append('<span class=\"a11y-menu\"><a class=\"caption-button textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"caption-button textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"caption-button contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>');
 		console.log('s u c c e s s: your browser can eat cookies');
 	}
 	else { console.log('f a i l: your browser cannot eat cookies'); };
