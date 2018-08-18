@@ -82,12 +82,9 @@ $(document).ready(function() {
 	Mousetrap.bind('@ s o m e o n e', function() { someone(); });
 	Mousetrap.bind('n o space u', function() { $('#buttonlist-buttonhtml, #404-buttonhtml').toggle(); });
 
-	/* Detect Microsoft Edge and change font-size for code */
-	var userAgent = navigator.userAgent;
-	if( userAgent.indexOf('Edge') >= 0 ) {
-		console.log('adding small CSS change (using Edge)...'); 
-//      $('head').append('<style>code, .code { font-size: 1em; }</style>');
-	};
+//	var userAgent = navigator.userAgent;
+//	if( userAgent.indexOf('Edge') >= 0 ) {
+//	};
 
 	/* Modernizr */
 	if (Modernizr.cssgrid) { console.log('s u c c e s s: your browser can do CSS grids'); } 
