@@ -224,6 +224,9 @@ input {
 
 /*
 ** Fontfaces
+**	Mixed tabs and spaces 
+**	for alignment reasons
+**	(don't kill me)
 */
 /* Light */
 @font-face {
@@ -231,10 +234,10 @@ input {
 	font-style: normal;
 	font-weight: 200;
 	src: url("font/selawkl.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Light"),
-		 url("font/selawkl.ttf") format("truetype"),
-		 url("font/selawkl.woff") format("woff"),
-		 url("font/selawkl.woff2") format("woff2");
+	     local("Selawik Light"),
+	     url("font/selawkl.ttf") format("truetype"),
+	     url("font/selawkl.woff") format("woff"),
+	     url("font/selawkl.woff2") format("woff2");
 }
 
 /* Semilight */
@@ -243,10 +246,10 @@ input {
 	font-style: normal;
 	font-weight: 300;
 	src: url("font/selawksl.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Semilight"),
-		 url("font/selawksl.ttf") format("truetype"),
-		 url("font/selawksl.woff") format("woff"),
-		 url("font/selawksl.woff2") format("woff2");
+	     local("Selawik Semilight"),
+	     url("font/selawksl.ttf") format("truetype"),
+	     url("font/selawksl.woff") format("woff"),
+	     url("font/selawksl.woff2") format("woff2");
 }
 
 /* Normal */
@@ -255,10 +258,10 @@ input {
 	font-style: normal;
 	font-weight: 400;
 	src: url("font/selawk.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik"),
-		 url("font/selawk.ttf") format("truetype"),
-		 url("font/selawk.woff") format("woff"),
-		 url("font/selawk.woff2") format("woff2");
+	     local("Selawik"),
+	     url("font/selawk.ttf") format("truetype"),
+	     url("font/selawk.woff") format("woff"),
+	     url("font/selawk.woff2") format("woff2");
 }
 
 /* Semibold */
@@ -267,10 +270,10 @@ input {
 	font-style: normal;
 	font-weight: 600;
 	src: url("font/selawksb.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Semibold"),
-		 url("font/selawksb.ttf") format("truetype"),
-		 url("font/selawksb.woff") format("woff"),
-		 url("font/selawksb.woff2") format("woff2");
+	     local("Selawik Semibold"),
+	     url("font/selawksb.ttf") format("truetype"),
+	     url("font/selawksb.woff") format("woff"),
+	     url("font/selawksb.woff2") format("woff2");
 }
 
 /* Bold */
@@ -279,10 +282,10 @@ input {
 	font-style: normal;
 	font-weight: 700;
 	src: url("font/selawkb.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Bold"),
-		 url("font/selawkb.ttf") format("truetype"),
-		 url("font/selawkb.woff") format("woff"),
-		 url("font/selawkb.woff2") format("woff2");
+	     local("Selawik Bold"),
+	     url("font/selawkb.ttf") format("truetype"),
+	     url("font/selawkb.woff") format("woff"),
+	     url("font/selawkb.woff2") format("woff2");
 }
 
 /*
