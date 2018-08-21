@@ -34,19 +34,19 @@ var hostname = window.location.origin;
 /*
 ** Common Functions (well not really common but)
 */
-function burgerButton(x) { x.classList.toggle('change'); };
-function menuFocus() { document.querySelector('.burger-button').click(); };
-function fadeOutRight() { $('main').removeClass('fade-in-left fade-in-right').addClass('fade-out-right'); };
-function fadeOutLeft() { $('main').removeClass('fade-in-left fade-in-right').addClass('fade-out-left'); };
-function fadeOut() { $('main').removeClass('fade-in-left fade-in-ight').addClass('fade-out'); };
-function scrollUp() { $('html, body').animate({scrollTop: 0}, 150); return false; };
-function someone() { $('body').addClass('someone'); }; // help i've fallen and i cant get up
+function burgerButton(x) { x.classList.toggle("change"); };
+function menuFocus() { document.querySelector(".burger-button").click(); };
+function fadeOutRight() { $("main").removeClass("fade-in-left fade-in-right").addClass("fade-out-right"); };
+function fadeOutLeft() { $("main").removeClass("fade-in-left fade-in-right").addClass("fade-out-left"); };
+function fadeOut() { $("main").removeClass("fade-in-left fade-in-ight").addClass("fade-out"); };
+function scrollUp() { $("html, body").animate({scrollTop: 0}, 150); return false; };
+function someone() { $("body").addClass("someone"); }; // help i"ve fallen and i cant get up
 function textNormal() { 
-	$('html').css("font-size", "1em"); 
+	$("html").css("font-size", "1em"); 
 	document.cookie = "text=normal; path=/;";
 };
 function textLarge() { 
-	$('html').css("font-size", "2em"); 
+	$("html").css("font-size", "2em"); 
 	document.cookie = "text=large; path=/;";
 };
 
@@ -61,60 +61,60 @@ function darkSideOfTheMoon() {
 $(document).ready(function() {
 	/* Add accessbility controls */
 	if (navigator.cookieEnabled) {
-		$('.title-text').css('left', '2.8rem');
-		$('.title').append('<span class=\"a11y-menu\"><a class=\"caption-button textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"caption-button textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"caption-button contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>');
-		console.log('s u c c e s s: your browser can eat cookies');
+		$(".title-text").css("left", "2.8rem");
+		$(".title").append("<span class=\"a11y-menu\"><a class=\"caption-button textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"caption-button textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"caption-button contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>");
+		console.log("s u c c e s s: your browser can eat cookies");
 	}
-	else { console.log('f a i l: your browser cannot eat cookies'); };
+	else { console.log("f a i l: your browser cannot eat cookies"); };
 
 	/* Init JS libs */
 //  Barba.Pjax.start();    // init barbra
 	Barba.Prefetch.init(); // init barbra
 
-	$('.tilts').tilt({ maxTilt: 20, }); // init tilt.js 
+	$(".tilts").tilt({ maxTilt: 20, }); // init tilt.js 
 
-	Waves.attach('.button');    // init waves.js
+	Waves.attach(".button");    // init waves.js
 	Waves.init();               // init waves.js
 
 	/* Keyboard shortcuts */
-	Mousetrap.bind('m y s t e r i o u s space a s space t h e space d a r k space s i d e space o f space t h e space m o o n', function() { darkSideOfTheMoon(); });
-	Mousetrap.bind('up up down down left right left right b a', function() { darkSideOfTheMoon(); });
-	Mousetrap.bind('@ s o m e o n e', function() { someone(); });
-	Mousetrap.bind('n o space u', function() { $('#buttonlist-buttonhtml, #404-buttonhtml').toggle(); });
+	Mousetrap.bind("m y s t e r i o u s space a s space t h e space d a r k space s i d e space o f space t h e space m o o n", function() { darkSideOfTheMoon(); });
+	Mousetrap.bind("up up down down left right left right b a", function() { darkSideOfTheMoon(); });
+	Mousetrap.bind("@ s o m e o n e", function() { someone(); });
+	Mousetrap.bind("n o space u", function() { $("#buttonlist-buttonhtml, #404-buttonhtml").toggle(); });
 
-//	var userAgent = navigator.userAgent;
-//	if( userAgent.indexOf('Edge') >= 0 ) {
-//	};
+//  var userAgent = navigator.userAgent;
+//  if( userAgent.indexOf("Edge") >= 0 ) {
+//  };
 
 	/* Modernizr */
-	if (Modernizr.cssgrid) { console.log('s u c c e s s: your browser can do CSS grids'); } 
-	else { console.log('f a i l: your browser sucks and cannot CSS grids correctly.. like is it that hard to install Chrome or something'); };
+	if (Modernizr.cssgrid) { console.log("s u c c e s s: your browser can do CSS grids"); } 
+	else { console.log("f a i l: your browser sucks and cannot CSS grids correctly.. like is it that hard to install Chrome or something"); };
 
-	if (Modernizr.borderimage) { console.log('s u c c e s s: your browser can do border-image'); } 
-	else { console.log('f a i l: your browser sucks and cannot border-image correctly'); };
+	if (Modernizr.borderimage) { console.log("s u c c e s s: your browser can do border-image"); } 
+	else { console.log("f a i l: your browser sucks and cannot border-image correctly"); };
 
 	/* Hamburger toggle */
 	var clickedBurger = false;
-	$('.burger-button').click(function() {
+	$(".burger-button").click(function() {
 		if(clickedBurger) {
 			clickedBurger = false;
-			$('.menu-bar').removeClass('slide-down').addClass('slide-up');
-			$('.menu-focus').removeClass('menu-focus-in').addClass('menu-focus-out');
+			$(".menu-bar").removeClass("slide-down").addClass("slide-up");
+			$(".menu-focus").removeClass("menu-focus-in").addClass("menu-focus-out");
 			setTimeout( function() {
-				$('.menu-focus').toggleClass('active menu-focus-out');
-				$('.menu-bar').removeClass('responsive slide-up');
+				$(".menu-focus").toggleClass("active menu-focus-out");
+				$(".menu-bar").removeClass("responsive slide-up");
 			}, 300); 
 		}
 		else {
 			clickedBurger = true;
-			$('.menu-bar').removeClass('slide-up').addClass('slide-down').addClass('responsive');
-			$('.menu-focus').removeClass('menu-focus-out').addClass('menu-focus-in').toggleClass("active");
+			$(".menu-bar").removeClass("slide-up").addClass("slide-down").addClass("responsive");
+			$(".menu-focus").removeClass("menu-focus-out").addClass("menu-focus-in").toggleClass("active");
 		}
 	});
 
 	/* Contrast toggle */
 	var clickedContrast = false;
-	$('.contrast').click(function() {
+	$(".contrast").click(function() {
 		if(clickedContrast) {
 			clickedContrast = false;
 			$("html").removeClass("contrast");
@@ -128,28 +128,28 @@ $(document).ready(function() {
 	});
 
 	/* Apply styles from cookies */
-	if (document.cookie.includes('text=large')) { textLarge(); };
-	if (document.cookie.includes('text=normal')) { textNormal(); };
+	if (document.cookie.includes("text=large")) { textLarge(); };
+	if (document.cookie.includes("text=normal")) { textNormal(); };
 
-	if (document.cookie.includes('contrast=true')) { 
+	if (document.cookie.includes("contrast=true")) { 
 		var clickedContrast = true;
 		$("html").addClass("contrast");
 	};
 
-	if (document.cookie.includes('contrast=false')) { $('#contrast').remove(); };
+	if (document.cookie.includes("contrast=false")) { $("#contrast").remove(); };
 
-	if (document.cookie.includes('dark=best')) { darkSideOfTheMoon(); };
+	if (document.cookie.includes("dark=best")) { darkSideOfTheMoon(); };
 
 	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
-	$('a.delaylink[href]').click(function(){
+	$("a.delaylink[href]").click(function(){
 		var self = $(this);
 		setTimeout(function() {
-			window.location.href = self.attr('href'); // go to href after the slide animation completes
+			window.location.href = self.attr("href"); // go to href after the slide animation completes
 		}, 400);
 		return false; // And also make sure you return false from your click handler.
 	});
 
 	// Cross site transitions
-	$('#gitbutton').click(function() { $('.github').toggleClass('active'); });
-	$('#discordbutton').click(function() { $('.discord').toggleClass('active'); });
+	$("#gitbutton").click(function() { $(".github").toggleClass("active"); });
+	$("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 });
