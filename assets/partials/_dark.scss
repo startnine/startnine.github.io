@@ -44,15 +44,15 @@
 			transition: background .2s;
 
 			&.disabled { color: rgba(255, 255, 255, .5); }
-			&:hover { background: rgba(158,158,158,.2); }
-			&:active { background: rgba(158,158,158,.4); }
+			&:hover { background: rgba(158, 158, 158, .2); }
+			&:active { background: rgba(158, 158, 158, .4); }
 		}
 	}
 
 	.button {
 		background: #424242;
 		border-radius: .1rem;
-		box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 		color: white;
 
 		&:hover {
@@ -60,7 +60,7 @@
 			filter: brightness(120%);
 		}
 
-		&:active { box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2); }
+		&:active { box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2); }
 	}
 
 	.caption-button {

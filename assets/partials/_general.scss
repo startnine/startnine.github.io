@@ -23,9 +23,7 @@ body {
 /*
 ** General
 */
-// sass-lint:disable no-important
-.waves-ripple { background: rgba(255, 255, 255, 0) !important; }
-// sass-lint:enable no-important
+.waves-ripple { background: rgba(255, 255, 255, 0) !important; } // sass-lint:disable-line no-important
 
 .byline { font-style: italic; }
 
@@ -152,34 +150,43 @@ input {
 		display: none;
 
 		+ label {
-			background: url("img/checkbox.png") no-repeat center;
+			background: url("img/checkbox_idle.svg") no-repeat center;
 			background-size: 100% 100%;
-			border-image: url("img/checkbox.png") 1 1 1 1 fill stretch;
+			border-image: url("img/checkbox_idle.svg") 2 fill stretch;
 			border-image-width: .063rem;
 			border-style: solid;
 			border-width: 0;
 			display: inline-block;
 			height: 1rem;
 			padding: 0;
-			transition: border-image-source .75s ease;
+			transition: border-image-source .75s ease, background .75s ease;
 			width: 1rem;
 		}
 
 		&:checked + label {
-			background: url("img/checkboxChecked.png") no-repeat center;
-			border-image-source: url("img/checkboxChecked.png");
-			transition: border-image-source .125s ease;
+			background: url("img/checkbox_checked_idle.svg") no-repeat center;
+			border-image-source: url("img/checkbox_checke_idle.svg");
+		}
+
+		&:indeterminate + label {
+			background: url("img/checkbox_indeterminate_idle.svg") no-repeat center;
+			border-image-source: url("img/checkbox_indeterminate_idle.svg");
 		}
 
 		&:hover {
 			+ label {
-				background: url("img/checkboxHover.png") no-repeat center;
-				border-image-source: url("img/checkboxHover.png");
+				background: url("img/checkbox_hover.svg") no-repeat center;
+				border-image-source: url("img/checkbox_hover.svg");
 			}
 
 			&:checked + label {
-				background: url("img/checkboxCheckedHover.png") no-repeat center;
-				border-image-source: url("img/checkboxCheckedHover.png");
+				background: url("img/checkbox_checked_hover.svg") no-repeat center;
+				border-image-source: url("img/checkbox_checked_hover.svg");
+			}
+
+			&:indeterminate + label {
+				background: url("img/checkbox_indeterminate_hover.svg") no-repeat center;
+				border-image-source: url("img/checkbox_indeterminate_hover.svg");
 			}
 		}
 	}
@@ -188,35 +195,34 @@ input {
 		display: none;
 
 		+ label {
-			background: url("img/radio.png") no-repeat center;
-			background-size: 100% 100%;
-			border-image: url("img/radio.png") 1 1 1 1 fill stretch;
-			border-image-width: .063rem .063rem .063rem .063rem;
-			border-style: solid;
-			border-width: 0;
+			background: url("img/radio-button_idle.svg") no-repeat center;
+			background-size: 100% 100% !important; // sass-lint:disable-line no-important
+//          border-image: url("img/radio-button_idle.svg") 1 1 1 1 fill stretch;
+//          border-image-width: .063rem .063rem .063rem .063rem;
+//          border-style: solid;
+//          border-width: 0;
 			display: inline-block;
 			height: 1rem;
 			padding: 0;
-			transition: border-image-source .75s ease;
+			transition: border-image-source .75s ease, background .75s ease;
 			width: 1rem;
 		}
 
+		&:checked + label {
+			background: url("img/radio-button_selected_idle.svg") no-repeat center;
+//          border-image-source: url("img/radio-button_selected_idle.svg");
+		}
+
 		&:hover + label {
-			background: url("img/radioHover.png") no-repeat center;
-			border-image-source: url("img/radioHover.png");
+			background: url("img/radio-button_hover.svg") no-repeat center;
+//          border-image-source: url("img/radio-button_hover.svg");
 			transition: border-image-source .125s ease;
 
-			&:checked+label {
-				background: url("img/radioCheckedHover.png") no-repeat center;
-				border-image-source: url("img/radioCheckedHover.png");
+			&:checked + label {
+				background: url("img/radio_button_selected_hover.svg") no-repeat center;
+//              border-image-source: url("img/radio_button_selected_hover.svg");
 			}
 		}
-
-		&:checked + label {
-			background: url("img/radioChecked.png") no-repeat center;
-			border-image-source: url("img/radioChecked.png");
-		}
-
 	}
 }
 
@@ -224,9 +230,9 @@ input {
 
 /*
 ** Fontfaces
-**	Mixed tabs and spaces 
-**	for alignment reasons
-**	(don't kill me)
+**  Mixed tabs and spaces 
+**  for alignment reasons
+**  (don't kill me)
 */
 /* Light */
 @font-face {

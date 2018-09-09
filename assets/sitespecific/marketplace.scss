@@ -5,6 +5,7 @@ style: compressed
 /*
 ** Marketplace
 */
+// sass-lint:disable nesting-depth no-important no-vendor-prefixes
 
 .marketplace {
 	.backgroundicon {
@@ -58,20 +59,22 @@ style: compressed
 		width: 20rem;
 		will-change: transform;
 
-		&:hover .header {
-			animation: marketplace-marquee 5s linear infinite;
-			text-overflow: initial;
-		}
-
-		&:active .header {
-			animation: initial;
-			text-overflow: ellipsis;
+		&:hover {
+			.header {
+				animation: marketplace-marquee 5s linear infinite;
+				text-overflow: initial;
+			}
 		}
 
 		&:active {
 			filter: initial;
 			transform: scale3d(.9, .9, .9) !important;
 			transition: transform .3s ease;
+
+			.header {
+				animation: initial;
+				text-overflow: ellipsis;
+			}
 		}
 
 		p {
@@ -86,7 +89,7 @@ style: compressed
 		}
 
 		.desc {
-			-ms-overflow-style: -ms-autohiding-scrollbar; // sass-lint:disable-line no-vendor-prefixes
+			-ms-overflow-style: -ms-autohiding-scrollbar;
 			height: 4.5em;
 			&:hover { overflow-y: scroll;   }
 		}
