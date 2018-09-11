@@ -14,3 +14,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-feed
+
+defaults:
+- scope:
+    path: ""
+  values:
+    logo: /assets/img/logo.png
