@@ -15,9 +15,9 @@ target: 2
 	</article>
 	<h2>All Posts</h2>
 	<ul>
-		{% for post in site.posts %}	
+		{% for post in site.posts %}    
 			<li>
-				<span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>, <em>{{ post.category }}</em></li>
+				<span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ post.url }}" onclick="fadeOut();">{{ post.title }}</a>, <em>{{ post.category }}</em></li>
 		{% endfor %}
 	</ul>
 </main>
