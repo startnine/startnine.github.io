@@ -7,7 +7,7 @@ target: 2
 <main class="one-box fade-in-left" data-viewport="{{ page.target }}">
 	<article>
 		{% for post in site.posts limit:1 %}
-		  <a href="{{ post.url }}"><h2 style="margin: 0;">{{ post.title }}</h2></a>
+		  <a href="{{ post.url }}" onclick="fadeOut();"><h2 style="margin: 0;">{{ post.title }}</h2></a>
 		  <em>by</em> <strong>{{ post.author }}</strong>, {{ post.date | date: "%d %B %Y" }}
 		  <br>
 		  {{ post.content }}
