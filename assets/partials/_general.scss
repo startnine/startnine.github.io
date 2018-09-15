@@ -90,6 +90,43 @@ body {
 }
 
 /*
+** Tab Skip
+*/
+.skip-to-content {
+	height: 1px;
+	left: -25565vw;
+	overflow: hidden;
+	position: absolute;
+	top: auto;
+	width: 1px;
+	z-index: -1337;
+
+	&:focus, &:active {
+		background: #005AA1;
+		border: 3px solid white;
+		border-radius: 15px;
+		color: white;
+		font-size: 1rem;
+		height: auto;
+		left: calc(50vw - 6rem);
+		margin: 1rem .5rem;
+		overflow: auto;
+		padding: .5rem 1rem;
+		text-align: center;
+		text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
+		width: auto;
+		z-index: 6969;
+	}
+}
+
+.skip-target {
+	float: right;
+	height: 1px;
+	overflow: hidden;
+	width: 1px;
+}
+
+/*
 ** Fontfaces
 **  Mixed tabs and spaces 
 **  for alignment reasons
@@ -101,10 +138,10 @@ body {
 	font-style: normal;
 	font-weight: 200;
 	src: url("font/selawkl.eot?#dumbie") format("embedded-opentype"),
-	     local("Selawik Light"),
-	     url("font/selawkl.ttf") format("truetype"),
-	     url("font/selawkl.woff") format("woff"),
-	     url("font/selawkl.woff2") format("woff2");
+		 local("Selawik Light"),
+		 url("font/selawkl.ttf") format("truetype"),
+		 url("font/selawkl.woff") format("woff"),
+		 url("font/selawkl.woff2") format("woff2");
 }
 
 /* Semilight */
@@ -113,10 +150,10 @@ body {
 	font-style: normal;
 	font-weight: 300;
 	src: url("font/selawksl.eot?#dumbie") format("embedded-opentype"),
-	     local("Selawik Semilight"),
-	     url("font/selawksl.ttf") format("truetype"),
-	     url("font/selawksl.woff") format("woff"),
-	     url("font/selawksl.woff2") format("woff2");
+		 local("Selawik Semilight"),
+		 url("font/selawksl.ttf") format("truetype"),
+		 url("font/selawksl.woff") format("woff"),
+		 url("font/selawksl.woff2") format("woff2");
 }
 
 /* Normal */
@@ -125,10 +162,10 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	src: url("font/selawk.eot?#dumbie") format("embedded-opentype"),
-	     local("Selawik"),
-	     url("font/selawk.ttf") format("truetype"),
-	     url("font/selawk.woff") format("woff"),
-	     url("font/selawk.woff2") format("woff2");
+		 local("Selawik"),
+		 url("font/selawk.ttf") format("truetype"),
+		 url("font/selawk.woff") format("woff"),
+		 url("font/selawk.woff2") format("woff2");
 }
 
 /* Semibold */
@@ -137,10 +174,10 @@ body {
 	font-style: normal;
 	font-weight: 600;
 	src: url("font/selawksb.eot?#dumbie") format("embedded-opentype"),
-	     local("Selawik Semibold"),
-	     url("font/selawksb.ttf") format("truetype"),
-	     url("font/selawksb.woff") format("woff"),
-	     url("font/selawksb.woff2") format("woff2");
+		 local("Selawik Semibold"),
+		 url("font/selawksb.ttf") format("truetype"),
+		 url("font/selawksb.woff") format("woff"),
+		 url("font/selawksb.woff2") format("woff2");
 }
 
 /* Bold */
@@ -149,10 +186,10 @@ body {
 	font-style: normal;
 	font-weight: 700;
 	src: url("font/selawkb.eot?#dumbie") format("embedded-opentype"),
-	     local("Selawik Bold"),
-	     url("font/selawkb.ttf") format("truetype"),
-	     url("font/selawkb.woff") format("woff"),
-	     url("font/selawkb.woff2") format("woff2");
+		 local("Selawik Bold"),
+		 url("font/selawkb.ttf") format("truetype"),
+		 url("font/selawkb.woff") format("woff"),
+		 url("font/selawkb.woff2") format("woff2");
 }
 
 /*
