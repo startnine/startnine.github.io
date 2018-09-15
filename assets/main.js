@@ -59,10 +59,10 @@ function darkSideOfTheMoon() {
 ** Most of the important stuff 
 */
 $(document).ready(function() {
-	/* Add accessbility controls */
+	/* Unhide accessbility controls */
 	if (navigator.cookieEnabled) {
 		$(".title-text").css("left", "2.8rem");
-		$(".title").append("<span class=\"a11y-menu\"><a class=\"caption-button textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\" tabindex=\"0\">a</a> <a class=\"caption-button textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\" tabindex=\"0\">A</a> <a class=\"caption-button contrast\" title=\"Toggle High Contrast Mode\"  tabindex=\"0\"><i class=\"fas fa-adjust\"></i></a></span>");
+		$(".a11y-menu").removeClass("invisible");
 		console.log("s u c c e s s: your browser can eat cookies");
 	}
 	else { console.log("f a i l: your browser cannot eat cookies"); };

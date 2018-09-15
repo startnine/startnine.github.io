@@ -30,7 +30,7 @@ a {
 		vertical-align: middle;
 		white-space: nowrap;
 
-		&:hover {
+		&:hover, &:focus {
 			border-image-source: url("img/buttonHover.png");
 			transition: border-image-source .125s ease, box-shadow .125s ease;
 		}

@@ -9,6 +9,11 @@
 				{{ page.title }}
 			{% endif %}
 		</span>
+		<span class="a11y-menu invisible">
+			<a class="caption-button textAdjust" onclick="textNormal()" aria-label="Disable Larger Text" title="Disable Larger Text" tabindex="0">a</a>
+			<a class="caption-button textAdjust" onclick="textLarge()" aria-label="Enable Larger Text" title="Enable Larger Text" tabindex="0">A</a>
+			<a class="caption-button contrast" title="Toggle High Contrast Mode"  tabindex="0"><i class="fas fa-adjust"></i></a>
+		</span>
 	</p>
 	<nav class="menu-bar" id="menu-bar">
 		{% for page in site.pages %}
