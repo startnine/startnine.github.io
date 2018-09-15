@@ -62,7 +62,7 @@ $(document).ready(function() {
 	/* Add accessbility controls */
 	if (navigator.cookieEnabled) {
 		$(".title-text").css("left", "2.8rem");
-		$(".title").append("<span class=\"a11y-menu\"><a class=\"caption-button textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\">a</a> <a class=\"caption-button textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\">A</a> <a class=\"caption-button contrast\" title=\"Toggle High Contrast Mode\"><i class=\"fas fa-adjust\"></i></a></span>");
+		$(".title").append("<span class=\"a11y-menu\"><a class=\"caption-button textAdjust\" onclick=\"textNormal\(\)\" title=\"Disable Larger Text\" tabindex=\"0\">a</a> <a class=\"caption-button textAdjust\" onclick=\"textLarge\(\)\" title=\"Enable Larger Text\" tabindex=\"0\">A</a> <a class=\"caption-button contrast\" title=\"Toggle High Contrast Mode\"  tabindex=\"0\"><i class=\"fas fa-adjust\"></i></a></span>");
 		console.log("s u c c e s s: your browser can eat cookies");
 	}
 	else { console.log("f a i l: your browser cannot eat cookies"); };
@@ -140,7 +140,7 @@ $(document).ready(function() {
 
 	if (document.cookie.includes("dark=best")) { darkSideOfTheMoon(); };
 
-	// delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
+	/* delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT) */
 	$("a.delaylink[href]").click(function(){
 		var self = $(this);
 		setTimeout(function() {
@@ -149,7 +149,26 @@ $(document).ready(function() {
 		return false; // And also make sure you return false from your click handler.
 	});
 
-	// Cross site transitions
+	/* Cross site transitions */
 	$("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 	$("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
+
+	/* Hide navbar on scroll https://codepen.io/Mhmdhasan/pen/mAdaQE */
+	var c, currentScrollTop = 0,
+	navbar = $('.header-background');
+
+	$(window).scroll(function () {
+	   var a = $(window).scrollTop();
+	   var b = navbar.height();
+	
+	   currentScrollTop = a;
+	
+	   if (c < currentScrollTop && a > b + b) {
+		 navbar.addClass("scroll-up");
+	   } else if (c > currentScrollTop && !(a <= b)) {
+		 navbar.removeClass("scroll-up");
+	   }
+	   c = currentScrollTop;
+	});
+
 });
