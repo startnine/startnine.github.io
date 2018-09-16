@@ -5,9 +5,9 @@
 
 .contrast {
 
-	.menu-bar, .menu-bar .button,  .menu-bar .button:hover,
+	.menu-bar, .menu-bar .button,  .menu-bar .button:hover, .menu-bar .button:focus,
 	.menu-bar .button:active,  .menu-bar .button.disabled,
-	.button,  .button:hover,  .button:active, .caption-button,
+	.button,  .button:hover, .button:focus, .button:active, .caption-button,
 	[type="checkbox"] + label,  [type="radio"] + label {
 		background: initial;
 		border: initial;
@@ -35,7 +35,7 @@
 		color: white;
 		transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1);
 
-		&:hover {
+		&:hover, &:focus {
 			background: #26A69A;
 			filter: brightness(120%);
 			transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1);
@@ -55,7 +55,7 @@
 			border-radius: 0;
 			color: white;
 			&.disabled { background: none; }
-			&:hover, &:active { background: #4378BC; }
+			&:hover, &:focus, &:active { background: #4378BC; }
 		}
 	}
 
