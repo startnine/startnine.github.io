@@ -97,16 +97,21 @@ $(document).ready(function() {
 	var clickedBurger = false;
 	$(".burger-button").click(function() {
 		if(clickedBurger) {
+		// closed
 			clickedBurger = false;
 			$(".menu-bar").removeClass("slide-down").addClass("slide-up");
 			$(".menu-focus").removeClass("menu-focus-in").addClass("menu-focus-out");
+			$('html, body').css("cssText", "overflow-y: inital;");
 			setTimeout( function() {
 				$(".menu-focus").toggleClass("active menu-focus-out");
 				$(".menu-bar").removeClass("responsive slide-up");
 			}, 300); 
 		}
+		
+		// opened
 		else {
 			clickedBurger = true;
+			$('html, body').css("cssText", "overflow-y: hidden !important;");
 			$(".menu-bar").removeClass("slide-up").addClass("slide-down").addClass("responsive");
 			$(".menu-focus").removeClass("menu-focus-out").addClass("menu-focus-in").toggleClass("active");
 		}
@@ -115,11 +120,13 @@ $(document).ready(function() {
 	/* Contrast toggle */
 	var clickedContrast = false;
 	$(".contrast").click(function() {
+		// off
 		if(clickedContrast) {
 			clickedContrast = false;
 			$("html").removeClass("contrast");
 			document.cookie = "contrast=false; path=/; expires=0;";
 		}
+		// on
 		else {
 			clickedContrast = true;
 			$("html").addClass("contrast");
@@ -152,5 +159,23 @@ $(document).ready(function() {
 	/* Cross site transitions */
 	$("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 	$("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
+
+	/* Hide navbar on scroll https://codepen.io/Mhmdhasan/pen/mAdaQE */
+	var c, currentScrollTop = 0,
+	navbar = $('.header-background');
+
+	$(window).scroll(function () {
+	   var a = $(window).scrollTop();
+	   var b = navbar.height();
+	
+	   currentScrollTop = a;
+	
+	   if (c < currentScrollTop && a > b + b) {
+		 navbar.addClass("scroll-up");
+	   } else if (c > currentScrollTop && !(a <= b)) {
+		 navbar.removeClass("scroll-up");
+	   }
+	   c = currentScrollTop;
+	});
 
 });

@@ -1,57 +1,58 @@
 /*
 ** Aurora Panel 
 */
-.aurora {
-	height: 15em;
-	left: 5vw;
-	overflow-x: hidden;
-	position: absolute;
-	user-select: none;
-	vertical-align: middle;
-	width: 100vw;
-}
-
-.aurora-panel {
-	height: 10em;
-	position: relative;
-	text-align: center;
-	width: 100%;
-
-	.left  { background: url("img/aurora1b.png") no-repeat; }
-	.left2 { background: url("img/aurora2b.png") no-repeat; }
-	.right { background: url("img/aurora3b.png") no-repeat; }
-
-	.left, .left2, .right {
-		animation-iteration-count: infinite;
-		background-size: 100% 100%;
-	}
-}
-
-/* Logo + Wordmark */
-.logo {
-	bottom: 10em;
-	min-width: 100%;
-	position: relative;
-	text-align: center;
-	z-index: 1;
-
-	.image {
-		height: 1.5em;
-		margin-right: .1em;
+header {
+	.aurora {
+		height: 15em;
+		left: 5vw;
+		overflow-x: hidden;
+		position: absolute;
+		user-select: none;
 		vertical-align: middle;
-		width: 1em;
+		width: 100vw;
 	}
 
-	.text {
-		font-size: 3em;
-		font-weight: 600;
-		line-height: 2em;
-		margin-bottom: .95em;
-		text-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
-		vertical-align: middle;
+	.aurora-panel {
+		height: 10em;
+		position: relative;
+		text-align: center;
+		width: 100%;
+
+		.left  { background: url("img/aurora1b.png") no-repeat; }
+		.left2 { background: url("img/aurora2b.png") no-repeat; }
+		.right { background: url("img/aurora3b.png") no-repeat; }
+
+		.left, .left2, .right {
+			animation-iteration-count: infinite;
+			background-size: 100% 100%;
+		}
+	}
+
+	/* Logo + Wordmark */
+	.logo {
+		bottom: 10em;
+		min-width: 100%;
+		position: relative;
+		text-align: center;
+		z-index: 1;
+
+		.image {
+			height: 1.5em;
+			margin-right: .1em;
+			vertical-align: middle;
+			width: 1em;
+		}
+
+		.text {
+			font-size: 3em;
+			font-weight: 600;
+			line-height: 2em;
+			margin-bottom: .95em;
+			text-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
+			vertical-align: middle;
+		}
 	}
 }
-
 
 /* Required Animation */
 @keyframes animationLeft {
