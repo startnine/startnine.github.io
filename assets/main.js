@@ -160,22 +160,16 @@ $(document).ready(function() {
 	$("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 	$("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 
-	/* Hide navbar on scroll https://codepen.io/Mhmdhasan/pen/mAdaQE */
-	var c, currentScrollTop = 0,
-	navbar = $('.header-background');
-
-	$(window).scroll(function () {
-	   var a = $(window).scrollTop();
-	   var b = navbar.height();
-	
-	   currentScrollTop = a;
-	
-	   if (c < currentScrollTop && a > b + b) {
-		 navbar.addClass("scroll-up");
-	   } else if (c > currentScrollTop && !(a <= b)) {
-		 navbar.removeClass("scroll-up");
-	   }
-	   c = currentScrollTop;
-	});
-
+	/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar - taken from W3Schools */
+	var prevScrollpos = window.pageYOffset;
+	var navbar = $('.header-background');
+	window.onscroll = function() {
+	  var currentScrollPos = window.pageYOffset;
+	  if (prevScrollpos > currentScrollPos) {
+		navbar.removeClass("scroll-up");
+	} else {
+		navbar.addClass("scroll-up");
+	}
+	  prevScrollpos = currentScrollPos;
+	}
 });
