@@ -2,16 +2,63 @@
 ** Footer
 */
 footer {
-	background: rgba(0, 0, 0, .75);
+//  background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70B0F3 45%, #70B0F3 60%, #5E99E3 75%, #4D88D5 92%);
+//  background: linear-gradient(#4F89CA, #5D97D8);
+	background: linear-gradient(to top, #4F89CA, #5793D4, #5F9CDE, #68A6E9, #70B0F3);
+	border-image: linear-gradient(to left, rgba(0, 0, 0, 0) 8%, rgba(255, 255, 255, .5) 25%, white 50%, rgba(255, 255, 255, .5) 75%, rgba(0, 0, 0, 0) 92%) 2;
+	border-image-width: 2px 0 2px 0;
+	border-style: solid;
+	border-width: 4px 0;
 	color: white;
 //  height: 10rem;
 	margin: 0;
-	text-align: center;
-	vertical-align: center;
+	padding: 1em 0 .5em;
+//  text-shadow: 0 3px 6px #A3B4D3, 0 3px 6px #A3B4D3, 0 3px 6px #A3B4D3, 0 3px 6px #A3B4D3, 0 3px 6px #A3B4D3, 0 3px 6px #A3B4D3;
 	width: 100%;
 
+	.the-group-with-the-logo {
+		.logo {
+			height: 3em;
+			width: 3em;
+		}
+	}
+
 	a {
-		color: white;
-		text-decoration: underline; 
+		color: inherit;
+		opacity: .8;
+		text-decoration: underline;
+		transition: opacity .125s ease;
+		&:hover, &:focus { opacity: 1; }
+		&:active { opacity: .3; }
+	}
+
+	.mother-of-all-links {
+		align-content: flex-start;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+
+		div {
+			font-size: 15pt;
+			padding: 0 1em;
+			width: 12.5rem;
+
+			a {
+				display: block;
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.footer-text {
+		display: flex;
+		flex-wrap: wrap;
+
+		p {
+			margin-bottom: 0;
+			padding: 0 1em;
+			&:not(:first-child) { border-left: 1px solid white; }
+		}
 	}
 }

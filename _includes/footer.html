@@ -1,7 +1,20 @@
 <footer>
-	Hope you have cookies enabled! We use session cookies to save theme data. This is required for your theme preference stay applied.
-	<a href="javascript:(function(){document.cookie.split(&quot;;&quot;).forEach(function(c) { document.cookie = c.replace(/^ +/, &quot;&quot;).replace(/=.*/, &quot;=;expires=&quot; + new Date().toUTCString() + &quot;;path=/&quot;); }); location.reload();})();">Clear Cookies</a>
-	<!-- Clear Cookies script taken from https://stackoverflow.com/questions/179355/clearing-all-cookies-with-javascript -->
+	<div class="mother-of-all-links">
+		<div class="the-group-with-the-logo">
+			<a href="{{ site.url }}"><img class="logo" src="{{ "/assets/img/logo.svg" | prepend: site.url }}" alt="Home"></a>
+		</div>
+		<div>
+			Git Repos
+			<a href="https://github.com/StartNine/start9">Start9</a>
+			<a href="https://github.com/StartNine/start9-api">Start9 API</a>
+			<a href="https://github.com/StartNine/start9-ui">Start9 UI</a>
+			<a href="https://github.com/StartNine/start9-skindesigner">Start9 Skin Designer</a>
+			<a href="https://github.com/StartNine/">More&hellip;</a>
+		</div>
+	</div>
+	<div class="footer-text">
+		<p>Hope you have cookies enabled! We use session cookies to save theme data.  <a href="javascript:(function(){document.cookie.split(&quot;;&quot;).forEach(function(c) { document.cookie = c.replace(/^ +/, &quot;&quot;).replace(/=.*/, &quot;=;expires=&quot; + new Date().toUTCString() + &quot;;path=/&quot;); }); location.reload();})();">Clear Cookies</a></p>   
+	</div>
 </footer>
 <noscript id="deferred-styles">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,900"/>
