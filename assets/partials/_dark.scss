@@ -18,6 +18,12 @@
 		color: white;
 	}
 
+	footer {
+		background: linear-gradient(to bottom, #303030, #252525, #1B1B1B, #111, black);
+		border-image-width: 2px 0 0 0;
+		.logo { filter: grayscale(100%); }
+	}
+
 	p, li { opacity: .8; }
 	.bar1, .bar2, .bar3 { box-shadow: initial; }
 	.aurora-panel img { filter: grayscale(100%); }
