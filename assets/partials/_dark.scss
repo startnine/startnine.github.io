@@ -3,88 +3,88 @@
 */
 // sass-lint:disable no-important force-element-nesting force-pseudo-nesting
 
-.dark {
+.dark, html[nighteye="active"]{
 	.menu-bar, .menu-bar .button,  .menu-bar .button:hover,
 	.menu-bar .button:active,  .menu-bar .button.disabled,
 	.button,  .button:hover,  .button:active, .caption-button,
 	[type="checkbox"] + label,  [type="radio"] + label {
-		background: initial;
-		border: initial;
-		border-image: none;
+		background: initial !important;
+		border: initial !important;
+		border-image: none !important;
 	}
 
 	body {
-		background: #303030 linear-gradient(#303030 1%, #212121 50%, black 100%);
-		color: white;
+		background: #303030 linear-gradient(#303030 1%, #212121 50%, black 100%) !important;
+		color: white !important;
 	}
 
 	footer {
-		background: linear-gradient(to bottom, #303030, #252525, #1B1B1B, #111, black);
-		border-image-width: 2px 0 0 0;
-		.logo { filter: grayscale(100%); }
+		background: linear-gradient(to bottom, #303030, #252525, #1B1B1B, #111, black) !important;
+		border-image-width: 2px 0 0 0 !important;
+		.logo { filter: grayscale(100%) !important; }
 	}
 
-	p, li { opacity: .8; }
-	.bar1, .bar2, .bar3 { box-shadow: initial; }
-	.aurora-panel img { filter: grayscale(100%); }
-	.burger-button { .bar1, .bar2, .bar3 { background-color: white; } }
-	.change { .bar1, .bar2, .bar3 { box-shadow: initial; } }
-	.logo .image { filter: grayscale(100%); }
-	.menu-focus.active { background: black; }
-	.title, .logo .text { opacity: 1; }
+	p, li { opacity: .8 !important; }
+	.bar1, .bar2, .bar3 { box-shadow: initial !important; }
+	.aurora-panel img { filter: grayscale(100%) !important; }
+	.burger-button { .bar1, .bar2, .bar3 { background-color: white !important; } }
+	.change { .bar1, .bar2, .bar3 { box-shadow: initial !important; } }
+	.logo .image { filter: grayscale(100%) !important; }
+	.menu-focus.active { background: black !important; }
+	.title, .logo .text { opacity: 1 !important; }
 
 	.header-background {
-		background: black;
-		overflow: hidden;
+		background: black !important;
+		overflow: hidden !important;
 	}
 
 	.menu-bar {
-		background: #212121;
-		border-radius: 2px;
-		overflow: hidden;
+		background: #212121 !important;
+		border-radius: 2px !important;
+		overflow: hidden !important;
 
 		.button {
-			background: transparent;
-			border-radius: 0;
-			color: white;
-			transition: background .2s;
+			background: transparent !important;
+			border-radius: 0 !important;
+			color: white !important;
+			transition: background .2s !important;
 
-			&.disabled { color: rgba(255, 255, 255, .5); }
-			&:hover { background: rgba(158, 158, 158, .2); }
-			&:active { background: rgba(158, 158, 158, .4); }
+			&.disabled { color: rgba(255, 255, 255, .5) !important; }
+			&:hover { background: rgba(158, 158, 158, .2) !important; }
+			&:active { background: rgba(158, 158, 158, .4) !important; }
 		}
 	}
 
 	.button {
-		background: #424242;
-		border-radius: .1rem;
-		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
-		color: white;
+		background: #424242 !important;
+		border-radius: .1rem !important;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12) !important;
+		color: white !important;
 
 		&:hover {
-			background: #424242;
-			filter: brightness(120%);
+			background: #424242 !important;
+			filter: brightness(120%) !important;
 		}
 
-		&:active { box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2); }
+		&:active { box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2) !important; }
 	}
 
 	.caption-button {
-		background: rgba(0, 0, 0, .2);
-		color: white;
+		background: rgba(0, 0, 0, .2) !important;
+		color: white !important;
 
 		&:hover {
-			background: rgba(0, 0, 0, .2);
-			color: white;
+			background: rgba(0, 0, 0, .2) !important;
+			color: white !important;
 		}
 	}
 
 	.code, code {
-		background: #171717;
-		color: #EFF;
+		background: #171717 !important;
+		color: #EFF !important;
 	}
 
-	.waves-ripple { background: rgba(255, 255, 255, .2) !important; }
+	.waves-ripple { background: rgba(255, 255, 255, .2) !important !important; }
 
-	@media screen and (max-width: 37.5rem) { .header-background, .menu-bar { overflow: initial; } }
+	@media screen and (max-width: 37.5rem) { .header-background, .menu-bar { overflow: initial !important; } }
 }
