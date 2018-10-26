@@ -9,10 +9,18 @@
 				{{ page.title }}
 			{% endif %}
 		</span>
+	<!--
 		<span class="a11y-menu invisible">
 			<a class="caption-button textAdjust" onclick="textNormal()" aria-label="Disable Larger Text" title="Disable Larger Text" tabindex="0">a</a>
 			<a class="caption-button textAdjust" onclick="textLarge()" aria-label="Enable Larger Text" title="Enable Larger Text" tabindex="0">A</a>
 			<a class="caption-button contrast" title="Toggle High Contrast Mode"  tabindex="0"><i class="fas fa-adjust"></i></a>
+		</span>
+			<a class="caption-button a11y-toggle invisible" title="Accessibility"  tabindex="0"><i class="fas fa-universal-access"></i></a>
+	-->
+		<span class="caption-menu">
+			<a href="ircs://chat.freenode.net:6697/startnine" class="caption-button" title="IRC ( #startnine on freenode )" tabindex="0"><i class="fas fa-hashtag"></i></a>
+			<a href="https://github.com/StartNine/" class="caption-button" title="Discord Server" tabindex="0"><i class="fab fa-discord"></i></a>
+			<a href="https://github.com/StartNine" class="caption-button" title="Github" tabindex="0"><i class="fab fa-github"></i></a>
 		</span>
 	</p>
 	<nav class="menu-bar" id="menu-bar">

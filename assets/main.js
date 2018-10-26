@@ -156,6 +156,9 @@ $(document).ready(function() {
 		return false; // And also make sure you return false from your click handler.
 	});
 
+	/* accesibility menu toggle*/
+//  $(".a11y-toggle").click(function() { $(".a11y-menu").toggleClass("invisible"); });
+
 	/* Cross site transitions */
 	$("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 	$("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
