@@ -157,7 +157,7 @@ $(document).ready(function() {
 	});
 
 	/* accesibility menu toggle*/
-//  $(".a11y-toggle").click(function() { $(".a11y-menu").toggleClass("invisible"); });
+	$(".a11y-toggle").click(function() { $(".dropdown").toggleClass("open") })
 
 	/* Cross site transitions */
 	$("#gitbutton").click(function() { $(".github").toggleClass("active"); });
