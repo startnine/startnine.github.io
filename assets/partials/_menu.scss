@@ -57,9 +57,9 @@
 		}
 	}
 
-	// &:hover .dropdown-content, .a11y-toggle:focus + .dropdown-content,
-	&.open .dropdown-content {
-		display: block;
+	&.open {
+		.dropdown-content { display: block; }
+		.a11y-toggle { opacity: .3; }
 	}
 
 }

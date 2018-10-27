@@ -61,8 +61,8 @@ function darkSideOfTheMoon() {
 $(document).ready(function() {
 	/* Unhide accessbility controls */
 	if (navigator.cookieEnabled) {
-		$(".title-text").css("left", "2.8rem");
-		$(".a11y-menu").removeClass("invisible");
+		$(".title-text").css("left", "4.5rem");
+		$("<a class=\"caption-button a11y-toggle\" title=\"Accessibility\" href=\"javascript:void(0);\"><i class=\"fas fa-universal-access\"><\/i><\/a>").insertBefore(".a11y-menu");
 		console.log("s u c c e s s: your browser can eat cookies");
 	}
 	else { console.log("f a i l: your browser cannot eat cookies"); };
@@ -157,8 +157,31 @@ $(document).ready(function() {
 	});
 
 	/* accesibility menu toggle*/
-	$(".a11y-toggle").click(function() { $(".dropdown").toggleClass("open") })
+//  $(".a11y-toggle").click(function() { $(".dropdown").toggleClass("open") })
+	var menuItems = document.querySelectorAll('span.dropdown');
+	Array.prototype.forEach.call(menuItems, function(el, i){
+		el.querySelector('a').addEventListener("click",  function(event){
+			if (this.parentNode.className == "dropdown") {
+				this.parentNode.className = "dropdown open";
+				this.setAttribute('aria-expanded', "true");
+			} else {
+				this.parentNode.className = "dropdown";
+				this.setAttribute('aria-expanded', "false");
+			}
+			event.preventDefault();
+			return false;
+		});
+	});
 
+	$(document).mouseup(function(e) {
+	var container = $("span.dropdown");
+
+	// if the target of the click isn't the container nor a descendant of the container
+	if (!container.is(e.target) && container.has(e.target).length === 0) 
+	{
+	    container.removeClass("open");
+	}
+	});
 	/* Cross site transitions */
 	$("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 	$("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
