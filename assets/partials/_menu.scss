@@ -54,6 +54,7 @@
 			padding: .5em;
 			text-decoration: none;
 			&:hover { background-color: #F1F1F1; }
+			.desc { font-weight: initial; }
 		}
 	}
 
@@ -66,8 +67,6 @@
 
 /* Required for _mobile */
 .mobile-logo { display: none; }
-
-.header-space { height: 6em; }
 
 .menu-focus {
 	display: none;
@@ -87,6 +86,8 @@
 }
 
 /* Menu Bar */
+.header-space { height: 6em; }
+
 .header-background {
 //  background: #6FB0F3 url("img/header-background.svg");
 	background: linear-gradient(to left, #4D88D5 8%, #5E99E3 25%, #70B0F3 45%, #70B0F3 60%, #5E99E3 75%, #4D88D5 92%);

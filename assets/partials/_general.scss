@@ -2,6 +2,8 @@
 ** HTML and body styling
 */
 html {
+//  background: #C8D4E7 url("img/background.svg") repeat-x top center fixed;
+	background: linear-gradient(white, #C8D4E7);
 	font-family: "Selawik", "Segoe UI", sans-serif;
 	min-height: 100%;
 	overflow-x: hidden;
@@ -9,8 +11,6 @@ html {
 }
 
 body {
-//  background: #C8D4E7 url("img/background.svg") repeat-x top center fixed;
-	background: linear-gradient(white, #C8D4E7);
 	margin: 0;
 	min-height: 100%;
 	overflow-x: hidden;
