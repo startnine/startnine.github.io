@@ -198,7 +198,4 @@ $(document).ready(function() {
 	}
 	  prevScrollpos = currentScrollPos;
 	}
-
-	/* iOS Hack - Detect if is scrolled to top & make it show navbar */
-	if($("body, html").scrollTop==0){ navbar.addClass("scroll-up"); }
 });
