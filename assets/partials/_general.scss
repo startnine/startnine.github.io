@@ -11,6 +11,7 @@ html {
 }
 
 body {
+	color: $text-color;
 	margin: 0;
 	min-height: 100%;
 	overflow-x: hidden;
@@ -132,10 +133,10 @@ body {
 ** Fontfaces
 **  Mixed tabs and spaces 
 **  for alignment reasons
-**  (don't kill me)
 */
 /* Light */
 @font-face {
+	font-display: swap;
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 200;
@@ -148,6 +149,7 @@ body {
 
 /* Semilight */
 @font-face {
+	font-display: swap;
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 300;
@@ -160,6 +162,7 @@ body {
 
 /* Normal */
 @font-face {
+	font-display: swap;
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 400;
@@ -172,6 +175,7 @@ body {
 
 /* Semibold */
 @font-face {
+	font-display: swap;
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 600;
@@ -184,6 +188,7 @@ body {
 
 /* Bold */
 @font-face {
+	font-display: swap;
 	font-family: Selawik;
 	font-style: normal;
 	font-weight: 700;
@@ -198,9 +203,7 @@ body {
 ** Falbacks
 */
 .no-cssgrid {
-	.grid-body {
-		display: table;
-	}
+	.grid-body { display: table; }
 
 	.content {
 		display: table-cell;
