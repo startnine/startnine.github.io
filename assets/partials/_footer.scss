@@ -2,7 +2,7 @@
 ** Footer
 */
 footer {
-	background: #4F89CA; // fallback contrast
+//  background: #4F89CA; // fallback contrast
 	background: linear-gradient(to top, #4F89CA, #5793D4, #5F9CDE, #68A6E9, #70B0F3);
 	border-image: linear-gradient(to left, rgba(0, 0, 0, 0) 8%, rgba(255, 255, 255, .5) 25%, rgba(255, 255, 255, .75) 50%, rgba(255, 255, 255, .5) 75%, rgba(0, 0, 0, 0) 92%) 2;
 	border-image-width: 2px 0 0 0;
@@ -13,22 +13,31 @@ footer {
 	padding: 1em 0 .5em;
 	width: 100%;
 
-	.the-group-with-the-logo {
-		a {
-			background: url("img/logo.svg") no-repeat center;
-			background-size: 100% 100%;
-			height: 3em;
-			width: 3em;
-		}
-	}
-
 	a {
 		color: inherit;
 		opacity: .8;
 		text-decoration: underline;
 		transition: opacity .125s ease;
-		&:hover, &:focus { opacity: 1; }
+		&:hover { opacity: 1; }
 		&:active { opacity: .3; }
+
+		&:focus {
+			background-color: white;
+			color: #4F89CA;
+			opacity: 1;
+			padding: 0 2px;
+		}
+	}
+
+	.the-group-with-the-logo {
+		a {
+			background: url("img/logo.svg") no-repeat center;
+			background-color: inital;
+			background-size: 100% 100%;
+			height: 3em;
+			padding: inital;
+			width: 3em;
+		}
 	}
 
 	.mother-of-all-links {
@@ -61,3 +70,5 @@ footer {
 		}
 	}
 }
+
+.jerry-mouse footer :focus { background-color: initial; color: white; padding: initial; } // Remove focus styles for mouse

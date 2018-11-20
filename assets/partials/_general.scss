@@ -23,6 +23,8 @@ body {
 /*
 ** General
 */
+.jerry-mouse :focus { outline: none; }
+
 .waves-ripple { background: rgba(255, 255, 255, 0) !important; } // sass-lint:disable-line no-important
 
 .byline { font-style: italic; }

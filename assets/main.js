@@ -199,4 +199,16 @@ $(document).ready(function() {
 	  prevScrollpos = currentScrollPos;
 	  if(currentScrollPos==0){ navbar.removeClass("scroll-up"); } // iOS / bouncy scroll hack (not sure if working)
 	}
+
+	// Let the document know when the mouse is being used,
+	// so accessibility styling can be removed.
+	// https://codepen.io/anon/pen/XYoJQv
+	
+	document.body.addEventListener('mousedown', function() {
+		document.body.classList.add('jerry-mouse');
+	  });
+
+	  document.body.addEventListener('keydown', function() {
+		document.body.classList.remove('jerry-mouse');
+	  });
 });
