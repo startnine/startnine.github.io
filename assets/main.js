@@ -197,5 +197,6 @@ $(document).ready(function() {
 		navbar.addClass("scroll-up");
 	}
 	  prevScrollpos = currentScrollPos;
+	  if(currentScrollPos==0){ navbar.removeClass("scroll-up"); } // iOS / bouncy scroll hack (not sure if working)
 	}
 });
