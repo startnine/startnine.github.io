@@ -16,6 +16,7 @@
 		<p>Hope you have cookies enabled! We use session cookies to save theme data.  <a href="javascript:(function(){document.cookie.split(&quot;;&quot;).forEach(function(c) { document.cookie = c.replace(/^ +/, &quot;&quot;).replace(/=.*/, &quot;=;expires=&quot; + new Date().toUTCString() + &quot;;path=/&quot;); }); location.reload();})();">Clear Cookies</a></p>   
 	</div>
 </footer>
+<!--
 <noscript id="deferred-styles">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,900"/>
 </noscript>
@@ -27,8 +28,8 @@
 			document.body.appendChild(replacement)
 			addStylesNode.parentElement.removeChild(addStylesNode);
 		};
-		var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-			window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+		var raf = window.requestAnimationFrame;
 		if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
 		else window.addEventListener('load', loadDeferredStyles);
 </script>
+-->
