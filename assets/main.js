@@ -156,35 +156,6 @@ $(document).ready(function() {
 		return false; // And also make sure you return false from your click handler.
 	});
 
-/*
-	//  accesibility menu toggle
-	//  $(".a11y-toggle").click(function() { $(".dropdown").toggleClass("open") })
-		var menuItems = document.querySelectorAll('span.dropdown');
-		Array.prototype.forEach.call(menuItems, function(el, i){
-			el.querySelector('a').addEventListener("click",  function(event){
-				if (this.parentNode.className == "dropdown") {
-					this.parentNode.className = "dropdown open";
-					this.setAttribute('aria-expanded', "true");
-				} else {
-					this.parentNode.className = "dropdown";
-					this.setAttribute('aria-expanded', "false");
-				}
-				event.preventDefault();
-				return false;
-			});
-		});
-	
-		$(document).mouseup(function(e) {
-		var container = $("span.dropdown");
-		
-		// if the target of the click isn't the container nor a descendant of the container
-		if (!container.is(e.target) && container.has(e.target).length === 0) 
-		{
-		    container.removeClass("open");
-		}
-		});
-*/
-
 	/* Cross site transitions */
 	$("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 	$("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
