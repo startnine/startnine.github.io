@@ -18,15 +18,17 @@ footer {
 		opacity: .8;
 		text-decoration: underline;
 		transition: opacity .125s ease;
-		&:hover { opacity: 1; }
-		&:active { opacity: .3; }
 
-		&:focus {
+		&:focus, &:focus-visible { // Remove &:focus when Chrome and Edge support focus-visible
 			background-color: white;
 			color: #4F89CA;
 			opacity: 1;
 			padding: 0 2px;
 		}
+	
+		&:hover { opacity: 1; }
+		&:active { opacity: .3; }
+
 	}
 
 	.the-group-with-the-logo {
@@ -71,4 +73,4 @@ footer {
 	}
 }
 
-.jerry-mouse footer :focus { background-color: initial; color: white; padding: initial; } // Remove focus styles for mouse
+.jerry-mouse footer :focus, :focus-visible { background-color: initial; color: white; padding: initial; } // Remove focus styles for mouse
