@@ -1,20 +1,24 @@
 <head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		{% seo %}
 		<meta name="keywords" content="Start9, StartNine, shell, shell replacement, start nine, startnine" />
 		<meta itemprop="image" content="{{ "/assets/img/icon.png" | prepend: site.url }}" />
 		<meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/img/favicon/apple-touch-icon.png" | prepend: site.url }}" />
 		<link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/favicon/favicon-32x32.png" | prepend: site.url }}" />
 		<link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/favicon/favicon-16x16.png" | prepend: site.url }}" />
-		<link rel="shortcut icon" href="{{ "/assets/img/icon.png" | prepend: site.url }}" />
+		<link rel="shortcut icon" href="{{ "favicon.ico" | prepend: site.url }}" />
 		<link rel="manifest" href="{{ "/assets/jasonsmanifest.json" | prepend: site.url }}" />
-		<meta name="msapplication-TileColor" content="#4d88d5">
+		<meta name="msapplication-TileColor" content="#fffff">
 		<meta name="theme-color" content="#4d88d5" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="{{ "/assets/style.css" | prepend: site.url }}" />
+
 		{% feed_meta %}
+
+		<link rel="stylesheet" href="{{ "/assets/style.css" | prepend: site.url }}" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js" integrity="sha256-H0TPKZAP4+uKmBpntUUMrKgH4VXBQNDZumun6fvan4w=" crossorigin="anonymous" defer></script>
 		<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js" crossorigin="anonymous" defer></script>
