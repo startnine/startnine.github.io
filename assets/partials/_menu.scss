@@ -27,7 +27,7 @@
 			opacity: 1;
 			text-decoration: none;
 		}
-	
+
 		&:active { opacity: .3; }
 
 		svg { filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .5)); }
@@ -39,7 +39,7 @@
 	position: relative;
 
 	.dropdown-content {
-		background-color: #F9F9F9;
+		background-color: white;
 		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
 		display: none;
 		line-height: 1em;
@@ -53,12 +53,12 @@
 			display: block;
 			padding: .5em;
 			text-decoration: none;
-			&:hover { background-color: #F1F1F1; }
-			.desc { font-weight: initial; }
+			&:hover, &:focus { background-color: lightgray; }
+//          .desc { font-weight: initial; }
 		}
 	}
 
-	&.open {
+	&:focus-within, &:hover {
 		.dropdown-content { display: block; }
 		.a11y-toggle { opacity: .3; }
 	}
