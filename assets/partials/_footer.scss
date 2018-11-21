@@ -73,4 +73,4 @@ footer {
 	}
 }
 
-.jerry-mouse footer :focus, :focus-visible { background-color: initial; color: white; padding: initial; } // Remove focus styles for mouse
+.jerry-mouse footer :focus, .jerry-mouse footer :focus-visible { background-color: initial; color: white; padding: initial; } // Remove focus styles for mouse
