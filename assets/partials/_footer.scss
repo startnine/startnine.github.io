@@ -13,35 +13,6 @@ footer {
 	padding: 1em 0 .5em;
 	width: 100%;
 
-	a {
-		color: inherit;
-		opacity: .8;
-		text-decoration: underline;
-		transition: opacity .125s ease;
-
-		&:focus, &:focus-visible { // Remove &:focus when Chrome and Edge support focus-visible
-			background-color: white;
-			color: #4F89CA;
-			opacity: 1;
-			padding: 0 2px;
-		}
-	
-		&:hover { opacity: 1; }
-		&:active { opacity: .3; }
-
-	}
-
-	.the-group-with-the-logo {
-		a {
-			background: url("img/logo.svg") no-repeat center;
-			background-color: inital;
-			background-size: 100% 100%;
-			height: 3em;
-			padding: inital;
-			width: 3em;
-		}
-	}
-
 	.mother-of-all-links {
 		align-content: flex-start;
 		display: flex;
@@ -58,6 +29,60 @@ footer {
 				display: block;
 				font-size: 1rem;
 			}
+		}
+	}
+
+	a {
+		color: inherit;
+		opacity: .8;
+		text-decoration: underline;
+		transition: opacity .125s ease;
+
+		&:focus, &:focus-visible { // Remove &:focus when Chrome and Edge support focus-visible
+			background-color: white;
+			color: #4F89CA;
+			opacity: 1;
+			padding: 0 2px;
+		}
+
+		&:hover { opacity: 1; }
+		&:active { opacity: .3; }
+
+	}
+
+	.the-group-with-the-logo {
+		a {
+			background: url("img/logo.svg") no-repeat center;
+			background-color: initial;
+			background-size: 100% 100%;
+			height: 3em;
+			padding: initial;
+			width: 3em;
+		}
+	}
+
+	.connect-buttons {
+		display: flex;
+		justify-content: space-around;
+
+		a {
+			font-size: 1.5em;
+			opacity: .75;
+			padding: .5em;
+			text-decoration: none;
+			transition: opacity .125s ease;
+
+			&:hover {
+				opacity: 1;
+			}
+
+			&:focus, &:focus-visible { // Remove &:focus when Chrome and Edge support focus-visible
+				padding: .5em;
+			}
+
+			&:active { opacity: .3; }
+
+			svg { filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .5)); }
 		}
 	}
 

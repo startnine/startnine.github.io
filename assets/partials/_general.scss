@@ -23,6 +23,15 @@ body {
 /*
 ** General
 */
+.vox-only {
+	height: 1px;
+	left: -420691337px;
+	overflow: hidden;
+	position: absolute;
+	top: auto;
+	width: 1px;
+}
+
 .jerry-mouse :focus { outline: none; }
 
 .waves-ripple { background: rgba(255, 255, 255, 0) !important; } // sass-lint:disable-line no-important
