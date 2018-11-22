@@ -44,10 +44,17 @@ footer {
 			color: #4F89CA;
 			opacity: 1;
 			padding: 0 2px;
+			text-shadow: initial;
+			svg { filter: unset; }
 		}
 
 		&:hover { opacity: 1; }
-		&:active { opacity: .3; }
+
+		&:active {
+			opacity: .3;
+			text-shadow: initial;
+			svg { filter: unset; }
+		}
 
 	}
 
@@ -68,22 +75,17 @@ footer {
 
 		a {
 			font-size: 1.5em;
-			opacity: .75;
 			padding: .5em;
 			text-decoration: none;
 			transition: opacity .125s ease;
 
-			&:hover {
-				opacity: 1;
-			}
+			svg { filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .5)); }
 
 			&:focus, &:focus-visible { // Remove &:focus when Chrome and Edge support focus-visible
 				padding: .5em;
+				svg { filter: unset; }
 			}
 
-			&:active { opacity: .3; }
-
-			svg { filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .5)); }
 		}
 	}
 
@@ -99,4 +101,6 @@ footer {
 	}
 }
 
-.jerry-mouse footer :focus, .jerry-mouse footer :focus-visible { background-color: initial; color: white; padding: initial; } // Remove focus styles for mouse
+.jerry-mouse footer :focus, .jerry-mouse footer :focus-visible { // Remove focus styles for mouse
+	background-color: initial; color: white; padding: initial;
+}
