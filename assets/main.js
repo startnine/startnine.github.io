@@ -62,7 +62,7 @@ $(document).ready(function() {
 	/* Unhide accessbility controls */
 	if (navigator.cookieEnabled) {
 		$("<a class=\"caption-button a11y-toggle\" href=\"javascript:void(0);\"><i class=\"fas fa-universal-access\" aria-hidden=\"true\"><\/i><span class=\"vox-only\">Accessibility<\/span><\/a>").insertBefore(".a11y-menu");
-		$(".title-text").css("left", ".5rem");
+		$(".title-text").css("left", "1.4rem");
 		console.log("s u c c e s s: your browser can cookies");
 	}
 	else { console.log("f a i l: your browser cannot cookies"); };
@@ -105,6 +105,7 @@ $(document).ready(function() {
 			setTimeout( function() {
 				$(".menu-focus").toggleClass("active menu-focus-out");
 				$(".menu-bar").removeClass("responsive slide-up");
+				$('.header-background').css("paddingBottom", "0");
 			}, 300); 
 		}
 		
@@ -114,6 +115,7 @@ $(document).ready(function() {
 			$('html, body').css("cssText", "overflow-y: hidden !important;");
 			$(".menu-bar").removeClass("slide-up").addClass("slide-down").addClass("responsive");
 			$(".menu-focus").removeClass("menu-focus-out").addClass("menu-focus-in").toggleClass("active");
+			$('.header-background').css("paddingBottom", "1em");
 		}
 	});
 

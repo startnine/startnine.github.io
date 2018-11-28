@@ -37,11 +37,12 @@
 
 @media screen and (min-width: 37.5rem) {
 	.menu-focus {
-		display: none;
-		opacity: 0;
-		visibility: hidden;
+		display: none !important;
+		opacity: 0 !important;
+		visibility: hidden !important;
 	}
 }
+
 
 @media screen and (max-width: 37.5rem) {
 	.header-background {
@@ -80,7 +81,8 @@
 
 	.header-space { height: 3rem; }
 
-	.menu-bar { display: none;
+	.menu-bar {
+		display: none;
 		&.responsive { display: block; }
 	}
 
