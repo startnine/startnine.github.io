@@ -2,7 +2,7 @@
 <div class="header-background">
 	<div class="burger-button" onclick="burgerButton(this);" aria-label="menu"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
 	<p class="title">
-		<span class="title-text" data-target="{{ page.order }}">
+		<span class="title-text">
 			{% if page.layout == 'post' %}
 				Post
 			{% else %}
@@ -23,7 +23,14 @@
 		{% assign sorted_pages = site.pages | sort:"order" %}
 		{% for node in sorted_pages %}
 			{% if node.menu == 'main' %}
-				<a class="delaylink button" data-target="{{ node.order }}" onclick="fadeOut();" href="{{ node.url | prepend: node.baseurl }}">{{ node.title }}</a>   
+				<a class="delaylink button" data-target="{{ node.order }}" onclick="    
+				{% if page.order < node.order %}fadeOutRight();
+				{% elsif page.order > node.order %}fadeOutLeft();
+				{% else %}fadeOut();{% endif %}
+				" 
+				href="{{ node.url | prepend: node.baseurl }}">
+				{{ node.title }} 
+				</a>            
 			{% endif %}
 		{% endfor %}
 		<a class="disabled button" href="https://github.com/StartNine/Start9/releases" target="_blank" rel="noopener noreferrer" tabindex="-1">Downloads</a>
