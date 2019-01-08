@@ -1,5 +1,4 @@
 ---
-style: compressed
 ---
 
 /*
@@ -36,7 +35,7 @@ style: compressed
 
 .marketplace-flex {
 	align-self: center;
-	bottom: 20rem;
+	bottom: 10rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -96,7 +95,7 @@ style: compressed
 
 		.byline { height: 1em; }
 
-		.header {
+		h2 {
 			color: black;
 			height: 1.1em;
 			left: .5em;

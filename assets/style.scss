@@ -1,5 +1,4 @@
 ---
-style: compressed
 ---
 
 /*!
@@ -9,19 +8,15 @@ style: compressed
 
 @import "partials/animation";
 @import "partials/animational";
-@import "partials/aurora";
 @import "partials/burger";
 @import "partials/button";
 @import "partials/content";
 @import "partials/footer";
 @import "partials/general";
-@import "partials/hero";
 @import "partials/menu";
 @import "partials/post";
-// @import "partials/scrollbar";
+@import "partials/scrollbar";
 
 @import "partials/dark";
 @import "partials/contrast";
 @import "partials/mobile";
-
-@import "partials/waves";

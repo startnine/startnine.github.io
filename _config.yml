@@ -9,6 +9,8 @@ markdown: kramdown
 permalink: /:year/:title:output_ext
 sass:
   sass_dir: assets
+  style: compressed
+
 plugins:
   - jemoji
   - jekyll-sitemap
