@@ -2,12 +2,10 @@
 ** HTML and body styling
 */
 html {
-//  background: #C8D4E7 url("img/background.svg") repeat-x top center fixed;
-	background: linear-gradient(white, #C8D4E7);
-	font-family: "Selawik", "Segoe UI", sans-serif;
+	background: linear-gradient(whitesmoke, #CCC);
+	font-family: "Ubuntu", "Segoe UI", sans-serif;
 	min-height: 100%;
-	overflow-x: hidden;
-	overflow-y: visible;
+	overflow: hidden visible;
 }
 
 body {
@@ -18,7 +16,6 @@ body {
 	padding: 0;
 	tab-size: 4;
 }
-
 
 /*
 ** General
@@ -34,8 +31,6 @@ body {
 
 .jerry-mouse :focus { outline: none; }
 
-.waves-ripple { background: rgba(255, 255, 255, 0) !important; } // sass-lint:disable-line no-important
-
 .byline { font-style: italic; }
 
 .active, .github-active, .discord-active { display: block; }
@@ -44,17 +39,6 @@ body {
 	display: none;
 	opacity: 0;
 	visibility: hidden;
-}
-
-.q {
-	font-size: 110%;
-	font-weight: 600;
-	line-height: 1.5em;
-}
-
-.a {
-	line-height: 1.5em;
-	padding-left: 2em;
 }
 
 .disabled {
@@ -93,14 +77,10 @@ body {
 
 .oneemw { width: 1em; }
 
-/* Wordmark */
-.wordmark {
-	&::after {
-		content: "Start9";
-		font-family: "Libre Franklin", "Franklin Gothic", "Arial Black", sans-serif;
-		font-weight: 900;
-	}
-}
+/*
+** Headers
+*/
+h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 
 /*
 ** Tab Skip
@@ -110,12 +90,12 @@ body {
 	left: -25565vw;
 	overflow: hidden;
 	position: absolute;
-	top: auto;
+	top: 1em;
 	width: 1px;
 	z-index: -1337;
 
-	&:focus, &:active {
-		background: #005AA1;
+	&:focus-visible, &:active {
+		background: #575757;
 		border: 3px solid white;
 		border-radius: 15px;
 		color: white;
@@ -140,89 +120,31 @@ body {
 }
 
 /*
-** Fontfaces
-**  Mixed tabs and spaces 
-**  for alignment reasons
+** Hero
 */
-/* Light */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 200;
-	src: url("font/selawkl.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Light"),
-		 url("font/selawkl.ttf") format("truetype"),
-		 url("font/selawkl.woff") format("woff"),
-		 url("font/selawkl.woff2") format("woff2");
-}
+.hero {
+	display: flex;
+	height: calc(85vh - 6rem);
+	justify-content: space-evenly;
+	margin: auto;
 
-/* Semilight */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 300;
-	src: url("font/selawksl.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Semilight"),
-		 url("font/selawksl.ttf") format("truetype"),
-		 url("font/selawksl.woff") format("woff"),
-		 url("font/selawksl.woff2") format("woff2");
-}
+	div {
+		width: 45%;
 
-/* Normal */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 400;
-	src: url("font/selawk.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik"),
-		 url("font/selawk.ttf") format("truetype"),
-		 url("font/selawk.woff") format("woff"),
-		 url("font/selawk.woff2") format("woff2");
-}
+		h1 {
+			font-size: 4em;
+			margin: 0 auto 1rem;
+		}
 
-/* Semibold */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 600;
-	src: url("font/selawksb.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Semibold"),
-		 url("font/selawksb.ttf") format("truetype"),
-		 url("font/selawksb.woff") format("woff"),
-		 url("font/selawksb.woff2") format("woff2");
-}
+		h2 { margin-top: 0;}
 
-/* Bold */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 700;
-	src: url("font/selawkb.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Bold"),
-		 url("font/selawkb.ttf") format("truetype"),
-		 url("font/selawkb.woff") format("woff"),
-		 url("font/selawkb.woff2") format("woff2");
-}
-
-/*
-** Falbacks
-*/
-.no-cssgrid {
-	.grid-body { display: table; }
-
-	.content {
-		display: table-cell;
-		width: 80%;
+      h1, h2, a, p { background: black; }
 	}
 
-	.side {
-		display: table-cell;
-		width: 15%;
+	.left-half, .right-half {
+		align-self: center;
+		height: 50%;
 	}
-}
 
+	.right-half { text-align: right; }
+}

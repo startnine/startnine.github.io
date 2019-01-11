@@ -10,40 +10,36 @@ a {
 	}
 
 	&.button {
-		border-image-repeat: stretch stretch;
-		border-image-slice: 2 3 3 3 fill;
-		border-image-source: url("img/buttonIdle.png");
-		border-image-width: 2px 2px 2px 2px;
-		border-style: solid;
-		border-width: 0;
-		box-shadow: .2rem .2rem .625rem rgba(0, 0, 0, .5);
+		background: #EEE linear-gradient(#EEE , #DADADA);
+		border: 1px solid #B5B5B5;
+		border-radius: 3px;
+//      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 		color: black;
 		display: inline-block;
 		font-size: .85rem;
-		height: 1.75em;
 		line-height: 1.75em;
+		min-height: 1.75em;
 		padding: .5rem .65rem;
 		text-align: center;
 		text-decoration: none;
-		transition: border-image-source .75s ease, box-shadow .75s ease;
+		transition: background .3s ease, border-color .3s ease;
 		user-select: none;
 		vertical-align: middle;
-		white-space: nowrap;
 
-		&:hover, &:focus {
-			border-image-source: url("img/buttonHover.png");
-			transition: border-image-source .125s ease, box-shadow .125s ease;
+		&:hover {
+			background: #F2F2F2 linear-gradient(#F2F2F2, #E9E9E9);
+			border-color: #CECECE;
 		}
 
-		&:active {
-			border-image-source: url("img/buttonPressed.png");
-			box-shadow: none;
+		&:active, &:focus-visible {
+			background: #D6ECF6 linear-gradient(#9DC6DA, #B1DAEE);
+			border-color: #83A6B6;
+//          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
 		}
 
 		&.disabled {
-			border-image-source: url("img/buttonDisabled.png");
-			box-shadow: .2rem .2rem .625em rgba(0, 0, 0, .5);
-			opacity: 1;
+//          box-shadow: .2rem .2rem .625em rgba(0, 0, 0, .5);
+			background: #CCC linear-gradient(#CCC, #AAA);
 		}
 	}
 }
@@ -51,6 +47,7 @@ a {
 /*
 ** Checkboxes and Radio
 */
+/*
 input {
 	image-rendering: optimizeSpeed;
 
@@ -74,7 +71,7 @@ input {
 
 		&:checked + label {
 			background: url("img/checkbox_checked_idle.svg") no-repeat center;
-			border-image-source: url("img/checkbox_checke_idle.svg");
+			border-image-source: url("img/checkbox_checked_idle.svg");
 		}
 
 		&:indeterminate + label {
@@ -133,3 +130,4 @@ input {
 		}
 	}
 }
+*/

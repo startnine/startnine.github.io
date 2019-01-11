@@ -3,9 +3,10 @@
 */
 // sass-lint:disable no-important force-element-nesting force-pseudo-nesting
 
+
 .dark, html[nighteye="active"]{
-	.menu-bar, .menu-bar .button,  .menu-bar .button:hover,
-	.menu-bar .button:active,  .menu-bar .button.disabled,
+	nav, nav .button,  nav .button:hover,
+	nav .button:active,  nav .button.disabled,
 	.button,  .button:hover,  .button:active, .caption-button,
 	[type="checkbox"] + label,  [type="radio"] + label {
 		background: initial !important;
@@ -19,7 +20,7 @@
 	}
 
 	footer {
-		background: linear-gradient(to bottom, #303030, #252525, #1B1B1B, #111, black) !important;
+		background: linear-gradient(#303030, #252525, #1B1B1B, #111, black) !important;
 		border-image-width: 2px 0 0 0 !important;
 		.logo { filter: grayscale(100%) !important; }
 	}
@@ -33,11 +34,11 @@
 	.menu-focus.active { background: black !important; }
 	.title, .logo .text { opacity: 1 !important; }
 
-	.header-background {
+	.header {
 		background: black !important;
 	}
 
-	.menu-bar {
+	nav {
 		background: #212121 !important;
 		border-radius: 2px !important;
 		overflow: hidden !important;
@@ -83,7 +84,5 @@
 		color: #EFF !important;
 	}
 
-	.waves-ripple { background: rgba(255, 255, 255, .2) !important !important; }
-
-	@media screen and (max-width: 37.5rem) { .header-background, .menu-bar { overflow: initial !important; } }
+	@media screen and (max-width: 37.5rem) { .header, nav { overflow: initial !important; } }
 }

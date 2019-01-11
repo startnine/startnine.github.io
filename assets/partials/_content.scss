@@ -1,14 +1,15 @@
 /*
 ** Content
 */
-// .barba-container {
-//  min-height: calc(100vh - 10rem); // for footer
-// }
+.barba-container {
+	min-height: calc(100vh - 10rem); // for footer
+}
 
 .one-box, .grid-body {
 	align-content: center;
-	bottom: 12rem;
-	margin: 0 10%;
+//  margin: 3em 10vw 2em;
+	margin: 3em auto;
+	max-width: 75em;
 	min-height: 100%;
 	padding: 0;
 	position: relative;
@@ -21,6 +22,7 @@
 	display: grid;
 	grid-template-columns: 80% 15%;
 	grid-template-rows: 100% 100%;
+	margin: 18.5em auto;
 }
 
 .side {

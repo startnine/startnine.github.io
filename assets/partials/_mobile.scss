@@ -3,23 +3,18 @@
 */
 /* Printer adjustments */
 @media print {
-	.header-background, .menu-bar, .header-space, .aurora-panel, .side, footer { display: none; }
+	.header, nav, .header-space, .aurora-panel, .side, footer { display: none; }
 	.logo { display: block; }
 	a { color: black; }
 	body { background: none;}
 }
 
 /* Mobile Adjustments */
-@media screen and (max-width: 62.5rem) {
-	.grid-body {
-		margin: 0;
-		padding: .5em;
-	}
+@media screen and (max-width: 76rem) {
 
-	.one-box {
-		margin: 0;
-		padding: 1rem;
-	}
+	.grid-body { margin: 18.5em 1em; }
+
+	.one-box { margin: 1em; }
 }
 
 @media all and (max-width: 50.75rem) {
@@ -33,6 +28,16 @@
 		grid-row: 2;
 	}
 
+	.hero {
+		display: inline-block;
+		margin: 3em 0;
+
+		div {
+			display: inline-block;
+			margin-bottom: 1.5em;
+			width: calc(100vw - 2rem);
+		}
+	}
 }
 
 @media screen and (min-width: 37.5rem) {
@@ -45,7 +50,7 @@
 
 
 @media screen and (max-width: 37.5rem) {
-	.header-background {
+	.header {
 		height: 3rem;
 
 		.burger-button {
@@ -53,23 +58,26 @@
 			opacity: 1;
 			pointer-events: visible;
 		}
+	}
 
-		.responsive {
+	nav { visibility: hidden; }
+
+	.responsive {
+		& nav {
+			display: inline-block;
+			height: initial;
 			overflow: hidden;
 			position: relative;
+			visibility: initial;
 
 			.button {
-				display: inline-block;
-				padding: 1rem 0;
+				min-width: 100%;
+				padding: 0;
 				width: 100%;
 			}
 		}
 
-		.button {
-			min-width: 100%;
-			padding: 1rem 0;
-			width: 100%;
-		}
+       &.header { height: initial; }
 	}
 
 	.marketplace-title {
@@ -81,25 +89,6 @@
 
 	.header-space { height: 3rem; }
 
-	.menu-bar {
-		display: none;
-		&.responsive { display: block; }
-	}
-
-	.no-cssgrid {
-		.content {
-			display: initial;
-			width: auto;
-		}
-
-		.grid-body { display: initial; }
-
-		.side {
-			display: block;
-			width: auto;
-		}
-	}
-
 	.mother-of-all-links {
 		align-content: center;
 		padding: 0 1em;
@@ -107,4 +96,6 @@
 	}
 
 	.footer-text { padding: 0 1em; }
+
+	footer { .mother-of-all-links { div { padding-bottom: 1em; } } }
 }
