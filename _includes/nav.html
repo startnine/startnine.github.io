@@ -1,36 +1,38 @@
 <a href="#maincontent" class="skip-to-content">Skip to Content</a>
-<div class="header-background">
-	<div class="burger-button" onclick="burgerButton(this);" aria-label="menu"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
-	<p class="title">
-		<span class="title-text">
+<a href="javascript:void(0);" class="skip-to-content textAdjust" onclick="textLarge()">Increase Page Size</a>
+<a href="javascript:void(0);" class="skip-to-content contrast">Toggle Contrast</a>
+<div class="header">
+	<div class="title">
+		<div class="burger-button" onclick="burgerButton(this);" aria-label="menu"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
+		<p class="title-text">
 			{% if page.layout == 'post' %}
 				Post
 			{% else %}
 				{{ page.title }}
 			{% endif %}
-		</span>
+		</p>
 		<span class="caption-menu">
-			<span class="dropdown">
-				<span class="a11y-menu dropdown-content" aria-haspopup="true">
-					<a class="caption-button textAdjust" onclick="textNormal()" href="javascript:void(0);"><b aria-hidden="true">a</b><span class="vox-only">Make text normal</span></a>
-					<a class="caption-button textAdjust" onclick="textLarge()" href="javascript:void(0);"><b aria-hidden="true">A</b><span class="vox-only">Make text larger</span></a>
-					<a class="caption-button contrast" href="javascript:void(0);"><i class="fas fa-adjust" aria-hidden="true"></i><span class="vox-only">Increase contrast</span></a>
+				<span class="dropdown">
+					<span class="a11y-menu dropdown-content" aria-haspopup="true">
+						<a class="caption-button textAdjust" onclick="textNormal()" href="javascript:void(0);"><b aria-hidden="true">a</b><span class="vox-only">Make text normal</span></a>
+						<a class="caption-button textAdjust" onclick="textLarge()" href="javascript:void(0);"><b aria-hidden="true">A</b><span class="vox-only">Make text larger</span></a>
+						<a class="caption-button contrast" href="javascript:void(0);"><i class="fas fa-adjust" aria-hidden="true"></i><span class="vox-only">Increase contrast</span></a>
+					</span>
 				</span>
-			</span>
 		</span>
-	</p>
-	<nav class="menu-bar" id="menu-bar">
+	</div>
+	<nav>
 		{% assign sorted_pages = site.pages | sort:"order" %}
 		{% for node in sorted_pages %}
 			{% if node.menu == 'main' %}
-				<a class="delaylink button" onclick="    
+				<a class="delaylink button {% if page.order == node.order %}current{% endif %}" onclick="
 				{% if page.order < node.order %}fadeOutRight();
 				{% elsif page.order > node.order %}fadeOutLeft();
 				{% else %}fadeOut();{% endif %}
-				" 
+				"
 				href="{{ node.url | prepend: node.baseurl }}">
-				{{ node.title }} 
-				</a>            
+				{{ node.title }}
+				</a>
 			{% endif %}
 		{% endfor %}
 		<a class="disabled button" href="https://github.com/StartNine/Start9/releases" target="_blank" rel="noopener noreferrer" tabindex="-1">Downloads</a>
