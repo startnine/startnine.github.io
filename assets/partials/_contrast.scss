@@ -10,7 +10,7 @@
 	a {
 		&.button {
 			background: #EEE;
-			
+
 			&:hover { background: #F2F2F2; }
 
 			&:active, &:focus-visible { background: #D6ECF6; }
@@ -36,7 +36,8 @@
 
 	footer { background: #FCFCFC; }
 
-	::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner, ::-webkit-scrollbar-button, ::-webkit-scrollbar-thumb {
+	::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner,
+	::-webkit-scrollbar-button, ::-webkit-scrollbar-thumb {
 		background: auto !important;
 		border: auto !important;
 		box-shadow: auto !important;
