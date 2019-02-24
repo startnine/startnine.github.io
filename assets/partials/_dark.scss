@@ -14,7 +14,7 @@
 		background: linear-gradient(#303030, #252525, #1B1B1B, #111, black);
 		color: white;
 
-		.the-group-with-the-logo {
+		.logo-group {
 			a { filter: initial; }
 		}
 	}
@@ -28,10 +28,6 @@
 	.change { .bar1, .bar2, .bar3 { box-shadow: initial; } }
 
 	.menu-focus.active { background: black; }
-
-	.header {
-		background: black;
-	}
 
 	nav {
 		.button {
