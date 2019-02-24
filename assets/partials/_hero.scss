@@ -1,93 +1,68 @@
 /*
-** Hero
+** Hero for index.html
 */
-.bigherosix {
-	background: linear-gradient(rgba(0, 0, 0, .45), rgba(77, 136, 213, .75)), url("img/hero.gif") no-repeat center center fixed;
-	background-size: cover;
-	height: 95vh;
-	margin-bottom: 11rem;
-	margin-top: -6rem;
-	position: relative;
-	top: 0;
-	width: 100vw;
-	z-index: 70;
+.index {
+	.hero, .features, .slide {
+		display: flex;
+		flex-wrap: wrap;
+		height: calc(85% - 6rem);
+		justify-content: space-between;
+		margin: auto 1em;
+		min-height: 20rem;
 
-	.thisisnotagoodclassnamebutiamusingitanyway {
-		margin: 30vh 5vw 0;
-		position: absolute;
-		width: 100vw;
+		div {
+			width: 45%;
+
+			h1 {
+				font-size: 4em;
+				margin: 0 auto 1rem;
+			}
+
+			.subheading {
+				display: block;
+				font-size: 1.5rem;
+			}
+
+			h3 { font-size: 2em;}
+
+			h2, h3 { margin: 0 0 .25rem; }
+
+			p { margin: .25rem 0 1rem; }
+		}
+
+		.left-half, .right-half {
+			align-self: center;
+			height: 50%;
+		}
+
+		.right-half { text-align: right; }
 	}
 
-	.herotitle, .herodesc {
-		color: white;
-		font-size: 4rem;
-		margin: 0;
-		padding: 0;
-		text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
-		width: 100vw;
+	.hero { margin: 20vh 1em; }
+
+	.features { height: initial; }
+
+	.slide {
+		margin: 20vh 1em auto;
+
+		.slide-1, .slide-2, .slide-3, .slide-4 {
+			background-size: 100% 100%;
+			min-height: 20rem;
+			width: 100%;
+		}
+
+		.slide-1 { background-image: url("img/slides/slide1.jpg"); }
+		.slide-2 { background-image: url("img/slides/slide2.jpg"); }
+		.slide-3 { background-image: url("img/slides/slide3.jpg"); }
+		.slide-4 { background-image: url("img/slides/slide4.jpg"); }
 	}
 
-	.herotitle { font-size: 4rem; }
-
-	.herodesc {
+	.interlude {
+		display: block;
+		flex: 0 0 100%;
 		font-size: 2rem;
-		font-weight: 300;
-	}
-
-//  .arrow {
-//      border-color: white;
-//      border-style: solid;
-//      border-width: 0px 4px 4px 0px;
-//      bottom: 10vh;
-//      box-sizing: border-box;
-//      filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
-//      height: 2em;
-//      left: calc(50vw - 1em);
-//      opacity: 0.75;
-//      position: absolute;
-//      transform: rotate(45deg);
-//      transition: all 0.125s ease;
-//      width: 2em;
-//
-//          &:hover { opacity: 1; }
-//
-//          &:active { opacity: 0.3; }
-//  }
-
-	.heronav {
-		background: rgba(0, 0, 0, .5);
-		height: 3rem;
-		user-select: none;
-		width: 100vw;
-
-		.heroitem {
-			bottom: .25em;
-			color: white;
-			display: inline-block;
-			filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .5));
-			line-height: 3rem;
-			margin-left: 2em;
-			position: relative;
-			text-decoration: none;
-			transition: opacity .3s ease;
-
-			&:hover { opacity: .75; }
-
-			&:active { opacity: .3; }
-
-		}
-
-		.accessibility-menu {
-			bottom: .2em;
-			line-height: 3rem;
-			margin-right: 1em;
-		}
-
-		.wordmark {
-			bottom: 0;
-			font-size: 1.5em;
-			line-height: 3rem;
-			margin-left: .5em;
-		}
+		max-height: 2rem;
+		text-align: center;
+		width: 100%;
 	}
 }

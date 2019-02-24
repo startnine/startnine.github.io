@@ -118,33 +118,3 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 	overflow: hidden;
 	width: 1px;
 }
-
-/*
-** Hero
-*/
-.hero {
-	display: flex;
-	height: calc(85vh - 6rem);
-	justify-content: space-evenly;
-	margin: auto;
-
-	div {
-		width: 45%;
-
-		h1 {
-			font-size: 4em;
-			margin: 0 auto 1rem;
-		}
-
-		h2 { margin-top: 0;}
-
-      h1, h2, a, p { background: black; }
-	}
-
-	.left-half, .right-half {
-		align-self: center;
-		height: 50%;
-	}
-
-	.right-half { text-align: right; }
-}
