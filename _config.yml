@@ -12,10 +12,11 @@ sass:
   style: compressed
 
 plugins:
-  - jemoji
-  - jekyll-sitemap
-  - jekyll-redirect-from
   - jekyll-feed
+  - jekyll-github-metadata
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jemoji
 
 defaults:
 - scope:

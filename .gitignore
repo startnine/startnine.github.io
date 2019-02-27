@@ -2,6 +2,7 @@
 *.code-workspace
 *.css.map
 *.db
+*.env
 *.ignore.*
 *.jekyll-metadata
 *.sass.map
