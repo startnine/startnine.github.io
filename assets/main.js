@@ -15,31 +15,52 @@
  * https://modernizr.com/download/?-borderimage-cssgrid_cssgridlegacy-setclasses !*/
 // !function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,s,i,l;for(var a in w)if(w.hasOwnProperty(a)){if(e=[],n=w[a],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],l=i.split("."),1===l.length?Modernizr[l[0]]=o:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=o),C.push((o?"":"no-")+l.join("-"))}}function s(e){var n=_.className,t=Modernizr._config.classPrefix||"";if(b&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),b?_.className.baseVal=n:_.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):b?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function l(e,n){return!!~(""+e).indexOf(n)}function a(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function u(e,n){return function(){return e.apply(n,arguments)}}function f(e,n,t){var o;for(var s in e)if(e[s]in n)return t===!1?e[s]:(o=n[e[s]],r(o,"function")?u(o,t||n):o);return!1}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function c(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var s=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(s){var i=s.error?"error":"log";s[i].call(s,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function p(){var e=n.body;return e||(e=i(b?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var s,l,a,u,f="modernizr",d=i("div"),c=p();if(parseInt(r,10))for(;r--;)a=i("div"),a.id=o?o[r]:f+(r+1),d.appendChild(a);return s=i("style"),s.type="text/css",s.id="s"+f,(c.fake?c:d).appendChild(s),c.appendChild(d),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),d.id=f,c.fake&&(c.style.background="",c.style.overflow="hidden",u=_.style.overflow,_.style.overflow="hidden",_.appendChild(c)),l=t(d,e),c.fake?(c.parentNode.removeChild(c),_.style.overflow=u,_.offsetHeight):d.parentNode.removeChild(d),!!l}function g(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(d(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];o--;)s.push("("+d(n[o])+":"+r+")");return s=s.join(" or "),m("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==c(e,null,"position")})}return t}function y(e,n,o,s){function u(){d&&(delete T.style,delete T.modElem)}if(s=r(s,"undefined")?!1:s,!r(o,"undefined")){var f=g(e,o);if(!r(f,"undefined"))return f}for(var d,c,p,m,y,v=["modernizr","tspan","samp"];!T.style&&v.length;)d=!0,T.modElem=i(v.shift()),T.style=T.modElem.style;for(p=e.length,c=0;p>c;c++)if(m=e[c],y=T.style[m],l(m,"-")&&(m=a(m)),T.style[m]!==t){if(s||r(o,"undefined"))return u(),"pfx"==n?m:!0;try{T.style[m]=o}catch(h){}if(T.style[m]!=y)return u(),"pfx"==n?m:!0}return u(),!1}function v(e,n,t,o,s){var i=e.charAt(0).toUpperCase()+e.slice(1),l=(e+" "+P.join(i+" ")+i).split(" ");return r(n,"string")||r(n,"undefined")?y(l,n,o,s):(l=(e+" "+z.join(i+" ")+i).split(" "),f(l,n,t))}function h(e,n,r){return v(e,t,t,n,r)}var C=[],w=[],S={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){w.push({name:e,fn:n,options:t})},addAsyncTest:function(e){w.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=S,Modernizr=new Modernizr;var _=n.documentElement,b="svg"===_.nodeName.toLowerCase(),x="Moz O ms Webkit",P=S._config.usePrefixes?x.split(" "):[];S._cssomPrefixes=P;var z=S._config.usePrefixes?x.toLowerCase().split(" "):[];S._domPrefixes=z;var E={elem:i("modernizr")};Modernizr._q.push(function(){delete E.elem});var T={style:E.elem.style};Modernizr._q.unshift(function(){delete T.style}),S.testAllProps=v,S.testAllProps=h,Modernizr.addTest("cssgridlegacy",h("grid-columns","10px",!0)),Modernizr.addTest("cssgrid",h("grid-template-rows","none",!0)),Modernizr.addTest("borderimage",h("borderImage","url() 1",!0)),o(),s(C),delete S.addTest,delete S.addAsyncTest;for(var N=0;N<Modernizr._q.length;N++)Modernizr._q[N]();e.Modernizr=Modernizr}(window,document);
 
+/* jquery toggle from v@1.8.0 | jquery.org/licence */
+// renamed to toggleFunction to prevent possible conflict with other jQuery.toggle
+// replace this if there is any other solution to toggle functions
+jQuery.fn.extend({
+	toggleFunction: function( fn ) {
+		// Save reference to arguments for access in closure
+		var args = arguments,
+			guid = fn.guid || jQuery.guid++,
+			i = 0,
+			toggler = function( event ) {
+				// Figure out which function to execute
+				var lastToggle = ( jQuery._data( this, "lastToggle" + fn.guid ) || 0 ) % i;
+				jQuery._data( this, "lastToggle" + fn.guid, lastToggle + 1 );
+
+				// Make sure that clicks stop
+				event.preventDefault();
+
+				// and execute the function
+				return args[ lastToggle ].apply( this, arguments ) || false;
+			};
+
+		// link all the functions, so any of them can unbind this click handler
+		toggler.guid = guid;
+		while ( i < args.length ) {
+			args[ i++ ].guid = guid;
+		}
+
+		return this.click( toggler );
+	}
+});
 
 /*
-** Variables
+** Define variables
 */
 var hostname = window.location.origin;
 
 /*
-** Functions
+** One line functions
+** (remove most of these asap)
 */
 function burgerButton(x) { x.classList.toggle("change"); };
-function menuFocus() { document.querySelector(".burger-button").click(); };
-function fadeOutRight() { $("main").removeClass("fade-in-left fade-in-right").addClass("fade-out-right"); };
-function fadeOutLeft() { $("main").removeClass("fade-in-left fade-in-right").addClass("fade-out-left"); };
-function fadeOut() { $("main").removeClass("fade-in-left fade-in-ight").addClass("fade-out"); };
+function menuFocus() { $(".burger-button").click(); };
+function fadeOutRight() { $("main").removeClass("fade-in-left").addClass("fade-out-right"); };
+function fadeOutLeft() { $("main").removeClass("fade-in-left").addClass("fade-out-left"); };
+function fadeOut() { $("main").removeClass("fade-in").addClass("fade-out"); };
 function scrollUp() { $("html, body").animate({scrollTop: 0}, 150); return false; };
-function someone() { $("body").addClass("someone"); }; // help i"ve fallen and i cant get up
-function textNormal() {
-	$("html").css("font-size", "1em");
-	document.cookie = "text=normal; path=/;";
-};
-function textLarge() {
-	$("html").css("font-size", "2em");
-	document.cookie = "text=large; path=/;";
-};
-
 function darkSideOfTheMoon() {
 	$("html").addClass("dark");
 	document.cookie = "dark=best; path=/;";
@@ -69,72 +90,70 @@ $(document).ready(function() {
 
 	/* Keyboard shortcuts */
 	Mousetrap.bind("up up down down left right left right b a", function() { darkSideOfTheMoon(); });
-	Mousetrap.bind("@ s o m e o n e", function() { someone(); });
+	Mousetrap.bind("@ s o m e o n e", function() { $("body").addClass("someone"); });
 	Mousetrap.bind("n o space u", function() { $("#buttone-main, #buttone-404").toggle(); });
 
-//  var userAgent = navigator.userAgent;
-//  if( userAgent.indexOf("Edge") >= 0 ) {
-//  };
+	/* Contrast toggle */
+	$(".js-contrast").toggleFunction(
+		// off
+		function(){
+			$("html").removeClass("contrast");
+			document.cookie = "contrast=false; path=/; expires=0;";
+		},
+		// on
+		function() {
+			$("html").addClass("contrast");
+			document.cookie = "contrast=true; path=/; expires=0;";
+		}
+	);
+	
+	/* Text Size button toggle */
+	$(".js-text-adjust").toggleFunction(
+		function() { defaultFont(); },
 
-//  /* Modernizr */
-//  if (Modernizr.cssgrid) { console.log("s u c c e s s: your browser can do CSS grids"); }
-//  else { console.log("f a i l: your browser cannot CSS grids correctly"); };
+		function() { largeFont(); }
+	);
 
-//  if (Modernizr.borderimage) { console.log("s u c c e s s: your browser can do border-image"); }
-//  else { console.log("f a i l: your browser sucks cannot border-image correctly"); };
+	function defaultFont() {
+		$("html").css("font-size", "1em");
+		document.cookie = "text=normal; path=/;";
+		$(".caption-button.js-text-adjust").html("A");
+	}
 
-	/* Hamburger toggle */
-	var clickedBurger = false;
-	$(".burger-button").click(function() {
-		if(clickedBurger) {
-		// closed
-			clickedBurger = false;
+	function largeFont() {
+		$("html").css("font-size", "2em");
+		document.cookie = "text=large; path=/;";
+		$(".caption-button.js-text-adjust").html("a");
+	}
+
+	/* Hamburger button toggle */
+	$(".burger-button").toggleFunction(
+		function() {
 			$('html, body').css("cssText", "overflow-y: inital;");
 			$("nav, .header").removeClass("slide-down").addClass("slide-up");
 			$(".menu-focus").removeClass("menu-focus-in").addClass("menu-focus-out");
+
 			setTimeout( function() {
 				$(".menu-focus").toggleClass("active menu-focus-out");
 				$("nav, .header").removeClass("responsive slide-up");
 			}, 300);
-		}
+		},
 
-		// opened
-		else {
-			clickedBurger = true;
+		function() {
 			$('html, body').css("cssText", "overflow-y: hidden !important;");
 			$("nav, .header").removeClass("slide-up").addClass("slide-down").addClass("responsive");
 			$(".menu-focus").removeClass("menu-focus-out").addClass("menu-focus-in").toggleClass("active");
 		}
-	});
-
-	/* Contrast toggle */
-	var clickedContrast = false;
-	$(".contrast").click(function() {
-		// off
-		if(clickedContrast) {
-			clickedContrast = false;
-			$("html").removeClass("contrast");
-			document.cookie = "contrast=false; path=/; expires=0;";
-		}
-		// on
-		else {
-			clickedContrast = true;
-			$("html").addClass("contrast");
-			document.cookie = "contrast=true; path=/; expires=0;";
-		}
-	});
+	);
 
 	/* Apply styles from cookies */
-	if (document.cookie.includes("text=large")) { textLarge(); };
+	if (document.cookie.includes("text=large")) { largeFont(); };
 
-	if (document.cookie.includes("text=normal")) { textNormal(); };
+	if (document.cookie.includes("text=normal")) { defaultFont(); };
 
-	if (document.cookie.includes("contrast=true")) {
-		var clickedContrast = true;
-		$("html").addClass("contrast");
-	};
+	if (document.cookie.includes("contrast=true")) { $("html").addClass("contrast"); };
 
-	if (document.cookie.includes("contrast=false")) { $("#contrast").remove(); };
+	if (document.cookie.includes("contrast=false")) { $("html").removeClass("contrast"); };
 
 	if (document.cookie.includes("dark=best")) { darkSideOfTheMoon(); };
 
@@ -177,9 +196,9 @@ $(document).ready(function() {
 
 	document.body.addEventListener('mousedown', function() {
 		document.body.classList.add('jerry-mouse');
-	  });
+	});
 
-	  document.body.addEventListener('keydown', function() {
+	document.body.addEventListener('keydown', function() {
 		document.body.classList.remove('jerry-mouse');
-	  });
+	});
 });
