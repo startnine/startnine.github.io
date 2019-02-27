@@ -44,4 +44,8 @@
 		width: auto !important;
 	}
 
+	.caption-button {
+		&.js-contrast { transform: rotate(180deg); } // horizontal-flip contrast button
+	}
+
 }
