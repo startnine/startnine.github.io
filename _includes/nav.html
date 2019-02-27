@@ -1,6 +1,6 @@
 <a href="#maincontent" class="skip-to-content">Skip to Content</a>
-<a href="javascript:void(0);" class="skip-to-content textAdjust" onclick="textLarge()">Increase Page Size</a>
-<a href="javascript:void(0);" class="skip-to-content contrast">Toggle Contrast</a>
+<a href="javascript:void(0);" class="skip-to-content js-text-adjust">Toggle Page Size</a>
+<a href="javascript:void(0);" class="skip-to-content js-contrast">Toggle Contrast</a>
 <div class="header">
 	<div class="title">
 		<div class="burger-button" onclick="burgerButton(this);" aria-label="menu"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
@@ -11,14 +11,16 @@
 				{{ page.title }}
 			{% endif %}
 		</p>
-		<span class="caption-menu">
-				<span class="dropdown">
-					<span class="a11y-menu dropdown-content" aria-haspopup="true">
-						<a class="caption-button textAdjust" onclick="textNormal()" href="javascript:void(0);"><b aria-hidden="true">a</b><span class="vox-only">Make text normal</span></a>
-						<a class="caption-button textAdjust" onclick="textLarge()" href="javascript:void(0);"><b aria-hidden="true">A</b><span class="vox-only">Make text larger</span></a>
-						<a class="caption-button contrast" href="javascript:void(0);"><i class="fas fa-adjust" aria-hidden="true"></i><span class="vox-only">Increase contrast</span></a>
-					</span>
-				</span>
+		<span class="caption-menu"> <!-- Tabbing is removed as the same function is handled by line 2-3 for tabs -->
+			<a class="caption-button js-text-adjust" href="javascript:void(0);" tabindex="-1">
+				<b aria-hidden="true">a</b>
+				<span class="vox-only">Toggle text size</span>
+			</a>
+
+			<a class="caption-button js-contrast" href="javascript:void(0);" tabindex="-1">
+				<i class="fas fa-adjust" aria-hidden="true"></i>
+				<span class="vox-only">Increase contrast</span>
+			</a>
 		</span>
 	</div>
 	<nav>
@@ -35,9 +37,7 @@
 				</a>
 			{% endif %}
 		{% endfor %}
-		<a class="disabled button" href="https://github.com/StartNine/Start9/releases" target="_blank" rel="noopener noreferrer" tabindex="-1">Downloads</a>
 		<a class="disabled button">Community</a>
-		<a class="disabled button">FAQ</a>
 	</nav>
 </div>
 <div class="header-space"></div>
