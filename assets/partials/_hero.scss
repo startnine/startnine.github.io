@@ -7,6 +7,7 @@
 		flex-wrap: wrap;
 		height: calc(85% - 6rem);
 		justify-content: space-between;
+		line-height: 1.5;
 		margin: auto 1em;
 		min-height: 20rem;
 
@@ -15,7 +16,7 @@
 
 			h1 {
 				font-size: 4em;
-				margin: 0 auto 1rem;
+				margin: 0;
 			}
 
 			.subheading {
@@ -40,21 +41,8 @@
 
 	.hero { margin: 20vh 1em; }
 
-	.features { height: initial; }
-
-	.slide {
-		margin: 20vh 1em auto;
-
-		.slide-1, .slide-2, .slide-3, .slide-4 {
-			background-size: 100% 100%;
-			min-height: 20rem;
-			width: 100%;
-		}
-
-		.slide-1 { background-image: url("img/slides/slide1.jpg"); }
-		.slide-2 { background-image: url("img/slides/slide2.jpg"); }
-		.slide-3 { background-image: url("img/slides/slide3.jpg"); }
-		.slide-4 { background-image: url("img/slides/slide4.jpg"); }
+	.features {
+		div { width: initial; }
 	}
 
 	.interlude {
