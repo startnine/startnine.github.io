@@ -42,27 +42,27 @@ jQuery.fn.extend({
 var hostname = window.location.origin;
 
 /*
-** One line functions
-** (remove most of these asap)
+** Functions called by site
+** (remove these when possible)
 */
-function burgerButton(x) { x.classList.toggle("change"); };
+function burgerButton(x) { x.classList.toggle("change"); }
 
-function menuFocus() { $(".burger-button").click(); };
+function menuFocus() { $(".burger-button").click(); }
 
 function fadeOutRight() {
 	$("main").removeClass("fade-in-left").addClass("fade-out-right");
-};
+}
 
 function fadeOutLeft() {
 	$("main").removeClass("fade-in-left").addClass("fade-out-left");
-};
+}
 
-function fadeOut() { $("main").removeClass("fade-in").addClass("fade-out"); };
+function fadeOut() { $("main").removeClass("fade-in").addClass("fade-out"); }
 
 function scrollUp() {
 	$("html, body").animate({scrollTop: 0}, 150);
 	return false;
-};
+}
 
 function darkSideOfTheMoon() {
 	$("html").addClass("dark");
@@ -76,14 +76,11 @@ $(document).ready(function() {
 
 /* Make accessbility controls exist */
 if (navigator.cookieEnabled) {
-	$("<a class='caption-button a11y-toggle' href='javascript:void(0);'>" +
-			"<i class='fas fa-universal-access' aria-hidden='true'></i>" +
-			"<span class='vox-only'>Accessibility</span>" +
-	    "</a>").insertBefore(".a11y-menu");
-		$(".title-text").css("left", "1.4rem");
+	$(".caption-menu").css("display", "block");
+	$(".title-text").css("left", "1.4rem");
 	console.log("s u c c e s s: your browser can cookies");
 }
-else { console.log("f a i l: your browser cannot cookies"); };
+else { console.log("f a i l: your browser cannot cookies"); }
 
 /* Init JS libs */
 //  Barba.Pjax.start();    // init barbra
@@ -105,16 +102,20 @@ Mousetrap.bind("n o space u", function() {
 /* Contrast toggle */
 $(".js-contrast").toggleFunction(
 	// on
-	function() {
-		$("html").addClass("contrast");
-		document.cookie = "contrast=true; path=/; expires=0;";
-	},
+	function() { contrastOn(); },
 	// off
-	function(){
-		$("html").removeClass("contrast");
-		document.cookie = "contrast=false; path=/; expires=0;";
-	}
+	function() { contrastOff(); }
 );
+
+function contrastOn() {
+	$("html").addClass("contrast");
+	document.cookie = "contrast=true; path=/; expires=0;";
+}
+
+function contrastOff() {
+	$("html").removeClass("contrast");
+	document.cookie = "contrast=false; path=/; expires=0;";
+}
 
 /* Text Size button toggle */
 $(".js-text-adjust").toggleFunction(
@@ -158,30 +159,40 @@ $(".burger-button").toggleFunction(
 	}
 );
 
+/* Marketplace */
+// Search modules - https://www.w3schools.com/jquery/jquery_filters.asp
+$("#module-search").on("keyup", function() {
+	var value = $(this).val().toLowerCase();
+	$(".modules div").filter(function() {
+		$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+	});
+});
+
 /* Apply styles from cookies */
-if (document.cookie.includes("text=large")) { largeFont(); };
+if (document.cookie.includes("text=large")) { largeFont(); }
 
-if (document.cookie.includes("text=normal")) { defaultFont(); };
+if (document.cookie.includes("text=normal")) { defaultFont(); }
 
-if (document.cookie.includes("cont=true")) { $("html").addClass("contrast"); };
+if (document.cookie.includes("contrast=true")) { contrastOn(); }
 
-if (document.cookie.includes("cont=false")) { $("html").removeClass("contrast"); };
+if (document.cookie.includes("contrast=false")) { contrastOff(); }
 
-if (document.cookie.includes("dark=best")) { darkSideOfTheMoon(); };
+if (document.cookie.includes("dark=best")) { darkSideOfTheMoon(); }
 
 /* delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT) */
 $("a.delaylink[href]").click(function(){
 	var self = $(this);
 	setTimeout(function() {
-		window.location.href = self.attr("href"); // Go to href after the slide animation completes
+		window.location.href = self.attr("href"); // go to href after the slide animation completes
 	}, 400);
 	return false; // And also make sure you return false from your click handler.
 });
 
 /* Downloads Page */
-// Start ajax request
+// start ajax request
 $.getJSON("https://api.github.com/repos/startnine/release-testing/releases").done(function(data) {
 	$(".js-latest-ver").text(data[0].name);
+
 });
 
 /* Cross site transitions */
@@ -204,7 +215,7 @@ window.onscroll = function() {
 // if scrolled to zero, show menu bar
 	prevScrollpos = currentScrollPos;
 	if(currentScrollPos==0){ navbar.removeClass("scroll-up"); }
-}
+};
 
 /*
 ** Let the document know when the mouse is being used,
