@@ -1,15 +1,23 @@
+# - title: title
+#  image: bg image
+#  author: >
+
+#  desc: Brief description
+#  link: > 
+#    a link
+
 - title: Double Decker Bar
-  image: DoubleDeckerBar.png
+  image: slide1.jpg
   author: >
    <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
     and 
    <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
-  desc: The Double-Decker-Bar is a docked, stationary module with capabilities in both App launching, Window management, and Feed content. It is modelled after a Windows Longhorn concept, with some adaptations made to accomodate newer concepts, like Live Tiles.
+  desc: Double-decker taskbar, created from concepts
   link: > 
     https://github.com/StartNine/doubledeckerbar
 
 - title: Superbar
-  image: placeholder.png
+  image: slide2.jpg
   author: >
    <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
     and 
@@ -18,8 +26,8 @@
   link: > 
     https://github.com/StartNine/Superbar
 
-- title: RibbonFileManager
-  image: placeholder.png
+- title: FileCommander
+  image: filecommander.png
   author: >
    <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
     and 
@@ -29,7 +37,7 @@
     https://github.com/StartNine/RibbonFileManager
 
 - title: Origin Menu
-  image: placeholder.png
+  image: slide3.jpg
   author: >
    <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
     and 
@@ -39,7 +47,7 @@
     https://github.com/StartNine/originmenu
 
 - title: Experience Menu
-  image: placeholder.png
+  image: slide4.jpg
   author: >
    <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
     and 
@@ -49,7 +57,7 @@
     https://github.com/StartNine/experiencemenu
 
 - title: Startbeat Menu
-  image: placeholder.png
+  image: slide1.jpg
   author: >
    <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
     and 
