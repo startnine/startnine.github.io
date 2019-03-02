@@ -22,7 +22,7 @@
 	display: grid;
 	grid-template-columns: 80% 15%;
 	grid-template-rows: 100% 100%;
-	margin: 18.5em auto;
+	margin: 13em auto;
 }
 
 .side {
@@ -32,7 +32,7 @@
 	grid-column: 2;
 	grid-row: 1;
 	padding-left: 1rem;
-	position: relative;
+//  position: relative;
 	vertical-align: top;
 
 	.sidebar-object {
