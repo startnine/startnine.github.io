@@ -160,7 +160,7 @@ $(".burger-button").toggleFunction(
 );
 
 /* Marketplace */
-// Search modules - https://www.w3schools.com/jquery/jquery_filters.asp
+// Search modules - https://www.w3schools.com/jquery/jquery_filters.asp 
 $("#module-search").on("keyup", function() {
 	var value = $(this).val().toLowerCase();
 	$(".modules div").filter(function() {
