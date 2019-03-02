@@ -3,7 +3,7 @@
 */
 /* Caption Buttons */
 .a11y-menu, .caption-menu {
-	display: block;
+	display: none; // Menu is shown when JS prerequisite is loaded
 	float: right;
 	line-height: 3rem;
 	padding-right: 1rem;
@@ -38,37 +38,6 @@
 		&:active { opacity: .3; }
 
 	}
-}
-
-.dropdown {
-	display: inline-block;
-	position: relative;
-
-	.dropdown-content {
-		background-color: white;
-		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
-		display: none;
-		line-height: 1em;
-		margin-right: 1rem;
-		padding-right: 0;
-		position: absolute;
-		z-index: 69;
-
-		a {
-			color: black;
-			display: block;
-			padding: .5em;
-			text-decoration: none;
-			&:hover, &:focus-visible { background-color: lightgray; }
-//          .desc { font-weight: initial; }
-		}
-	}
-
-	&:focus-within, &:hover {
-		.dropdown-content { display: block; }
-		.a11y-toggle { opacity: .3; }
-	}
-
 }
 
 /* Required for _mobile */

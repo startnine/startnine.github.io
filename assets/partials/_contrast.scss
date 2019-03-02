@@ -4,48 +4,38 @@
 // sass-lint:disable no-important force-element-nesting force-pseudo-nesting nesting-depth no-vendor-prefixes
 
 .contrast {
-	background: white;
-	color: black;
+background: white;
+color: black;
 
-	a {
-		&.button {
-			background: #EEE;
+a {
+	&.button {
+		background: #EEE;
+		&:hover { background: #F2F2F2; }
 
-			&:hover { background: #F2F2F2; }
+		&:active, &:focus-visible { background: #D6ECF6; }
 
-			&:active, &:focus-visible { background: #D6ECF6; }
-
-			&.disabled { background: #CCC; }
-		}
+		&.disabled { background: #CCC; }
 	}
+}
+.header {
+	background: #575757;
 
-	.header {
-		background: #575757;
+	.button {
+		background: #454545;
+		text-shadow: initial;
 
-		.button {
-			background: #454545;
-			text-shadow: initial;
+		&:hover, &:active, &:focus { background: #4F4F4F; }
 
-			&:hover, &:active, &:focus { background: #4F4F4F; }
-
-			&.disabled { background: #505050; }
-		}
+		&.disabled { background: #505050; }
 	}
+}
 
-	code { color: white; }
+code { color: white; }
 
-	footer { background: #FCFCFC; }
+footer { background: #FCFCFC; }
 
-	::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner,
-	::-webkit-scrollbar-button, ::-webkit-scrollbar-thumb {
-		background: auto !important;
-		border: auto !important;
-		box-shadow: auto !important;
-		width: auto !important;
-	}
-
-	.caption-button {
-		&.js-contrast { transform: rotate(180deg); } // horizontal-flip contrast button
-	}
+.caption-button {
+	&.js-contrast { transform: rotate(180deg); } // horizontal-flip contrast button
+}
 
 }
