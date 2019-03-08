@@ -14,7 +14,7 @@
 .vscode/*
 Gemfile
 Gemfile.lock
+_drafts/
 _site/
 assets/img/original/
-blog/
 jekyll.bat
