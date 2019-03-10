@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * Generated using the Bootstrap Customizer (https://getbootstrap.com/docs/3.4/customize/)
  */
+ // sass-lint:disable-all
   .container {
 	padding-right: 15px;
 	padding-left: 15px;
@@ -696,14 +697,14 @@
   .nav > li > a:hover,
   .nav > li > a:focus {
 	text-decoration: none;
-	background-color: #eeeeee;
+	background-color: #EEE;
   }
   .nav > li.disabled > a {
-	color: #777777;
+	color: #777;
   }
   .nav > li.disabled > a:hover,
   .nav > li.disabled > a:focus {
-	color: #777777;
+	color: #777;
 	text-decoration: none;
 	cursor: not-allowed;
 	background-color: transparent;
@@ -711,7 +712,7 @@
   .nav .open > a,
   .nav .open > a:hover,
   .nav .open > a:focus {
-	background-color: #eeeeee;
+	background-color: #EEE;
 	border-color: #337ab7;
   }
   .nav .nav-divider {
@@ -724,7 +725,7 @@
 	max-width: none;
   }
   .nav-tabs {
-	border-bottom: 1px solid #dddddd;
+	border-bottom: 1px solid #DDD;
   }
   .nav-tabs > li {
 	float: left;
@@ -737,15 +738,15 @@
 	border-radius: 4px 4px 0 0;
   }
   .nav-tabs > li > a:hover {
-	border-color: #eeeeee #eeeeee #dddddd;
+	border-color: #EEE #EEE #DDD;
   }
   .nav-tabs > li.active > a,
   .nav-tabs > li.active > a:hover,
   .nav-tabs > li.active > a:focus {
-	color: #555555;
+	color: #555;
 	cursor: default;
-	background-color: #ffffff;
-	border: 1px solid #dddddd;
+	background-color: #FFF;
+	border: 1px solid #DDD;
 	border-bottom-color: transparent;
   }
   .nav-tabs.nav-justified {
@@ -779,17 +780,17 @@
   .nav-tabs.nav-justified > .active > a,
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs.nav-justified > .active > a:focus {
-	border: 1px solid #dddddd;
+	border: 1px solid #DDD;
   }
   @media (min-width: 768px) {
 	.nav-tabs.nav-justified > li > a {
-	  border-bottom: 1px solid #dddddd;
+	  border-bottom: 1px solid #DDD;
 	  border-radius: 4px 4px 0 0;
 	}
 	.nav-tabs.nav-justified > .active > a,
 	.nav-tabs.nav-justified > .active > a:hover,
 	.nav-tabs.nav-justified > .active > a:focus {
-	  border-bottom-color: #ffffff;
+	  border-bottom-color: #FFF;
 	}
   }
   .nav-pills > li {
@@ -804,7 +805,7 @@
   .nav-pills > li.active > a,
   .nav-pills > li.active > a:hover,
   .nav-pills > li.active > a:focus {
-	color: #ffffff;
+	color: #FFF;
 	background-color: #337ab7;
   }
   .nav-stacked > li {
@@ -847,17 +848,17 @@
   .nav-tabs-justified > .active > a,
   .nav-tabs-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus {
-	border: 1px solid #dddddd;
+	border: 1px solid #DDD;
   }
   @media (min-width: 768px) {
 	.nav-tabs-justified > li > a {
-	  border-bottom: 1px solid #dddddd;
+	  border-bottom: 1px solid #DDD;
 	  border-radius: 4px 4px 0 0;
 	}
 	.nav-tabs-justified > .active > a,
 	.nav-tabs-justified > .active > a:hover,
 	.nav-tabs-justified > .active > a:focus {
-	  border-bottom-color: #ffffff;
+	  border-bottom-color: #FFF;
 	}
   }
   .tab-content > .tab-pane {
