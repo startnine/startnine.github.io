@@ -1,0 +1,28 @@
+// sass-lint:disable-all
+/*
+** Variables
+*/
+// Define variables
+:root {
+
+/* Scrollbar */
+--scrollbar: #DADADA;
+--scrollbar-arrow: #333;
+--scrollbar-hover: #F2F2F2;
+--scrollbar-hover-1: #E9E9E9;
+--scrollbar-active: #B0E7EC;
+--scrollbar-active-1: #A7DEE3;
+
+/* Font Sizes (1.25 scale) */
+--font-size-7: 4.768rem;
+--font-size-6: 3.815rem;
+--font-size-5: 3.052rem;
+--font-size-4: 2.441rem;
+--font-size-3: 1.953rem;
+--font-size-2: 1.563rem;
+--font-size-1: 1.25rem;
+--font-size-0: 1rem;
+--font-size--1: .8rem;
+--font-size--2: .64rem;
+--font-size--3: .512rem;
+}
