@@ -23,3 +23,7 @@ defaults:
     path: ""
   values:
     logo: /assets/img/logo.png
+
+compress_html:
+  clippings: [p, li, td]
+  comments: ["<!-- ", " -->"]
