@@ -72,9 +72,10 @@
 	}
 
 	.title {
-		font-size: 1.3em;
+		font-size: var(--font-size-1);
 		height: 3rem;
 		line-height: 3rem;
+		opacity: .7;
 		text-align: center;
 
 		.title-text {
@@ -88,7 +89,7 @@
 		bottom: .225em;
 		display: inline-block;
 		height: 3rem;
-		line-height: 3rem;
+		line-height: 3.25rem;
 		position: relative;
 		text-align: center;
 		width: inherit;

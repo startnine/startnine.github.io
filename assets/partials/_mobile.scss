@@ -41,12 +41,13 @@
 }
 
 @media screen and (min-width: 37.5rem) {
-	.menu-focus {
+	.menu-focus { // hide menu-focus in the ways
 		display: none !important;
 		opacity: 0 !important;
 		visibility: hidden !important;
 	}
 
+	// allow scrolling when burger menu hidden
 	html { overflow-y: scroll !important; }
 }
 
@@ -84,7 +85,6 @@
 
 	.marketplace-title {
 		bottom: 6em;
-		font-size: 3rem;
 		height: 3.75em;
 		line-height: 3.25rem;
 	}

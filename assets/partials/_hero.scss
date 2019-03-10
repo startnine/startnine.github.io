@@ -2,55 +2,53 @@
 ** Hero for index.html
 */
 .index {
-	.hero, .features, .slide {
-		display: flex;
-		flex-wrap: wrap;
-		height: calc(85% - 6rem);
-		justify-content: space-between;
-		line-height: 1.5;
-		margin: auto 1em;
-		min-height: 20rem;
+.hero, .features, .slide {
+	display: flex;
+	flex-wrap: wrap;
+	height: calc(85% - 6rem);
+	justify-content: space-between;
+	line-height: 1.5;
+	margin: auto 1em;
+	min-height: 20rem;
 
-		div {
-			width: 45%;
+	div {
+		width: 45%;
 
-			h1 {
-				font-size: 4em;
-				margin: 0;
-			}
-
-			.subheading {
-				display: block;
-				font-size: 1.5rem;
-			}
-
-			h3 { font-size: 2em;}
-
-			h2, h3 { margin: 0 0 .25rem; }
-
-			p { margin: .25rem 0 1rem; }
+		h1 {
+			font-size: 3.815rem;
+			margin: 0;
 		}
 
-		.left-half, .right-half {
-			align-self: center;
-			height: 50%;
+		.subheading {
+			display: block;
+			font-size: 1.563rem;
 		}
 
-		.right-half { text-align: right; }
+		h2, h3 { margin: 0 0 .25rem; }
+
+		p { margin: .25rem 0 1rem; }
 	}
 
-	.hero { margin: 20vh 1em; }
-
-	.features {
-		div { width: initial; }
+	.left-half, .right-half {
+		align-self: center;
+		height: 50%;
 	}
 
-	.interlude {
-		display: block;
-		flex: 0 0 100%;
-		font-size: 2rem;
-		max-height: 2rem;
-		text-align: center;
-		width: 100%;
-	}
+	.right-half { text-align: right; }
+}
+
+.hero { margin: 20vh 1em; }
+
+.features {
+	div { width: initial; }
+}
+
+.interlude {
+	display: block;
+	flex: 0 0 100%;
+	font-size: 2.369rem;
+	max-height: 2rem;
+	text-align: center;
+	width: 100%;
+}
 }

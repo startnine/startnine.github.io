@@ -29,7 +29,7 @@ p, li { opacity: .8; }
 
 .change { .bar1, .bar2, .bar3 { box-shadow: initial; } }
 
-.menu-focus.active { background: black; }
+.menu-focus { &.active { background: black; } }
 
 .button {
 	background: #424242;

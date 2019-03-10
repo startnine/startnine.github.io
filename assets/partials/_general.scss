@@ -4,38 +4,23 @@
 html {
 	background: linear-gradient(whitesmoke, #CCC);
 	font-family: "Ubuntu", "Segoe UI", sans-serif;
+	line-height: 1.5rem;
 	min-height: 100%;
-	overflow: hidden visible;
 }
 
 body {
 	margin: 0;
 	min-height: 100%;
-	overflow-x: hidden;
-	overflow-y: visible;
 	padding: 0;
-	tab-size: 4;
+	tab-size: 4; // best tab size don't @
 }
 
 /*
 ** General
 */
-.vox-only {
-	height: 1px;
-	left: -420691337px;
-	overflow: hidden;
-	position: absolute;
-	top: auto;
-	width: 1px;
-}
-
-.jerry-mouse :focus { outline: none; }
-
 .byline { font-style: italic; }
 
-.active, .github-active, .discord-active { display: block; }
-
-.invisible {
+.invisible { // hides element in 3 ways incase the other two fail
 	display: none;
 	opacity: 0;
 	visibility: hidden;
@@ -59,7 +44,7 @@ body {
 
 .resize { height: 25em; }
 
-.someone {
+.someone { // used for bad joke, remove whenever
 	background: linear-gradient(270deg, rgba(255, 0, 0, .2), rgba(255, 255, 0, .2), rgba(0, 255, 0, .2), rgba(0, 0, 255, .2));
 	border-radius: 4px;
 	min-width: 100%;
@@ -75,16 +60,23 @@ body {
 	&:hover { color: white; }
 }
 
-.oneemw { width: 1em; }
+// this is never used, but just in case keep it here
+// .oneemw { width: 1em; }
 
 /*
 ** Headers
 */
 h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 
+
+h1 { font-size: var(--font-size-3); }
+h2 { font-size: var(--font-size-2); }
+h3 { font-size: var(--font-size-1); }
+
 /*
-** Tab Skip
+** a11y
 */
+/* Tab Skip */
 .skip-to-content {
 	height: 1px;
 	left: -25565vw;
@@ -117,4 +109,34 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 	height: 1px;
 	overflow: hidden;
 	width: 1px;
+}
+
+/* screen reader only text */
+.vox-only { // hidden text for narrators 
+	height: 1px;
+	left: -420691337px;
+	overflow: hidden;
+	position: absolute;
+	top: auto;
+	width: 1px;
+}
+
+/* :focus styling + remove it when mouse is used */
+a:not(.button):not(.skip-to-content) { // slightly increase visibility when tabbing to links
+	&:focus {
+		background: white;
+	}
+}
+
+// :focus styling serves no purpose when a mouse is being used, and is removed
+.jerry-mouse { // styles reset when mouse used
+	&:focus {
+		outline: none;
+	}
+
+	a:not(.button):not(.skip-to-content) {
+		&:focus {
+			background: transparent;
+		}
+	}
 }

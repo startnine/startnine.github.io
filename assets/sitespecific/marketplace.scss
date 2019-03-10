@@ -7,6 +7,7 @@
 // sass-lint:disable nesting-depth no-important no-vendor-prefixes
 
 .marketplace {
+
 	.backgroundicon {
 		bottom: 10em;
 		max-height: 10rem;
@@ -21,13 +22,10 @@
 }
 
 .marketplace-title {
-	bottom: 5em;
 	color: black;
-	font-size: 4rem;
-	line-height: 10rem;
+	font-size: var(--font-size-6);
+	line-height: 1.25em;
 	margin: 0;
-	margin-left: 1.5em;
-	position: relative;
 	text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
 	width: 100%;
 	z-index: 2;
@@ -35,87 +33,42 @@
 
 .marketplace-flex {
 	align-self: center;
-	bottom: 10rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	position: relative;
-	right: 2em;
 
 	.flex-item {
-		border-image: url("../img/module.svg") 32 16 8 8 fill stretch;
-		border-image-width: 32px 16px 8px 8px;
-		border-style: solid;
-		border-width: 0;
-		display: inline-block;
-		filter: drop-shadow(0 0 30px rgba(0, 0, 0, .52));
-		height: 12.5rem;
-		margin-bottom: 2.5em;
-		margin-left: 2em;
-		position: relative;
-		transform: perspective(300px);
-		transform-style: preserve-3d;
+		background-size: cover;
+		border-radius: 2px;
+		box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .25);
+		height: 9rem;
+		margin: 0 0 2.5em 2em; // top right bottom left
+		padding: 1em;
 		width: 20rem;
-		will-change: transform;
-
-		&:hover {
-			.header {
-				animation: marketplace-marquee 5s linear infinite;
-				text-overflow: initial;
-			}
-		}
-
-		&:active {
-			filter: initial;
-			transform: scale3d(.9, .9, .9) !important;
-			transition: transform .3s ease;
-
-			.header {
-				animation: initial;
-				text-overflow: ellipsis;
-			}
-		}
 
 		p {
-			bottom: 1em;
-			left: 1.75em;
 			line-height: 1.1em;
 			max-width: 15.9rem;
 			overflow: hidden;
-			position: relative;
-			transform: translateZ(20px);
 			word-wrap: break-word;
 		}
 
 		.desc {
-			-ms-overflow-style: -ms-autohiding-scrollbar;
-			height: 4.5em;
-			&:hover { overflow-y: scroll;   }
+		  height: 2.5em;
 		}
 
-		.byline { height: 1em; }
+		.byline {
+			height: 1em;
+			margin-top: 0;
+		}
 
 		h2 {
 			color: black;
 			height: 1.1em;
-			left: .5em;
+			margin: 0;
 			overflow: hidden;
-			position: relative;
 			text-overflow: ellipsis;
-			top: .25em;
-			transform: translateZ(10px);
 			white-space: nowrap;
-			width: 8.5em;
-		}
-
-		.module-icon {
-			float: left;
-			height: 4.5em;
-			left: 1em;
-			max-width: 4.5em;
-			position: relative;
-			transform: perspective(100px) rotateY(8deg) translateZ(10px);
-			will-change: transform;
 		}
 	}
 }
