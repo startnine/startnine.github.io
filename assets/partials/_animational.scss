@@ -1,5 +1,6 @@
 /*
 **  Cross Page Animations
+**  currently disabled, white flash during page transition is irritating to me
 */
 
 @keyframes github-animational {
@@ -13,6 +14,8 @@
 		opacity: 1;
 	}
 }
+
+.active, .github-active, .discord-active { display: block; }
 
 .github, .discord {
 	align-self: flex-end;

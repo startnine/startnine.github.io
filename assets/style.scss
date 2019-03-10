@@ -6,8 +6,10 @@
 ** https://github.com/StartNine/startnine.github.io
 */
 
+@import "partials/vars";
+
 @import "partials/animation";
-@import "partials/animational";
+// @import "partials/animational"; disabled because white flash during transition can't be solved
 @import "partials/burger";
 @import "partials/button";
 @import "partials/content";
@@ -21,3 +23,5 @@
 @import "partials/dark";
 @import "partials/contrast";
 @import "partials/mobile";
+
+// @import "partials/bootstrap"; uncomment when about to give up
