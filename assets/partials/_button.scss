@@ -16,7 +16,7 @@ a {
 //      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 		color: black;
 		display: inline-block;
-		font-size: .85rem;
+		font-size: var(--font-size--1);
 		line-height: 1.75em;
 		min-height: 1.75em;
 		padding: .5rem .65rem;
@@ -48,10 +48,26 @@ a {
 ** Checkboxes and Radio
 ** commented out until replacement images are finsished
 */
-/*
-input {
-	image-rendering: optimizeSpeed;
 
+input {
+	background: linear-gradient(#F9F9F9, white);
+	border: 0;
+	border-radius: .2rem;
+	box-shadow: 0 0 0 1px #DADADA, 0 0 0 2px #B5B5B5;
+	font-family: "Ubuntu";
+	image-rendering: optimizeSpeed;
+	padding: .5em;
+	transition: .3s box-shadow ease;
+
+	&:hover { box-shadow: 0 0 0 1px #CECECE, 0 0 0 2px white; }
+
+	&:focus {
+		box-shadow: 0 0 0 1px #D3F2F4, 0 0 0 2px #82B0B5;
+		outline: 1px solid white;
+	}
+}
+
+/*
 	&[type="checkbox"] {
 		display: none;
 
