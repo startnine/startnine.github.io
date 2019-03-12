@@ -7,61 +7,43 @@
 #    a link
 
 - title: Double Decker Bar
-  image: slide1.jpg
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  image: 
+  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: Double-decker taskbar, created from concepts
   link: > 
     https://github.com/StartNine/doubledeckerbar
 
 - title: Superbar
-  image: slide2.jpg
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  image: 
+  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: It's a Dock! It's a Taskbar! NO, IT'S...
   link: > 
     https://github.com/StartNine/Superbar
 
 - title: FileCommander
   image: filecommander.png
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: Experimental ribbon-based file manager module
   link: > 
     https://github.com/StartNine/RibbonFileManager
 
 - title: Origin Menu
-  image: slide3.jpg
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  image: 
+  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: The menu that started it all
   link: > 
     https://github.com/StartNine/originmenu
 
 - title: Experience Menu
-  image: slide4.jpg
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  image: 
+  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: eXPerience the nostalgia!
   link: > 
     https://github.com/StartNine/experiencemenu
 
 - title: Startbeat Menu
-  image: slide1.jpg
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
+  image: startbeat.png
+  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: Keeps your computer beating
   link: > 
     https://github.com/StartNine/startbeatmenu
