@@ -15,7 +15,7 @@
 		width: 45%;
 
 		h1 {
-			font-size: 3.815rem;
+			font-size: var(--font-size-6);
 			margin: 0;
 		}
 
@@ -46,7 +46,7 @@
 .interlude {
 	display: block;
 	flex: 0 0 100%;
-	font-size: 2.369rem;
+	font-size: var(--font-size-4);
 	max-height: 2rem;
 	text-align: center;
 	width: 100%;

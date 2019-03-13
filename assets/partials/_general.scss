@@ -65,8 +65,11 @@ pre {
 	&:hover { color: white; }
 }
 
-// this is never used, but just in case keep it here
-// .oneemw { width: 1em; }
+.icon {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+}
 
 /*
 ** Headers
