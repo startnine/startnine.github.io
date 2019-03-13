@@ -13,9 +13,9 @@
 		</div>
 		<div>
 			<h3>Connect</h3>
-			<a href="ircs://chat.freenode.net:6697/startnine"><i class="fas fa-hashtag" aria-hidden="true"></i> IRC</a>
-			<a href="https://discordapp.com/invite/6cpvxBS"><i class="fab fa-discord" aria-hidden="true"></i> Discord</a>
-			<a href="https://github.com/StartNine"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+			<a href="ircs://chat.freenode.net:6697/startnine"><svg class="icon"><use href="{{ "/assets/symbol-defs.svg" | prepend: site.url }}#icon-hashtag"/></svg> IRC</a>
+			<a href="https://discordapp.com/invite/6cpvxBS"><svg class="icon"><use href="{{ "/assets/symbol-defs.svg" | prepend: site.url }}#icon-discord"/></svg> Discord</a>
+			<a href="https://github.com/StartNine"><svg class="icon"><use href="{{ "/assets/symbol-defs.svg" | prepend: site.url }}#icon-github"/></svg> GitHub</a>
 		</div>
 	</div>
 	<div class="footer-text">
@@ -24,3 +24,5 @@
 		</p>
 	</div>
 </footer>
+
+<script src="{{ "/assets/svgxuse.js" | prepend: site.url }}" defer></script>
