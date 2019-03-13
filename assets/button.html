@@ -1,26 +1,37 @@
 ---
 layout: default
-title: Error 404
+title: Button
 hidden: true
 visible: 1
 ---
 <div class="grid-body">
 	<section>
-		<div id="buttone-404"><h2>Error 404</h2><p>It seems like you've visited a non-existent or deleted part of our website. Please use the navigation bar above to go somewhere else.</p></div>
-		<div id="buttone-main" style="display: none;">
+		<h1>Header</h1>
+		<h2>Header</h2>
+		<h3>Header</h3>
+		<h4>Header</h4>
+		<div id="buttone-main">
 			<span class="spoiler">This is a spoiler</span>
 			<code>this is inline code</code>
 			<br>
+{% highlight html %}
+<script>
+console.log("this is not inline code");
+</script>
+{% endhighlight %}
+			<input placeholder="input">
+			<br>
+			<br>
 			<form class="radio">
-				<input type="radio" name="great" value="value" id="value"><label for="value"></label> Radio1<br>
-				<input type="radio" name="great" value="valuee" id="valuee"><label for="valuee"></label> Radio2<br>
-				<input type="radio" name="great" value="valueee" id="valueee"><label for="valueee"></label> Radio3
+				<input type="radio" name="great" value="valuea" id="valuea"><label for="valuea"></label> Radio1<br>
+				<input type="radio" name="great" value="valueb" id="valueb"><label for="valueb"></label> Radio2<br>
+				<input type="radio" name="great" value="valuec" id="valuec"><label for="valuec"></label> Radio3
 			</form>
 			<br>
 			<form class="checkbox">
-				<input type="checkbox" name="value" value="valueeee" id="valueeee"><label for="valueeee"></label> Checkbox1<br>
-				<input type="checkbox" name="value" value="valueeeee" id="valueeeee"><label for="valueeeee"></label> Checkbox2<br>
-				<input type="checkbox" name="value" value="valueeeeee" id="valueeeeee"><label for="valueeeeee"></label> Checkbox3   
+				<input type="checkbox" name="value" value="valued" id="valued"><label for="valued"></label> Checkbox1<br>
+				<input type="checkbox" name="value" value="valuee" id="valuee"><label for="valuee"></label> Checkbox2<br>
+				<input type="checkbox" name="value" value="valuef" id="valuef"><label for="valuef"></label> Checkbox3   
 			</form>
 			<br>
 			<a class="old button">Filler Text</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
