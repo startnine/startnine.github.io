@@ -130,7 +130,7 @@ h3 { font-size: var(--font-size-1); }
 }
 
 /* :focus styling + remove it when mouse is used */
-a:not(.button):not(.skip-to-content) { // slightly increase visibility when tabbing to links
+a:not(.button):not(.skip-to-content):not(.ignore-jerry-mouse) { // slightly increase visibility when tabbing to links
 	&:focus {
 		background: white;
 	}
@@ -142,7 +142,7 @@ a:not(.button):not(.skip-to-content) { // slightly increase visibility when tabb
 		outline: none;
 	}
 
-	a:not(.button):not(.skip-to-content) {
+	a:not(.button):not(.skip-to-content):not(.ignore-jerry-mouse) {
 		&:focus {
 			background: transparent;
 		}
