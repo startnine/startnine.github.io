@@ -1,0 +1,21 @@
+---
+layout: default
+title: Documentation
+permalink: /docs
+menu: main
+order: 3
+---
+<main class="one-box fade-in post" data-viewport="{{ page.target }}">
+	<h2>Start9 Docs</h2>
+	<em>choose one:</em>
+	<nav>
+		{% assign sorted_docs = site.docs | sort:"order" %}
+		{% for docs in sorted_docs %}
+			{% unless docs.layout == "docs" %}  {% comment %}this implies all base doc pages are not in docs layout{% endcomment %}
+				<a class="delaylink button" href="{{ docs.url | prepend: docs.baseurl }}">
+					{{ docs.title }}
+				</a>
+			{% endunless %}
+		{% endfor %}
+	</nav>
+</main>

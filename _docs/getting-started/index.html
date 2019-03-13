@@ -1,0 +1,19 @@
+---
+layout: default
+title: Guidelines
+permalink: docs/guidelines
+index: true
+---
+<main class="one-box fade-in post" data-viewport="{{ page.target }}">
+		<h1>Guidelines</h1>
+		<nav>
+			{% assign sorted_docs = site.docs | sort:"order" %}
+			{% for docs in sorted_docs %}
+				{% if docs.project == "getting_started" %}
+						<a class="delaylink button" href="{{ docs.url | prepend: docs.baseurl }}">
+						{{ docs.title }}
+					</a>
+				{% endif %}
+			{% endfor %}
+		</nav>
+</main>

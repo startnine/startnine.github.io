@@ -3,17 +3,15 @@ layout: default
 ---
 <main class="grid-body fade-in post docs">
 	<aside class="side fade-in">
-		<nav class="sidebar-object sticky">
+		<nav class="sidebar-object sticky toc">
 			<h2>In this page:</h2>
-			{% include toc.html html=content %}
+			{% include toc.html html=content h_min=2 %}
 			<a href="#maincontent">Back to top</a>
 		</nav>
 	</aside>
 
 	<section class="content">
 		<div class="skip-target"><a id="maincontent">-</a></div>
-		<h1 style="margin: 0;">{{page.title}}</h1>
-		<br>
 		{{ content }}
 	</section>
 </main>
