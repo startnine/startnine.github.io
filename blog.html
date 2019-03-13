@@ -9,7 +9,7 @@ order: 2
 	<article>
 		{% for post in site.posts limit:1 %}
 			<div class="skip-target"><a id="maincontent">-</a></div>
-			<a href="{{ post.url }}" onclick="fadeOut();"><h2 style="margin: 0;">{{ post.title }}</h2></a>
+			<a href="{{ post.url }}" onclick="fadeOut();"><h1 style="margin: 0;">{{ post.title }}</h1></a>
 			<em>by</em> <strong>{{ post.author }}</strong>, {{ post.date | date: "%d %B %Y" }}
 			<br>
 			{{ post.content }}
