@@ -1,12 +1,36 @@
 ---
 layout: default
 title: Downloads
+permalink: /download
 menu: main
 order: 3
+published: false
 ---
 <div class="one-box index">
-	<main class="fade-in"  data-viewport="{{ page.target }}">
+	<main class="fade-in" data-viewport="{{ page.target }}">
 		<div class="skip-target"><a id="maincontent">-</a></div>
-
+		<section class="hero">
+				<div class="left-half">
+					<h1>Get Start9</h1>
+					<div class="subheading">Latest version: 
+						<span class="js-latest-ver">n/a: JS error</span>
+					</div>
+					<a class="button" href="#">Download</a><br>
+					<a class="button" href="#">Download</a><br>
+					<em>For Windows 7+</em>
+				</div>
+				<div class="right-half">
+					<h3>Lorem</h3>
+					<h3>Ipsum</h3>
+				</div>
+			</section>
 	</main>
 </div>
+<script>
+/* Downloads Page */
+// start ajax request
+$.getJSON("https://api.github.com/repos/startnine/release-testing/releases").done(function(data) { // CHANGE THIS ON RELASE
+	$(".js-latest-ver").text(data[0].name); // display "name" data tag to "latest version" in dl page
+
+});
+</script>
