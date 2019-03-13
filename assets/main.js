@@ -61,7 +61,7 @@ function fadeOut() { $("main").removeClass("fade-in").addClass("fade-out"); }
 
 function scrollUp() {
 	$("html, body").animate({scrollTop: 0}, 150);
-	return false;
+	return false; // i dont know why this is here but it works
 }
 
 function darkSideOfTheMoon() {
@@ -83,7 +83,7 @@ if (navigator.cookieEnabled) {
 else { console.log("f a i l: your browser cannot cookies"); }
 
 /* Init JS libs */
-// Barba.Pjax.start();    // init barbra
+// Barba.Pjax.start(); // init barbra
 Barba.Prefetch.init(); // init barbra
 
 /* Keyboard shortcuts */
@@ -95,18 +95,7 @@ Mousetrap.bind("@ s o m e o n e", function() {
 	$("body").addClass("someone");
 });
 
-Mousetrap.bind("n o space u", function() {
-	$("#buttone-main, #buttone-404").toggle();
-});
-
 /* Contrast toggle */
-$(".js-contrast").toggleFunction(
-	// on
-	function() { contrastOn(); },
-	// off
-	function() { contrastOff(); }
-);
-
 function contrastOn() {
 	$("html").addClass("contrast");
 	document.cookie = "contrast=true; path=/; expires=0;";
@@ -117,14 +106,14 @@ function contrastOff() {
 	document.cookie = "contrast=false; path=/; expires=0;";
 }
 
-/* Text Size button toggle */
-$(".js-text-adjust").toggleFunction(
-	function() { defaultFont(); },
-
-	function() { largeFont(); }
-
+$(".js-contrast").toggleFunction(
+	// on
+	function() { contrastOn(); },
+	// off
+	function() { contrastOff(); }
 );
 
+/* Text Size button toggle */
 function defaultFont() {
 	$("html").css("font-size", "1em");
 	document.cookie = "text=normal; path=/;";
@@ -136,6 +125,13 @@ function largeFont() {
 	document.cookie = "text=large; path=/;";
 	$(".caption-button.js-text-adjust").html("a");
 }
+
+$(".js-text-adjust").toggleFunction(
+	function() { defaultFont(); },
+
+	function() { largeFont(); }
+
+);
 
 /* Hamburger button toggle */
 $(".burger-button").toggleFunction(
@@ -188,18 +184,12 @@ $("a.delaylink[href]").click(function(){
 	return false; // And also make sure you return false from your click handler.
 });
 
-/* Downloads Page */
-// start ajax request
-$.getJSON("https://api.github.com/repos/startnine/release-testing/releases").done(function(data) { // CHANGE THIS ON RELASE
-	$(".js-latest-ver").text(data[0].name); // display "name" data tag to "latest version" in dl page
-
-});
-
 /* Cross site transitions */
 $("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 $("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 
-/* When the user scrolls down, hide the navbar
+/*
+** When the user scrolls down, hide the navbar
 ** When the user scrolls up, show the navbar - taken from W3Schools
 */
 var prevScrollpos = window.pageYOffset;
