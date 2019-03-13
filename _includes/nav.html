@@ -12,12 +12,12 @@
 			{% endif %}
 		</p>
 		<span class="caption-menu"> <!-- Tabbing is removed as the same function is handled by line 2-3 for tabs -->
-			<a class="caption-button js-text-adjust" href="javascript:void(0);" tabindex="-1">
+			<a class="caption-button js-text-adjust ignore-jerry-mouse" href="javascript:void(0);" tabindex="-1">
 				<b aria-hidden="true">a</b>
 				<span class="vox-only">Toggle text size</span>
 			</a>
 
-			<a class="caption-button js-contrast" href="javascript:void(0);" tabindex="-1">
+			<a class="caption-button js-contrast ignore-jerry-mouse" href="javascript:void(0);" tabindex="-1">
 				<svg class="icon"><use href="{{ "/assets/symbol-defs.svg" | prepend: site.url }}#icon-contrast">/></svg>
 				<span class="vox-only">Increase contrast</span>
 			</a>
