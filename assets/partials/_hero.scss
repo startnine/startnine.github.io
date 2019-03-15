@@ -35,6 +35,18 @@
 	}
 
 	.right-half { text-align: right; }
+
+	.feather-left { box-shadow: inset 4.25rem 0 3rem 0 var(--background); }
+
+	.feather-right { box-shadow: inset -4.25rem 0 3rem 0 var(--background); }
+
+	.pic-left { background: no-repeat left; }
+
+	.pic-right { background: no-repeat right; }
+
+	.pic-left, .pic-right { background-size: contain; }
+
+	.sweet-filler-of-mine { height: 20rem; }
 }
 
 .hero { margin: 20vh 1em; }
