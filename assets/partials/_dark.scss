@@ -5,8 +5,9 @@
 
 
 .dark {
+--background: #303030;
+
 body {
-	background: #303030 linear-gradient(#303030 1%, #212121 50%, black 100%);
 	color: white;
 }
 
@@ -21,6 +22,8 @@ footer {
 
 p, li { opacity: .8; }
 
+.icon { fill: white; }
+
 .bar1, .bar2, .bar3 { box-shadow: initial; }
 
 .logo-group { filter: invert(1); }
@@ -34,7 +37,6 @@ p, li { opacity: .8; }
 .button {
 	background: #424242;
 	border-radius: .1rem;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 	color: white;
 
 	&:hover {
@@ -44,6 +46,7 @@ p, li { opacity: .8; }
 
 	&:active { box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2); }
 }
+
 
 .code, code {
 	background: #171717;

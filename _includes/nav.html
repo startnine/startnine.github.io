@@ -1,6 +1,4 @@
 <a href="#maincontent" class="skip-to-content">Skip to Content</a>
-<a href="javascript:void(0);" class="skip-to-content js-text-adjust">Toggle Page Size</a>
-<a href="javascript:void(0);" class="skip-to-content js-contrast">Toggle Contrast</a>
 <div class="header">
 	<div class="title">
 		<div class="burger-button" onclick="burgerButton(this);" aria-label="menu"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
@@ -11,15 +9,15 @@
 				{{ page.title }}
 			{% endif %}
 		</p>
-		<span class="caption-menu"> <!-- Tabbing is removed as the same function is handled by line 2-3 for tabs -->
-			<a class="caption-button js-text-adjust ignore-jerry-mouse" href="javascript:void(0);" tabindex="-1">
+		<span class="caption-menu">
+			<a class="caption-button js-text-adjust ignore-jerry-mouse" href="javascript:void(0);" title="Toggle text size">
 				<b aria-hidden="true">a</b>
 				<span class="vox-only">Toggle text size</span>
 			</a>
 
-			<a class="caption-button js-contrast ignore-jerry-mouse" href="javascript:void(0);" tabindex="-1">
+			<a class="caption-button js-contrast ignore-jerry-mouse" href="javascript:void(0);" title="Toggle contrast">
 				<svg class="icon"><use href="{{ "/assets/symbol-defs.svg" | prepend: site.url }}#icon-contrast">/></svg>
-				<span class="vox-only">Increase contrast</span>
+				<span class="vox-only">Toggle contrast</span>
 			</a>
 		</span>
 	</div>

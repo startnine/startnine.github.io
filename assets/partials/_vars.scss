@@ -5,13 +5,16 @@
 // Define variables
 :root {
 
+/* General */
+--background: #CCC; // site background
+
 /* Scrollbar */
---scrollbar: #DADADA;
---scrollbar-arrow: #333;
---scrollbar-hover: #F2F2F2;
---scrollbar-hover-1: #E9E9E9;
---scrollbar-active: #B0E7EC;
---scrollbar-active-1: #A7DEE3;
+--scrollbar: #DADADA; // scrollbar button initial
+--scrollbar-hover: #F2F2F2; // scrollbar button hover (bottom)
+--scrollbar-hover-1: #E9E9E9; // scrollbar button hover (top)
+--scrollbar-active: #B0E7EC; // scrollbar button active (bottom)
+--scrollbar-active-1: #A7DEE3; // scrollbar button active (top)
+--scrollbar-arrow: #333; // color of scrollbar arrow
 
 /* Font Sizes (1.25 scale) */
 --font-size-7: 4.768rem;

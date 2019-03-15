@@ -6,8 +6,8 @@
 /* jshint ignore:end */
 
 /* jquery toggle from v@1.8.0 | jquery.org/licence */
-// renamed to toggleFunction to prevent possible conflict with other jQuery.toggle
-// replace this if there is any other solution to toggle functions
+// renamed to toggleFunction to prevent possible conflict with jQuery.toggle
+// replace this if there are any other solutions to toggle functions
 jQuery.fn.extend({
 	toggleFunction: function( fn ) {
 		// Save reference to arguments for access in closure
@@ -156,7 +156,7 @@ $(".burger-button").toggleFunction(
 );
 
 /* Marketplace */
-// Search modules - https://www.w3schools.com/jquery/jquery_filters.asp 
+// Search modules - https://www.w3schools.com/jquery/jquery_filters.asp
 $("#module-search").on("keyup", function() {
 	var value = $(this).val().toLowerCase();
 	$(".modules div").filter(function() {
