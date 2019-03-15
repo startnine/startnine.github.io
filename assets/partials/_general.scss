@@ -2,8 +2,9 @@
 ** HTML and body styling
 */
 html {
-	background: linear-gradient(whitesmoke, #CCC);
+	background: var(--background);
 	font-family: "Ubuntu", "Segoe UI", sans-serif;
+	font-size: var(--font-size-0);
 	line-height: 1.5rem;
 	min-height: 100%;
 }
