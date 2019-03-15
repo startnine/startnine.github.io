@@ -85,13 +85,9 @@
        &.header { height: initial; }
 	}
 
-	.marketplace-title {
-		bottom: 6em;
-		height: 3.75em;
-		line-height: 3.25rem;
-	}
-
 	.header-space { height: 3rem; }
+
+	.marketplace.flex-item { margin: 0 0 2em !important; } // centers marketplace cards
 
 	.footer-flex {
 		align-content: center;
