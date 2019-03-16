@@ -4,7 +4,7 @@
 html {
 	background: var(--background);
 	font-family: "Ubuntu", "Segoe UI", sans-serif;
-	font-size: var(--font-size-0);
+	font-size: var(--font-0);
 	line-height: 1.5rem;
 	min-height: 100%;
 }
@@ -13,7 +13,6 @@ body {
 	margin: 0;
 	min-height: 100%;
 	padding: 0;
-	tab-size: 4; // best tab size don't @
 }
 
 /*
@@ -81,9 +80,9 @@ h1, h2, h3, h4, h5 {
 }
 
 
-h1 { font-size: var(--font-size-3); }
-h2 { font-size: var(--font-size-2); }
-h3 { font-size: var(--font-size-1); }
+h1 { font-size: var(--font-3); }
+h2 { font-size: var(--font-2); }
+h3 { font-size: var(--font-1); }
 
 /*
 ** a11y
@@ -134,7 +133,7 @@ h3 { font-size: var(--font-size-1); }
 }
 
 /* :focus styling + remove it when mouse is used */
-a:not(.button):not(.skip-to-content):not(.ignore-jerry-mouse) { // slightly increase visibility when tabbing to links
+a:not(.button):not(.ignore-jerry-mouse) { // slightly increase visibility when tabbing to links
 	&:focus {
 		background: white;
 	}
@@ -146,7 +145,7 @@ a:not(.button):not(.skip-to-content):not(.ignore-jerry-mouse) { // slightly incr
 		outline: none;
 	}
 
-	a:not(.button):not(.skip-to-content):not(.ignore-jerry-mouse) {
+	a:not(.button):not(.ignore-jerry-mouse) {
 		&:focus {
 			background: transparent;
 		}
