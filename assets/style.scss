@@ -3,13 +3,13 @@
 
 /*!
 ** Start9 Website CSS | start9.menu
-** https://github.com/StartNine/startnine.github.io
+** https://github.com/StartNine/start9.menu
 */
 
 @import "partials/vars";
 
 @import "partials/animation";
-// @import "partials/animational"; disabled because white flash during transition can't be solved
+// @import "partials/animational"; no solution for white flash during transition right now
 @import "partials/burger";
 @import "partials/button";
 @import "partials/content";
@@ -24,5 +24,3 @@
 @import "partials/dark";
 @import "partials/contrast";
 @import "partials/mobile";
-
-// @import "partials/bootstrap"; uncomment when about to give up
