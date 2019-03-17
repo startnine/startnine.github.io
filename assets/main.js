@@ -117,13 +117,13 @@ $(".js-contrast").toggleFunction(
 function defaultFont() {
 	$("html").css("font-size", "1em");
 	document.cookie = "text=normal; path=/;";
-	$(".caption-button.js-text-adjust").html("A");
+	$(".caption-button.js-text-adjust b").html("A");
 }
 
 function largeFont() {
 	$("html").css("font-size", "2em");
 	document.cookie = "text=large; path=/;";
-	$(".caption-button.js-text-adjust").html("a");
+	$(".caption-button.js-text-adjust b").html("a");
 }
 
 $(".js-text-adjust").toggleFunction(
