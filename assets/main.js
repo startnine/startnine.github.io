@@ -130,7 +130,6 @@ $(".js-text-adjust").toggleFunction(
 	function() { defaultFont(); },
 
 	function() { largeFont(); }
-
 );
 
 /* Hamburger button toggle */
@@ -176,6 +175,7 @@ if (document.cookie.includes("contrast=false")) { contrastOff(); }
 if (document.cookie.includes("dark=best")) { darkSideOfTheMoon(); }
 
 /* delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT) */
+// this may be bad practice, and will be deleted if it is
 $("a.delaylink[href]").click(function(){
 	var self = $(this);
 	setTimeout(function() {
@@ -184,7 +184,7 @@ $("a.delaylink[href]").click(function(){
 	return false; // And also make sure you return false from your click handler.
 });
 
-/* Cross site transitions */
+/* Cross site transitions (disabled) */
 $("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 $("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 

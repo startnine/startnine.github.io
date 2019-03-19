@@ -2,7 +2,7 @@
 ** Content
 */
 .barba-container {
-	min-height: calc(100vh - 10rem); // for footer to stay on the bottom
+	min-height: calc(100vh - 14rem); // for footer to stay on the bottom ish
 }
 
 .one-box, .grid-body {
@@ -21,8 +21,6 @@
 .grid-body {
 	display: grid;
 	grid-template-columns: 80% 15%;
-//  grid-template-rows: 100% 100%;
-//  margin: 13em auto;
 }
 
 .side {
@@ -31,8 +29,6 @@
 	flex-direction: column;
 	grid-column: 2;
 	grid-row: 1;
-//  margin-left: 1rem;
-//  position: relative;
 	vertical-align: top;
 
 	.sidebar-object {
@@ -57,7 +53,6 @@
 .content {
 	grid-column: 1;
 	grid-row: 1;
-//  margin: 0 .625rem;
 	vertical-align: top;
 	width: calc(100% - .5rem); // adds some extra margin
 }

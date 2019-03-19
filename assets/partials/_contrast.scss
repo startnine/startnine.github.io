@@ -4,8 +4,11 @@
 // sass-lint:disable no-important force-element-nesting force-pseudo-nesting nesting-depth no-vendor-prefixes
 
 .contrast {
-background: white;
+--background: white;
 color: black;
+
+--card-1: 255, 255, 255; // card background (gradient stop 1)
+--card-2: 245, 245, 245; // card background (gradient stop 2)
 
 a {
 	&.button {
