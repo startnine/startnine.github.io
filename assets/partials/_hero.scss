@@ -8,26 +8,24 @@
 	height: calc(85% - 6rem);
 	justify-content: space-between;
 	line-height: 1.5;
-	margin: auto 1em;
+	margin: auto 1em 4em auto;
 	min-height: 20rem;
 
-	div {
-		width: 45%;
+	div { width: 45%; }
 
-		h1 {
-			font-size: var(--font-6);
-			margin: 0;
-		}
-
-		.subheading {
-			display: block;
-			font-size: 1.563rem;
-		}
-
-		h2, h3 { margin: 0 0 .25rem; }
-
-		p { margin: .25rem 0 1rem; }
+	h1 {
+		font-size: var(--font-6);
+		margin: 0;
 	}
+
+	.subheading {
+		display: block;
+		font-size: 1.563rem;
+	}
+
+	h2, h3 { margin: 0 0 .25rem; }
+
+	p { margin: .25rem 0 1rem; }
 
 	.left-half, .right-half {
 		align-self: center;
@@ -36,17 +34,10 @@
 
 	.right-half { text-align: right; }
 
-	.feather-left { box-shadow: inset 4.25rem 0 3rem 0 var(--background); }
+	img { max-height: 20em; }
 
-	.feather-right { box-shadow: inset -4.25rem 0 3rem 0 var(--background); }
+	&.card { .left-half, .right-half { width: initial; } }
 
-	.pic-left { background: no-repeat left; }
-
-	.pic-right { background: no-repeat right; }
-
-	.pic-left, .pic-right { background-size: contain; }
-
-	.sweet-filler-of-mine { height: 20rem; }
 }
 
 .hero { margin: 20vh 1em; }
@@ -59,8 +50,10 @@
 	display: block;
 	flex: 0 0 100%;
 	font-size: var(--font-4);
+	margin-bottom: .8em;
 	max-height: 2rem;
 	text-align: center;
 	width: 100%;
 }
+
 }
