@@ -4,8 +4,6 @@
 /*
 ** Marketplace
 */
-// sass-lint:disable nesting-depth no-important no-vendor-prefixes
-
 .marketplace {
 
 	.backgroundicon {
@@ -58,9 +56,7 @@
 			word-wrap: break-word;
 		}
 
-		.desc {
-		  height: 2.5em;
-		}
+		.desc { height: 2.5em; }
 
 		.byline {
 			font-style: normal;

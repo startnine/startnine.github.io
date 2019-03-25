@@ -29,14 +29,24 @@
 			grid-row: 2;
 		}
 
+		.hero {
+			margin: 3em 0;
+
+			.left-half, .right-half { width: calc(100vw - 2rem); }
+		}
+
 		.hero, .features, .slide {
 			display: inline-block;
-			margin: 3em 0;
 
 			div {
 				display: inline-block;
 				margin-bottom: 1.5em;
-				width: calc(100vw - 2rem);
+				width: calc(100vw - 4rem);
+			}
+
+			img {
+				max-height: initial;
+				max-width: calc(100vw - 4em);
 			}
 		}
 	}
