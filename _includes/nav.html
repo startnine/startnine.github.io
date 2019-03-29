@@ -21,7 +21,7 @@
 			</a>
 		</span>
 	</div>
-	<nav>
+	<nav class="menu-bar">
 		{% assign sorted_pages = site.pages | sort:"order" %}
 		{% for node in sorted_pages %}
 			{% if node.menu == 'main' %}
@@ -38,7 +38,6 @@
 	</nav>
 </div>
 <div class="header-space"></div>
-<div class="menu-focus" onclick="menuFocus()"></div>
 
 	<div class="github"></div><div class="white github"></div>
 	<div class="discord"></div>

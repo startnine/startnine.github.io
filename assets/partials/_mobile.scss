@@ -1,4 +1,30 @@
 /*
+** Hamburger Menu (initial)
+*/
+/* Burger Button */
+.burger-button {
+	border-radius: 1em;
+	cursor: pointer;
+	display: inline-block;
+	left: 1.5rem;
+	position: relative;
+	top: .6em;
+	z-index: 9999;
+
+	&:hover { .bar1, .bar2, .bar3 { background-color: darkgrey; } }
+}
+
+.bar1, .bar2, .bar3 {
+	background-color: white;
+	border-radius: 1em;
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .75));
+	height: .125rem;
+	margin: .313rem 0;
+	transition: .3s;
+	width: 1.25em;
+}
+
+/*
 ** Mobile + Printer stuff
 */
 /* Printer adjustments */
@@ -36,7 +62,6 @@
 		}
 
 		.hero, .features, .slide {
-			display: inline-block;
 
 			div {
 				display: inline-block;
@@ -46,55 +71,19 @@
 
 			img {
 				max-height: initial;
-				max-width: calc(100vw - 4em);
+				max-width: calc(100vw - 6em);
 			}
 		}
 	}
 }
 
 @media screen and (min-width: 37.5rem) {
-	.menu-focus { // hide menu-focus in the ways
-		display: none !important;
-		opacity: 0 !important;
-		visibility: hidden !important;
-	}
-
 	// allow scrolling when burger menu hidden
 	html { overflow-y: scroll !important; }
 }
 
 
 @media screen and (max-width: 37.5rem) {
-	.header {
-		height: 3rem;
-
-		.burger-button {
-			cursor: pointer;
-			opacity: 1;
-			pointer-events: visible;
-		}
-
-		nav { visibility: hidden; }
-	}
-
-	.responsive {
-		& nav {
-			display: inline-block;
-			height: initial;
-			overflow: hidden;
-			position: relative;
-			visibility: initial;
-
-			.button {
-				min-width: 100%;
-				padding: 0;
-				width: 100%;
-			}
-		}
-
-       &.header { height: initial; }
-	}
-
 	.header-space { height: 3rem; }
 
 	.marketplace.flex-item { margin: 0 0 2em !important; } // centers marketplace cards
@@ -108,4 +97,72 @@
 	.footer-text { padding: 0 1em; }
 
 	footer { .footer-flex { div { padding-bottom: 1em; } } }
+
+	.header {
+		height: 3rem;
+
+		.burger-button {
+			cursor: pointer;
+			opacity: 1;
+			pointer-events: visible;
+		}
+
+		nav { visibility: hidden; }
+
+		/* Burger Menu */
+		&.slide-up, &.slide-down {
+			.menu-bar, .caption-menu {
+				transition: height .3s ease, background .25s ease, visibility .3s linear, opacity .3s linear;
+			}
+		}
+
+		&.slide-up {
+			.menu-bar {
+				height: 0;
+				padding: 8px;
+				visibility: hidden;
+
+				.button {
+					box-shadow: unset;
+					opacity: 0;
+					width: 0;
+				}
+			}
+		}
+
+		&.slide-down {
+			background: #454545;
+
+			.bar1 {
+				filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+				transform: rotate(-45deg) translate(-.375rem, .25rem);
+			}
+		
+			.bar2 { opacity: 0; }
+
+			.bar3 {
+				filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+				transform: rotate(45deg) translate(-.375rem, -.25rem);
+			}
+
+			.menu-bar {
+				background: #454545;
+				height: 100vh;
+				padding: 8px 40px;
+				visibility: visible;
+
+				.button {
+					box-shadow: initial;
+					opacity: 1;
+					padding: 0;
+					text-align: left;
+					width: 100%;
+				}
+			}
+
+			.caption-menu {
+				opacity: .5;
+			}
+		}
+	}
 }

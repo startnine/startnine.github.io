@@ -6,18 +6,9 @@
 /* jshint ignore:end */
 
 /*
-** Define variables
-*/
-var hostname = window.location.origin;
-
-/*
 ** Functions called by site
-** (remove these when possible)
+** (put them in its place where possible)
 */
-function burgerButton(x) { $(x).toggleClass("change"); }
-
-function menuFocus() { $(".burger-button").click(); }
-
 function fadeOutRight() {
 	$("main").removeClass("fade-in-left").addClass("fade-out-right");
 }
@@ -41,6 +32,8 @@ function darkSideOfTheMoon() {
 /*
 ** stuff that should be done load when page loads
 */
+var hostname = window.location.origin;
+
 $(document).ready(function() {
 
 /* Make accessbility controls exist */
@@ -48,8 +41,9 @@ if (navigator.cookieEnabled) {
 	$(".title-text").css("left", "1.4rem");
 	$(".caption-menu").css("display", "block");
 	console.log("s u c c e s s: your browser can cookies");
+} else {
+	console.log("f a i l: your browser cannot cookies");
 }
-else { console.log("f a i l: your browser cannot cookies"); }
 
 /* Init JS libs */
 // Barba.Pjax.start(); // init barbra
@@ -91,37 +85,18 @@ $(".js-text-adjust").click(function() {
 });
 
 /* Hamburger toggle */
-// to close hamburger
-function closeBurger() {
-	$(".menu-bar").removeClass("slide-down").addClass("slide-up");
-	$(".menu-focus").removeClass("menu-focus-in").addClass("menu-focus-out");
-	$('html, body').css("cssText", "overflow-y: inital;");
-	setTimeout( function() {
-		$(".menu-focus").toggleClass("active menu-focus-out");
-		$(".menu-bar").removeClass("responsive slide-up");
-		$('.header-background').css("paddingBottom", "0");
-	}, 300); 
-}
-
-// to open it
-function openBurger() {
-	$('html, body').css("cssText", "overflow-y: hidden !important;");
-	$(".menu-bar").removeClass("slide-up").addClass("slide-down").addClass("responsive");
-	$(".menu-focus").removeClass("menu-focus-out").addClass("menu-focus-in").toggleClass("active");
-	$('.header-background').css("paddingBottom", "1em");
-}
-
-// to toggle
 var clickedBurger = false;
 $(".burger-button").click(function() {
 	if(clickedBurger) {
 		// closed
-		closeBureger();
 		clickedBurger = false;
+		$('html').removeClass("no-scroll");
+		$(".header").removeClass("slide-down").addClass("slide-up");
 	} else {
 		// open
-		openBurger();
 		clickedBurger = true;
+		$('html').addClass("no-scroll");
+		$(".header").removeClass("slide-up").addClass("slide-down");
 	}
 });
 

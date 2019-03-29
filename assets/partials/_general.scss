@@ -32,6 +32,11 @@ body {
 	user-select: none;
 }
 
+.no-scroll {
+	overflow-y: scroll;
+	position: fixed;
+}
+
 .code, code {
 	background: white;
 	border-radius: .2em;
