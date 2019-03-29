@@ -90,12 +90,12 @@ $(".burger-button").click(function() {
 	if(clickedBurger) {
 		// closed
 		clickedBurger = false;
-		$('html').removeClass("no-scroll");
+		$('html').removeClass("no-scroll-mobile-only");
 		$(".header").removeClass("slide-down").addClass("slide-up");
 	} else {
 		// open
 		clickedBurger = true;
-		$('html').addClass("no-scroll");
+		$('html').addClass("no-scroll-mobile-only");
 		$(".header").removeClass("slide-up").addClass("slide-down");
 	}
 });

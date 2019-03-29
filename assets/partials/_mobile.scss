@@ -84,6 +84,12 @@
 
 
 @media screen and (max-width: 37.5rem) {
+	
+	.no-scroll-mobile-only {
+		overflow-y: scroll;
+		position: fixed;
+	}
+
 	.header-space { height: 3rem; }
 
 	.marketplace.flex-item { margin: 0 0 2em !important; } // centers marketplace cards
