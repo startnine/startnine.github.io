@@ -4,6 +4,7 @@
 .index {
 .hero, .features, .slide {
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	height: calc(85% - 6rem);
 	justify-content: space-between;
@@ -30,9 +31,18 @@
 	.left-half, .right-half {
 		align-self: center;
 		height: 50%;
+		width: 50%;
 	}
 
-	.right-half { text-align: right; }
+	.left-half {
+		order: 1;
+		text-align: left;
+	}
+
+	.right-half {
+		order: 2;
+		text-align: right;
+	}
 
 	img { max-height: 20em; }
 

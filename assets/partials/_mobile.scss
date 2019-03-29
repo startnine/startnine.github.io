@@ -29,7 +29,7 @@
 */
 /* Printer adjustments */
 @media print {
-	.header, nav, .header-space, .side, footer { display: none; }
+	.header, nav, .header-space, .side, .button, footer { display: none; }
 	a { color: black; }
 	body { background: none;}
 }
@@ -62,7 +62,6 @@
 		}
 
 		.hero, .features, .slide {
-
 			div {
 				display: inline-block;
 				margin-bottom: 1.5em;
@@ -72,6 +71,13 @@
 			img {
 				max-height: initial;
 				max-width: calc(100vw - 6em);
+			}
+		}
+
+		.slide {
+			.left-half, .right-half {
+				order: 0;
+				text-align: left;
 			}
 		}
 	}
