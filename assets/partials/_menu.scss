@@ -3,7 +3,10 @@
 */
 /* Caption Buttons */
 .a11y-menu, .caption-menu {
-	display: none; // Menu is shown when JS prerequisite is loaded
+	/* display: none; -  menu is shown when JS prerequisite is met, however has
+	   issues when PJAX loading is used, as the menu won't show when a page is 
+	   loaded with it */
+	display: none;
 	float: right;
 	line-height: 3rem;
 	padding-right: 1rem;
@@ -115,7 +118,7 @@
 				box-shadow: inset 0 -.25rem 0 0 #9DC6DA, inset 0 -3.25rem 1rem -3rem rgba(158, 198, 218, .69);
 			}
 
-			&:active { box-shadow: inset 0 -.25em 0 0 #83A6B6;  }
+			&:active { box-shadow: inset 0 -.25em 0 0 #83A6B6; }
 
 			&.disabled {
 				box-shadow: inherit;
