@@ -11,11 +11,11 @@
 	top: .6em;
 	z-index: 9999;
 
-	&:hover { .bar1, .bar2, .bar3 { background-color: darkgrey; } }
+	&:hover { .bar1, .bar2, .bar3 { background-color: white; } }
 }
 
 .bar1, .bar2, .bar3 {
-	background-color: white;
+	background-color: darkgrey;
 	border-radius: 1em;
 	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .75));
 	height: .125rem;
@@ -169,6 +169,8 @@
 					padding: 0;
 					text-align: left;
 					width: 100%;
+
+					&.current { opacity: .7; }
 				}
 			}
 

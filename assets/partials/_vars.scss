@@ -23,15 +23,17 @@
 --scrollbar-arrow: #333; // color of scrollbar arrow
 
 /* Font Sizes (1.25 scale) */
---font-7: 4.768rem;
---font-6: 3.815rem;
---font-5: 3.052rem;
---font-4: 2.441rem;
---font-3: 1.953rem;
---font-2: 1.563rem;
---font-1: 1.25rem;
+--scale: 1.25;
+
+--font-7: calc(var(--font-6) * var(--scale));
+--font-6: calc(var(--font-5) * var(--scale));
+--font-5: calc(var(--font-4) * var(--scale));
+--font-4: calc(var(--font-3) * var(--scale));
+--font-3: calc(var(--font-2) * var(--scale));
+--font-2: calc(var(--font-1) * var(--scale));
+--font-1: calc(var(--font-0) * var(--scale));
 --font-0: 1rem;
---font--1: .8rem;
---font--2: .64rem;
---font--3: .512rem;
+--font--1: calc(var(--font-0) / var(--scale));
+--font--2: calc(var(--font--1) / var(--scale));
+--font--3: calc(var(--font--2) / var(--scale));
 }
