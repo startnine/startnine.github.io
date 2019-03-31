@@ -7,10 +7,12 @@ layout: compress
 	{% include head.html %}
 	<body>
 		<div id="barba-wrapper"> <div class="barba-container">
-		<header>
-			{% include nav.html %}
-		</header>
-		{{ content }}
+			<header>
+				{% include header.html %}
+			</header>
+			<main class="{{ page.type }}" data-viewport="{{ page.order }}">
+				{{ content }}
+			</main>
 		</div></div>
 	{% include footer.html %}
 	</body>
