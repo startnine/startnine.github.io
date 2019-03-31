@@ -162,22 +162,17 @@ $("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 $("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 
 /*
-** When the user scrolls down, hide the navbar
-** When the user scrolls up, show the navbar - taken from W3Schools
+** Hide the top part of the navbar when scrolled down
+** adapted from W3Schools - https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
 */
-var prevScrollpos = window.pageYOffset;
-var navbar = $(".header");
 window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-	navbar.removeClass("scroll-up");
-} else {
-	navbar.addClass("scroll-up");
-}
-
-// if scrolled to zero, show menu bar
-	prevScrollpos = currentScrollPos;
-	if(currentScrollPos==0){ navbar.removeClass("scroll-up"); }
+	var currentScrollPos = window.pageYOffset;
+	if (48 > currentScrollPos) {
+		$(".header").removeClass("scroll-up");
+	} else {
+		$(".header").addClass("scroll-up");
+	}
+	if (currentScrollPos == 0){ navbar.removeClass("scroll-up"); } // if scrolled to zero, show menu bar
 };
 
 /*
