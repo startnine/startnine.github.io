@@ -16,6 +16,18 @@ body {
 }
 
 /*
+** Anchor link offset
+** https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+*/
+*[id]:before {
+	content: " ";
+	display: block;
+	height: 4rem;
+	margin-top: -4rem;
+	visibility: hidden;
+}
+
+/*
 ** General
 */
 .byline { font-style: italic; }
