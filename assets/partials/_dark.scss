@@ -6,6 +6,14 @@
 --background: linear-gradient(#333, #252525);
 --color: white;
 
+// disable contrast button when dark is enabled (they don't mix well)
+.js-contrast {
+	cursor: not-allowed;
+	opacity: .6;
+	pointer-events: none;
+	user-select: none;
+}
+
 a { color: #4CB9E2; }
 
 footer {
