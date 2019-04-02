@@ -10,7 +10,7 @@ layout: compress
 			<header>
 				{% include header.html %}
 			</header>
-			<main class="{{ page.type }}" data-viewport="{{ page.order }}">
+			<main class="{{ page.type }} {{ layout.type }}" data-viewport="{{ page.order }}">
 				{{ content }}
 			</main>
 		</div></div>

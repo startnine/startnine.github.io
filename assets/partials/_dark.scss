@@ -1,19 +1,17 @@
 /*
 ** Dark Theme
 */
-// sass-lint:disable
-
 
 .dark {
 --background: linear-gradient(#333, #252525);
+--color: white;
 
-body {
-	color: white;
-}
+a { color: #4CB9E2; }
 
 footer {
 	background: linear-gradient(#303030, #252525, #1B1B1B, #111, black);
-	color: white;
+
+	a { color: var(--color); }
 
 	.logo-group {
 		a { filter: initial; }
@@ -22,7 +20,9 @@ footer {
 
 p, li { opacity: .8; }
 
-.icon { fill: white; }
+.toc ul { border-left: rgba(255, 255, 255, .2) 1px solid; }
+
+.icon { fill: var(--color); }
 
 .bar1, .bar2, .bar3 { box-shadow: initial; }
 
@@ -52,7 +52,7 @@ p, li { opacity: .8; }
 
 .code, code {
 	background: #171717;
-	color: white;
+	color: var(--color);
 }
 
 @media screen and (max-width: 37.5rem) { .header, nav { overflow: initial; } }
@@ -60,7 +60,7 @@ p, li { opacity: .8; }
 /* Monokai Syntax */
 .highlight {
 	// sass-lint:disable-block trailing-semicolon one-declaration-per-line property-sort-order
-	color: white;
+	color: var(--color);
 	pre, code, .hll { background-color: #272822;}
 	.err { background-color: #1E0010; color: #960050; }
 	.ge { font-style: italic;}

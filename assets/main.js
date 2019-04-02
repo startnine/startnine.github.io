@@ -60,27 +60,27 @@ Mousetrap.bind("@ s o m e o n e", function() {
 
 /* Text Size button toggle */
 function defaultFont() {
-	$("html").css("font-size", "1em");
+	$(":root").get(0).style.setProperty("--font-0", "1rem");
 	document.cookie = "text=normal; path=/;";
 	$(".caption-button.js-text-adjust b").html("A");
 }
 
 function largeFont() {
-	$("html").css("font-size", "2em");
+	$(":root").get(0).style.setProperty("--font-0", "1.2rem");
 	document.cookie = "text=large; path=/;";
 	$(".caption-button.js-text-adjust b").html("a");
 }
 
-var fontSize = false;
+var largeFontSize = false;
 $(".js-text-adjust").click(function() {
-	if(fontSize) {
+	if(largeFontSize) {
 		// off
 		defaultFont();
-		fontSize = false;
+		largeFontSize = false;
 	} else {
 		// on
 		largeFont();
-		fontSize = true;
+		largeFontSize = true;
 	}
 });
 
@@ -129,10 +129,10 @@ $("#module-search").on("keyup", function() {
 // text size
 if (document.cookie.includes("text=large")) {
 	largeFont();
-	fontSize = true;
+	largeFontSize = true;
 } else {
 	defaultFont();
-	fontSize = false;
+	largeFontSize = false;
 }
 
 // contrast
@@ -162,6 +162,19 @@ $("#gitbutton").click(function() { $(".github").toggleClass("active"); });
 $("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 
 /*
+** Add a self link for headers in docs pages
+** adapted from thelounge - https://github.com/thelounge/thelounge.github.io/commit/e5774dec659e589331111e8ef27afe3a81de9c2d (MIT)
+*/
+$(".content h2, .content h3").each(function() {
+	$(this).prepend($(
+		"<a class='self-link' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1'>" + // as these links aren't accessible at all anyway, disable tabbing for them
+			"<svg class='icon' aria-hidden='true'><use href=" + hostname + "/assets/symbol-defs.svg#icon-link/></svg>" +
+			"<span class='vox-only' aria-hidden='true'>Shareable link</span>" + // sometimes screen readers ignore aria-ignore, add vague description just in case
+		"</a>"
+	));
+});
+
+/*
 ** Hide the top part of the navbar when scrolled down
 ** adapted from W3Schools - https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
 */
@@ -172,7 +185,7 @@ window.onscroll = function() {
 	} else {
 		$(".header").addClass("scroll-up");
 	}
-	if (currentScrollPos == 0){ navbar.removeClass("scroll-up"); } // if scrolled to zero, show menu bar
+	if (currentScrollPos == 0){ $(".header").removeClass("scroll-up"); } // if scrolled to zero, show menu bar
 };
 
 /*

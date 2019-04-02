@@ -5,7 +5,8 @@ footer {
 	background: #FCFCFC linear-gradient(#FCFCFC, #E6E6E6);
 	border-top: 1px solid #9B9B9B;
 	box-shadow: 0 -4px 25px 0 rgba(0, 0, 0, .2);
-	color: black;
+	color: var(--color);
+	font-size: var(--font-0);
 	line-height: 1.5;
 	margin: 1em 0 0;
 	padding: 1em 0 .5em;
@@ -19,13 +20,11 @@ footer {
 		justify-content: flex-start;
 
 		div {
-			font-size: 15pt;
 			margin: 0 3em;
 			width: 12.5rem;
 
 			a {
 				display: block;
-				font-size: 1rem;
 				transition: background .3s ease, box-shadow .3s ease, opacity .3s ease;
 			}
 		}

@@ -37,24 +37,23 @@
 /* Mobile Adjustments */
 @media screen and (max-width: 76rem) {
 
-	.grid-body { margin: 1em; }
+	.grid-body {
+		grid-template-areas: "left content content content content content";
+		margin: 1em;
+
+		.toc {
+			display: none;
+			visibility: hidden;
+		}
+
+	}
 	.one-box { margin: 1em; }
 }
 
 @media all and (max-width: 50.75rem) {
-	.grid-body, .one-box {
-		grid-template-columns: auto auto;
-		grid-template-rows: 100%;
-	}
-
 	.grid-body { display: block; } // disable grid when screen too small for it
 
 	.index {
-		.side {
-			grid-column: 1;
-			grid-row: 2;
-		}
-
 		.hero {
 			margin: 3em 0;
 

@@ -2,9 +2,14 @@
 layout: default
 type: grid-body fade-in post docs
 ---
-{% include docs-nav.html %}
 
-<aside class="side fade-in">
+<aside class="side left">
+	<nav class="sidebar-object sticky">
+		{% include docs-nav.html %}
+	</nav>
+</aside>
+
+<aside class="side right">
 	<nav class="sidebar-object sticky toc">
 		<h2>In this page:</h2>
 		{% include toc.html html=content h_min=2 %}

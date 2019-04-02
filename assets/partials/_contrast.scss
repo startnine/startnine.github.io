@@ -5,7 +5,7 @@
 
 .contrast {
 --background: white;
-color: black;
+--color: black;
 
 --card-1: 255, 255, 255; // card background (gradient stop 1)
 --card-2: 245, 245, 245; // card background (gradient stop 2)
@@ -39,7 +39,7 @@ code { color: white; }
 footer { background: #FCFCFC; }
 
 .caption-button {
-	&.js-contrast { transform: rotate(180deg); } // horizontal-flip contrast button
+	&.js-contrast svg { transform: rotate(180deg); } // horizontal-flip contrast button
 }
 
 }

@@ -1,12 +1,12 @@
 ---
 layout: docs
 project: getting_started
+title: Contributing (WIP)
 ---
 
-# Contributing Guidelines *WIP*
 Thanks for taking the time to contribute to Start9! To make sure that your efforts are used effectively, please take the time to read over these guidelines.
 
-## Submiting an issue 
+## Submitting an issue 
 We use GitHub issue tracking to manage problems and suggestions with Start9. If you've found a bug in Start9, this is where you should go. The only prerequisite for submiting a problem or suggestion is to [create a free GitHub account](https://github.com/join). Creating a GitHub account is free and takes minutes.   
 *The issues page can be found here:* 
 
