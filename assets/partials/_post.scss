@@ -30,3 +30,64 @@ figure { display: block; }
 	line-height: 1.6;
 	margin: 3em auto 2em;
 }
+
+/*
+** Styles for docs
+*/
+.w-i-d-e {
+	font-size: var(--font-1) !important; // It WILL be wide.
+	height: 3em;
+	line-height: 3em !important; // It WILL be wide.
+	width: 100%;
+}
+
+/*
+** Alert, Info, Warning
+*/
+.note {
+	border: 1px solid transparent;
+	border-radius: .2rem;
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: .9rem;
+
+	// TEMP COLOURS - CHANGE LATER
+	&.info {
+		background: #D2E4F9;
+		border-color: #314E8F;
+		color: #314E8F;
+	}
+
+	&.alert {
+		background: #F9D2D2;
+		border-color: #440808;
+		color: #440808;
+	}
+
+	&.warn {
+		background: #F5F9D2;
+		border-color: #838A3B;
+		color: #838A3B;
+	}
+
+	&.tip {
+		background: #D2F9D2;
+		border-color: #094409;
+		color: #094409;
+	}
+}
+
+/*
+** Self link
+*/
+h2, h3 {
+	.self-link {
+		margin-left: -1em;
+		opacity: 0;
+		transition: opacity .3s ease;
+	}
+
+	&:hover {
+		.self-link { opacity: .5; }
+	}
+}

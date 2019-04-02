@@ -163,9 +163,10 @@ $("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 
 /*
 ** Add a self link for headers in docs pages
+** Enabled in the child of elements with .js-self-link
 ** adapted from thelounge - https://github.com/thelounge/thelounge.github.io/commit/e5774dec659e589331111e8ef27afe3a81de9c2d (MIT)
 */
-$(".content h2, .content h3").each(function() {
+$(".js-self-link h2, .js-self-link h3").each(function() {
 	$(this).prepend($(
 		"<a class='self-link' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1'>" + // as these links aren't accessible at all anyway, disable tabbing for them
 			"<svg class='icon' aria-hidden='true'><use href=" + hostname + "/assets/symbol-defs.svg#icon-link/></svg>" +
