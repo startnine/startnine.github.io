@@ -3,6 +3,7 @@
 */
 html {
 	background: var(--background);
+	color: var(--color);
 	font-family: "Ubuntu", "Segoe UI", sans-serif;
 	font-size: var(--font-0);
 	line-height: 1.5rem;
@@ -44,8 +45,9 @@ body {
 	user-select: none;
 }
 
+pre, code, .hll, .code { background-color: white; }
+
 .code, code {
-	background: white;
 	border-radius: .2em;
 	color: #171700;
 	font-family: "Consolas", "Lucida Console", "Monaco", monospace;
@@ -55,6 +57,7 @@ body {
 }
 
 pre {
+	border-radius: .2em;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
