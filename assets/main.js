@@ -106,12 +106,12 @@ $(".js-contrast").click(function() {
 	if(clickedContrast) {
 		// off
 		clickedContrast = false;
-		$("html").removeClass("contrast");
+		$("html").removeClass("contrast no-custom-scrollbar");
 		document.cookie = "contrast=false; path=/; expires=0;";
 	} else {
 		// on
 		clickedContrast = true;
-		$("html").addClass("contrast");
+		$("html").addClass("contrast no-custom-scrollbar");
 		document.cookie = "contrast=true; path=/; expires=0;";
 	}
 });

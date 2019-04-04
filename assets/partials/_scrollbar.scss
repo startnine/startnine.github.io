@@ -5,6 +5,7 @@
 ** will contain many errors
 **/
 
+html:not(.no-custom-scrollbar) {
 // Base track
 ::-webkit-scrollbar-track { background: linear-gradient(#DEDEDE, #CDCDCD); }
 
@@ -93,4 +94,5 @@
 			}
 		}
 	}
+}
 }
