@@ -53,21 +53,21 @@ figure { display: block; }
 
 	// TEMP COLOURS - CHANGE LATER
 	&.info {
-		background: #D2E4F9;
-		border-color: #314E8F;
-		color: #314E8F;
+		background: #D2ECF9;
+		border-color: #093044;
+		color: #093044;
 	}
 
 	&.alert {
 		background: #F9D2D2;
-		border-color: #440808;
-		color: #440808;
+		border-color: #440909;
+		color: #440909;
 	}
 
 	&.warn {
-		background: #F5F9D2;
-		border-color: #838A3B;
-		color: #838A3B;
+		background: #F9F6D2;
+		border-color: #404409;
+		color: #404409;
 	}
 
 	&.tip {

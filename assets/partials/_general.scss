@@ -29,6 +29,38 @@ body {
 }
 
 /*
+** Typography
+*/
+/* Headers */
+h1, h2, h3, h4, h5 {
+	font-weight: 500;
+	margin: 2.75rem 0 1rem;
+}
+
+h1 { font-size: var(--font-3); }
+h2 { font-size: var(--font-2); }
+h3 { font-size: var(--font-1); }
+
+/* Code */
+pre, code, .hll, .code { background-color: #EEE; }
+
+.code, code {
+	border-radius: .2em;
+	color: #171700;
+	font-family: "Consolas", "Lucida Console", "Monaco", monospace;
+	margin: -.2em 0;
+	padding: .2em;
+	white-space: pre-wrap;
+}
+
+pre {
+	border-radius: .2rem;
+	padding: .25rem;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+/*
 ** General
 */
 .byline { font-style: italic; }
@@ -43,23 +75,6 @@ body {
 	opacity: .6;
 	pointer-events: none;
 	user-select: none;
-}
-
-pre, code, .hll, .code { background-color: white; }
-
-.code, code {
-	border-radius: .2em;
-	color: #171700;
-	font-family: "Consolas", "Lucida Console", "Monaco", monospace;
-	margin: -.2em 0;
-	padding: .2em;
-	white-space: pre-wrap;
-}
-
-pre {
-	border-radius: .2em;
-	white-space: pre-wrap;
-	word-wrap: break-word;
 }
 
 .resize { height: 25em; }
@@ -92,19 +107,6 @@ pre {
 	box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .32);
 	padding: 1em;
 }
-
-/*
-** Headers
-*/
-h1, h2, h3, h4, h5 {
-	font-weight: 500;
-	margin: 2.75rem 0 1rem;
-}
-
-
-h1 { font-size: var(--font-3); }
-h2 { font-size: var(--font-2); }
-h3 { font-size: var(--font-1); }
 
 /*
 ** a11y
@@ -157,19 +159,15 @@ h3 { font-size: var(--font-1); }
 /* :focus styling + remove it when mouse is used */
 a:not(.button):not(.ignore-jerry-mouse) { // slightly increase visibility when tabbing to links
 	&:focus {
-		background: white;
+		background-color: white;
 	}
 }
 
 // :focus styling serves no purpose when a mouse is being used, and is removed
 .jerry-mouse { // styles reset when mouse used
-	&:focus {
-		outline: none;
-	}
+	&:focus { outline: none; }
 
 	a:not(.button):not(.ignore-jerry-mouse) {
-		&:focus {
-			background: transparent;
-		}
+		&:focus { background-color: transparent; }
 	}
 }

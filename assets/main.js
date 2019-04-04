@@ -32,7 +32,7 @@ function darkSideOfTheMoon() {
 /*
 ** stuff that should be done load when page loads
 */
-var hostname = window.location.origin;
+const hostname = window.location.origin;
 
 $(document).ready(function() {
 
@@ -168,7 +168,7 @@ $("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 */
 $(".js-self-link h2, .js-self-link h3").each(function() {
 	$(this).prepend($(
-		"<a class='self-link' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1'>" + // as these links aren't accessible at all anyway, disable tabbing for them
+		"<a class='self-link instapaper_hide' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1'>" + // as these links aren't accessible at all anyway, disable tabbing for them
 			"<svg class='icon' aria-hidden='true'><use href=" + hostname + "/assets/symbol-defs.svg#icon-link/></svg>" +
 			"<span class='vox-only' aria-hidden='true'>Shareable link</span>" + // sometimes screen readers ignore aria-ignore, add vague description just in case
 		"</a>"
