@@ -25,7 +25,7 @@
 		{% assign sorted_pages = site.pages | sort:"order" %}
 		{% for node in sorted_pages %}
 			{% if node.menu == 'main' %}
-				<a class="delaylink button {% if page.title == node.title %}current{% endif %}" onclick="
+				<a class="delaylink button {% if page.title == node.title %}current{% endif %} menu-bar-button" onclick="
 				{% if page.order < node.order %}fadeOutRight();
 				{% elsif page.order > node.order %}fadeOutLeft();
 				{% else %}fadeOut();{% endif %}

@@ -10,13 +10,24 @@
 --background: linear-gradient(#CCC, #BEBEBE); // site background
 --color: black;
 
+--link-focus-bg: white;
+
 /* Cards */
 // these are in decimal to allow for alpha transparency in marketplace
 --card-1: 238, 238, 238; // card background (gradient stop 1)
 --card-2: 218, 218, 218; // card background (gradient stop 2)
 
 /* Scrollbar */
---scrollbar: #DADADA; // scrollbar button initial
+--scrollbar-corner: #F0F0F0; 
+--scrollbar-track-bg: #F5F5F5;
+--scrollbar-thumb-1: #EEE;
+--scrollbar-thumb-2: #DADADA;
+--scrollbar-thumb-hover-1: #F2F2F2;
+--scrollbar-thumb-hover-2: #E9E9E9;
+--scrollbar-thumb-active-1: #B1DAEE;
+--scrollbar-thumb-active-2: #9DC6DA;
+
+--scrollbar-button: #DADADA; // scrollbar button initial
 --scrollbar-hover: #F2F2F2; // scrollbar button hover (bottom)
 --scrollbar-hover-1: #E9E9E9; // scrollbar button hover (top)
 --scrollbar-active: #B0E7EC; // scrollbar button active (bottom)

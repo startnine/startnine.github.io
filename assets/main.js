@@ -147,6 +147,11 @@ if (document.cookie.includes("contrast=true")) {
 // dark theme
 if (document.cookie.includes("dark=best")) { darkSideOfTheMoon(); }
 
+// apply dark theme if user has elected to use it system-wide
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	darkSideOfTheMoon();
+}
+
 /* delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT) */
 // this may be bad practice, and will be deleted if it is
 $("a.delaylink[href]").click(function(){

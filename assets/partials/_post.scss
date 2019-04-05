@@ -38,7 +38,7 @@ figure { display: block; }
 	font-size: var(--font-1) !important; // It WILL be wide.
 	height: 3em;
 	line-height: 3em !important; // It WILL be wide.
-	width: 100%;
+	width: calc(100% - 1.5rem);
 }
 
 /*
@@ -85,6 +85,8 @@ h2, h3 {
 		margin-left: -1em;
 		opacity: 0;
 		transition: opacity .3s ease;
+
+		svg { height: .75em; }
 	}
 
 	&:hover {

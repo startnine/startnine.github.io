@@ -3,8 +3,40 @@
 */
 
 .dark {
---background: linear-gradient(#333, #252525);
+--background: linear-gradient(#2D2D2D, #262626);
 --color: white;
+
+--card-1: 85, 85, 85; // card background (gradient stop 1)
+--card-2: 65, 65, 65; // card background (gradient stop 2)
+
+--scrollbar-corner: #454545; 
+--scrollbar-track-bg: linear-gradient(#464646, #343434);
+--scrollbar-thumb-1: #555;
+--scrollbar-thumb-2: #414141;
+--scrollbar-thumb-hover-1: #595959;
+--scrollbar-thumb-hover-2: #505050;
+--scrollbar-thumb-active-1: #638184;
+--scrollbar-thumb-active-2: #536D70;
+
+--scrollbar-button: #555; // scrollbar button initial
+--scrollbar-hover: #515151; // scrollbar button hover (bottom)
+--scrollbar-hover-1: #535353; // scrollbar button hover (top)
+--scrollbar-active: #546E71; // scrollbar button active (bottom)
+--scrollbar-active-1: #567073; // scrollbar button active (top)
+--scrollbar-arrow: #CCC; // color of scrollbar arrow
+
+--link-focus-bg: #444; 
+
+input:not([type="checkbox"]):not([type="radio"]) {
+	background: linear-gradient(#606060, #666);
+	box-shadow: 0 0 0 1px #555555, 0 0 0 2px #414141;
+	&:hover { box-shadow: 0 0 0 1px #626262, 0 0 0 2px #353535; }
+
+	&:focus {
+		box-shadow: 0 0 0 1px #5B787A, 0 0 0 2px #4A6366;
+		outline: 1px solid #414141;
+	}
+}
 
 // disable contrast button when dark is enabled (they don't mix well)
 .js-contrast {
@@ -17,7 +49,7 @@
 a { color: #4CB9E2; }
 
 footer {
-	background: linear-gradient(#303030, #252525, #1B1B1B, #111, black);
+	background: linear-gradient(#646464, #4E4E4E);
 
 	a { color: var(--color); }
 
@@ -32,44 +64,48 @@ p, li { opacity: .8; }
 
 .icon { fill: var(--color); }
 
-.bar1, .bar2, .bar3 { box-shadow: initial; }
-
 .logo-group { filter: invert(1); }
 
 .burger-button { .bar1, .bar2, .bar3 { background-color: white; } }
 
-.slide-down { .bar1, .bar2, .bar3 { box-shadow: initial; } }
-
-.menu-focus { &.active { background: black; } }
-
-.button {
-	background: linear-gradient(#555, #414141);
-	border-radius: .1rem;
+.button:not(.menu-bar-button) {
+	background: linear-gradient(#474747, #333333);
+	border: 1px solid #1C1C1C;
+	border-radius: 3px;
+	box-shadow: inset 0 0 0 1px #555;
 	color: white;
 
 	&:hover {
-		background: linear-gradient(#666, #626262);
+		background: linear-gradient(#595959, #505050);
+		border: 1px solid #353535;
+		box-shadow: inset 0 0 0 1px #666;
 	}
 
-	&:active {
-		background: linear-gradient(#474747, #333);
-		box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+	&:active, &:focus {
+		background: linear-gradient(#638184, #536D70);
+		border: 1px solid #4A6366;
+		box-shadow: inset 0 0 0 1px #798B8C;
+	}
+
+	.disabled {
+		background: #2D2D2D;
+		border: 1px solid #404040;
 	}
 }
 
 
 .code, code {
-	background: #171717;
+	background: #191919;
 	color: var(--color);
 }
 
-@media screen and (max-width: 37.5rem) { .header, nav { overflow: initial; } }
+// @media screen and (max-width: 37.5rem) { .header, nav { overflow: initial; } }
 
 /* Monokai Syntax */
 .highlight {
 	// sass-lint:disable-block trailing-semicolon one-declaration-per-line property-sort-order
 	color: var(--color);
-	pre, code, .hll { background-color: #272822;}
+	pre, code, .hll { background-color: #191919;}
 	.err { background-color: #1E0010; color: #960050; }
 	.ge { font-style: italic;}
 	.gs { font-weight: bold;}
