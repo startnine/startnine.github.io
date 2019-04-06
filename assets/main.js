@@ -25,8 +25,12 @@ function scrollUp() {
 }
 
 function darkSideOfTheMoon() {
+	if ($("html").hasClass("contrast")) {
+	console.log("Dark theme not enabled, turn off contrast");
+	} else {
 	$("html").addClass("dark");
 	document.cookie = "dark=best; path=/;";
+	}
 }
 
 /*
@@ -60,7 +64,7 @@ Mousetrap.bind("@ s o m e o n e", function() {
 
 /* Text Size button toggle */
 function defaultFont() {
-	$(":root").get(0).style.setProperty("--font-0", "1rem");
+	$(":root").get(0).style.setProperty("--font-0", "");
 	document.cookie = "text=normal; path=/;";
 	$(".caption-button.js-text-adjust b").html("A");
 }
@@ -108,6 +112,8 @@ $(".js-contrast").click(function() {
 		clickedContrast = false;
 		$("html").removeClass("contrast no-custom-scrollbar");
 		document.cookie = "contrast=false; path=/; expires=0;";
+	} else if ($("html").hasClass("dark")) {
+		console.log("Contrast theme not enabled, turn off dark");
 	} else {
 		// on
 		clickedContrast = true;
@@ -118,9 +124,9 @@ $(".js-contrast").click(function() {
 
 /* Marketplace */
 // Search modules - https://www.w3schools.com/jquery/jquery_filters.asp
-$("#module-search").on("keyup", function() {
+$("#search").on("keyup", function() {
 	var value = $(this).val().toLowerCase();
-	$(".modules div").filter(function() {
+	$($(this).data("filter")).filter(function() {
 		$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
 	});
 });
@@ -152,8 +158,8 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 	darkSideOfTheMoon();
 }
 
-/* delay links - https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT) */
-// this may be bad practice, and will be deleted if it is
+/* delay links - this is probably a bad idea */
+// https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
 $("a.delaylink[href]").click(function(){
 	var self = $(this);
 	setTimeout(function() {
@@ -172,11 +178,14 @@ $("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 ** adapted from thelounge - https://github.com/thelounge/thelounge.github.io/commit/e5774dec659e589331111e8ef27afe3a81de9c2d (MIT)
 */
 $(".js-self-link h2, .js-self-link h3").each(function() {
-	$(this).prepend($(
+	$(this).append($(
+		/*
 		"<a class='self-link instapaper_hide' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1'>" + // as these links aren't accessible at all anyway, disable tabbing for them
 			"<svg class='icon' aria-hidden='true'><use href=" + hostname + "/assets/symbol-defs.svg#icon-link/></svg>" +
 			"<span class='vox-only' aria-hidden='true'>Shareable link</span>" + // sometimes screen readers ignore aria-ignore, add vague description just in case
 		"</a>"
+		*/
+		" <a class='self-link instapaper_hide' href=#" + $(this).attr("id") + "aria-hidden='true' tabindex='-1' title='Permalink to this section'> #</a>" // this way is smaller
 	));
 });
 

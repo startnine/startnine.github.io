@@ -5,9 +5,7 @@ a {
 	color: #00729E;
 	text-decoration: none;
 
-	&:hover {
-		text-decoration: underline;
-	}
+	&:hover { text-decoration: underline; }
 
 	&.button {
 		background: #EEE linear-gradient(#EEE , #DADADA);

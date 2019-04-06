@@ -38,7 +38,17 @@ figure { display: block; }
 	font-size: var(--font-1) !important; // It WILL be wide.
 	height: 3em;
 	line-height: 3em !important; // It WILL be wide.
+	margin-bottom: 1em;
 	width: calc(100% - 1.5rem);
+}
+
+.docs-search { width: calc(100% - 2rem); }
+
+.docs-nav {
+	a {
+		display: block;
+		width: calc(100% - 2.5rem);
+	}
 }
 
 /*
@@ -82,7 +92,7 @@ figure { display: block; }
 */
 h2, h3 {
 	.self-link {
-		margin-left: -1em;
+//      margin-left: -1em;
 		opacity: 0;
 		transition: opacity .3s ease;
 

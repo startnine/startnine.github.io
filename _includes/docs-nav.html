@@ -1,4 +1,6 @@
-<nav>
+<input id="search" type="text" placeholder="Filter by title" data-filter=".docs-nav a" class="docs-search">
+<br>
+<nav class="docs-nav">
 	{% assign sorted_docs = site.docs | sort:"order" %}
 	{% for docs in sorted_docs %}
 		{% if docs.project == page.project %}

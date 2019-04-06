@@ -44,3 +44,9 @@
 .fade-in-left { animation-name: fade-in, slideInLeft; }
 .fade-out-right  { animation-name: fade-out, slideOutRight; }
 .fade-out-left { animation-name: fade-out, slideOutLeft; }
+
+@media screen and (prefers-reduced-motion: reduce) {
+	.fade-out-right, .fade-out-left, .fade-in-left, .fade-in-right {
+		animation: initial;
+	}
+}
