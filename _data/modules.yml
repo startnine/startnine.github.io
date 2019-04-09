@@ -7,21 +7,21 @@
 #    a link
 
 - title: Double Decker Bar
-  image: 
+  image: doubledeckerbar.png
   author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: Double-decker taskbar, created from concepts
   link: > 
     https://github.com/StartNine/doubledeckerbar
 
 - title: Superbar
-  image: 
+  image: superbar.png
   author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: It's a Dock! It's a Taskbar! NO, IT'S...
   link: > 
     https://github.com/StartNine/Superbar
 
 - title: FileCommander
-  image: filecommander.png
+  image: filecommander-zoom.png
   author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: Experimental ribbon-based file manager module
   link: > 
@@ -35,7 +35,7 @@
     https://github.com/StartNine/originmenu
 
 - title: Experience Menu
-  image: 
+  image: experiencemenu.png
   author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
   desc: eXPerience the nostalgia!
   link: > 

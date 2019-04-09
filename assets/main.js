@@ -143,10 +143,10 @@ if (document.cookie.includes("text=large")) {
 
 // contrast
 if (document.cookie.includes("contrast=true")) {
-	$("html").addClass("contrast");
+	$("html").addClass("contrast no-custom-scrollbar");
 	clickedContrast = true; 
 } else {
-	$("html").removeClass("contrast");
+	$("html").removeClass("contrast no-custom-scrollbar");
 	clickedContrast = false;
 }
 
@@ -179,13 +179,7 @@ $("#discordbutton").click(function() { $(".discord").toggleClass("active"); });
 */
 $(".js-self-link h2, .js-self-link h3").each(function() {
 	$(this).append($(
-		/*
-		"<a class='self-link instapaper_hide' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1'>" + // as these links aren't accessible at all anyway, disable tabbing for them
-			"<svg class='icon' aria-hidden='true'><use href=" + hostname + "/assets/symbol-defs.svg#icon-link/></svg>" +
-			"<span class='vox-only' aria-hidden='true'>Shareable link</span>" + // sometimes screen readers ignore aria-ignore, add vague description just in case
-		"</a>"
-		*/
-		" <a class='self-link instapaper_hide' href=#" + $(this).attr("id") + "aria-hidden='true' tabindex='-1' title='Permalink to this section'> #</a>" // this way is smaller
+		" <a class='self-link instapaper_hide' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1' title='Permalink to this section'> #</a>"
 	));
 });
 
@@ -210,11 +204,11 @@ window.onscroll = function() {
 */
 
 document.body.addEventListener("mousedown", function() {
-	document.body.classList.add("jerry-mouse");
+	$("body").addClass("jerry-mouse");
 });
 
 document.body.addEventListener("keydown", function() {
-	document.body.classList.remove("jerry-mouse");
+	$("body").removeClass("jerry-mouse");
 });
 
 });
