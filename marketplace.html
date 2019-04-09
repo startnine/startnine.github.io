@@ -14,7 +14,7 @@ type: one-box marketplace
 <div class="marketplace fade-in-left">
 	<section class="modules marketplace-flex">
 		{% for module in site.data.modules %}
-		<div class="marketplace flex-item" style="background: linear-gradient(rgba(var(--card-1), .8), rgba(var(--card-2), .9)), url('assets/img/previews/{{ module.image }}'), #EEE;">
+		<div class="marketplace flex-item" style="background-image: linear-gradient(rgba(var(--card-1), .8), rgba(var(--card-2), .9)), url('assets/img/previews/{{ module.image }}');">
 			<h2><a rel="noopener noreferrer" target="_blank" href="{{ module.link }}">{{ module.title }}</a></h2>
 			<p class="byline">by {{ module.author }}</p>
 			<p class="desc">{{ module.desc }}
