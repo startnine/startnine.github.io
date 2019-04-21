@@ -32,25 +32,6 @@ The easiest way to have your suggestion implemented into Start9 quickly is for y
 ## Writing Code 
 Please save us time by complying to our code guidelines.
 
-### Code style 
-In general, just respect the rules that are used in C# in other places. You can see the C# design guidelines [here](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions). To summarize:
-
-**Do:** 
-- Allman style bracketing.
-- Everything uses `PascalCase`.
-	- Exceptions: Parameters and locals use `camelCase`. Private instance fields use `_camelCase.`
-- Use `var` only if the type is apparent.
-
-However, we ask that you use tabs instead of spaces.
-
-**Don't:** 
-- Write hard to read code 
-- Refuse to write documentation for the code you write for Start9 
-- Spam pull requests if your first one was rejected, unless you've fixed the problem pointed out. 
-
-### Comments 
-Please comment on all your code, including functions, using XML documentation. Fill out as much information about the member or type as you can.
-
 <!-- ## Translating Start9 
 Localization is important for Start9 to grow! Here's how you can help. 
 **SECTION TBD**: for now, use #start9 on the [Start9 Discord](https://discord.gg/6cpvxBS). -->
