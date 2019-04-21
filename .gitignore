@@ -1,4 +1,9 @@
 ﻿# Specific to this repo
+_drafts/
+_site/
+.jekyll-cache/
+.sass-cache/
+.vscode/*
 *.code-workspace
 *.css.map
 *.db
@@ -9,12 +14,8 @@
 *.scss.map
 *.sublime-project
 *.sublime-workspace
-.jekyll-cache/
-.sass-cache/
-.vscode/*
+assets/img/original/
 Gemfile
 Gemfile.lock
-_drafts/
-_site/
-assets/img/original/
 jekyll.bat
+tempCodeRunnerFile.*
