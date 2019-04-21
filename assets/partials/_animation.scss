@@ -36,8 +36,14 @@
 	100% { transform: translateX(7em); }
 }
 
-.fade-out-right, .fade-out-left, .fade-in-left, .fade-in-right {
-	animation: fade-out .3s ease-in both;
+.fade-out-right, .fade-out-left {
+	animation: fade-out .25s ease-in both;
+	overflow-x: hidden;
+}
+
+.fade-in-left, .fade-in-right {
+	animation: fade-in .25s ease-out both;
+	overflow-x: hidden;
 }
 
 .fade-in-right { animation-name: fade-in, slideInRight; }

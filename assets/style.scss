@@ -6,21 +6,32 @@
 ** https://github.com/StartNine/start9.menu
 */
 
-@import "partials/vars"; // for all of them
+// Light theme colours
+@import "partials/vars";
 
+// Components
+@import "partials/a11y";
 @import "partials/animation";
-// @import "partials/animational"; no solution for white flash during transition right now
 @import "partials/button";
-@import "partials/content";
-@import "partials/footer";
 @import "partials/general";
-@import "partials/hero";
-@import "partials/highlight";
-@import "partials/marketplace";
-@import "partials/menu"; // navbar
-@import "partials/post"; // blog posts and documentation
+@import "partials/highlight"; // highlight.js
 @import "partials/scrollbar";
 
-@import "partials/dark";
+// Page-specific
+@import "partials/post";
+@import "partials/hero";
+@import "partials/marketplace";
+
+// Sections
+@import "partials/content";
+@import "partials/footer";
+@import "partials/menu";
+
+// Themes
 @import "partials/contrast";
+@import "partials/dark";
+
+// Media queries
 @import "partials/mobile";
+
+// The following is shame CSS
