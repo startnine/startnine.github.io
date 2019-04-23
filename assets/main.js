@@ -152,6 +152,16 @@ if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 	darkSideOfTheMoon(true);
 }
 
+// apply dark theme if user has Dark Reader or Night Eye, but don't add the cookie
+if ($("style").is(".darkreader") || $("style").is("#nighteyedefaultcss") || $("style").is("#darkmode")) {
+	if ($("html").hasClass("contrast")) {
+		// throw "error: Dark theme not enabled, turn off contrast";
+	} else {
+		$("html").addClass("dark");
+	}
+	// console.log("dark theme extention detected!");
+}
+
 /* delay links - this is probably a bad idea */
 // https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
 $("a.delaylink[href]").click(function(){
