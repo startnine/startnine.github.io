@@ -14,9 +14,9 @@
 				<b aria-hidden="true">a</b>
 				<span class="vox-only">Toggle text size</span>
 			</a>
-
+			<span class="invisible">&nbsp;</span>
 			<a class="caption-button js-contrast ignore-jerry-mouse" href="javascript:void(0);" title="Toggle contrast">
-				{% include icon.html icon="icon-contrast" %}
+				{% include icon.html icon="icon-contrast" width="1em" height="1em" %}
 				<span class="vox-only">Toggle contrast</span>
 			</a>
 		</span>
@@ -26,13 +26,14 @@
 		{% for node in sorted_pages %}
 			{% if node.menu == 'main' %}
 				<a class="delaylink button {% if page.title == node.title %}current{% endif %} menu-bar-button" onclick="
-				{% if page.order < node.order %}fadeOutRight();
-				{% elsif page.order > node.order %}fadeOutLeft();
-				{% else %}fadeOut();{% endif %}
-				"
-				href="{{ node.url | prepend: node.baseurl }}">
-				{{ node.title }}
+					{% if page.order < node.order %}fadeOutRight();
+						{% elsif page.order > node.order %}fadeOutLeft();
+						{% else %}fadeOut();
+					{% endif %}
+					"
+					href="{{ node.url | prepend: node.baseurl }}">{{ node.title }}
 				</a>
+				<span class="invisible">&nbsp;</span>
 			{% endif %}
 		{% endfor %}
 	</nav>

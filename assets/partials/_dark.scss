@@ -9,7 +9,7 @@
 --card-1: 85, 85, 85; // card background (gradient stop 1)
 --card-2: 65, 65, 65; // card background (gradient stop 2)
 
---scrollbar-corner: #454545; 
+--scrollbar-corner: #454545;
 --scrollbar-track-bg: linear-gradient(#464646, #343434);
 --scrollbar-thumb-1: #555;
 --scrollbar-thumb-2: #414141;
@@ -25,7 +25,7 @@
 --scrollbar-active-1: #567073; // scrollbar button active (top)
 --scrollbar-arrow: #CCC; // color of scrollbar arrow
 
---link-focus-bg: #444; 
+--link-focus-bg: #444;
 
 input:not([type="checkbox"]):not([type="radio"]) {
 	background: linear-gradient(#606060, #666);
