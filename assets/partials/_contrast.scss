@@ -10,6 +10,13 @@
 --card-1: 255, 255, 255; // card background (gradient stop 1)
 --card-2: 245, 245, 245; // card background (gradient stop 2)
 
+// disable dark button when contrast is enabled (they don't mix well)
+.js-darkmode {
+	opacity: .3;
+	pointer-events: none;
+	user-select: none;
+}
+
 a {
 	&.button {
 		background: #EEE;

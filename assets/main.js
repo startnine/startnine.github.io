@@ -25,10 +25,14 @@ function darkSideOfTheMoon(enable) {
 		} else {
 			$("html").addClass("dark");
 			document.cookie = "dark=best; path=/;";
+			$(".js-darkmode svg").remove(); // !: Find a better way to do this
+			$(".js-darkmode").append("<svg class='icon' aria-hidden='true' width='1em' height='1em'> <use href='" + hostname + "/assets/symbol-defs.svg#icon-moon-fill'></use></svg>"); 
 		}
 	} else {
 		$("html").removeClass("dark");
 		document.cookie = "dark=no; path=/;";
+		$(".js-darkmode svg").remove(); // !: Find a better way to do this
+		$(".js-darkmode").append("<svg class='icon' aria-hidden='true' width='1em' height='1em'> <use href='" + hostname + "/assets/symbol-defs.svg#icon-moon-stroke'></use></svg>");
 	}
 }
 
@@ -116,6 +120,22 @@ $(".js-contrast").click(function() {
 	}
 });
 
+/* Dark toggle */
+/* Contrast toggle */
+var clickedDark = false;
+$(".js-darkmode").click(function() {
+	if(clickedDark) {
+		// off
+		clickedDark = false;
+		darkSideOfTheMoon(false);
+	} else if ($("html").hasClass("contrast")) {
+		// throw "error: Dark theme not enabled, turn off contrast";
+	} else {
+		// on
+		clickedDark = true;
+		darkSideOfTheMoon(true);
+	}
+});
 /* Marketplace */
 // Search modules - https://www.w3schools.com/jquery/jquery_filters.asp
 $("#search").on("keyup", function() {
