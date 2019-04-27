@@ -176,6 +176,7 @@ if (document.cookie.includes("dark=best")) {
 // apply dark theme if user has elected to use it system-wide
 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 	darkSideOfTheMoon(true);
+	clickedDark = true;
 }
 
 // apply dark theme if user has Dark Reader or Night Eye, but don't add the cookie
