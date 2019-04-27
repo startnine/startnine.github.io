@@ -165,7 +165,13 @@ if (document.cookie.includes("contrast=true")) {
 }
 
 // dark theme
-if (document.cookie.includes("dark=best")) { darkSideOfTheMoon(true); }
+if (document.cookie.includes("dark=best")) {
+	darkSideOfTheMoon(true);
+	clickedDark = true;
+} else {
+	darkSideOfTheMoon(false);
+	clickedDark = false;
+}
 
 // apply dark theme if user has elected to use it system-wide
 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
