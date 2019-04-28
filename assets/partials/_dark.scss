@@ -27,7 +27,7 @@
 
 --link-focus-bg: #444;
 
-input:not([type="checkbox"]):not([type="radio"]) {
+input[type="text"] {
 	background: linear-gradient(#606060, #666);
 	box-shadow: 0 0 0 1px #555555, 0 0 0 2px #414141;
 	&:hover { box-shadow: 0 0 0 1px #626262, 0 0 0 2px #353535; }

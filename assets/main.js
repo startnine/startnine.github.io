@@ -36,6 +36,20 @@ function darkSideOfTheMoon(enable) {
 	}
 }
 
+function fontSize(size) {
+	if (size == "large") {
+		$(":root").css("--font-0", "1.2rem");
+		document.cookie = "text=large; path=/;";
+		$(".js-text-adjust svg").remove(); // !: Find a better way to do this
+		$(".js-text-adjust ").append("<svg class='icon' aria-hidden='true' width='1em' height='1em'> <use href='" + hostname + "/assets/symbol-defs.svg#icon-lowercase-a'></use></svg>"); 
+	} else {
+		$(":root").css("--font-0", "");
+		document.cookie = "text=normal; path=/;";
+		$(".js-text-adjust svg").remove(); // !: Find a better way to do this
+		$(".js-text-adjust").append("<svg class='icon' aria-hidden='true' width='1em' height='1em'> <use href='" + hostname + "/assets/symbol-defs.svg#icon-uppercase-a'></use></svg>");
+	}
+}
+
 const hostname = window.location.origin;
 
 /* Make accessbility controls exist */
@@ -60,28 +74,15 @@ Mousetrap.bind("@ s o m e o n e", function() {
 	$("body").addClass("someone");
 });
 
-/* Text Size button toggle */
-function defaultFont() {
-	$(":root").css("--font-0", "");
-	document.cookie = "text=normal; path=/;";
-	$(".caption-button.js-text-adjust b").html("A");
-}
-
-function largeFont() {
-	$(":root").css("--font-0", "1.2rem");
-	document.cookie = "text=large; path=/;";
-	$(".caption-button.js-text-adjust b").html("a");
-}
-
 var largeFontSize = false;
 $(".js-text-adjust").click(function() {
 	if(largeFontSize) {
 		// off
-		defaultFont();
+		fontSize("normal");
 		largeFontSize = false;
 	} else {
 		// on
-		largeFont();
+		fontSize("large");
 		largeFontSize = true;
 	}
 });
@@ -148,10 +149,10 @@ $("#search").on("keyup", function() {
 /* Apply styles from cookies */
 // text size
 if (document.cookie.includes("text=large")) {
-	largeFont();
+	fontSize("large");
 	largeFontSize = true;
 } else {
-	defaultFont();
+	fontSize("normal");
 	largeFontSize = false;
 }
 
