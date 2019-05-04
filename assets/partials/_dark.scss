@@ -57,7 +57,7 @@ footer {
 	}
 }
 
-p, li { opacity: .8; }
+p:not(.title-text), li { opacity: .8; }
 
 .toc ul { border-left: rgba(255, 255, 255, .2) 1px solid; }
 
@@ -65,7 +65,7 @@ p, li { opacity: .8; }
 
 .logo-group { filter: invert(1); }
 
-.burger-button { .bar1, .bar2, .bar3 { background-color: white; } }
+// .burger-button { .bar1, .bar2, .bar3 { background-color: white; } }
 
 .button:not(.menu-bar-button) {
 	background: linear-gradient(#474747, #333333);
