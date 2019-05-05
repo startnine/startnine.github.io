@@ -8,7 +8,8 @@ type: one-box faq fade-in js-self-link
 ---
 <div class="skip-target" id="maincontent"></div>
 
-# FAQ
+FAQ
+===
 
 ### Question
 Answer
