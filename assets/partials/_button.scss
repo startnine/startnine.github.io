@@ -30,8 +30,8 @@ a {
 		}
 
 		&:active, &:focus-visible {
-			background: #D6ECF6 linear-gradient(#9DC6DA, #B1DAEE);
-			border-color: #83A6B6;
+			background: rgb(calc(var(--a-r) + 57), calc(var(--a-g) + 38), calc(var(--a-b) + 28)) linear-gradient(rgb(var(--accent)), rgb(calc(var(--a-r) + 20), calc(var(--a-g) + 20), calc(var(--a-b) + 20)));
+			border-color: rgb(calc(var(--a-r) - 26), calc(var(--a-g) - 32), calc(var(--a-b) - 36));
 //          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
 		}
 
@@ -44,77 +44,27 @@ a {
 
 /*
 ** Checkboxes and Radio
-** commented out until replacement images are finsished
+** commented out until replacement images are finished
 */
+input {
+	&[type="text"] {
+		background: linear-gradient(#F9F9F9, white);
+		border: 0;
+		border-radius: .2rem;
+		box-shadow: 0 0 0 1px #DADADA, 0 0 0 2px #B5B5B5;
 
-input:not([type="checkbox"]):not([type="radio"]) {
-	background: linear-gradient(#F9F9F9, white);
-	border: 0;
-	border-radius: .2rem;
-	box-shadow: 0 0 0 1px #DADADA, 0 0 0 2px #B5B5B5;
-	color: var(--color);
-	font-family: "Ubuntu";
-	image-rendering: optimizeSpeed;
-	padding: .5em;
-	transition: .3s box-shadow ease;
+		color: var(--color);
+		font-family: "Ubuntu";
+		image-rendering: optimizeSpeed;
+		padding: .5em;
+		transition: .3s box-shadow ease;
 
-	&:hover { box-shadow: 0 0 0 1px #CECECE, 0 0 0 2px white; }
+		&:hover { box-shadow: 0 0 0 1px #CECECE, 0 0 0 2px white; }
 
-	&:focus {
-		box-shadow: 0 0 0 1px #D3F2F4, 0 0 0 2px #82B0B5;
-		outline: 1px solid white;
+		&:focus {
+			box-shadow: 0 0 0 1px rgb(calc(var(--a-r) + 55), calc(var(--a-g) + 44), calc(var(--a-b) + 26)), 0 0 0 2px rgb(calc(var(--a-r) + 27), calc(var(--a-g) + 22), calc(var(--a-b) + 37)); // TODO: make this line shorter
+			outline: 1px solid white;
+		}
 	}
+
 }
-
-/*
-	&[type="checkbox"] {
-		display: none;
-
-		+ label {
-
-		}
-
-		&:checked + label {
-
-		}
-
-		&:indeterminate + label {
-
-		}
-
-		&:hover {
-			+ label {
-
-			}
-
-			&:checked + label {
-
-			}
-
-			&:indeterminate + label {
-
-			}
-		}
-	}
-
-	&[type="radio"] {
-		display: none;
-
-		+ label {
-
-		}
-
-		&:checked + label {
-
-		}
-
-		&:hover + label {
-
-
-			&:checked + label {
-
-			}
-		}
-	}
-}
-*/

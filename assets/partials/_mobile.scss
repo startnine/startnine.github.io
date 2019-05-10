@@ -47,7 +47,7 @@
 		}
 
 	}
-	.one-box { margin: 1em; }
+	.one-box { margin: 3em 1em; }
 }
 
 @media all and (max-width: 50.75rem) {
@@ -113,7 +113,7 @@
 			pointer-events: visible;
 		}
 
-		nav { visibility: hidden; }
+		nav { display: none; }
 
 		// Burger Menu
 		&.slide-up, &.slide-down {
@@ -124,9 +124,9 @@
 
 		&.slide-up {
 			.menu-bar {
+				display: none;
 				height: 0;
 				padding: 8px;
-				visibility: hidden;
 
 				.button {
 					box-shadow: unset;
@@ -153,9 +153,9 @@
 
 			.menu-bar {
 				background: #454545;
+				display: block;
 				height: 100vh;
 				padding: 8px 40px;
-				visibility: visible;
 
 				.button {
 					box-shadow: initial;
