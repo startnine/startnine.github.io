@@ -125,14 +125,14 @@ $(".js-contrast").click(function() {
 	if(clickedContrast) {
 		// off
 		clickedContrast = false;
-		$("html").removeClass("contrast no-custom-scrollbar");
+		$("html").removeClass("contrast no-custom-scrollbar no-custom-input");
 		document.cookie = "contrast=false; path=/; expires=0;";
 	} else if ($("html").hasClass("dark")) {
 		// throw "error: Contrast theme not enabled, turn off dark";
 	} else {
 		// on
 		clickedContrast = true;
-		$("html").addClass("contrast no-custom-scrollbar");
+		$("html").addClass("contrast no-custom-scrollbar no-custom-input");
 		document.cookie = "contrast=true; path=/; expires=0;";
 	}
 });
@@ -174,10 +174,10 @@ if (document.cookie.includes("text=large")) {
 
 // contrast
 if (document.cookie.includes("contrast=true")) {
-	$("html").addClass("contrast no-custom-scrollbar");
+	$("html").addClass("contrast no-custom-scrollbar no-custom-input");
 	clickedContrast = true;
 } else {
-	$("html").removeClass("contrast no-custom-scrollbar");
+	$("html").removeClass("contrast no-custom-scrollbar no-custom-input");
 	clickedContrast = false;
 }
 
@@ -192,6 +192,7 @@ if (document.cookie.includes("dark=best")) {
 
 // apply dark theme if user has elected to use it system-wide
 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+	// console.log("user has elected to use dark theme");
 	darkSideOfTheMoon(true);
 	clickedDark = true;
 }
@@ -202,6 +203,7 @@ if ($("style").is(".darkreader") || $("style").is("#nighteyedefaultcss") || $("s
 		// throw "error: Dark theme not enabled, turn off contrast";
 	} else {
 		$("html").addClass("dark");
+		// console.log("user has dark theme extention");
 	}
 	// console.log("dark theme extention detected!");
 }

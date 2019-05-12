@@ -5,6 +5,8 @@ type: one-box
 hidden: true
 visible: 1
 ---
+<div class="skip-target" id="maincontent"></div>
+
 <section>
 	<h1>Header</h1>
 	<h2>Header</h2>
@@ -23,15 +25,15 @@ console.log("this is not inline code");
 		<br>
 		<br>
 		<form class="radio">
-			<input type="radio" name="great" value="valuea" id="valuea"><label for="valuea"></label> Radio1<br>
-			<input type="radio" name="great" value="valueb" id="valueb"><label for="valueb"></label> Radio2<br>
-			<input type="radio" name="great" value="valuec" id="valuec"><label for="valuec"></label> Radio3
+			<input type="radio" name="great" value="valuea" id="valuea"><label for="valuea"><span class="custom-input"></span>Radio1</label><br>
+			<input type="radio" name="great" value="valueb" id="valueb"><label for="valueb"><span class="custom-input"></span>Radio2</label><br>
+			<input type="radio" name="great" value="valuec" id="valuec"><label for="valuec"><span class="custom-input"></span>Radio3</label>
 		</form>
 		<br>
 		<form class="checkbox">
-			<input type="checkbox" name="value" value="valued" id="valued"><label for="valued"></label> Checkbox1<br>
-			<input type="checkbox" name="value" value="valuee" id="valuee"><label for="valuee"></label> Checkbox2<br>
-			<input type="checkbox" name="value" value="valuef" id="valuef"><label for="valuef"></label> Checkbox3   
+			<input type="checkbox" name="value" value="valued" id="valued" checked><label for="valued"><span class="custom-input"></span>Checkbox1</label> <br>
+			<input type="checkbox" name="value" value="valuee" id="valuee"><label for="valuee"><span class="custom-input"></span>Checkbox2</label> <br>
+			<input type="checkbox" name="value" value="valuef" id="valuef"><label for="valuef"><span class="custom-input"></span>Checkbox3</label>    
 		</form>
 		<br>
 		<a class="old button">Filler Text</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -9,6 +9,8 @@
 --card-1: 85, 85, 85; // card background (gradient stop 1)
 --card-2: 65, 65, 65; // card background (gradient stop 2)
 
+--input-fill: calc(var(--a-r) + 11), calc(var(--a-g) + 4), calc(var(--a-b) + 5); // fill for the center of radio and checkbox
+
 --scrollbar-corner: #454545;
 --scrollbar-track-bg: linear-gradient(#464646, #343434);
 --scrollbar-thumb-1: #555;
@@ -27,15 +29,30 @@
 
 --link-focus-bg: #444;
 
+// !: !important is used here
+input {
+	&[type="text"] {
+		background: linear-gradient(#606060, #665) !important;
+		box-shadow: 0 0 0 1px #555, 0 0 0 2px #414141 !important;
+		&:hover { box-shadow: 0 0 0 1px #626262, 0 0 0 2px #353535 !important; }
 
-input[type="text"] {
-	background: linear-gradient(#606060, #665);
-	box-shadow: 0 0 0 1px #555, 0 0 0 2px #414141;
-	&:hover { box-shadow: 0 0 0 1px #626262, 0 0 0 2px #353535; }
+		&:focus {
+			box-shadow: 0 0 0 1px rgb(calc(var(--a-r) - 66), calc(var(--a-g) - 78), calc(var(--a-b) - 97)), 0 0 0 2px rgb(calc(var(--a-r) - 83), calc(var(--a-g) - 99), calc(var(--a-b) - 117)) !important; // TODO: make this line shorter
+			outline: 1px solid #414141 !important;
+		}
+	}
 
-	&:focus {
-		box-shadow: 0 0 0 1px rgb(calc(var(--a-r) - 66), calc(var(--a-g) - 78), calc(var(--a-b) - 97)), 0 0 0 2px rgb(calc(var(--a-r) - 83), calc(var(--a-g) - 99), calc(var(--a-b) - 117)); // TODO: make this line shorter
-		outline: 1px solid #414141;
+	&[type="radio"], &[type="checkbox"] {
+		+ label .custom-input {
+			border: 1px solid #1C1C1C !important;
+			box-shadow: inset 0 0 0 1px #555 !important;
+		}
+
+		&:hover + label .custom-input {
+			background: linear-gradient(#595959, #505050) !important;
+			border: 1px solid #353535 !important;
+			box-shadow: inset 0 0 0 1px #666 !important;
+		}
 	}
 }
 

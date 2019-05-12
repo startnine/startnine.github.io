@@ -21,6 +21,8 @@
 --a-b: 218;
 --accent: var(--a-r), var(--a-g), var(--a-b);
 
+--input-fill: calc(var(--a-r) - 144), calc(var(--a-g) - 136), calc(var(--a-b) - 136); // fill for the center of radio and checkbox
+
 /* Cards */
 // these are in decimal to allow for alpha transparency in marketplace
 --card-1: 238, 238, 238; // card background (gradient stop 1)

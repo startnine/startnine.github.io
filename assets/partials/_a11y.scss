@@ -47,10 +47,9 @@
 }
 
 /* :focus styling + remove it when mouse is used */
-a:not(.button):not(.ignore-jerry-mouse) { // slightly increase visibility when tabbing to links
-	&:focus {
-		background-color: var(--link-focus-bg);
-	}
+// slightly increase visibility when tabbing to links
+a:not(.button):not(.ignore-jerry-mouse) {
+	&:focus { background-color: var(--link-focus-bg); }
 }
 
 // :focus styling serves no purpose when a mouse is being used, and is removed
