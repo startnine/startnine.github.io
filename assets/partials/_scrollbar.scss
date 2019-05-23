@@ -2,8 +2,11 @@
 /*
 ** Scrollbars
 ** based off https://stackoverflow.com/a/52895808
-** will contain many errors
+** will be a pain to read
+	! CSS SCROLLBARS ARE NON STANDARD
+	* Syntax may change in the future
 **/
+
 
 html:not(.no-custom-scrollbar) {
 // Base track
@@ -18,11 +21,11 @@ html:not(.no-custom-scrollbar) {
 // Scrollbar bar thingy
 ::-webkit-scrollbar-thumb {
 	background: linear-gradient(var(--scrollbar-thumb-1), var(--scrollbar-thumb-2));
-	border: 1px solid #B5B5B5;
+	border: 1px solid var(--scrollbar-border);
 
 	&:hover {
 		background: linear-gradient(var(--scrollbar-thumb-hover-1), var(--scrollbar-thumb-hover-2));
-		border: 1px solid #FDFDFD;
+		border: 1px solid var(--scrollbar-border-hover);
 //      box-shadow: inset 0 0 0 1px linear-gradient(#D6ECF6, rgb(var(--scrollbar-inset-border)));
 	}
 
@@ -44,7 +47,7 @@ html:not(.no-custom-scrollbar) {
 	&:vertical {
 		&:start:decrement {
 			background: linear-gradient(134deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(233deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(0deg, var(--scrollbar-button) 40%, transparent 41%) var(--scrollbar-arrow);
-			border: 1px solid #B5B5B5;
+			border: 1px solid var(--scrollbar-border);
 			box-shadow: inset 0 0 0 1px linear-gradient(#FBFBFB, #E2E2E2);
 
 			&:hover {
@@ -61,7 +64,7 @@ html:not(.no-custom-scrollbar) {
 
 		&:end:increment {
 			background: linear-gradient(315deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(45deg, var(--scrollbar-button) 40%, transparent 41%), linear-gradient(180deg, var(--scrollbar-button) 40%, transparent 41%) var(--scrollbar-arrow);
-			border: 1px solid #B5B5B5;
+			border: 1px solid var(--scrollbar-border);
 			box-shadow: inset 0 0 0 1px linear-gradient(#FCFCFC, #E2E2E2);
 
 			&:active {

@@ -4,8 +4,6 @@ project: getting_started
 title: Styling Guidelines
 ---
 
-<span class="note info" role="alert">This is an early draft, and will completely change at release.</span>  
-
 ## Commit style
 - Use commit names to summarize what you did
 - Put references to issues at the bottom

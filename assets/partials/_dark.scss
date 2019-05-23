@@ -3,7 +3,7 @@
 */
 
 .dark {
---background: linear-gradient(#2D2D2D, #262626);
+--background: linear-gradient(#333, #252525);
 --color: white;
 
 --card-1: 85, 85, 85; // card background (gradient stop 1)
@@ -21,6 +21,8 @@
 --scrollbar-thumb-active-2: calc(var(--a-r) - 73), calc(var(--a-g) - 89), calc(var(--a-b) - 107);
 
 --scrollbar-button: #555; // scrollbar button initial
+--scrollbar-border: #2A2A2A; // scrollbar button border
+--scrollbar-border-hover: #626262; // scrollbar button border
 --scrollbar-hover: #515151; // scrollbar button hover (bottom)
 --scrollbar-hover-1: #535353; // scrollbar button hover (top)
 --scrollbar-active: calc(var(--a-r) - 73), calc(var(--a-g) - 88), calc(var(--a-b) - 105); // scrollbar button active (bottom)
@@ -28,6 +30,9 @@
 --scrollbar-arrow: #CCC; // color of scrollbar arrow
 
 --link-focus-bg: #444;
+
+scrollbar-color: #4D4D4D #171717;
+scrollbar-color: dark;
 
 // !: !important is used here
 input {
@@ -64,6 +69,8 @@ input {
 }
 
 a { color: #4CB9E2; }
+
+.command-bar { background: linear-gradient(#646464, #4E4E4E)}
 
 footer {
 	background: linear-gradient(#646464, #4E4E4E);

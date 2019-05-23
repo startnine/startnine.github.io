@@ -4,15 +4,6 @@ const hostname = window.location.origin;
 ** Functions called by site
 ** (put them in its place where possible)
 */
-// Marketplace gets a search bar
-if ($("main").is(".marketplace")) {
-	$(".header").append(
-		"<div class='command-bar'>" +
-			"<input id='search' type='text' placeholder='Search&hellip;' data-filter='.modules div'>" +
-		"</div>"
-	);
-	$(".command-bar input").css("margin-left", "calc(100% - 15em)") //! very hacky
-}
 function fadeOutRight() {
 	$("main").removeClass("fade-in-left").addClass("fade-out-right");
 }
@@ -25,21 +16,23 @@ function fadeOut() { $("main").removeClass("fade-in").addClass("fade-out"); }
 
 function scrollUp() { $("html, body").animate({scrollTop: 0}, 150); }
 
-function darkSideOfTheMoon(enable) {
+function darkSideOfTheMoon(enable, cookie) {
 	if (enable == true) {
 		if ($("html").hasClass("contrast")) {
 			// throw "error: Dark theme not enabled, turn off contrast";
 		} else {
 			$("html").addClass("dark");
-			document.cookie = "dark=best; path=/;";
 			$(".js-darkmode svg").remove(); // !: Find a better way to do this
 			$(".js-darkmode").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'> <use href='" + hostname + "/assets/symbol-defs.svg#icon-moon-fill'></use></svg>");
+
+			if (cookie != false) { document.cookie = "dark=best; path=/;"; }
 		}
 	} else {
 		$("html").removeClass("dark");
-		document.cookie = "dark=no; path=/;";
 		$(".js-darkmode svg").remove(); // !: Find a better way to do this
 		$(".js-darkmode").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'> <use href='" + hostname + "/assets/symbol-defs.svg#icon-moon-stroke'></use></svg>");
+
+		if (cookie != false) { document.cookie = "dark=no; path=/;"; }
 	}
 }
 
@@ -62,7 +55,7 @@ function fontSize(size) {
 function onKonamiCode(cb) {
 	var input = '';
 	var key = '38384040373937396665';
-	document.addEventListener('keydown', function (e) {
+	document.addEventListener('keydown', function(e) {
 		 input += ("" + e.keyCode);
 		if (input === key) {
 			return cb();
@@ -70,6 +63,17 @@ function onKonamiCode(cb) {
 		if (!key.indexOf(input)) return;
 		input = ("" + e.keyCode);
 	});
+}
+
+// Marketplace gets a search bar
+if ($("main").is(".marketplace")) {
+	$(".header").append(
+		"<div class='command-bar'>" +
+			"<input id='search' type='text' placeholder='Search&hellip;' data-filter='.modules div'>" +
+		"</div>"
+	);
+	$(".command-bar input").css("margin-left", "calc(100% - 15em)") // ! very hacky
+	$(".command-bar").parents('.header').css("border-color", "var(--scrollbar-border)"); // ! even hackier
 }
 
 /* Make accessbility controls exist */
@@ -186,26 +190,29 @@ if (document.cookie.includes("dark=best")) {
 	darkSideOfTheMoon(true);
 	clickedDark = true;
 } else {
-	darkSideOfTheMoon(false);
+	darkSideOfTheMoon(false, false);
 	clickedDark = false;
 }
 
-// apply dark theme if user has elected to use it system-wide
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-	// console.log("user has elected to use dark theme");
-	darkSideOfTheMoon(true);
-	clickedDark = true;
-}
-
-// apply dark theme if user has Dark Reader or Night Eye, but don't add the cookie
-if ($("style").is(".darkreader") || $("style").is("#nighteyedefaultcss") || $("style").is("#darkmode")) {
-	if ($("html").hasClass("contrast")) {
-		// throw "error: Dark theme not enabled, turn off contrast";
-	} else {
-		$("html").addClass("dark");
-		// console.log("user has dark theme extention");
+if (document.cookie.includes("dark=no") || document.cookie.includes("dark=best")) { } else {
+	// apply dark theme if user has elected to use it system-wide
+	if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		// console.log("user has elected to use dark theme in system settings");
+		darkSideOfTheMoon(true, false);
+		clickedDark = true;
 	}
-	// console.log("dark theme extention detected!");
+
+	// apply dark theme if user has Dark Reader or Night Eye, but don't add the cookie
+	if ($("style").is(".darkreader") || $("style").is("#nighteyedefaultcss") || $("style").is("#darkmode")) {
+		if ($("html").hasClass("contrast")) {
+			// throw "error: Dark theme not enabled, turn off contrast";
+		} else {
+			darkSideOfTheMoon(true, false);
+			clickedDark = true;
+			// console.log("applied dark theme because user has dark theme extention");
+		}
+		// console.log("dark theme extention detected!");
+	}
 }
 
 /* delay links - this is probably a bad idea */
@@ -223,11 +230,15 @@ $("a.delaylink[href]").click(function(){
 ** Enabled in the child of elements with .js-self-link
 ** adapted from thelounge - https://github.com/thelounge/thelounge.github.io/commit/e5774dec659e589331111e8ef27afe3a81de9c2d (MIT)
 */
-$(".js-self-link h2, .js-self-link h3").each(function() {
-	$(this).append($(
-		"<a class='self-link instapaper_hide' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1' title='Permalink to this section'> #</a>"
-	));
-});
+function addSelfLink(elem) {
+	$(elem).each(function() {
+		$(this).append($(
+			"<a class='self-link instapaper_hide' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1' title='Permalink to this section'> #</a>"
+		));
+	});
+};
+
+addSelfLink(".js-self-link h2, .js-self-link h3");
 
 /*
 ** Hide the top part of the navbar when scrolled down

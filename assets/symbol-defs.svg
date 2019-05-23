@@ -173,5 +173,16 @@
 <path d="M20 24h-8v-2h2v-6h-2v-2h6v8h2z"></path>
 <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
 </symbol>
+<symbol id="icon-embed" viewBox="0 0 32 32">
+<title>embed</title>
+<path d="M18 23l3 3 10-10-10-10-3 3 7 7z"></path>
+<path d="M14 9l-3-3-10 10 10 10 3-3-7-7z"></path>
+</symbol>
+<symbol id="icon-embed2" viewBox="0 0 40 32">
+<title>embed2</title>
+<path d="M26 23l3 3 10-10-10-10-3 3 7 7z"></path>
+<path d="M14 9l-3-3-10 10 10 10 3-3-7-7z"></path>
+<path d="M21.916 4.704l2.171 0.592-6 22.001-2.171-0.592 6-22.001z"></path>
+</symbol>
 </defs>
 </svg>

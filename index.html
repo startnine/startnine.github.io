@@ -1,57 +1,57 @@
 ---
 layout: default
-title: Home
 menu: main
 order: 1
+title: Home
+type: one-box index fade-in
 ---
-<div class="one-box">
-	<main class="fade-in"  data-viewport="{{ page.target }}">
-			<div class="skip-target"><a id="maincontent">-</a></div>
-		<article>
-			<p>Start9 is a WIP extensible, customizable shell supplement for Windows, one which aims to be not only modular, but extends to many needs.</p>
-			<h2 id="planned-modules">Planned Modules</h2>
-			<p><em>Start9 is planned with with 7 modules bundled, with more in the Module Marketplace. The default modules list includes</em>:</p>
-			<ul>
-				<li>Classic Start Menu</li>
-				<li>Windows XP Start Menu </li>
-				<li>Windows 7 Start Menu</li>
-				<li>Windows 10 AU Start Menu</li>
-				<li>Classic Taskbar</li>
-				<li>Superbar</li>
-				<li>macOS Dock</li>
-				<li>Longhorn (4074) Sidebar</li>
-				<li>Windows 10 Notifcation Center</li>
-			</ul>
-			<hr>
-			<h2 id="start9-host">Start9</h2>
-			<p>A beautiful and simple front-end for managing Start9 modules.</p>
-			<h3 id="contributing-and-conduct">Contributing and Conduct</h3>
-			<p>This project has adopted the code of conduct defined by the Contributor Covenant to clarify expected behavior in our community. For more information, see the <a href="https://www.contributor-covenant.org/">Contributor Covenant code of conduct</a>.
+
+<div class="skip-target" id="maincontent"></div>
+
+<section class="hero">
+	<div class="left-half card">
+		<h1>Start9</h1>
+		<p class="subheading">An in-progress extensible, customizable shell supplement for Windows</p>
+		<!--  <a class="button disabled" href="https://github.com/startnine/start9/releases">Download</a> -->
+		<!-- <a class="button" href="#">Changelog</a> -->
+	</div>
+	<div class="right-half">
+		<div class="card">
+			<h2>customizable</h2>
+			<p>
+				Bend your Windows desktop to your will - Start9 is being built for maximum flexibility and minimal constraints.
 			</p>
-			<p>In addition, please follow the <a href="https://github.com/StartNine/Start9.Host/blob/master/CONTRIBUTING.md">contributing guidelines</a> for all Start9 projects.</p>
-			<h3 id="dependencies-and-frameworks">Dependencies and Frameworks</h3>
-			<ul>
-				<li><a href="https://www.microsoft.com/net/download/dotnet-framework-runtime/net47">.NET Framework 4.7</a>
-					<ul>
-						<li>Official builds of Start9 are built with .NET Framework 4.7. However, you may want to retarget it to be able to access newer features and load in modules compiled for later versions of .NET.</li>
-					</ul>
-				</li>
-				<li>WPF related assemblies (PresentationFramework, etc.)<ul>
-						<li>These assemblies make Start9 incompatible with .NET Core and other non-Microsoft .NET implementations. </li>
-					</ul>
-				</li>
-				<li><a href="https://github.com/StartNine/start9-api">Start9 API</a>
-					<ul>
-						<li>This is the home to various abstractions related to Windows objects like programs and open windows. It's also home to the Plex themed UI controls, and a few additional ones.</li>
-					</ul>
-				</li>
-				<li>System.AddIn<ul>
-						<li>This represents the Microsoft Addin Framework assembly. We use this in Start9 for the Host-side adapter part of the addin pipeline.</li>
-					</ul>
-				</li>
-			</ul>
-			<p>Other, smaller dependencies can be seen in the <a href="https://github.com/StartNine/Start9.Host/blob/master/Start9/Start9.csproj#L36">csproj file for the project</a>. </p>
-		</article>
-	</main>
-	{% include side.html %}
-</div>
+		</div>
+		<div class="card">
+			<h2>shale</h2>
+			<p>
+				We've designed Shale - a new design language made to balance the designs of the future while retaining the depth of the past.
+			</p>
+		</div>
+	</div>
+</section>
+
+<h2 class="interlude">features&hellip;</h2>
+<section class="slide card">
+	<div class="right-half">
+		<h2>modular</h2>
+		<p>
+			Start9 aspires to achieve maximum flexibility, and this is done by making it completely modular. Some Windows shells offer extensibility, but Start9 pretty much <em>is</em> extensibility. Everything is optional, and configurable via a node graph.
+		</p>
+	</div>
+	<div class="left-half pic-right">
+		<img src="{{ "/assets/img/previews/nodegraph.png" | prepend: site.url }}" alt="Node Graph"/>
+	</div>
+</section>
+
+<section class="slide card">
+		<div class="left-half">
+			<h2>extensible</h2>
+			<p>
+				Start9 will already be extremely flexible out of the box, but if that's not enough for you, you can write your own modules, and take advantage of all the same cross-module communication and OS interaction capabilities our modules will benefit from!
+			</p>
+		</div>
+		<div class="right-half pic-right">
+			<img src="{{ "/assets/img/previews/start9/filecommander-zoom.png" | prepend: site.url }}"/>
+		</div>
+</section>

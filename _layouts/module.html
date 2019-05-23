@@ -1,0 +1,113 @@
+---
+layout: default
+type: one-box fade-in post module-page
+title: Module
+---
+
+{% for module in site.data.modules %}
+	{% if module.id == page.id %}
+		{% assign item = module %}
+	{% endif %}
+{% endfor %}
+
+<div class="skip-target" id="maincontent"></div>
+<span class="invisible"><br></span>
+
+<div class="card cover">
+	{% if item.preview %}
+		<img src="{{ site.url }}/assets/img/previews/{{ item.preview }}" alt="Cover image, featuring {{ item.title }}"/>
+	{% else %}
+		<img src="{{ site.url }}/assets/img/previews/{{ item.image }}" alt="Cover image, featuring {{ item.title }}"/>
+	{% endif %}
+
+	<span class="info">
+		<h1 style="margin: 0;">{{ item.title }}</h1>
+		<em>by</em> <strong>{{ item.authorname }}</strong>, id = {{ item.id }}
+	</span>
+</div><br>
+
+{% if item.source != "" %}
+<a class="button" href="{{ item.source }}">
+	{% include icon.html icon="icon-embed2" width="1em" height="1em" %}
+	 View code
+</a>
+{% endif %}
+
+{% if item.authorlink != "" %}
+<a class="button" href="{{ item.authorlink }}">
+	{% include icon.html icon="icon-link" width="1em" height="1em" %}
+	 View author's website
+</a>
+{% endif %}
+
+<a class="button" href="start9://view-plugin/{{ item.id}}">
+	{% include icon.html icon="icon-logo" width="1em" height="1em" %}
+	 View in Start9
+</a>
+
+<article class="js-self-link">
+	{{ content }}
+	<div id="rendered-md" class="result"></div>
+</article>
+
+{% include photoswipe.html %}
+
+{% if page.readme != "" %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.10/purify.min.js" integrity="sha256-sUyI169bxYQrBE0eTLEZND8u458gdCMPCYHyFvRCBWU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.6.2/marked.min.js" integrity="sha256-2yeMGat6dji573K4Wk2L4Z/nI540v5nowfSZjPg3ROI=" crossorigin="anonymous"></script>
+
+	<script>
+		/*
+		** Fetch, santiize, and render markdown
+		** TODO: bit slow, needs optimize
+		*/
+		marked.setOptions({
+			smartypants: true
+		});
+
+		var httpRequest = new XMLHttpRequest();
+
+		httpRequest.onreadystatechange = function(data) {
+			const config = {
+				ALLOW_DATA_ATTR: false,
+				FORBID_ATTR: ["style"],
+				FORBID_TAGS: ["style", "body", "img", "iframe", "html", "audio", "video", "canvas"]
+			};
+
+			 /* console.log(data); */
+
+			const soap = (DOMPurify.sanitize( data.currentTarget.response, config ) + "");
+
+			/* console.log(soap); */
+
+			document.getElementById('rendered-md').innerHTML =
+				/* am not sure if i snaitized it right the first time, so clean it again!! */
+				(DOMPurify.sanitize( marked(soap), config ) + "");
+
+			/* deletes the first h1 */
+			if (document.querySelector("#rendered-md h1") != null ) {
+				document.querySelector("#rendered-md h1").remove();
+			};
+
+			/* 
+			** Assumes that by the time the md doc 
+			** has been fetched and santized, 
+			** main.js will have been loaded 
+			*/
+			if (document.querySelector("#rendered-md .self-link") != null) {
+				addSelfLink(".js-self-link #rendered-md h2, .js-self-link #rendered-md h3");
+			};
+
+		};
+
+		/* Just in case, make sure DOMPurify is working before HTTP request is made */
+		if (DOMPurify) {
+			/* Trust nobody but Microsoft (R) */
+			if ( "{{ page.readme }}".startsWith("https://raw.githubusercontent.com/") ) {
+				httpRequest.open("GET", "{{ page.readme }}");
+				httpRequest.send();
+			} else { throw "error: external readme not from github!" }
+		} else { document.getElementById('rendered-md').innerHTML = "Error! Please reload the page." }
+
+	</script>
+{% endif %}

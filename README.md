@@ -9,6 +9,6 @@ Follow [these contributing guidelines](https://github.com/startnine/start9/blob/
 
 ## Update SVG Symbols
 - Go to [icomoon](https://icomoon.io/app/)
-- Import ``icomoon.json``
+- Import ``selection.json``
 - Choose ``Generate SVG & More``
 - Replace ``assets\symbol-defs.svg`` with the one you just downloaded

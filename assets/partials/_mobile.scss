@@ -64,7 +64,7 @@
 			div {
 				display: inline-block;
 				margin-bottom: 1.5em;
-				width: calc(100vw - 4rem);
+				// width: calc(100vw - 4rem);
 			}
 
 			img {
@@ -79,6 +79,8 @@
 				text-align: left;
 				width: initial;
 			}
+
+			.right-half { img { position: static; } }
 		}
 	}
 }
@@ -113,9 +115,20 @@
 			pointer-events: visible;
 		}
 
-		nav { display: none; }
+		nav { visibility: hidden; }
 
-		// Burger Menu
+		.menu-bar {
+			display: block;
+			height: 0;
+			padding: 0;
+		}
+
+		.command-bar {
+			border-bottom: 1px solid #9B9B9B;
+			box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .75);
+		}
+
+		/* Burger Menu */
 		&.slide-up, &.slide-down {
 			.menu-bar, .caption-menu {
 				transition: height .3s ease, background .25s ease, visibility .3s linear, opacity .3s linear;
@@ -124,9 +137,9 @@
 
 		&.slide-up {
 			.menu-bar {
-				display: none;
 				height: 0;
-				padding: 8px;
+				padding: 0;
+				visibility: hidden;
 
 				.button {
 					box-shadow: unset;
@@ -153,9 +166,9 @@
 
 			.menu-bar {
 				background: #454545;
-				display: block;
 				height: 100vh;
 				padding: 8px 40px;
+				visibility: visible;
 
 				.button {
 					box-shadow: initial;

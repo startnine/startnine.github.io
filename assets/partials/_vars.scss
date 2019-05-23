@@ -39,8 +39,10 @@
 --scrollbar-thumb-active-2: var(--accent);
 
 --scrollbar-button: #DADADA; // scrollbar button initial
---scrollbar-inset-border: calc(var(--a-r) + 9), calc(var(--a-g) + 11), calc(var(--a-b) + 10); // scrollbar button inset border
+--scrollbar-border: #B5B5B5; // scrollbar button border
+--scrollbar-border-hover: #FDFDFD; // scrollbar button border
 --scrollbar-border-active: calc(var(--a-r) - 41), calc(var(--a-g) - 32), calc(var(--a-b) - 36); // scrollbar button active not inset border
+--scrollbar-inset-border: calc(var(--a-r) + 9), calc(var(--a-g) + 11), calc(var(--a-b) + 10); // scrollbar button inset border
 --scrollbar-hover: #F2F2F2; // scrollbar button hover (bottom)
 --scrollbar-hover-1: #E9E9E9; // scrollbar button hover (top)
 --scrollbar-active: calc(var(--a-r) + 19), calc(var(--a-g) + 33), calc(var(--a-b) - 18); // scrollbar button active (bottom)

@@ -1,49 +1,57 @@
-# - title: title
-#  image: bg image
-#  author: >
+# - id: JohnDoe.ContinentalMap
+#   title: Continent Map
+#   image: start9/doubledeckerbar.png
+#   authorlink: https://github.com/example
+#   authorname: John Doe
+#   desc: Map of the continent you live in
+#   source: https://github.com/example/test
 
-#  desc: Brief description
-#  link: > 
-#    a link
-
-- title: Double Decker Bar
-  image: doubledeckerbar.png
-  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
+- id: Start9.DoubleDeckerBar
+  title: Double Decker Bar  
+  image: start9/doubledeckerbar.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
   desc: Double-decker taskbar, created from concepts
-  link: > 
-    https://github.com/StartNine/doubledeckerbar
+  source: https://github.com/StartNine/doubledeckerbar
 
-- title: Everythingbar
-  image: everythingbar.png
-  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
+- id: Start9.EverythingBar
+  title: EverythingBar
+  image: start9/everythingbar.png
+  banner: start9/everythingbar-banner.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
   desc: It's a Dock! It's a Taskbar! NO, IT'S...
-  link: > 
-    https://github.com/StartNine/Superbar
+  source: https://github.com/StartNine/Superbar
 
-- title: FileCommander
-  image: filecommander-zoom.png
-  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
+- id: Start9.FileCommander
+  title: FileCommander
+  image: start9/filecommander-zoom.png
+  banner: start9/filecommander.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
   desc: Experimental ribbon-based file manager module
-  link: > 
-    https://github.com/StartNine/RibbonFileManager
+  source: https://github.com/StartNine/RibbonFileManager
 
-- title: Origin Menu
-  image: 
-  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
+- id: Start9.AllIn10
+  title: All-In-10 Menu
+  image: start9/all-in-10-menu.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
   desc: The menu that started it all
-  link: > 
-    https://github.com/StartNine/originmenu
+  source: https://github.com/StartNine/originmenu
 
-- title: Experience Menu
-  image: experiencemenu.png
-  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
+- id: Start9.ExperienceMenu
+  title: Experience Menu
+  image: start9/experiencemenu.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
   desc: eXPerience the nostalgia!
-  link: > 
-    https://github.com/StartNine/experiencemenu
+  source: https://github.com/StartNine/experiencemenu
 
-- title: Startbeat Menu
-  image: startbeat.png
-  author: <a rel="noopener noreferrer" target="_blank" href="https://github.com/startnine">Start9</a>
+- id: Start9.StartbeatMenu
+  title: Startbeat Menu
+  image: start9/startbeat.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
   desc: Keeps your computer beating
-  link: > 
-    https://github.com/StartNine/startbeatmenu
+  source: h://github.com/StartNine/startbeatmenu

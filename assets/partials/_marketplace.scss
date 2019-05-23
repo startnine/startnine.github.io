@@ -37,16 +37,26 @@
 	flex-wrap: wrap;
 	justify-content: center;
 
+	a {
+		margin: 0 0 2.5em 2em;
+		text-decoration: none;
+	}
+
 	.flex-item {
 		background-color: #EEE;
 		background-repeat: no-repeat;
 		background-size: cover;
 		border-radius: 2px;
 		box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .25);
+		color: var(--color);
 		height: 9rem;
-		margin: 0 0 2.5em 2em; // top right bottom left
 		padding: 1em;
+		position: relative;
+		transition: transform .125s ease;
+		user-select: none;
 		width: 20rem;
+
+		&:active { transform: scale(.98); }
 
 		p {
 			line-height: 1.1em;
@@ -61,15 +71,44 @@
 			font-style: normal;
 			height: 1em;
 			margin-top: 0;
+			opacity: .75;
 		}
 
 		h2 {
-			color: black;
 			height: 1.1em;
 			margin: 0;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
+		}
+	}
+}
+
+
+/*
+** Individual Marketplace Module/Skin page
+*/
+.module-page {
+	.cover {
+		align-items: center;
+		background: linear-gradient(rgba(var(--card-1), .8), rgba(var(--card-2), .9));
+		display: flex;
+		height: 10rem;
+		justify-content: center;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+		width: 100%;
+
+
+		// https://stackoverflow.com/questions/31267425/use-the-html-img-tag-as-a-background-image-instead-of-the-css-background-image/31267758
+		img {
+			height: 100%;
+			object-fit: cover;
+			pointer-events: none;
+			position: absolute;
+			width: 100%;
+			z-index: -1;
 		}
 	}
 }

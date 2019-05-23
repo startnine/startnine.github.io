@@ -51,7 +51,7 @@
 .header-space { height: 6em; }
 
 .header {
-	background: #575757 linear-gradient(#575757 0%, #454545 60%);
+	background: #575757 linear-gradient(#575757 0%, #454545 100%);
 	border-bottom: 1px solid #9B9B9B;
 	box-shadow: 0 5px 20px 1px rgba(0, 0, 0, .75);
 	color: white;
@@ -139,8 +139,9 @@
 ** Command Bar
 */
 .command-bar {
-    background: linear-gradient(rgb(var(--card-1)), rgb(var(--card-2)));
-    padding: .5em;
+	background: linear-gradient(rgb(var(--card-1)), rgb(var(--card-2)));
+	border-top: 1px #9B9B9B solid;
+	padding: .5em;
 }
 
 /*

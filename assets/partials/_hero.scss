@@ -12,7 +12,7 @@
 	margin: auto 1em 4em auto;
 	min-height: 20rem;
 
-	div { width: 45%; }
+	// div { width: 45%; }
 
 	h1 {
 		font-size: var(--font-6);
@@ -30,9 +30,16 @@
 
 	.left-half, .right-half {
 		align-self: center;
-		height: 50%;
+		// height: 50%;
 		line-height: 2;
-		width: 50%;
+		width: 45%;
+
+		p, h2 {
+			position: relative;
+			z-index: 1;
+		}
+
+		div { margin-top: 1em; }
 	}
 
 	.left-half {
@@ -43,13 +50,24 @@
 	.right-half {
 		order: 2;
 		text-align: right;
+
+		img {
+			bottom: 0;
+			max-height: initial;
+			padding: 0;
+			position: absolute;
+			right: 1em;
+		}
 	}
 
 	img { max-height: 20em; }
 
 }
 
-.hero { margin: 20vh 1em; }
+.hero {
+	margin: 20vh 1em;
+	.left-half { margin-top: 1em; } // to align with the 2 other sections at the top part
+}
 
 .features {
 	div { width: initial; }

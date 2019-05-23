@@ -1,7 +1,7 @@
 ---
 layout: docs
 project: getting_started
-title: Contributing (WIP)
+title: Contributing
 ---
 
 Thanks for taking the time to contribute to Start9! To make sure that your efforts are used effectively, please take the time to read over these guidelines.

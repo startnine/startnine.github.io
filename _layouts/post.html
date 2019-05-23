@@ -4,7 +4,7 @@ type: one-box fade-in post
 ---
 <article>
 	<div class="skip-target" id="maincontent"></div>
-	<h1 style="margin: 0;">{{page.title}}</h1>
+	<h1 style="margin: 0;">{{ page.title }}</h1>
 	<em>by</em> <strong>{{ page.author }}</strong>, {{ page.date | date: "%d %B %Y" }}
 	<br>
 	{{ content }}
@@ -12,10 +12,11 @@ type: one-box fade-in post
 
 <div class="post-nav">
 	{% if page.previous.url %}
-	<a class="prev delaylink" onclick="fadeOutLeft();" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+		<a class="prev delaylink" onclick="fadeOutLeft();" href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
 	{% endif %}
+
 	{% if page.next.url %}
-	<a class="next delaylink" onclick="fadeOutRight();" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+		<a class="next delaylink" onclick="fadeOutRight();" href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
 	{% endif %}
 </div>
 
