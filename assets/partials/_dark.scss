@@ -37,7 +37,7 @@ scrollbar-color: dark;
 // !: !important is used here
 input {
 	&[type="text"] {
-		background: linear-gradient(#606060, #665) !important;
+		background: linear-gradient(#606060, #555) !important;
 		box-shadow: 0 0 0 1px #555, 0 0 0 2px #414141 !important;
 		&:hover { box-shadow: 0 0 0 1px #626262, 0 0 0 2px #353535 !important; }
 
@@ -116,7 +116,6 @@ p:not(.title-text), li { opacity: .8; }
 		border: 1px solid #404040;
 	}
 }
-
 
 .code, code {
 	background: #191919;

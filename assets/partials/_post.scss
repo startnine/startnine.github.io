@@ -61,7 +61,7 @@ figure { display: block; }
 	margin-bottom: 1rem;
 	padding: .9rem;
 
-	// TEMP COLOURS - CHANGE LATER
+	// ! TEMP COLOURS - CHANGE LATER
 	&.info {
 		background: #D2ECF9;
 		border-color: #093044;
@@ -92,7 +92,7 @@ figure { display: block; }
 */
 h2, h3 {
 	.self-link {
-//      margin-left: -1em;
+		// margin-left: -1em;
 		opacity: 0;
 		transition: opacity .3s ease;
 

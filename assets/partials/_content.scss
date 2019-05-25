@@ -25,39 +25,38 @@
 	grid-template-areas: "left content content content content right";
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
-.side {
-	bottom: 1em;
-	display: flex;
-	flex-direction: column;
-	vertical-align: top;
+	.side {
+		bottom: 1em;
+		display: flex;
+		flex-direction: column;
+		vertical-align: top;
 
-	&.right { grid-area: right; }
+		&.right { grid-area: right; }
 
-	&.left  { grid-area: left; }
+		&.left  { grid-area: left; }
 
-	.sidebar-object {
-		bottom: 2rem;
-		position: relative;
+		.sidebar-object {
+			bottom: 2rem;
+			position: relative;
 
-		&.sticky {
-			position: sticky;
-			top: 3rem;
+			&.sticky {
+				position: sticky;
+				top: 3rem;
+			}
 		}
 	}
-}
 
-.sidebar-object {
-	margin-bottom: 2rem;
-	padding: .5rem 0;
-	vertical-align: top;
-	.button { margin-top: .25rem; }
-	p { margin: .313rem 0 0; }
-}
+	.sidebar-object {
+		margin-bottom: 2rem;
+		padding: .5rem 0;
+		vertical-align: top;
+		.button { margin-top: .25rem; }
+		p { margin: .313rem 0 0; }
+	}
 
-.content {
-	grid-area: content;
-	vertical-align: top;
-	width: calc(100% - .5rem); // adds some extra margin
-}
-
+	.content {
+		grid-area: content;
+		vertical-align: top;
+		width: calc(100% - .5rem); // adds some extra margin
+	}
 }

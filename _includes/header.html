@@ -3,33 +3,38 @@
 	<div class="title">
 		<div class="burger-button" aria-label="menu"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
 		<p class="title-text">
-			{% if page.layout == 'post' %}
+			{% if page.layout == "post" %}
 				Post
 			{% else %}
 				{{ page.title }}
 			{% endif %}
 		</p>
+
 		<span class="caption-menu">
 			<a class="caption-button js-text-adjust ignore-jerry-mouse" href="javascript:void(0);" title="Toggle text size">
 				{% include icon.html icon="icon-uppercase-a" width="1em" height="1em" %}
 				<span class="vox-only">Toggle text size</span>
 			</a>
+
 			<span class="invisible">&nbsp;</span>
 			<a class="caption-button js-contrast ignore-jerry-mouse" href="javascript:void(0);" title="Toggle contrast">
 				{% include icon.html icon="icon-contrast" width="1em" height="1em" %}
 				<span class="vox-only">Toggle contrast</span>
 			</a>
+
 			<span class="invisible">&nbsp;</span>
 			<a class="caption-button js-darkmode ignore-jerry-mouse" href="javascript:void(0);" title="Toggle dark mode">
 				{% include icon.html icon="icon-moon-stroke" width="1em" height="1em" %}
 				<span class="vox-only">Toggle dark mode</span>
 			</a>
 		</span>
+
 	</div>
+
 	<nav class="menu-bar">
 		{% assign sorted_pages = site.pages | sort:"order" %}
 		{% for node in sorted_pages %}
-			{% if node.menu == 'main' %}
+			{% if node.menu == "main" %}
 				<a class="delaylink button menu-bar-button {% if page.title == node.title %}current{% endif %}" onclick="
 					{% if page.order < node.order %}
 						fadeOutRight();
@@ -44,7 +49,10 @@
 				<span class="invisible">&nbsp;</span>
 			{% endif %}
 		{% endfor %}
+
+		<!-- ! Remove this and the marketplace entry in gitignore once ready -->
 		<a class="button disabled menu-bar-button" style="opacity: .3;">Marketplace</a>
+
 		<span class="invisible">&nbsp;</span>
 	</nav>
 </div>

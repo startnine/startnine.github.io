@@ -118,7 +118,10 @@
 				opacity: 1;
 			}
 
-			// ! Hack for Firefox and Old Edge (focus-visible removes styling for the rest of them)
+			/* 
+			!! For old Edge and Firefox, combining :focus-visible and :hover disables styling for both.
+			!! Therefore, the same style is duplicated, as shown in the next block.
+			*/
 			&:focus-visible {
 				box-shadow: inset 0 -.25rem 0 0 rgb(var(--accent)), inset 0 -3.25rem 1rem -3rem rgba(var(--accent), .69);
 				opacity: 1;

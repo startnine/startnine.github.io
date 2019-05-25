@@ -7,7 +7,7 @@ title: Contributing
 Thanks for taking the time to contribute to Start9! To make sure that your efforts are used effectively, please take the time to read over these guidelines.
 
 ## Submitting an issue 
-We use GitHub issue tracking to manage problems and suggestions with Start9. If you've found a bug in Start9, this is where you should go. The only prerequisite for submiting a problem or suggestion is to [create a free GitHub account](https://github.com/join). Creating a GitHub account is free and takes minutes.   
+We use GitHub issue tracking to manage problems and suggestions with Start9. If you’ve found a bug in Start9, this is where you should go. The only prerequisite for submiting a problem or suggestion is to [create a free GitHub account](https://github.com/join). Creating a GitHub account is free and takes minutes.   
 *The issues page can be found here:* 
 
 ![A screenshot of a mouse pointer hovering over the link for the GitHub issues page.](https://i.imgur.com/xfGsft6.png)
@@ -33,7 +33,7 @@ The easiest way to have your suggestion implemented into Start9 quickly is for y
 Please save us time by complying to our code guidelines.
 
 <!-- ## Translating Start9 
-Localization is important for Start9 to grow! Here's how you can help. 
+Localization is important for Start9 to grow! Here’s how you can help. 
 **SECTION TBD**: for now, use #start9 on the [Start9 Discord](https://discord.gg/6cpvxBS). -->
 
 ## Feedback 

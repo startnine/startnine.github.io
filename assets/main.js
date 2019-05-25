@@ -88,10 +88,36 @@ if (navigator.cookieEnabled) {
 // Barba.Pjax.start(); // init barbra
 Barba.Prefetch.init(); // init barbra
 
-// kounami code rainbowz
+// kounami code 
+// adapted from https://codepen.io/SJF/pen/wBdpXV
+var r = 255,
+	g = 0,
+	b = 0;
+
+function rainbowz() {
+	if (r > 0 && b == 0) {
+		r -= 5;
+		g += 5;
+	}
+
+	if (g > 0 && r == 0) {
+		g -= 5;
+		b += 5;
+	}
+
+	if (b > 0 && g == 0) {
+		r += 5;
+		b -= 5;
+	}
+
+	$(":root").css("--a-r", r + "");
+	$(":root").css("--a-g", g + "");
+	$(":root").css("--a-b", b + "");
+};
+
 onKonamiCode(function() {
 	$("body").addClass("someone");
-	$("html").addClass("rainbow");
+	setInterval(rainbowz, 100);
 });
 
 var largeFontSize = false;
@@ -202,7 +228,7 @@ if (document.cookie.includes("dark=no") || document.cookie.includes("dark=best")
 		clickedDark = true;
 	}
 
-	// apply dark theme if user has Dark Reader or Night Eye, but don't add the cookie
+	// apply dark theme if user has Dark Reader or Night Eye, but don’t add the cookie
 	if ($("style").is(".darkreader") || $("style").is("#nighteyedefaultcss") || $("style").is("#darkmode")) {
 		if ($("html").hasClass("contrast")) {
 			// throw "error: Dark theme not enabled, turn off contrast";
@@ -233,7 +259,7 @@ $("a.delaylink[href]").click(function(){
 function addSelfLink(elem) {
 	$(elem).each(function() {
 		$(this).append($(
-			"<a class='self-link instapaper_hide' href=#" + $(this).attr("id") + " aria-hidden='true' tabindex='-1' title='Permalink to this section'> #</a>"
+			"<a class='self-link instapaper_hide' href='#" + $(this).attr("id") + "' aria-hidden='true' tabindex='-1' title='Permalink to this section'> #</a>"
 		));
 	});
 };

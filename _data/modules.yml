@@ -20,7 +20,7 @@
   banner: start9/everythingbar-banner.png
   authorlink: https://github.com/startnine
   authorname: Start9
-  desc: It's a Dock! It's a Taskbar! NO, IT'S...
+  desc: It’s a Dock! It’s a Taskbar! NO, IT’S...
   source: https://github.com/StartNine/Superbar
 
 - id: Start9.FileCommander

@@ -36,7 +36,7 @@ title: Module
 {% if item.authorlink != "" %}
 <a class="button" href="{{ item.authorlink }}">
 	{% include icon.html icon="icon-link" width="1em" height="1em" %}
-	 View author's website
+	 View author&rsquo;s website
 </a>
 {% endif %}
 
@@ -74,13 +74,13 @@ title: Module
 				FORBID_TAGS: ["style", "body", "img", "iframe", "html", "audio", "video", "canvas"]
 			};
 
-			 /* console.log(data); */
+			/* console.log(data); */
 
 			const soap = (DOMPurify.sanitize( data.currentTarget.response, config ) + "");
 
 			/* console.log(soap); */
 
-			document.getElementById('rendered-md').innerHTML =
+			document.getElementById("rendered-md").innerHTML =
 				/* am not sure if i snaitized it right the first time, so clean it again!! */
 				(DOMPurify.sanitize( marked(soap), config ) + "");
 
@@ -106,8 +106,8 @@ title: Module
 			if ( "{{ page.readme }}".startsWith("https://raw.githubusercontent.com/") ) {
 				httpRequest.open("GET", "{{ page.readme }}");
 				httpRequest.send();
-			} else { throw "error: external readme not from github!" }
-		} else { document.getElementById('rendered-md').innerHTML = "Error! Please reload the page." }
+			} else { throw "error: external readme not from GitHub!" }
+		} else { document.getElementById("rendered-md").innerHTML = "Error! Please reload the page." }
 
 	</script>
 {% endif %}

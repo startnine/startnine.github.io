@@ -18,14 +18,14 @@ In general, just respect the rules that are used in C# in other places. You can 
 - Everything uses `PascalCase`.
 	- Exceptions: Parameters and locals use `camelCase`. Private instance fields use `_camelCase.`
 - Use `var` only if the type is apparent.
-- Use self documenting variable names, such as ``IsOpened`` <!-- this part may not conform to the docs it's describing ._. -->
+- Use self documenting variable names, such as ``IsOpened`` <!-- this part may not conform to the docs it’s describing ._. -->
 
 We ask that you use tabs instead of spaces, to allow for customizable tab sizes for everyone. Of course, spaces are allowed for alignment.
 
-**Don't:** 
+**Don’t:** 
 - Write hard to read code 
 - Refuse to write documentation for the code you write for Start9 
-- Spam pull requests if your first one was rejected, unless you've fixed the problem pointed out. 
+- Spam pull requests if your first one was rejected, unless you’ve fixed the problem pointed out. 
 
 ### Colour Style
 - Using hex is preferred, however other formats are allowed if required

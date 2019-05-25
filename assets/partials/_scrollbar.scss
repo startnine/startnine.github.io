@@ -3,10 +3,9 @@
 ** Scrollbars
 ** based off https://stackoverflow.com/a/52895808
 ** will be a pain to read
-	! CSS SCROLLBARS ARE NON STANDARD
-	* Syntax may change in the future
+!  CSS SCROLLBARS ARE NON STANDARD
+*  Syntax may change in the future
 **/
-
 
 html:not(.no-custom-scrollbar) {
 // Base track
@@ -26,7 +25,7 @@ html:not(.no-custom-scrollbar) {
 	&:hover {
 		background: linear-gradient(var(--scrollbar-thumb-hover-1), var(--scrollbar-thumb-hover-2));
 		border: 1px solid var(--scrollbar-border-hover);
-//      box-shadow: inset 0 0 0 1px linear-gradient(#D6ECF6, rgb(var(--scrollbar-inset-border)));
+		// box-shadow: inset 0 0 0 1px linear-gradient(#D6ECF6, rgb(var(--scrollbar-inset-border)));
 	}
 
 	&:active {

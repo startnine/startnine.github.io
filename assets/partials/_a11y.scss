@@ -48,7 +48,7 @@
 
 /* :focus styling + remove it when mouse is used */
 // slightly increase visibility when tabbing to links
-a:not(.button):not(.ignore-jerry-mouse) {
+a:not(.button):not(.ignore-jerry-mouse) { // sass-lint:disable-line force-pseudo-nesting
 	&:focus { background-color: var(--link-focus-bg); }
 }
 
@@ -56,7 +56,7 @@ a:not(.button):not(.ignore-jerry-mouse) {
 .jerry-mouse { // styles reset when mouse used
 	&:focus { outline: none; }
 
-	a:not(.button):not(.ignore-jerry-mouse) {
+	a:not(.button):not(.ignore-jerry-mouse) { // sass-lint:disable-line force-pseudo-nesting
 		&:focus { background-color: transparent; }
 	}
 }
