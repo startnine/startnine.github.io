@@ -220,13 +220,27 @@ if (document.cookie.includes("dark=best")) {
 	clickedDark = false;
 }
 
-if (document.cookie.includes("dark=no") || document.cookie.includes("dark=best")) { } else {
+window.matchMedia("(prefers-color-scheme: dark)").addListener(applySystemColorScheme);
+
+function applySystemColorScheme() {
 	// apply dark theme if user has elected to use it system-wide
 	if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 		// console.log("user has elected to use dark theme in system settings");
 		darkSideOfTheMoon(true, false);
 		clickedDark = true;
 	}
+
+	// apply dark theme if user has elected to use it system-wide
+	if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+		// console.log("user has elected to use dark theme in system settings");
+		darkSideOfTheMoon(false, false);
+		clickedDark = false;
+	}
+}
+
+if (document.cookie.includes("dark=no") || document.cookie.includes("dark=best")) { } else {
+	// apply dark theme if user has elected to use it system-wide
+	applySystemColorScheme();
 
 	// apply dark theme if user has Dark Reader or Night Eye, but don’t add the cookie
 	if ($("style").is(".darkreader") || $("style").is("#nighteyedefaultcss") || $("style").is("#darkmode")) {

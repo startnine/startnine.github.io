@@ -1,5 +1,5 @@
 # Start9 Website
-This repository contains the code for the Start9 website
+This repository contains the code for the Start9 website and documentation for Start9
 
 ## Getting Started
 Refer to [the Jekyll docs](https://jekyllrb.com/docs/).

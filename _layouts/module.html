@@ -60,6 +60,7 @@ title: Module
 		/*
 		** Fetch, santiize, and render markdown
 		** TODO: bit slow, needs optimize
+		** ! Needs to be checked for XSS and other
 		*/
 		marked.setOptions({
 			smartypants: true
@@ -74,15 +75,10 @@ title: Module
 				FORBID_TAGS: ["style", "body", "img", "iframe", "html", "audio", "video", "canvas"]
 			};
 
-			/* console.log(data); */
-
-			const soap = (DOMPurify.sanitize( data.currentTarget.response, config ) + "");
-
-			/* console.log(soap); */
+			/* const soap = (DOMPurify.sanitize( data.currentTarget.response, config ) + ""); */
 
 			document.getElementById("rendered-md").innerHTML =
-				/* am not sure if i snaitized it right the first time, so clean it again!! */
-				(DOMPurify.sanitize( marked(soap), config ) + "");
+				(DOMPurify.sanitize( marked(data), config ) + "");
 
 			/* deletes the first h1 */
 			if (document.querySelector("#rendered-md h1") != null ) {
@@ -90,9 +86,8 @@ title: Module
 			};
 
 			/* 
-			** Assumes that by the time the md doc 
-			** has been fetched and santized, 
-			** main.js will have been loaded 
+			** Assumes that by the time the md doc has been fetched and santized, 
+			** main.js will be loaded and ready to call addSelfLink
 			*/
 			if (document.querySelector("#rendered-md .self-link") != null) {
 				addSelfLink(".js-self-link #rendered-md h2, .js-self-link #rendered-md h3");
