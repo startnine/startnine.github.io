@@ -16,4 +16,4 @@ rules:
     - error
     - always
   spaced-comment:
-    - always
+    - 1

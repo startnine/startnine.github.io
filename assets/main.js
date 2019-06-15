@@ -53,10 +53,10 @@ function fontSize(size) {
 // @someone easter egg
 // https://stackoverflow.com/questions/31626852/how-to-add-konami-code-in-a-website-based-on-html
 function onKonamiCode(cb) {
-	var input = '';
-	var key = '38384040373937396665';
-	document.addEventListener('keydown', function(e) {
-		 input += ("" + e.keyCode);
+	var input = "";
+	var key = "38384040373937396665";
+	document.addEventListener("keydown", function(e) {
+		input += ("" + e.keyCode);
 		if (input === key) {
 			return cb();
 		}
@@ -73,7 +73,7 @@ if ($("main").is(".marketplace")) {
 		"</div>"
 	);
 	$(".command-bar input").css("margin-left", "calc(100% - 15em)") // ! very hacky
-	$(".command-bar").parents('.header').css("border-color", "var(--scrollbar-border)"); // ! even hackier
+	$(".command-bar").parents(".header").css("border-color", "var(--scrollbar-border)"); // ! even hackier
 }
 
 /* Make accessbility controls exist */
@@ -136,7 +136,7 @@ $(".js-text-adjust").click(function() {
 /* Hamburger toggle */
 var clickedBurger = false;
 $(".burger-button").click(function() {
-	if(clickedBurger) {
+	if (clickedBurger) {
 		// closed
 		clickedBurger = false;
 		$("html").removeClass("no-scroll-mobile-only");
@@ -183,6 +183,7 @@ $(".js-darkmode").click(function() {
 		darkSideOfTheMoon(true);
 	}
 });
+
 /* Marketplace */
 // Search modules - https://www.w3schools.com/jquery/jquery_filters.asp
 $("#search").on("keyup", function() {
