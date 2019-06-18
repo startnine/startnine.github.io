@@ -1,9 +1,14 @@
-﻿# Specific to this repo
+﻿# 
+# Use directory-specific .gitignore files
+# when dealing with files specific to that
+# directory.
+#
+
 _drafts/
 _site/
 .jekyll-cache/
 .sass-cache/
-.vscode/*
+.vscode/
 *.code-workspace
 *.css.map
 *.db
@@ -15,10 +20,7 @@ _site/
 *.sublime-project
 *.sublime-workspace
 *.swp
-assets/img/original/
 Gemfile
 Gemfile.lock
 jekyll.bat
 tempCodeRunnerFile.*
-
-marketplace
