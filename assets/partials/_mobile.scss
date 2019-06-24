@@ -83,9 +83,21 @@
 			.right-half { img { position: static; } }
 		}
 	}
+
+	footer .logo-group {
+		padding-bottom: 1em;
+		width: 100% !important;
+	}
 }
 
 @media screen and (max-width: 37.5rem) {
+	footer .footer-flex div {
+		line-height: 1.5em;
+		margin: 0 1em;
+		padding-bottom: 1em;
+		text-align: center;
+		width: 100%;
+	}
 
 	.no-scroll-mobile-only {
 		overflow-y: scroll;
@@ -103,8 +115,6 @@
 	}
 
 	.footer-text { padding: 0 1em; }
-
-	footer { .footer-flex { div { padding-bottom: 1em; } } }
 
 	.header {
 		height: 3rem;
