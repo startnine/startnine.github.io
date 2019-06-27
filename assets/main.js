@@ -281,7 +281,7 @@ $("#search").on("keyup", function() {
 if ($("main").is(".marketplace")) {
 	$(".header").append(
 		"<div class='command-bar'>" +
-			"<input id='search' type='text' placeholder='Search&hellip;' data-filter='.modules div'>" +
+			"<input id='search' type='text' placeholder='Search&hellip;' data-filter='.modules div' title='Filter modules by title'>" +
 		"</div>"
 	);
 	$(".command-bar input").css("margin-left", "calc(100% - 15em)"); // ! very hacky
