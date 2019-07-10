@@ -42,8 +42,8 @@ function darkSideOfTheMoon(enable, persist) {
 	/*
 	** turns on or off dark theme. 
 	**  params:
-	**      enable (boolean): turn dark mode on or off
-	**      persist (boolean): add setting to local storage?
+	**      enable (bool): turn dark mode on or off
+	**      persist (bool): add setting to local storage?
 	*/
 	if (enable) {
 		if ($("html").hasClass("contrast")) {

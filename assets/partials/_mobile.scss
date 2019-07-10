@@ -96,6 +96,12 @@
 		padding-bottom: 1em;
 		text-align: center;
 		width: 100%;
+
+		// Increase tap targets
+		a {
+			margin: .1em;
+			padding: .3em;
+		}
 	}
 
 	.no-scroll-mobile-only {
