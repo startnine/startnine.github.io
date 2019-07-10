@@ -4,6 +4,7 @@ const hostname = window.location.origin;
 ** Functions called by site
 ** (put them in its place where possible)
 */
+/* eslint-disable no-unused-vars */
 function fadeOutRight() {
 	$("main").removeClass("fade-in-left").addClass("fade-out-right");
 }
@@ -15,11 +16,12 @@ function fadeOutLeft() {
 function fadeOut() { $("main").removeClass("fade-in").addClass("fade-out"); }
 
 function scrollUp() { $("html, body").animate({scrollTop: 0}, 150); }
-
+/* eslint-enable no-unused-vars */
 
 /* Init JS libs */
-// Barba.Pjax.start(); // init barbra
+// eslint-disable-next-line no-undef
 Barba.Prefetch.init(); // init barbra
+// Barba.Pjax.start(); // init barbra
 
 /*
 ** Let the document know when the mouse is being used
@@ -157,7 +159,7 @@ if (localStorage.getItem("theme") == null) {
 /*
 ** Caption Bar
 */
-/* Make accessbility controls exist */
+/* Make accessbility controls exist if localStorage API supported */
 if (typeof(Storage) !== "undefined") {
 	$(".caption-menu").css("display", "block");
 }
@@ -238,19 +240,18 @@ $("a.delaylink[href]").click(function(){
 
 /*
 ** Add a self link for headers in docs pages
-** Enabled in the child of elements with .js-self-link
-** adapted from thelounge - https://github.com/thelounge/thelounge.github.io/commit/e5774dec659e589331111e8ef27afe3a81de9c2d (MIT)
 */
-function addSelfLink(elem) {
-	$(elem).each(function() {
-		$(this).append($(
-			"<a class='self-link instapaper_hide' href='#" + $(this).attr("id") + 
+$.fn.addSelfLink = function() {
+	return this.each(function() { 
+		$(this).append("" +
+			"<a class='self-link instapaper_hide instapaper_ignore' href='#" + $(this).attr("id") + 
 			"' aria-hidden='true' tabindex='-1' title='Permalink to this section'> #</a>"
-		));
+		);
 	});
-}
+};
 
-addSelfLink(".js-self-link h2, .js-self-link h3");
+// Apply self link to h2 and h2 w. js-self-link class 
+$(".js-self-link h2, .js-self-link h3").addSelfLink();
 
 /*
 ** Hide the top part of the navbar when scrolled down
@@ -291,7 +292,6 @@ if ($("main").is(".marketplace")) {
 /*
 ** kounami code accent colour rainbow thing
 */
-// @someone easter egg
 // https://stackoverflow.com/questions/31626852/how-to-add-konami-code-in-a-website-based-on-html
 function onKonamiCode(cb) {
 	var input = "";
