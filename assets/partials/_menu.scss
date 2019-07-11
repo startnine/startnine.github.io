@@ -48,8 +48,6 @@
 .mobile-logo { display: none; }
 
 /* Header + Menu Bar */
-.header-space { height: 6em; }
-
 .header {
 	background: #575757 linear-gradient(#575757 0%, #454545 100%);
 	border-bottom: 1px solid #9B9B9B;
@@ -57,8 +55,8 @@
 	color: white;
 	display: block;
 	fill: white;
-	position: fixed;
-	top: 0;
+	position: sticky; // ! This might not be how it works
+	top: -3rem; // ! This might not be proper use of sticky positioning
 	transition: transform .3s ease;
 	user-select: none;
 	width: 100%;
