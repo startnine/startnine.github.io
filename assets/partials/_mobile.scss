@@ -73,6 +73,8 @@
 		}
 
 		.slide {
+			margin: auto auto 1em;
+
 			.left-half, .right-half {
 				order: 0;
 				text-align: left;
@@ -105,8 +107,9 @@
 	}
 
 	.no-scroll-mobile-only {
-		overflow-y: scroll;
-		position: fixed;
+		/*overflow-y: scroll;
+		position: fixed;*/
+		overflow: hidden;
 	}
 
 	.header-space { height: 3rem; }
@@ -182,15 +185,14 @@
 			.menu-bar {
 				background: #454545;
 				height: 100vh;
-				padding: 8px 40px;
 				visibility: visible;
 
 				.button {
 					box-shadow: initial;
 					opacity: 1;
-					padding: 0;
+					padding: 0 1em 0 2em;
 					text-align: left;
-					width: 100%;
+					width: calc(100% - 3em);
 
 					&.current { opacity: .7; }
 				}
@@ -201,6 +203,18 @@
 			}
 		}
 	}
+
+	.module-page .cover .card {
+		display: block;
+		height: auto;
+		min-height: 10rem;
+
+		span {
+			display: block;
+			margin: 1em;
+		}
+	}
+	
 }
 
 @media screen and (min-width: 37.5rem) {

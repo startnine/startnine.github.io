@@ -239,7 +239,7 @@ $("a.delaylink[href]").click(function(){
 });
 
 /*
-** Add a self link for headers in docs pages
+** Function to add a self link for stuff with an id
 */
 $.fn.addSelfLink = function() {
 	return this.each(function() { 
@@ -254,20 +254,6 @@ $.fn.addSelfLink = function() {
 $(".js-self-link h2, .js-self-link h3").addSelfLink();
 
 /*
-** Hide the top part of the navbar when scrolled down
-** adapted from W3Schools - https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
-*/
-window.onscroll = function() {
-	var currentScrollPos = window.pageYOffset;
-	if (48 > currentScrollPos) {
-		$(".header").removeClass("scroll-up");
-	} else {
-		$(".header").addClass("scroll-up");
-	}
-	if (currentScrollPos == 0) { $(".header").removeClass("scroll-up"); } // if scrolled to zero, show menu bar
-};
-
-/*
 ** Marketplace
 */
 // Search modules - https://www.w3schools.com/jquery/jquery_filters.asp
@@ -277,17 +263,6 @@ $("#search").on("keyup", function() {
 		$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
 	});
 });
-
-// Marketplace gets a search bar
-if ($("main").is(".marketplace")) {
-	$(".header").append(
-		"<div class='command-bar'>" +
-			"<input id='search' type='text' placeholder='Search&hellip;' data-filter='.modules div' title='Filter modules by title'>" +
-		"</div>"
-	);
-	$(".command-bar input").css("margin-left", "calc(100% - 15em)"); // ! very hacky
-	$(".command-bar").parents(".header").css("border-color", "var(--scrollbar-border)"); // ! even hackier
-}
 
 /*
 ** kounami code accent colour rainbow thing

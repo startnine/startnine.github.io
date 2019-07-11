@@ -1,5 +1,4 @@
 <a href="#maincontent" class="skip-to-content ignore-jerry-mouse">Skip to Content</a>
-<div class="header">
 	<div class="title">
 		<div class="burger-button" aria-label="menu"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
 		<p class="title-text">
@@ -50,13 +49,10 @@
 			{% endif %}
 		{% endfor %}
 
-		<!-- ! Remove this and the marketplace entry in gitignore once ready -->
-		<a class="button disabled menu-bar-button" style="opacity: .3;">Marketplace</a>
+		{% if jekyll.environment == "production" %}
+			<!-- ! Remove this and the marketplace entry in gitignore once ready -->
+			<a class="button disabled menu-bar-button" style="opacity: .3;">Marketplace</a>
+		{% endif%}
 
 		<span class="invisible">&nbsp;</span>
 	</nav>
-</div>
-<div class="header-space"></div>
-
-	<div class="github"></div><div class="white github"></div>
-	<div class="discord"></div>

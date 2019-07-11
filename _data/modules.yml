@@ -3,7 +3,7 @@
 #   image: start9/doubledeckerbar.png
 #   authorlink: https://github.com/example
 #   authorname: John Doe
-#   desc: Map of the continent you live in
+#   tagline: Map of the continent you live in
 #   source: https://github.com/example/test
 
 - id: Start9.DoubleDeckerBar
@@ -11,7 +11,7 @@
   image: start9/doubledeckerbar.png
   authorlink: https://github.com/startnine
   authorname: Start9
-  desc: Double-decker taskbar, created from concepts
+  tagline: Double-decker taskbar, created from concepts
   source: https://github.com/StartNine/doubledeckerbar
 
 - id: Start9.EverythingBar
@@ -20,7 +20,7 @@
   banner: start9/everythingbar-banner.png
   authorlink: https://github.com/startnine
   authorname: Start9
-  desc: It’s a Dock! It’s a Taskbar! NO, IT’S...
+  tagline: It’s a Dock! It’s a Taskbar! NO, IT’S...
   source: https://github.com/StartNine/Superbar
 
 - id: Start9.FileCommander
@@ -29,7 +29,7 @@
   banner: start9/filecommander.png
   authorlink: https://github.com/startnine
   authorname: Start9
-  desc: Experimental ribbon-based file manager module
+  tagline: Experimental ribbon-based file manager module
   source: https://github.com/StartNine/RibbonFileManager
 
 - id: Start9.AllIn10
@@ -37,7 +37,7 @@
   image: start9/all-in-10-menu.png
   authorlink: https://github.com/startnine
   authorname: Start9
-  desc: The menu that started it all
+  tagline: The menu that started it all
   source: https://github.com/StartNine/originmenu
 
 - id: Start9.ExperienceMenu
@@ -45,7 +45,7 @@
   image: start9/experiencemenu.png
   authorlink: https://github.com/startnine
   authorname: Start9
-  desc: eXPerience the nostalgia!
+  tagline: eXPerience the nostalgia!
   source: https://github.com/StartNine/experiencemenu
 
 - id: Start9.StartbeatMenu
@@ -53,5 +53,5 @@
   image: start9/startbeat.png
   authorlink: https://github.com/startnine
   authorname: Start9
-  desc: Keeps your computer beating
+  tagline: Keeps your computer beating
   source: h://github.com/StartNine/startbeatmenu
