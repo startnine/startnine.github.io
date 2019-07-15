@@ -1,7 +1,9 @@
+"use strict";
+
 const hostname = window.location.origin;
 
 /*
-** Functions called by site
+** Functions only called by site
 ** (put them in its place where possible)
 */
 /* eslint-disable no-unused-vars */
@@ -13,15 +15,14 @@ function fadeOutLeft() {
 	$("main").removeClass("fade-in-left").addClass("fade-out-left");
 }
 
-function fadeOut() { $("main").removeClass("fade-in").addClass("fade-out"); }
+function fadeOut() {
+	$("main").removeClass("fade-in").addClass("fade-out");
+}
 
-function scrollUp() { $("html, body").animate({scrollTop: 0}, 150); }
+function scrollUp() {
+	$("html, body").animate({scrollTop: 0}, 150);
+}
 /* eslint-enable no-unused-vars */
-
-/* Init JS libs */
-// eslint-disable-next-line no-undef
-Barba.Prefetch.init(); // init barbra
-// Barba.Pjax.start(); // init barbra
 
 /*
 ** Let the document know when the mouse is being used
@@ -43,17 +44,18 @@ function darkSideOfTheMoon(enable, persist) {
 	** turns on or off dark theme. 
 	**  params:
 	**      enable (bool): turn dark mode on or off
-	**      persist (bool): add setting to local storage?
+	**      persist (bool): also write setting to local storage
 	*/
 	if (enable) {
 		if ($("html").hasClass("contrast")) {
-			// throw "error: Dark theme not enabled, turn off contrast";
+			console.error("dark theme not applied, contrast is on");
 		} else {
 			$("html").addClass("dark");
 			$(".js-darkmode svg").remove(); // !: Find a better way to do this
 			$(".js-darkmode").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'>" +
 				"<use href='" + hostname + "/assets/symbol-defs.svg#icon-moon-fill'></use></svg>");
 
+			// this only works with != false, not == true :/
 			if (persist != false) { localStorage.setItem("theme", "dark"); }
 		}
 	} else {
@@ -62,6 +64,7 @@ function darkSideOfTheMoon(enable, persist) {
 		$(".js-darkmode").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'>" +
 			"<use href='" + hostname + "/assets/symbol-defs.svg#icon-moon-stroke'></use></svg>");
 
+		// this only works with != false, not == true :/
 		if (persist != false) { localStorage.setItem("theme", "light"); }
 	}
 }
@@ -73,17 +76,25 @@ function fontSize(size) {
 	**      size (str, "large" or "medium"): sets size 
 	*/
 	if (size == "large") {
+		// Apply and save setting to local storage
 		$(":root").css("--font-0", "1.2rem");
 		localStorage.setItem("textSize", "large");
+
+		// Change icon in caption menu
 		$(".js-text-adjust svg").remove(); // !: Find a better way to do this
 		$(".js-text-adjust ").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'>" +
 			"<use href='" + hostname + "/assets/symbol-defs.svg#icon-lowercase-a'></use></svg>");
 	} else if (size == "medium") {
+		// Apply and save setting to local storage
 		$(":root").css("--font-0", "");
 		localStorage.setItem("textSize", "medium");
+
+		// Change icon in caption menu
 		$(".js-text-adjust svg").remove(); // !: Find a better way to do this
 		$(".js-text-adjust").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'>" +
 			"<use href='" + hostname + "/assets/symbol-defs.svg#icon-uppercase-a'></use></svg>");
+	} else { 
+		return "invalid params! we only accept 'large' and 'medium' in this franchise";
 	}
 }
 
@@ -94,16 +105,15 @@ function applySystemColorScheme() {
 	*/
 	// apply dark theme if user has elected to use it system-wide
 	if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-		// console.log("user has elected to use dark theme in system settings");
+		console.info("user has elected to use dark theme in system settings");
 		darkSideOfTheMoon(true, false);
-		clickedDark = true;
 	}
 
-	// apply dark theme if user has elected to use it system-wide
+	// apply light theme if user has elected to use it system-wide
+	// (this isn't really required but)
 	if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-		// console.log("user has elected to use dark theme in system settings");
+		console.info("user has elected to use light theme in system settings");
 		darkSideOfTheMoon(false, false);
-		clickedDark = false;
 	}
 }
 
@@ -114,28 +124,22 @@ window.matchMedia("(prefers-color-scheme: dark)").addListener(applySystemColorSc
 // text size
 if (localStorage.getItem("textSize") == "large") {
 	fontSize("large");
-	largeFontSize = true;
 } else {
 	fontSize("medium");
-	largeFontSize = false;
 }
 
 // contrast
 if (localStorage.getItem("theme") == "contrast") {
 	$("html").addClass("contrast no-custom-scrollbar no-custom-input");
-	clickedContrast = true;
 } else {
 	$("html").removeClass("contrast no-custom-scrollbar no-custom-input");
-	clickedContrast = false;
 }
 
 // dark theme
 if (localStorage.getItem("theme") == "dark") {
 	darkSideOfTheMoon(true);
-	clickedDark = true;
 } else {
 	darkSideOfTheMoon(false, false);
-	clickedDark = false;
 }
 
 // apply dark theme if user has it on system-wide or has a dark theme extension
@@ -143,16 +147,14 @@ if (localStorage.getItem("theme") == null) {
 	// apply dark theme if user has elected to use it system-wide
 	applySystemColorScheme();
 
-	// apply dark theme if user has Dark Reader or Night Eye, but don’t add to local storage
+	// apply dark theme if user has Dark Reader or Night Eye, but don’t add setting to local storage
 	if ($("style").is(".darkreader") || $("style").is("#nighteyedefaultcss") || $("style").is("#darkmode")) {
 		if ($("html").hasClass("contrast")) {
-			// throw "error: Dark theme not enabled, turn off contrast";
+			console.error("dark theme not applied, contrast is on");
 		} else {
 			darkSideOfTheMoon(true, false);
-			clickedDark = true;
-			// console.log("applied dark theme because user has dark theme extension");
 		}
-		// console.log("dark theme extension detected!");
+		console.info("dark theme extension detected!");
 	}
 }
 
@@ -165,16 +167,13 @@ if (typeof(Storage) !== "undefined") {
 }
 
 /* Font size toggle */
-var largeFontSize = false;
 $(".js-text-adjust").click(function() {
-	if(largeFontSize) {
+	if (localStorage.getItem("textSize") == "large") {
 		// off
 		fontSize("medium");
-		largeFontSize = false;
 	} else {
 		// on
 		fontSize("large");
-		largeFontSize = true;
 	}
 });
 
@@ -195,41 +194,35 @@ $(".burger-button").click(function() {
 });
 
 /* Contrast toggle */
-var clickedContrast = false;
 $(".js-contrast").click(function() {
-	if(clickedContrast) {
+	if (localStorage.getItem("theme") == "contrast") {
 		// off
-		clickedContrast = false;
 		$("html").removeClass("contrast no-custom-scrollbar no-custom-input");
 		localStorage.setItem("theme", "light");
 	} else if ($("html").hasClass("dark")) {
-		// throw "error: Contrast theme not enabled, turn off dark";
+		console.error("contrast theme not enabled, turn off dark");
 	} else {
 		// on
-		clickedContrast = true;
 		$("html").addClass("contrast no-custom-scrollbar no-custom-input");
 		localStorage.setItem("theme", "contrast");
 	}
 });
 
 /* Dark toggle */
-var clickedDark = false;
 $(".js-darkmode").click(function() {
-	if(clickedDark) {
+	if (localStorage.getItem("theme") == "dark") {
 		// off
-		clickedDark = false;
 		darkSideOfTheMoon(false);
 	} else if ($("html").hasClass("contrast")) {
-		// throw "error: Dark theme not enabled, turn off contrast";
+		console.error("dark theme not enabled, turn off contrast");
 	} else {
 		// on
-		clickedDark = true;
 		darkSideOfTheMoon(true);
 	}
 });
 
 /* delay links - this is probably a bad idea */
-// https://stackoverflow.com/questions/8775541/delay-a-link-click (MIT)
+// https://stackoverflow.com/a/8775560
 $("a.delaylink[href]").click(function(){
 	var self = $(this);
 	setTimeout(function() {
@@ -238,9 +231,7 @@ $("a.delaylink[href]").click(function(){
 	return false; // And also make sure you return false from your click handler.
 });
 
-/*
-** Function to add a self link for stuff with an id
-*/
+/* function to add a self link for stuff with an id */
 $.fn.addSelfLink = function() {
 	return this.each(function() { 
 		$(this).append("" +
@@ -266,8 +257,8 @@ $("#search").on("keyup", function() {
 
 /*
 ** kounami code accent colour rainbow thing
+** https://stackoverflow.com/a/45576888
 */
-// https://stackoverflow.com/questions/31626852/how-to-add-konami-code-in-a-website-based-on-html
 function onKonamiCode(cb) {
 	var input = "";
 	var key = "38384040373937396665";
@@ -281,7 +272,7 @@ function onKonamiCode(cb) {
 	});
 }
 
-/* 
+/*
 ** rgb color cycle
 ** adapted from https://codepen.io/SJF/pen/wBdpXV
 */
@@ -290,6 +281,7 @@ var r = 255, // pretty sure these have to be global
 	b = 0;
 
 function rainbowz() {
+	// increment or decrement rgb values
 	if (r > 0 && b == 0) {
 		r -= 5;
 		g += 5;
@@ -305,11 +297,13 @@ function rainbowz() {
 		b -= 5;
 	}
 
+	// overide accent colour variable
 	$(":root").css("--a-r", r + "");
 	$(":root").css("--a-g", g + "");
 	$(":root").css("--a-b", b + "");
 }
 
+/* Put both together */
 onKonamiCode(function() {
 	$("body").addClass("someone");
 	setInterval(rainbowz, 100);
