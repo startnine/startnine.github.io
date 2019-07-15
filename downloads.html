@@ -7,26 +7,29 @@ published: false
 title: Downloads
 type: one-box index
 ---
+<!--
+	depreciation notice: i don't think i'm going to use this
+-->
 <div class="skip-target"><a id="maincontent">-</a></div>
 <section class="hero">
-		<div class="left-half">
+		<div class="left-half card">
 			<h1>Get Start9</h1>
 			<div class="subheading">Latest version: 
 				<span class="js-latest-ver">n/a: JS error</span>
 			</div>
-			<a class="button" href="#">Download</a><br>
-			<a class="button" href="#">Download</a><br>
+			<a class="button" href="https://github.com/startnine/start9/releases">Download</a><br>
 			<em>For Windows 7+</em>
 		</div>
 		<div class="right-half">
-			<h3>Lorem</h3>
-			<h3>Ipsum</h3>
+			<p>Download is served with GitHub and the GitHub API is called 
+			in this page for the latest version thingie on the left</p>
 		</div>
 </section>
+
 <script>
 /* Downloads Page */
 // start ajax request
 $.getJSON("https://api.github.com/repos/startnine/start9/releases").done(function(data) {
-	$(".js-latest-ver").text(data[0].name); // display "name" data tag to "latest version" in dl page
+	$(".js-latest-ver").text(data[0].name); // display "name" data tag to "latest version"
 });
 </script>

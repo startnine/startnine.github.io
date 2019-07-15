@@ -13,10 +13,10 @@ We use GitHub issue tracking to manage problems and suggestions with Start9. If 
 ![A screenshot of a mouse pointer hovering over the link for the GitHub issues page.](https://i.imgur.com/xfGsft6.png)
 
 ### Security Issue 
-- **Do not report the issue using GitHub**
-- Contact a Core Developer privately on [Discord](https://discord.gg/6cpvxBS) in a [responsible manner](https://en.wikipedia.org/wiki/Responsible_disclosure).
+**Do not report the issue using GitHub**
+You can use GitHub to submit bugs and error reports. Please note that if you found a security issue, email us at [start9@outlook.com](mailto:start9@outlook.com). For more information, including our PGP keys, refer to [our page on where to disclose security issues and bugs](https://github.com/startnine/.github/blob/master/SECURITY.md).
 
-### Non-security related isuse 
+### Non-security related issues
 1. Please check if the issue has been already posted on the issues page 
 2. Include the exact version of Start9 you are using 
 3. Use a clear title and description 
