@@ -22,6 +22,22 @@ function fadeOut() {
 function scrollUp() {
 	$("html, body").animate({scrollTop: 0}, 150);
 }
+
+/* Hamburger toggle */
+var clickedBurger = false;
+$(".burger-button").click(function() {
+	if (clickedBurger) {
+		// closed
+		clickedBurger = false;
+		$("html").removeClass("no-scroll-mobile-only");
+		$(".header").removeClass("slide-down").delay(300).addClass("slide-up");
+	} else {
+		// open
+		clickedBurger = true;
+		$("html").addClass("no-scroll-mobile-only");
+		$(".header").removeClass("slide-up").addClass("slide-down");
+	}
+});
 /* eslint-enable no-unused-vars */
 
 /*
@@ -39,6 +55,18 @@ document.body.addEventListener("keydown", function() {
 /*
 ** Theme Application
 */
+
+$.fn.changeSVGicon = function(icon) {
+	/*
+	** this function changes the icon sprite thing
+	** usage: $(".wrapper svg use").changeSVGicon("icon-name");
+	*/
+	const locationOfSVG = hostname + "/assets/symbol-defs.svg";
+
+	this.attr("xlink:href", locationOfSVG + "#" + icon);
+	this.attr("href", locationOfSVG + "#" + icon);
+};
+
 function darkSideOfTheMoon(enable, persist) {
 	/*
 	** turns on or off dark theme. 
@@ -50,19 +78,19 @@ function darkSideOfTheMoon(enable, persist) {
 		if ($("html").hasClass("contrast")) {
 			console.error("dark theme not applied, contrast is on");
 		} else {
-			$("html").addClass("dark");
-			$(".js-darkmode svg").remove(); // !: Find a better way to do this
-			$(".js-darkmode").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'>" +
-				"<use href='" + hostname + "/assets/symbol-defs.svg#icon-moon-fill'></use></svg>");
+			$("html").addClass("dark"); // Apply theme
+
+			// Change icon in caption menu
+			$(".js-darkmode svg use").changeSVGicon("icon-moon-fill");
 
 			// this only works with != false, not == true :/
 			if (persist != false) { localStorage.setItem("theme", "dark"); }
 		}
 	} else {
-		$("html").removeClass("dark");
-		$(".js-darkmode svg").remove(); // !: Find a better way to do this
-		$(".js-darkmode").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'>" +
-			"<use href='" + hostname + "/assets/symbol-defs.svg#icon-moon-stroke'></use></svg>");
+		$("html").removeClass("dark"); // Remove theme
+
+		// Change icon in caption menu
+		$(".js-darkmode svg use").changeSVGicon("icon-moon-stroke");
 
 		// this only works with != false, not == true :/
 		if (persist != false) { localStorage.setItem("theme", "light"); }
@@ -81,18 +109,16 @@ function fontSize(size) {
 		localStorage.setItem("textSize", "large");
 
 		// Change icon in caption menu
-		$(".js-text-adjust svg").remove(); // !: Find a better way to do this
-		$(".js-text-adjust ").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'>" +
-			"<use href='" + hostname + "/assets/symbol-defs.svg#icon-lowercase-a'></use></svg>");
+		$(".js-text-adjust svg use").changeSVGicon("icon-lowercase-a");
+
 	} else if (size == "medium") {
 		// Apply and save setting to local storage
 		$(":root").css("--font-0", "");
 		localStorage.setItem("textSize", "medium");
 
 		// Change icon in caption menu
-		$(".js-text-adjust svg").remove(); // !: Find a better way to do this
-		$(".js-text-adjust").prepend("<svg class='icon' aria-hidden='true' width='1em' height='1em'>" +
-			"<use href='" + hostname + "/assets/symbol-defs.svg#icon-uppercase-a'></use></svg>");
+		$(".js-text-adjust svg use").changeSVGicon("icon-uppercase-a");
+
 	} else { 
 		return "invalid params! we only accept 'large' and 'medium' in this franchise";
 	}
@@ -174,22 +200,6 @@ $(".js-text-adjust").click(function() {
 	} else {
 		// on
 		fontSize("large");
-	}
-});
-
-/* Hamburger toggle */
-var clickedBurger = false;
-$(".burger-button").click(function() {
-	if (clickedBurger) {
-		// closed
-		clickedBurger = false;
-		$("html").removeClass("no-scroll-mobile-only");
-		$(".header").removeClass("slide-down").delay(300).addClass("slide-up");
-	} else {
-		// open
-		clickedBurger = true;
-		$("html").addClass("no-scroll-mobile-only");
-		$(".header").removeClass("slide-up").addClass("slide-down");
 	}
 });
 
@@ -281,6 +291,10 @@ var r = 255, // pretty sure these have to be global
 	b = 0;
 
 function rainbowz() {
+	/*
+	** does one iteration of rgb color cycle thing
+	** and sets --a-r, --a-g, and --a-b css variables in the process
+	*/
 	// increment or decrement rgb values
 	if (r > 0 && b == 0) {
 		r -= 5;
