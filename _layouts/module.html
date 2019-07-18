@@ -14,9 +14,17 @@ title: Module
 </header>
 	
 {% if item.preview %}
-<img class="marketplace-coverimage" src="{{ site.url }}/assets/img/previews/{{ item.preview }}" alt="Cover image, featuring {{ item.title }}"/>
+<div class="gallery">
+	<a href="{{ site.url }}/assets/img/previews/{{ item.preview }}">
+		<img class="marketplace-coverimage" src="{{ site.url }}/assets/img/previews/{{ item.preview }}" alt="Cover image, featuring {{ item.title }}"/>
+	</a>
+</div>  
 {% else %}
-<img class="marketplace-coverimage" src="{{ site.url }}/assets/img/previews/{{ item.image }}" alt="Cover image, featuring {{ item.title }}"/>
+<div class="gallery">
+	<a href="{{ site.url }}/assets/img/previews/{{ item.image }}">
+		<img class="marketplace-coverimage" src="{{ site.url }}/assets/img/previews/{{ item.image }}" alt="Cover image, featuring {{ item.title }}"/>
+	</a>
+</div> 
 {% endif %}
 
 <main class="{{ page.type }} {{ layout.type }}" data-order="{{ page.order }}">
@@ -24,7 +32,7 @@ title: Module
 		<div class="skip-target" id="maincontent"></div>
 
 		<div class="cover">
-			<div class="card" style="background: linear-gradient(rgba(var(--card-1), .8), rgba(var(--card-2), .9));">
+			<div class="card">
 				<span class="info">
 					<h1 style="margin: 0;">{{ item.title }}</h1>
 					by <strong>{{ item.authorname }}</strong>
@@ -89,7 +97,7 @@ title: Module
 		/*
 		** Fetch, santiize, and render markdown
 		** TODO: bit slow, needs optimize
-		** ! Needs to be checked for XSS and other
+		** review: Needs to be checked further for XSS and other
 		*/
 		marked.setOptions({
 			smartypants: true

@@ -18,7 +18,7 @@ In general, just respect the rules that are used in C# in other places. You can 
 - Everything uses `PascalCase`.
 	- Exceptions: Parameters and locals use `camelCase`. Private instance fields use `_camelCase.`
 - Use `var` only if the type is apparent.
-- Use self documenting variable names, such as ``IsOpened`` <!-- this part may not conform to the docs it’s describing ._. -->
+- Use self documenting variable names, such as `IsOpened` <!-- this part may not conform to the docs it’s describing ._. -->
 
 We ask that you use tabs instead of spaces, to allow for customizable tab sizes for everyone. Of course, spaces are allowed for alignment.
 
@@ -33,15 +33,7 @@ We ask that you use tabs instead of spaces, to allow for customizable tab sizes 
 
 ## Comments 
 - Please comment on all your code, including functions, using XML documentation. Fill out as much information about the member or type as you can.
-- All comments must have a space after the ``//``. (eg: `// Comment` )
+- All comments must have a space after the `//`. (eg: `// Comment` )
 - Write useful comments instead of reiterating what you see in the code
 - Rewrite bad code instead of commenting it
-- Use these comment tags (derived from [Wikipedia](https://en.wikipedia.org/wiki/Comment_(computer_programming))):  
-```js
-// !: a hack
-// ?: an inquiry to your future self and to other readers
-// *: important information
-// BUG: a known bug that should be fixed
-// FIXME: a known issuse that should be fixed
-// TODO: something to be done later
-```
+- Utilize comment tags to organize your code (eg: `// FIXME: this bad`)

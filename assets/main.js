@@ -83,7 +83,7 @@ function darkSideOfTheMoon(enable, persist) {
 			// Change icon in caption menu
 			$(".js-darkmode svg use").changeSVGicon("icon-moon-fill");
 
-			// this only works with != false, not == true :/
+			// set local storage unless explicitly told not to
 			if (persist != false) { localStorage.setItem("theme", "dark"); }
 		}
 	} else {
@@ -92,7 +92,7 @@ function darkSideOfTheMoon(enable, persist) {
 		// Change icon in caption menu
 		$(".js-darkmode svg use").changeSVGicon("icon-moon-stroke");
 
-		// this only works with != false, not == true :/
+		// set local storage unless explicitly told not to
 		if (persist != false) { localStorage.setItem("theme", "light"); }
 	}
 }

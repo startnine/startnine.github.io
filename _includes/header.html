@@ -1,6 +1,12 @@
 <a href="#maincontent" class="skip-to-content ignore-jerry-mouse">Skip to Content</a>
 	<div class="title">
-		<div class="burger-button" aria-label="menu"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
+		<div class="burger-button" role="button" aria-label="menu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+			<span class="vox-only">Menu</span>
+		</div>
+
 		<p class="title-text">
 			{% if page.layout == "post" %}
 				Post
@@ -10,19 +16,19 @@
 		</p>
 
 		<span class="caption-menu">
-			<a class="caption-button js-text-adjust ignore-jerry-mouse" href="javascript:void(0);" title="Toggle text size">
+			<a class="caption-button js-text-adjust ignore-jerry-mouse" href="javascript:void(0);" title="Toggle text size" role="button">
 				{% include icon.html icon="icon-uppercase-a" width="1em" height="1em" %}
 				<span class="vox-only">Toggle text size</span>
 			</a>
 
 			<span class="invisible">&nbsp;</span>
-			<a class="caption-button js-contrast ignore-jerry-mouse" href="javascript:void(0);" title="Toggle contrast">
+			<a class="caption-button js-contrast ignore-jerry-mouse" href="javascript:void(0);" title="Toggle contrast" role="button">
 				{% include icon.html icon="icon-contrast" width="1em" height="1em" %}
 				<span class="vox-only">Toggle contrast</span>
 			</a>
 
 			<span class="invisible">&nbsp;</span>
-			<a class="caption-button js-darkmode ignore-jerry-mouse" href="javascript:void(0);" title="Toggle dark mode">
+			<a class="caption-button js-darkmode ignore-jerry-mouse" href="javascript:void(0);" title="Toggle dark mode" role="button">
 				{% include icon.html icon="icon-moon-stroke" width="1em" height="1em" %}
 				<span class="vox-only">Toggle dark mode</span>
 			</a>
@@ -34,7 +40,10 @@
 		{% assign sorted_pages = site.pages | sort:"order" %}
 		{% for node in sorted_pages %}
 			{% if node.menu == "main" %}
-				<a class="delaylink button menu-bar-button {% if page.title == node.title %}current{% endif %}" onclick="
+				<a class="delaylink button menu-bar-button {% if page.title == node.title %}current{% endif %}" 
+				
+				{% comment %} todo: use some js lib instead of this mess {% endcomment %}
+				onclick="
 					{% if page.order < node.order %}
 						fadeOutRight();
 					{% elsif page.order > node.order %}
@@ -42,7 +51,7 @@
 					{% else %}
 						fadeOut();
 					{% endif %}
-					"
+				"
 					href="{{ node.url | prepend: node.baseurl }}">{{ node.title }}
 				</a>
 				<span class="invisible">&nbsp;</span>

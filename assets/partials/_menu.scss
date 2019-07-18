@@ -55,8 +55,8 @@
 	color: white;
 	display: block;
 	fill: white;
-	position: sticky; // ! This might not be how it works
-	top: -3rem; // ! This might not be proper use of sticky positioning
+	position: sticky; // note This might not be how it works
+	top: -3rem; // note This might not be proper use of sticky positioning
 	transition: transform .3s ease;
 	user-select: none;
 	width: 100%;

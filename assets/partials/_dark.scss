@@ -34,7 +34,7 @@
 scrollbar-color: #4D4D4D #171717;
 scrollbar-color: dark;
 
-// !: !important is used here
+// HACK: !important is used here
 input {
 	&[type="text"] {
 		background: linear-gradient(#606060, #555) !important;

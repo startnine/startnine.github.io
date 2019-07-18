@@ -3,8 +3,8 @@
 ** Scrollbars
 ** based off https://stackoverflow.com/a/52895808
 ** will be a pain to read
-!  CSS SCROLLBARS ARE NON STANDARD
-*  Syntax may change in the future
+** HACK: CSS SCROLLBARS ARE NON STANDARD
+** NOTE: Syntax may change in the future
 **/
 
 html:not(.no-custom-scrollbar) {
