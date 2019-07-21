@@ -4,7 +4,7 @@
 
 .dark {
 --background: linear-gradient(#333, #252525);
---color: white;
+--text: white;
 
 --card-1: 85, 85, 85; // card background (gradient stop 1)
 --card-2: 65, 65, 65; // card background (gradient stop 2)
@@ -75,7 +75,7 @@ a { color: #4CB9E2; }
 footer {
 	background: linear-gradient(#646464, #4E4E4E);
 
-	a { color: var(--color); }
+	a { color: var(--text); }
 
 	.logo-group {
 		a { filter: initial; }
@@ -86,7 +86,7 @@ p:not(.title-text), li { opacity: .8; }
 
 .toc ul { border-left: rgba(255, 255, 255, .2) 1px solid; }
 
-.icon { fill: var(--color); }
+.icon { fill: var(--text); }
 
 .logo-group { filter: invert(1); }
 
@@ -119,23 +119,7 @@ p:not(.title-text), li { opacity: .8; }
 
 .code, code {
 	background: #191919;
-	color: var(--color);
+	color: var(--text);
 }
 
-/* Monokai Syntax */
-.highlight {
-	// sass-lint:disable-block trailing-semicolon one-declaration-per-line property-sort-order
-	color: var(--color);
-	pre, code, .hll { background-color: #191919;}
-	.err { background-color: #1E0010; color: #960050; }
-	.ge { font-style: italic;}
-	.gs { font-weight: bold;}
-	.c, .cm, .cp, .c1, .cs, .gu {color: #75715E;}
-	.k, .kc, .kd, .kp, .kr, .kt, .no {color: #66D9EF;}
-	.l, .m, .mf, .mh, .mi, .mo, .se, .il {color: #AE81FF;}
-	.n, .p, .nb, .ni, .nl, .nn, .py, .nv, .w, .bp, .vc, .vg, .vi {color: #F8F8F2;}
-	.o, .kn, .nt, .ow, .gd {color: #F92672;}
-	.ld, .s, .sb, .sc, .sd, .s2, .sh, .si, .sx, .sr, .s1, .ss {color: #E6DB74;}
-	.na, .nc, .nd, .ne, .nf, .nx, .gi {color: #A6E22E;}
-}
 }
