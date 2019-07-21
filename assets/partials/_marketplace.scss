@@ -21,7 +21,7 @@
 }
 
 .marketplace-title {
-	color: var(--color);
+	color: var(--text);
 	font-size: var(--font-6);
 	line-height: 1.25em;
 	margin: 0;
@@ -47,7 +47,7 @@
 		background-size: cover;
 		border-radius: 2px;
 		box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .25);
-		color: var(--color);
+		color: var(--text);
 		height: 9rem;
 		padding: 1em;
 		position: relative;
