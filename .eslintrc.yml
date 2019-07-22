@@ -17,3 +17,4 @@ rules:
     - always
   spaced-comment:
     - 1
+  no-console: off
