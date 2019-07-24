@@ -91,55 +91,63 @@ title: Module
 
 {% if page.readme %}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.10/purify.min.js" integrity="sha256-sUyI169bxYQrBE0eTLEZND8u458gdCMPCYHyFvRCBWU=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.6.2/marked.min.js" integrity="sha256-2yeMGat6dji573K4Wk2L4Z/nI540v5nowfSZjPg3ROI=" crossorigin="anonymous"></script>
 
 	<script>
 		/*
 		** Fetch, santiize, and render markdown
 		** TODO: bit slow, needs optimize
-		** review: Needs to be checked further for XSS and other
+		** review: Needs to be checked for security defects and the other
 		*/
-		marked.setOptions({
-			smartypants: true
-		});
 
-		var httpRequest = new XMLHttpRequest();
+		var httpMarkdownRequest = new XMLHttpRequest();
 
-		httpRequest.onreadystatechange = function(data) {
-			const config = {
-				ALLOW_DATA_ATTR: false,
-				FORBID_ATTR: ["style"],
-				FORBID_TAGS: ["style", "body", "img", "iframe", "html", "audio", "video", "canvas"]
+		httpMarkdownRequest.onreadystatechange = function(data) {
+			var httpRenderRequest = new XMLHttpRequest();
+
+			/* paste in rendered md */
+			httpRenderRequest.onreadystatechange = function(data) {
+				const clean = DOMPurify.sanitize( data.currentTarget.response );
+
+				document.getElementById("rendered-md").innerHTML = clean;
+
+				/* detect ratelimit */
+				/* note: somebody would be able to paste in this text and cause a false ratelimit error.
+					but why would someone do that? */
+				if (document.querySelector("#rendered-md").textContent.includes("API rate limit exceeded for")) {
+		
+					/* should be able to get the first and last part */
+					if (document.querySelector("#rendered-md").textContent.includes("(But here's the good news: " +
+					"Authenticated requests get a higher rate limit. Check out the documentation for more details.)\"")) {
+
+						document.getElementById("rendered-md").innerHTML = "" +
+						"<br>Sorry, but we aren't unable to load module info because you've reached the " +
+						"GitHub API ratelimit. Please wait up to an hour for that to reset.";
+
+						console.error("GitHub Ratelimit detected. For documentation see https://developer.github.com/v3/#rate-limiting");
+					};
+				};
+				
+				/* deletes the first h1 */
+				if (document.querySelector("#rendered-md h1") != null ) {
+					document.querySelector("#rendered-md h1").remove();
+				};
+			
+				/* add self link */
+				window.addEventListener('DOMContentLoaded', function(){
+					$(".js-self-link #rendered-md h2, .js-self-link #rendered-md h3").addSelfLink();
+				});
 			};
 
-			const soap = DOMPurify.sanitize( data.currentTarget.response, config ) + "";
-
-			document.getElementById("rendered-md").innerHTML =
-				DOMPurify.sanitize( marked(soap) );
-
-			/* deletes the first h1 */
-			if (document.querySelector("#rendered-md h1") != null ) {
-				document.querySelector("#rendered-md h1").remove();
-			};
-
-			/* 
-			** Assumes that by the time the md doc has been fetched and santized, 
-			** main.js will be loaded and ready to call addSelfLink
-			*/
-			if (document.querySelector("#rendered-md .self-link") != null) {
-				$(".js-self-link #rendered-md h2, .js-self-link #rendered-md h3").addSelfLink();
-			};
-
+			/* Open HTTP render request */
+			httpRenderRequest.open("POST", "https://api.github.com/markdown"); /* Trust nobody but Microsoft (R) */
+			httpRenderRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			httpRenderRequest.send(JSON.stringify({"text": data.currentTarget.response, "mode": "gfm", "context": "startnine/start9"}));
 		};
 
-		/* Just in case, make sure DOMPurify is working before HTTP request is made */
-		if (DOMPurify) {
-			/* Trust nobody but Microsoft (R) */
-			if ( "{{ page.readme }}".startsWith("https://raw.githubusercontent.com/") ) {
-				httpRequest.open("GET", "{{ page.readme }}");
-				httpRequest.send();
-			} else { throw "error: external readme not from GitHub!" }
-		} else { document.getElementById("rendered-md").innerHTML = "Error! Please reload the page." }
-
+		/* Trust nobody but Microsoft (R) */
+		if ( "{{ page.readme }}".startsWith("https://raw.githubusercontent.com/") ) {
+			httpMarkdownRequest.open("GET", "{{ page.readme }}");
+			httpMarkdownRequest.send();
+		} else { console.error("error: external readme not from GitHub!") };
 	</script>
 {% endif %}
