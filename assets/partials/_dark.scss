@@ -34,6 +34,30 @@
 scrollbar-color: #4D4D4D #171717;
 scrollbar-color: dark;
 
+// disable contrast button when dark is enabled (they don't mix well)
+.js-contrast {
+	opacity: .3;
+	pointer-events: none;
+	user-select: none;
+}
+
+a { color: #4CB9E2; }
+
+p:not(.title-text), li { opacity: .8; }
+
+.toc ul { border-left: rgba(255, 255, 255, .2) 1px solid; }
+
+.command-bar { background: linear-gradient(#646464, #4E4E4E)}
+
+.icon { fill: var(--text); } // svg icons
+
+// .burger-button { .bar1, .bar2, .bar3 { background-color: white; } }
+
+.code, code {
+	background: #191919;
+	color: var(--text);
+}
+
 // HACK: !important is used here
 input {
 	&[type="text"] {
@@ -61,37 +85,6 @@ input {
 	}
 }
 
-// disable contrast button when dark is enabled (they don't mix well)
-.js-contrast {
-	opacity: .3;
-	pointer-events: none;
-	user-select: none;
-}
-
-a { color: #4CB9E2; }
-
-.command-bar { background: linear-gradient(#646464, #4E4E4E)}
-
-footer {
-	background: linear-gradient(#646464, #4E4E4E);
-
-	a { color: var(--text); }
-
-	.logo-group {
-		a { filter: initial; }
-	}
-}
-
-p:not(.title-text), li { opacity: .8; }
-
-.toc ul { border-left: rgba(255, 255, 255, .2) 1px solid; }
-
-.icon { fill: var(--text); }
-
-.logo-group { filter: invert(1); }
-
-// .burger-button { .bar1, .bar2, .bar3 { background-color: white; } }
-
 .button:not(.menu-bar-button) {
 	background: linear-gradient(#474747, #333333);
 	border: 1px solid #1C1C1C;
@@ -105,7 +98,7 @@ p:not(.title-text), li { opacity: .8; }
 		box-shadow: inset 0 0 0 1px #666;
 	}
 
-	&:active, &:focus {
+	&:active, &:focus, &.current {
 		background: linear-gradient(rgb(calc(var(--a-r) - 58), calc(var(--a-g) - 69), calc(var(--a-b) - 86)), rgb(calc(var(--a-r) - 74), calc(var(--a-g) - 89), calc(var(--a-b) - 106)));
 		border: 1px solid rgb(calc(var(--a-r) - 83), calc(var(--a-g) - 99), calc(var(--a-b) - 132));
 		box-shadow: inset 0 0 0 1px #798B8C;
@@ -117,9 +110,16 @@ p:not(.title-text), li { opacity: .8; }
 	}
 }
 
-.code, code {
-	background: #191919;
-	color: var(--text);
+footer {
+	background: linear-gradient(#646464, #4E4E4E);
+
+	a { color: var(--text); }
+
+	.logo-group {
+		filter: invert(1);
+
+		a { filter: initial; }
+	}
 }
 
 }

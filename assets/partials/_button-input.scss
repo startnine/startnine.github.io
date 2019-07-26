@@ -28,7 +28,7 @@ a {
 			border-color: #CECECE;
 		}
 
-		&:active, &:focus-visible {
+		&:active, &:focus-visible, &.current {
 			background: rgb(calc(var(--a-r) + 57), calc(var(--a-g) + 38), calc(var(--a-b) + 28)) linear-gradient(rgb(var(--accent)), rgb(calc(var(--a-r) + 20), calc(var(--a-g) + 20), calc(var(--a-b) + 20)));
 			border-color: rgb(calc(var(--a-r) - 26), calc(var(--a-g) - 32), calc(var(--a-b) - 36));
 		}

@@ -11,4 +11,5 @@ Follow [these contributing guidelines](https://github.com/startnine/start9/blob/
 - Go to [icomoon](https://icomoon.io/app/)
 - Import ``selection.json``
 - Choose ``Generate SVG & More``
-- Replace ``assets\symbol-defs.svg`` with the one you just downloaded
+- Replace ``assets/symbol-defs.svg`` with the one you just downloaded
+- Replace ``selection.svg`` with the one you just downloaded

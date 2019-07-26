@@ -54,36 +54,52 @@ figure { display: block; }
 /*
 ** Alert, Info, Warning
 */
+// TODO: these colors might not fit dark mode well
+$note-info-base: linear-gradient(#D2ECF9, #B2CCD9);
+$note-info-dark: #093044;
+
+$note-alert-base: linear-gradient(#F9D2D2, #D9B2B2);
+$note-alert-dark: #440909;
+
+$note-warn-base: linear-gradient(#F9F6D2, #D9D6B2);
+$note-warn-dark: #404409;
+
+$note-tip-base: linear-gradient(#D2F9D2, #B2D9B2);
+$note-tip-dark: #094409;
+
 .note {
-	border: 1px solid transparent;
+	// border: 1px solid transparent;
 	border-radius: .2rem;
 	display: inline-block;
 	margin-bottom: 1rem;
 	padding: .9rem;
 
-	// TODO: TEMP COLOURS - CHANGE LATER
 	&.info {
-		background: #D2ECF9;
-		border-color: #093044;
-		color: #093044;
+		background: $note-info-base;
+		// border-color: $note-info-dark;
+		color: $note-info-dark;
+		svg { use { fill: $note-info-dark; } }
 	}
 
 	&.alert {
-		background: #F9D2D2;
-		border-color: #440909;
-		color: #440909;
+		background: $note-alert-base;
+		// border-color: $note-alert-dark;
+		color: $note-alert-dark;
+		svg { use { fill: $note-alert-dark; } }
 	}
 
 	&.warn {
-		background: #F9F6D2;
-		border-color: #404409;
-		color: #404409;
+		background: $note-warn-base;
+		// border-color: $note-warn-dark;
+		color: $note-warn-dark;
+		svg { use { fill: $note-warn-dark; } }
 	}
 
 	&.tip {
-		background: #D2F9D2;
-		border-color: #094409;
-		color: #094409;
+		background: $note-tip-base;
+		// border-color: $note-tip-dark;
+		color: $note-tip-dark;
+		svg { use { fill: $note-tip-dark; } }
 	}
 }
 
@@ -92,7 +108,7 @@ figure { display: block; }
 */
 h2, h3 {
 	.self-link {
-		// margin-left: -1em;
+		margin-left: .25em;
 		opacity: 0;
 		transition: opacity .3s ease;
 

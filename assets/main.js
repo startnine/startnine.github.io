@@ -20,7 +20,7 @@ function fadeOut() {
 }
 
 function scrollUp() {
-	$("html, body").animate({scrollTop: 0}, 150);
+	$("html, body").animate({ scrollTop: 0 }, 150);
 }
 
 /* Hamburger toggle */
@@ -53,23 +53,36 @@ document.body.addEventListener("keydown", function() {
 });
 
 /*
-** Theme Application
+** Icons
 */
+const locationOfSVG = hostname + "/assets/symbol-defs.svg";
 
 $.fn.changeSVGicon = function(icon) {
 	/*
 	** this function changes the icon sprite thing
 	** usage: $(".wrapper svg use").changeSVGicon("icon-name");
 	*/
-	const locationOfSVG = hostname + "/assets/symbol-defs.svg";
-
 	this.attr("xlink:href", locationOfSVG + "#" + icon);
 	this.attr("href", locationOfSVG + "#" + icon);
+
+	return this;
 };
 
+// function addSVGicon(icon) {
+//  /*
+//  ** this function adds the icon sprite thing
+//  ** usage: $(".wrapper").prepend(addSVGicon("icon-name"));
+//  */
+//  return ("<svg class='icon' aria-hidden='true' width='1em'" +
+//      "height='1em'> <use href=" + locationOfSVG + "#" + icon + "></use> </svg>");
+// }
+
+/*
+** Theme Application
+*/
 function darkSideOfTheMoon(enable, persist) {
 	/*
-	** turns on or off dark theme. 
+	** turns on or off dark theme.
 	**  params:
 	**      enable (bool): turn dark mode on or off
 	**      persist (bool): also write setting to local storage
@@ -101,7 +114,7 @@ function fontSize(size) {
 	/*
 	** sets font size
 	**  params:
-	**      size (str, "large" or "medium"): sets size 
+	**      size (str, "large" or "medium"): sets size
 	*/
 	if (size == "large") {
 		// Apply and save setting to local storage
@@ -110,7 +123,6 @@ function fontSize(size) {
 
 		// Change icon in caption menu
 		$(".js-text-adjust svg use").changeSVGicon("icon-lowercase-a");
-
 	} else if (size == "medium") {
 		// Apply and save setting to local storage
 		$(":root").css("--font-0", "");
@@ -118,15 +130,14 @@ function fontSize(size) {
 
 		// Change icon in caption menu
 		$(".js-text-adjust svg use").changeSVGicon("icon-uppercase-a");
-
-	} else { 
+	} else {
 		return "invalid params! we only accept 'large' and 'medium' in this franchise";
 	}
 }
 
 function applySystemColorScheme() {
 	/*
-	** finds prefers-color-scheme media query 
+	** finds prefers-color-scheme media query
 	** and calls different params in darkSideOfTheMoon based on that
 	*/
 	// apply dark theme if user has elected to use it system-wide
@@ -188,7 +199,7 @@ if (localStorage.getItem("theme") == null) {
 ** Caption Bar
 */
 /* Make accessbility controls exist if localStorage API supported */
-if (typeof(Storage) !== "undefined") {
+if (typeof (Storage) !== "undefined") {
 	$(".caption-menu").css("display", "block");
 }
 
@@ -233,7 +244,7 @@ $(".js-darkmode").click(function() {
 
 /* delay links - this is probably a bad idea */
 // https://stackoverflow.com/a/8775560
-$("a.delaylink[href]").click(function(){
+$("a.delaylink[href]").click(function() {
 	var self = $(this);
 	setTimeout(function() {
 		window.location.href = self.attr("href"); // go to href after the slide animation completes
@@ -243,15 +254,15 @@ $("a.delaylink[href]").click(function(){
 
 /* function to add a self link for stuff with an id */
 $.fn.addSelfLink = function() {
-	return this.each(function() { 
+	return this.each(function() {
 		$(this).append("" +
-			"<a class='self-link instapaper_hide instapaper_ignore' href='#" + $(this).attr("id") + 
-			"' aria-hidden='true' tabindex='-1' title='Permalink to this section'> #</a>"
+			"<a class='self-link instapaper_hide instapaper_ignore' href='#" + $(this).attr("id") +
+			"' aria-hidden='true' tabindex='-1' title='Permalink to this section'>#</a>"
 		);
 	});
 };
 
-// Apply self link to h2 and h2 w. js-self-link class 
+// Apply self link to h2 and h2 w. js-self-link class
 $(".js-self-link h2, .js-self-link h3").addSelfLink();
 
 /*
@@ -286,9 +297,9 @@ function onKonamiCode(cb) {
 ** rgb color cycle
 ** adapted from https://codepen.io/SJF/pen/wBdpXV
 */
-var r = 255, // pretty sure these have to be global
-	g = 0,
-	b = 0;
+var r = 255; // pretty sure these have to be global
+var g = 0;
+var b = 0;
 
 function rainbowz() {
 	/*
@@ -300,7 +311,7 @@ function rainbowz() {
 		r -= 5;
 		g += 5;
 	}
-	
+
 	if (g > 0 && r == 0) {
 		g -= 5;
 		b += 5;

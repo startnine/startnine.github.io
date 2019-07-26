@@ -12,19 +12,19 @@ title: Module
 <header class="header">
 	{% include header.html %}
 </header>
-	
+
 {% if item.preview %}
 <div class="gallery">
 	<a href="{{ site.url }}/assets/img/previews/{{ item.preview }}">
 		<img class="marketplace-coverimage" src="{{ site.url }}/assets/img/previews/{{ item.preview }}" alt="Cover image, featuring {{ item.title }}"/>
 	</a>
-</div>  
+</div>
 {% else %}
 <div class="gallery">
 	<a href="{{ site.url }}/assets/img/previews/{{ item.image }}">
 		<img class="marketplace-coverimage" src="{{ site.url }}/assets/img/previews/{{ item.image }}" alt="Cover image, featuring {{ item.title }}"/>
 	</a>
-</div> 
+</div>
 {% endif %}
 
 <main class="{{ page.type }} {{ layout.type }}" data-order="{{ page.order }}">
@@ -37,7 +37,7 @@ title: Module
 					<h1 style="margin: 0;">{{ item.title }}</h1>
 					by <strong>{{ item.authorname }}</strong>
 				</span>
-		
+
 				<span class="install">
 					<a class="button" href="start9://view-plugin/{{ item.id}}">
 						{% include icon.html icon="icon-logo" width="1em" height="1em" %}
@@ -46,7 +46,7 @@ title: Module
 				</span>
 			</div><br>
 		</div>
-		
+
 		<article class="js-self-link">
 			<!-- View source & View author link -->
 			{% if item.source %}
@@ -73,11 +73,11 @@ title: Module
 			<!-- Tags -->
 			{% if item.tags %}
 			<br><i>
-				tags: 
+				tags:
 				{{ item.tags }}
 			</i>
 			{% endif %}
-			
+
 			<br>
 
 			<!-- Markdown content -->
@@ -114,7 +114,7 @@ title: Module
 				/* note: somebody would be able to paste in this text and cause a false ratelimit error.
 					but why would someone do that? */
 				if (document.querySelector("#rendered-md").textContent.includes("API rate limit exceeded for")) {
-		
+
 					/* should be able to get the first and last part */
 					if (document.querySelector("#rendered-md").textContent.includes("(But here's the good news: " +
 					"Authenticated requests get a higher rate limit. Check out the documentation for more details.)\"")) {
@@ -126,12 +126,12 @@ title: Module
 						console.error("GitHub Ratelimit detected. For documentation see https://developer.github.com/v3/#rate-limiting");
 					};
 				};
-				
+
 				/* deletes the first h1 */
 				if (document.querySelector("#rendered-md h1") != null ) {
 					document.querySelector("#rendered-md h1").remove();
 				};
-			
+
 				/* add self link */
 				window.addEventListener('DOMContentLoaded', function(){
 					$(".js-self-link #rendered-md h2, .js-self-link #rendered-md h3").addSelfLink();

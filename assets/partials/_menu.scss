@@ -25,6 +25,7 @@
 		vertical-align: middle;
 
 		svg {
+			fill: inherit;
 			filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .5));
 		}
 
@@ -115,7 +116,7 @@
 				opacity: 1;
 			}
 
-			/* 
+			/*
 			!! For old Edge and Firefox, combining :focus-visible and :hover disables styling for both.
 			!! Therefore, the same style is duplicated, as shown in the next block.
 			*/

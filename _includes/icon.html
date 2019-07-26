@@ -1,6 +1,9 @@
 <svg class="icon" aria-hidden="true"
-	{% if include.width >= "0" %} width="{{ include.width }}" {% endif %}
-	{% if include.height >= "0" %} height="{{ include.height }}" {% endif %}
+	{% if include.width %} width="{{ include.width }}" {% endif %}
+	{% if include.height %} height="{{ include.height }}" {% endif %}
+	{% if include.fill %} fill="{{ include.fill }}" {% endif %}
+	{% if include.class %} class="{{ include.class }}" {% endif %}
 >
 	<use href="{{ "/assets/symbol-defs.svg" | prepend: site.url }}#{{ include.icon }} "/>
 </svg>
+

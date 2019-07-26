@@ -5,7 +5,7 @@
 	{% assign sorted_docs = site.docs | sort:"order" %}
 	{% for docs in sorted_docs %}
 		{% if docs.project == page.project %}
-			<a class="button {% if docs.title == page.title %}disabled{% endif %}" href="{{ docs.url | prepend: docs.baseurl }}">
+			<a class="button {% if docs.title == page.title %}current{% endif %}" href="{{ docs.url | prepend: docs.baseurl }}">
 				{{ docs.title }}
 			</a>
 		{% endif %}
