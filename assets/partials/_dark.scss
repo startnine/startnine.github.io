@@ -45,7 +45,17 @@ a { color: #4CB9E2; }
 
 p:not(.title-text), li { opacity: .8; }
 
-.toc ul { border-left: rgba(255, 255, 255, .2) 1px solid; }
+.toc {
+	ul li {
+		border-left: rgba(255, 255, 255, .2) 1px solid;
+	}
+
+	ul li {
+		&.current {
+			border-left: rgba(255, 255, 255, .5) 1px solid;
+		}
+	}
+}
 
 .command-bar { background: linear-gradient(#646464, #4E4E4E)}
 

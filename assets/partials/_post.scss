@@ -119,3 +119,27 @@ h2, h3 {
 		.self-link { opacity: .5; }
 	}
 }
+
+/*
+** Table of Contents
+*/
+.toc {
+	ul li {
+		border-left: rgba(0, 0, 0, .2) 1px solid;
+		list-style-type: none;
+		padding: 0 0 0 1rem;
+	}
+
+	ul:nth-of-type(1) { padding: 0; }
+
+	li { padding-right: .5rem; }
+
+	h2 { margin-top: 0; }
+
+	ul li {
+		&.current {
+			border-left: black 1px solid;
+			font-weight: 500;
+		}
+	}
+}

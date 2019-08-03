@@ -144,18 +144,3 @@
 	border-top: 1px #9B9B9B solid;
 	padding: .5em;
 }
-
-/*
-** Table of Contents
-*/
-.toc {
-	ul {
-		border-left: rgba(0, 0, 0, .2) 1px solid;
-		list-style-type: none;
-		padding: 0 0 0 1rem;
-	}
-
-	li { padding: 0; }
-
-	h2 { margin-top: 0; }
-}
