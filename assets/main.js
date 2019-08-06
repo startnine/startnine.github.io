@@ -255,7 +255,7 @@ $("a.delaylink[href]").click(function() {
 /* function to add a self link for stuff with an id */
 $.fn.addSelfLink = function() {
 	return this.each(function() {
-		$(this).append("" +
+		$(this).append(" " +
 			"<a class='self-link instapaper_hide instapaper_ignore' href='#" + $(this).attr("id") +
 			"' aria-hidden='true' tabindex='-1' title='Permalink to this section'>#</a>"
 		);

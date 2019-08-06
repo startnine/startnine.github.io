@@ -39,6 +39,10 @@
 	a {
 		margin: 0 0 2.5em 2em;
 		text-decoration: none;
+			
+		&:focus .flex-item, &:focus-visible .flex-item {
+			box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .25), inset 0 0 0 .25em rgba(255, 255, 255, .5);
+		}
 	}
 
 	.flex-item {
@@ -56,7 +60,9 @@
 		user-select: none;
 		width: 20rem;
 
-		&:hover { box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .25), inset 0 0 0 .25em rgba(255, 255, 255, .5); }
+		&:hover, &:focus, &:focus-visible {
+			transform: translate3d(0, 0, 0) scale(1.025); 
+		}
 
 		&:active { transform: translate3d(0, 0, 0) scale(.98); }
 
@@ -86,6 +92,10 @@
 	}
 }
 
+// cancel focus style on mouse
+.jerry-mouse a:focus .flex-item {
+	box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.25);
+}
 
 /*
 ** Individual Marketplace Module/Skin page
