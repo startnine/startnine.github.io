@@ -1,11 +1,11 @@
 {% if include.info %}
 <div class="note info card">
-	{% include icon.html icon="icon-notification" width="1em" height="1em" class="note-icon" %} <span class="note-title">Note</span><br>
+	{% include icon.html icon="icon-info" width="1em" height="1em" class="note-icon" %} <span class="note-title">Note</span><br>
 {% endif %}
 
 {% if include.alert %}
 <div class="note alert card">
-	{% include icon.html icon="icon-info" width="1em" height="1em" class="note-icon" %} <span class="note-title">Important</span><br>
+	{% include icon.html icon="icon-danger" width="1em" height="1em" class="note-icon" %} <span class="note-title">Important</span><br>
 {% endif %}
 
 {% if include.warn %}
