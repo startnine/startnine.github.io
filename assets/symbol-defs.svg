@@ -1,5 +1,10 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
+<symbol id="icon-newtab" viewBox="0 0 20 20">
+<title>newtab</title>
+<path d="M0 3.75v16.25h16.25v-10.313l-2.5 2.5v5.313h-11.25v-11.25h5.313l2.5-2.5z"></path>
+<path d="M8.125 0v2.5h7.608l-10.054 10.054 1.768 1.767 10.054-10.054v7.608h2.499v-11.875h-11.875z"></path>
+</symbol>
 <symbol id="icon-danger" viewBox="0 0 20 20">
 <title>danger</title>
 <path d="M11.25 14.25c0 0.69-0.56 1.25-1.25 1.25s-1.25-0.56-1.25-1.25c0-0.69 0.56-1.25 1.25-1.25s1.25 0.56 1.25 1.25z"></path>
@@ -94,10 +99,6 @@
 <symbol id="icon-enlarge2" viewBox="0 0 20 20">
 <title>enlarge2</title>
 <path d="M20 0v8.125l-3.125-3.125-3.75 3.75-1.875-1.875 3.75-3.75-3.125-3.125zM8.75 13.125l-3.75 3.75 3.125 3.125h-8.125v-8.125l3.125 3.125 3.75-3.75z"></path>
-</symbol>
-<symbol id="icon-shrink2" viewBox="0 0 20 20">
-<title>shrink2</title>
-<path d="M8.75 11.25v8.125l-3.125-3.125-3.75 3.75-1.875-1.875 3.75-3.75-3.125-3.125zM20 1.875l-3.75 3.75 3.125 3.125h-8.125v-8.125l3.125 3.125 3.75-3.75z"></path>
 </symbol>
 <symbol id="icon-download" viewBox="0 0 20 20">
 <title>download</title>
