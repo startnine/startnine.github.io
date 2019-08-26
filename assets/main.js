@@ -68,14 +68,14 @@ $.fn.changeSVGicon = function(icon) {
 	return this;
 };
 
-// function addSVGicon(icon) {
-//  /*
-//  ** this function adds the icon sprite thing
-//  ** usage: $(".wrapper").prepend(addSVGicon("icon-name"));
-//  */
-//  return ("<svg class='icon' aria-hidden='true' width='1em'" +
-//      "height='1em'> <use href=" + locationOfSVG + "#" + icon + "></use> </svg>");
-// }
+function addSVGicon(icon) {
+	/*
+	** this function adds the icon sprite thing
+	** usage: $(".wrapper").prepend(addSVGicon("icon-name"));
+	*/
+	return ("<svg class='icon' aria-hidden='true' width='1em'" + "data-iconame='" +
+	icon + "' height='1em'> <use href=" + locationOfSVG + "#" + icon + "></use> </svg>");
+}
 
 /*
 ** Theme Application
@@ -264,6 +264,11 @@ $.fn.addSelfLink = function() {
 
 // Apply self link to h2 and h2 w. js-self-link class
 $(".js-self-link h2, .js-self-link h3").addSelfLink();
+
+// add a new tab icon thingy to links that have target="_blank"
+$("[target='_blank']").each(function() {
+	$(this).append(addSVGicon("icon-newtab"))
+});
 
 /*
 ** Marketplace
