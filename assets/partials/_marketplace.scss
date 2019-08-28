@@ -55,7 +55,7 @@
 		height: 9rem;
 		padding: 1em;
 		position: relative;
-		transform: translate3d(0, 0, 0); // forces GPU rendering, prevents flicker
+		transform: translate3d(0, 0, 0) scale(1); // forces GPU rendering, prevents flicker
 		transition: transform .125s ease, box-shadow .125s ease;
 		user-select: none;
 		width: 20rem;
