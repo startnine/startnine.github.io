@@ -34,7 +34,6 @@ footer {
 		color: inherit;
 		min-width: 8em;
 		opacity: .8;
-		text-decoration: underline;
 		transition: opacity .125s ease;
 
 		&:focus-visible {
@@ -44,7 +43,9 @@ footer {
 			padding: 0 2px;
 		}
 
-		&:hover { opacity: 1; }
+		&:hover {
+			opacity: 1;
+		}
 
 		&:active {
 			opacity: .3;

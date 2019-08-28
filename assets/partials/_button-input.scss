@@ -5,6 +5,11 @@ a {
 	color: #00729E;
 	text-decoration: none;
 
+	[data-iconame$="newtab"] {
+		font-size: .75em;
+		padding-left: .25em;
+	}
+
 	&:hover { text-decoration: underline; }
 
 	&.button {

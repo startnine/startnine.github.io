@@ -96,6 +96,9 @@ function darkSideOfTheMoon(enable, persist) {
 			// Change icon in caption menu
 			$(".js-darkmode svg use").changeSVGicon("icon-moon-fill");
 
+			// change vox-only text
+			$(".js-darkmode .vox-only").text("Turn off dark theme");
+
 			// set local storage unless explicitly told not to
 			if (persist != false) { localStorage.setItem("theme", "dark"); }
 		}
@@ -104,6 +107,9 @@ function darkSideOfTheMoon(enable, persist) {
 
 		// Change icon in caption menu
 		$(".js-darkmode svg use").changeSVGicon("icon-moon-stroke");
+
+		// change vox-only text
+		$(".js-darkmode .vox-only").text("Turn on dark theme");
 
 		// set local storage unless explicitly told not to
 		if (persist != false) { localStorage.setItem("theme", "light"); }
@@ -123,6 +129,9 @@ function fontSize(size) {
 
 		// Change icon in caption menu
 		$(".js-text-adjust svg use").changeSVGicon("icon-lowercase-a");
+
+		// change vox-only text
+		$(".js-text-adjust .vox-only").text("Make the text smaller");
 	} else if (size == "medium") {
 		// Apply and save setting to local storage
 		$(":root").css("--font-0", "");
@@ -130,6 +139,9 @@ function fontSize(size) {
 
 		// Change icon in caption menu
 		$(".js-text-adjust svg use").changeSVGicon("icon-uppercase-a");
+
+		// change vox-only text
+		$(".js-text-adjust .vox-only").text("Make the text bigger");
 	} else {
 		return "invalid params! we only accept 'large' and 'medium' in this franchise";
 	}
@@ -168,8 +180,10 @@ if (localStorage.getItem("textSize") == "large") {
 // contrast
 if (localStorage.getItem("theme") == "contrast") {
 	$("html").addClass("contrast no-custom-scrollbar no-custom-input");
+	$(".js-contrast .vox-only").text("Turn off contrast theme");
 } else {
 	$("html").removeClass("contrast no-custom-scrollbar no-custom-input");
+	$(".js-contrast .vox-only").text("Turn on contrast theme");
 }
 
 // dark theme
@@ -220,12 +234,15 @@ $(".js-contrast").click(function() {
 		// off
 		$("html").removeClass("contrast no-custom-scrollbar no-custom-input");
 		localStorage.setItem("theme", "light");
+		$(".js-contrast .vox-only").text("Turn on contrast theme");
+
 	} else if ($("html").hasClass("dark")) {
 		console.error("contrast theme not enabled, turn off dark");
 	} else {
 		// on
 		$("html").addClass("contrast no-custom-scrollbar no-custom-input");
 		localStorage.setItem("theme", "contrast");
+		$(".js-contrast .vox-only").text("Turn off contrast theme");
 	}
 });
 
@@ -267,7 +284,7 @@ $(".js-self-link h2, .js-self-link h3").addSelfLink();
 
 // add a new tab icon thingy to links that have target="_blank"
 $("[target='_blank']").each(function() {
-	$(this).append(addSVGicon("icon-newtab"))
+	$(this).append("&nbsp;" + addSVGicon("icon-newtab"))
 });
 
 /*
