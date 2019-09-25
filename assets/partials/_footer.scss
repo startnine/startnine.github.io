@@ -2,90 +2,73 @@
 ** Footer
 */
 footer {
-//  background: #4F89CA; // fallback contrast
-	background: linear-gradient(to top, #4F89CA, #5793D4, #5F9CDE, #68A6E9, #70B0F3);
-	border-image: linear-gradient(to left, rgba(0, 0, 0, 0) 8%, rgba(255, 255, 255, .5) 25%, rgba(255, 255, 255, .75) 50%, rgba(255, 255, 255, .5) 75%, rgba(0, 0, 0, 0) 92%) 2;
-	border-image-width: 2px 0 0 0;
-	border-style: solid;
-	border-width: 4px 0 0;
-	color: white;
-	margin: 0;
+	background: #FCFCFC linear-gradient(#FCFCFC, #E6E6E6);
+	border-top: 1px solid #9B9B9B;
+	box-shadow: 0 -4px 25px 0 rgba(0, 0, 0, .2);
+	color: var(--text);
+	font-size: var(--font-0);
+	line-height: 1.5;
+	margin: 1em 0 0;
 	padding: 1em 0 .5em;
-	text-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
 	width: 100%;
 
-	.mother-of-all-links {
+	.footer-flex {
 		align-content: flex-start;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 
-		div {
-			font-size: 15pt;
-			padding: 0 1em;
+		.flex-item {
+			margin: 0 3em;
 			width: 12.5rem;
+		}
 
-			a {
-				display: block;
-				font-size: 1rem;
-			}
+		a {
+			display: block;
+			transition: background .3s ease, box-shadow .3s ease, opacity .3s ease;
 		}
 	}
 
 	a {
 		color: inherit;
+		min-width: 8em;
 		opacity: .8;
-		text-decoration: underline;
 		transition: opacity .125s ease;
 
-		&:focus, &:focus-visible { // Remove &:focus when Chrome and Edge support focus-visible
+		&:focus-visible {
 			background-color: white;
-			color: #4F89CA;
+			color: black;
 			opacity: 1;
 			padding: 0 2px;
-			text-shadow: initial;
-			svg { filter: unset; }
 		}
 
-		&:hover { opacity: 1; }
+		&:hover {
+			opacity: 1;
+		}
 
 		&:active {
 			opacity: .3;
-			text-shadow: initial;
-			svg { filter: unset; }
 		}
 
 	}
 
-	.the-group-with-the-logo {
+	h3 {
+		display: inline-block;
+		height: 1.5em;
+		margin: 0;
+		pointer-events: none;
+		width: 6em;
+	}
+
+	.logo-group {
+		margin: 0 !important; // Margin is removed for the left of the logo
+
 		a {
 			background: url("img/logo.svg") no-repeat center;
-			background-color: initial;
 			background-size: 100% 100%;
 			height: 3em;
-			padding: initial;
 			width: 3em;
-		}
-	}
-
-	.connect-buttons {
-		display: flex;
-		justify-content: space-around;
-
-		a {
-			font-size: 1.5em;
-			padding: .5em;
-			text-decoration: none;
-			transition: opacity .125s ease;
-
-			svg { filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, .5)); }
-
-			&:focus, &:focus-visible { // Remove &:focus when Chrome and Edge support focus-visible
-				padding: .5em;
-				svg { filter: unset; }
-			}
-
 		}
 	}
 
@@ -96,11 +79,6 @@ footer {
 		p {
 			margin-bottom: 0;
 			padding: 0 1em;
-			&:not(:first-child) { border-left: 1px solid white; }
 		}
 	}
-}
-
-.jerry-mouse footer :focus, .jerry-mouse footer :focus-visible { // Remove focus styles for mouse
-	background-color: initial; color: white; padding: initial;
 }

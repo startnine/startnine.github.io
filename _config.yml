@@ -3,20 +3,34 @@ title: Start9
 description: An extensible, customizable, modular shell supplement for Windows.
 url: "https://start9.menu/" # the base hostname & protocol for your site
 github_username: startnine
+logo: /assets/img/logo.png
+repository: startnine/start9.menu
+
+permalink: /blog/:year/:title:output_ext # For Blog Post Link Format
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:title:output_ext
-sass:
-  sass_dir: assets
-plugins:
-  - jemoji
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jekyll-feed
+highlighter: rouge
 
-defaults:
-- scope:
-    path: ""
-  values:
-    logo: /assets/img/logo.png
+sass:
+  style: compressed
+  sass_dir: assets
+
+plugins:
+  - jekyll-avatar
+  - jekyll-feed
+  - jekyll-github-metadata
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
+
+compress_html:
+  clippings: [p, li, td]
+  comments: ["<!-- ", " -->"]
+
+collections:
+  docs:
+    permalink: ":collection/:path/"
+    output: true

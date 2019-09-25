@@ -1,0 +1,153 @@
+---
+layout: empty
+type: one-box fade-in post module-page
+title: Module
+---
+{% for module in site.data.modules %}
+	{% if module.id == page.id %}
+		{% assign item = module %}
+	{% endif %}
+{% endfor %}
+
+<header class="header">
+	{% include header.html %}
+</header>
+
+{% if item.preview %}
+<div class="gallery">
+	<a href="{{ site.url }}/assets/img/previews/{{ item.preview }}">
+		<img class="marketplace-coverimage" src="{{ site.url }}/assets/img/previews/{{ item.preview }}" alt="Cover image, featuring {{ item.title }}"/>
+	</a>
+</div>
+{% else %}
+<div class="gallery">
+	<a href="{{ site.url }}/assets/img/previews/{{ item.image }}">
+		<img class="marketplace-coverimage" src="{{ site.url }}/assets/img/previews/{{ item.image }}" alt="Cover image, featuring {{ item.title }}"/>
+	</a>
+</div>
+{% endif %}
+
+<main class="{{ page.type }} {{ layout.type }}" data-order="{{ page.order }}">
+		<span class="invisible"><br></span>
+		<div class="skip-target" id="maincontent"></div>
+
+		<div class="cover">
+			<div class="card">
+				<span class="info">
+					<h1 style="margin: 0;">{{ item.title }}</h1>
+					by <strong>{{ item.authorname }}</strong>
+				</span>
+
+				<span class="install">
+					<a class="button" href="start9://view-plugin/{{ item.id}}">
+						{% include icon.html icon="icon-logo" width="1em" height="1em" %}
+						 View in Start9
+					</a>
+				</span>
+			</div><br>
+		</div>
+
+		<article class="js-self-link">
+			<!-- View source & View author link -->
+			{% if item.source %}
+			<a class="button" href="{{ item.source }}">
+				{% include icon.html icon="icon-embed2" width="1em" height="1em" %}
+				 View code
+			</a><span class="vox-only">&nbsp;</span>
+			{% endif %}
+
+			{% if item.authorlink %}
+			<a class="button" href="{{ item.authorlink }}">
+				{% include icon.html icon="icon-link" width="1em" height="1em" %}
+				 View author&rsquo;s website
+			</a>
+			{% endif %}
+
+			<!-- Tagline -->
+			{% if item.tagline %}
+			<br><br><i>
+				{{ item.tagline }}
+			</i>
+			{% endif %}
+
+			<!-- Tags -->
+			{% if item.tags %}
+			<br><i>
+				tags:
+				{{ item.tags }}
+			</i>
+			{% endif %}
+
+			<br>
+
+			<!-- Markdown content -->
+			{{ content }}
+			<div id="rendered-md"></div>
+		</article>
+
+</main>
+
+{% include photoswipe.html %}
+
+{% if page.readme %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.10/purify.min.js" integrity="sha256-sUyI169bxYQrBE0eTLEZND8u458gdCMPCYHyFvRCBWU=" crossorigin="anonymous"></script>
+
+	<script>
+		/*
+		** Fetch, santiize, and render markdown
+		** TODO: bit slow, needs optimize
+		** review: Needs to be checked for security defects and the other
+		*/
+
+		var httpMarkdownRequest = new XMLHttpRequest();
+
+		httpMarkdownRequest.onreadystatechange = function(data) {
+			var httpRenderRequest = new XMLHttpRequest();
+
+			/* paste in rendered md */
+			httpRenderRequest.onreadystatechange = function(data) {
+				const clean = DOMPurify.sanitize( data.currentTarget.response );
+
+				document.getElementById("rendered-md").innerHTML = clean;
+
+				/* detect ratelimit */
+				/* note: somebody would be able to paste in this text and cause a false ratelimit error.
+					but why would someone do that? */
+				if (document.querySelector("#rendered-md").textContent.includes("API rate limit exceeded for")) {
+
+					/* should be able to get the first and last part */
+					if (document.querySelector("#rendered-md").textContent.includes("(But here's the good news: " +
+					"Authenticated requests get a higher rate limit. Check out the documentation for more details.)\"")) {
+
+						document.getElementById("rendered-md").innerHTML = "" +
+						"<br>Sorry, but we aren't unable to load module info because you've reached the " +
+						"GitHub API ratelimit. Please wait up to an hour for that to reset.";
+
+						console.error("GitHub Ratelimit detected. For documentation see https://developer.github.com/v3/#rate-limiting");
+					};
+				};
+
+				/* deletes the first h1 */
+				if (document.querySelector("#rendered-md h1") != null ) {
+					document.querySelector("#rendered-md h1").remove();
+				};
+
+				/* add self link */
+				window.addEventListener('DOMContentLoaded', function(){
+					$(".js-self-link #rendered-md h2, .js-self-link #rendered-md h3").addSelfLink();
+				});
+			};
+
+			/* Open HTTP render request */
+			httpRenderRequest.open("POST", "https://api.github.com/markdown"); /* Trust nobody but Microsoft (R) */
+			httpRenderRequest.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			httpRenderRequest.send(JSON.stringify({"text": data.currentTarget.response, "mode": "gfm", "context": "startnine/start9"}));
+		};
+
+		/* Trust nobody but Microsoft (R) */
+		if ( "{{ page.readme }}".startsWith("https://raw.githubusercontent.com/") ) {
+			httpMarkdownRequest.open("GET", "{{ page.readme }}");
+			httpMarkdownRequest.send();
+		} else { console.error("error: external readme not from GitHub!") };
+	</script>
+{% endif %}

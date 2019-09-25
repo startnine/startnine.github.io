@@ -1,13 +1,80 @@
-<header>
-		{% include nav.html %}
-		<div class="aurora-panel" aria-hidden="true">
-			<span class="aurora left" ></span>
-			<span class="aurora right"></span>
-			<span class="aurora left2"></span>
-		</div>
-		<div class="logo">
-			<h1 class="text">
-				<img class="image" src="{{ "/assets/img/logo.svg" | prepend: site.baseurl }}" alt="" role="presentation"/>Start9
-			</h1>
-		</div>
-</header>
+<a href="#maincontent" class="skip-to-content ignore-jerry-mouse">Skip to Content</a>
+<div class="title">
+	<div class="burger-button" role="button" aria-label="menu" title="menu">
+	<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+		<!-- <span class="vox-only">Menu</span> -->
+	</div>
+
+	<p class="title-text">
+		{% if page.layout == "post" %}
+			Post
+		{% else %}
+			{{ page.title }}
+		{% endif %}
+	</p>
+
+	<span class="caption-menu">
+		<a class="caption-button js-text-adjust ignore-jerry-mouse" href="javascript:void(0);" title="Toggle text size" role="button">
+			{% include icon.html icon="icon-uppercase-a" width="1em" height="1em" %}
+			<span class="vox-only">Toggle text size</span>
+		</a>
+
+		<span class="invisible">&nbsp;</span>
+		<a class="caption-button js-contrast ignore-jerry-mouse" href="javascript:void(0);" title="Toggle contrast" role="button">
+			{% include icon.html icon="icon-contrast" width="1em" height="1em" %}
+			<span class="vox-only">Toggle contrast</span>
+		</a>
+
+		<span class="invisible">&nbsp;</span>
+		<a class="caption-button js-darkmode ignore-jerry-mouse" href="javascript:void(0);" title="Toggle dark mode" role="button">
+			{% include icon.html icon="icon-moon-stroke" width="1em" height="1em" %}
+			<span class="vox-only">Toggle dark mode</span>
+		</a>
+	</span>
+
+</div>
+
+<nav class="menu-bar">
+	{% assign sorted_pages = site.pages | sort:"order" %}
+
+	{% for node in sorted_pages %}
+		{% if node.menu == "main" %}
+			<a class="delaylink button menu-bar-button {% if page.title == node.title %}current{% endif %}
+
+			{% comment %} HACK: documentation, blog, marketplace edgecase {% endcomment %}
+			{% capture full_url %}{{ site.url }}{{ page.url }}{% endcapture %}
+			{% capture docs_url %}{{ site.url }}/docs/{% endcapture %}
+			{% capture blog_url %}{{ site.url }}/blog/{% endcapture %}
+			{% capture mark_url %}{{ site.url }}/marketplace/{% endcapture %}
+
+			{% if full_url contains docs_url and node.title == "Documentation" and is_404 != true %}current{% endif %}
+
+			{% if full_url contains blog_url and node.title == "Blog" and is_404 != true %}current{% endif %}
+
+			{% if full_url contains mark_url and node.title == "Marketplace" and is_404 != true %}current{% endif %}"
+
+			{% comment %} todo: use some js lib instead of this mess {% endcomment %}
+			onclick="
+				{% if page.order < node.order %}
+					fadeOutRight();
+				{% elsif page.order > node.order %}
+					fadeOutLeft();
+				{% else %}
+					fadeOut();
+				{% endif %}
+			"
+				href="{{ node.url | prepend: node.baseurl }}">{{ node.title }}
+			</a>
+			<span class="invisible">&nbsp;</span>
+		{% endif %}
+	{% endfor %}
+
+	{% if jekyll.environment == "production" %}
+		<!-- ! Remove this and the marketplace entry in gitignore once ready -->
+		<a class="button disabled menu-bar-button" style="opacity: .3;">Marketplace</a>
+	{% endif%}
+
+	<span class="invisible">&nbsp;<br></span>
+</nav>

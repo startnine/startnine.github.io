@@ -1,0 +1,24 @@
+---
+layout: default
+type: grid-body fade-in post docs
+---
+
+<aside class="side left">
+	<nav class="sidebar-object sticky">
+		{% include docs-nav.html %}
+	</nav>
+</aside>
+
+<aside class="side right">
+	<nav class="sidebar-object sticky toc">
+		<h2>In this page:</h2>
+		{% include toc.html html=content h_min=2 %}
+		<a href="#maincontent">Back to top</a>
+	</nav>
+</aside>
+
+<article class="content js-self-link">
+	<div class="skip-target" id="maincontent"></div>
+	<h1 style="margin: 0;">{{ page.title }}</h1>
+	{{ content }}
+</article>

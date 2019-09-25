@@ -1,0 +1,52 @@
+---
+layout: default
+title: Button
+type: one-box js-self-link
+hidden: true
+visible: 1
+---
+<div class="skip-target" id="maincontent"></div>
+
+<section>
+	<h1>Header</h1>
+	<h2>Header</h2>
+	<h3>Header</h3>
+	<h4>Header</h4>
+	<div id="buttone-main">
+		<span class="spoiler">This is a spoiler</span>
+		<code>this is inline code</code>
+		<br>
+{% highlight html %}
+<script>
+console.log("this is not inline code");
+</script>
+{% endhighlight %}
+
+
+		{% include note.html info="" content="Doo doo doo-doo doo doo doo doo" %}
+
+		{% include note.html alert="" content="Doo doo doo-doo doo doo doo doo" %}
+
+		{% include note.html warn="" content="Doo doo doo-doo doo doo doo doo" %}
+
+		{% include note.html tip="" content="Doo doo doo-doo doo doo doo doo" %}
+
+		<input placeholder="input" type="text">
+		<br>
+		<br>
+		<form class="radio">
+			<input type="radio" name="great" value="valuea" id="valuea"><label for="valuea"><span class="custom-input"></span>Radio1</label><br>
+			<input type="radio" name="great" value="valueb" id="valueb"><label for="valueb"><span class="custom-input"></span>Radio2</label><br>
+			<input type="radio" name="great" value="valuec" id="valuec"><label for="valuec"><span class="custom-input"></span>Radio3</label>
+		</form>
+		<br>
+		<form class="checkbox">
+			<input type="checkbox" name="value" value="valued" id="valued" checked><label for="valued"><span class="custom-input"></span>Checkbox1</label> <br>
+			<input type="checkbox" name="value" value="valuee" id="valuee"><label for="valuee"><span class="custom-input"></span>Checkbox2</label> <br>
+			<input type="checkbox" name="value" value="valuef" id="valuef"><label for="valuef"><span class="custom-input"></span>Checkbox3</label>    
+		</form>
+		<br>
+		<a class="old button">Filler Text</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="button">Lorem Ipsum</a>
+	</div>
+</section>

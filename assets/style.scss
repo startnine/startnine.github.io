@@ -1,27 +1,37 @@
 ---
-style: compressed
 ---
 
 /*!
-** Start9 Website CSS | start9.menu
-** https://github.com/StartNine/startnine.github.io
+** Start9 website CSS | start9.menu
+** https://github.com/StartNine/start9.menu
 */
 
+// Light theme colours
+@import "partials/vars";
+
+// Components
+@import "partials/a11y";
 @import "partials/animation";
-@import "partials/animational";
-@import "partials/aurora";
-@import "partials/burger";
-@import "partials/button";
+@import "partials/button-input";
+@import "partials/general";
+@import "partials/highlight"; // highlight.js
+@import "partials/scrollbar";
+
+// Page-specific
+@import "partials/post";
+@import "partials/hero";
+@import "partials/marketplace";
+
+// Sections
 @import "partials/content";
 @import "partials/footer";
-@import "partials/general";
-@import "partials/hero";
 @import "partials/menu";
-@import "partials/post";
-// @import "partials/scrollbar";
 
-@import "partials/dark";
+// Themes
 @import "partials/contrast";
+@import "partials/dark";
+
+// Media queries
 @import "partials/mobile";
 
-@import "partials/waves";
+// The following is shame CSS

@@ -1,56 +1,62 @@
 /*
 ** Content
 */
-// .barba-container {
-//  min-height: calc(100vh - 10rem); // for footer
-// }
+.barba-container {
+	min-height: calc(100vh - 14rem); // for footer to stay on the bottom.. kind of
+}
 
 .one-box, .grid-body {
 	align-content: center;
-	bottom: 12rem;
-	margin: 0 10%;
+//  margin: 3em 10vw 2em;
+	margin: 3em auto;
+	max-width: 75em;
 	min-height: 100%;
 	padding: 0;
 	position: relative;
 	vertical-align: top;
+
+	img { max-width: 100%; }
 }
 
 .one-box { display: block; }
 
 .grid-body {
 	display: grid;
-	grid-template-columns: 80% 15%;
-	grid-template-rows: 100% 100%;
-}
+	grid-template-areas: "left content content content content right";
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
-.side {
-	bottom: 1em;
-	display: flex;
-	flex-direction: column;
-	grid-column: 2;
-	grid-row: 1;
-	padding-left: 1rem;
-	position: relative;
-	vertical-align: top;
+	.side {
+		bottom: 1em;
+		display: flex;
+		flex-direction: column;
+		vertical-align: top;
+
+		&.right { grid-area: right; }
+
+		&.left  { grid-area: left; }
+
+		.sidebar-object {
+			bottom: 2rem;
+			position: relative;
+
+			&.sticky {
+				position: sticky;
+				top: 3rem;
+			}
+		}
+	}
 
 	.sidebar-object {
-		bottom: 2rem;
-		position: relative;
+		margin-bottom: 2rem;
+		padding: .5rem 0;
+		vertical-align: top;
+		.button { margin-top: .25rem; }
+		p { margin: .313rem 0 0; }
 	}
-}
 
-.sidebar-object {
-	margin-bottom: 2rem;
-	padding: .5rem 0;
-	vertical-align: top;
-	.button { margin-top: .25rem; }
-	p { margin: .313rem 0 0; }
-}
-
-.content {
-	grid-column: 1;
-	grid-row: 1;
-	padding: 0 .625rem;
-	vertical-align: top;
-	width: 100%;
+	.content {
+		grid-area: content;
+		vertical-align: top;
+		width: calc(100% - .5rem); // adds some extra margin
+	}
 }

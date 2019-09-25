@@ -2,59 +2,73 @@
 ** HTML and body styling
 */
 html {
-//  background: #C8D4E7 url("img/background.svg") repeat-x top center fixed;
-	background: linear-gradient(white, #C8D4E7);
-	font-family: "Selawik", "Segoe UI", sans-serif;
+	background: var(--background);
+	color: var(--text);
+	font-family: "Ubuntu", "Segoe UI", sans-serif;
+	font-size: var(--font-0);
+	line-height: 1.5rem;
 	min-height: 100%;
-	overflow-x: hidden;
-	overflow-y: visible;
 }
 
 body {
 	margin: 0;
 	min-height: 100%;
-	overflow-x: hidden;
-	overflow-y: visible;
 	padding: 0;
-	tab-size: 4;
 }
 
+/*
+** Anchor link offset
+** https://stackoverflow.com/a/24298427
+*/
+*[id]::before {
+	content: " ";
+	display: block;
+	height: 4rem;
+	margin-top: -4rem;
+	visibility: hidden;
+}
+
+/*
+** Typography
+*/
+/* Headers */
+h1, h2, h3, h4, h5 {
+	font-weight: 500;
+	margin: 2.75rem 0 1rem;
+}
+
+h1 { font-size: var(--font-3); }
+h2 { font-size: var(--font-2); }
+h3 { font-size: var(--font-1); }
+
+/* Code */
+pre, code, .hll, .code { background-color: #EEE; }
+
+.code, code {
+	border-radius: .2em;
+	color: #171700;
+	font-family: "Consolas", "Lucida Console", "Monaco", monospace;
+	margin: -.2em 0;
+	padding: .2em;
+	white-space: pre-wrap;
+}
+
+pre {
+	border-radius: .2rem;
+	padding: .25rem;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
 
 /*
 ** General
 */
-.vox-only {
-	height: 1px;
-	left: -420691337px;
-	overflow: hidden;
-	position: absolute;
-	top: auto;
-	width: 1px;
-}
-
-.jerry-mouse :focus { outline: none; }
-
-.waves-ripple { background: rgba(255, 255, 255, 0) !important; } // sass-lint:disable-line no-important
-
 .byline { font-style: italic; }
 
-.active, .github-active, .discord-active { display: block; }
-
-.invisible {
+.invisible { // hides element in 3 ways incase the other two fail
 	display: none;
 	opacity: 0;
 	visibility: hidden;
-}
-
-.q {
-	font-size: 110%;
-	font-weight: 600;
-	line-height: 1.5em;
-}
-
-.a {
-	line-height: 1.5em;
-	padding-left: 2em;
 }
 
 .disabled {
@@ -63,19 +77,9 @@ body {
 	user-select: none;
 }
 
-.code, code {
-	background: white;
-	border-radius: .2em;
-	color: #171700;
-	font-family: "Consolas", "Courier New", "Courier", "Liberation Mono", "Menlo", monospace;
-	margin: -.2em 0;
-	padding: .2em;
-	white-space: pre;
-}
-
 .resize { height: 25em; }
 
-.someone {
+.someone { // used for bad joke, remove whenever
 	background: linear-gradient(270deg, rgba(255, 0, 0, .2), rgba(255, 255, 0, .2), rgba(0, 255, 0, .2), rgba(0, 0, 255, .2));
 	border-radius: 4px;
 	min-width: 100%;
@@ -91,138 +95,15 @@ body {
 	&:hover { color: white; }
 }
 
-.oneemw { width: 1em; }
-
-/* Wordmark */
-.wordmark {
-	&::after {
-		content: "Start9";
-		font-family: "Libre Franklin", "Franklin Gothic", "Arial Black", sans-serif;
-		font-weight: 900;
-	}
+.icon {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
 }
 
-/*
-** Tab Skip
-*/
-.skip-to-content {
-	height: 1px;
-	left: -25565vw;
-	overflow: hidden;
-	position: absolute;
-	top: auto;
-	width: 1px;
-	z-index: -1337;
-
-	&:focus, &:active {
-		background: #005AA1;
-		border: 3px solid white;
-		border-radius: 15px;
-		color: white;
-		font-size: 1rem;
-		height: auto;
-		left: calc(50vw - 6rem);
-		margin: 1rem .5rem;
-		overflow: auto;
-		padding: .5rem 1rem;
-		text-align: center;
-		text-shadow: 1px 0 10px rgba(0, 0, 0, .5);
-		width: auto;
-		z-index: 6969;
-	}
+.card {
+	background: linear-gradient(rgb(var(--card-1)), rgb(var(--card-2)));
+	border-radius: .2em;
+	box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .32);
+	padding: 1em;
 }
-
-.skip-target {
-	float: right;
-	height: 1px;
-	overflow: hidden;
-	width: 1px;
-}
-
-/*
-** Fontfaces
-**  Mixed tabs and spaces 
-**  for alignment reasons
-*/
-/* Light */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 200;
-	src: url("font/selawkl.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Light"),
-		 url("font/selawkl.ttf") format("truetype"),
-		 url("font/selawkl.woff") format("woff"),
-		 url("font/selawkl.woff2") format("woff2");
-}
-
-/* Semilight */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 300;
-	src: url("font/selawksl.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Semilight"),
-		 url("font/selawksl.ttf") format("truetype"),
-		 url("font/selawksl.woff") format("woff"),
-		 url("font/selawksl.woff2") format("woff2");
-}
-
-/* Normal */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 400;
-	src: url("font/selawk.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik"),
-		 url("font/selawk.ttf") format("truetype"),
-		 url("font/selawk.woff") format("woff"),
-		 url("font/selawk.woff2") format("woff2");
-}
-
-/* Semibold */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 600;
-	src: url("font/selawksb.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Semibold"),
-		 url("font/selawksb.ttf") format("truetype"),
-		 url("font/selawksb.woff") format("woff"),
-		 url("font/selawksb.woff2") format("woff2");
-}
-
-/* Bold */
-@font-face {
-	font-display: swap;
-	font-family: Selawik;
-	font-style: normal;
-	font-weight: 700;
-	src: url("font/selawkb.eot?#dumbie") format("embedded-opentype"),
-		 local("Selawik Bold"),
-		 url("font/selawkb.ttf") format("truetype"),
-		 url("font/selawkb.woff") format("woff"),
-		 url("font/selawkb.woff2") format("woff2");
-}
-
-/*
-** Falbacks
-*/
-.no-cssgrid {
-	.grid-body { display: table; }
-
-	.content {
-		display: table-cell;
-		width: 80%;
-	}
-
-	.side {
-		display: table-cell;
-		width: 15%;
-	}
-}
-

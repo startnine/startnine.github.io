@@ -1,74 +1,12 @@
 /*
 ** Animation
 */
-@keyframes marketplace-marquee {
-	0%   { text-indent: 9em; }
-	100% { text-indent: -9em; }
-}
-
-@keyframes slide-down {
-	0% {
-		height: 3rem;
-		transform: translateY(0%);
-	}
-
-	100% {
-		height: 17.55rem;
-		transform: translateY(0%);
-	}
-}
-
-.slide-down { animation: .3s slide-down ease; }
-
-@keyframes slide-up {
-	0% {
-		height: 17.55rem;
-		transform: translateY(0%);
-	}
-
-	100% {
-		height: 3.5rem;
-		transform: translateY(0%);
-	}
-}
-
-.slide-up { animation: .3s slide-up ease; }
-
-@keyframes menu-focus-in {
-	0%   { opacity: 0; }
-	100% { opacity: .7; }
-}
-
-.menu-focus-in {
-	animation-duration: .3s;
-	animation-fill-mode: both;
-	animation-name: menu-focus-in;
-	transition-timing-function: ease-in;
-}
-
-@keyframes menu-focus-out {
-	0%   { opacity: .7; }
-	100% { opacity: 0; }
-}
-
-.menu-focus-out {
-	animation-duration: .3s;
-	animation-fill-mode: both;
-	animation-name: menu-focus-out;
-	transition-timing-function: ease-in;
-}
-
 @keyframes fade-in {
 	0%   { opacity: 0; }
 	100% { opacity: 1; }
 }
 
-.fade-in {
-	animation-duration: .3s;
-	animation-fill-mode: both;
-	animation-name: fade-in;
-	transition-timing-function: ease-in;
-}
+.fade-in { animation: fade-in .3s ease-in both; }
 
 @keyframes fade-out {
 	0%   { opacity: 1; }
@@ -76,18 +14,12 @@
 }
 
 
-.fade-out {
-	animation-duration: .3s;
-	animation-fill-mode: both;
-	animation-name: fade-out;
-	transition-timing-function: ease-in;
-}
+.fade-out { animation: fade-out .3s ease-in both; }
 
 @keyframes slideInLeft {
 	0%   { transform: translateX(-7em); }
 	100% { transform: translateX(0); }
 }
-
 
 @keyframes slideOutLeft {
 	0%   { transform: translateX(0); }
@@ -104,13 +36,17 @@
 	100% { transform: translateX(7em); }
 }
 
-.fade-out-right, .fade-out-left, .fade-in-left, .fade-in-right {
-	animation-duration: .3s;
-	animation-fill-mode: both;
-	transition-timing-function: ease-in;
-}
+.fade-out-right, .fade-out-left { animation: fade-out .25s ease-in both; }
+
+.fade-in-left, .fade-in-right { animation: fade-in .25s ease-out both; }
 
 .fade-in-right { animation-name: fade-in, slideInRight; }
 .fade-in-left { animation-name: fade-in, slideInLeft; }
 .fade-out-right  { animation-name: fade-out, slideOutRight; }
 .fade-out-left { animation-name: fade-out, slideOutLeft; }
+
+@media screen and (prefers-reduced-motion: reduce) {
+	.fade-out-right, .fade-out-left { animation: fade-out .25s ease-in both; }
+
+	.fade-in-left, .fade-in-right { animation: fade-in .25s ease-out both; }
+}

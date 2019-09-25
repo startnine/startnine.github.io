@@ -1,4 +1,6 @@
 # deal with it.. or not, i guess
+preprocess_command: "sed '1{/^---$/{:a N;/---$/!ba;d}}'"
+
 rules:
   indentation:
     - 0
@@ -17,3 +19,5 @@ rules:
     - 0
   no-color-keywords:
     - 0
+  nesting-depth:
+    - max_depth: 3

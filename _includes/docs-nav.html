@@ -1,0 +1,13 @@
+<span class="invisible"><br></span>
+<input id="search" type="text" placeholder="Filter by title" data-filter=".docs-nav a" class="docs-search" title="Filter by title">
+<br>
+<nav class="docs-nav">
+	{% assign sorted_docs = site.docs | sort:"order" %}
+	{% for docs in sorted_docs %}
+		{% if docs.project == page.project %}
+			<a class="button {% if docs.title == page.title %}current{% endif %}" href="{{ docs.url | prepend: docs.baseurl }}">
+				{{ docs.title }}
+			</a>
+		{% endif %}
+	{% endfor %}
+</nav>

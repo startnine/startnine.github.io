@@ -1,0 +1,23 @@
+{% if include.info %}
+<div class="note info card">
+	{% include icon.html icon="icon-info" width="1em" height="1em" class="note-icon" %} <span class="note-title">Note</span><br>
+{% endif %}
+
+{% if include.alert %}
+<div class="note alert card">
+	{% include icon.html icon="icon-danger" width="1em" height="1em" class="note-icon" %} <span class="note-title">Important</span><br>
+{% endif %}
+
+{% if include.warn %}
+<div class="note warn card">
+	{% include icon.html icon="icon-warning" width="1em" height="1em" class="note-icon" %} <span class="note-title">Warning</span><br>
+{% endif %}
+
+{% if include.tip %}
+<div class="note tip card">
+	{% include icon.html icon="icon-light-bulb" width="1em" height="1em" class="note-icon" %} <span class="note-title">Tip</span><br>
+{% endif %}
+
+	<span class="note-content">{{ include.content }}</span>
+</div>
+<br>

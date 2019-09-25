@@ -1,0 +1,26 @@
+---
+layout: default
+menu: main
+order: 3
+permalink: /docs
+title: Documentation
+type: one-box fade-in post
+---
+<div class="skip-target" id="maincontent"></div>
+
+{% include note.html info="" content="We've held off writing docs for now. The stuff you see may be out of date." %}
+
+{% include note.html warn="" content="The Start9 API is subject to change at any time presently. This is not stable, consumer-grade software." %}
+
+<h2>Start9 Docs</h2>
+<em>choose a project:</em>
+<nav>
+	{% assign sorted_docs = site.docs | sort:"order" %}
+	{% for docs in sorted_docs %}
+		{% if docs.index == true %}
+			<a class="w-i-d-e button card" href="{{ docs.url | prepend: docs.baseurl }}">
+				{{ docs.title }}
+			</a>
+		{% endif %}
+	{% endfor %}
+</nav>

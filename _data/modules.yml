@@ -1,59 +1,57 @@
-- title: Double Decker Bar
-  image: DoubleDeckerBar.png
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
-  desc: The Double-Decker-Bar is a docked, stationary module with capabilities in both App launching, Window management, and Feed content. It is modelled after a Windows Longhorn concept, with some adaptations made to accomodate newer concepts, like Live Tiles.
-  link: > 
-    https://github.com/StartNine/doubledeckerbar
+# - id: JohnDoe.ContinentalMap
+#   title: Continent Map
+#   image: start9/doubledeckerbar.png
+#   authorlink: https://github.com/example
+#   authorname: John Doe
+#   tagline: Map of the continent you live in
+#   source: https://github.com/example/test
 
-- title: Superbar
-  image: placeholder.png
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
-  desc: It's a Dock! It's a Taskbar! NO, IT'S...
-  link: > 
-    https://github.com/StartNine/Superbar
+- id: Start9.DoubleDeckerBar
+  title: Double Decker Bar  
+  image: start9/doubledeckerbar.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
+  tagline: Double-decker taskbar, created from concepts
+  source: https://github.com/StartNine/doubledeckerbar
 
-- title: RibbonFileManager
-  image: placeholder.png
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
-  desc: Experimental ribbon-based file manager module
-  link: > 
-    https://github.com/StartNine/RibbonFileManager
+- id: Start9.EverythingBar
+  title: EverythingBar
+  image: start9/everythingbar.png
+  banner: start9/everythingbar-banner.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
+  tagline: It’s a Dock! It’s a Taskbar! NO, IT’S...
+  source: https://github.com/StartNine/Superbar
 
-- title: Origin Menu
-  image: placeholder.png
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
-  desc: The menu that started it all
-  link: > 
-    https://github.com/StartNine/originmenu
+- id: Start9.FileCommander
+  title: FileCommander
+  image: start9/filecommander-zoom.png
+  banner: start9/filecommander.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
+  tagline: Experimental ribbon-based file manager module
+  source: https://github.com/StartNine/RibbonFileManager
 
-- title: Experience Menu
-  image: placeholder.png
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
-  desc: eXPerience the nostalgia!
-  link: > 
-    https://github.com/StartNine/experiencemenu
+- id: Start9.AllIn10
+  title: All-In-10 Menu
+  image: start9/all-in-10-menu.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
+  tagline: The menu that started it all
+  source: https://github.com/StartNine/originmenu
 
-- title: Startbeat Menu
-  image: placeholder.png
-  author: >
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Splitwirez">rob55rod</a>
-    and 
-   <a rel="noopener noreferrer" target="_blank" href="https://github.com/Reflectronic">Reflectronic</a>
-  desc: Keeps your computer beating
-  link: > 
-    https://github.com/StartNine/startbeatmenu
+- id: Start9.ExperienceMenu
+  title: Experience Menu
+  image: start9/experiencemenu.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
+  tagline: eXPerience the nostalgia!
+  source: https://github.com/StartNine/experiencemenu
+
+- id: Start9.StartbeatMenu
+  title: Startbeat Menu
+  image: start9/startbeat.png
+  authorlink: https://github.com/startnine
+  authorname: Start9
+  tagline: Keeps your computer beating
+  source: h://github.com/StartNine/startbeatmenu

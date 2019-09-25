@@ -1,25 +1,31 @@
 ---
 layout: default
-title: Blog
 menu: main
 order: 2
+permalink: /blog
+title: Blog
+type: one-box fade-in post
 ---
-<main class="one-box fade-in-left" data-viewport="{{ page.target }}">
-	<article>
-		{% for post in site.posts limit:1 %}
-			<div class="skip-target"><a id="maincontent">-</a></div>
-			<a href="{{ post.url }}" onclick="fadeOut();"><h2 style="margin: 0;">{{ post.title }}</h2></a>
-			<em>by</em> <strong>{{ post.author }}</strong>, {{ post.date | date: "%d %B %Y" }}
-			<br>
-			{{ post.content }}
-		{% endfor %}
-	</article>
+<div class="skip-target" id="maincontent"></div>
+
+<article>
+	{% for post in site.posts limit:1 %}
+		<a href="{{ post.url }}" onclick="fadeOut();"><h1 style="margin: 0;">{{ post.title }}</h1></a>
+		<em>by</em> <strong>{{ post.author }}</strong>, {{ post.date | date: "%d %B %Y" }}
+		<br>
+		{{ post.content }}
+	{% endfor %}
+</article>
+
+<nav>
 	<h2>All Posts</h2>
 	<ul>
 		{% for post in site.posts %}    
 			<li>
-				<span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ post.url }}" onclick="fadeOut();">{{ post.title }}</a>, <em>{{ post.category }}</em></li>
+				<span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ post.url }}" onclick="fadeOut();">{{ post.title }}</a>, <em>{{ post.category }}</em>
+			</li>
 		{% endfor %}
 	</ul>
-</main>
+</nav>
+
 {% include photoswipe.html %}

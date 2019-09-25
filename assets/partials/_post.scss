@@ -10,7 +10,6 @@ figure { display: block; }
 
 .post-nav {
 	display: block;
-	font-size: .8em;
 	overflow: hidden;
 	width: 100%;
 
@@ -24,5 +23,121 @@ figure { display: block; }
 	.next {
 		float: right;
 		text-align: right;
+	}
+}
+
+.post {
+	line-height: 1.69;
+	margin: 3em auto 2em;
+}
+
+/*
+** Styles for docs
+*/
+.w-i-d-e {
+	font-size: var(--font-1) !important; // It WILL be wide.
+	height: 3em;
+	line-height: 3em !important; // It WILL be wide.
+	margin-bottom: 1em;
+	width: calc(100% - 1.5rem);
+}
+
+.docs-search { width: calc(100% - 2rem); }
+
+.docs-nav {
+	a {
+		display: block;
+		width: calc(100% - 2.5rem);
+	}
+}
+
+/*
+** Alert, Info, Warning
+*/
+$note-info-base: linear-gradient(#D2ECF9, #B2CCD9);
+$note-info-dark: #093044;
+
+$note-alert-base: linear-gradient(#F9D2D2, #D9B2B2);
+$note-alert-dark: #440909;
+
+$note-warn-base: linear-gradient(#F9F6D2, #D9D6B2);
+$note-warn-dark: #404409;
+
+$note-tip-base: linear-gradient(#D2F9D2, #B2D9B2);
+$note-tip-dark: #094409;
+
+.note {
+	// border: 1px solid transparent;
+	border-radius: .2rem;
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: .9rem;
+
+	&.info {
+		background: $note-info-base;
+		// border-color: $note-info-dark;
+		color: $note-info-dark;
+		svg { use { fill: $note-info-dark; } }
+	}
+
+	&.alert {
+		background: $note-alert-base;
+		// border-color: $note-alert-dark;
+		color: $note-alert-dark;
+		svg { use { fill: $note-alert-dark; } }
+	}
+
+	&.warn {
+		background: $note-warn-base;
+		// border-color: $note-warn-dark;
+		color: $note-warn-dark;
+		svg { use { fill: $note-warn-dark; } }
+	}
+
+	&.tip {
+		background: $note-tip-base;
+		// border-color: $note-tip-dark;
+		color: $note-tip-dark;
+		svg { use { fill: $note-tip-dark; } }
+	}
+}
+
+/*
+** Self link
+*/
+h2, h3 {
+	.self-link {
+		opacity: 0;
+		transition: opacity .3s ease;
+
+		svg { height: .75em; }
+	}
+
+	&:hover {
+		.self-link { opacity: .5; }
+	}
+}
+
+/*
+** Table of Contents
+*/
+.toc {
+	ul li {
+		border-left: rgba(0, 0, 0, .2) 1px solid;
+		list-style-type: none;
+		padding: 0 0 0 1rem;
+	}
+
+	ul:nth-of-type(1) { padding: 0; }
+
+	li { padding-right: .5rem; }
+
+	h2 { margin-top: 0; }
+
+	ul li {
+		&.current {
+			border-left: black 1px solid;
+			font-weight: 500;
+		}
 	}
 }
