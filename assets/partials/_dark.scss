@@ -68,6 +68,46 @@ p:not(.title-text), li { opacity: .8; }
 	color: var(--text);
 }
 
+// docs notes
+// fixme: colours look bad
+$note-info-base: linear-gradient(#093044, #082A3B);
+$note-info-light: #D2ECF9;
+
+$note-alert-base: linear-gradient(#440909, #3B0808);
+$note-alert-light: #F9D2D2;
+
+$note-warn-base: linear-gradient(#404409, #373B08);
+$note-warn-light: #F7F9D2;
+
+$note-tip-base: linear-gradient(#094409, #083B08);
+$note-tip-light: #D2F9D2;
+
+.note {
+	&.info {
+		background: $note-info-base;
+		color: $note-info-light;
+		svg { use { fill: $note-info-light; } }
+	}
+
+	&.alert {
+		background: $note-alert-base;
+		color: $note-alert-light;
+		svg { use { fill: $note-alert-light; } }
+	}
+
+	&.warn {
+		background: $note-warn-base;
+		color: $note-warn-light;
+		svg { use { fill: $note-warn-light; } }
+	}
+
+	&.tip {
+		background: $note-tip-base;
+		color: $note-tip-light;
+		svg { use { fill: $note-tip-light; } }
+	}
+}
+
 // HACK: !important is used here
 input {
 	&[type="text"] {

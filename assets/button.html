@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Button
-type: one-box
+type: one-box js-self-link
 hidden: true
 visible: 1
 ---
@@ -21,6 +21,16 @@ visible: 1
 console.log("this is not inline code");
 </script>
 {% endhighlight %}
+
+
+		{% include note.html info="" content="Doo doo doo-doo doo doo doo doo" %}
+
+		{% include note.html alert="" content="Doo doo doo-doo doo doo doo doo" %}
+
+		{% include note.html warn="" content="Doo doo doo-doo doo doo doo doo" %}
+
+		{% include note.html tip="" content="Doo doo doo-doo doo doo doo doo" %}
+
 		<input placeholder="input" type="text">
 		<br>
 		<br>

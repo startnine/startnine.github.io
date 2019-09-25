@@ -38,10 +38,23 @@
 
 <nav class="menu-bar">
 	{% assign sorted_pages = site.pages | sort:"order" %}
+
 	{% for node in sorted_pages %}
 		{% if node.menu == "main" %}
-			<a class="delaylink button menu-bar-button {% if page.title == node.title %}current{% endif %}" 
-			
+			<a class="delaylink button menu-bar-button {% if page.title == node.title %}current{% endif %}
+
+			{% comment %} HACK: documentation, blog, marketplace edgecase {% endcomment %}
+			{% capture full_url %}{{ site.url }}{{ page.url }}{% endcapture %}
+			{% capture docs_url %}{{ site.url }}/docs/{% endcapture %}
+			{% capture blog_url %}{{ site.url }}/blog/{% endcapture %}
+			{% capture mark_url %}{{ site.url }}/marketplace/{% endcapture %}
+
+			{% if full_url contains docs_url and node.title == "Documentation" and is_404 != true %}current{% endif %}
+
+			{% if full_url contains blog_url and node.title == "Blog" and is_404 != true %}current{% endif %}
+
+			{% if full_url contains mark_url and node.title == "Marketplace" and is_404 != true %}current{% endif %}"
+
 			{% comment %} todo: use some js lib instead of this mess {% endcomment %}
 			onclick="
 				{% if page.order < node.order %}
@@ -63,7 +76,5 @@
 		<a class="button disabled menu-bar-button" style="opacity: .3;">Marketplace</a>
 	{% endif%}
 
-	<span class="invisible">&nbsp;</span>
+	<span class="invisible">&nbsp;<br></span>
 </nav>
-
-<br>

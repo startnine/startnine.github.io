@@ -31,7 +31,7 @@
 @media print {
 	.header, nav, .header-space, .side, .button, footer { display: none; }
 	a { color: black; }
-	body { background: none;}
+	body { background: none; }
 }
 
 /* Mobile Adjustments */
@@ -92,12 +92,16 @@
 }
 
 @media screen and (max-width: 37.5rem) {
-	footer .footer-flex div {
+	footer .footer-flex .flex-item {
 		line-height: 1.5em;
 		margin: 0 1em;
 		padding-bottom: 1em;
-		text-align: center;
+		// text-align: center;
 		width: 100%;
+
+		&.logo-group a {
+			background-position: -2em;
+		}
 
 		// Increase tap targets
 		a {
@@ -114,7 +118,16 @@
 
 	.header-space { height: 3rem; }
 
-	.marketplace.flex-item { margin: 0 0 2em; } // centers marketplace cards
+	.marketplace.one-box { margin: 3em 0 0 0; }
+
+	.marketplace-flex { // centers marketplace cards
+		display: block;
+		text-align: center;
+		
+		a { margin: 0; }
+
+		div { margin: 0 0 2em; }
+	}
 
 	.footer-flex {
 		align-content: center;
@@ -190,7 +203,7 @@
 				.button {
 					box-shadow: initial;
 					opacity: 1;
-					padding: 0 1em 0 2em;
+					padding: 0 1em 0 1em;
 					text-align: left;
 					width: calc(100% - 3em);
 

@@ -30,6 +30,16 @@
 	z-index: 2;
 }
 
+.jerry-mouse {
+	.marketplace-flex {
+		a {
+			&:focus .flex-item::after, &:focus-visible .flex-item::after {
+				box-shadow: 0 5px 24px 0 rgba(0, 0, 0, .25);
+			}
+		}
+	}   
+}
+
 .marketplace-flex {
 	align-self: center;
 	display: flex;
@@ -40,7 +50,7 @@
 		margin: 0 0 2.5em 2em;
 		text-decoration: none;
 			
-		&:focus .flex-item, &:focus-visible .flex-item {
+		&:focus .flex-item::after, &:focus-visible .flex-item::after {
 			box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .25), inset 0 0 0 .25em rgba(255, 255, 255, .5);
 		}
 	}
@@ -49,19 +59,51 @@
 		background-color: #EEE;
 		background-repeat: no-repeat;
 		background-size: cover;
-		border-radius: 2px;
+		border-radius: 4px;
 		box-shadow: 0 5px 12px 0 rgba(0, 0, 0, .25);
 		color: var(--text);
+		display: inline-block;
 		height: 9rem;
 		padding: 1em;
 		position: relative;
-		transform: translate3d(0, 0, 0) scale(1); // forces GPU rendering, prevents flicker
+		text-align: left;
+		transform: translate3d(0, 0, 0) scale(1); // forces GPU rendering
 		transition: transform .125s ease, box-shadow .125s ease;
 		user-select: none;
 		width: 20rem;
 
-		&:hover, &:focus, &:focus-visible {
+		// done this way to avoid flicker on hover
+		.card-bg {
+			border-radius: 4px;
+			height: 100%;
+			margin: -1em;
+			object-fit: cover;
+			display: block;
+			pointer-events: none;
+			position: absolute;
+			width: 100%;
+			z-index: -2;
+		}
+		
+		// gradient overlay for image
+		&::after {
+			background-image: linear-gradient(rgba(var(--card-1), .8), rgba(var(--card-2), .9));
+			border-radius: 4px;
+			content: '';
+			display: inline-block;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: box-shadow .125s ease;
+			width: 100%;
+			z-index: -1;
+		}
+
+	&:hover, &:focus, &:focus-visible {
+			box-shadow: 0 5px 24px 0 rgba(0, 0, 0, .25); // makes the card look like its floating
 			transform: translate3d(0, 0, 0) scale(1.025); 
+
 		}
 
 		&:active { transform: translate3d(0, 0, 0) scale(.98); }

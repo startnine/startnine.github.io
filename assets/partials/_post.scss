@@ -27,7 +27,7 @@ figure { display: block; }
 }
 
 .post {
-	line-height: 1.6;
+	line-height: 1.69;
 	margin: 3em auto 2em;
 }
 
@@ -54,7 +54,6 @@ figure { display: block; }
 /*
 ** Alert, Info, Warning
 */
-// TODO: these colors might not fit dark mode well
 $note-info-base: linear-gradient(#D2ECF9, #B2CCD9);
 $note-info-dark: #093044;
 
