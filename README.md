@@ -5,7 +5,7 @@ This repository contains the code for the Start9 website and documentation for S
 Refer to [the Jekyll docs](https://jekyllrb.com/docs/).
 
 ## Contributing 
-Follow [these contributing guidelines](https://github.com/startnine/start9/blob/master/CONTRIBUTING.md). If possible, please contribute to the [our other projects](https://github.com/StartNine) instead of this one.
+Follow [these contributing guidelines](https://github.com/startnine/.github/blob/master/CONTRIBUTING.md). If possible, please contribute to the [our other projects](https://github.com/StartNine) instead of this one.
 
 ## Update SVG Symbols
 - Go to [icomoon](https://icomoon.io/app/)
