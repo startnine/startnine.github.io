@@ -37,8 +37,9 @@ Either way, so this alone isn’t all that much of a setback for the project.
 For those wondering, we’ll be leaving the Start9 website and Discord server up - 
 though inactive - for those interested. To ensure people don’t waste their time 
 searching for a Start9 binary which doesn’t exist, we’ll leave this blog post up 
-until there’s nobody else left to see it. A mirror will be available 
-[here](https://updog.logonoff.co/start9) in the future.
+until there’s nobody else left to see it. If for some reason you would like to 
+download this page, it is available 
+[here](https://github.com/startnine/start9.menu/blob/gh-pages/final-blog.html).
 
 
 Despite this, we’d still like to apologise for taking so painfully long to 
