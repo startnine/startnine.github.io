@@ -91,7 +91,9 @@ function darkSideOfTheMoon(enable, persist) {
 		if ($("html").hasClass("contrast")) {
 			console.error("dark theme not applied, contrast is on");
 		} else {
-			$("html").addClass("dark"); // Apply theme
+			$("html").addClass("transition").addClass("dark"); // Apply theme
+
+			setTimeout(function(){ $("html").removeClass("transition") }, 300); 
 
 			// Change icon in caption menu
 			$(".js-darkmode svg use").changeSVGicon("icon-moon-fill");
@@ -103,7 +105,9 @@ function darkSideOfTheMoon(enable, persist) {
 			if (persist != false) { localStorage.setItem("theme", "dark"); }
 		}
 	} else {
-		$("html").removeClass("dark"); // Remove theme
+		$("html").addClass("transition").removeClass("dark"); // Apply theme
+
+		setTimeout(function(){ $("html").removeClass("transition") }, 300); 
 
 		// Change icon in caption menu
 		$(".js-darkmode svg use").changeSVGicon("icon-moon-stroke");

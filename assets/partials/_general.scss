@@ -63,6 +63,8 @@ pre {
 /*
 ** General
 */
+.transition { transition: all .3s ease !important; }
+
 .byline { font-style: italic; }
 
 .invisible { // hides element in 3 ways incase the other two fail
