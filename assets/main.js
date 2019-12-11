@@ -105,10 +105,15 @@ function darkSideOfTheMoon(enable, persist) {
 			if (persist != false) { localStorage.setItem("theme", "dark"); }
 		}
 	} else {
-		$("html").addClass("transition").removeClass("dark"); // Apply theme
+		$("html").removeClass("dark"); // Apply theme
 
-		setTimeout(function(){ $("html").removeClass("transition") }, 300); 
-
+		if (localStorage.getItem("theme") == "contrast") {
+			console.warn("[dark] skipping transition class on disabling dark theme, contrast is on")
+		} else {
+			$("html").addClass("transition");
+			setTimeout(function(){ $("html").removeClass("transition") }, 300); 
+		}
+	
 		// Change icon in caption menu
 		$(".js-darkmode svg use").changeSVGicon("icon-moon-stroke");
 
