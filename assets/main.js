@@ -88,7 +88,7 @@ function darkSideOfTheMoon(enable, persist) {
 	**      persist (bool): also write setting to local storage
 	*/
 	if (enable) {
-		if ($("html").hasClass("contrast")) {
+		if (localStorage.getItem("theme") == "contrast") {
 			console.error("dark theme not applied, contrast is on");
 		} else {
 			$("html").addClass("transition").addClass("dark"); // Apply theme
@@ -204,7 +204,7 @@ if (localStorage.getItem("theme") == null) {
 
 	// apply dark theme if user has Dark Reader or Night Eye, but don’t add setting to local storage
 	if ($("style").is(".darkreader") || $("style").is("#nighteyedefaultcss") || $("style").is("#darkmode")) {
-		if ($("html").hasClass("contrast")) {
+		if (localStorage.getItem("theme") == "contrast") {
 			console.error("dark theme not applied, contrast is on");
 		} else {
 			darkSideOfTheMoon(true, false);
@@ -240,7 +240,7 @@ $(".js-contrast").click(function() {
 		localStorage.setItem("theme", "light");
 		$(".js-contrast .vox-only").text("Turn on contrast theme");
 
-	} else if ($("html").hasClass("dark")) {
+	} else if (localStorage.getItem("theme") == "dark") {
 		console.error("contrast theme not enabled, turn off dark");
 	} else {
 		// on
@@ -255,7 +255,7 @@ $(".js-darkmode").click(function() {
 	if (localStorage.getItem("theme") == "dark") {
 		// off
 		darkSideOfTheMoon(false);
-	} else if ($("html").hasClass("contrast")) {
+	} else if (localStorage.getItem("theme") == "contrast") {
 		console.error("dark theme not enabled, turn off contrast");
 	} else {
 		// on
