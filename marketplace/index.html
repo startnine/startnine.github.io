@@ -1,0 +1,41 @@
+---
+published: false
+---
+
+<!---
+layout: empty
+menu: main
+order: 5
+permalink: /marketplace
+title: Marketplace
+type: marketplace one-box
+--->
+
+<header class="header">
+	{% include header.html %}
+	
+	<div class="command-bar">
+		<input id="search" type="text" placeholder="Search&hellip;" data-filter=".modules div" title="Filter modules by title">
+	</div>
+</header>
+
+<main class="{{ page.type }} {{ layout.type }}" data-order="{{ page.order }}">
+	<h1 class="marketplace-title">Marketplace early testerino</h1><br>
+
+	<div class="skip-target" id="maincontent"></div>
+	<div class="marketplace fade-in-left">
+		<section class="modules marketplace-flex">
+			{% for module in site.data.modules %}
+			<a href="page/{{ module.authorname }}/{{ module.id }}/">
+				<div class="marketplace flex-item">
+					<img src="../assets/img/previews/{{ module.image }}" class="card-bg" loading="lazy" alt="Preview for {{ module.title }}">
+					<h2>{{ module.title }}</h2>
+					<p class="byline">by {{ module.authorname }}</p>
+					<p class="desc">{{ module.tagline }}</p>
+					<br>
+				</div>
+			</a><br>
+			{% endfor %}
+		</section>
+	</div>
+</main>
