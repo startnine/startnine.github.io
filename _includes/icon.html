@@ -1,8 +1,7 @@
-<svg class="icon" aria-hidden="true" data-iconame="{{ include.icon }}"
+<svg class="icon {{ include.class }}" aria-hidden="true" data-iconame="{{ include.icon }}"
 	{% if include.width %} width="{{ include.width }}" {% endif %}
 	{% if include.height %} height="{{ include.height }}" {% endif %}
 	{% if include.fill %} fill="{{ include.fill }}" {% endif %}
-	{% if include.class %} class="{{ include.class }}" {% endif %}
 >
 	<use href="{{ "/assets/symbol-defs.svg" | prepend: site.url }}#{{ include.icon }}"/>
 </svg>
